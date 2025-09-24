@@ -1,18 +1,9 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Agency Color Palette */
-  --junglegreen: #005151;
-  --darkbeige: #d5dec4;
-  --blackbrown: #1c2706;
-  --bone: #e8dcc8;
-  --yellow: #ffb400;
-  --black: #1a1a1a;
-
-  /* Semantic Design Tokens */
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);
@@ -84,7 +75,8 @@
 }
 
 @theme inline {
-  /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -121,18 +113,6 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-
-  /* Adding font variables for Geist fonts */
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
-  /* Adding custom agency colors to Tailwind theme */
-  --color-junglegreen: var(--junglegreen);
-  --color-darkbeige: var(--darkbeige);
-  --color-blackbrown: var(--blackbrown);
-  --color-bone: var(--bone);
-  --color-yellow: var(--yellow);
-  --color-black: var(--black);
 }
 
 @layer base {
@@ -142,90 +122,4 @@
   body {
     @apply bg-background text-foreground;
   }
-}
-
-/* Adding cursor circle styles */
-.cursor-circle {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  /* Remove transitions on left/top to avoid layout thrashing */
-  will-change: left, top;
-  z-index: 10;
-}
-
-.cursor-circle.behind-text {
-  z-index: 5;
-}
-
-/* Hide cursor circle on mobile screens */
-@media (max-width: 768px) {
-  .cursor-circle {
-    display: none;
-  }
-}
-
-/* Adding marquee animation for brands */
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee 30s linear infinite;
-}
-
-/* Adding slower marquee animation for tech stack */
-@keyframes marquee-slow {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-marquee-slow {
-  animation: marquee-slow 40s linear infinite;
-}
-
-
-/* Adding scrollbar hiding utility class */
-.scrollbar-hide {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;
-}
-
-/* Custom scrollbar styles for mega menu */
-.scrollbar-thin {
-  scrollbar-width: thin;
-}
-
-.scrollbar-thin::-webkit-scrollbar {
-  width: 6px;
-}
-
-.scrollbar-thin::-webkit-scrollbar-track {
-  background: #f1f5f9;
-  border-radius: 3px;
-}
-
-.scrollbar-thin::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 3px;
-}
-
-.scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
 }
