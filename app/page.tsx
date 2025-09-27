@@ -9,8 +9,9 @@ import Testimonials from "@/components/homepage/testimonials"
 import BookACall from "@/components/homepage/bookacall"
 import Footer from "@/components/core/footer"
 import Navbar from "@/components/core/navbar"
-import Process from "@/components/homepage/process"
+// import Process from "@/components/homepage/process"
 import Apart from "@/components/homepage/apart"
+import Process2 from "@/components/homepage/process2"
 // import RevealCursor from "@/components/homepage/revealcursor"
 
 export default function HomePage() {
@@ -24,7 +25,7 @@ export default function HomePage() {
       <BrandsMarquee />
       {/* <RevealCursor /> */}
       <Services />
-      <Process />
+      <Process2 />
       <KeepYourStack />
       <CaseStudy />
       <Apart />

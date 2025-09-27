@@ -20,7 +20,7 @@ export default function KeepYourStack() {
   ]
 
   return (
-    <section className="bg-gray-100 py-20">
+    <section className="bg-bone/20 py-20">
       <div className="container mx-auto px-6">
         {/* Header Content */}
         <div className="text-center mb-16">

@@ -2,7 +2,7 @@
 
 export default function Services() {
   return (
-    <section className="bg-bone">
+    <section className="bg-bone/20">
       <div className="flex flex-col lg:flex-row min-h-screen">
         {/* Left side - Sticky text */}
         <div className="w-full lg:w-1/2 p-6 lg:p-16">

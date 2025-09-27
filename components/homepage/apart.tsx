@@ -34,7 +34,7 @@ export default function Apart() {
 
   if (isMobile) {
     return (
-      <section className="relative w-full bg-white flex flex-col items-center justify-center py-16 px-4">
+      <section className="relative w-full bg-bone/20 flex flex-col items-center justify-center py-16 px-4">
         {/* Title row */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-3xl sm:text-4xl font-regular mb-8 px-2">
           <span className="text-center">
@@ -136,7 +136,7 @@ export default function Apart() {
   return (
     <section
       ref={sectionRef}
-      className="relative h-[200vh] w-full bg-white flex flex-col items-center justify-center"
+      className="relative h-[200vh] w-full bg-bone/20 flex flex-col items-center justify-center"
     >
       {/* Sticky container for animations */}
       <div className="sticky top-0 h-screen flex flex-col items-center justify-center overflow-hidden">
@@ -166,7 +166,7 @@ export default function Apart() {
           {/* First Card */}
           <motion.div
             style={{ y: cardY, opacity: cardOpacity }}
-            className="w-96 bg-junglegreen rounded-2xl shadow-xl p-8 z-10"
+            className="w-96 bg-black rounded-2xl shadow-xl p-8 z-10"
           >
             <h3 className="text-2xl font-semibold mb-6 text-bone">Digital Neighbour</h3>
              <ul className="space-y-4 text-base text-bone">

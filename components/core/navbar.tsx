@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
             { name: 'Local SEO', icon: '📍' },
             { name: 'WordPress SEO', icon: '🔧' },
             { name: 'E-commerce SEO', icon: '🛒' },
-            { name: 'Shopify SEO', icon: '🏪' },
+            // { name: 'Shopify SEO', icon: '🏪' },
             { name: 'AI SEO', icon: '🤖' },
             // { name: 'ORM', icon: '⭐' },
             // { name: 'SEO Migration', icon: '🔄' },
@@ -56,7 +56,7 @@ const Navbar: React.FC = () => {
           title: 'Paid Advertising',
           services: [
             { name: 'Google Ads', icon: '📊' },
-            { name: 'Google Display Ads', icon: '🖼️' },
+            // { name: 'Google Display Ads', icon: '🖼️' },
             { name: 'Google Remarketing', icon: '🔄' },
             { name: 'Google Shopping', icon: '🛍️' },
             { name: 'Paid Social', icon: '👥' },

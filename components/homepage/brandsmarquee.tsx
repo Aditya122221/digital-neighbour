@@ -17,7 +17,7 @@ export default function BrandsMarquee() {
   ]
 
   return (
-    <section className="py-16 bg-gray-100 overflow-hidden">
+    <section className="py-16 bg-bone/20 overflow-hidden">
       <div className="container mx-auto px-6 lg:px-32">
         <h2 className="text-4xl md:text-5xl font-bold text-center text-blackbrown mb-20 text-balance">
           Trusted by <span className="relative inline-block">

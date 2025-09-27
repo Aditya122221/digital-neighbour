@@ -85,7 +85,7 @@ export default function Process() {
   }, [])
 
   return (
-    <section className="bg-gray-100 py-20">
+    <section className="bg-bone/20 py-20">
       <div className="container mx-auto px-6 mt-20">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-20">
@@ -139,7 +139,7 @@ export default function Process() {
                       <div className={`rounded-2xl p-8 transition-all duration-500 ${
                         index === activeStep 
                           ? 'bg-white' 
-                          : 'bg-gray-800 opacity-50'
+                          : 'bg-blackbrown opacity-50'
                       }`}>
                         <div className={`text-sm leading-relaxed ${
                           index === activeStep ? 'text-black' : 'text-gray-300'

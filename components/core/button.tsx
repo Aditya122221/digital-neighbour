@@ -38,7 +38,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
 }) => {
   const buttonContent = (
     <div className={cn(
-      "group relative overflow-hidden rounded-full border bg-transparent px-6 py-3 transition-all duration-300 ease-out hover:bg-yellow",
+      "group relative overflow-hidden rounded-full border bg-transparent px-4 py-2 transition-all duration-300 ease-out hover:bg-yellow",
       borderColor === 'white' ? 'border-white' : 'border-black'
     )}>
       {/* Background transition effect */}
@@ -46,7 +46,7 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
       
       {/* Content */}
       <div className={cn("relative flex items-center gap-3", textColor === 'white' ? 'text-white' : 'text-black')}>
-        <span className="font-light text-lg group-hover:text-black">{text}</span>
+        <span className="font-light text-md group-hover:text-black">{text}</span>
         
         {/* Arrow circle */}
         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-yellow transition-colors duration-300 group-hover:bg-black">

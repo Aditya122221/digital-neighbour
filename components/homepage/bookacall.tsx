@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 export default function BookACall() {
   return (
-    <div className="bg-gray-100 py-16 px-6 lg:px-20">
-    <section className="bg-junglegreen py-6 px-6 rounded-3xl shadow-2xl">
+    <div className="bg-bone/20 py-16 px-6 lg:px-20">
+    <section className="bg-black py-6 px-6 rounded-3xl shadow-2xl">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left side - Hand-drawn illustrations */}

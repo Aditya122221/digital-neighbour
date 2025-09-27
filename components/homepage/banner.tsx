@@ -9,7 +9,7 @@ export default function Banner() {
   const YT_ID = "h_D3VFfhvs4"
 
   return (
-    <div className="bg-gray-100 py-16 px-6 lg:px-32">
+    <div className="bg-bone/20 py-16 px-6 lg:px-32">
       <section
         className="relative py-16 px-6 lg:py-32 lg:px-12 rounded-3xl overflow-hidden shadow-2xl"
         style={{

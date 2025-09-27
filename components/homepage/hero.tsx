@@ -76,18 +76,16 @@ export default function Hero() {
           y: textY,
         }}
       >
-        <motion.h1
-          className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-balance text-blackbrown text-center"
-        >
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight text-balance text-blackbrown text-center">
           {"Borderless ".split("").map((char, index) => (
             <motion.span
               key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ 
-                duration: 0.3, 
-                delay: 0.2 + index * 0.1,
-                ease: "easeOut"
+                duration: 0.6, 
+                delay: 0.5 + index * 0.05,
+                ease: [0.25, 0.1, 0.25, 1]
               }}
               className={char === ' ' ? 'inline' : 'inline-block'}
             >
@@ -95,23 +93,21 @@ export default function Hero() {
             </motion.span>
           ))}
           <motion.span 
-            className="inline-block w-8 h-10 md:w-12 md:h-12 lg:w-16 lg:h-18 -mb-1 md:-mb-2 rounded-full overflow-hidden bg-white/20 backdrop-blur-sm border-2 border-white/30 mx-2"
-            initial={{ opacity: 0, scale: 0 }}
+            className="inline-block w-8 h-10 md:w-12 md:h-12 lg:w-20 lg:h-18 -mb-1 md:-mb-2 rounded-full overflow-hidden bg-white/20 backdrop-blur-sm border-2 border-white/30 mx-2"
+            initial={{ opacity: 0, x: 50 }}
             animate={{ 
               opacity: 1, 
-              scale: 1,
-              x: [0, 3, -2, 1, 0],
-              y: [0, -2, 1, -1, 0],
+              x: [0, 2, -1, 1, 0],
+              y: [0, -1, 2, -1, 0]
             }}
             transition={{ 
-              opacity: { duration: 0.5, delay: 1.2, ease: "easeOut" },
-              scale: { duration: 0.5, delay: 1.2, ease: "easeOut" },
-              x: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 },
-              y: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: 2 }
+              opacity: { duration: 0.6, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] },
+              x: { duration: 0.6, delay: 0.3, ease: [0.25, 0.1, 0.25, 1] },
+              y: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: 4 }
             }}
           >
             <img 
-              src="/homepage/hero/1.webp" 
+              src="/homepage/hero/1.jpg" 
               alt="Hero image 1" 
               className="w-full h-full object-cover"
             />
@@ -119,31 +115,29 @@ export default function Hero() {
           {"Marketing".split("").map((char, index) => (
             <motion.span
               key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ 
-                duration: 0.3, 
-                delay: 1.7 + index * 0.1,
-                ease: "easeOut"
+                duration: 0.6, 
+                delay: 0.9 + index * 0.05,
+                ease: [0.25, 0.1, 0.25, 1]
               }}
               className={char === ' ' ? 'inline' : 'inline-block'}
             >
               {char}
             </motion.span>
           ))}
-        </motion.h1>
-        <motion.p
-          className="mt-8 text-lg md:text-xl lg:text-4xl leading-tight text-pretty max-w-7xl mx-auto text-blackbrown/90 text-center"
-        >
+        </h1>
+        <p className="mt-8 text-lg md:text-xl lg:text-3xl font-semibold leading-tight text-pretty max-w-3xl mx-auto text-blackbrown/90 text-center">
           {"Transform your business into a ".split("").map((char, index) => (
             <motion.span
               key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ 
-                duration: 0.2, 
-                delay: 2.5 + index * 0.05,
-                ease: "easeOut"
+                duration: 0.5, 
+                delay: 1.5 + index * 0.02,
+                ease: [0.25, 0.1, 0.25, 1]
               }}
               className={char === ' ' ? 'inline' : 'inline-block'}
             >
@@ -151,23 +145,21 @@ export default function Hero() {
             </motion.span>
           ))}
           <motion.span 
-            className="inline-block w-6 h-7 md:w-8 md:h-8 lg:w-12 lg:h-14 -mb-1 md:-mb-2 rounded-full overflow-hidden bg-white/20 backdrop-blur-sm border-2 border-white/30 mx-1"
-            initial={{ opacity: 0, scale: 0 }}
+            className="inline-block w-6 h-7 md:w-8 md:h-8 lg:w-16 lg:h-14 -mb-1 md:-mb-2 rounded-full overflow-hidden bg-white/20 backdrop-blur-sm border-2 border-white/30 mx-1"
+            initial={{ opacity: 0, x: 50 }}
             animate={{ 
               opacity: 1, 
-              scale: 1,
               x: [0, -2, 1, -1, 0],
-              y: [0, 1, -2, 1, 0],
+              y: [0, 1, -2, 1, 0]
             }}
             transition={{ 
-              opacity: { duration: 0.5, delay: 2.5, ease: "easeOut" },
-              scale: { duration: 0.5, delay: 2.5, ease: "easeOut" },
-              x: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 3.5 },
-              y: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 3.5 }
+              opacity: { duration: 0.6, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] },
+              x: { duration: 0.6, delay: 1.2, ease: [0.25, 0.1, 0.25, 1] },
+              y: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 4.2 }
             }}
           >
             <img 
-              src="/homepage/hero/2.webp" 
+              src="/homepage/hero/2.jpg" 
               alt="Hero image 2" 
               className="w-full h-full object-cover"
             />
@@ -175,12 +167,12 @@ export default function Hero() {
           {"Digital Success story with ".split("").map((char, index) => (
             <motion.span
               key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ 
-                duration: 0.2, 
-                delay: 2.5 + index * 0.05,
-                ease: "easeOut"
+                duration: 0.5, 
+                delay: 2.2 + index * 0.02,
+                ease: [0.25, 0.1, 0.25, 1]
               }}
               className={char === ' ' ? 'inline' : 'inline-block'}
             >
@@ -188,68 +180,34 @@ export default function Hero() {
             </motion.span>
           ))}
           <motion.span 
-            className="inline-block w-6 h-7 md:w-8 md:h-8 lg:w-12 lg:h-14 -mb-1 md:-mb-2 rounded-full overflow-hidden bg-white/20 backdrop-blur-sm border-2 border-white/30 mx-1"
-            initial={{ opacity: 0, scale: 0 }}
+            className="inline-block w-6 h-7 md:w-8 md:h-8 lg:w-16 lg:h-14 -mb-1 md:-mb-2 rounded-full overflow-hidden bg-white/20 backdrop-blur-sm border-2 border-white/30 mx-1"
+            initial={{ opacity: 0, x: 50 }}
             animate={{ 
               opacity: 1, 
-              scale: 1,
-              x: [0, 2, -1, 1, 0],
-              y: [0, -1, 2, -1, 0],
+              x: [0, 1, -3, 2, 0],
+              y: [0, 2, -1, -1, 0]
             }}
             transition={{ 
-              opacity: { duration: 0.5, delay: 2.5, ease: "easeOut" },
-              scale: { duration: 0.5, delay: 2.5, ease: "easeOut" },
-              x: { duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 3.5 },
-              y: { duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 3.5 }
+              opacity: { duration: 0.6, delay: 1.9, ease: [0.25, 0.1, 0.25, 1] },
+              x: { duration: 0.6, delay: 1.9, ease: [0.25, 0.1, 0.25, 1] },
+              y: { duration: 4.2, repeat: Infinity, ease: "easeInOut", delay: 4.4 }
             }}
           >
             <img 
-              src="/homepage/hero/3.webp" 
+              src="/homepage/hero/3.jpg" 
               alt="Hero image 3" 
               className="w-full h-full object-cover"
             />
           </motion.span>
-          {"Digital ".split("").map((char, index) => (
+          {"Digital Neighbour".split("").map((char, index) => (
             <motion.span
               key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ 
-                duration: 0.2, 
-                delay: 2.5 + index * 0.05,
-                ease: "easeOut"
-              }}
-              className={char === ' ' ? 'inline' : 'inline-block'}
-            >
-              {char}
-            </motion.span>
-          ))}
-          <span className="italic">
-            {"Neighbour's ".split("").map((char, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ 
-                  duration: 0.2, 
-                  delay: 2.5 + index * 0.05,
-                  ease: "easeOut"
-                }}
-                className={char === ' ' ? 'inline' : 'inline-block'}
-              >
-                {char}
-              </motion.span>
-            ))}
-          </span>
-          {" data driven Digital Marketing Services in New Zealand.".split("").map((char, index) => (
-            <motion.span
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ 
-                duration: 0.2, 
-                delay: 2.5 + index * 0.05,
-                ease: "easeOut"
+                duration: 0.5, 
+                delay: 2.9 + index * 0.02,
+                ease: [0.25, 0.1, 0.25, 1]
               }}
               className={char === ' ' ? 'inline' : 'inline-block'}
             >
@@ -257,49 +215,40 @@ export default function Hero() {
             </motion.span>
           ))}
           <motion.span 
-            className="inline-block w-6 h-7 md:w-8 md:h-8 lg:w-12 lg:h-14 -mb-1 md:-mb-2 rounded-full overflow-hidden bg-white/20 backdrop-blur-sm border-2 border-white/30 mx-1"
-            initial={{ opacity: 0, scale: 0 }}
+            className="inline-block w-6 h-7 md:w-8 md:h-8 lg:w-16 lg:h-14 -mb-1 md:-mb-2 rounded-full overflow-hidden bg-white/20 backdrop-blur-sm border-2 border-white/30 mx-1"
+            initial={{ opacity: 0, x: 50 }}
             animate={{ 
               opacity: 1, 
-              scale: 1,
-              x: [0, 1, -3, 2, 0],
-              y: [0, 2, -1, -1, 0],
+              x: [0, 2, -1, 1, 0],
+              y: [0, -1, 2, -1, 0]
             }}
             transition={{ 
-              opacity: { duration: 0.5, delay: 2.5, ease: "easeOut" },
-              scale: { duration: 0.5, delay: 2.5, ease: "easeOut" },
-              x: { duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 3.5 },
-              y: { duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 3.5 }
+              opacity: { duration: 0.6, delay: 2.6, ease: [0.25, 0.1, 0.25, 1] },
+              x: { duration: 0.6, delay: 2.6, ease: [0.25, 0.1, 0.25, 1] },
+              y: { duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 4.6 }
             }}
           >
             <img 
-              src="/homepage/hero/4.webp" 
+              src="/homepage/hero/4.jpg" 
               alt="Hero image 4" 
               className="w-full h-full object-cover"
             />
           </motion.span>
-          <motion.span
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ 
-              duration: 0.2, 
-              delay: 2.5,
-              ease: "easeOut"
-            }}
-            className="inline-block"
-          >
-          </motion.span>
-        </motion.p>
+        </p>
         
         {/* CTA Button */}
         <motion.div
           className="mt-12 flex justify-center"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 3.5 }}
+          transition={{ 
+            duration: 0.6, 
+            delay: 3.5,
+            ease: [0.25, 0.1, 0.25, 1]
+          }}
         >
           <motion.button
-            className="px-8 py-4 bg-blackbrown text-md md:text-xl text-white font-semibold rounded-3xl hover:bg-blackbrown/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
+            className="px-8 py-4 bg-blackbrown text-md text-white font-semibold rounded-3xl hover:bg-black transition-colors duration-300 shadow-lg hover:shadow-xl"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >

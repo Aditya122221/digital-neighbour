@@ -136,7 +136,7 @@ export default function CaseStudy() {
   }
 
   return (
-    <section className="py-20 min-h-screen px-6 bg-gray-100">
+    <section className="py-20 min-h-screen px-6 bg-bone/20">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">

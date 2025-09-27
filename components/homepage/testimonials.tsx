@@ -48,10 +48,10 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="relative bg-gray-100 py-20 overflow-hidden">
+    <section className="relative bg-bone/20 py-20 overflow-hidden">
       {/* Background Text */}
       <div className="absolute inset-0 flex items-start justify-center pointer-events-none overflow-hidden">
-        <h2 className="text-[4rem] sm:text-[6rem] md:text-[12rem] lg:text-[14rem] xl:text-[16rem] font-bold text-gray-300 select-none whitespace-nowrap -ml-2 sm:-ml-4 md:-ml-6 lg:-ml-8 xl:-ml-10">
+        <h2 className="text-[4rem] sm:text-[6rem] md:text-[10rem] lg:text-[13rem] font-bold text-blackbrown/60 select-none whitespace-nowrap">
           Testimonials
         </h2>
       </div>
@@ -74,7 +74,7 @@ export default function Testimonials() {
             {testimonials.map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="flex-shrink-0 md:w-[400px] md:h-[400px] w-[300px] h-[400px] bg-gray-800 rounded-3xl p-6 flex flex-col justify-between mx-4"
+                className="flex-shrink-0 md:w-[400px] md:h-[400px] w-[300px] h-[400px] bg-black rounded-3xl p-6 flex flex-col justify-between mx-4"
               >
                 {/* Card Number */}
                 <div className="text-gray-400 text-sm font-mono">{testimonial.number}</div>

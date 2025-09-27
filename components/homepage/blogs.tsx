@@ -2,7 +2,7 @@ import CustomButton from '../core/button';
 
 export default function Blogs() {
   return (
-    <section className="min-h-screen bg-bone px-6 py-16 flex flex-col">
+    <section className="min-h-screen bg-bone/20 px-6 py-16 flex flex-col">
       <div className="max-w-7xl mx-auto w-full flex-1 flex flex-col">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-12 gap-4">
