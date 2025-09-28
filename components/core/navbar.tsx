@@ -23,6 +23,69 @@ const Navbar: React.FC = () => {
     { name: 'Resources', href: '/resources' },
   ];
 
+  // Icon mapping for services
+  const iconMapping: { [key: string]: string } = {
+    'Search Engine Optimisation': '/navbar/seo.png',
+    'Local SEO': '/navbar/local-seo.png',
+    'WordPress SEO': '/navbar/wordpress-seo.png',
+    'E-commerce SEO': '/navbar/ecom-seo.png',
+    'AI SEO': '/navbar/ai-seo.png',
+    'Google Ads': '/navbar/google-ads.png',
+    'Google Remarketing': '/navbar/google-remarketing.png',
+    'Google Shopping': '/navbar/google-shopping.png',
+    'Paid Social': '/navbar/paid-social.png',
+    'YouTube Ads': '/navbar/youtube-ads.png',
+    'Facebook Marketing': '/navbar/fb.png',
+    'X Marketing': '/navbar/x.png',
+    'Instagram Marketing': '/navbar/instagram.png',
+    'LinkedIn Marketing': '/navbar/linkedin.png',
+    'TikTok Marketing': '/navbar/tik-tok.png',
+    'Content Marketing': '/navbar/content-marketing.png',
+    'Copywriting': '/navbar/copywriting.png',
+    'Graphic Designing': '/navbar/graphic-designing.png',
+    'Video Editing': '/navbar/video-editing.png',
+    'Photo Shoot': '/navbar/photoshoot.png',
+    'Video Shoot': '/navbar/videoshoot.png',
+    'Conversion Rate Optimisation': '/navbar/conversion-rate-optimization.png',
+    'Call Tracking': '/navbar/call-tracking.png',
+    'Reporting and Dashboards': '/navbar/reporting-and-dashboard.png',
+    'Google Analytics': '/navbar/google-analytics.png',
+    'Google Tag Manager': '/navbar/google-tag-manager.png',
+    'E-commerce Web Development': '/navbar/app-development.png',
+    'Front-End Development': '/navbar/frontend.png',
+    'Back-End Development': '/navbar/backend.png',
+    'CMS Integration': '/navbar/cms.png',
+    'Custom Web Development': '/navbar/custom-web-development.png',
+    'App Development': '/navbar/app-development.png',
+    'Android App Development': '/navbar/android.png',
+    'iOS App Development': '/navbar/ios.png',
+    'Software Development': '/navbar/software.png',
+    'Flutter App Development': '/navbar/flutter.png',
+    'React Native Development': '/navbar/react-native.png',
+    'Web Hosting': '/navbar/custom-web-development.png',
+    'WordPress Hosting': '/navbar/cms.png',
+    'Reseller Hosting': '/navbar/reseller-hosting.png',
+    'Email Hosting': '/navbar/email-hosting.png',
+    'Website Chat Assistant': '/navbar/chat.png',
+    'AI-powered Voice Agents / Receptionists': '/navbar/ai-seo.png',
+    'Factory Automation': '/navbar/factory.png',
+    'Marketing & Social Media Automation': '/navbar/instagram.png',
+    'Workflow Automation (Zapier, Make, Custom)': '/navbar/workflow.png',
+    'ERP Systems': '/navbar/erp.png',
+    'Car Removal & Wreckers Marketing Agency': '/navbar/car.png',
+    'Automotive Repair & Servicing Marketing Agency': '/navbar/automotive.png',
+    'Movers & Relocation Services Marketing Agency': '/navbar/relocate.png',
+    'Plumbing Marketing Agency': '/navbar/plumbing.png',
+    'Small Business Marketing Agency': '/navbar/small-bus.png',
+    'Medium Business Marketing Agency': '/navbar/medium-bus.png',
+    'Enterprise Business Marketing Agency': '/navbar/enterprise-bus.png',
+    'Real Estate Marketing Agency': '/navbar/real-estate.png',
+    'Mortgage Broker Marketing Agency': '/navbar/mortage-broker.png',
+    'Physiotherapists Marketing Agency': '/navbar/physio.png',
+    'Coaches Marketing Agency': '/navbar/coach.png',
+    'Law Firm Marketing Agency': '/navbar/law.png',
+  };
+
   const megaMenuData = {
     Marketing: {
       categories: [
@@ -380,8 +443,8 @@ const Navbar: React.FC = () => {
             onMouseEnter={handleMegaMenuEnter}
             onMouseLeave={handleMegaMenuLeave}
           >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-              <div className="grid grid-cols-12 gap-8">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+              <div className="grid grid-cols-12 gap-6">
                 {/* Left Column - Categories */}
                 <div className="col-span-3">
                   <div className="space-y-1 max-h-96 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 pr-1">
@@ -418,7 +481,7 @@ const Navbar: React.FC = () => {
                 {/* Right Columns - Services */}
                 <div className="col-span-9">
                   <div className={cn(
-                    "grid gap-6",
+                    "grid gap-4",
                     megaMenuData[activeCategory as keyof typeof megaMenuData].columns.length === 5 ? "grid-cols-5" :
                     megaMenuData[activeCategory as keyof typeof megaMenuData].columns.length === 4 ? "grid-cols-4" :
                     megaMenuData[activeCategory as keyof typeof megaMenuData].columns.length === 3 ? "grid-cols-3" :
@@ -426,21 +489,31 @@ const Navbar: React.FC = () => {
                     "grid-cols-1"
                   )}>
                     {megaMenuData[activeCategory as keyof typeof megaMenuData].columns.map((column, columnIndex) => (
-                      <div key={column.title} className="space-y-4 relative">
-                        <h3 className="text-lg font-semibold text-gray-900 mb-4">
+                      <div key={column.title} className="space-y-2 relative">
+                        <h3 className="text-base font-semibold text-gray-900 mb-2">
                           {column.title}
                         </h3>
-                        <div className="space-y-3 max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 pr-1">
+                        <div className="space-y-1 max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 pr-1">
                           {column.services.map((service, serviceIndex) => (
                             <Link
                               key={service.name}
                               href={`/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
-                              className="flex items-center gap-3 p-2 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
+                              className="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
                             >
-                              <span className="text-xl hidden">{service.icon}</span>
-                              <span className="text-gray-700 group-hover:text-junglegreen transition-colors duration-200 relative">
+                              {iconMapping[service.name] ? (
+                                <Image
+                                  src={iconMapping[service.name]}
+                                  alt={service.name}
+                                  width={16}
+                                  height={16}
+                                  className="w-5 h-5 object-contain flex-shrink-0"
+                                />
+                              ) : (
+                                <span className="text-sm">{service.icon}</span>
+                              )}
+                              <span className="text-md text-gray-700 group-hover:text-junglegreen transition-colors duration-200 relative">
                                 {service.name}
-                                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-junglegreen transition-all duration-200 group-hover:w-full"></span>
+                                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-junglegreen transition-all duration-200 group-hover:w-full"></span>
                               </span>
                             </Link>
                           ))}
@@ -545,10 +618,21 @@ const Navbar: React.FC = () => {
                               <Link
                                 key={service.name}
                                 href={`/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
-                                              className="block px-2 py-1 text-gray-400 hover:text-white text-xs"
+                                className="flex items-center gap-2 px-2 py-1 text-gray-400 hover:text-white text-xs"
                                 onClick={() => setIsMenuOpen(false)}
                               >
-                                {service.icon} {service.name}
+                                {iconMapping[service.name] ? (
+                                  <Image
+                                    src={iconMapping[service.name]}
+                                    alt={service.name}
+                                    width={16}
+                                    height={16}
+                                    className="w-4 h-4 object-contain"
+                                  />
+                                ) : (
+                                  <span className="text-sm">{service.icon}</span>
+                                )}
+                                {service.name}
                               </Link>
                             ))}
                           </div>
