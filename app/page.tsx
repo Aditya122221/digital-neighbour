@@ -14,14 +14,14 @@ import Apart from "@/components/homepage/apart"
 import Process2 from "@/components/homepage/process2"
 // import RevealCursor from "@/components/homepage/revealcursor"
 import Form from "@/components/seo/form"
-import Hero4 from "@/components/homepage/hero4"
+import HeroSix from "@/components/homepage/herosix"
 
 export default function HomePage() {
   return (
     <main>
       <div className="relative">
         <Navbar />
-        <Hero4 />
+        <HeroSix />
       </div>
       {/* <Banner /> */}
       <Form />
