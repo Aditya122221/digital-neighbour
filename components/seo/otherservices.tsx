@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 // import Image from "next/image";
 
 // type Column = {
@@ -104,6 +105,38 @@ const seoServices = [
   "Multilingual SEO",
 ];
 
+// Function to convert service name to slug
+const serviceToSlug = (service: string): string => {
+  const slugMap: Record<string, string> = {
+    "Search Engine Optimisation": "search-engine-optimization",
+    "Local SEO": "local-seo",
+    "Wordpress SEO": "wordpress-seo",
+    "E-commerce SEO": "ecom-seo",
+    "AI SEO": "ai-seo",
+    "Shopify SEO": "shopify-seo",
+    "SEO audits": "seo-audits",
+    "Online Reputation Management": "online-reputation-management",
+    "SEO Migration": "seo-migration",
+    "Small Business SEO": "small-business-seo",
+    "Lead Generation": "lead-generation",
+    "Link building services": "link-building-services",
+    "International SEO": "international-seo",
+    "Mobile SEO": "mobile-seo",
+    "Voice search optimisation": "voice-search-optimisation",
+    "Video SEO": "video-seo",
+    "YouTube SEO": "youtube-seo",
+    "SEO strategy consulting": "seo-strategy-consulting",
+    "GEO": "geo",
+    "SGE": "sge",
+    "App Store Optimisation (ASO)": "app-store-optimisation",
+    "Guest posting services": "guest-posting-services",
+    "Local citation building": "local-citation-building",
+    "Penalty recovery services": "penalty-recovery-services",
+    "Multilingual SEO": "multilingual-seo",
+  };
+  return slugMap[service] || service.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+};
+
 // Divide services into 3 equal columns
 const column1 = seoServices.slice(0, 9);
 const column2 = seoServices.slice(9, 17);
@@ -123,7 +156,7 @@ export default function OtherServices() {
         >
           Our Other SEO{" "}
           <span className="relative inline-block">
-            <span className="absolute bottom-1 left-0 right-0 h-2/4 bg-green5"></span>
+            <span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow"></span>
             <span className="relative z-10 font-medium italic">
               Services & Solutions
             </span>
@@ -141,12 +174,14 @@ export default function OtherServices() {
           >
             <ul className="space-y-3">
               {column1.map((service) => (
-                <li
-                  key={service}
-                  className="flex items-center gap-3 text-blackbrown/90"
-                >
-                  <span className="w-2 h-2 rounded-full bg-green4 inline-block flex-shrink-0" />
-                  <span className="text-lg">{service}</span>
+                <li key={service} className="flex items-center gap-3 text-blackbrown/90">
+                  <span className="w-2 h-2 rounded-full bg-yellow inline-block flex-shrink-0" />
+                  <Link
+                    href={`/seo/${serviceToSlug(service)}`}
+                    className="text-lg hover:text-yellow transition-colors duration-200"
+                  >
+                    {service}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -162,12 +197,14 @@ export default function OtherServices() {
           >
             <ul className="space-y-3">
               {column2.map((service) => (
-                <li
-                  key={service}
-                  className="flex items-center gap-3 text-blackbrown/90"
-                >
-                  <span className="w-2 h-2 rounded-full bg-green4 inline-block flex-shrink-0" />
-                  <span className="text-lg">{service}</span>
+                <li key={service} className="flex items-center gap-3 text-blackbrown/90">
+                  <span className="w-2 h-2 rounded-full bg-yellow inline-block flex-shrink-0" />
+                  <Link
+                    href={`/seo/${serviceToSlug(service)}`}
+                    className="text-lg hover:text-yellow transition-colors duration-200"
+                  >
+                    {service}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -183,12 +220,14 @@ export default function OtherServices() {
           >
             <ul className="space-y-3">
               {column3.map((service) => (
-                <li
-                  key={service}
-                  className="flex items-center gap-3 text-blackbrown/90"
-                >
-                  <span className="w-2 h-2 rounded-full bg-green4 inline-block flex-shrink-0" />
-                  <span className="text-lg">{service}</span>
+                <li key={service} className="flex items-center gap-3 text-blackbrown/90">
+                  <span className="w-2 h-2 rounded-full bg-yellow inline-block flex-shrink-0" />
+                  <Link
+                    href={`/seo/${serviceToSlug(service)}`}
+                    className="text-lg hover:text-yellow transition-colors duration-200"
+                  >
+                    {service}
+                  </Link>
                 </li>
               ))}
             </ul>

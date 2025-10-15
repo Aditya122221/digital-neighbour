@@ -11,68 +11,74 @@ interface Service {
   title: string;
   description: string;
   image: string;
-  link: string;
+  link?: string;
 }
 
-export default function SeoServices() {
-  const [activeTab, setActiveTab] = useState("on-page-seo");
+interface SeoServicesProps {
+  data?: string;
+  serviceCards?: Service[];
+}
 
-  const services: Service[] = [
-    {
-      id: "on-page-seo",
-      name: "On-Page SEO",
-      title: "On-Page SEO",
-      description:
-        "Improve rankings and attract qualified visitors with strategic optimizations customized to your industry and audience.",
-      image: "/seo/services/on-page.png",
-      link: "/services/on-page-seo",
-    },
-    {
-      id: "keyword-research",
-      name: "Keyword Research",
-      title: "Keyword Research",
-      description:
-        "Discover high-value keywords that your target audience is searching for and create content strategies that drive qualified traffic to your website.",
-      image: "/seo/services/seo.png",
-      link: "/services/keyword-research",
-    },
-    {
-      id: "technical-seo",
-      name: "Technical SEO",
-      title: "Technical SEO",
-      description:
-        "Optimize your website's technical infrastructure to ensure search engines can crawl, index, and rank your pages effectively for maximum visibility.",
-      image: "/seo/services/technical.png",
-      link: "/services/technical-seo",
-    },
-    {
-      id: "off-page-seo",
-      name: "Off-Page SEO",
-      title: "Off-Page SEO",
-      description:
-        "Build your website's authority and credibility through strategic external optimization techniques that improve your search engine rankings.",
-      image: "/seo/services/off-page.png",
-      link: "/services/off-page-seo",
-    },
-    {
-      id: "link-building",
-      name: "Link Building",
-      title: "Link Building",
-      description:
-        "Acquire high-quality backlinks from authoritative websites to boost your domain authority and improve your search engine rankings.",
-      image: "/seo/services/link-building.svg",
-      link: "/services/link-building",
-    },
-    {
-      id: "seo-audit",
-      name: "SEO Audit",
-      title: "SEO Audit",
-      description:
-        "Get a comprehensive analysis of your website's SEO performance with actionable insights and recommendations to improve your rankings.",
-      image: "/seo/services/seo-audit.png",
-      link: "/services/seo-audit",
-    },
-  ];
+const defaultServices: Service[] = [
+  {
+    id: "on-page-seo",
+    name: "On-Page SEO",
+    title: "On-Page SEO",
+    description:
+      "Improve rankings and attract qualified visitors with strategic optimisations customized to your industry and audience.",
+    image: "/seo/services/on-page.webp",
+    link: "/services/on-page-seo",
+  },
+  {
+    id: "keyword-research",
+    name: "Keyword Research",
+    title: "Keyword Research",
+    description:
+      "Discover high-value keywords that your target audience is searching for and create content strategies that drive qualified traffic to your website.",
+    image: "/seo/services/seo.webp",
+    link: "/services/keyword-research",
+  },
+  {
+    id: "technical-seo",
+    name: "Technical SEO",
+    title: "Technical SEO",
+    description:
+      "Optimize your website's technical infrastructure to ensure search engines can crawl, index, and rank your pages effectively for maximum visibility.",
+    image: "/seo/services/technical.webp",
+    link: "/services/technical-seo",
+  },
+  {
+    id: "off-page-seo",
+    name: "Off-Page SEO",
+    title: "Off-Page SEO",
+    description:
+      "Build your website's authority and credibility through strategic external optimisation techniques that improve your search engine rankings.",
+    image: "/seo/services/off-page.webp",
+    link: "/services/off-page-seo",
+  },
+  {
+    id: "link-building",
+    name: "Link Building",
+    title: "Link Building",
+    description:
+      "Acquire high-quality backlinks from authoritative websites to boost your domain authority and improve your search engine rankings.",
+    image: "/seo/services/link-building.png",
+    link: "/services/link-building",
+  },
+  {
+    id: "seo-audit",
+    name: "SEO Audit",
+    title: "SEO Audit",
+    description:
+      "Get a comprehensive analysis of your website's SEO performance with actionable insights and recommendations to improve your rankings.",
+    image: "/seo/services/seo-audit.png",
+    link: "/services/seo-audit",
+  },
+];
+
+export default function SeoServices({ data, serviceCards }: SeoServicesProps) {
+  const services = serviceCards || defaultServices;
+  const [activeTab, setActiveTab] = useState(services[0]?.id || "on-page-seo");
 
   const activeService = services.find((service) => service.id === activeTab);
   const activeIndex = services.findIndex((service) => service.id === activeTab);
@@ -89,9 +95,10 @@ export default function SeoServices() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           What We <span className="relative inline-block">
-              <span className="absolute bottom-1 left-0 right-0 h-2/4 bg-green5"></span>
+              <span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow"></span>
               <span className="relative z-10 font-medium italic">Offer</span>
-            </span>
+            </span>{" "}
+            for {data || "SEO"}
         </motion.h2>
 
         {/* Tabs */}
@@ -109,7 +116,7 @@ export default function SeoServices() {
                 onClick={() => setActiveTab(service.id)}
                 className={`flex-1 px-4 py-4 text-base md:text-lg font-medium transition-all duration-300 whitespace-nowrap ${
                   activeTab === service.id
-                    ? "bg-green2 text-white rounded-t-3xl"
+                    ? "bg-black text-white rounded-t-3xl"
                     : "bg-transparent text-blackbrown hover:border-b hover:border-blackbrown/50"
                 } ${index === 0 ? "rounded-tl-3xl" : ""} ${
                   index === services.length - 1 ? "rounded-tr-3xl" : ""
@@ -125,7 +132,7 @@ export default function SeoServices() {
         {activeService && (
           <motion.div
             key={activeTab}
-            className={`bg-green2 p-8 md:p-12 ${
+            className={`bg-black p-8 md:p-12 ${
               activeIndex === 0
                 ? "rounded-b-3xl rounded-tr-3xl"
                 : activeIndex === services.length - 1
@@ -148,7 +155,7 @@ export default function SeoServices() {
                 <div>
                   <CustomButton
                     text="Learn More"
-                    href={activeService.link}
+                    href={activeService.link || "#contact"}
                     textColor="black"
                     borderColor="black"
                   />
@@ -156,7 +163,7 @@ export default function SeoServices() {
               </div>
 
               {/* Right side - Image */}
-              <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden bg-green2 p-4 flex items-center justify-center">
+              <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden bg-black p-4 flex items-center justify-center">
                 <Image
                   src={activeService.image}
                   alt={activeService.title}

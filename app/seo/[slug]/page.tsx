@@ -23,6 +23,12 @@ const allowedSlugs = [
   "wordpress-seo",
   "ecom-seo",
   "ai-seo",
+  "shopify-seo",
+  "seo-audits",
+  "online-reputation-management",
+  "seo-migration",
+  "small-business-seo",
+  "lead-generation",
 ];
 
 export default function SeoSlugPage({ params }: { params: { slug: string } }) {
@@ -40,14 +46,14 @@ export default function SeoSlugPage({ params }: { params: { slug: string } }) {
       </div>
       <SeoForm data={currentSeoData?.form} />
       <BrandsMarquee />
-      <SeoServices />
-      <Process2 />
+      <SeoServices data={currentSeoData?.services} serviceCards={currentSeoData?.serviceCards} />
+      <Process2 data={currentSeoData?.services} />
       <SeoContent data={currentSeoData?.content} />
-      <SeoCta />
+      <SeoCta data={currentSeoData?.services} />
       <Apart />
       <OtherServices />
       <CaseStudy />
-      <SeoFaq />
+      <SeoFaq data={currentSeoData?.faq} />
       <Blogs />
       <Testimonials />
       <BookACall />

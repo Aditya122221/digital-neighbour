@@ -139,7 +139,7 @@ export default function Services() {
                 <h3 className="text-3xl md:text-5xl font-medium text-blackbrown md:mb-8 mb-4">Automation</h3>
                 <div className="space-y-2">
                   <h4 className="text-md md:text-lg font-semibold text-gray-700">Workflow Automation</h4>
-                  <h4 className="text-md md:text-lg font-semibold text-gray-700">Process Optimization</h4>
+                  <h4 className="text-md md:text-lg font-semibold text-gray-700">Process Optimisation</h4>
                   <h4 className="text-md md:text-lg font-semibold text-gray-700">System Integration</h4>
                 </div>
               </div>

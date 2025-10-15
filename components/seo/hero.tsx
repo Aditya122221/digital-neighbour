@@ -13,7 +13,7 @@ interface SeoHeroProps {
 
 export default function SeoHero({ data }: SeoHeroProps) {
   return (
-    <section className="bg-green1 py-16 md:py-24 lg:py-32">
+    <section className="bg-gradient-to-br from-black via-black to-yellow pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-24 lg:pb-32">
       <div className="container mx-auto py-6 md:py-0 px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
@@ -41,15 +41,23 @@ export default function SeoHero({ data }: SeoHeroProps) {
           {/* Right side - Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="relative w-3/4 aspect-[4/4] overflow-hidden mx-auto"
+            animate={{ 
+              opacity: 1, 
+              x: 0,
+              y: [0, -20, 0]
+            }}
+            transition={{ 
+              opacity: { duration: 0.8, ease: "easeOut", delay: 0.2 },
+              x: { duration: 0.8, ease: "easeOut", delay: 0.2 },
+              y: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }
+            }}
+            className="relative w-4/4 h-4/4 overflow-hidden mx-auto rounded-3xl"
           >
             <Image
               src="/seo/hero.webp"
               alt="SEO Marketing"
-              fill
-              className="object-cover"
+className = "object-cover"
+fill
               priority
             />
           </motion.div>

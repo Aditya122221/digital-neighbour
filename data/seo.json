@@ -19,7 +19,77 @@
       "text3": "The same is true no matter what type of local business you run. Dental clinics, accounting firms, flower shops, and cafés all rely on the same SEO techniques to stay competitive and attract new customers.",
       "image": "seo.png",
       "alt": "SEO Marketing illustration"
-    }
+    },
+    "services": "Search Engine Optimisation",
+    "faq": {
+      "serviceName": "SEO",
+      "faqs": [
+        {
+          "q": "What is Search Engine Optimisation?",
+          "a": "SEO is the practice of optimizing your website to rank higher in search engine results pages (SERPs). It involves technical improvements, content Optimisation, and building authority to increase organic visibility and drive qualified traffic."
+        },
+        {
+          "q": "How long does SEO take to show results?",
+          "a": "SEO is a long-term strategy. Most businesses see initial improvements within 3-6 months, with significant results building over 6-12 months as content and authority compound."
+        },
+        {
+          "q": "What's the difference between on-page and off-page SEO?",
+          "a": "On-page SEO focuses on optimizing elements on your website (content, meta tags, site structure), while off-page SEO involves external factors like backlinks and brand mentions."
+        },
+        {
+          "q": "How do you measure SEO success?",
+          "a": "We track organic traffic growth, keyword rankings, conversion rates, and ROI. Our detailed monthly reports show progress on metrics that directly impact your business goals."
+        },
+        {
+          "q": "What makes your SEO approach different?",
+          "a": "We combine data-driven strategies with NZ market expertise, focusing on sustainable white-hat techniques that deliver long-term results rather than quick fixes."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "on-page-seo",
+        "name": "On-Page SEO",
+        "title": "On-Page SEO",
+        "description": "Improve rankings and attract qualified visitors with strategic Optimisations customized to your industry and audience.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "keyword-research",
+        "name": "Keyword Research",
+        "title": "Keyword Research",
+        "description": "Discover high-value keywords that your target audience is searching for and create content strategies that drive qualified traffic to your website.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "technical-seo",
+        "name": "Technical SEO",
+        "title": "Technical SEO",
+        "description": "Optimize your website's technical infrastructure to ensure search engines can crawl, index, and rank your pages effectively for maximum visibility.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "off-page-seo",
+        "name": "Off-Page SEO",
+        "title": "Off-Page SEO",
+        "description": "Build your website's authority and credibility through strategic external Optimisation techniques that improve your search engine rankings.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "link-building",
+        "name": "Link Building",
+        "title": "Link Building",
+        "description": "Acquire high-quality backlinks from authoritative websites to boost your domain authority and improve your search engine rankings.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "seo-audit",
+        "name": "SEO Audit",
+        "title": "SEO Audit",
+        "description": "Get a comprehensive analysis of your website's SEO performance with actionable insights and recommendations to improve your rankings.",
+        "image": "/seo/services/seo-audit.png"
+      }
+    ]
   },
   "local-seo": {
     "hero": {
@@ -29,7 +99,7 @@
     "form": {
       "heading": "Ready to dominate local search?",
       "content": "Are customers finding your business when they search locally? Most businesses are missing out on valuable local customers because they're not optimized for local search. Our NZ local SEO experts use advanced techniques to ensure your business appears when customers search for services in your area.",
-      "subContent": "Local SEO is different from traditional SEO - it requires specific strategies for Google My Business optimization, local citations, and location-based keywords that your competitors might already be using.",
+      "subContent": "Local SEO is different from traditional SEO - it requires specific strategies for Google My Business Optimisation, local citations, and location-based keywords that your competitors might already be using.",
       "cta": "Let us analyze your local search presence and show you exactly how to capture more local customers with our comprehensive local SEO audit.",
       "formHeading": "Get Your Local Search Visibility Report",
       "buttonText": "Get My Local Audit"
@@ -41,19 +111,89 @@
       "text3": "Our local SEO strategies help you capture these high-intent local searches by optimizing your Google My Business profile, building local citations, and creating location-specific content that resonates with your community.",
       "image": "local-seo.jpg",
       "alt": "Local SEO illustration"
-    }
+    },
+    "services": "Local SEO",
+    "faq": {
+      "serviceName": "Local SEO",
+      "faqs": [
+        {
+          "q": "What is Local SEO?",
+          "a": "Local SEO helps businesses appear in location-based searches like 'dentist near me' or 'restaurant in Auckland'. It focuses on Google Business Profile Optimisation, local citations, and location-targeted content."
+        },
+        {
+          "q": "How does Google My Business affect my rankings?",
+          "a": "Your Google Business Profile is crucial for local search visibility. A well-optimized profile with accurate information, regular posts, and positive reviews can significantly improve your local search rankings."
+        },
+        {
+          "q": "What are local citations?",
+          "a": "Local citations are online mentions of your business name, address, and phone number (NAP) across directories and websites. Consistent citations help Google verify your business and improve local rankings."
+        },
+        {
+          "q": "How long does local SEO take?",
+          "a": "Local SEO often shows results faster than traditional SEO. Many businesses see improvements in 2-4 months, with significant gains in 4-6 months as reviews and citations build."
+        },
+        {
+          "q": "Do I need local SEO if I have a physical location?",
+          "a": "Absolutely! If you serve customers in a specific area, local SEO is essential. It helps you appear when potential customers search for services near them, driving foot traffic and phone calls."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "google-my-business",
+        "name": "Google My Business",
+        "title": "Google My Business Optimisation",
+        "description": "Optimize your Google My Business profile to dominate local search results and attract more customers in your area.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "local-citations",
+        "name": "Local Citations",
+        "title": "Local Citations & Listings",
+        "description": "Build consistent business citations across the web to improve your local search rankings and help customers find you.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "local-keyword",
+        "name": "Local Keyword Research",
+        "title": "Local Keyword Research",
+        "description": "Discover location-based keywords that your local customers are searching for to drive targeted foot traffic.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "local-content",
+        "name": "Local Content",
+        "title": "Location-Specific Content",
+        "description": "Create compelling content that resonates with your local community and improves your visibility in local search.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "review-management",
+        "name": "Review Management",
+        "title": "Review Management",
+        "description": "Build and manage your online reputation with strategic review acquisition and response strategies.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "local-link-building",
+        "name": "Local Link Building",
+        "title": "Local Link Building",
+        "description": "Acquire high-quality local backlinks to boost your authority in your geographic area.",
+        "image": "/seo/services/seo-audit.png"
+      }
+    ]
   },
   "wordpress-seo": {
     "hero": {
-      "heading": "WordPress SEO Optimization Experts",
-      "subheading": "Transform your WordPress site into a search engine magnet with our technical SEO expertise, plugin optimization, and content strategy tailored for WordPress."
+      "heading": "WordPress SEO Optimisation Experts",
+      "subheading": "Transform your WordPress site into a search engine magnet with our technical SEO expertise, plugin Optimisation, and content strategy tailored for WordPress."
     },
     "form": {
       "heading": "Is your WordPress site SEO-ready?",
-      "content": "WordPress sites have unique SEO challenges that many businesses overlook. From plugin conflicts to slow loading times and poor mobile optimization, these issues can severely impact your search rankings. Our NZ WordPress SEO specialists know exactly what to look for.",
+      "content": "WordPress sites have unique SEO challenges that many businesses overlook. From plugin conflicts to slow loading times and poor mobile Optimisation, these issues can severely impact your search rankings. Our NZ WordPress SEO specialists know exactly what to look for.",
       "subContent": "Most WordPress sites have technical SEO issues that are costing them valuable organic traffic. These problems are often invisible to business owners but are clear signals to search engines that your site needs improvement.",
       "cta": "We'll analyze your WordPress site's SEO health and provide a detailed report showing exactly what's holding you back from better rankings.",
-      "formHeading": "WordPress SEO Health Check & Optimization Report",
+      "formHeading": "WordPress SEO Health Check & Optimisation Report",
       "buttonText": "Analyze My WordPress Site"
     },
     "content": {
@@ -63,7 +203,77 @@
       "text3": "Our WordPress SEO experts understand the platform inside and out. We'll audit your site's technical health, optimize your plugins and themes, and ensure your content is structured for maximum search visibility.",
       "image": "wordpress-seo.jpg",
       "alt": "WordPress SEO illustration"
-    }
+    },
+    "services": "WordPress SEO",
+    "faq": {
+      "serviceName": "WordPress",
+      "faqs": [
+        {
+          "q": "Why does my WordPress site need special SEO?",
+          "a": "WordPress sites have unique technical challenges like plugin conflicts, theme Optimisation issues, and specific security concerns that can impact SEO. Specialized WordPress SEO ensures these are properly addressed."
+        },
+        {
+          "q": "Which WordPress SEO plugin is best?",
+          "a": "Popular options include Yoast SEO, Rank Math, and All in One SEO. We'll analyze your specific needs and recommend the best plugin for your goals, then optimize it for maximum effectiveness."
+        },
+        {
+          "q": "Can plugins slow down my WordPress site?",
+          "a": "Yes, poorly optimized or excessive plugins can significantly slow your site, hurting both user experience and SEO. We audit and optimize your plugin setup for speed and performance."
+        },
+        {
+          "q": "How do you optimize WordPress page speed?",
+          "a": "We optimize images, implement caching, minify code, use a CDN, optimize your database, and carefully select lightweight themes and plugins to maximize site speed."
+        },
+        {
+          "q": "Is WordPress good for SEO?",
+          "a": "WordPress is excellent for SEO when properly optimized. Its flexibility and extensive plugin ecosystem make it powerful, but it requires expert configuration to achieve optimal results."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "wp-speed-Optimisation",
+        "name": "Speed Optimisation",
+        "title": "WordPress Speed Optimisation",
+        "description": "Boost your WordPress site's loading speed with expert Optimisation of plugins, themes, and server configurations.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "wp-plugin-Optimisation",
+        "name": "Plugin Optimisation",
+        "title": "WordPress Plugin SEO",
+        "description": "Optimize and configure WordPress SEO plugins like Yoast, RankMath, and All in One SEO for maximum effectiveness.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "wp-technical-seo",
+        "name": "Technical SEO",
+        "title": "WordPress Technical SEO",
+        "description": "Fix technical issues unique to WordPress including duplicate content, crawl errors, and indexation problems.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "wp-theme-Optimisation",
+        "name": "Theme Optimisation",
+        "title": "WordPress Theme SEO",
+        "description": "Ensure your WordPress theme is SEO-friendly with proper schema markup, mobile responsiveness, and clean code.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "wp-content-strategy",
+        "name": "Content Strategy",
+        "title": "WordPress Content Strategy",
+        "description": "Develop a content strategy that leverages WordPress's strengths to maximize your search visibility.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "wp-security-seo",
+        "name": "Security & SEO",
+        "title": "WordPress Security for SEO",
+        "description": "Protect your WordPress site from security threats that can harm your search rankings and user trust.",
+        "image": "/seo/services/seo-audit.png"
+      }
+    ]
   },
   "ecom-seo": {
     "hero": {
@@ -75,38 +285,730 @@
       "content": "E-commerce SEO is complex - it's not just about ranking your homepage, but ensuring every product page, category page, and collection is optimized for search. Most online stores are missing thousands of potential customers because their products aren't properly optimized for search engines.",
       "subContent": "Your competitors are likely capturing customers who should be buying from you, simply because their product pages rank better in search results. This is costing you sales every single day.",
       "cta": "Let us audit your e-commerce site and show you exactly how to optimize your product pages, category structure, and technical setup to capture more organic traffic and sales.",
-      "formHeading": "E-commerce SEO Audit & Sales Optimization Report",
+      "formHeading": "E-commerce SEO Audit & Sales Optimisation Report",
       "buttonText": "Audit My Online Store"
     },
     "content": {
       "heading": "Turn browsers into buyers.",
       "text1": "E-commerce SEO is fundamentally different from traditional website SEO. Your online store needs to rank for thousands of product-specific keywords while maintaining technical excellence across every page.",
       "text2": "Every product page is a potential landing page for organic traffic. If your product descriptions, category pages, and site structure aren't optimized for search, you're losing customers to competitors who have invested in e-commerce SEO.",
-      "text3": "Our e-commerce SEO strategies focus on product page optimization, category structure, site speed, mobile experience, and conversion optimization to help you capture more organic traffic and turn visitors into customers.",
+      "text3": "Our e-commerce SEO strategies focus on product page Optimisation, category structure, site speed, mobile experience, and conversion Optimisation to help you capture more organic traffic and turn visitors into customers.",
       "image": "ecom-seo.jpg",
       "alt": "E-commerce SEO illustration"
-    }
+    },
+    "services": "E-commerce SEO",
+    "faq": {
+      "serviceName": "E-commerce SEO",
+      "faqs": [
+        {
+          "q": "What is E-commerce SEO?",
+          "a": "E-commerce SEO is the process of optimizing your online store to rank higher in search results, focusing on product pages, category pages, and technical aspects unique to e-commerce platforms."
+        },
+        {
+          "q": "How do you optimize product pages for SEO?",
+          "a": "We optimize product titles, descriptions, images, schema markup, URL structure, and internal linking. Each product page becomes a targeted landing page for specific search queries."
+        },
+        {
+          "q": "What's the biggest SEO challenge for e-commerce sites?",
+          "a": "Managing duplicate content, optimizing thousands of product pages at scale, maintaining site speed with large catalogs, and building authority for product-specific keywords."
+        },
+        {
+          "q": "How does product schema markup help?",
+          "a": "Product schema markup helps your products appear with rich snippets in search results, showing prices, ratings, and availability. This increases click-through rates and drives more qualified traffic."
+        },
+        {
+          "q": "Can SEO help increase my e-commerce sales?",
+          "a": "Absolutely! E-commerce SEO drives highly qualified traffic from people actively searching for products you sell. By ranking for product-specific keywords, you capture customers ready to buy."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "product-Optimisation",
+        "name": "Product Page SEO",
+        "title": "Product Page Optimisation",
+        "description": "Optimize every product page with targeted keywords, compelling descriptions, and schema markup to maximize visibility.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "category-Optimisation",
+        "name": "Category SEO",
+        "title": "Category Page Optimisation",
+        "description": "Structure and optimize category pages to capture high-intent shoppers and improve your site's overall SEO performance.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "ecom-technical-seo",
+        "name": "Technical SEO",
+        "title": "E-commerce Technical SEO",
+        "description": "Solve complex technical challenges unique to e-commerce sites including crawl budget, duplicate content, and pagination.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "product-schema",
+        "name": "Product Schema",
+        "title": "Product Schema Markup",
+        "description": "Implement rich snippets and product schema to enhance your listings in search results and boost click-through rates.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "ecom-link-building",
+        "name": "E-commerce Links",
+        "title": "E-commerce Link Building",
+        "description": "Build authoritative backlinks to your product and category pages to increase domain authority and rankings.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "conversion-Optimisation",
+        "name": "Conversion SEO",
+        "title": "SEO for Conversions",
+        "description": "Optimize your e-commerce site not just for traffic, but for converting visitors into paying customers.",
+        "image": "/seo/services/seo-audit.png"
+      }
+    ]
   },
   "ai-seo": {
     "hero": {
       "heading": "AI-Powered SEO Solutions for Modern Businesses",
-      "subheading": "Leverage cutting-edge AI technology to supercharge your SEO strategy with automated content optimization, intelligent keyword research, and data-driven insights."
+      "subheading": "Leverage cutting-edge AI technology to supercharge your SEO strategy with automated content Optimisation, intelligent keyword research, and data-driven insights."
     },
     "form": {
       "heading": "Ready to supercharge your SEO with AI?",
       "content": "The SEO landscape is evolving rapidly with AI technology. While your competitors might still be using outdated SEO tactics, AI-powered SEO strategies can give you a massive competitive advantage. Our NZ AI SEO experts use cutting-edge tools and techniques to identify opportunities your competitors can't see.",
-      "subContent": "AI can analyze thousands of data points in seconds, revealing keyword opportunities, content gaps, and optimization strategies that traditional SEO methods would take months to discover.",
+      "subContent": "AI can analyze thousands of data points in seconds, revealing keyword opportunities, content gaps, and Optimisation strategies that traditional SEO methods would take months to discover.",
       "cta": "Let us show you how AI can revolutionize your SEO strategy with a comprehensive AI-powered audit that reveals opportunities your competitors are missing.",
       "formHeading": "AI-Powered SEO Analysis & Strategy Report",
       "buttonText": "Get My AI SEO Audit"
     },
     "content": {
       "heading": "Harness the power of AI for SEO.",
-      "text1": "The future of SEO is here, and it's powered by artificial intelligence. While traditional SEO methods are still effective, AI can accelerate and enhance every aspect of your search optimization strategy.",
+      "text1": "The future of SEO is here, and it's powered by artificial intelligence. While traditional SEO methods are still effective, AI can accelerate and enhance every aspect of your search Optimisation strategy.",
       "text2": "AI tools can analyze your competitors' strategies, identify content gaps, optimize your existing content, and even predict search trends before they become mainstream. This gives you a significant advantage in the ever-evolving search landscape.",
       "text3": "Our AI-powered SEO approach combines cutting-edge technology with human expertise to deliver results faster and more efficiently than ever before. We use AI to identify opportunities, create content strategies, and optimize your site for maximum search visibility.",
       "image": "ai-seo.jpg",
       "alt": "AI SEO illustration"
-    }
+    },
+    "services": "AI SEO",
+    "faq": {
+      "serviceName": "AI SEO",
+      "faqs": [
+        {
+          "q": "What is AI SEO?",
+          "a": "AI SEO uses artificial intelligence tools to enhance keyword research, content Optimisation, competitor analysis, and predictive analytics, making SEO strategies more efficient and data-driven."
+        },
+        {
+          "q": "How does AI improve keyword research?",
+          "a": "AI can analyze millions of search queries, identify patterns, predict trends, and discover keyword opportunities that traditional methods might miss. It processes data at scale to find high-value opportunities faster."
+        },
+        {
+          "q": "Can AI replace human SEO experts?",
+          "a": "No. AI is a powerful tool, but it requires human expertise to interpret data, develop strategies, and ensure content maintains quality and authenticity. We use AI to enhance our expertise, not replace it."
+        },
+        {
+          "q": "Is AI-generated content good for SEO?",
+          "a": "AI-generated content can be useful when properly supervised and edited by humans. Google doesn't penalize AI content specifically, but it must be high-quality, accurate, and valuable to users."
+        },
+        {
+          "q": "What AI tools do you use for SEO?",
+          "a": "We use advanced AI platforms for keyword research, content Optimisation, competitor analysis, and performance tracking. Our tool stack combines AI efficiency with human strategic oversight."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "ai-keyword-research",
+        "name": "AI Keyword Research",
+        "title": "AI-Powered Keyword Research",
+        "description": "Leverage AI to discover high-value keyword opportunities and predict search trends before your competitors.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "ai-content-Optimisation",
+        "name": "Content Optimisation",
+        "title": "AI Content Optimisation",
+        "description": "Use AI tools to optimize your existing content for better rankings and create data-driven content strategies.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "ai-competitor-analysis",
+        "name": "Competitor Analysis",
+        "title": "AI Competitor Analysis",
+        "description": "Analyze your competitors' SEO strategies with AI to identify gaps and opportunities in your market.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "ai-content-generation",
+        "name": "Content Generation",
+        "title": "AI Content Generation",
+        "description": "Create SEO-optimized content faster with AI assistance while maintaining quality and authenticity.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "ai-search-trends",
+        "name": "Trend Prediction",
+        "title": "AI Search Trend Prediction",
+        "description": "Stay ahead of the curve by using AI to predict emerging search trends and capitalize on opportunities early.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "ai-performance-tracking",
+        "name": "Performance Tracking",
+        "title": "AI Performance Analytics",
+        "description": "Monitor and analyze your SEO performance with AI-powered insights and predictive analytics.",
+        "image": "/seo/services/seo-audit.png"
+      }
+    ]
+  },
+  "shopify-seo": {
+    "hero": {
+      "heading": "Shopify SEO Services That Drive Sales",
+      "subheading": "Optimize your Shopify store for search engines and boost your online sales with our specialized Shopify SEO strategies designed for e-commerce success."
+    },
+    "form": {
+      "heading": "Is your Shopify store getting found?",
+      "content": "Shopify stores face unique SEO challenges that can prevent customers from finding your products. From duplicate content issues to slow loading speeds and poor mobile optimization, these problems cost you sales every day.",
+      "subContent": "Most Shopify store owners don't realize their site has technical SEO issues that are hurting their search rankings and driving customers to competitors.",
+      "cta": "Let us audit your Shopify store and show you exactly how to optimize it for better search rankings and increased sales.",
+      "formHeading": "Shopify SEO Audit & Optimization Report",
+      "buttonText": "Audit My Shopify Store"
+    },
+    "content": {
+      "heading": "Dominate search results with Shopify SEO.",
+      "text1": "Shopify is an excellent e-commerce platform, but it requires specialized SEO knowledge to rank well in search results. Many store owners struggle with technical issues that prevent their products from being discovered.",
+      "text2": "Your Shopify store needs to compete with thousands of other online stores for the same keywords. Without proper SEO optimization, you're losing potential customers to competitors who have invested in search optimization.",
+      "text3": "Our Shopify SEO experts understand the platform's unique challenges and opportunities. We'll optimize your product pages, improve site speed, fix technical issues, and create a content strategy that drives qualified traffic to your store.",
+      "image": "seo.png",
+      "alt": "Shopify SEO illustration"
+    },
+    "services": "Shopify SEO",
+    "faq": {
+      "serviceName": "Shopify SEO",
+      "faqs": [
+        {
+          "q": "Why does Shopify need special SEO?",
+          "a": "Shopify has unique technical challenges like duplicate content, app conflicts, and specific URL structures that require specialized SEO knowledge to optimize effectively."
+        },
+        {
+          "q": "How do you optimize Shopify product pages?",
+          "a": "We optimize product titles, descriptions, meta tags, URL structure, images, and implement schema markup to help your products rank better in search results."
+        },
+        {
+          "q": "Can Shopify apps affect SEO?",
+          "a": "Yes, poorly coded apps can slow your site, create duplicate content, or add unnecessary code that hurts SEO. We audit your apps and recommend SEO-friendly alternatives."
+        },
+        {
+          "q": "How long does Shopify SEO take?",
+          "a": "Shopify SEO typically shows initial results in 3-6 months, with significant improvements building over 6-12 months as we optimize your content and build authority."
+        },
+        {
+          "q": "What's the biggest Shopify SEO challenge?",
+          "a": "Managing duplicate content across collections and product variants, optimizing site speed with apps, and building authority for product-specific keywords."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "shopify-product-seo",
+        "name": "Product Page SEO",
+        "title": "Shopify Product Optimization",
+        "description": "Optimize every product page with targeted keywords, compelling descriptions, and proper schema markup.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "shopify-technical-seo",
+        "name": "Technical SEO",
+        "title": "Shopify Technical SEO",
+        "description": "Fix technical issues unique to Shopify including duplicate content, site speed, and mobile optimization.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "shopify-app-optimization",
+        "name": "App Optimization",
+        "title": "Shopify App SEO Audit",
+        "description": "Audit and optimize your Shopify apps to ensure they don't negatively impact your search rankings.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "shopify-content-strategy",
+        "name": "Content Strategy",
+        "title": "Shopify Content Marketing",
+        "description": "Create compelling blog content and product descriptions that drive organic traffic and boost sales.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "shopify-link-building",
+        "name": "Link Building",
+        "title": "E-commerce Link Building",
+        "description": "Build high-quality backlinks to your Shopify store to increase domain authority and rankings.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "shopify-conversion-seo",
+        "name": "Conversion SEO",
+        "title": "SEO for Conversions",
+        "description": "Optimize your Shopify store not just for traffic, but for converting visitors into paying customers.",
+        "image": "/seo/services/seo-audit.png"
+      }
+    ]
+  },
+  "seo-audits": {
+    "hero": {
+      "heading": "Comprehensive SEO Audits That Reveal Hidden Opportunities",
+      "subheading": "Discover exactly what's holding back your search rankings with our detailed SEO audits that identify technical issues, content gaps, and optimization opportunities."
+    },
+    "form": {
+      "heading": "What's really hurting your SEO?",
+      "content": "Most websites have hidden SEO issues that are costing them valuable organic traffic. From technical problems to content gaps and poor user experience, these issues prevent your site from ranking well in search results.",
+      "subContent": "Without a comprehensive SEO audit, you're flying blind. Your competitors who have invested in SEO audits are likely capturing customers who should be finding your business instead.",
+      "cta": "Let us conduct a thorough SEO audit of your website and show you exactly what's preventing better rankings and how to fix it.",
+      "formHeading": "Complete SEO Audit & Action Plan",
+      "buttonText": "Get My SEO Audit"
+    },
+    "content": {
+      "heading": "Uncover the truth about your SEO.",
+      "text1": "SEO audits reveal the hidden issues that are preventing your website from ranking well in search results. Many business owners are surprised to discover technical problems, content gaps, and optimization opportunities they never knew existed.",
+      "text2": "A comprehensive SEO audit examines every aspect of your website's search optimization, from technical infrastructure to content quality, user experience, and competitive positioning.",
+      "text3": "Our detailed SEO audits provide actionable insights and a clear roadmap for improvement. We'll identify the quick wins that can boost your rankings immediately, as well as the long-term strategies needed for sustained growth.",
+      "image": "seo.png",
+      "alt": "SEO Audit illustration"
+    },
+    "services": "SEO Audits",
+    "faq": {
+      "serviceName": "SEO Audits",
+      "faqs": [
+        {
+          "q": "What is included in an SEO audit?",
+          "a": "Our comprehensive SEO audits cover technical SEO, on-page optimization, content analysis, site speed, mobile-friendliness, backlink profile, competitor analysis, and local SEO factors."
+        },
+        {
+          "q": "How long does an SEO audit take?",
+          "a": "A complete SEO audit typically takes 1-2 weeks depending on site size and complexity. We provide detailed reports with actionable recommendations and priority rankings."
+        },
+        {
+          "q": "How often should I get an SEO audit?",
+          "a": "We recommend quarterly SEO audits for active websites, or whenever you notice significant drops in rankings or traffic. Regular audits help catch issues early."
+        },
+        {
+          "q": "What's the difference between free and paid SEO audits?",
+          "a": "Free audits typically only check basic issues. Our comprehensive audits analyze 100+ factors, provide detailed reports, and include actionable recommendations with implementation guidance."
+        },
+        {
+          "q": "Can I fix the issues myself after the audit?",
+          "a": "Some issues can be fixed easily, while others require technical expertise. We provide clear explanations and can help implement the fixes or refer you to qualified professionals."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "technical-audit",
+        "name": "Technical SEO Audit",
+        "title": "Technical SEO Analysis",
+        "description": "Comprehensive analysis of your site's technical health including crawl errors, site speed, and mobile optimization.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "content-audit",
+        "name": "Content Audit",
+        "title": "Content Quality Analysis",
+        "description": "Evaluate your content strategy, keyword optimization, and identify content gaps and opportunities.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "competitor-audit",
+        "name": "Competitor Analysis",
+        "title": "Competitive SEO Analysis",
+        "description": "Analyze your competitors' SEO strategies to identify opportunities and benchmark your performance.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "backlink-audit",
+        "name": "Backlink Audit",
+        "title": "Link Profile Analysis",
+        "description": "Review your backlink profile, identify toxic links, and find new link-building opportunities.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "user-experience-audit",
+        "name": "UX Audit",
+        "title": "User Experience Analysis",
+        "description": "Evaluate site usability, navigation, and user engagement factors that impact SEO performance.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "local-seo-audit",
+        "name": "Local SEO Audit",
+        "title": "Local Search Analysis",
+        "description": "Assess your local SEO presence including Google My Business and local citation consistency.",
+        "image": "/seo/services/seo-audit.png"
+      }
+    ]
+  },
+  "online-reputation-management": {
+    "hero": {
+      "heading": "Online Reputation Management That Builds Trust",
+      "subheading": "Protect and enhance your brand's online reputation with our comprehensive ORM services that monitor, manage, and improve how customers perceive your business online."
+    },
+    "form": {
+      "heading": "What do customers see when they search for you?",
+      "content": "Your online reputation directly impacts customer decisions and business growth. Negative reviews, outdated information, or poor search results can drive potential customers away before they even visit your website.",
+      "subContent": "Most businesses don't realize their online reputation is hurting their bottom line. What customers find when they search for your business can make or break their decision to choose you over competitors.",
+      "cta": "Let us analyze your current online reputation and show you exactly how to improve your search results and customer perception.",
+      "formHeading": "Online Reputation Analysis & Strategy",
+      "buttonText": "Analyze My Reputation"
+    },
+    "content": {
+      "heading": "Build trust through reputation management.",
+      "text1": "Your online reputation is often the first impression potential customers have of your business. In today's digital world, customers research businesses online before making purchasing decisions, making reputation management crucial for success.",
+      "text2": "Online reputation management involves monitoring what's being said about your business, addressing negative feedback, encouraging positive reviews, and ensuring accurate information appears in search results.",
+      "text3": "Our ORM services help you take control of your online narrative. We'll monitor your reputation across all platforms, respond to reviews professionally, create positive content, and implement strategies to improve your online visibility and credibility.",
+      "image": "seo.png",
+      "alt": "Online Reputation Management illustration"
+    },
+    "services": "Online Reputation Management",
+    "faq": {
+      "serviceName": "Online Reputation Management",
+      "faqs": [
+        {
+          "q": "What is online reputation management?",
+          "a": "ORM involves monitoring, managing, and improving how your business appears online. It includes review management, content creation, search result optimization, and crisis management."
+        },
+        {
+          "q": "How long does it take to improve my online reputation?",
+          "a": "Initial improvements can be seen within 1-3 months, but building a strong, positive online reputation is an ongoing process that requires consistent effort over 6-12 months."
+        },
+        {
+          "q": "Can you remove negative reviews?",
+          "a": "We can't remove legitimate negative reviews, but we can help you respond professionally, encourage more positive reviews, and create positive content that ranks higher in search results."
+        },
+        {
+          "q": "What platforms do you monitor?",
+          "a": "We monitor Google, Yelp, Facebook, industry-specific review sites, social media platforms, and news mentions to give you a complete picture of your online reputation."
+        },
+        {
+          "q": "How do you handle reputation crises?",
+          "a": "We provide rapid response strategies for reputation crises, including damage control, positive content creation, and communication strategies to minimize negative impact."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "reputation-monitoring",
+        "name": "Reputation Monitoring",
+        "title": "24/7 Reputation Monitoring",
+        "description": "Continuous monitoring of your online mentions, reviews, and search results across all major platforms.",
+        "image": "/seo/services/seo-audit.png"
+      },
+      {
+        "id": "review-management",
+        "name": "Review Management",
+        "title": "Professional Review Management",
+        "description": "Respond to reviews professionally, encourage positive feedback, and develop review acquisition strategies.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "content-creation",
+        "name": "Positive Content",
+        "title": "Positive Content Creation",
+        "description": "Create and publish positive content that showcases your expertise and pushes down negative search results.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "crisis-management",
+        "name": "Crisis Management",
+        "title": "Reputation Crisis Management",
+        "description": "Rapid response strategies for reputation crises and damage control to minimize negative impact.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "social-media-orm",
+        "name": "Social Media ORM",
+        "title": "Social Media Reputation",
+        "description": "Manage your reputation across social media platforms and engage with customers professionally.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "search-suppression",
+        "name": "Search Suppression",
+        "title": "Negative Result Suppression",
+        "description": "Push down negative search results through strategic content creation and SEO optimization.",
+        "image": "/seo/services/link-building.png"
+      }
+    ]
+  },
+  "seo-migration": {
+    "hero": {
+      "heading": "SEO Migration Services That Preserve Your Rankings",
+      "subheading": "Safely migrate your website without losing search rankings with our expert SEO migration services that ensure zero traffic loss during platform changes."
+    },
+    "form": {
+      "heading": "Planning a website migration?",
+      "content": "Website migrations are one of the most risky SEO operations. Without proper planning and execution, you can lose months or years of SEO progress in just a few days. Most businesses lose 20-40% of their organic traffic during migrations.",
+      "subContent": "Your competitors are hoping you'll make migration mistakes. Don't give them the advantage - let our SEO migration experts guide you through every step of the process.",
+      "cta": "Get a comprehensive SEO migration strategy that protects your rankings and ensures a smooth transition to your new platform.",
+      "formHeading": "SEO Migration Strategy & Risk Assessment",
+      "buttonText": "Plan My Migration"
+    },
+    "content": {
+      "heading": "Migrate without losing your SEO progress.",
+      "text1": "SEO migrations are complex operations that require meticulous planning and execution. Whether you're changing platforms, redesigning your site, or restructuring your content, every detail matters for preserving your search rankings.",
+      "text2": "Poorly executed migrations can result in significant traffic loss, broken links, duplicate content issues, and months of recovery time. Our migration experts have successfully guided hundreds of businesses through complex SEO migrations.",
+      "text3": "Our comprehensive SEO migration services include pre-migration audits, URL mapping, content migration planning, technical SEO preservation, and post-migration monitoring to ensure your rankings remain stable throughout the transition.",
+      "image": "seo.png",
+      "alt": "SEO Migration illustration"
+    },
+    "services": "SEO Migration",
+    "faq": {
+      "serviceName": "SEO Migration",
+      "faqs": [
+        {
+          "q": "What is SEO migration?",
+          "a": "SEO migration is the process of moving a website from one platform to another while preserving search engine rankings and organic traffic. It includes URL mapping, content transfer, and technical SEO preservation."
+        },
+        {
+          "q": "How long does an SEO migration take?",
+          "a": "Migration timelines vary by site complexity, but typically take 2-8 weeks including planning, execution, and monitoring. Large enterprise sites may take 2-3 months for complete migration and stabilization."
+        },
+        {
+          "q": "Will I lose traffic during migration?",
+          "a": "With proper planning and execution, traffic loss should be minimal (0-5%). Without expert guidance, businesses typically lose 20-40% of organic traffic during migrations."
+        },
+        {
+          "q": "What platforms can you migrate to/from?",
+          "a": "We handle migrations between all major platforms including WordPress, Shopify, Magento, Drupal, custom solutions, and more. Our expertise covers any platform combination."
+        },
+        {
+          "q": "How do you preserve rankings during migration?",
+          "a": "We use comprehensive URL mapping, preserve meta data, maintain site structure, implement proper redirects, and monitor closely to ensure all ranking factors are preserved."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "migration-audit",
+        "name": "Pre-Migration Audit",
+        "title": "Migration Risk Assessment",
+        "description": "Comprehensive analysis of your current SEO status and migration risks to create a detailed migration plan.",
+        "image": "/seo/services/seo-audit.png"
+      },
+      {
+        "id": "url-mapping",
+        "name": "URL Mapping",
+        "title": "Strategic URL Planning",
+        "description": "Create detailed URL mapping and redirect strategies to preserve all existing rankings and traffic.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "content-migration",
+        "name": "Content Migration",
+        "title": "Content Transfer & Optimization",
+        "description": "Safely transfer all content while preserving SEO elements and optimizing for the new platform.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "technical-migration",
+        "name": "Technical Migration",
+        "title": "Technical SEO Preservation",
+        "description": "Maintain all technical SEO elements including schema markup, site structure, and performance optimization.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "post-migration-monitoring",
+        "name": "Post-Migration Monitoring",
+        "title": "Migration Success Tracking",
+        "description": "Monitor rankings, traffic, and technical issues for 90 days post-migration to ensure successful transition.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "migration-recovery",
+        "name": "Recovery Services",
+        "title": "Migration Recovery",
+        "description": "If your migration went wrong, we can help recover lost rankings and traffic through strategic fixes.",
+        "image": "/seo/services/link-building.png"
+      }
+    ]
+  },
+  "small-business-seo": {
+    "hero": {
+      "heading": "Small Business SEO That Drives Local Customers",
+      "subheading": "Get found by local customers with our affordable small business SEO services designed to compete with larger companies and drive qualified leads to your business."
+    },
+    "form": {
+      "heading": "Are you losing customers to bigger competitors?",
+      "content": "Small businesses often struggle to compete with larger companies online. Without proper SEO, you're invisible to potential customers who are searching for your services. Your competitors with bigger budgets are capturing customers who should be choosing you.",
+      "subContent": "Most small business owners think SEO is too expensive or complicated. The truth is, small businesses can compete effectively with the right SEO strategy and often see faster results than large corporations.",
+      "cta": "Let us show you how affordable, effective SEO can help your small business compete with larger competitors and attract more local customers.",
+      "formHeading": "Small Business SEO Assessment & Strategy",
+      "buttonText": "Get My Business Analysis"
+    },
+    "content": {
+      "heading": "Compete with the big players.",
+      "text1": "Small businesses have unique advantages in SEO that larger companies often miss. You can be more nimble, create more personalized content, and build stronger local relationships that translate into better search rankings.",
+      "text2": "The key is focusing on local SEO, creating valuable content that serves your community, and building genuine relationships with customers and other local businesses. These strategies level the playing field against bigger competitors.",
+      "text3": "Our small business SEO services are designed to be affordable and effective. We focus on high-impact strategies that deliver results quickly, helping you compete with larger companies and attract more local customers to your business.",
+      "image": "seo.png",
+      "alt": "Small Business SEO illustration"
+    },
+    "services": "Small Business SEO",
+    "faq": {
+      "serviceName": "Small Business SEO",
+      "faqs": [
+        {
+          "q": "Is SEO worth it for small businesses?",
+          "a": "Absolutely! Small businesses often see faster SEO results than large corporations and can compete effectively with the right strategy. Local SEO is particularly powerful for small businesses."
+        },
+        {
+          "q": "How much should small businesses spend on SEO?",
+          "a": "Small businesses typically spend $500-2000/month on SEO services. We offer flexible packages that fit different budgets while delivering maximum impact for your investment."
+        },
+        {
+          "q": "How long does small business SEO take?",
+          "a": "Small businesses often see initial results in 2-4 months, with significant improvements in 4-8 months. Local SEO results can be even faster due to less competition."
+        },
+        {
+          "q": "Can small businesses compete with big companies?",
+          "a": "Yes! Small businesses have advantages like local expertise, personal relationships, and agility. With the right SEO strategy, you can outrank larger competitors for local searches."
+        },
+        {
+          "q": "What's the focus for small business SEO?",
+          "a": "We focus on local SEO, Google My Business optimization, local content creation, and building genuine relationships that translate into better search rankings and customer loyalty."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "local-seo-small-business",
+        "name": "Local SEO",
+        "title": "Local Search Optimization",
+        "description": "Dominate local search results and get found by customers in your area with targeted local SEO strategies.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "google-business-profile",
+        "name": "Google My Business",
+        "title": "Google Business Profile Optimization",
+        "description": "Optimize your Google My Business listing to appear in local searches and attract more customers.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "local-content-marketing",
+        "name": "Local Content",
+        "title": "Community-Focused Content",
+        "description": "Create content that resonates with your local community and establishes you as the local expert.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "small-business-link-building",
+        "name": "Local Link Building",
+        "title": "Community Link Building",
+        "description": "Build relationships and links with other local businesses and organizations to boost your authority.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "review-management-small-business",
+        "name": "Review Management",
+        "title": "Customer Review Strategy",
+        "description": "Develop strategies to encourage positive reviews and manage your online reputation effectively.",
+        "image": "/seo/services/seo-audit.png"
+      },
+      {
+        "id": "small-business-technical-seo",
+        "name": "Technical SEO",
+        "title": "Small Business Technical SEO",
+        "description": "Optimize your website's technical foundation for better search rankings and user experience.",
+        "image": "/seo/services/technical.webp"
+      }
+    ]
+  },
+  "lead-generation": {
+    "hero": {
+      "heading": "SEO Lead Generation That Converts Visitors to Customers",
+      "subheading": "Turn your SEO traffic into qualified leads with our specialized lead generation SEO services that optimize every step of your conversion funnel."
+    },
+    "form": {
+      "heading": "Is your SEO traffic converting to leads?",
+      "content": "Getting traffic from SEO is only half the battle. If visitors aren't converting into leads and customers, you're missing out on the real value of your SEO investment. Most businesses struggle to convert their organic traffic effectively.",
+      "subContent": "Your competitors who have optimized their sites for lead generation are capturing customers from the same traffic you're getting. The difference is they've optimized their conversion process.",
+      "cta": "Let us analyze your conversion funnel and show you exactly how to turn more of your SEO traffic into qualified leads and paying customers.",
+      "formHeading": "Lead Generation Audit & Optimization Strategy",
+      "buttonText": "Audit My Conversions"
+    },
+    "content": {
+      "heading": "Turn traffic into leads.",
+      "text1": "SEO lead generation combines search optimization with conversion optimization to create a complete system that not only attracts visitors but converts them into qualified leads and customers.",
+      "text2": "It's not enough to rank well in search results. You need to understand your audience's intent, create compelling offers, and optimize every element of your conversion funnel to turn visitors into leads.",
+      "text3": "Our SEO lead generation services focus on attracting high-intent traffic and optimizing your site to convert that traffic effectively. We analyze user behavior, test different approaches, and continuously optimize for better conversion rates.",
+      "image": "seo.png",
+      "alt": "Lead Generation SEO illustration"
+    },
+    "services": "Lead Generation",
+    "faq": {
+      "serviceName": "Lead Generation",
+      "faqs": [
+        {
+          "q": "What is SEO lead generation?",
+          "a": "SEO lead generation combines search engine optimization with conversion optimization to attract qualified traffic and convert visitors into leads and customers."
+        },
+        {
+          "q": "How do you optimize for lead generation?",
+          "a": "We optimize your content for high-intent keywords, create compelling offers, improve user experience, and optimize every element of your conversion funnel."
+        },
+        {
+          "q": "What's the difference between traffic and leads?",
+          "a": "Traffic is just visitors to your site. Leads are visitors who provide contact information or take a desired action. SEO lead generation focuses on attracting visitors who are likely to become leads."
+        },
+        {
+          "q": "How do you measure SEO lead generation success?",
+          "a": "We track lead volume, cost per lead, conversion rates, lead quality, and ROI. The goal is generating more qualified leads at a lower cost per acquisition."
+        },
+        {
+          "q": "Can you improve my conversion rates?",
+          "a": "Yes! We analyze your current conversion funnel, identify bottlenecks, and implement optimization strategies to improve your conversion rates and generate more leads."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "high-intent-keywords",
+        "name": "High-Intent Keywords",
+        "title": "Intent-Based Keyword Strategy",
+        "description": "Target keywords that indicate purchase intent to attract visitors ready to buy or request information.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "conversion-optimization",
+        "name": "Conversion Optimization",
+        "title": "Landing Page Optimization",
+        "description": "Optimize your landing pages and forms to maximize conversions from your SEO traffic.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "lead-magnets",
+        "name": "Lead Magnets",
+        "title": "Compelling Offer Creation",
+        "description": "Create valuable lead magnets and offers that encourage visitors to provide their contact information.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "funnel-optimization",
+        "name": "Funnel Analysis",
+        "title": "Conversion Funnel Optimization",
+        "description": "Analyze and optimize every step of your conversion funnel to maximize lead generation.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "lead-tracking",
+        "name": "Lead Tracking",
+        "title": "Lead Attribution & Tracking",
+        "description": "Track leads back to specific keywords and content to optimize your strategy for maximum ROI.",
+        "image": "/seo/services/seo-audit.png"
+      },
+      {
+        "id": "lead-nurturing",
+        "name": "Lead Nurturing",
+        "title": "Lead Follow-up Strategy",
+        "description": "Develop automated follow-up sequences to nurture leads and increase conversion rates.",
+        "image": "/seo/services/link-building.png"
+      }
+    ]
   }
 }
