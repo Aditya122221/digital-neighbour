@@ -558,7 +558,7 @@ const Navbar: React.FC = () => {
                                 if (seoSlugs.has(name)) {
                                   // Map naming differences
                                   const slugMap: Record<string, string> = {
-                                    'search-engine-optimisation': 'search-engine-optimization',
+                                    'search-engine-optimisation': 'search-engine-optimisation',
                                     'e-commerce-seo': 'ecom-seo',
                                   };
                                   const slug = slugMap[name] || name;
@@ -690,7 +690,26 @@ const Navbar: React.FC = () => {
                                           {column.services.map((service) => (
                               <Link
                                 key={service.name}
-                                href={`/services/${service.name.toLowerCase().replace(/\s+/g, '-')}`}
+                                href={(() => {
+                                  const name = service.name.toLowerCase().replace(/\s+/g, '-');
+                                  const seoSlugs = new Set([
+                                    'search-engine-optimisation',
+                                    'local-seo',
+                                    'wordpress-seo',
+                                    'e-commerce-seo',
+                                    'ai-seo',
+                                  ]);
+                                  if (seoSlugs.has(name)) {
+                                    // Map naming differences
+                                    const slugMap: Record<string, string> = {
+                                      'search-engine-optimisation': 'search-engine-optimisation',
+                                      'e-commerce-seo': 'ecom-seo',
+                                    };
+                                    const slug = slugMap[name] || name;
+                                    return `/seo/${slug}`;
+                                  }
+                                  return `/services/${name}`;
+                                })()}
                                 className="flex items-center gap-2 px-2 py-1 text-gray-400 hover:text-white text-xs"
                                 onClick={() => setIsMenuOpen(false)}
                               >
