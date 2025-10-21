@@ -504,7 +504,7 @@ const Navbar: React.FC = () => {
                         className={cn(
                           "flex items-center justify-between px-4 py-3 rounded-lg cursor-pointer transition-colors duration-200",
                           category.isActive
-                            ? "bg-bone text-black"
+                            ? "bg-yellow/80 text-black"
                             : "hover:bg-gray-100 text-gray-700"
                         )}
                       >
@@ -566,7 +566,7 @@ const Navbar: React.FC = () => {
                                 }
                                 return `/services/${name}`;
                               })()}
-                              className="flex items-center gap-2 p-1.5 rounded-lg hover:bg-gray-50 transition-colors duration-200 group"
+                              className="flex items-center gap-2 p-1.5 rounded-lg transition-colors duration-200 group"
                             >
                               {iconMapping[service.name] ? (
                                 <Image
@@ -579,9 +579,9 @@ const Navbar: React.FC = () => {
                               ) : (
                                 <span className="text-sm">{service.icon}</span>
                               )}
-                              <span className="text-md text-gray-700 group-hover:text-junglegreen transition-colors duration-200 relative">
+                              <span className="text-md text-gray-700 group-hover:text-yellow-700 transition-colors duration-200 relative">
                                 {service.name}
-                                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-junglegreen transition-all duration-200 group-hover:w-full"></span>
+                                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-yellow transition-all duration-200 group-hover:w-full"></span>
                               </span>
                             </Link>
                           ))}

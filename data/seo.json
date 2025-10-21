@@ -1,5 +1,5 @@
 {
-  "search-engine-optimization": {
+  "search-engine-optimisation": {
     "hero": {
       "heading": "Award-Winning SEO Marketing Agency",
       "subheading": "We've helped leading and emerging brands scale their traffic and revenue organically for over a decade with our experience in seo consulting."
@@ -466,16 +466,16 @@
     },
     "form": {
       "heading": "Is your Shopify store getting found?",
-      "content": "Shopify stores face unique SEO challenges that can prevent customers from finding your products. From duplicate content issues to slow loading speeds and poor mobile optimization, these problems cost you sales every day.",
+      "content": "Shopify stores face unique SEO challenges that can prevent customers from finding your products. From duplicate content issues to slow loading speeds and poor mobile optimisation, these problems cost you sales every day.",
       "subContent": "Most Shopify store owners don't realize their site has technical SEO issues that are hurting their search rankings and driving customers to competitors.",
       "cta": "Let us audit your Shopify store and show you exactly how to optimize it for better search rankings and increased sales.",
-      "formHeading": "Shopify SEO Audit & Optimization Report",
+      "formHeading": "Shopify SEO Audit & optimisation Report",
       "buttonText": "Audit My Shopify Store"
     },
     "content": {
       "heading": "Dominate search results with Shopify SEO.",
       "text1": "Shopify is an excellent e-commerce platform, but it requires specialized SEO knowledge to rank well in search results. Many store owners struggle with technical issues that prevent their products from being discovered.",
-      "text2": "Your Shopify store needs to compete with thousands of other online stores for the same keywords. Without proper SEO optimization, you're losing potential customers to competitors who have invested in search optimization.",
+      "text2": "Your Shopify store needs to compete with thousands of other online stores for the same keywords. Without proper SEO optimisation, you're losing potential customers to competitors who have invested in search optimisation.",
       "text3": "Our Shopify SEO experts understand the platform's unique challenges and opportunities. We'll optimize your product pages, improve site speed, fix technical issues, and create a content strategy that drives qualified traffic to your store.",
       "image": "seo.png",
       "alt": "Shopify SEO illustration"
@@ -510,7 +510,7 @@
       {
         "id": "shopify-product-seo",
         "name": "Product Page SEO",
-        "title": "Shopify Product Optimization",
+        "title": "Shopify Product optimisation",
         "description": "Optimize every product page with targeted keywords, compelling descriptions, and proper schema markup.",
         "image": "/seo/services/on-page.webp"
       },
@@ -518,12 +518,12 @@
         "id": "shopify-technical-seo",
         "name": "Technical SEO",
         "title": "Shopify Technical SEO",
-        "description": "Fix technical issues unique to Shopify including duplicate content, site speed, and mobile optimization.",
+        "description": "Fix technical issues unique to Shopify including duplicate content, site speed, and mobile optimisation.",
         "image": "/seo/services/technical.webp"
       },
       {
-        "id": "shopify-app-optimization",
-        "name": "App Optimization",
+        "id": "shopify-app-optimisation",
+        "name": "App optimisation",
         "title": "Shopify App SEO Audit",
         "description": "Audit and optimize your Shopify apps to ensure they don't negatively impact your search rankings.",
         "image": "/seo/services/seo.webp"
@@ -554,7 +554,7 @@
   "seo-audits": {
     "hero": {
       "heading": "Comprehensive SEO Audits That Reveal Hidden Opportunities",
-      "subheading": "Discover exactly what's holding back your search rankings with our detailed SEO audits that identify technical issues, content gaps, and optimization opportunities."
+      "subheading": "Discover exactly what's holding back your search rankings with our detailed SEO audits that identify technical issues, content gaps, and optimisation opportunities."
     },
     "form": {
       "heading": "What's really hurting your SEO?",
@@ -566,8 +566,8 @@
     },
     "content": {
       "heading": "Uncover the truth about your SEO.",
-      "text1": "SEO audits reveal the hidden issues that are preventing your website from ranking well in search results. Many business owners are surprised to discover technical problems, content gaps, and optimization opportunities they never knew existed.",
-      "text2": "A comprehensive SEO audit examines every aspect of your website's search optimization, from technical infrastructure to content quality, user experience, and competitive positioning.",
+      "text1": "SEO audits reveal the hidden issues that are preventing your website from ranking well in search results. Many business owners are surprised to discover technical problems, content gaps, and optimisation opportunities they never knew existed.",
+      "text2": "A comprehensive SEO audit examines every aspect of your website's search optimisation, from technical infrastructure to content quality, user experience, and competitive positioning.",
       "text3": "Our detailed SEO audits provide actionable insights and a clear roadmap for improvement. We'll identify the quick wins that can boost your rankings immediately, as well as the long-term strategies needed for sustained growth.",
       "image": "seo.png",
       "alt": "SEO Audit illustration"
@@ -578,7 +578,7 @@
       "faqs": [
         {
           "q": "What is included in an SEO audit?",
-          "a": "Our comprehensive SEO audits cover technical SEO, on-page optimization, content analysis, site speed, mobile-friendliness, backlink profile, competitor analysis, and local SEO factors."
+          "a": "Our comprehensive SEO audits cover technical SEO, on-page optimisation, content analysis, site speed, mobile-friendliness, backlink profile, competitor analysis, and local SEO factors."
         },
         {
           "q": "How long does an SEO audit take?",
@@ -603,14 +603,14 @@
         "id": "technical-audit",
         "name": "Technical SEO Audit",
         "title": "Technical SEO Analysis",
-        "description": "Comprehensive analysis of your site's technical health including crawl errors, site speed, and mobile optimization.",
+        "description": "Comprehensive analysis of your site's technical health including crawl errors, site speed, and mobile optimisation.",
         "image": "/seo/services/technical.webp"
       },
       {
         "id": "content-audit",
         "name": "Content Audit",
         "title": "Content Quality Analysis",
-        "description": "Evaluate your content strategy, keyword optimization, and identify content gaps and opportunities.",
+        "description": "Evaluate your content strategy, keyword optimisation, and identify content gaps and opportunities.",
         "image": "/seo/services/on-page.webp"
       },
       {
@@ -661,7 +661,7 @@
       "text1": "Your online reputation is often the first impression potential customers have of your business. In today's digital world, customers research businesses online before making purchasing decisions, making reputation management crucial for success.",
       "text2": "Online reputation management involves monitoring what's being said about your business, addressing negative feedback, encouraging positive reviews, and ensuring accurate information appears in search results.",
       "text3": "Our ORM services help you take control of your online narrative. We'll monitor your reputation across all platforms, respond to reviews professionally, create positive content, and implement strategies to improve your online visibility and credibility.",
-      "image": "seo.png",
+      "image": "trust.png",
       "alt": "Online Reputation Management illustration"
     },
     "services": "Online Reputation Management",
@@ -670,7 +670,7 @@
       "faqs": [
         {
           "q": "What is online reputation management?",
-          "a": "ORM involves monitoring, managing, and improving how your business appears online. It includes review management, content creation, search result optimization, and crisis management."
+          "a": "ORM involves monitoring, managing, and improving how your business appears online. It includes review management, content creation, search result optimisation, and crisis management."
         },
         {
           "q": "How long does it take to improve my online reputation?",
@@ -696,7 +696,7 @@
         "name": "Reputation Monitoring",
         "title": "24/7 Reputation Monitoring",
         "description": "Continuous monitoring of your online mentions, reviews, and search results across all major platforms.",
-        "image": "/seo/services/seo-audit.png"
+        "image": "/seo/services/24-7.webp"
       },
       {
         "id": "review-management",
@@ -730,7 +730,7 @@
         "id": "search-suppression",
         "name": "Search Suppression",
         "title": "Negative Result Suppression",
-        "description": "Push down negative search results through strategic content creation and SEO optimization.",
+        "description": "Push down negative search results through strategic content creation and SEO optimisation.",
         "image": "/seo/services/link-building.png"
       }
     ]
@@ -753,7 +753,7 @@
       "text1": "SEO migrations are complex operations that require meticulous planning and execution. Whether you're changing platforms, redesigning your site, or restructuring your content, every detail matters for preserving your search rankings.",
       "text2": "Poorly executed migrations can result in significant traffic loss, broken links, duplicate content issues, and months of recovery time. Our migration experts have successfully guided hundreds of businesses through complex SEO migrations.",
       "text3": "Our comprehensive SEO migration services include pre-migration audits, URL mapping, content migration planning, technical SEO preservation, and post-migration monitoring to ensure your rankings remain stable throughout the transition.",
-      "image": "seo.png",
+      "image": "migration.png",
       "alt": "SEO Migration illustration"
     },
     "services": "SEO Migration",
@@ -795,12 +795,12 @@
         "name": "URL Mapping",
         "title": "Strategic URL Planning",
         "description": "Create detailed URL mapping and redirect strategies to preserve all existing rankings and traffic.",
-        "image": "/seo/services/technical.webp"
+        "image": "/seo/services/url.webp"
       },
       {
         "id": "content-migration",
         "name": "Content Migration",
-        "title": "Content Transfer & Optimization",
+        "title": "Content Transfer & optimisation",
         "description": "Safely transfer all content while preserving SEO elements and optimizing for the new platform.",
         "image": "/seo/services/on-page.webp"
       },
@@ -808,7 +808,7 @@
         "id": "technical-migration",
         "name": "Technical Migration",
         "title": "Technical SEO Preservation",
-        "description": "Maintain all technical SEO elements including schema markup, site structure, and performance optimization.",
+        "description": "Maintain all technical SEO elements including schema markup, site structure, and performance optimisation.",
         "image": "/seo/services/technical.webp"
       },
       {
@@ -823,7 +823,7 @@
         "name": "Recovery Services",
         "title": "Migration Recovery",
         "description": "If your migration went wrong, we can help recover lost rankings and traffic through strategic fixes.",
-        "image": "/seo/services/link-building.png"
+        "image": "/seo/services/recovery.webp"
       }
     ]
   },
@@ -845,7 +845,7 @@
       "text1": "Small businesses have unique advantages in SEO that larger companies often miss. You can be more nimble, create more personalized content, and build stronger local relationships that translate into better search rankings.",
       "text2": "The key is focusing on local SEO, creating valuable content that serves your community, and building genuine relationships with customers and other local businesses. These strategies level the playing field against bigger competitors.",
       "text3": "Our small business SEO services are designed to be affordable and effective. We focus on high-impact strategies that deliver results quickly, helping you compete with larger companies and attract more local customers to your business.",
-      "image": "seo.png",
+      "image": "compete.png",
       "alt": "Small Business SEO illustration"
     },
     "services": "Small Business SEO",
@@ -870,7 +870,7 @@
         },
         {
           "q": "What's the focus for small business SEO?",
-          "a": "We focus on local SEO, Google My Business optimization, local content creation, and building genuine relationships that translate into better search rankings and customer loyalty."
+          "a": "We focus on local SEO, Google My Business optimisation, local content creation, and building genuine relationships that translate into better search rankings and customer loyalty."
         }
       ]
     },
@@ -878,16 +878,16 @@
       {
         "id": "local-seo-small-business",
         "name": "Local SEO",
-        "title": "Local Search Optimization",
+        "title": "Local Search optimisation",
         "description": "Dominate local search results and get found by customers in your area with targeted local SEO strategies.",
         "image": "/seo/services/on-page.webp"
       },
       {
         "id": "google-business-profile",
         "name": "Google My Business",
-        "title": "Google Business Profile Optimization",
+        "title": "Google Business Profile optimisation",
         "description": "Optimize your Google My Business listing to appear in local searches and attract more customers.",
-        "image": "/seo/services/seo.webp"
+        "image": "/seo/services/google-profile.webp"
       },
       {
         "id": "local-content-marketing",
@@ -908,7 +908,7 @@
         "name": "Review Management",
         "title": "Customer Review Strategy",
         "description": "Develop strategies to encourage positive reviews and manage your online reputation effectively.",
-        "image": "/seo/services/seo-audit.png"
+        "image": "/seo/services/customer-review.webp"
       },
       {
         "id": "small-business-technical-seo",
@@ -929,15 +929,15 @@
       "content": "Getting traffic from SEO is only half the battle. If visitors aren't converting into leads and customers, you're missing out on the real value of your SEO investment. Most businesses struggle to convert their organic traffic effectively.",
       "subContent": "Your competitors who have optimized their sites for lead generation are capturing customers from the same traffic you're getting. The difference is they've optimized their conversion process.",
       "cta": "Let us analyze your conversion funnel and show you exactly how to turn more of your SEO traffic into qualified leads and paying customers.",
-      "formHeading": "Lead Generation Audit & Optimization Strategy",
+      "formHeading": "Lead Generation Audit & optimisation Strategy",
       "buttonText": "Audit My Conversions"
     },
     "content": {
       "heading": "Turn traffic into leads.",
-      "text1": "SEO lead generation combines search optimization with conversion optimization to create a complete system that not only attracts visitors but converts them into qualified leads and customers.",
+      "text1": "SEO lead generation combines search optimisation with conversion optimisation to create a complete system that not only attracts visitors but converts them into qualified leads and customers.",
       "text2": "It's not enough to rank well in search results. You need to understand your audience's intent, create compelling offers, and optimize every element of your conversion funnel to turn visitors into leads.",
       "text3": "Our SEO lead generation services focus on attracting high-intent traffic and optimizing your site to convert that traffic effectively. We analyze user behavior, test different approaches, and continuously optimize for better conversion rates.",
-      "image": "seo.png",
+      "image": "leads.png",
       "alt": "Lead Generation SEO illustration"
     },
     "services": "Lead Generation",
@@ -946,7 +946,7 @@
       "faqs": [
         {
           "q": "What is SEO lead generation?",
-          "a": "SEO lead generation combines search engine optimization with conversion optimization to attract qualified traffic and convert visitors into leads and customers."
+          "a": "SEO lead generation combines search engine optimisation with conversion optimisation to attract qualified traffic and convert visitors into leads and customers."
         },
         {
           "q": "How do you optimize for lead generation?",
@@ -962,7 +962,7 @@
         },
         {
           "q": "Can you improve my conversion rates?",
-          "a": "Yes! We analyze your current conversion funnel, identify bottlenecks, and implement optimization strategies to improve your conversion rates and generate more leads."
+          "a": "Yes! We analyze your current conversion funnel, identify bottlenecks, and implement optimisation strategies to improve your conversion rates and generate more leads."
         }
       ]
     },
@@ -975,9 +975,9 @@
         "image": "/seo/services/on-page.webp"
       },
       {
-        "id": "conversion-optimization",
-        "name": "Conversion Optimization",
-        "title": "Landing Page Optimization",
+        "id": "conversion-optimisation",
+        "name": "Conversion optimisation",
+        "title": "Landing Page optimisation",
         "description": "Optimize your landing pages and forms to maximize conversions from your SEO traffic.",
         "image": "/seo/services/seo.webp"
       },
@@ -989,9 +989,9 @@
         "image": "/seo/services/off-page.webp"
       },
       {
-        "id": "funnel-optimization",
+        "id": "funnel-optimisation",
         "name": "Funnel Analysis",
-        "title": "Conversion Funnel Optimization",
+        "title": "Conversion Funnel optimisation",
         "description": "Analyze and optimize every step of your conversion funnel to maximize lead generation.",
         "image": "/seo/services/technical.webp"
       },
@@ -1007,6 +1007,1294 @@
         "name": "Lead Nurturing",
         "title": "Lead Follow-up Strategy",
         "description": "Develop automated follow-up sequences to nurture leads and increase conversion rates.",
+        "image": "/seo/services/link-building.png"
+      }
+    ]
+  },
+  "link-building": {
+    "hero": {
+      "heading": "Link Building Services NZ - Expert Link Building Services Company",
+      "subheading": "Build authoritative backlinks that improve your search rankings with our professional link building services agency. As the leading link building services company in NZ, we deliver white-hat strategies designed to increase your domain authority and organic visibility."
+    },
+    "form": {
+      "heading": "Are you struggling to build quality backlinks?",
+      "content": "Link building is one of the most challenging aspects of SEO. Most businesses struggle to acquire high-quality backlinks from authoritative websites, which severely limits their ability to rank well in search results. Our link building services company specializes in helping NZ businesses overcome these challenges.",
+      "subContent": "Your competitors who have invested in professional link building services agency expertise are likely ranking higher than you, simply because they have more authoritative backlinks pointing to their website.",
+      "cta": "Let our expert link building services company analyze your current backlink profile and show you exactly how to build high-quality links that will boost your search rankings and domain authority.",
+      "formHeading": "Link Building Services NZ Analysis & Strategy Report",
+      "buttonText": "Analyze My Links"
+    },
+    "content": {
+      "heading": "Build authority through strategic link building services.",
+      "text1": "Link building is crucial for SEO success, but it's also one of the most difficult and time-consuming aspects of search optimisation. As a trusted link building services company in NZ, we understand that building high-quality backlinks requires expertise, relationships, and strategic planning.",
+      "text2": "Not all links are created equal. Low-quality or spammy links can actually hurt your rankings, while high-authority links from relevant websites can significantly boost your search visibility and domain authority. Our link building services agency ensures only quality links are acquired.",
+      "text3": "Our professional link building services focus on acquiring high-quality, relevant backlinks through ethical methods including content marketing, digital PR, resource page outreach, and relationship building with industry influencers.",
+      "image": "link-building.png",
+      "alt": "Link Building Services NZ illustration"
+    },
+    "services": "Link Building Services",
+    "faq": {
+      "serviceName": "Link Building",
+      "faqs": [
+        {
+          "q": "What is link building?",
+          "a": "Link building is the process of acquiring backlinks from other websites to your site. These links act as 'votes of confidence' that help search engines determine your site's authority and relevance."
+        },
+        {
+          "q": "How long does link building take to show results?",
+          "a": "Link building results typically appear within 2-6 months, depending on the quality and quantity of links acquired. High-authority links can show faster results than lower-quality ones."
+        },
+        {
+          "q": "What makes a good backlink?",
+          "a": "Good backlinks come from authoritative, relevant websites with high domain authority. They should be contextual, natural-looking, and from sites that are trusted by search engines."
+        },
+        {
+          "q": "How many links do I need?",
+          "a": "Quality matters more than quantity. A few high-authority, relevant links are more valuable than hundreds of low-quality links. We focus on acquiring the right links rather than just more links."
+        },
+        {
+          "q": "Can bad links hurt my SEO?",
+          "a": "Yes, low-quality or spammy links can hurt your rankings. We use only white-hat methods and can help disavow harmful links if needed."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "content-link-building",
+        "name": "Content Marketing",
+        "title": "Content-Based Link Building",
+        "description": "Create valuable content that naturally attracts high-quality backlinks from authoritative websites.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "digital-pr",
+        "name": "Digital PR",
+        "title": "Digital PR & Outreach",
+        "description": "Build relationships with journalists and influencers to earn high-authority media mentions and links.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "resource-page-outreach",
+        "name": "Resource Pages",
+        "title": "Resource Page Link Building",
+        "description": "Identify and secure links from relevant resource pages and industry directories.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "broken-link-building",
+        "name": "Broken Links",
+        "title": "Broken Link Building",
+        "description": "Find broken links on relevant websites and offer your content as a replacement to earn quality backlinks.",
+        "image": "/seo/services/broken-link.webp"
+      },
+      {
+        "id": "guest-posting",
+        "name": "Guest Posts",
+        "title": "Strategic Guest Posting",
+        "description": "Write high-quality guest posts for authoritative websites in your industry to earn valuable backlinks.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "link-audit",
+        "name": "Link Audits",
+        "title": "Backlink Profile Analysis",
+        "description": "Analyze your current backlink profile and identify opportunities for improvement and harmful link removal.",
+        "image": "/seo/services/seo-audit.png"
+      }
+    ]
+  },
+  "international-seo": {
+    "hero": {
+      "heading": "International SEO Services - Leading International SEO Company",
+      "subheading": "Expand your business globally with our expert international SEO services. As a trusted international SEO company and international SEO agency, we optimize your website for multiple countries, languages, and markets to reach global audiences."
+    },
+    "form": {
+      "heading": "Ready to go global with your SEO?",
+      "content": "Expanding internationally requires specialized SEO strategies that go beyond basic optimisation. Most businesses struggle with international SEO challenges like language barriers, cultural differences, and technical complexities. Our international SEO company specializes in overcoming these obstacles.",
+      "subContent": "Your competitors who have invested in professional international SEO services are capturing customers in markets you haven't even considered. Don't let language and location barriers limit your growth potential.",
+      "cta": "Let our expert international SEO agency analyze your international SEO opportunities and create a strategy that helps you reach customers in new markets and languages.",
+      "formHeading": "International SEO Services Strategy & Market Analysis",
+      "buttonText": "Analyze My Global Potential"
+    },
+    "content": {
+      "heading": "Reach customers worldwide with expert international SEO services.",
+      "text1": "International SEO is complex and requires specialized knowledge of different markets, languages, and cultural preferences. Simply translating your content isn't enough to succeed in international markets. Our international SEO company brings deep expertise in global market expansion.",
+      "text2": "Each country has its own search engines, cultural nuances, and user behaviors. What works in one market may not work in another, making international SEO a specialized skill that requires local expertise. Our international SEO agency understands these complexities.",
+      "text3": "Our comprehensive international SEO services help you navigate these complexities with market research, cultural adaptation, technical implementation, and ongoing optimisation for each target market.",
+      "image": "reach-worlwide.png",
+      "alt": "International SEO Services illustration"
+    },
+    "services": "International SEO",
+    "faq": {
+      "serviceName": "International SEO",
+      "faqs": [
+        {
+          "q": "What is international SEO?",
+          "a": "International SEO optimizes websites for multiple countries, languages, and markets. It includes hreflang implementation, country-specific content, and cultural adaptation for different markets."
+        },
+        {
+          "q": "How do you handle multiple languages?",
+          "a": "We implement proper hreflang tags, create culturally adapted content (not just translated), and ensure each language version is optimized for its specific market and search engines."
+        },
+        {
+          "q": "Which countries should I target first?",
+          "a": "We analyze your current traffic, competitor presence, and market opportunity to recommend the best countries to target first based on your business goals and resources."
+        },
+        {
+          "q": "Do I need separate websites for each country?",
+          "a": "Not necessarily. We can use subdirectories, subdomains, or separate domains depending on your needs. Each approach has different technical requirements and benefits."
+        },
+        {
+          "q": "How long does international SEO take?",
+          "a": "International SEO typically takes 6-12 months to show significant results, as it requires building authority in new markets and adapting to local search behaviors."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "market-research",
+        "name": "Market Research",
+        "title": "International Market Analysis",
+        "description": "Research target markets, competitors, and opportunities to create effective international SEO strategies.",
+        "image": "/seo/services/international-market.webp"
+      },
+      {
+        "id": "hreflang-implementation",
+        "name": "Hreflang Tags",
+        "title": "Hreflang Implementation",
+        "description": "Properly implement hreflang tags to help search engines understand your international content structure.",
+        "image": "/seo/services/hreflang.webp"
+      },
+      {
+        "id": "cultural-adaptation",
+        "name": "Cultural Adaptation",
+        "title": "Content Localization",
+        "description": "Adapt your content for different cultures, not just languages, to resonate with local audiences.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "country-specific-seo",
+        "name": "Country SEO",
+        "title": "Country-Specific optimisation",
+        "description": "Optimize for country-specific search engines and local search behaviors in each target market.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "international-link-building",
+        "name": "Global Links",
+        "title": "International Link Building",
+        "description": "Build authoritative backlinks from relevant websites in your target countries and languages.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "global-analytics",
+        "name": "Global Tracking",
+        "title": "International Performance Tracking",
+        "description": "Monitor and analyze your SEO performance across different countries and languages.",
+        "image": "/seo/services/off-page.webp"
+      }
+    ]
+  },
+  "mobile-seo": {
+    "hero": {
+      "heading": "Mobile SEO Agency - Expert Mobile SEO Company & Services",
+      "subheading": "Optimize your website for mobile search with our professional mobile SEO services. As a leading mobile SEO agency and mobile SEO company, we ensure your site performs perfectly on smartphones and tablets to capture mobile-first traffic."
+    },
+    "form": {
+      "heading": "Is your site optimized for mobile search?",
+      "content": "Mobile search now dominates internet usage, with over 60% of searches happening on mobile devices. If your website isn't optimized for mobile, you're losing customers to competitors who have invested in mobile SEO. Our mobile SEO company specializes in mobile optimisation.",
+      "subContent": "Google's mobile-first indexing means your mobile site performance directly impacts your search rankings. Poor mobile optimisation can severely hurt your visibility in search results. Our mobile SEO agency ensures your site meets Google's mobile standards.",
+      "cta": "Let our expert mobile SEO services team audit your mobile SEO performance and show you exactly how to optimize your site for mobile search and improve your rankings.",
+      "formHeading": "Mobile SEO Services Audit & optimisation Strategy",
+      "buttonText": "Audit My Mobile SEO"
+    },
+    "content": {
+      "heading": "Dominate mobile search results with expert mobile SEO services.",
+      "text1": "Mobile SEO is no longer optional - it's essential for success. With Google's mobile-first indexing, your mobile site performance directly determines your search rankings across all devices. Our mobile SEO company understands these critical requirements.",
+      "text2": "Mobile users have different behaviors, expectations, and needs than desktop users. Your mobile site needs to be fast, easy to navigate, and optimized for touch interactions to succeed in mobile search. Our mobile SEO agency ensures optimal mobile user experience.",
+      "text3": "Our comprehensive mobile SEO services ensure your website is perfectly optimized for mobile search, with fast loading speeds, mobile-friendly design, and content that's easily accessible on smaller screens.",
+      "image": "mobile-search.png",
+      "alt": "Mobile SEO Agency illustration"
+    },
+    "services": "Mobile SEO",
+    "faq": {
+      "serviceName": "Mobile SEO",
+      "faqs": [
+        {
+          "q": "What is mobile SEO?",
+          "a": "Mobile SEO optimizes websites for mobile devices and mobile search. It includes mobile-friendly design, fast loading speeds, touch-friendly navigation, and mobile-specific content optimisation."
+        },
+        {
+          "q": "Why is mobile SEO important?",
+          "a": "Over 60% of searches happen on mobile devices, and Google uses mobile-first indexing. Poor mobile performance can severely hurt your search rankings across all devices."
+        },
+        {
+          "q": "How do you test mobile SEO?",
+          "a": "We use Google's Mobile-Friendly Test, PageSpeed Insights, and other tools to analyze mobile performance, loading speeds, and user experience on mobile devices."
+        },
+        {
+          "q": "What's the difference between responsive and mobile SEO?",
+          "a": "Responsive design makes your site work on mobile devices. Mobile SEO optimizes the entire mobile experience including speed, content, and user interactions for mobile users."
+        },
+        {
+          "q": "How fast should my mobile site load?",
+          "a": "Mobile sites should load in under 3 seconds. We optimize images, implement caching, minify code, and use other techniques to maximize mobile site speed."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "mobile-speed-optimisation",
+        "name": "Mobile Speed",
+        "title": "Mobile Speed optimisation",
+        "description": "Optimize your mobile site loading speed with image compression, caching, and performance improvements.",
+        "image": "/seo/services/speed.webp"
+      },
+      {
+        "id": "mobile-friendly-design",
+        "name": "Mobile Design",
+        "title": "Mobile-Friendly Design",
+        "description": "Ensure your site design works perfectly on mobile devices with touch-friendly navigation and responsive layouts.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "mobile-content-optimisation",
+        "name": "Mobile Content",
+        "title": "Mobile Content optimisation",
+        "description": "Optimize your content for mobile reading with shorter paragraphs, larger fonts, and mobile-friendly formatting.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "mobile-technical-seo",
+        "name": "Mobile Technical",
+        "title": "Mobile Technical SEO",
+        "description": "Implement mobile-specific technical optimisations including viewport tags, mobile sitemaps, and structured data.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "mobile-user-experience",
+        "name": "Mobile UX",
+        "title": "Mobile User Experience",
+        "description": "Optimize the mobile user experience with intuitive navigation, easy-to-use forms, and mobile-specific features.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "mobile-analytics",
+        "name": "Mobile Analytics",
+        "title": "Mobile Performance Tracking",
+        "description": "Monitor mobile-specific metrics including mobile traffic, conversions, and user behavior to optimize performance.",
+        "image": "/seo/services/analysis.webp"
+      }
+    ]
+  },
+  "voice-search-optimisation": {
+    "hero": {
+      "heading": "Expert Voice Search optimisation Agency",
+      "subheading": "Optimize your content for voice search with our professional voice search optimisation services. As a leading voice search optimisation company and voice search optimisation agency, we help businesses capture the growing voice search market."
+    },
+    "form": {
+      "heading": "Is your content optimized for voice search?",
+      "content": "Voice search is rapidly growing, with over 50% of adults using voice search daily. If your content isn't optimized for voice queries, you're missing out on a huge opportunity. Our voice search optimisation company specializes in voice search strategies.",
+      "subContent": "Voice search queries are different from text searches - they're conversational, longer, and more question-based. Your competitors who have invested in voice search optimisation services are capturing this traffic.",
+      "cta": "Let our expert voice search optimisation agency analyze your content and show you exactly how to optimize for voice search to capture this growing market.",
+      "formHeading": "Voice Search optimisation Services Analysis & Strategy",
+      "buttonText": "Analyze My Voice Search"
+    },
+    "content": {
+      "heading": "Capture the voice search revolution with expert voice search optimisation services.",
+      "text1": "Voice search is fundamentally different from traditional text search. Users speak naturally, ask questions, and expect conversational responses. Our voice search optimisation company understands these unique requirements and optimizes your content accordingly.",
+      "text2": "Voice search optimisation requires understanding natural language patterns, question-based queries, and local search intent. Our voice search optimisation agency ensures your content answers the questions your customers are actually asking.",
+      "text3": "Our comprehensive voice search optimisation services help you adapt your content strategy for voice search, including featured snippets optimisation, conversational content creation, and local voice search strategies.",
+      "image": "voice.png",
+      "alt": "Voice Search optimisation Company illustration"
+    },
+    "services": "Voice Search optimisation",
+    "faq": {
+      "serviceName": "Voice Search optimisation",
+      "faqs": [
+        {
+          "q": "What is voice search optimisation?",
+          "a": "Voice search optimisation adapts your content for voice-activated searches using devices like Google Home, Alexa, and Siri. It focuses on conversational queries, question-based content, and featured snippets."
+        },
+        {
+          "q": "How is voice search different from regular SEO?",
+          "a": "Voice search uses natural, conversational language and longer queries. It's more question-based and focuses on providing direct answers, often from featured snippets or position zero results."
+        },
+        {
+          "q": "Why is voice search optimisation important?",
+          "a": "Over 50% of adults use voice search daily, and this number is growing rapidly. Voice search optimisation helps you capture this growing market and stay ahead of competitors."
+        },
+        {
+          "q": "How do you optimize for voice search?",
+          "a": "We optimize for conversational keywords, create question-based content, target featured snippets, improve local SEO, and ensure your content provides direct, conversational answers."
+        },
+        {
+          "q": "What types of businesses benefit from voice search optimisation?",
+          "a": "Local businesses, service providers, and businesses with frequently asked questions benefit most from voice search optimisation, as voice searches are often local and question-based."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "conversational-keywords",
+        "name": "Conversational Keywords",
+        "title": "Voice Search Keyword Research",
+        "description": "Research and target conversational, question-based keywords that people use in voice searches.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "featured-snippets",
+        "name": "Featured Snippets",
+        "title": "Featured Snippet optimisation",
+        "description": "Optimize your content to capture featured snippets, which are often the source of voice search answers.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "question-based-content",
+        "name": "Question Content",
+        "title": "Question-Based Content Creation",
+        "description": "Create content that directly answers the questions your customers are asking through voice search.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "local-voice-search",
+        "name": "Local Voice Search",
+        "title": "Local Voice Search optimisation",
+        "description": "Optimize your local business for 'near me' voice searches and location-based queries.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "natural-language",
+        "name": "Natural Language",
+        "title": "Natural Language optimisation",
+        "description": "Optimize your content to match the natural, conversational way people speak in voice searches.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "voice-search-analytics",
+        "name": "Voice Analytics",
+        "title": "Voice Search Performance Tracking",
+        "description": "Track and analyze your performance in voice search results and featured snippets.",
+        "image": "/seo/services/speed.webp"
+      }
+    ]
+  },
+  "video-seo": {
+    "hero": {
+      "heading": "Video SEO Services - Leading Video SEO Agency & Company",
+      "subheading": "Optimize your video content for search engines with our expert video SEO services. As a trusted video SEO agency and video SEO company, we help your videos rank higher and drive more organic traffic."
+    },
+    "form": {
+      "heading": "Are your videos getting found in search?",
+      "content": "Video content is incredibly powerful for SEO, but most businesses aren't optimizing their videos properly. If your videos aren't optimized for search engines, you're missing out on valuable organic traffic. Our video SEO company specializes in video optimisation.",
+      "subContent": "Your competitors who have invested in professional video SEO services are capturing customers through video search results. Don't let your video content go unnoticed.",
+      "cta": "Let our expert video SEO agency analyze your video content and show you exactly how to optimize your videos for better search rankings and visibility.",
+      "formHeading": "Video SEO Services Analysis & optimisation Strategy",
+      "buttonText": "Analyze My Videos"
+    },
+    "content": {
+      "heading": "Maximize your video content reach with expert video SEO services.",
+      "text1": "Video SEO is essential for getting your video content discovered in search results. With over 2 billion YouTube users and growing video search on Google, optimizing your videos is crucial for success. Our video SEO company understands the unique requirements of video optimisation.",
+      "text2": "Video SEO involves optimizing titles, descriptions, tags, thumbnails, and transcripts to help search engines understand and rank your video content. Our video SEO agency ensures your videos are properly optimized for maximum visibility.",
+      "text3": "Our comprehensive video SEO services help you optimize every aspect of your video content, from on-page optimisation to video schema markup, ensuring your videos rank well and drive qualified traffic to your business.",
+      "image": "local-seo.jpg",
+      "alt": "Video SEO Services illustration"
+    },
+    "services": "Video SEO",
+    "faq": {
+      "serviceName": "Video SEO",
+      "faqs": [
+        {
+          "q": "What is video SEO?",
+          "a": "Video SEO optimizes video content for search engines to improve visibility in search results. It includes optimizing titles, descriptions, tags, thumbnails, and creating video transcripts for better indexing."
+        },
+        {
+          "q": "How do you optimize videos for SEO?",
+          "a": "We optimize video titles, descriptions, and tags with relevant keywords, create compelling thumbnails, add transcripts, implement video schema markup, and optimize video hosting and delivery."
+        },
+        {
+          "q": "Which platforms should I optimize videos for?",
+          "a": "We optimize for YouTube (the second largest search engine), Google Video search, and other video platforms. Each platform has specific optimisation requirements that we address."
+        },
+        {
+          "q": "How long does video SEO take to show results?",
+          "a": "Video SEO results typically appear within 2-6 months, depending on competition and content quality. High-quality, engaging videos with proper optimisation tend to rank faster."
+        },
+        {
+          "q": "Can video SEO help with regular SEO too?",
+          "a": "Yes! Video content can improve your overall SEO by increasing time on site, reducing bounce rate, and providing additional content for search engines to index and rank."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "video-keyword-research",
+        "name": "Video Keywords",
+        "title": "Video Keyword Research",
+        "description": "Research high-value keywords specifically for video content to improve search visibility.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "video-optimisation",
+        "name": "Video optimisation",
+        "title": "Video Content optimisation",
+        "description": "Optimize video titles, descriptions, tags, and thumbnails for maximum search visibility.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "video-transcripts",
+        "name": "Video Transcripts",
+        "title": "Video Transcript Creation",
+        "description": "Create accurate transcripts for your videos to improve search engine understanding and accessibility.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "video-schema",
+        "name": "Video Schema",
+        "title": "Video Schema Markup",
+        "description": "Implement video schema markup to help search engines better understand and display your video content.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "youtube-optimisation",
+        "name": "YouTube SEO",
+        "title": "YouTube Channel optimisation",
+        "description": "Optimize your YouTube channel and videos for better discoverability and engagement.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "video-analytics",
+        "name": "Video Analytics",
+        "title": "Video Performance Tracking",
+        "description": "Monitor and analyze your video performance across different platforms and search engines.",
+        "image": "/seo/services/analysis.webp"
+      }
+    ]
+  },
+  "youtube-seo": {
+    "hero": {
+      "heading": "Expert YouTube SEO Agency & Services",
+      "subheading": "Dominate YouTube search with our professional YouTube SEO services. As a trusted YouTube SEO company and YouTube SEO agency, we help your videos rank higher on the world's second-largest search engine."
+    },
+    "form": {
+      "heading": "Are your YouTube videos getting discovered?",
+      "content": "YouTube is the world's second-largest search engine, but most businesses aren't optimizing their videos properly. If your YouTube content isn't optimized for search, you're missing out on millions of potential viewers. Our YouTube SEO company specializes in YouTube optimisation.",
+      "subContent": "Your competitors who have invested in professional YouTube SEO services are capturing viewers and subscribers through better search rankings. Don't let your YouTube content go unnoticed.",
+      "cta": "Let our expert YouTube SEO agency analyze your YouTube channel and show you exactly how to optimize your videos for better rankings and more views.",
+      "formHeading": "YouTube SEO Services Analysis & Strategy",
+      "buttonText": "Analyze My YouTube Channel"
+    },
+    "content": {
+      "heading": "Dominate YouTube search with expert YouTube SEO services.",
+      "text1": "YouTube SEO is crucial for getting your videos discovered on the world's second-largest search engine. With over 2 billion logged-in users, YouTube offers massive opportunities for businesses. Our YouTube SEO company understands the platform's unique algorithm and optimisation requirements.",
+      "text2": "YouTube SEO involves optimizing titles, descriptions, tags, thumbnails, and engagement metrics to improve video rankings. Our YouTube SEO agency ensures your content is optimized for YouTube's search algorithm and viewer behavior.",
+      "text3": "Our comprehensive YouTube SEO services help you optimize every aspect of your YouTube presence, from individual video optimisation to channel strategy, ensuring maximum visibility and engagement on the platform.",
+      "image": "yt.png",
+      "alt": "YouTube SEO Company illustration"
+    },
+    "services": "YouTube SEO",
+    "faq": {
+      "serviceName": "YouTube SEO",
+      "faqs": [
+        {
+          "q": "What is YouTube SEO?",
+          "a": "YouTube SEO optimizes video content specifically for YouTube's search algorithm to improve visibility, rankings, and discoverability on the platform."
+        },
+        {
+          "q": "How do you optimize YouTube videos?",
+          "a": "We optimize video titles, descriptions, tags, thumbnails, and engagement metrics. We also focus on watch time, click-through rates, and subscriber growth to improve rankings."
+        },
+        {
+          "q": "What's the difference between YouTube SEO and regular SEO?",
+          "a": "YouTube SEO focuses on YouTube's specific algorithm, which prioritizes watch time, engagement, and user behavior, while regular SEO focuses on Google's algorithm and text-based content."
+        },
+        {
+          "q": "How important are YouTube thumbnails for SEO?",
+          "a": "Thumbnails are crucial for YouTube SEO as they significantly impact click-through rates, which is a key ranking factor for YouTube's algorithm."
+        },
+        {
+          "q": "Can YouTube SEO help my business?",
+          "a": "Absolutely! YouTube SEO can drive significant traffic to your business, build brand awareness, and generate leads through optimized video content that ranks well on the platform."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "youtube-keywords",
+        "name": "YouTube Keywords",
+        "title": "YouTube Keyword Research",
+        "description": "Research high-performing keywords specifically for YouTube to improve video discoverability.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "youtube-titles",
+        "name": "Video Titles",
+        "title": "YouTube Title optimisation",
+        "description": "Create compelling, keyword-rich titles that attract clicks and improve search rankings.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "youtube-descriptions",
+        "name": "Video Descriptions",
+        "title": "YouTube Description optimisation",
+        "description": "Write detailed, keyword-optimized descriptions that improve search visibility and provide value to viewers.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "youtube-thumbnails",
+        "name": "Thumbnails",
+        "title": "YouTube Thumbnail optimisation",
+        "description": "Design eye-catching thumbnails that improve click-through rates and video performance.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "youtube-tags",
+        "name": "Video Tags",
+        "title": "YouTube Tag Strategy",
+        "description": "Develop strategic tag strategies that help YouTube understand and categorize your content.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "youtube-analytics",
+        "name": "YouTube Analytics",
+        "title": "YouTube Performance Tracking",
+        "description": "Monitor and analyze your YouTube channel performance to optimize for better rankings and engagement.",
+        "image": "/seo/services/on-page.webp"
+      }
+    ]
+  },
+  "seo-strategy": {
+    "hero": {
+      "heading": "SEO Strategy Consulting That Drives Results",
+      "subheading": "Develop winning SEO strategies with our expert SEO strategy consulting company. As a leading SEO strategy consulting agency, we create comprehensive strategies that deliver sustainable growth and measurable results for your business."
+    },
+    "form": {
+      "heading": "Need a winning SEO strategy?",
+      "content": "Most businesses struggle with SEO because they lack a clear, comprehensive strategy. Without proper SEO strategy consulting, you're likely wasting time and resources on tactics that don't align with your business goals. Our SEO strategy consulting company specializes in creating data-driven strategies.",
+      "subContent": "Your competitors who have invested in professional SEO strategy consulting are likely outperforming you because they have clear roadmaps and strategic direction. Don't let tactical confusion hold you back.",
+      "cta": "Let our expert SEO strategy consulting agency analyze your current approach and create a comprehensive strategy that aligns with your business objectives and drives real results.",
+      "formHeading": "SEO Strategy Consulting Analysis & Roadmap",
+      "buttonText": "Get My SEO Strategy"
+    },
+    "content": {
+      "heading": "Build a winning SEO strategy with expert SEO strategy consulting.",
+      "text1": "Effective SEO requires more than just tactics - it needs a comprehensive strategy that aligns with your business goals. Our SEO strategy consulting company understands that every business is unique and requires a customized approach to search optimisation.",
+      "text2": "SEO strategy consulting involves analyzing your current position, identifying opportunities, setting realistic goals, and creating actionable roadmaps. Our SEO strategy consulting agency ensures your strategy is both ambitious and achievable.",
+      "text3": "Our comprehensive SEO strategy consulting services help you develop winning strategies that consider your competition, market conditions, and business objectives to deliver sustainable long-term growth.",
+      "image": "seo.png",
+      "alt": "SEO Strategy Consulting illustration"
+    },
+    "services": "SEO Strategy Consulting",
+    "faq": {
+      "serviceName": "SEO Strategy Consulting",
+      "faqs": [
+        {
+          "q": "What is SEO strategy consulting?",
+          "a": "SEO strategy consulting develops comprehensive, data-driven SEO plans that align with business goals. It includes competitive analysis, opportunity identification, goal setting, and roadmap creation for sustainable growth."
+        },
+        {
+          "q": "How is SEO strategy different from regular SEO services?",
+          "a": "SEO strategy consulting focuses on planning and direction, while regular SEO services focus on execution. Strategy consulting provides the roadmap, while services implement the tactics."
+        },
+        {
+          "q": "Why do I need SEO strategy consulting?",
+          "a": "Without a clear strategy, SEO efforts often lack direction and focus. SEO strategy consulting ensures your efforts are aligned with business goals and market opportunities for maximum ROI."
+        },
+        {
+          "q": "How long does SEO strategy consulting take?",
+          "a": "Initial strategy development typically takes 2-4 weeks, including analysis, planning, and roadmap creation. Ongoing strategic oversight continues throughout implementation."
+        },
+        {
+          "q": "What's included in SEO strategy consulting?",
+          "a": "Our SEO strategy consulting includes competitive analysis, market research, opportunity identification, goal setting, tactical planning, resource allocation, and performance measurement frameworks."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "competitive-analysis",
+        "name": "Competitive Analysis",
+        "title": "SEO Competitive Intelligence",
+        "description": "Analyze your competitors' SEO strategies to identify opportunities and develop competitive advantages.",
+        "image": "/seo/services/seo-audit.png"
+      },
+      {
+        "id": "market-research",
+        "name": "Market Research",
+        "title": "SEO Market Analysis",
+        "description": "Research market trends, search volumes, and opportunities to inform strategic decisions.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "goal-setting",
+        "name": "Goal Setting",
+        "title": "SEO Goal Development",
+        "description": "Set realistic, measurable SEO goals that align with your business objectives and market potential.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "roadmap-creation",
+        "name": "Strategic Roadmap",
+        "title": "SEO Roadmap Development",
+        "description": "Create detailed, actionable roadmaps that guide your SEO efforts and measure progress.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "resource-planning",
+        "name": "Resource Planning",
+        "title": "SEO Resource Allocation",
+        "description": "Plan and allocate resources effectively to maximize SEO ROI and achieve strategic objectives.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "performance-framework",
+        "name": "Performance Tracking",
+        "title": "SEO Strategy Monitoring",
+        "description": "Develop frameworks to monitor strategy performance and make data-driven adjustments.",
+        "image": "/seo/services/link-building.png"
+      }
+    ]
+  },
+  "geo": {
+    "hero": {
+      "heading": "Generative Engine optimisation for AI Search",
+      "subheading": "Optimize for AI-powered search with our expert generative engine optimisation company. As a leading generative engine optimisation agency, we help businesses adapt to the future of search with cutting-edge GEO strategies."
+    },
+    "form": {
+      "heading": "Ready for the future of search?",
+      "content": "Generative AI is revolutionizing search, but most businesses aren't prepared for this shift. Traditional SEO tactics may become less effective as AI-powered search engines change how people find information. Our generative engine optimisation company specializes in future-proof strategies.",
+      "subContent": "Your competitors who invest in generative engine optimisation now will have a significant advantage as AI search becomes mainstream. Don't get left behind in the search revolution.",
+      "cta": "Let our expert generative engine optimisation agency analyze your current approach and develop strategies that prepare you for the AI-powered future of search.",
+      "formHeading": "Generative Engine optimisation Analysis & Strategy",
+      "buttonText": "Analyze My GEO Potential"
+    },
+    "content": {
+      "heading": "Master AI search with expert generative engine optimisation.",
+      "text1": "Generative Engine optimisation (GEO) is the future of search optimisation as AI-powered search engines become mainstream. Our generative engine optimisation company understands that traditional SEO approaches need to evolve for AI search environments.",
+      "text2": "GEO requires understanding how AI systems process and present information, optimizing for conversational queries, and adapting content strategies for generative AI responses. Our generative engine optimisation agency stays ahead of these emerging trends.",
+      "text3": "Our comprehensive generative engine optimisation services help you prepare for the future of search by optimizing your content and strategies for AI-powered search engines and conversational interfaces.",
+      "image": "seo.png",
+      "alt": "Generative Engine optimisation illustration"
+    },
+    "services": "Generative Engine optimisation",
+    "faq": {
+      "serviceName": "Generative Engine optimisation",
+      "faqs": [
+        {
+          "q": "What is Generative Engine optimisation (GEO)?",
+          "a": "GEO optimizes content for AI-powered search engines that use generative AI to provide answers. It focuses on how AI systems process and present information in conversational formats."
+        },
+        {
+          "q": "How is GEO different from traditional SEO?",
+          "a": "GEO focuses on optimizing for AI systems that generate responses, while traditional SEO optimizes for ranked lists. GEO considers how AI interprets and presents information conversationally."
+        },
+        {
+          "q": "Why is GEO important now?",
+          "a": "AI-powered search is growing rapidly. Businesses that optimize for generative AI search now will have competitive advantages as these technologies become mainstream."
+        },
+        {
+          "q": "What types of content work best for GEO?",
+          "a": "GEO works best with comprehensive, authoritative content that answers questions clearly and provides detailed information that AI systems can easily process and reference."
+        },
+        {
+          "q": "How do you measure GEO success?",
+          "a": "GEO success is measured through AI system citations, featured snippet appearances, and visibility in AI-generated responses across different platforms and interfaces."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "ai-content-optimisation",
+        "name": "AI Content optimisation",
+        "title": "Content for AI Systems",
+        "description": "Optimize your content to be easily processed and referenced by AI search systems and generative engines.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "conversational-seo",
+        "name": "Conversational SEO",
+        "title": "Conversational Query optimisation",
+        "description": "Optimize for conversational queries and natural language that AI systems use to generate responses.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "ai-schema-markup",
+        "name": "AI Schema",
+        "title": "AI-Friendly Structured Data",
+        "description": "Implement structured data that helps AI systems understand and present your content effectively.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "knowledge-graph-optimisation",
+        "name": "Knowledge Graph",
+        "title": "Knowledge Graph optimisation",
+        "description": "Optimize your content to be included in knowledge graphs and AI knowledge bases.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "ai-platform-optimisation",
+        "name": "AI Platforms",
+        "title": "Multi-Platform AI optimisation",
+        "description": "Optimize for various AI-powered platforms and search interfaces beyond traditional search engines.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "geo-analytics",
+        "name": "GEO Analytics",
+        "title": "GEO Performance Tracking",
+        "description": "Track and measure your performance across AI-powered search systems and generative interfaces.",
+        "image": "/seo/services/seo-audit.png"
+      }
+    ]
+  },
+  "sge": {
+    "hero": {
+      "heading": "Search Generative Experience SEO",
+      "subheading": "Optimize for Google's Search Generative Experience with our expert SGE SEO strategies. As a trusted Search Generative Experience company, we help businesses adapt to Google's AI-powered search future."
+    },
+    "form": {
+      "heading": "Prepared for Google's AI search revolution?",
+      "content": "Google's Search Generative Experience (SGE) is changing how search results appear, but most businesses aren't optimizing for this new format. SGE provides AI-generated answers that can significantly impact your search visibility. Our Search Generative Experience SEO expertise helps you adapt.",
+      "subContent": "Your competitors who understand Search Generative Experience SEO are positioning themselves to capture traffic from AI-generated responses. Don't miss out on this emerging opportunity.",
+      "cta": "Let our expert Search Generative Experience company analyze your current SEO approach and develop strategies that optimize for Google's AI-powered search experience.",
+      "formHeading": "Search Generative Experience SEO Analysis",
+      "buttonText": "Analyze My SGE Readiness"
+    },
+    "content": {
+      "heading": "Dominate Google's AI search with Search Generative Experience SEO.",
+      "text1": "Google's Search Generative Experience represents a fundamental shift in how search results are presented, with AI-generated responses becoming increasingly prominent. Our Search Generative Experience SEO strategies help you adapt to this new search landscape.",
+      "text2": "SGE SEO requires understanding how Google's AI processes information, optimizes for featured snippet-style responses, and ensures your content is selected for AI-generated answers. Our Search Generative Experience company stays ahead of these developments.",
+      "text3": "Our comprehensive Search Generative Experience SEO services help you optimize for Google's AI-powered search by adapting your content strategy, technical SEO, and optimisation approaches for the generative search era.",
+      "image": "seo.png",
+      "alt": "Search Generative Experience SEO illustration"
+    },
+    "services": "Search Generative Experience",
+    "faq": {
+      "serviceName": "Search Generative Experience",
+      "faqs": [
+        {
+          "q": "What is Search Generative Experience (SGE)?",
+          "a": "SGE is Google's AI-powered search feature that provides generative AI responses to search queries, offering comprehensive answers directly in search results rather than just links."
+        },
+        {
+          "q": "How does SGE affect traditional SEO?",
+          "a": "SGE changes how information is presented in search results, with AI-generated answers potentially reducing clicks to websites. SGE SEO focuses on getting your content featured in these AI responses."
+        },
+        {
+          "q": "What types of content work best for SGE?",
+          "a": "Comprehensive, authoritative content that directly answers questions works best for SGE. Content should be well-structured, factual, and provide complete information on topics."
+        },
+        {
+          "q": "How do you optimize for Search Generative Experience?",
+          "a": "SGE optimisation involves creating comprehensive content, optimizing for question-based queries, implementing proper structured data, and ensuring content is easily processable by AI systems."
+        },
+        {
+          "q": "Is SGE SEO different from regular SEO?",
+          "a": "SGE SEO focuses on getting content featured in AI-generated responses, while regular SEO focuses on ranking in traditional search results. Both approaches complement each other."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "sge-content-optimisation",
+        "name": "SGE Content",
+        "title": "SGE Content optimisation",
+        "description": "Optimize your content to be featured in Google's AI-generated search responses and SGE results.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "question-based-seo",
+        "name": "Question SEO",
+        "title": "Question-Based Content Strategy",
+        "description": "Create content that directly answers the questions users ask, optimizing for SGE's question-answering format.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "sge-structured-data",
+        "name": "SGE Schema",
+        "title": "SGE-Optimized Structured Data",
+        "description": "Implement structured data that helps Google's AI understand and feature your content in SGE responses.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "comprehensive-content",
+        "name": "Comprehensive Content",
+        "title": "Comprehensive Content Creation",
+        "description": "Develop thorough, authoritative content that provides complete answers suitable for AI-generated responses.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "sge-technical-seo",
+        "name": "SGE Technical",
+        "title": "SGE Technical optimisation",
+        "description": "Optimize technical aspects of your site to ensure content is easily processable by Google's AI systems.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "sge-monitoring",
+        "name": "SGE Tracking",
+        "title": "SGE Performance Monitoring",
+        "description": "Monitor your visibility and performance in Google's Search Generative Experience results.",
+        "image": "/seo/services/seo-audit.png"
+      }
+    ]
+  },
+  "app-store-optimisation": {
+    "hero": {
+      "heading": "App Store Optimisation Services That Drive Downloads",
+      "subheading": "Boost your app's visibility and downloads with our expert app store optimisation company. As a leading app store optimisation agency, we help mobile apps rank higher and attract more users through strategic ASO."
+    },
+    "form": {
+      "heading": "Is your app getting discovered in app stores?",
+      "content": "With millions of apps competing for attention, app store optimisation is crucial for success. Most developers struggle with ASO because they don't understand how app store algorithms work. Our app store optimisation company specializes in mobile app visibility strategies.",
+      "subContent": "Your competitors who have invested in professional app store optimisation services are capturing downloads that should be going to your app. Don't let poor ASO hold back your app's potential.",
+      "cta": "Let our expert app store optimisation agency analyze your app's current performance and show you exactly how to improve your rankings and increase downloads.",
+      "formHeading": "App Store Optimisation Services Analysis & Strategy",
+      "buttonText": "Analyze My App"
+    },
+    "content": {
+      "heading": "Dominate app stores with expert app store optimisation services.",
+      "text1": "App Store Optimisation (ASO) is essential for getting your mobile app discovered in crowded app stores. Our app store optimisation company understands that ASO requires a different approach than traditional SEO, focusing on app store algorithms and user behavior.",
+      "text2": "Effective ASO involves optimizing app titles, descriptions, keywords, screenshots, and user reviews to improve visibility and conversion rates. Our app store optimisation agency ensures your app stands out in competitive app store environments.",
+      "text3": "Our comprehensive app store optimisation services help you optimize every aspect of your app's presence, from keyword research to visual assets, ensuring maximum visibility and download conversion rates.",
+      "image": "seo.png",
+      "alt": "App Store Optimisation Services illustration"
+    },
+    "services": "App Store Optimisation",
+    "faq": {
+      "serviceName": "App Store Optimisation",
+      "faqs": [
+        {
+          "q": "What is App Store Optimisation (ASO)?",
+          "a": "ASO is the process of optimizing mobile apps to rank higher in app store search results and attract more downloads. It includes optimizing app titles, descriptions, keywords, screenshots, and user engagement metrics."
+        },
+        {
+          "q": "How is ASO different from SEO?",
+          "a": "ASO focuses on app store algorithms and mobile app discovery, while SEO focuses on web search engines. ASO considers factors like app store rankings, download rates, and user reviews."
+        },
+        {
+          "q": "Why is ASO important for mobile apps?",
+          "a": "Most app downloads come from app store searches. Without proper ASO, your app may never be discovered by potential users, regardless of how good it is."
+        },
+        {
+          "q": "How long does ASO take to show results?",
+          "a": "ASO results typically appear within 2-8 weeks, depending on competition and optimisation quality. App store algorithm updates can affect rankings, requiring ongoing optimisation."
+        },
+        {
+          "q": "What factors affect app store rankings?",
+          "a": "Key factors include app title, keywords, description, user ratings and reviews, download velocity, user retention, and app store optimisation best practices."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "aso-keyword-research",
+        "name": "ASO Keywords",
+        "title": "App Store Keyword Research",
+        "description": "Research high-value keywords for your app store listing to improve search visibility and discoverability.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "app-title-optimisation",
+        "name": "App Title",
+        "title": "App Title optimisation",
+        "description": "Optimize your app title with strategic keywords and compelling copy that improves search rankings.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "app-description-optimisation",
+        "name": "App Description",
+        "title": "App Store Description optimisation",
+        "description": "Write compelling app descriptions that convert browsers into downloaders and improve ASO rankings.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "app-visual-optimisation",
+        "name": "App Visuals",
+        "title": "App Visual Asset optimisation",
+        "description": "Optimize app screenshots, icons, and visual assets to improve conversion rates and user engagement.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "app-review-management",
+        "name": "Review Management",
+        "title": "App Store Review Management",
+        "description": "Manage user reviews and ratings to maintain positive app store presence and improve rankings.",
+        "image": "/seo/services/link-building.png"
+      },
+      {
+        "id": "aso-analytics",
+        "name": "ASO Analytics",
+        "title": "App Store Performance Tracking",
+        "description": "Monitor and analyze your app's performance across different app stores and optimisation metrics.",
+        "image": "/seo/services/seo-audit.png"
+      }
+    ]
+  },
+  "guest-posting": {
+    "hero": {
+      "heading": "Best Guest Posting Services for SEO Success",
+      "subheading": "Build authority and drive traffic with our expert guest posting services. As a trusted guest posting company, we connect you with high-authority websites to publish valuable content and earn quality backlinks."
+    },
+    "form": {
+      "heading": "Ready to build authority through guest posting?",
+      "content": "Guest posting is one of the most effective ways to build authority and earn high-quality backlinks, but most businesses struggle to find the right opportunities. Our guest posting services specialize in connecting you with relevant, high-authority websites.",
+      "subContent": "Your competitors who have invested in the best guest posting services are building authority and earning backlinks that improve their search rankings. Don't let them get ahead of you.",
+      "cta": "Let our expert guest posting company analyze your content and find the best guest posting opportunities to build your authority and improve your SEO performance.",
+      "formHeading": "Guest Posting Services Strategy & Outreach",
+      "buttonText": "Get My Guest Posting Plan"
+    },
+    "content": {
+      "heading": "Build authority and backlinks with the best guest posting services.",
+      "text1": "Guest posting remains one of the most effective strategies for building authority and earning high-quality backlinks. Our guest posting services understand that successful guest posting requires finding the right opportunities and creating valuable content that editors want to publish.",
+      "text2": "The best guest posting services focus on quality over quantity, targeting relevant websites with engaged audiences and strong domain authority. Our guest posting company ensures every opportunity aligns with your brand and SEO goals.",
+      "text3": "Our comprehensive guest posting services help you identify opportunities, create compelling pitches, develop high-quality content, and secure placements on authoritative websites that drive traffic and build your online reputation.",
+      "image": "seo.png",
+      "alt": "Best Guest Posting Services illustration"
+    },
+    "services": "Guest Posting",
+    "faq": {
+      "serviceName": "Guest Posting",
+      "faqs": [
+        {
+          "q": "What are guest posting services?",
+          "a": "Guest posting services help you write and publish content on other websites to build authority, earn backlinks, and reach new audiences. These services handle outreach, content creation, and relationship building with website owners."
+        },
+        {
+          "q": "How do guest posting services work?",
+          "a": "Services identify relevant websites, pitch content ideas, create high-quality articles, and secure publication opportunities. They handle the entire process from research to publication and follow-up."
+        },
+        {
+          "q": "Why is guest posting important for SEO?",
+          "a": "Guest posting builds authority, earns high-quality backlinks, increases brand exposure, and drives referral traffic. It's one of the most effective white-hat link building strategies."
+        },
+        {
+          "q": "How do you choose the best guest posting services?",
+          "a": "Look for services with proven track records, quality content creation capabilities, strong editorial relationships, and transparent reporting. Avoid services that promise unrealistic results or use spammy tactics."
+        },
+        {
+          "q": "What types of content work best for guest posting?",
+          "a": "Successful guest posts provide value to the host site's audience, are well-researched and original, include relevant examples, and naturally incorporate your expertise without being overly promotional."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "guest-posting-research",
+        "name": "Opportunity Research",
+        "title": "Guest Posting Opportunity Research",
+        "description": "Identify high-authority, relevant websites that accept guest posts in your industry.",
+        "image": "/seo/services/seo-audit.png"
+      },
+      {
+        "id": "guest-posting-outreach",
+        "name": "Editorial Outreach",
+        "title": "Guest Posting Outreach & Pitching",
+        "description": "Develop compelling pitches and build relationships with website editors and owners.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "guest-content-creation",
+        "name": "Content Creation",
+        "title": "Guest Post Content Development",
+        "description": "Create high-quality, valuable content that editors want to publish and audiences want to read.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "guest-posting-optimisation",
+        "name": "Content optimisation",
+        "title": "Guest Post SEO optimisation",
+        "description": "Optimize guest posts for search engines while providing value to the host website's audience.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "guest-posting-tracking",
+        "name": "Performance Tracking",
+        "title": "Guest Posting Performance Analysis",
+        "description": "Monitor the performance of your guest posts including traffic, engagement, and backlink value.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "guest-posting-relationships",
+        "name": "Relationship Building",
+        "title": "Long-term Editorial Relationships",
+        "description": "Build lasting relationships with editors and website owners for ongoing guest posting opportunities.",
+        "image": "/seo/services/link-building.png"
+      }
+    ]
+  },
+  "local-citations": {
+    "hero": {
+      "heading": "Local Citation Building Services That Boost Rankings",
+      "subheading": "Improve your local search visibility with our expert local SEO citation building. As a trusted local citation building company, we help businesses build consistent citations across the web to dominate local search results."
+    },
+    "form": {
+      "heading": "Are your local citations helping or hurting your rankings?",
+      "content": "Local citation building is crucial for local SEO success, but inconsistent or incorrect citations can actually hurt your rankings. Most businesses struggle with citation management across hundreds of directories and websites. Our local citation building company specializes in citation optimisation.",
+      "subContent": "Your competitors who have invested in professional local SEO citation building are likely ranking higher in local search results because they have consistent, accurate citations across the web.",
+      "cta": "Let our expert local citation building services analyze your current citation profile and show you exactly how to improve your local search rankings through strategic citation building.",
+      "formHeading": "Local Citation Building Services Analysis & Strategy",
+      "buttonText": "Analyze My Citations"
+    },
+    "content": {
+      "heading": "Dominate local search with expert local citation building services.",
+      "text1": "Local citation building is essential for local SEO success, but it requires more than just listing your business in directories. Our local SEO citation building services understand that consistency, accuracy, and strategic placement are key to improving local search rankings.",
+      "text2": "Effective local citation building involves creating consistent NAP (Name, Address, Phone) information across relevant directories, industry-specific sites, and local business listings. Our local citation building company ensures every citation supports your local SEO goals.",
+      "text3": "Our comprehensive local citation building services help you build, manage, and optimize citations across hundreds of relevant directories and websites, ensuring consistent information that improves your local search visibility and rankings.",
+      "image": "seo.png",
+      "alt": "Local Citation Building Services illustration"
+    },
+    "services": "Local Citations",
+    "faq": {
+      "serviceName": "Local Citations",
+      "faqs": [
+        {
+          "q": "What are local citations?",
+          "a": "Local citations are online mentions of your business name, address, and phone number (NAP) across directories, websites, and business listings. They help search engines verify your business location and improve local search rankings."
+        },
+        {
+          "q": "Why are local citations important for SEO?",
+          "a": "Citations help Google verify your business information, improve local search rankings, and build trust with potential customers. Consistent citations across the web signal to search engines that your business is legitimate and established."
+        },
+        {
+          "q": "How many citations do I need?",
+          "a": "Quality matters more than quantity. Focus on getting citations from relevant, authoritative directories and websites in your industry and local area. 50-100 high-quality citations are typically more valuable than hundreds of low-quality ones."
+        },
+        {
+          "q": "What's the difference between local citation building and regular link building?",
+          "a": "Local citation building focuses on consistent business information across directories and listings, while link building focuses on acquiring backlinks from websites. Citations help with local SEO, while links help with general SEO."
+        },
+        {
+          "q": "How do you ensure citation consistency?",
+          "a": "We maintain detailed records of your business information, audit existing citations for accuracy, and systematically update incorrect information across all platforms to ensure consistency."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "citation-audit",
+        "name": "Citation Audit",
+        "title": "Local Citation Audit & Analysis",
+        "description": "Audit your existing citations to identify inconsistencies and opportunities for improvement.",
+        "image": "/seo/services/seo-audit.png"
+      },
+      {
+        "id": "nap-optimisation",
+        "name": "NAP optimisation",
+        "title": "Name, Address, Phone optimisation",
+        "description": "Ensure consistent and accurate business information across all citation sources.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "directory-submissions",
+        "name": "Directory Submissions",
+        "title": "Local Directory Submissions",
+        "description": "Submit your business to relevant local directories and industry-specific listings.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "citation-building",
+        "name": "Citation Building",
+        "title": "Strategic Citation Building",
+        "description": "Build new citations on high-authority, relevant directories and business listings.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "citation-monitoring",
+        "name": "Citation Monitoring",
+        "title": "Citation Monitoring & Maintenance",
+        "description": "Continuously monitor your citations to ensure accuracy and identify new opportunities.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "industry-citations",
+        "name": "Industry Citations",
+        "title": "Industry-Specific Citation Building",
+        "description": "Build citations on industry-specific directories and professional association listings.",
+        "image": "/seo/services/link-building.png"
+      }
+    ]
+  },
+  "penalty-recovery": {
+    "hero": {
+      "heading": "Penalty Recovery Services That Restore Rankings",
+      "subheading": "Recover from Google penalties and restore your search rankings with our expert penalty recovery services company. As a trusted penalty recovery services agency, we help businesses bounce back from manual and algorithmic penalties."
+    },
+    "form": {
+      "heading": "Has your site been hit by a Google penalty?",
+      "content": "Google penalties can devastate your search rankings and organic traffic overnight. Whether it's a manual penalty or algorithmic penalty, recovery requires expert knowledge and strategic action. Our penalty recovery services company specializes in identifying and resolving penalty issues.",
+      "subContent": "Your competitors who have experienced penalties and invested in professional penalty recovery services are likely working to regain their rankings. Don't let a penalty hold your business back indefinitely.",
+      "cta": "Let our expert penalty recovery services agency analyze your site and develop a comprehensive strategy to identify penalty issues and restore your search rankings.",
+      "formHeading": "Penalty Recovery Services Analysis & Strategy",
+      "buttonText": "Analyze My Penalty"
+    },
+    "content": {
+      "heading": "Bounce back from penalties with expert penalty recovery services.",
+      "text1": "Google penalties can severely impact your search rankings and organic traffic, but they're not permanent. Our penalty recovery services company understands the complex process of identifying penalty causes and implementing effective recovery strategies.",
+      "text2": "Successful penalty recovery requires thorough analysis, strategic remediation, and careful monitoring to ensure long-term recovery. Our penalty recovery services agency ensures every step is executed properly to restore your rankings and traffic.",
+      "text3": "Our comprehensive penalty recovery services help you identify penalty issues, implement corrective actions, and monitor progress to ensure successful recovery and prevent future penalties.",
+      "image": "seo.png",
+      "alt": "Penalty Recovery Services illustration"
+    },
+    "services": "Penalty Recovery",
+    "faq": {
+      "serviceName": "Penalty Recovery",
+      "faqs": [
+        {
+          "q": "What are Google penalties?",
+          "a": "Google penalties are actions taken by Google that reduce a website's search rankings due to violations of Google's Webmaster Guidelines. They can be manual (human-reviewed) or algorithmic (automated)."
+        },
+        {
+          "q": "How do I know if my site has a penalty?",
+          "a": "Signs include sudden drops in organic traffic, loss of keyword rankings, notifications in Google Search Console, or manual action messages. Our penalty recovery services can help identify the specific type and cause."
+        },
+        {
+          "q": "How long does penalty recovery take?",
+          "a": "Recovery time varies by penalty type and severity. Manual penalties may take 3-12 months after successful reconsideration, while algorithmic penalties can take 6-18 months depending on the issues addressed."
+        },
+        {
+          "q": "What's the difference between manual and algorithmic penalties?",
+          "a": "Manual penalties are issued by Google staff and require a reconsideration request, while algorithmic penalties are automated and require fixing the underlying issues to recover naturally."
+        },
+        {
+          "q": "Can penalty recovery services guarantee recovery?",
+          "a": "While we can't guarantee recovery, our penalty recovery services provide the best chance for successful recovery through expert analysis, strategic remediation, and ongoing monitoring."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "penalty-identification",
+        "name": "Penalty Analysis",
+        "title": "Penalty Identification & Analysis",
+        "description": "Identify the type and cause of Google penalties affecting your website's search rankings.",
+        "image": "/seo/services/seo-audit.png"
+      },
+      {
+        "id": "penalty-remediation",
+        "name": "Penalty Remediation",
+        "title": "Strategic Penalty Remediation",
+        "description": "Implement corrective actions to address penalty issues and improve your site's compliance.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "reconsideration-requests",
+        "name": "Reconsideration",
+        "title": "Reconsideration Request Management",
+        "description": "Prepare and submit compelling reconsideration requests to Google for manual penalty removal.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "penalty-monitoring",
+        "name": "Recovery Monitoring",
+        "title": "Penalty Recovery Monitoring",
+        "description": "Monitor your recovery progress and ensure long-term compliance with Google guidelines.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "compliance-optimisation",
+        "name": "Compliance",
+        "title": "SEO Compliance optimisation",
+        "description": "Optimize your SEO practices to prevent future penalties and maintain Google compliance.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "penalty-prevention",
+        "name": "Penalty Prevention",
+        "title": "Penalty Prevention Strategies",
+        "description": "Develop strategies and best practices to prevent future Google penalties and maintain rankings.",
+        "image": "/seo/services/link-building.png"
+      }
+    ]
+  },
+  "multilingual-seo": {
+    "hero": {
+      "heading": "Multilingual SEO Services for Global Reach",
+      "subheading": "Expand your business internationally with our expert multilingual SEO services. As a trusted multilingual SEO company and multilingual SEO agency, we help businesses reach global audiences through strategic multilingual optimisation."
+    },
+    "form": {
+      "heading": "Ready to reach global audiences?",
+      "content": "Expanding into international markets requires specialized multilingual SEO strategies that go beyond simple translation. Most businesses struggle with multilingual SEO challenges like language-specific optimisation and cultural adaptation. Our multilingual SEO services company specializes in global SEO strategies.",
+      "subContent": "Your competitors who have invested in professional multilingual SEO services are capturing customers in international markets you haven't even considered. Don't let language barriers limit your growth potential.",
+      "cta": "Let our expert multilingual SEO agency analyze your international opportunities and develop strategies that help you reach customers in new markets and languages.",
+      "formHeading": "Multilingual SEO Services Strategy & Analysis",
+      "buttonText": "Analyze My Global Potential"
+    },
+    "content": {
+      "heading": "Dominate global markets with expert multilingual SEO services.",
+      "text1": "Multilingual SEO is essential for businesses looking to expand internationally and reach global audiences. Our multilingual SEO company understands that successful international SEO requires more than translation - it needs cultural adaptation and language-specific optimisation.",
+      "text2": "Effective multilingual SEO involves optimizing for different languages, cultures, and search engines while maintaining consistent brand messaging. Our multilingual SEO agency ensures your content resonates with local audiences while maintaining SEO effectiveness.",
+      "text3": "Our comprehensive multilingual SEO services help you optimize for multiple languages and markets, from technical implementation to content localization, ensuring maximum visibility and engagement across global markets.",
+      "image": "seo.png",
+      "alt": "Multilingual SEO Services illustration"
+    },
+    "services": "Multilingual SEO",
+    "faq": {
+      "serviceName": "Multilingual SEO",
+      "faqs": [
+        {
+          "q": "What is multilingual SEO?",
+          "a": "Multilingual SEO optimizes websites for multiple languages and markets to reach international audiences. It includes language-specific optimisation, cultural adaptation, and technical implementation for global search visibility."
+        },
+        {
+          "q": "How is multilingual SEO different from regular SEO?",
+          "a": "Multilingual SEO considers cultural differences, language-specific search behaviors, local search engines, and regional preferences. It requires understanding of multiple markets and languages beyond basic translation."
+        },
+        {
+          "q": "Which languages should I target first?",
+          "a": "We analyze your current traffic, market opportunity, and business goals to recommend the best languages to target first. Popular choices include Spanish, French, German, Portuguese, and Asian languages depending on your market."
+        },
+        {
+          "q": "Do I need separate websites for each language?",
+          "a": "Not necessarily. We can use subdirectories, subdomains, or separate domains depending on your needs. Each approach has different technical requirements and benefits for multilingual SEO."
+        },
+        {
+          "q": "How long does multilingual SEO take to show results?",
+          "a": "Multilingual SEO typically takes 6-12 months to show significant results, as it requires building authority in new markets and adapting to local search behaviors and preferences."
+        }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "language-research",
+        "name": "Language Research",
+        "title": "Multilingual Market Research",
+        "description": "Research target languages, markets, and search behaviors to create effective multilingual SEO strategies.",
+        "image": "/seo/services/seo-audit.png"
+      },
+      {
+        "id": "hreflang-implementation",
+        "name": "Hreflang Setup",
+        "title": "Hreflang Implementation",
+        "description": "Properly implement hreflang tags to help search engines understand your multilingual content structure.",
+        "image": "/seo/services/technical.webp"
+      },
+      {
+        "id": "content-localization",
+        "name": "Content Localization",
+        "title": "Multilingual Content Localization",
+        "description": "Localize your content for different languages and cultures, not just translation but cultural adaptation.",
+        "image": "/seo/services/on-page.webp"
+      },
+      {
+        "id": "multilingual-keywords",
+        "name": "Multilingual Keywords",
+        "title": "Language-Specific Keyword Research",
+        "description": "Research keywords in different languages to optimize for local search behaviors and preferences.",
+        "image": "/seo/services/seo.webp"
+      },
+      {
+        "id": "multilingual-technical-seo",
+        "name": "Technical SEO",
+        "title": "Multilingual Technical SEO",
+        "description": "Implement technical SEO best practices for multilingual websites including URL structure and site architecture.",
+        "image": "/seo/services/off-page.webp"
+      },
+      {
+        "id": "multilingual-analytics",
+        "name": "Global Analytics",
+        "title": "Multilingual Performance Tracking",
+        "description": "Monitor and analyze your SEO performance across different languages and markets.",
         "image": "/seo/services/link-building.png"
       }
     ]

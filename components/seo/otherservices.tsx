@@ -108,7 +108,7 @@ const seoServices = [
 // Function to convert service name to slug
 const serviceToSlug = (service: string): string => {
   const slugMap: Record<string, string> = {
-    "Search Engine Optimisation": "search-engine-optimization",
+    "Search Engine Optimisation": "search-engine-optimisation",
     "Local SEO": "local-seo",
     "Wordpress SEO": "wordpress-seo",
     "E-commerce SEO": "ecom-seo",
@@ -119,19 +119,19 @@ const serviceToSlug = (service: string): string => {
     "SEO Migration": "seo-migration",
     "Small Business SEO": "small-business-seo",
     "Lead Generation": "lead-generation",
-    "Link building services": "link-building-services",
+    "Link building services": "link-building",
     "International SEO": "international-seo",
     "Mobile SEO": "mobile-seo",
     "Voice search optimisation": "voice-search-optimisation",
     "Video SEO": "video-seo",
     "YouTube SEO": "youtube-seo",
-    "SEO strategy consulting": "seo-strategy-consulting",
+    "SEO strategy consulting": "seo-strategy",
     "GEO": "geo",
     "SGE": "sge",
     "App Store Optimisation (ASO)": "app-store-optimisation",
-    "Guest posting services": "guest-posting-services",
-    "Local citation building": "local-citation-building",
-    "Penalty recovery services": "penalty-recovery-services",
+    "Guest posting services": "guest-posting",
+    "Local citation building": "local-citations",
+    "Penalty recovery services": "penalty-recovery",
     "Multilingual SEO": "multilingual-seo",
   };
   return slugMap[service] || service.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');

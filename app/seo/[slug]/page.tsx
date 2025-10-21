@@ -18,7 +18,7 @@ import Testimonials from "@/components/homepage/testimonials";
 import BookACall from "@/components/homepage/bookacall";
 
 const allowedSlugs = [
-  "search-engine-optimization",
+  "search-engine-optimisation",
   "local-seo",
   "wordpress-seo",
   "ecom-seo",
@@ -29,6 +29,20 @@ const allowedSlugs = [
   "seo-migration",
   "small-business-seo",
   "lead-generation",
+  "link-building",
+  "international-seo",
+  "mobile-seo",
+  "voice-search-optimisation",
+  "video-seo",
+  "youtube-seo",
+  "seo-strategy",
+  "geo",
+  "sge",
+  "app-store-optimisation",
+  "guest-posting",
+  "local-citations",
+  "penalty-recovery",
+  "multilingual-seo",
 ];
 
 export default function SeoSlugPage({ params }: { params: { slug: string } }) {
