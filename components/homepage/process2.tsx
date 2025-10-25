@@ -5,26 +5,28 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
 interface Process2Props {
   data?: string;
+  processData?: {
+    steps: string[];
+    content: string[];
+  };
 }
 
-const Process2 = ({ data }: Process2Props) => {
+const Process2 = ({ data, processData }: Process2Props) => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
   const [cardHeights, setCardHeights] = useState<number[]>([]);
   const [cardPositions, setCardPositions] = useState<number[]>([]);
-  const [mobileDotPositions, setMobileDotPositions] = useState<{top: number, opacity: number}[]>([
-    {top: 0, opacity: 0.3}, {top: 0, opacity: 0.3}, {top: 0, opacity: 0.3}, {top: 0, opacity: 0.3}, {top: 0, opacity: 0.3}
-  ]);
+  const [mobileDotPositions, setMobileDotPositions] = useState<{top: number, opacity: number}[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
   const progressBarRef = useRef<HTMLDivElement>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   
   // Framer Motion values
   const progressValue = useMotionValue(0);
-  const [stepPositions, setStepPositions] = useState<number[]>([0, 0, 0, 0, 0]);
+  const [stepPositions, setStepPositions] = useState<number[]>([]);
 
-  // Placeholder data
-  const steps = [
+  // Dynamic data from props or fallback to default
+  const steps = processData?.steps || [
     "Discovery & Research",
     "Strategy & Planning", 
     "Design & Development",
@@ -32,7 +34,7 @@ const Process2 = ({ data }: Process2Props) => {
     "Launch & Support"
   ];
 
-  const cardContent = [
+  const cardContent = processData?.content || [
     "After analyzing your site, competition, and general market landscape we apply our knowledge and experience in SEO & PPC to build out the best growth strategy for your SaaS.<br><br>We then lay out the roadmap of a potential project together and show you how we can achieve your goals with real-world data using our proprietary AI-powered processes & technology.",
     
     "When our projects kick off we hit the ground running, gathering all of the data we can from you about your business from detailed questionnaires, and tools like Google Analytics & Google Search Console, as well as in strategy calls with your team.<br><br>We get familiarized with your business in an innate way and seek to understand your customers needs and pain points so that we can speak to them on their terms.",
@@ -43,6 +45,12 @@ const Process2 = ({ data }: Process2Props) => {
     
     "One of the most important things you can do with any growth project is to keep a close eye on the performance, and use data to adapt over time.<br><br>We provide deep monthly reports with the metrics that matter most to your SaaS growth and analyze them for future opportunities. We continually iterate on our actions, adjusting course when needed to achieve your goals as efficiently as possible."
   ];
+
+  // Initialize mobile dot positions and step positions based on steps length
+  useEffect(() => {
+    setMobileDotPositions(Array(steps.length).fill({top: 0, opacity: 0.3}));
+    setStepPositions(Array(steps.length).fill(0));
+  }, [steps.length]);
 
   // Calculate dynamic heights and positions
   useEffect(() => {

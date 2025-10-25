@@ -52,7 +52,7 @@ export default function PaidAdsSlugPage({ params }: { params: { slug: string } }
       <SeoForm data={currentData?.form} />
       <BrandsMarquee />
       <SeoServices data={currentData?.services} serviceCards={currentData?.serviceCards} basePath="/paid-advertisement" />
-      <Process2 data={currentData?.services} />
+      <Process2 data={currentData?.services} processData={currentData?.process} />
       <SeoContent data={currentData?.content} />
       <SeoCta data={currentData?.services} />
       <Apart />

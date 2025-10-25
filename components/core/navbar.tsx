@@ -573,7 +573,12 @@ const Navbar: React.FC = () => {
                                   return `/seo/${slug}`;
                                 }
                                 if (paidAdsSlugs.has(name)) {
-                                  return `/paid-advertisement/${name}`;
+                                  // Map naming differences for paid ads
+                                  const slugMap: Record<string, string> = {
+                                    'google-shopping': 'google-shopping-ads',
+                                  };
+                                  const slug = slugMap[name] || name;
+                                  return `/paid-advertisement/${slug}`;
                                 }
                                 return `/services/${name}`;
                               })()}
@@ -728,7 +733,12 @@ const Navbar: React.FC = () => {
                                     return `/seo/${slug}`;
                                   }
                                   if (paidAdsSlugs.has(name)) {
-                                    return `/paid-advertisement/${name}`;
+                                    // Map naming differences for paid ads
+                                    const slugMap: Record<string, string> = {
+                                      'google-shopping': 'google-shopping-ads',
+                                    };
+                                    const slug = slugMap[name] || name;
+                                    return `/paid-advertisement/${slug}`;
                                   }
                                   return `/services/${name}`;
                                 })()}

@@ -13,6 +13,26 @@
       "buttonText": "Get My Audit"
     },
     "services": "Paid Advertising",
+    "process": {
+      "steps": [
+        "Audit & Analysis",
+        "Strategy Development", 
+        "Campaign Setup & Launch",
+        "Optimization & Testing",
+        "Scale & Growth"
+      ],
+      "content": [
+        "We start with a comprehensive audit of your current paid advertising performance, analyzing campaign structure, audience targeting, creative performance, and conversion tracking. Our team identifies immediate optimization opportunities and develops insights into your most valuable customer segments and high-performing ad formats.",
+        
+        "Based on our audit findings, we develop a customized paid advertising strategy that aligns with your business goals. This includes channel selection, budget allocation, audience targeting strategies, creative testing frameworks, and conversion optimization plans. We create detailed campaign roadmaps with clear KPIs and success metrics.",
+        
+        "Our team sets up and launches your paid advertising campaigns across selected channels, implementing proper tracking, conversion attribution, and campaign structure. We ensure all campaigns are properly configured for optimal performance, including ad copy testing, landing page optimization, and audience segmentation.",
+        
+        "We continuously optimize your campaigns through systematic testing and data analysis. Our team monitors performance metrics, conducts A/B tests on creatives and audiences, adjusts bidding strategies, and refines targeting to improve ROI. We provide detailed performance reports and strategic recommendations for ongoing improvement.",
+        
+        "As campaigns prove successful, we scale winning strategies across additional channels and audiences. This includes expanding budget allocation, testing new creative formats, exploring additional platforms, and implementing advanced automation to maximize growth while maintaining efficiency and profitability."
+      ]
+    },
     "serviceCards": [
       {
         "id": "google-ads",
@@ -1069,5 +1089,3 @@
     }
   }
 }
-
-

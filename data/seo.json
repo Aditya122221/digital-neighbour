@@ -21,6 +21,26 @@
       "alt": "SEO Marketing illustration"
     },
     "services": "Search Engine Optimisation",
+    "process": {
+      "steps": [
+        "Discovery & Research",
+        "Strategy & Planning", 
+        "Implementation & Optimization",
+        "Monitoring & Analysis",
+        "Growth & Scaling"
+      ],
+      "content": [
+        "We begin by conducting comprehensive research into your current SEO performance, competitor landscape, and target market opportunities. Our team analyzes your website's technical foundation, content quality, and backlink profile to identify growth potential and develop a data-driven SEO strategy tailored to your business goals.",
+        
+        "Based on our research findings, we develop a customized SEO strategy that aligns with your business objectives. This includes keyword targeting, content planning, technical optimization roadmap, and link building strategies. We create detailed project timelines and set measurable KPIs to track progress and ensure accountability.",
+        
+        "Our team implements the approved SEO strategy through systematic optimization of your website's technical elements, content structure, and off-page factors. We focus on improving site speed, mobile responsiveness, user experience, and creating high-quality content that resonates with your target audience and search engines.",
+        
+        "We continuously monitor your SEO performance through advanced analytics and reporting tools. Our team tracks keyword rankings, organic traffic growth, conversion rates, and other key metrics. We provide detailed monthly reports and adjust strategies based on performance data and algorithm updates.",
+        
+        "As your SEO foundation strengthens, we scale successful strategies and expand into new opportunities. This includes targeting additional keywords, creating more content, building more backlinks, and exploring new SEO channels to maximize your organic growth potential and market dominance."
+      ]
+    },
     "faq": {
       "serviceName": "SEO",
       "faqs": [
