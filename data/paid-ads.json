@@ -91,39 +91,39 @@
     "form": { "heading": "Scale with Expert Google Ads Agency Services", "content": "As a trusted Google Ads company, we structure accounts for clarity, control, and speed of iteration. Our comprehensive Google Ads agency services include detailed account audits, campaign structure optimization, keyword research and expansion, ad copy testing, and ongoing performance monitoring to ensure maximum ROI from your search advertising investment.", "subContent": "From query-level control to creative testing, our Google Ads services optimise for intent. We implement advanced bidding strategies, negative keyword management, landing page optimization, and conversion tracking to capture high-intent search traffic and maximize your conversion rates.", "cta": "Request a free audit of your Google Ads account from our expert Google Ads agency. Our comprehensive audit covers account structure, keyword performance, ad copy effectiveness, landing page optimization, and conversion tracking to identify immediate improvement opportunities.", "formHeading": "Free Google Ads Agency Audit", "buttonText": "Get My Audit" },
     "services": "Google Ads",
     "serviceCards": [
-      {
-        "id": "google-ads",
-        "name": "Google Ads Agency Services",
-        "title": "Expert Google Ads Company | Search & Performance Max",
-        "description": "Capture demand with high-intent search, Shopping, and Performance Max campaigns tuned for profitability. Our Google Ads agency expertise includes comprehensive keyword research, ad copy optimization, landing page testing, conversion tracking setup, and ongoing campaign management to maximize your search advertising ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/google-ads"
-      },
-      {
-        "id": "meta-ads",
-        "name": "Meta Ads",
-        "title": "Meta (Facebook/Instagram) Campaigns",
-        "description": "Scale attention with creative-led prospecting and conversion-focused retargeting on Meta. We develop compelling visual and video content, implement advanced audience targeting strategies, optimize for various campaign objectives, and create sophisticated retargeting sequences to maximize engagement and conversions.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/meta-ads"
-      },
-      {
-        "id": "linkedin-ads",
-        "name": "LinkedIn Ads",
-        "title": "B2B LinkedIn Lead Gen",
-        "description": "Precisely target decision-makers with tailored messaging, offers, and high-signal lead flows. Our LinkedIn advertising strategies focus on B2B lead generation, account-based marketing, professional audience targeting, and creating compelling offers that resonate with business decision-makers and drive qualified leads.",
-        "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/linkedin-ads"
-      },
-      {
-        "id": "youtube-ads",
-        "name": "Youtube Ads Agency Services",
-        "title": "Expert Youtube Ads Company | Awareness & Direct Response",
-        "description": "Build demand and conversions with creative testing and audience layering on YouTube. Our Youtube Ads Agency creates engaging video content, implements strategic audience targeting, optimizes for both brand awareness and direct response objectives, and leverages YouTube's powerful advertising platform to drive meaningful business results.",
-        "image": "/seo/services/on-page.webp",
-        "link": "/paid-advertisement/youtube-ads"
-      }
-    ],
+  {
+    "id": "google-search-ads",
+    "name": "Google Search Ads",
+    "title": "High-Intent Google Search Campaigns",
+    "description": "Capture demand at the moment of intent with precisely targeted Google Search Ads. We craft keyword-driven campaigns, optimize ad copy and bidding, and continuously refine targeting to deliver maximum ROI and qualified conversions.",
+    "image": "/seo/services/seo.webp",
+    "link": "/paid-advertisement/google-search-ads"
+  },
+  {
+    "id": "google-display-ads",
+    "name": "Google Display & Remarketing Ads",
+    "title": "Brand Visibility Through Display & Remarketing",
+    "description": "Expand reach and re-engage audiences across the Google Display Network. Our remarketing and awareness campaigns use data-driven audience segmentation and creative testing to boost brand recall and conversion rates.",
+    "image": "/seo/services/off-page.webp",
+    "link": "/paid-advertisement/google-display-ads"
+  },
+  {
+    "id": "google-shopping-ads",
+    "name": "Google Shopping Ads",
+    "title": "E-commerce Performance with Google Shopping",
+    "description": "Optimize your e-commerce visibility with expertly structured Google Shopping campaigns. We manage product feeds, enhance data quality, and implement smart bidding strategies to drive high-intent traffic and profitable sales.",
+    "image": "/seo/services/technical.webp",
+    "link": "/paid-advertisement/google-shopping-ads"
+  },
+  {
+    "id": "youtube-ads",
+    "name": "YouTube Ads",
+    "title": "Video Advertising on YouTube",
+    "description": "Leverage YouTube’s power to build awareness and drive conversions. We develop compelling video content, apply precise audience targeting, and optimize for both brand lift and direct response to deliver measurable impact.",
+    "image": "/seo/services/on-page.webp",
+    "link": "/paid-advertisement/youtube-ads"
+  }
+],
     "content": { "heading": "Expert Google Ads Agency Services That Own High-Intent Moments", "text1": "Win the SERP with smart bidding + clean structure. Our Google Ads agency expertise includes advanced bidding strategy implementation, account structure optimization, keyword research and expansion, and ongoing campaign management to ensure maximum visibility and conversion rates for high-intent search queries.", "text2": "Feed health and product data matter for Shopping. As a leading Google Ads company, we specialize in Google Shopping campaign optimization, including product feed management, data quality improvement, shopping campaign structure optimization, and performance monitoring to maximize your e-commerce advertising success.", "text3": "We track granular conversions to guide bids. Our comprehensive Google Ads services include detailed attribution modeling, conversion value optimization, and data-driven bidding strategies that ensure every dollar spent delivers maximum return on investment.", "image": "seo.png", "alt": "Google Ads Agency Services" },
     "faq": { 
       "serviceName": "Google Ads Agency Services",
@@ -243,39 +243,39 @@
     "form": { "heading": "Scale with Expert Youtube Ads Agency Services", "content": "As a trusted Youtube Ads Company, we test scripts, hooks, and audiences for efficient CPVs and CAC. Our comprehensive Youtube Ads Services include detailed video creative testing, audience research and targeting, campaign optimization, and performance analysis to identify the most effective video content and targeting approaches for your brand.", "subContent": "Creative iteration compounds performance. Our Youtube Ads Agency continuously tests and optimizes video creative elements, including hooks, storytelling, calls-to-action, and visual elements to improve engagement rates, view-through rates, and conversion performance across your YouTube advertising campaigns.", "cta": "Request a free audit of your YouTube channel from our expert Youtube Ads Agency. Our detailed audit covers channel optimization, video creative performance, audience targeting effectiveness, campaign structure, and conversion tracking to identify opportunities for improving your YouTube advertising ROI and video marketing effectiveness.", "formHeading": "Free Youtube Ads Agency Audit", "buttonText": "Get My Audit" },
     "services": "YouTube Ads",
     "serviceCards": [
-      {
-        "id": "google-ads",
-        "name": "Google Ads Agency Services",
-        "title": "Expert Google Ads Company | Search & Performance Max",
-        "description": "Capture demand with high-intent search, Shopping, and Performance Max campaigns tuned for profitability. Our Google Ads agency expertise includes comprehensive keyword research, ad copy optimization, landing page testing, conversion tracking setup, and ongoing campaign management to maximize your search advertising ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/google-ads"
-      },
-      {
-        "id": "meta-ads",
-        "name": "Meta Ads",
-        "title": "Meta (Facebook/Instagram) Campaigns",
-        "description": "Scale attention with creative-led prospecting and conversion-focused retargeting on Meta. We develop compelling visual and video content, implement advanced audience targeting strategies, optimize for various campaign objectives, and create sophisticated retargeting sequences to maximize engagement and conversions.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/meta-ads"
-      },
-      {
-        "id": "linkedin-ads",
-        "name": "LinkedIn Ads",
-        "title": "B2B LinkedIn Lead Gen",
-        "description": "Precisely target decision-makers with tailored messaging, offers, and high-signal lead flows. Our LinkedIn advertising strategies focus on B2B lead generation, account-based marketing, professional audience targeting, and creating compelling offers that resonate with business decision-makers and drive qualified leads.",
-        "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/linkedin-ads"
-      },
-      {
-        "id": "youtube-ads",
-        "name": "Youtube Ads Agency Services",
-        "title": "Expert Youtube Ads Company | Awareness & Direct Response",
-        "description": "Build demand and conversions with creative testing and audience layering on YouTube. Our Youtube Ads Agency creates engaging video content, implements strategic audience targeting, optimizes for both brand awareness and direct response objectives, and leverages YouTube's powerful advertising platform to drive meaningful business results.",
-        "image": "/seo/services/on-page.webp",
-        "link": "/paid-advertisement/youtube-ads"
-      }
-    ],
+  {
+    "id": "youtube-ads",
+    "name": "YouTube Ads Agency Services",
+    "title": "Expert YouTube Ads Company | Awareness & Direct Response",
+    "description": "Build demand and conversions with creative testing and audience layering on YouTube. Our YouTube Ads Agency creates high-performing video content, implements advanced targeting, and optimizes for both brand awareness and direct response to drive measurable business growth.",
+    "image": "/seo/services/on-page.webp",
+    "link": "/paid-advertisement/youtube-ads"
+  },
+  {
+    "id": "meta-ads",
+    "name": "Meta Ads (Facebook & Instagram)",
+    "title": "Creative Video Campaigns on Meta",
+    "description": "Scale your brand with video-first campaigns on Facebook and Instagram. Our Meta Ads experts design thumb-stopping video creatives, manage audience targeting, and optimize for engagement, awareness, and conversions across Meta’s ecosystem.",
+    "image": "/seo/services/off-page.webp",
+    "link": "/paid-advertisement/meta-ads"
+  },
+  {
+    "id": "tiktok-ads",
+    "name": "TikTok Ads",
+    "title": "Short-Form Video Advertising",
+    "description": "Capture attention through creative, high-impact short videos on TikTok. Our TikTok Ads team produces trend-aligned content and data-driven targeting strategies that engage audiences and convert views into measurable growth.",
+    "image": "/seo/services/technical.webp",
+    "link": "/paid-advertisement/tiktok-ads"
+  },
+  {
+    "id": "google-video-ads",
+    "name": "Google Video Ads",
+    "title": "Video Campaigns Across Google Network",
+    "description": "Amplify your video reach beyond YouTube with Google Video Ads. We manage cross-network video campaigns, ensuring precise targeting, performance tracking, and creative optimization across Google’s Display and Video networks.",
+    "image": "/seo/services/seo.webp",
+    "link": "/paid-advertisement/google-video-ads"
+  }
+],
     "content": { "heading": "Expert Youtube Ads Agency Services for Video That Sells", "text1": "Creative frameworks accelerate testing. Our Youtube Ads Agency expertise includes systematic video creative testing, storytelling frameworks, hook optimization, and performance analysis to identify the most engaging and effective video content that drives audience engagement and conversion.", "text2": "Audience layering and sequencing matter. As a leading Youtube Ads Company, we implement sophisticated audience targeting strategies, audience layering techniques, and campaign sequencing to ensure your YouTube ads reach the right viewers at the right time in their customer journey, maximizing engagement and conversion rates.", "text3": "Measure view-through and assisted conversions. Our comprehensive Youtube Ads Services include detailed conversion tracking, view-through attribution, assisted conversion analysis, and ROI optimization to ensure accurate measurement of your video advertising impact and return on investment.", "image": "seo.png", "alt": "Youtube Ads Agency Services" },
     "faq": { 
       "serviceName": "Youtube Ads Agency Services",
@@ -351,7 +351,7 @@
         "title": "Expert Google Shopping Ads Company",
         "description": "Dominate product search results with optimized shopping campaigns that drive e-commerce sales. Our Google Shopping Ads Agency creates compelling product listings, implements advanced bidding strategies, optimizes product feeds, and leverages Google's shopping network to maximize your product visibility and conversion rates.",
         "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/google-shopping"
+        "link": "/paid-advertisement/google-shopping-ads"
       },
       {
         "id": "google-ads",
@@ -405,38 +405,38 @@
     "form": { "heading": "Scale with Expert Paid Social Ads Agency Services", "content": "As a trusted Paid Social Agency, we create and manage social media ad campaigns across all major platforms. Our comprehensive Paid Social Services include platform-specific campaign development, audience targeting optimization, creative testing, and performance analysis across Facebook, Instagram, LinkedIn, TikTok, and other emerging social platforms to maximize your social media advertising ROI.", "subContent": "Creative testing and audience targeting for optimal performance. Our Paid Social Ads Agency implements sophisticated creative testing frameworks, audience research and segmentation, and performance optimization techniques to ensure your social media campaigns reach the right audiences with the most engaging content, driving maximum engagement and conversion rates.", "cta": "Request a free audit of your social media accounts from our expert Paid Social Agency. Our detailed audit covers account structure, audience targeting, creative performance, campaign optimization, and conversion tracking across all your social media platforms to identify opportunities for improving your social media advertising effectiveness and ROI.", "formHeading": "Free Paid Social Ads Agency Audit", "buttonText": "Get My Audit" },
     "services": "Paid Social",
     "serviceCards": [
-      {
-        "id": "paid-social",
-        "name": "Paid Social Ads Agency Services",
-        "title": "Expert Paid Social Agency",
-        "description": "Dominate social media advertising across all major platforms with comprehensive Paid Social Services. Our Paid Social Ads Agency creates engaging social content, implements advanced audience targeting, optimizes for engagement and conversions, and leverages Facebook, Instagram, LinkedIn, and TikTok to maximize your social media ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/paid-social"
-      },
-      {
-        "id": "google-ads",
-        "name": "Google Ads Agency Services",
-        "title": "Expert Google Ads Company | Search & Performance Max",
-        "description": "Capture demand with high-intent search, Shopping, and Performance Max campaigns tuned for profitability. Our Google Ads agency expertise includes comprehensive keyword research, ad copy optimization, landing page testing, conversion tracking setup, and ongoing campaign management to maximize your search advertising ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/google-ads"
-      },
-      {
-        "id": "google-remarketing",
-        "name": "Google Remarketing",
-        "title": "Google Remarketing",
-        "description": "Re-engage visitors with targeted remarketing campaigns across Google's network.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/google-remarketing"
-      },
-      {
-        "id": "google-shopping",
-        "name": "Google Shopping Ads Agency Services",
-        "title": "Expert Google Shopping Ads Company",
-        "description": "Showcase products with visual shopping ads that drive qualified traffic. Our Google Shopping Ads agency provides comprehensive Google Shopping Ads services.",
-        "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/google-shopping-ads"
-      }
+    {
+      "id": "meta-ads",
+      "name": "Meta (Facebook & Instagram) Ads Management",
+      "title": "Meta Ads Agency | Facebook & Instagram Advertising Experts",
+      "description": "Grow brand awareness and conversions with strategic Meta Ads management. Our Paid Social experts design creative, data-backed campaigns across Facebook and Instagram to maximize performance and ROI.",
+      "image": "/seo/services/seo.webp",
+      "link": "/paid-advertisement/meta-ads"
+    },
+    {
+      "id": "linkedin-ads",
+      "name": "LinkedIn Ads Management",
+      "title": "LinkedIn Ads Agency | B2B Paid Social Experts",
+      "description": "Reach decision-makers and professionals with tailored LinkedIn advertising. Our LinkedIn Ads Agency specializes in high-converting campaigns for B2B lead generation and brand positioning.",
+      "image": "/seo/services/off-page.webp",
+      "link": "/paid-advertisement/linkedin-ads"
+    },
+    {
+      "id": "tiktok-ads",
+      "name": "TikTok Ads Management",
+      "title": "TikTok Ads Agency | Short-Form Video Advertising",
+      "description": "Capture audience attention on TikTok with authentic, creative, and high-performing ads. We manage TikTok campaigns that increase engagement and drive conversions through viral, trend-based strategies.",
+      "image": "/seo/services/technical.webp",
+      "link": "/paid-advertisement/tiktok-ads"
+    },
+    {
+      "id": "pinterest-ads",
+      "name": "Pinterest Ads Management",
+      "title": "Pinterest Ads Agency | Visual Discovery Marketing",
+      "description": "Drive intent-based discovery with Pinterest Ads. Our Paid Social team creates visually stunning campaigns that connect inspiration to action, ideal for lifestyle and e-commerce brands.",
+      "image": "/seo/services/on-page.webp",
+      "link": "/paid-advertisement/pinterest-ads"
+    }
     ],
     "content": { "heading": "Expert Paid Social Ads Agency Services That Convert", "text1": "Multi-platform social media advertising. Our comprehensive Paid Social Services include platform-specific campaign development, cross-platform optimization, and unified reporting across Facebook, Instagram, LinkedIn, TikTok, and other emerging social platforms to maximize your social media advertising reach and ROI.", "text2": "Creative testing and audience targeting. As a leading Paid Social Agency, we implement sophisticated creative testing frameworks, audience research and segmentation, and performance optimization techniques to ensure your social media campaigns reach the right audiences with the most engaging content, driving maximum engagement and conversion rates across all platforms.", "text3": "Track performance across all social channels. Our Paid Social Ads Agency measurement includes comprehensive cross-platform tracking, conversion attribution, and performance analysis to ensure accurate measurement of your social media advertising impact and continuous optimization of your social media ROI.", "image": "seo.png", "alt": "Paid Social Ads Agency Services" },
     "faq": { 
@@ -577,47 +577,39 @@
     "form": { "heading": "Scale with Expert Google Display Ads Agency Services", "content": "As a trusted Google Display Ads company, we create visually compelling display campaigns that drive brand awareness and conversions. Our comprehensive Google Display Ads agency services include detailed creative development, audience targeting optimization, and performance analysis to maximize reach and engagement across Google's display network.", "subContent": "Visual storytelling that captures attention. Our Google Display Ads services develop compelling visual narratives, interactive ad formats, and engaging creative content that resonates with your target audience and drives both brand awareness and direct response conversions.", "cta": "Request a free audit of your Google Display Ads account from our expert Google Display Ads agency. Our detailed audit covers campaign structure, creative performance, audience targeting effectiveness, and conversion tracking to identify opportunities for improving your display advertising ROI.", "formHeading": "Free Google Display Ads Agency Audit", "buttonText": "Get My Audit" },
     "services": "Google Display Ads",
     "serviceCards": [
-      {
-        "id": "google-display-ads",
-        "name": "Google Display Ads Agency Services",
-        "title": "Expert Google Display Ads Company",
-        "description": "Dominate display advertising with visually compelling campaigns that drive brand awareness and conversions. Our Google Display Ads Agency creates engaging visual content, implements advanced audience targeting, optimizes for reach and engagement, and leverages Google's extensive display network to maximize your advertising ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/google-display-ads"
-      },
-      {
-        "id": "google-ads",
-        "name": "Google Ads",
-        "title": "Google Search & Performance Max",
-        "description": "Capture demand with high-intent search, Shopping, and Performance Max campaigns tuned for profitability. Our Google Ads agency provides expert Google Ads company services.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/google-ads"
-      },
-      {
-        "id": "meta-ads",
-        "name": "Meta Ads",
-        "title": "Meta (Facebook/Instagram) Campaigns",
-        "description": "Scale attention with creative-led prospecting and conversion-focused retargeting on Meta.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/meta-ads"
-      },
-      {
-        "id": "linkedin-ads",
-        "name": "LinkedIn Ads",
-        "title": "B2B LinkedIn Lead Gen",
-        "description": "Precisely target decision-makers with tailored messaging, offers, and high-signal lead flows.",
-        "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/linkedin-ads"
-      },
-      {
-        "id": "youtube-ads",
-        "name": "YouTube Ads",
-        "title": "YouTube Awareness & Direct Response",
-        "description": "Build demand and conversions with creative testing and audience layering on YouTube. Our Youtube Ads Agency provides comprehensive Youtube Ads Services.",
-        "image": "/seo/services/on-page.webp",
-        "link": "/paid-advertisement/youtube-ads"
-      }
-    ],
+  {
+    "id": "google-display-ads",
+    "name": "Google Display Ads Management",
+    "title": "Expert Google Display Ads Company",
+    "description": "Strategic Display campaign management that builds brand visibility and drives conversions. We design eye-catching creatives, implement advanced targeting, and continuously optimize performance across the Google Display Network for maximum ROI.",
+    "image": "/seo/services/seo.webp",
+    "link": "/paid-advertisement/google-display-ads"
+  },
+  {
+    "id": "google-remarketing-ads",
+    "name": "Google Remarketing Ads",
+    "title": "Re-engage Audiences with Google Remarketing",
+    "description": "Reconnect with site visitors and nurture prospects through personalized remarketing campaigns. Our Google Display Ads agency creates dynamic retargeting sequences that convert interest into action with precision audience segmentation and smart bidding.",
+    "image": "/seo/services/off-page.webp",
+    "link": "/paid-advertisement/google-remarketing-ads"
+  },
+  {
+    "id": "google-discovery-ads",
+    "name": "Google Discovery Ads",
+    "title": "Reach Audiences Across YouTube, Gmail & Discover",
+    "description": "Engage users across Google’s most visible surfaces with Discovery Ads. We craft visually immersive creatives, refine audience signals, and use data-driven optimization to build awareness and conversions beyond traditional display placements.",
+    "image": "/seo/services/technical.webp",
+    "link": "/paid-advertisement/google-discovery-ads"
+  },
+  {
+    "id": "youtube-ads",
+    "name": "YouTube Video Ads",
+    "title": "Video Awareness Campaigns via YouTube Ads",
+    "description": "Amplify your brand through high-impact video advertising. As part of our Display Ads expertise, we design and manage YouTube campaigns that blend visual storytelling with precise audience targeting to build awareness and drive measurable engagement.",
+    "image": "/seo/services/on-page.webp",
+    "link": "/paid-advertisement/youtube-ads"
+  }
+],
     "content": { "heading": "Expert Google Display Ads Agency Services That Convert", "text1": "Reach audiences across millions of websites. Our Google Display Ads agency expertise includes comprehensive site targeting, audience segmentation, and creative optimization to ensure maximum reach and engagement across Google's vast display network.", "text2": "Compelling visuals drive engagement. As a leading Google Display Ads company, we create eye-catching display ads, interactive formats, and engaging creative content that captures attention and drives both brand awareness and direct response conversions across the display network.", "text3": "Track display performance and optimize for conversions. Our comprehensive Google Display Ads services include detailed reach tracking, engagement analysis, and conversion attribution to ensure accurate measurement of your display advertising impact and ROI.", "image": "seo.png", "alt": "Google Display Ads Agency Services" },
     "faq": { 
       "serviceName": "Google Display Ads Agency Services",
@@ -697,31 +689,39 @@
     "form": { "heading": "Scale with Expert Google Shopping Ads Agency Services", "content": "As a trusted Google Shopping Ads company, we optimise product feeds and shopping campaigns for maximum visibility. Our comprehensive Google Shopping Ads agency services include detailed product feed optimization, shopping campaign structure management, bidding strategy implementation, and performance monitoring to ensure maximum product visibility and conversion rates across Google's shopping network.", "subContent": "Strategic bidding and product data optimisation. Our Google Shopping Ads services implement advanced bidding strategies, product data enhancement, category optimization, and performance analysis to ensure your shopping campaigns deliver maximum ROI and drive qualified traffic to your e-commerce store.", "cta": "Request a free audit of your Google Shopping Ads account from our expert Google Shopping Ads agency. Our detailed audit covers product feed quality, campaign structure, bidding strategies, product performance, and conversion tracking to identify opportunities for improving your Google Shopping advertising effectiveness and sales performance.", "formHeading": "Free Google Shopping Ads Agency Audit", "buttonText": "Get My Audit" },
     "services": "Google Shopping Ads",
     "serviceCards": [
-      {
-        "id": "google-shopping-ads",
-        "name": "Google Shopping Ads Agency Services",
-        "title": "Expert Google Shopping Ads Company",
-        "description": "Dominate product search results with optimized shopping campaigns that drive e-commerce sales. Our Google Shopping Ads Agency creates compelling product listings, implements advanced bidding strategies, optimizes product feeds, and leverages Google's shopping network to maximize your product visibility and conversion rates.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/google-shopping-ads"
-      },
-      {
-        "id": "google-ads",
-        "name": "Google Ads Agency Services",
-        "title": "Expert Google Ads Company | Search & Performance Max",
-        "description": "Capture demand with high-intent search, Shopping, and Performance Max campaigns tuned for profitability. Our Google Ads agency expertise includes comprehensive keyword research, ad copy optimization, landing page testing, conversion tracking setup, and ongoing campaign management to maximize your search advertising ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/google-ads"
-      },
-      {
-        "id": "google-remarketing",
-        "name": "Google Remarketing",
-        "title": "Google Remarketing",
-        "description": "Re-engage visitors with targeted remarketing campaigns across Google's network.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/google-remarketing"
-      }
-    ],
+  {
+    "id": "google-shopping-ads",
+    "name": "Google Shopping Ads Management",
+    "title": "Expert Google Shopping Ads Company",
+    "description": "Drive e-commerce growth with optimized Google Shopping campaigns. Our Shopping Ads specialists manage product feeds, bidding, and data quality to ensure your products dominate Google Shopping results and convert high-intent shoppers effectively.",
+    "image": "/seo/services/seo.webp",
+    "link": "/paid-advertisement/google-shopping-ads"
+  },
+  {
+    "id": "product-feed-optimization",
+    "name": "Product Feed Optimization",
+    "title": "Google Merchant Center Feed Optimization",
+    "description": "Enhance your product feed data for better visibility and ranking in Google Shopping. We refine product titles, descriptions, images, and attributes to improve relevance, quality score, and conversion potential across all your listings.",
+    "image": "/seo/services/off-page.webp",
+    "link": "/paid-advertisement/product-feed-optimization"
+  },
+  {
+    "id": "performance-max",
+    "name": "Performance Max Campaigns",
+    "title": "Google Performance Max for E-commerce",
+    "description": "Maximize reach and conversions with Performance Max campaigns that combine Shopping, Display, YouTube, and Search. Our agency optimizes creative assets, audience signals, and bidding to deliver full-funnel results for your online store.",
+    "image": "/seo/services/technical.webp",
+    "link": "/paid-advertisement/performance-max"
+  },
+  {
+    "id": "google-remarketing",
+    "name": "Google Remarketing for Shopping",
+    "title": "Retargeting for Returning Shoppers",
+    "description": "Re-engage shoppers who viewed your products but didn’t purchase. Our remarketing strategies use dynamic product ads, personalized offers, and audience segmentation to increase return visits and boost conversion rates.",
+    "image": "/seo/services/on-page.webp",
+    "link": "/paid-advertisement/google-remarketing"
+  }
+],
     "content": { "heading": "Expert Google Shopping Ads Agency Services for Visual Product Advertising", "text1": "Optimise product feeds for maximum visibility. Our Google Shopping Ads agency expertise includes comprehensive product feed optimization, data quality improvement, category enhancement, and feed management to ensure your products appear prominently in Google Shopping results and drive maximum qualified traffic to your e-commerce store.", "text2": "Strategic bidding for shopping campaigns. As a leading Google Shopping Ads company, we implement advanced bidding strategies, product-level optimization, and performance monitoring to ensure your Google Shopping campaigns deliver maximum ROI and drive qualified traffic that converts into sales for your e-commerce business.", "text3": "Track performance and optimise for sales. Our comprehensive Google Shopping Ads services include detailed conversion tracking, sales attribution analysis, and performance optimization to ensure accurate measurement of your shopping campaign impact and continuous improvement of your e-commerce advertising ROI.", "image": "seo.png", "alt": "Google Shopping Ads Agency Services" },
     "faq": { 
       "serviceName": "Google Shopping Ads Agency Services",
@@ -741,39 +741,39 @@
     "form": { "heading": "Scale with Expert Pay Per Click Marketing Services", "content": "As a trusted Pay Per Click Company, we structure and optimize PPC campaigns for maximum performance and profitability. Our comprehensive Pay Per Click Agency services include detailed account audits, keyword research and management, ad copy optimization, landing page testing, bid management, and ongoing campaign optimization to ensure maximum ROI from your pay-per-click advertising investment.", "subContent": "Strategic keyword targeting and conversion optimization. Our Pay Per Click Marketing Services implement advanced keyword strategies, negative keyword management, ad copy testing, landing page optimization, and conversion tracking to capture high-intent search traffic and maximize your conversion rates across all PPC platforms.", "cta": "Request a free audit of your PPC accounts from our expert Pay Per Click Agency. Our comprehensive audit covers account structure, keyword performance, ad copy effectiveness, landing page optimization, and conversion tracking to identify immediate improvement opportunities and growth potential.", "formHeading": "Free Pay Per Click Agency Audit", "buttonText": "Get My Audit" },
     "services": "Pay Per Click Marketing",
     "serviceCards": [
-      {
-        "id": "pay-per-click",
-        "name": "Pay Per Click Marketing Services",
-        "title": "Expert Pay Per Click Company",
-        "description": "Dominate search results with strategic PPC campaigns that drive qualified traffic and conversions. Our Pay Per Click Agency creates compelling ad copy, implements advanced keyword strategies, optimizes landing pages, and leverages all major PPC platforms to maximize your advertising ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/pay-per-click"
-      },
-      {
-        "id": "google-ads",
-        "name": "Google Ads Agency Services",
-        "title": "Expert Google Ads Company | Search & Performance Max",
-        "description": "Capture demand with high-intent search, Shopping, and Performance Max campaigns tuned for profitability. Our Google Ads agency expertise includes comprehensive keyword research, ad copy optimization, landing page testing, conversion tracking setup, and ongoing campaign management to maximize your search advertising ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/google-ads"
-      },
-      {
-        "id": "bing-ads",
-        "name": "Bing Ads Management Services",
-        "title": "Expert Bing Ads Company",
-        "description": "Expand your reach with Bing Ads campaigns that capture Microsoft's search audience. Our Bing Ads management services include keyword research, ad copy optimization, and campaign management to maximize your presence across Microsoft's search network.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/bing-ads"
-      },
-      {
-        "id": "google-shopping-ads",
-        "name": "Google Shopping Ads Agency Services",
-        "title": "Expert Google Shopping Ads Company",
-        "description": "Showcase products with visual shopping ads that drive qualified traffic. Our Google Shopping Ads agency provides comprehensive Google Shopping Ads services.",
-        "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/google-shopping-ads"
-      }
-    ],
+  {
+    "id": "pay-per-click",
+    "name": "Pay Per Click Marketing Services",
+    "title": "Expert Pay Per Click Company",
+    "description": "Dominate search results with strategic PPC campaigns that attract high-intent customers. Our Pay Per Click Agency structures, manages, and optimizes campaigns across Google and Bing to maximize clicks, conversions, and ROI.",
+    "image": "/seo/services/seo.webp",
+    "link": "/paid-advertisement/pay-per-click"
+  },
+  {
+    "id": "google-ads",
+    "name": "Google Ads Management",
+    "title": "Google Search & Performance Max Campaigns",
+    "description": "Drive measurable growth with expert Google Ads management. We handle keyword research, ad copywriting, bid strategies, and landing page optimization to maximize conversions and profitability from search and shopping campaigns.",
+    "image": "/seo/services/on-page.webp",
+    "link": "/paid-advertisement/google-ads"
+  },
+  {
+    "id": "bing-ads",
+    "name": "Microsoft Bing Ads",
+    "title": "Expand Reach Beyond Google",
+    "description": "Reach untapped audiences through Bing Ads. Our Bing Ads management services focus on keyword targeting, ad copy optimization, and bid strategy refinement to capture additional high-quality leads at lower competition levels.",
+    "image": "/seo/services/off-page.webp",
+    "link": "/paid-advertisement/bing-ads"
+  },
+  {
+    "id": "google-display-remarketing",
+    "name": "Display & Remarketing Campaigns",
+    "title": "Cross-Channel PPC Retargeting",
+    "description": "Re-engage potential customers through intelligent display and remarketing campaigns. Our Pay Per Click Agency designs visually engaging creatives and strategic audience segments to boost conversions and brand recall.",
+    "image": "/seo/services/technical.webp",
+    "link": "/paid-advertisement/google-display-remarketing"
+  }
+],
     "content": { "heading": "Expert Pay Per Click Marketing Services That Drive Results", "text1": "Strategic keyword research and campaign optimization. Our Pay Per Click Company expertise includes comprehensive keyword research, competitor analysis, ad copy testing, and campaign structure optimization to ensure maximum visibility and conversion rates for high-intent search queries across all PPC platforms.", "text2": "Advanced bidding strategies and budget optimization. As a leading Pay Per Click Agency, we implement sophisticated bidding strategies, budget allocation optimization, and performance monitoring to ensure your PPC campaigns deliver maximum ROI while maintaining cost efficiency and reaching your most valuable prospects.", "text3": "Comprehensive tracking and conversion optimization. Our Pay Per Click Marketing Services include detailed conversion tracking, attribution modeling, and performance analysis to ensure accurate measurement of your PPC campaign impact and continuous optimization of your advertising ROI across all platforms.", "image": "seo.png", "alt": "Pay Per Click Marketing Services" },
     "faq": { 
       "serviceName": "Pay Per Click Marketing Services",
@@ -841,15 +841,15 @@
     }
   },
   "linkedin-ads-management": {
-    "hero": { "heading": "Instagram Ads Services | Expert Instagram Ads Company & Agency", "subheading": "Dominate Instagram advertising and drive explosive brand growth with our proven Instagram Ads Services. As a leading Instagram Ads Company, we deliver comprehensive Instagram Ads Agency solutions that capture attention, boost engagement, and convert followers into customers through compelling visual content and Stories advertising." },
-    "form": { "heading": "Scale with Expert Instagram Ads Services", "content": "As a trusted Instagram Ads Company, we create engaging visual content and Stories ads that drive conversions. Our comprehensive Instagram Ads Agency services include detailed visual creative development, Stories advertising, Reels campaigns, audience targeting optimization, and performance analysis to maximize engagement and conversion rates on Instagram.", "subContent": "Visual storytelling that converts. Our Instagram Ads Services develop compelling visual narratives, user-generated content strategies, and interactive ad formats that resonate with Instagram's visual-first audience, driving both brand awareness and direct response conversions.", "cta": "Request a free audit of your Instagram account from our expert Instagram Ads Agency. Our detailed audit covers account optimization, visual creative performance, audience targeting effectiveness, Stories and Reels performance, and conversion tracking to identify opportunities for improving your Instagram advertising ROI.", "formHeading": "Free Instagram Ads Agency Audit", "buttonText": "Get My Audit" },
-    "services": "Instagram Ads",
+    "hero": { "heading": "LinkedIn Ads Management | Expert LinkedIn Ads Company & Agency", "subheading": "Dominate B2B lead generation with our proven LinkedIn Ads Management services. As a leading LinkedIn Ads Company, we deliver comprehensive LinkedIn Ads Agency solutions that target decision-makers, boost professional engagement, and convert connections into qualified business opportunities." },
+    "form": { "heading": "Pipeline-focused LinkedIn Management", "content": "We map journeys from ad to meeting booked. Our LinkedIn Ads Management includes comprehensive lead generation strategies, account-based marketing implementation, professional audience targeting, and conversion optimization to ensure your LinkedIn campaigns generate high-quality leads that convert into business opportunities.", "subContent": "Lead routing and enrichment included. We implement sophisticated lead management systems, automated lead routing, lead scoring, and enrichment processes to ensure your LinkedIn-generated leads are properly qualified, routed to the right team members, and nurtured through the sales process for maximum conversion rates.", "cta": "Request a free LinkedIn audit. Our comprehensive audit covers account structure, audience targeting, ad creative performance, lead generation effectiveness, and conversion tracking to identify opportunities for improving your LinkedIn advertising ROI and lead quality.", "formHeading": "Free LinkedIn Ads Management Audit", "buttonText": "Get My Audit" },
+    "services": "LinkedIn Ads Management",
     "serviceCards": [
       {
         "id": "linkedin-ads-management",
-        "name": "Instagram Ads Services",
-        "title": "Expert Instagram Ads Company",
-        "description": "Dominate Instagram advertising with compelling visual content and Stories ads that drive conversions. Our Instagram Ads Agency creates engaging visual narratives, implements advanced audience targeting, optimizes for engagement and conversions, and leverages Instagram's powerful visual advertising platform to maximize your social media ROI.",
+        "name": "LinkedIn Ads Management",
+        "title": "Expert LinkedIn Ads Management Company",
+        "description": "Precisely target decision-makers with tailored messaging, offers, and high-signal lead flows. Our LinkedIn Ads Management focuses on B2B lead generation, account-based marketing, professional audience targeting, and creating compelling offers that resonate with business decision-makers and drive qualified leads.",
         "image": "/seo/services/seo.webp",
         "link": "/paid-advertisement/linkedin-ads-management"
       },
@@ -878,17 +878,15 @@
         "link": "/paid-advertisement/tiktok-ads"
       }
     ],
-    "content": { "heading": "Expert Instagram Ads Services for Visual Content That Converts", "text1": "Stories and Reels drive engagement. Our Instagram Ads Company expertise includes comprehensive Stories advertising, Reels campaign development, and visual content optimization to maximize engagement and conversion rates on Instagram's most engaging formats.", "text2": "Visual storytelling resonates with audiences. As a leading Instagram Ads Agency, we create compelling visual narratives, user-generated content strategies, and interactive ad formats that capture attention and drive both brand awareness and direct response conversions on Instagram.", "text3": "Track visual performance and optimize for conversions. Our comprehensive Instagram Ads Services include detailed visual engagement tracking, conversion attribution, and performance analysis to ensure accurate measurement of your Instagram advertising impact and ROI.", "image": "seo.png", "alt": "Instagram Ads Services" },
+    "content": { "heading": "Expert LinkedIn Ads Management for High-Quality B2B Leads", "text1": "Target by title, skills, and company lists. Our LinkedIn expertise includes sophisticated professional audience targeting, job title segmentation, skill-based targeting, and company list management to ensure your campaigns reach the most relevant B2B decision-makers and influencers.", "text2": "Use content and offers to warm accounts. We develop compelling content strategies, lead magnets, and professional offers that resonate with your target audience, building trust and engagement before conversion to maximize lead quality and sales success.", "text3": "Optimise for downstream revenue, not only CPL. Our approach focuses on lead quality optimization, sales pipeline development, and revenue attribution to ensure your campaigns generate leads that convert into actual business value and long-term customer relationships.", "image": "hero.png", "alt": "LinkedIn Ads Management" },
     "faq": { 
-      "serviceName": "Instagram Ads Services",
+      "serviceName": "LinkedIn Ads Management",
       "faqs": [
-        { "q": "Why choose your Instagram Ads Company over other Instagram Ads Agency providers?", "a": "As a specialized Instagram Ads Company, we bring deep expertise in Instagram Ads Services with proven results across multiple industries. Our Instagram Ads Agency focuses exclusively on Instagram advertising optimization, ensuring your campaigns receive dedicated attention and expert management that drives measurable engagement and conversions." },
-        { "q": "What Instagram Ads Services does your agency provide?", "a": "Our comprehensive Instagram Ads Services include campaign setup and management, visual creative development and testing, Stories and Reels advertising, audience targeting and segmentation, performance monitoring and reporting, and ongoing campaign optimization. We provide end-to-end Instagram Ads Agency services for complete Instagram advertising management." },
-        { "q": "How quickly can I see results from your Instagram Ads Agency services?", "a": "Instagram Ads can show results within 24-48 hours, with optimization occurring over 1-2 weeks. Visual content typically engages quickly, and our Instagram Ads Company implements rapid creative testing to identify winning visual formats and audiences." },
-        { "q": "What's the difference between Instagram Feed and Stories ads?", "a": "Feed ads appear in users' main Instagram feed and are great for brand awareness, while Stories ads appear between user Stories and are perfect for driving immediate action. Our Instagram Ads Agency uses both formats strategically based on campaign objectives and audience behavior." },
-        { "q": "How do you create effective Instagram ad content?", "a": "We create visually compelling content including high-quality images, engaging videos, Stories ads, and Reels content. Our Instagram Ads Company creative approach focuses on authentic storytelling, user-generated content, and platform-native formats that resonate with Instagram audiences." },
-        { "q": "What's the typical cost per engagement for Instagram Ads?", "a": "Instagram Ads typically cost $0.50-$3.00 per engagement depending on targeting and creative quality. Visual content often achieves higher engagement rates than other platforms, making Instagram cost-effective for brand awareness and engagement campaigns. Our Instagram Ads Services optimize for cost per acquisition and return on ad spend." },
-        { "q": "How do you optimize Instagram Ads for conversions?", "a": "We optimize through visual creative testing, audience targeting refinement, landing page optimization, and conversion tracking setup. Our Instagram Ads Agency approach includes testing different visual formats, hooks, and calls-to-action to maximize conversion rates on Instagram." }
+        { "q": "How quickly can I see results from LinkedIn Ads Management?", "a": "LinkedIn Ads typically show initial results within 3-5 days, with lead generation optimization occurring over 1-2 weeks. B2B sales cycles are longer, so we focus on lead quality and pipeline development rather than immediate conversions. Our systematic approach ensures sustainable lead generation." },
+        { "q": "What's the difference between LinkedIn Sponsored Content and Message Ads?", "a": "Sponsored Content appears in LinkedIn feeds and drives awareness/engagement, while Message Ads send direct messages to prospects' inboxes for higher conversion rates. We use both formats strategically based on your campaign objectives and target audience preferences." },
+        { "q": "How do you target decision-makers on LinkedIn?", "a": "We use LinkedIn's advanced targeting including job titles, seniority levels, company size, industry, skills, and interests. Our account-based marketing approach combines company lists with lookalike audiences to reach decision-makers and influencers in your target organizations." },
+        { "q": "What's the typical cost per lead for LinkedIn Ads?", "a": "LinkedIn Ads typically cost $50-200 per lead depending on industry, targeting specificity, and offer quality. B2B leads are more expensive but often higher quality than other platforms. We optimize for cost per qualified lead and downstream revenue rather than just cost per lead." },
+        { "q": "Do you integrate LinkedIn Ads with CRM systems?", "a": "Yes, we integrate LinkedIn Ads with major CRM systems including Salesforce, HubSpot, and Pipedrive. Our integration includes lead scoring, automated follow-up sequences, and attribution tracking to ensure seamless lead management and maximize conversion rates." }
       ]
     }
   },
@@ -919,7 +917,7 @@
         "title": "Expert Instagram Ads Company",
         "description": "Dominate Instagram advertising with compelling visual content and Stories ads that drive conversions. Our Instagram Ads Agency creates engaging visual narratives, implements advanced audience targeting, optimizes for engagement and conversions, and leverages Instagram's powerful visual advertising platform to maximize your social media ROI.",
         "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/linkedin-ads-management"
+        "link": "/paid-advertisement/instagram-ads"
       },
       {
         "id": "meta-ads",
@@ -1023,7 +1021,7 @@
         "title": "Expert Instagram Ads Company",
         "description": "Dominate Instagram advertising with compelling visual content and Stories ads that drive conversions. Our Instagram Ads Agency creates engaging visual narratives, implements advanced audience targeting, optimizes for engagement and conversions, and leverages Instagram's powerful visual advertising platform to maximize your social media ROI.",
         "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/linkedin-ads-management"
+        "link": "/paid-advertisement/instagram-ads"
       },
       {
         "id": "meta-ads",

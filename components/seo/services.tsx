@@ -20,66 +20,61 @@ interface SeoServicesProps {
   basePath?: string;
 }
 
+// Generic fallback services if no serviceCards provided
 const defaultServices: Service[] = [
   {
     id: "on-page-seo",
     name: "On-Page SEO",
     title: "On-Page SEO",
     description:
-      "Improve rankings and attract qualified visitors with strategic optimisations customized to your industry and audience.",
+      "Comprehensive on-page optimization to improve your search engine rankings and attract qualified visitors through strategic content and technical improvements.",
     image: "/seo/services/on-page.webp",
-    link: "/services/on-page-seo",
   },
   {
     id: "keyword-research",
     name: "Keyword Research",
     title: "Keyword Research",
     description:
-      "Discover high-value keywords that your target audience is searching for and create content strategies that drive qualified traffic to your website.",
+      "Strategic keyword research and analysis to identify high-value opportunities that drive qualified traffic and align with your business objectives.",
     image: "/seo/services/seo.webp",
-    link: "/services/keyword-research",
   },
   {
     id: "technical-seo",
     name: "Technical SEO",
     title: "Technical SEO",
     description:
-      "Optimize your website's technical infrastructure to ensure search engines can crawl, index, and rank your pages effectively for maximum visibility.",
+      "Advanced technical optimization to ensure search engines can efficiently crawl, index, and rank your website for maximum visibility.",
     image: "/seo/services/technical.webp",
-    link: "/services/technical-seo",
   },
   {
     id: "off-page-seo",
     name: "Off-Page SEO",
     title: "Off-Page SEO",
     description:
-      "Build your website's authority and credibility through strategic external optimisation techniques that improve your search engine rankings.",
+      "Strategic off-page optimization to build authority, credibility, and improve your website's overall search engine performance.",
     image: "/seo/services/off-page.webp",
-    link: "/services/off-page-seo",
   },
   {
     id: "link-building",
     name: "Link Building",
     title: "Link Building",
     description:
-      "Acquire high-quality backlinks from authoritative websites to boost your domain authority and improve your search engine rankings.",
+      "Build high-quality backlinks from authoritative websites to enhance domain authority and improve search engine rankings.",
     image: "/seo/services/link-building.png",
-    link: "/services/link-building",
   },
   {
     id: "seo-audit",
     name: "SEO Audit",
     title: "SEO Audit",
     description:
-      "Get a comprehensive analysis of your website's SEO performance with actionable insights and recommendations to improve your rankings.",
+      "Comprehensive SEO audit and analysis with actionable insights to identify opportunities and improve your search performance.",
     image: "/seo/services/seo-audit.png",
-    link: "/services/seo-audit",
   },
 ];
 
-export default function SeoServices({ data, serviceCards, basePath = "/services" }: SeoServicesProps) {
+export default function SeoServices({ data, serviceCards, basePath = "#" }: SeoServicesProps) {
   const services = serviceCards || defaultServices;
-  const [activeTab, setActiveTab] = useState(services[0]?.id || "on-page-seo");
+  const [activeTab, setActiveTab] = useState(services[0]?.id || "");
 
   const activeService = services.find((service) => service.id === activeTab);
   const activeIndex = services.findIndex((service) => service.id === activeTab);
@@ -95,9 +90,9 @@ export default function SeoServices({ data, serviceCards, basePath = "/services"
           viewport={{ once: true }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          What We <span className="relative inline-block">
+          Our <span className="relative inline-block">
               <span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow"></span>
-              <span className="relative z-10 font-medium italic">Offer</span>
+              <span className="relative z-10 font-medium italic">Services</span>
             </span>{" "}
             for {data || "SEO"}
         </motion.h2>
@@ -155,22 +150,22 @@ export default function SeoServices({ data, serviceCards, basePath = "/services"
                 </p>
                 <div>
                   <CustomButton
-                    text="Learn More"
-                    href={activeService.link || `${basePath}/${activeService.id}`}
+                    text="Get Started"
+                    href={activeService.link || "#contact"}
                     textColor="black"
                     borderColor="black"
                   />
                 </div>
-  </div>
+              </div>
 
               {/* Right side - Image */}
               <div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden bg-black p-4 flex items-center justify-center">
-              <Image
-              src={activeService.image}
-alt = { activeService.title }
-              fill
-className = "object-contain p-4"
-            />
+                <Image
+                  src={activeService.image}
+                  alt={activeService.title}
+                  fill
+                  className="object-contain p-4"
+                />
               </div>
             </div>
           </motion.div>
