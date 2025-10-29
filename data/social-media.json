@@ -58,10 +58,10 @@
     "painpoints": {
       "heading": "Tired of social media efforts that don’t deliver?",
       "items": [
-        { "icon": "💸", "title": "Lack of leads or sales from social?" },
-        { "icon": "⚡", "title": "Struggling to keep up with trends?" },
-        { "icon": "📊", "title": "Unsure how to measure social media ROI?" },
-        { "icon": "🎨", "title": "Lacking in creative production capabilities?" }
+        { "icon": "💸", "title": "Not seeing leads or sales from social even with regular posting?" },
+        { "icon": "⚡", "title": "Hard to keep up with trends and platform changes?" },
+        { "icon": "📊", "title": "Unsure which metrics matter or how to prove ROI?" },
+        { "icon": "🎨", "title": "Limited creative capacity for consistent quality content?" }
       ]
     },
     "content": {
@@ -128,40 +128,603 @@
 
   "facebook-marketing": {
     "services": "Facebook Marketing",
-    "hero": { "heading": "Facebook Page & Community Marketing", "subheading": "Grow reach and engagement with an always-on presence." }
+    "hero": { "heading": "Facebook Page & Community Marketing", "subheading": "Grow reach and engagement with an always-on presence." },
+    "form": {
+      "heading": "Is your Facebook page driving results?",
+      "content": "We review your page, competitors and audience signals to design a Facebook‑native program that compounds reach and actions.",
+      "subContent": "There are likely UNTAPPED opportunities across posts, reels, and groups.",
+      "cta": "Get a free Facebook audit and action plan.",
+      "formHeading": "Get a free Facebook Audit & Action Plan",
+      "buttonText": "Get My Facebook Audit"
+    },
+    "painpoints": {
+      "heading": "Struggling to grow on Facebook?",
+      "items": [
+        { "icon": "📉", "title": "Low reach and engagement despite posting each week?" },
+        { "icon": "💬", "title": "No time to manage comments/DMs while staying on brand?" },
+        { "icon": "🧭", "title": "No content calendar aligned to campaigns and seasons?" },
+        { "icon": "📊", "title": "Unclear what’s working and what to double down on?" }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "facebook-content",
+        "name": "Content Ops",
+        "title": "Content Calendar & Posting",
+        "description": "Monthly programming across posts, reels and stories tailored to Facebook formats and audience behavior.",
+        "image": "/seo/services/on-page.webp",
+        "link": "/social-media-marketing/facebook-marketing"
+      },
+      {
+        "id": "facebook-community",
+        "name": "Community",
+        "title": "Comments, DMs & Groups",
+        "description": "Proactive moderation and engagement to grow affinity, retention and meaningful conversations.",
+        "image": "/seo/services/off-page.webp",
+        "link": "/social-media-marketing/facebook-marketing"
+      },
+      {
+        "id": "facebook-analytics",
+        "name": "Analytics",
+        "title": "Insights & Reporting",
+        "description": "Clear dashboards and monthly reviews focused on reach, engagement, CTR and actions.",
+        "image": "/seo/services/seo-audit.png",
+        "link": "/social-media-marketing/facebook-marketing"
+      }
+    ],
+    "content": {
+      "heading": "Make Facebook work harder for your brand.",
+      "text1": "We design platform‑native content systems that compound reach and interactions over time.",
+      "text2": "From creative hooks to comment strategy, everything aligns to your goals and audience signals.",
+      "text3": "Your page becomes a program – consistent output, measurable outcomes.",
+      "image": "hero.png",
+      "alt": "Facebook marketing illustration"
+    },
+    "faq": {
+      "serviceName": "Facebook Marketing",
+      "faqs": [
+        { "q": "Do you manage Facebook Groups?", "a": "Yes. We support strategy, moderation and programming to grow healthy communities." },
+        { "q": "Can you post to Instagram too?", "a": "We can run cross‑platform ops while tailoring creative to each format." }
+      ]
+    }
   },
   "instagram-marketing": {
     "services": "Instagram Marketing",
-    "hero": { "heading": "Instagram Content & Growth", "subheading": "Reels-first creative and story sequencing built for discovery." }
+    "hero": { "heading": "Instagram Content & Growth", "subheading": "Reels-first creative and story sequencing built for discovery." },
+    "form": {
+      "heading": "Are Reels and Stories working for you?",
+      "content": "We assess your hooks, cadence and creative to unlock organic growth on Instagram.",
+      "subContent": "There are likely UNTAPPED content angles and formats your audience will love.",
+      "cta": "Get a free Instagram audit and content outline.",
+      "formHeading": "Get a free Instagram Audit & Plan",
+      "buttonText": "Get My IG Audit"
+    },
+    "painpoints": {
+      "heading": "Is Instagram growth stalling?",
+      "items": [
+        { "icon": "🎣", "title": "Hooks fail to hold attention past 3 seconds on most Reels?" },
+        { "icon": "📆", "title": "Inconsistent cadence makes it hard to build momentum?" },
+        { "icon": "🧩", "title": "Grid lacks a clear narrative for first‑time visitors?" },
+        { "icon": "📈", "title": "Few profile actions or link clicks despite decent reach?" }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "ig-reels",
+        "name": "Reels",
+        "title": "Reels‑first Creative",
+        "description": "Hook frameworks, editing systems and thumbnails optimised for watch time and actions.",
+        "image": "/seo/services/seo.webp",
+        "link": "/social-media-marketing/instagram-marketing"
+      },
+      {
+        "id": "ig-stories",
+        "name": "Stories",
+        "title": "Story Sequencing",
+        "description": "Daily story flows that drive replies, profile visits and link clicks.",
+        "image": "/seo/services/technical.webp",
+        "link": "/social-media-marketing/instagram-marketing"
+      },
+      {
+        "id": "ig-grid",
+        "name": "Grid",
+        "title": "Grid Design",
+        "description": "Cohesive grid and highlight strategy to signal quality at a glance.",
+        "image": "/seo/services/off-page.webp",
+        "link": "/social-media-marketing/instagram-marketing"
+      }
+    ],
+    "content": {
+      "heading": "Build momentum with Reels and Stories.",
+      "text1": "We orchestrate repeatable content that earns attention and converts profile actions.",
+      "text2": "Native creative, consistent cadence, measurable impact.",
+      "text3": "From concept to captions – shipped on schedule.",
+      "image": "hero.png",
+      "alt": "Instagram growth illustration"
+    },
+    "faq": {
+      "serviceName": "Instagram Marketing",
+      "faqs": [
+        { "q": "Do you edit Reels?", "a": "Yes. We provide editing systems, thumbnails and templates that scale output." },
+        { "q": "Can you keep my brand voice?", "a": "We build a tone guide and review loop to keep content on‑brand." }
+      ]
+    }
   },
   "linkedin-marketing": {
     "services": "LinkedIn Marketing",
-    "hero": { "heading": "LinkedIn for B2B Growth", "subheading": "Executive branding and thought leadership to generate pipeline." }
+    "hero": { "heading": "LinkedIn for B2B Growth", "subheading": "Executive branding and thought leadership to generate pipeline." },
+    "form": {
+      "heading": "Is LinkedIn driving conversations and pipeline?",
+      "content": "We review exec profiles, content lanes and consistency to grow reach and credibility.",
+      "subContent": "There are likely UNTAPPED narratives and formats your market will respond to.",
+      "cta": "Get a free LinkedIn audit and 30‑day content outline.",
+      "formHeading": "Get a free LinkedIn Audit & Plan",
+      "buttonText": "Get My LinkedIn Audit"
+    },
+    "painpoints": {
+      "heading": "Not seeing traction on LinkedIn?",
+      "items": [
+        { "icon": "🧑🏻‍💼", "title": "Exec brand lacks consistent posting and recognizable voice?" },
+        { "icon": "🧠", "title": "No clear POV or content themes tied to your market?" },
+        { "icon": "💬", "title": "Low comments and conversations from the right decision‑makers?" },
+        { "icon": "🗓️", "title": "Hard to sustain a weekly cadence while running the business?" }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "li-thought-leadership",
+        "name": "Leadership",
+        "title": "Thought Leadership",
+        "description": "Narrative development, post systems and repurposing to build executive presence and demand.",
+        "image": "/seo/services/on-page.webp",
+        "link": "/social-media-marketing/linkedin-marketing"
+      },
+      {
+        "id": "li-content",
+        "name": "Content",
+        "title": "Content Programming",
+        "description": "Template‑driven carousels, polls and posts optimised for reach and conversation.",
+        "image": "/seo/services/technical.webp",
+        "link": "/social-media-marketing/linkedin-marketing"
+      },
+      {
+        "id": "li-analytics",
+        "name": "Analytics",
+        "title": "Reporting & Insights",
+        "description": "Dashboarding for impressions, engagement rate, profile views and pipeline signals.",
+        "image": "/seo/services/seo-audit.png",
+        "link": "/social-media-marketing/linkedin-marketing"
+      }
+    ],
+    "content": {
+      "heading": "Turn expertise into pipeline.",
+      "text1": "We craft consistent executive content that builds trust with your market.",
+      "text2": "From POV development to posting cadence, we optimise for conversations and coverage.",
+      "text3": "Grow followers, profile views and opportunities.",
+      "image": "hero.png",
+      "alt": "LinkedIn marketing illustration"
+    },
+    "faq": {
+      "serviceName": "LinkedIn Marketing",
+      "faqs": [
+        { "q": "Do you ghostwrite for executives?", "a": "Yes. We collaborate with leaders to produce credible, original posts at a weekly cadence." },
+        { "q": "Can you help with company pages?", "a": "We support company programming alongside executive profiles for maximum coverage." }
+      ]
+    }
   },
   "tiktok-marketing": {
     "services": "TikTok Marketing",
-    "hero": { "heading": "TikTok Creative & Momentum", "subheading": "Short-form systems that align with trends and brand." }
+    "hero": { "heading": "TikTok Creative & Momentum", "subheading": "Short-form systems that align with trends and brand." },
+    "form": {
+      "heading": "Need repeatable TikTok output?",
+      "content": "We build lightweight production pipelines so you can publish consistently with quality.",
+      "subContent": "There are likely UNTAPPED hooks and sequences that fit your brand.",
+      "cta": "Get a free TikTok audit and content system outline.",
+      "formHeading": "Get a free TikTok Audit & Plan",
+      "buttonText": "Get My TikTok Audit"
+    },
+    "painpoints": {
+      "heading": "Publishing on TikTok without momentum?",
+      "items": [
+        { "icon": "⏱️", "title": "Inconsistent output makes the algorithm forget your content?" },
+        { "icon": "🧲", "title": "Hooks don’t retain viewers long enough to build watch time?" },
+        { "icon": "🎬", "title": "Editing pipeline too slow to capitalize on trend windows?" },
+        { "icon": "🔁", "title": "Struggling to test, learn and iterate on hooks each week?" }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "tt-hooks",
+        "name": "Hooks",
+        "title": "Hook Systems",
+        "description": "Trend‑aware hooks and formats that keep attention and drive follows.",
+        "image": "/seo/services/seo.webp",
+        "link": "/social-media-marketing/tiktok-marketing"
+      },
+      {
+        "id": "tt-production",
+        "name": "Production",
+        "title": "Lightweight Production",
+        "description": "Creator‑friendly pipelines so content ships fast without sacrificing quality.",
+        "image": "/seo/services/off-page.webp",
+        "link": "/social-media-marketing/tiktok-marketing"
+      },
+      {
+        "id": "tt-iteration",
+        "name": "Iteration",
+        "title": "Iteration & Analytics",
+        "description": "Rapid testing of hooks, lengths and CTAs with weekly learnings.",
+        "image": "/seo/services/seo-audit.png",
+        "link": "/social-media-marketing/tiktok-marketing"
+      }
+    ],
+    "content": {
+      "heading": "Ship short‑form that actually compounds.",
+      "text1": "Repeatable creative systems aligned to your brand and audience.",
+      "text2": "We test and iterate quickly to find what wins, then scale output.",
+      "text3": "Make trends work for you – not the other way around.",
+      "image": "hero.png",
+      "alt": "TikTok creative illustration"
+    },
+    "faq": {
+      "serviceName": "TikTok Marketing",
+      "faqs": [
+        { "q": "Do you work with creators?", "a": "Yes. We collaborate with your team or external creators to scale content." },
+        { "q": "How do you track success?", "a": "We measure hook performance, retention and actions with weekly iteration." }
+      ]
+    }
   },
   "youtube-community-marketing": {
     "services": "YouTube Community Marketing",
-    "hero": { "heading": "YouTube Community & Content Ops", "subheading": "Retention-first content planning, moderation, and analytics." }
+    "hero": { "heading": "YouTube Community & Content Ops", "subheading": "Retention-first content planning, moderation, and analytics." },
+    "form": {
+      "heading": "Are thumbnails and retention holding you back?",
+      "content": "We analyse topic selection, packaging and retention curves to grow views and subs.",
+      "subContent": "There are likely UNTAPPED topics and sequences to raise AVD.",
+      "cta": "Get a free YouTube audit and programming outline.",
+      "formHeading": "Get a free YouTube Audit & Plan",
+      "buttonText": "Get My YouTube Audit"
+    },
+    "painpoints": {
+      "heading": "YouTube not compounding yet?",
+      "items": [
+        { "icon": "🖼️", "title": "Thumbnails don’t earn clicks even when topics are strong?" },
+        { "icon": "📉", "title": "Retention drops early and view duration stays low?" },
+        { "icon": "🗂️", "title": "No clear programming cadence or seasonal themes?" },
+        { "icon": "🧰", "title": "Comments/moderation are ad‑hoc, community feels unmanaged?" }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "yt-content",
+        "name": "Content",
+        "title": "Programming & Thumbnails",
+        "description": "Episode planning, metadata and thumbnails designed for click‑through and retention.",
+        "image": "/seo/services/on-page.webp",
+        "link": "/social-media-marketing/youtube-community-marketing"
+      },
+      {
+        "id": "yt-community",
+        "name": "Community",
+        "title": "Comments & Moderation",
+        "description": "Healthy community management and response systems that scale.",
+        "image": "/seo/services/off-page.webp",
+        "link": "/social-media-marketing/youtube-community-marketing"
+      },
+      {
+        "id": "yt-analytics",
+        "name": "Analytics",
+        "title": "Studio Insights",
+        "description": "Dashboards for CTR, AVD and subscriber growth with clear next steps.",
+        "image": "/seo/services/seo-audit.png",
+        "link": "/social-media-marketing/youtube-community-marketing"
+      }
+    ],
+    "content": {
+      "heading": "Retention first. Community always.",
+      "text1": "We optimise for the two things that matter most on YouTube: clicks and watch time.",
+      "text2": "Programmes, thumbnails and metadata built to earn attention and keep it.",
+      "text3": "Community moderation that strengthens loyalty.",
+      "image": "hero.png",
+      "alt": "YouTube community illustration"
+    },
+    "faq": {
+      "serviceName": "YouTube Community Marketing",
+      "faqs": [
+        { "q": "Do you design thumbnails?", "a": "Yes. We iterate concepts and test to improve CTR." },
+        { "q": "Do you manage comments?", "a": "We provide response systems and moderation to keep the community healthy." }
+      ]
+    }
   }
   ,
+  "pinterest-marketing": {
+    "services": "Pinterest Marketing",
+    "hero": { "heading": "Pinterest Content & Boards", "subheading": "Pin workflows and board strategy to grow saves, clicks and site visits." },
+    "form": {
+      "heading": "Is Pinterest a traffic engine for you?",
+      "content": "We review boards, pin design and metadata to drive qualified clicks to site.",
+      "subContent": "There are likely UNTAPPED pin variations and search opportunities.",
+      "cta": "Get a free Pinterest audit and 30‑day plan.",
+      "formHeading": "Get a free Pinterest Audit & Plan",
+      "buttonText": "Get My Pinterest Audit"
+    },
+    "painpoints": {
+      "heading": "Pins not driving traffic?",
+      "items": [
+        { "icon": "📌", "title": "Low saves and outbound clicks even with strong visuals?" },
+        { "icon": "🔍", "title": "Weak pin SEO/metadata prevents discovery in search?" },
+        { "icon": "🧭", "title": "Boards lack structure and don't map to search intent?" },
+        { "icon": "📆", "title": "Irregular cadence makes it hard to build predictable traffic?" }
+      ]
+    },
+    "serviceCards": [
+      { "id": "pin-design", "name": "Design", "title": "Pin Design Systems", "description": "Template libraries for fast, on‑brand pins that earn saves and clicks.", "image": "/seo/services/on-page.webp", "link": "/social-media-marketing/pinterest-marketing" },
+      { "id": "pin-seo", "name": "Pin SEO", "title": "Metadata & Boards", "description": "Keyworded titles, descriptions and board strategy for discovery.", "image": "/seo/services/technical.webp", "link": "/social-media-marketing/pinterest-marketing" },
+      { "id": "pin-ops", "name": "Ops", "title": "Scheduling & Analytics", "description": "Cadence and dashboards to scale output and learn what works.", "image": "/seo/services/seo-audit.png", "link": "/social-media-marketing/pinterest-marketing" }
+    ],
+    "content": {
+      "heading": "Turn pins into predictable traffic.",
+      "text1": "We combine design systems with smart metadata to compounding discovery.",
+      "text2": "Boards, cadence and iteration – all aligned to your site goals.",
+      "text3": "From templates to testing – built to scale.",
+      "image": "hero.png",
+      "alt": "Pinterest marketing illustration"
+    },
+    "faq": {
+      "serviceName": "Pinterest Marketing",
+      "faqs": [
+        { "q": "Do you design pin templates?", "a": "Yes. We build reusable templates to ship more, faster." },
+        { "q": "How do you measure success?", "a": "We track saves, outbound clicks and conversions via analytics." }
+      ]
+    }
+  },
   "x-marketing": {
     "services": "X Marketing",
-    "hero": { "heading": "X (Twitter) Strategy & Content", "subheading": "Fast, native content systems for reach, relevance, and conversation." }
+    "hero": { "heading": "X (Twitter) Strategy & Content", "subheading": "Fast, native content systems for reach, relevance, and conversation." },
+    "form": {
+      "heading": "Want more reach and replies on X?",
+      "content": "We evaluate hooks, POV and cadence to grow relevant followers and conversation.",
+      "subContent": "There are likely UNTAPPED threads and engagement plays in your niche.",
+      "cta": "Get a free X audit and posting outline.",
+      "formHeading": "Get a free X Audit & Plan",
+      "buttonText": "Get My X Audit"
+    },
+    "painpoints": {
+      "heading": "Hard to gain traction on X?",
+      "items": [
+        { "icon": "🧵", "title": "Threads don't land or get bookmarked by right audience?" },
+        { "icon": "⚡", "title": "No engagement rhythm to enter relevant conversations?" },
+        { "icon": "🗣️", "title": "Weak point of view in your niche leads to low relevance?" },
+        { "icon": "📊", "title": "No learning loop to iterate topics, hooks and CTAs?" }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "x-threads",
+        "name": "Threads",
+        "title": "Threads & Posts",
+        "description": "Fast cadences, opinionated POVs and native formats for reach and replies.",
+        "image": "/seo/services/technical.webp",
+        "link": "/social-media-marketing/x-marketing"
+      },
+      {
+        "id": "x-engagement",
+        "name": "Engagement",
+        "title": "Engagement Systems",
+        "description": "Reply ops and network building to enter relevant conversations daily.",
+        "image": "/seo/services/off-page.webp",
+        "link": "/social-media-marketing/x-marketing"
+      },
+      {
+        "id": "x-analytics",
+        "name": "Analytics",
+        "title": "Analytics & Iteration",
+        "description": "Measure reach, profile visits and link clicks with tight feedback loops.",
+        "image": "/seo/services/seo-audit.png",
+        "link": "/social-media-marketing/x-marketing"
+      }
+    ],
+    "content": {
+      "heading": "Be relevant. Stay native.",
+      "text1": "We help you participate credibly while growing reach and relationships.",
+      "text2": "From hooks to engagement rhythms – built for speed and signal.",
+      "text3": "Turn conversations into awareness and demand.",
+      "image": "hero.png",
+      "alt": "X strategy illustration"
+    },
+    "faq": {
+      "serviceName": "X Marketing",
+      "faqs": [
+        { "q": "Do you write threads?", "a": "Yes. We plan and write native, high‑signal threads with your POV." },
+        { "q": "Can you handle engagement?", "a": "We create reply systems to participate in relevant conversations daily." }
+      ]
+    }
   },
   "snapchat-marketing": {
     "services": "Snapchat Marketing",
-    "hero": { "heading": "Snapchat Creative & Stories Ops", "subheading": "Native-first creative and programming to grow views and subscriptions." }
+    "hero": { "heading": "Snapchat Creative & Stories Ops", "subheading": "Native-first creative and programming to grow views and subscriptions." },
+    "form": {
+      "heading": "Need consistent Snapchat story output?",
+      "content": "We design native story flows and editing systems to grow views and subs.",
+      "subContent": "There are likely UNTAPPED templates and sequences your audience will watch.",
+      "cta": "Get a free Snapchat audit and programming outline.",
+      "formHeading": "Get a free Snapchat Audit & Plan",
+      "buttonText": "Get My Snapchat Audit"
+    },
+    "painpoints": {
+      "heading": "Stories not getting views?",
+      "items": [
+        { "icon": "📽️", "title": "No fast templates to produce native stories daily?" },
+        { "icon": "📈", "title": "Low completion; viewers drop off before key CTAs?" },
+        { "icon": "🧪", "title": "No weekly tests to evolve hooks and formats?" },
+        { "icon": "⏱️", "title": "Production too slow to keep up with audience preferences?" }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "sc-stories",
+        "name": "Stories",
+        "title": "Stories Programming",
+        "description": "Native story formats with daily cadence to grow views and subscribers.",
+        "image": "/seo/services/on-page.webp",
+        "link": "/social-media-marketing/snapchat-marketing"
+      },
+      {
+        "id": "sc-creative",
+        "name": "Creative",
+        "title": "Creative Systems",
+        "description": "Template libraries and editing workflows for speed and quality.",
+        "image": "/seo/services/seo.webp",
+        "link": "/social-media-marketing/snapchat-marketing"
+      },
+      {
+        "id": "sc-insights",
+        "name": "Insights",
+        "title": "Insights & Iteration",
+        "description": "Rapid iteration on hooks, sequences and CTAs using weekly learnings.",
+        "image": "/seo/services/seo-audit.png",
+        "link": "/social-media-marketing/snapchat-marketing"
+      }
+    ],
+    "content": {
+      "heading": "Grow stories, not just posts.",
+      "text1": "We program stories that keep people watching and returning.",
+      "text2": "Lightweight ops with consistent output and clear goals.",
+      "text3": "From templates to testing – built to scale.",
+      "image": "hero.png",
+      "alt": "Snapchat stories illustration"
+    },
+    "faq": {
+      "serviceName": "Snapchat Marketing",
+      "faqs": [
+        { "q": "Do you create story templates?", "a": "Yes. We provide reusable layouts to speed up production." },
+        { "q": "What metrics matter?", "a": "We focus on views, completion rate and subscriber growth with weekly iterations." }
+      ]
+    }
   },
   "reddit-marketing": {
     "services": "Reddit Marketing",
-    "hero": { "heading": "Reddit Community & AMA Strategy", "subheading": "Participate authentically, drive discussion, and build community trust." }
+    "hero": { "heading": "Reddit Community & AMA Strategy", "subheading": "Participate authentically, drive discussion, and build community trust." },
+    "form": {
+      "heading": "Want to participate credibly on Reddit?",
+      "content": "We map relevant subs, rules and contribution strategies to earn trust.",
+      "subContent": "There are likely UNTAPPED AMA and discussion opportunities.",
+      "cta": "Get a free Reddit audit and participation outline.",
+      "formHeading": "Get a free Reddit Audit & Plan",
+      "buttonText": "Get My Reddit Audit"
+    },
+    "painpoints": {
+      "heading": "Worried about missteps on Reddit?",
+      "items": [
+        { "icon": "🚩", "title": "Posts removed by mods due to unclear rules or mis‑tagging?" },
+        { "icon": "🧭", "title": "Unsure of subreddit rules and expectations for brands?" },
+        { "icon": "💬", "title": "Little discussion or upvotes from target communities?" },
+        { "icon": "🛡️", "title": "Brand risk concerns around tone and transparency?" }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "rd-discovery",
+        "name": "Discovery",
+        "title": "Subreddit Mapping",
+        "description": "Identify relevant subs, rules and participation patterns for credible engagement.",
+        "image": "/seo/services/technical.webp",
+        "link": "/social-media-marketing/reddit-marketing"
+      },
+      {
+        "id": "rd-engagement",
+        "name": "Engagement",
+        "title": "Engagement & AMAs",
+        "description": "Useful participation, AMA programming and comment ops that build trust.",
+        "image": "/seo/services/off-page.webp",
+        "link": "/social-media-marketing/reddit-marketing"
+      },
+      {
+        "id": "rd-measure",
+        "name": "Measure",
+        "title": "Reporting",
+        "description": "Track karma, comment velocity and referral actions with qualitative insights.",
+        "image": "/seo/services/seo-audit.png",
+        "link": "/social-media-marketing/reddit-marketing"
+      }
+    ],
+    "content": {
+      "heading": "Earn trust before attention.",
+      "text1": "We help you show up with value where your audience spends time.",
+      "text2": "Every post aligns with community rules and norms.",
+      "text3": "Participation that leads to discussion and discovery.",
+      "image": "hero.png",
+      "alt": "Reddit community illustration"
+    },
+    "faq": {
+      "serviceName": "Reddit Marketing",
+      "faqs": [
+        { "q": "Do you run AMAs?", "a": "Yes. We help plan, promote and moderate AMAs for positive outcomes." },
+        { "q": "How do you avoid backlash?", "a": "We engage within rules, add value first and escalate sensitively when needed." }
+      ]
+    }
   },
   "influencer-marketing": {
     "services": "Influencer Marketing",
-    "hero": { "heading": "Influencer Sourcing & Campaign Ops", "subheading": "Find creators, manage briefs, and attribute outcomes across platforms." }
+    "hero": { "heading": "Influencer Sourcing & Campaign Ops", "subheading": "Find creators, manage briefs, and attribute outcomes across platforms." },
+    "form": {
+      "heading": "Need a reliable creator pipeline?",
+      "content": "We source vetted creators, manage briefs and approvals, and track outcomes.",
+      "subContent": "There are likely UNTAPPED creator niches and bundles for your goals.",
+      "cta": "Get a free influencer audit and campaign outline.",
+      "formHeading": "Get a free Influencer Audit & Plan",
+      "buttonText": "Get My Influencer Audit"
+    },
+    "painpoints": {
+      "heading": "Creator programs not delivering?",
+      "items": [
+        { "icon": "🧪", "title": "Hard to find creators who genuinely fit your audience?" },
+        { "icon": "📋", "title": "Briefs and approvals slow, causing missed windows?" },
+        { "icon": "🔗", "title": "Poor cross‑platform attribution makes results hard to prove?" },
+        { "icon": "💸", "title": "Unclear ROI and little insight into which creators to rebook?" }
+      ]
+    },
+    "serviceCards": [
+      {
+        "id": "inf-sourcing",
+        "name": "Sourcing",
+        "title": "Creator Sourcing",
+        "description": "Find vetted creators that fit your niche, audience and budget.",
+        "image": "/seo/services/on-page.webp",
+        "link": "/social-media-marketing/influencer-marketing"
+      },
+      {
+        "id": "inf-ops",
+        "name": "Campaign Ops",
+        "title": "Campaign Operations",
+        "description": "Briefs, coordination and approvals to keep deliverables on track.",
+        "image": "/seo/services/off-page.webp",
+        "link": "/social-media-marketing/influencer-marketing"
+      },
+      {
+        "id": "inf-measure",
+        "name": "Measurement",
+        "title": "Attribution & Reporting",
+        "description": "Track outcomes across platforms with unique links and pixels.",
+        "image": "/seo/services/seo-audit.png",
+        "link": "/social-media-marketing/influencer-marketing"
+      }
+    ],
+    "content": {
+      "heading": "Run creator campaigns with clarity.",
+      "text1": "We manage sourcing, briefs and reviews so creators can focus on great content.",
+      "text2": "Clear expectations, timelines and success metrics from the start.",
+      "text3": "Confident attribution across platforms.",
+      "image": "hero.png",
+      "alt": "Influencer campaign illustration"
+    },
+    "faq": {
+      "serviceName": "Influencer Marketing",
+      "faqs": [
+        { "q": "Do you handle contracts and briefs?", "a": "Yes. We manage contracts, briefs and approvals to keep campaigns on track." },
+        { "q": "How do you track ROI?", "a": "We use unique links, promo codes and platform analytics for attribution." }
+      ]
+    }
   }
 }
 
