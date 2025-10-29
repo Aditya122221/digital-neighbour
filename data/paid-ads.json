@@ -313,7 +313,7 @@
     "name": "YouTube Strategy & Targeting",
     "title": "Data-Driven YouTube Ad Targeting & Strategy",
     "description": "Leverage precision audience segmentation and performance-driven strategies to reach the right viewers at the right time. Our YouTube Ads experts craft targeting frameworks that align with your brand goals and optimize your ad spend for maximum ROI.",
-    "image": "/paid-ads/technical.webp",
+    "image": "/seo/services/on-page.webp",
     "link": "/paid-advertisement/youtube-ads"
   },
   {
@@ -321,7 +321,7 @@
     "name": "Video Creative Production",
     "title": "High-Impact YouTube Video Ad Creatives That Convert",
     "description": "From concept to production, we create thumb-stopping video ads designed for engagement and performance. Our creative frameworks focus on hooks, storytelling, and CTAs that capture attention and drive measurable conversions on YouTube.",
-    "image": "/paid-ads/technical.webp",
+    "image": "/seo/services/on-page.webp",
     "link": "/paid-advertisement/youtube-ads"
   },
   {
@@ -329,7 +329,7 @@
     "name": "Campaign Optimization",
     "title": "Continuous Campaign Optimization & Performance Scaling",
     "description": "We analyze performance data, test creative variations, and optimize bidding, placements, and audience layers to improve view-through rates, conversions, and cost efficiency across your YouTube campaigns.",
-    "image": "/paid-ads/technical.webp",
+    "image": "/seo/services/technical.webp",
     "link": "/paid-advertisement/youtube-ads"
   },
   {
@@ -337,7 +337,7 @@
     "name": "YouTube Remarketing",
     "title": "Re-Engage Viewers with Smart Remarketing Campaigns",
     "description": "Reconnect with users who’ve watched your videos, visited your website, or interacted with your brand. Our remarketing strategies help you nurture leads and boost conversions with tailored video messaging and sequencing.",
-    "image": "/paid-ads/technical.webp",
+    "image": "/seo/services/off-page.webp",
     "link": "/paid-advertisement/youtube-ads"
   }
 ],
@@ -485,40 +485,56 @@
     "hero": { "heading": "Paid Social Ads Agency | Expert Paid Social Agency & Services", "subheading": "Dominate social media advertising and drive explosive brand growth with our proven Paid Social Ads Agency expertise. As a leading Paid Social Agency, we deliver comprehensive Paid Social Services that capture attention, boost engagement, and convert followers into customers across Facebook, Instagram, LinkedIn, and TikTok." },
     "form": { "heading": "Scale with Expert Paid Social Ads Agency Services", "content": "As a trusted Paid Social Agency, we create and manage social media ad campaigns across all major platforms. Our comprehensive Paid Social Services include platform-specific campaign development, audience targeting optimization, creative testing, and performance analysis across Facebook, Instagram, LinkedIn, TikTok, and other emerging social platforms to maximize your social media advertising ROI.", "subContent": "Creative testing and audience targeting for optimal performance. Our Paid Social Ads Agency implements sophisticated creative testing frameworks, audience research and segmentation, and performance optimization techniques to ensure your social media campaigns reach the right audiences with the most engaging content, driving maximum engagement and conversion rates.", "cta": "Request a free audit of your social media accounts from our expert Paid Social Agency. Our detailed audit covers account structure, audience targeting, creative performance, campaign optimization, and conversion tracking across all your social media platforms to identify opportunities for improving your social media advertising effectiveness and ROI.", "formHeading": "Free Paid Social Ads Agency Audit", "buttonText": "Get My Audit" },
     "services": "Paid Social",
-    "serviceCards": [
-    {
-      "id": "meta-ads",
-      "name": "Meta (Facebook & Instagram) Ads Management",
-      "title": "Meta Ads Agency | Facebook & Instagram Advertising Experts",
-      "description": "Grow brand awareness and conversions with strategic Meta Ads management. Our Paid Social experts design creative, data-backed campaigns across Facebook and Instagram to maximize performance and ROI.",
-      "image": "/seo/services/seo.webp",
-      "link": "/paid-advertisement/meta-ads"
-    },
-    {
-      "id": "linkedin-ads",
-      "name": "LinkedIn Ads Management",
-      "title": "LinkedIn Ads Agency | B2B Paid Social Experts",
-      "description": "Reach decision-makers and professionals with tailored LinkedIn advertising. Our LinkedIn Ads Agency specializes in high-converting campaigns for B2B lead generation and brand positioning.",
-      "image": "/seo/services/off-page.webp",
-      "link": "/paid-advertisement/linkedin-ads"
-    },
-    {
-      "id": "tiktok-ads",
-      "name": "TikTok Ads Management",
-      "title": "TikTok Ads Agency | Short-Form Video Advertising",
-      "description": "Capture audience attention on TikTok with authentic, creative, and high-performing ads. We manage TikTok campaigns that increase engagement and drive conversions through viral, trend-based strategies.",
-      "image": "/seo/services/technical.webp",
-      "link": "/paid-advertisement/tiktok-ads"
-    },
-    {
-      "id": "pinterest-ads",
-      "name": "Pinterest Ads Management",
-      "title": "Pinterest Ads Agency | Visual Discovery Marketing",
-      "description": "Drive intent-based discovery with Pinterest Ads. Our Paid Social team creates visually stunning campaigns that connect inspiration to action, ideal for lifestyle and e-commerce brands.",
-      "image": "/seo/services/on-page.webp",
-      "link": "/paid-advertisement/pinterest-ads"
-    }
+    "process": {
+    "steps": [
+      "Audit & Strategy Alignment",
+      "Audience Research & Segmentation",
+      "Creative Production & Testing",
+      "Campaign Launch & Optimization",
+      "Cross-Platform Scaling"
     ],
+    "content": [
+      "We start with a full audit of your ad accounts, data, and creative performance across platforms. This helps us identify wasted spend, untapped audiences, and quick wins.",
+      "We segment and prioritize audiences using demographic, behavioral, and psychographic insights—matching the right message to the right users at the right time.",
+      "Our creative team develops platform-specific ad assets and tests hooks, formats, and offers to identify which combinations drive the strongest engagement and conversions.",
+      "We launch campaigns with precision targeting and real-time optimization. Continuous testing and budget reallocation ensure your ads stay cost-efficient and impactful.",
+      "Once we’ve validated performance, we scale across platforms and audiences—expanding winning campaigns while maintaining profitability and creative freshness."
+    ]
+  },
+    "serviceCards": [
+  {
+    "id": "meta-ads",
+    "name": "Meta (Facebook & Instagram) Ads",
+    "title": "Creative-Led Meta Ads — Awareness to Conversion",
+    "description": "Build attention and convert with platform-native creative and layered targeting. We run prospecting, retargeting and conversion funnels on Facebook & Instagram that drive measurable engagement and revenue.",
+    "image": "/seo/services/seo.webp",
+    "link": "/paid-advertisement/meta-ads"
+  },
+  {
+    "id": "linkedin-ads",
+    "name": "LinkedIn Ads",
+    "title": "B2B Paid Social — LinkedIn Lead & Account-Based Campaigns",
+    "description": "Reach decision-makers with professional, intent-driven creatives and ABM sequences. We design LinkedIn flows that prioritize lead quality, pipeline acceleration, and seamless CRM handoff.",
+    "image": "/paid-social/linkedin.webp",
+    "link": "/paid-advertisement/paid-social"
+  },
+  {
+    "id": "tiktok-ads",
+    "name": "TikTok Ads",
+    "title": "Short-Form Video for Performance & Virality",
+    "description": "Capture fast attention with trend-aligned short-form creative and rapid testing. Our TikTok approach turns cultural relevance into scalable engagement and cost-efficient conversions.",
+    "image": "/seo/services/off-page.webp",
+    "link": "/paid-advertisement/paid-social"
+  },
+  {
+    "id": "pinterest-ads",
+    "name": "Pinterest Ads",
+    "title": "Visual Discovery & Commerce on Pinterest",
+    "description": "Drive intent and purchase with visually-driven discovery ads. We optimize creatives and placements for inspiration-to-action journeys ideal for lifestyle and e-commerce brands.",
+    "image": "/seo/services/technical.webp",
+    "link": "/paid-advertisement/paid-social"
+  }
+],
     "content": { "heading": "Expert Paid Social Ads Agency Services That Convert", "text1": "Multi-platform social media advertising. Our comprehensive Paid Social Services include platform-specific campaign development, cross-platform optimization, and unified reporting across Facebook, Instagram, LinkedIn, TikTok, and other emerging social platforms to maximize your social media advertising reach and ROI.", "text2": "Creative testing and audience targeting. As a leading Paid Social Agency, we implement sophisticated creative testing frameworks, audience research and segmentation, and performance optimization techniques to ensure your social media campaigns reach the right audiences with the most engaging content, driving maximum engagement and conversion rates across all platforms.", "text3": "Track performance across all social channels. Our Paid Social Ads Agency measurement includes comprehensive cross-platform tracking, conversion attribution, and performance analysis to ensure accurate measurement of your social media advertising impact and continuous optimization of your social media ROI.", "image": "seo.png", "alt": "Paid Social Ads Agency Services" },
     "faq": { 
       "serviceName": "Paid Social Ads",
@@ -538,47 +554,63 @@
     "form": { "heading": "Scale with Expert Instagram Ads", "content": "As a trusted Instagram Ads Company, we create engaging visual content and Stories ads that drive conversions. Our comprehensive Instagram Ads Services include detailed visual creative development, Stories advertising, Reels campaigns, and performance optimization to maximize engagement and conversion rates on Instagram.", "subContent": "Visual storytelling that converts. Our Instagram Ads Agency develops compelling visual narratives, user-generated content strategies, and interactive ad formats that resonate with Instagram's visual-first audience, driving both brand awareness and direct response conversions.", "cta": "Request a free audit of your Instagram account from our expert Instagram Ads Agency. Our detailed audit covers account optimization, visual creative performance, audience targeting effectiveness, and conversion tracking to identify opportunities for improving your Instagram advertising ROI.", "formHeading": "Free Instagram Ads Agency Audit", "buttonText": "Get My Audit" },
     "services": "Instagram Ads",
     "serviceCards": [
-      {
-        "id": "instagram-ads",
-        "name": "Instagram Ads",
-        "title": "Expert Instagram Ads Company",
-        "description": "Dominate Instagram advertising with compelling visual content and Stories ads that drive conversions. Our Instagram Ads Agency creates engaging visual narratives, implements advanced audience targeting, optimizes for engagement and conversions, and leverages Instagram's powerful visual advertising platform to maximize your social media ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/instagram-ads"
-      },
-      {
-        "id": "google-ads",
-        "name": "Google Ads",
-        "title": "Google Search & Performance Max",
-        "description": "Capture demand with high-intent search, Shopping, and Performance Max campaigns tuned for profitability. Our Google Ads agency provides expert Google Ads company services.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/google-ads"
-      },
-      {
-        "id": "meta-ads",
-        "name": "Meta Ads",
-        "title": "Meta (Facebook/Instagram) Campaigns",
-        "description": "Scale attention with creative-led prospecting and conversion-focused retargeting on Meta.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/meta-ads"
-      },
-      {
-        "id": "linkedin-ads",
-        "name": "LinkedIn Ads",
-        "title": "B2B LinkedIn Lead Gen",
-        "description": "Precisely target decision-makers with tailored messaging, offers, and high-signal lead flows.",
-        "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/linkedin-ads"
-      },
-      {
-        "id": "youtube-ads",
-        "name": "YouTube Ads",
-        "title": "YouTube Awareness & Direct Response",
-        "description": "Build demand and conversions with creative testing and audience layering on YouTube. Our Youtube Ads Agency provides comprehensive Youtube Ads Services.",
-        "image": "/seo/services/on-page.webp",
-        "link": "/paid-advertisement/youtube-ads"
-      }
-    ],
+  {
+    "id": "instagram-feed-ads",
+    "name": "Instagram Feed Ads",
+    "title": "Instagram Feed Ads | Drive Engagement & Conversions",
+    "description": "Capture audience attention in the main feed with visually compelling ads designed to build awareness, engagement, and conversions. Our team crafts scroll-stopping visuals and precise targeting to make your brand stand out in every feed.",
+    "image": "/seo/services/seo.webp",
+    "link": "/paid-advertisement/instagram-feed-ads"
+  },
+  {
+    "id": "instagram-stories-ads",
+    "name": "Instagram Stories Ads",
+    "title": "Instagram Stories Ads | Full-Screen Immersive Campaigns",
+    "description": "Use the power of immersive Stories ads to connect emotionally with your audience. We design vertical creatives optimized for storytelling, interactivity, and quick conversions, ensuring maximum impact within seconds.",
+    "image": "/seo/services/off-page.webp",
+    "link": "/paid-advertisement/instagram-stories-ads"
+  },
+  {
+    "id": "instagram-reels-ads",
+    "name": "Instagram Reels Ads",
+    "title": "Instagram Reels Ads | Short-Form Video Advertising",
+    "description": "Engage users through short-form video storytelling. Our Instagram Reels Ads strategy focuses on creativity, trend alignment, and music-driven engagement to boost both visibility and direct response performance.",
+    "image": "/seo/services/technical.webp",
+    "link": "/paid-advertisement/instagram-reels-ads"
+  },
+  {
+    "id": "instagram-shopping-ads",
+    "name": "Instagram Shopping Ads",
+    "title": "Instagram Shopping Ads | Drive Product Sales Directly",
+    "description": "Turn discovery into purchase with seamless Instagram Shopping ads. We connect your catalog, optimize product tagging, and create dynamic ads that convert engaged users into paying customers.",
+    "image": "/seo/services/on-page.webp",
+    "link": "/paid-advertisement/instagram-shopping-ads"
+  },
+  {
+    "id": "instagram-influencer-ads",
+    "name": "Instagram Influencer Ads",
+    "title": "Instagram Influencer Ads | Authentic Creator Collaborations",
+    "description": "Amplify reach and credibility through paid influencer partnerships. We identify creators aligned with your audience, craft sponsored content, and integrate influencer campaigns into paid media strategy for maximum ROI.",
+    "image": "/seo/services/technical.webp",
+    "link": "/paid-advertisement/instagram-influencer-ads"
+  }
+],
+"process": {
+  "steps": [
+    "Creative & Account Audit",
+    "Audience Research & Segmentation",
+    "Ad Design & Format Selection",
+    "Campaign Launch & Optimization",
+    "Performance Tracking & Scaling"
+  ],
+  "content": [
+    "We start with an in-depth audit of your Instagram profile, ad account, and past campaigns to identify performance gaps, creative opportunities, and optimization areas.",
+    "Next, we define audience personas and segments using interest, behavioral, and demographic data to ensure every ad resonates with your ideal customer profile.",
+    "Our creative team designs tailored content across Feed, Stories, and Reels—optimizing each format for engagement, storytelling, and conversion goals.",
+    "We launch campaigns with data-driven strategies, monitor real-time results, and continuously test creatives, placements, and bidding strategies for maximum ROI.",
+    "Finally, we analyze engagement, conversions, and cost metrics to scale winning creatives, expand audiences, and sustain long-term campaign growth."
+  ]
+},
     "content": { "heading": "Expert Instagram Ads for Visual Content That Converts", "text1": "Stories and Reels drive engagement. Our Instagram Ads Agency expertise includes comprehensive Stories advertising, Reels campaign development, and visual content optimization to maximize engagement and conversion rates on Instagram's most engaging formats.", "text2": "Visual storytelling resonates with audiences. As a leading Instagram Ads Company, we create compelling visual narratives, user-generated content strategies, and interactive ad formats that capture attention and drive both brand awareness and direct response conversions on Instagram.", "text3": "Track visual performance and optimize for conversions. Our comprehensive Instagram Ads Services include detailed visual engagement tracking, conversion attribution, and performance analysis to ensure accurate measurement of your Instagram advertising impact and ROI.", "image": "seo.png", "alt": "Instagram Ads" },
     "faq": { 
       "serviceName": "Instagram Ads",
@@ -597,48 +629,64 @@
     "hero": { "heading": "Facebook Ads Management Agency | Expert Facebook Ads Services", "subheading": "Dominate Facebook advertising and drive explosive brand growth with our proven Facebook Ads Management Agency expertise. As a leading Facebook Ads Management Agency, we deliver comprehensive Facebook Ads Services and Facebook Ads Management Services that capture attention, boost engagement, and convert followers into customers through targeted social media campaigns." },
     "form": { "heading": "Scale with Expert Facebook Ads Management Agency Services", "content": "As a trusted Facebook Ads Management Agency, we create targeted Facebook campaigns that drive conversions. Our comprehensive Facebook Ads Services include detailed campaign development, audience targeting optimization, creative testing, and performance analysis to maximize engagement and conversion rates on Facebook.", "subContent": "Social engagement that converts. Our Facebook Ads Management Services develop compelling social content, community engagement strategies, and interactive ad formats that resonate with Facebook's diverse audience, driving both brand awareness and direct response conversions.", "cta": "Request a free audit of your Facebook account from our expert Facebook Ads Management Agency. Our detailed audit covers account optimization, creative performance, audience targeting effectiveness, and conversion tracking to identify opportunities for improving your Facebook advertising ROI.", "formHeading": "Free Facebook Ads Management Agency Audit", "buttonText": "Get My Audit" },
     "services": "Facebook Ads",
-    "serviceCards": [
-      {
-        "id": "facebook-ads",
-        "name": "Facebook Ads Management Agency Services",
-        "title": "Expert Facebook Ads Management Agency",
-        "description": "Dominate Facebook advertising with targeted campaigns that drive conversions. Our Facebook Ads Management Agency creates compelling social content, implements advanced audience targeting, optimizes for engagement and conversions, and leverages Facebook's powerful advertising platform to maximize your social media ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/facebook-ads"
-      },
-      {
-        "id": "google-ads",
-        "name": "Google Ads",
-        "title": "Google Search & Performance Max",
-        "description": "Capture demand with high-intent search, Shopping, and Performance Max campaigns tuned for profitability. Our Google Ads agency provides expert Google Ads company services.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/google-ads"
-      },
-      {
-        "id": "meta-ads",
-        "name": "Meta Ads",
-        "title": "Meta (Facebook/Instagram) Campaigns",
-        "description": "Scale attention with creative-led prospecting and conversion-focused retargeting on Meta.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/meta-ads"
-      },
-      {
-        "id": "linkedin-ads",
-        "name": "LinkedIn Ads",
-        "title": "B2B LinkedIn Lead Gen",
-        "description": "Precisely target decision-makers with tailored messaging, offers, and high-signal lead flows.",
-        "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/linkedin-ads"
-      },
-      {
-        "id": "youtube-ads",
-        "name": "YouTube Ads",
-        "title": "YouTube Awareness & Direct Response",
-        "description": "Build demand and conversions with creative testing and audience layering on YouTube. Our Youtube Ads Agency provides comprehensive Youtube Ads Services.",
-        "image": "/seo/services/on-page.webp",
-        "link": "/paid-advertisement/youtube-ads"
-      }
+    "process": {
+    "steps": [
+      "Campaign Audit & Strategy Development",
+      "Audience Targeting & Segmentation",
+      "Creative Design & Copy Optimization",
+      "Campaign Launch & A/B Testing",
+      "Performance Optimization & Scaling"
     ],
+    "content": [
+      "We begin with a detailed audit of your existing Facebook Ads performance, analyzing metrics, audiences, and creatives to build a high-impact campaign strategy.",
+      "We define granular audience segments based on interests, demographics, and behaviors to ensure every ad reaches the right user at the right time.",
+      "Our creative team crafts high-performing ad visuals and copy tailored for Feed, Stories, and Reels — optimized for both engagement and conversions.",
+      "We execute your campaign using data-backed strategies and continuously A/B test creatives, placements, and ad formats for optimal results.",
+      "We monitor performance in real-time, refine targeting, scale winning ads, and ensure sustainable growth in conversions and ROAS."
+    ]
+  },
+    "serviceCards": [
+    {
+      "id": "facebook-feed-ads",
+      "name": "Facebook Feed Ads",
+      "title": "Facebook Feed Ads | Boost Engagement & Awareness",
+      "description": "Reach users directly in their newsfeed with visually engaging ads designed to drive clicks, engagement, and conversions. We optimize your creatives and copy for maximum visibility and CTR.",
+      "image": "/seo/services/seo.webp",
+      "link": "/paid-advertisement/facebook-ads"
+    },
+    {
+      "id": "facebook-stories-ads",
+      "name": "Facebook Stories Ads",
+      "title": "Facebook Stories Ads | Immersive Full-Screen Experiences",
+      "description": "Create immersive storytelling experiences with Facebook Stories Ads. We use vertical creative formats that encourage immediate engagement and brand recall through visual storytelling.",
+      "image": "/seo/services/off-page.webp",
+      "link": "/paid-advertisement/facebook-ads"
+    },
+    {
+      "id": "facebook-reels-ads",
+      "name": "Facebook Reels Ads",
+      "title": "Facebook Reels Ads | Short-Form Video That Converts",
+      "description": "Leverage the viral potential of Reels to reach new audiences. Our Reels ad strategy focuses on creative storytelling, trend-based content, and precise targeting for engagement and sales.",
+      "image": "/seo/services/technical.webp",
+      "link": "/paid-advertisement/facebook-ads"
+    },
+    {
+      "id": "facebook-marketplace-ads",
+      "name": "Facebook Marketplace Ads",
+      "title": "Facebook Marketplace Ads | Drive E-Commerce Sales",
+      "description": "Showcase your products where buyers are already shopping. Our Marketplace Ads drive e-commerce performance through targeted listings and compelling ad creatives.",
+      "image": "/seo/services/on-page.webp",
+      "link": "/paid-advertisement/facebook-ads"
+    },
+    {
+      "id": "facebook-messenger-ads",
+      "name": "Facebook Messenger Ads",
+      "title": "Facebook Messenger Ads | Personalized Customer Interaction",
+      "description": "Engage customers directly in Messenger with conversational ads that drive inquiries and conversions. Perfect for businesses wanting to create personalized connections with their audience.",
+      "image": "/seo/services/technical.webp",
+      "link": "/paid-advertisement/facebook-ads"
+    }
+  ],
     "content": { "heading": "Expert Facebook Ads Management Agency Services That Convert", "text1": "Targeted campaigns reach the right audiences. Our Facebook Ads Management Agency expertise includes sophisticated audience targeting, demographic segmentation, and interest-based targeting to ensure your campaigns reach the most relevant Facebook users for your brand.", "text2": "Engaging content drives social engagement. As a leading Facebook Ads Management Agency, we create compelling social content, community engagement strategies, and interactive ad formats that capture attention and drive both brand awareness and direct response conversions on Facebook.", "text3": "Track social performance and optimize for conversions. Our comprehensive Facebook Ads Services include detailed social engagement tracking, conversion attribution, and performance analysis to ensure accurate measurement of your Facebook advertising impact and ROI.", "image": "seo.png", "alt": "Facebook Ads Management Agency Services" },
     "faq": { 
       "serviceName": "Facebook Ads Management",
@@ -725,48 +773,64 @@
     "hero": { "heading": "Tiktok Ads Agency | Expert Tiktok Ads Management Company & Services", "subheading": "Dominate TikTok advertising and drive explosive brand growth with our proven Tiktok Ads Agency expertise. As a leading Tiktok Ads Management Company, we deliver comprehensive Tiktok Ads Agency Services that capture attention, boost engagement, and convert viewers into customers through compelling short-form video content." },
     "form": { "heading": "Scale with Expert Tiktok Ads Agency Services", "content": "As a trusted Tiktok Ads Management Company, we create engaging short-form video content that drives viral engagement and conversions. Our comprehensive Tiktok Ads Agency Services include detailed video creative development, audience targeting optimization, and performance analysis to maximize engagement and conversion rates on TikTok.", "subContent": "Short-form video that converts. Our Tiktok Ads Agency develops compelling video narratives, trending content strategies, and interactive ad formats that resonate with TikTok's young, engaged audience, driving both brand awareness and direct response conversions.", "cta": "Request a free audit of your TikTok account from our expert Tiktok Ads Agency. Our detailed audit covers account optimization, video creative performance, audience targeting effectiveness, and conversion tracking to identify opportunities for improving your TikTok advertising ROI.", "formHeading": "Free Tiktok Ads Agency Audit", "buttonText": "Get My Audit" },
     "services": "TikTok Ads",
-    "serviceCards": [
-      {
-        "id": "tiktok-ads",
-        "name": "Tiktok Ads Agency Services",
-        "title": "Expert Tiktok Ads Management Company",
-        "description": "Dominate TikTok advertising with engaging short-form video content that drives viral engagement and conversions. Our Tiktok Ads Agency creates compelling video narratives, implements advanced audience targeting, optimizes for engagement and conversions, and leverages TikTok's powerful short-form video platform to maximize your social media ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/tiktok-ads"
-      },
-      {
-        "id": "google-ads",
-        "name": "Google Ads",
-        "title": "Google Search & Performance Max",
-        "description": "Capture demand with high-intent search, Shopping, and Performance Max campaigns tuned for profitability. Our Google Ads agency provides expert Google Ads company services.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/google-ads"
-      },
-      {
-        "id": "meta-ads",
-        "name": "Meta Ads",
-        "title": "Meta (Facebook/Instagram) Campaigns",
-        "description": "Scale attention with creative-led prospecting and conversion-focused retargeting on Meta.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/meta-ads"
-      },
-      {
-        "id": "linkedin-ads",
-        "name": "LinkedIn Ads",
-        "title": "B2B LinkedIn Lead Gen",
-        "description": "Precisely target decision-makers with tailored messaging, offers, and high-signal lead flows.",
-        "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/linkedin-ads"
-      },
-      {
-        "id": "youtube-ads",
-        "name": "YouTube Ads",
-        "title": "YouTube Awareness & Direct Response",
-        "description": "Build demand and conversions with creative testing and audience layering on YouTube. Our Youtube Ads Agency provides comprehensive Youtube Ads Services.",
-        "image": "/seo/services/on-page.webp",
-        "link": "/paid-advertisement/youtube-ads"
-      }
+    "process": {
+    "steps": [
+      "Creative & Trend Research",
+      "Video Concept Development",
+      "Ad Production & Editing",
+      "Campaign Launch & Testing",
+      "Optimization & Scaling"
     ],
+    "content": [
+      "We start with in-depth TikTok trend and audience analysis to identify viral patterns and relevant content styles that align with your brand voice.",
+      "Our creative strategists craft compelling short-form video concepts, scripts, and hooks optimized for TikTok’s storytelling rhythm.",
+      "We produce, edit, and format high-impact video ads using trending sounds, effects, and transitions to boost visibility and engagement.",
+      "Once the campaign launches, we A/B test creative variations, targeting options, and ad placements to identify top-performing combinations.",
+      "We continuously analyze performance metrics, optimize winning creatives, and scale campaigns to achieve sustained viral growth and ROI."
+    ]
+  },
+    "serviceCards": [
+    {
+      "id": "tiktok-feed-ads",
+      "name": "TikTok In-Feed Ads",
+      "title": "TikTok In-Feed Ads | Native Video Experiences",
+      "description": "Deliver scroll-stopping short videos directly into users’ feeds. Our TikTok Ads Agency creates native-style In-Feed Ads that blend seamlessly into the For You Page while driving awareness, engagement, and conversions.",
+      "image": "/seo/services/seo.webp",
+      "link": "/paid-advertisement/tiktok-ads"
+    },
+    {
+      "id": "tiktok-topview-ads",
+      "name": "TikTok TopView Ads",
+      "title": "TikTok TopView Ads | Maximize Brand Visibility",
+      "description": "Capture attention instantly with full-screen video ads that appear when users open TikTok. Our TopView Ads deliver premium exposure, making them ideal for brand launches and viral reach campaigns.",
+      "image": "/seo/services/off-page.webp",
+      "link": "/paid-advertisement/tiktok-ads"
+    },
+    {
+      "id": "tiktok-spark-ads",
+      "name": "TikTok Spark Ads",
+      "title": "TikTok Spark Ads | Boost Organic Creator Content",
+      "description": "Leverage influencer content by turning organic posts into paid ads. Spark Ads help brands amplify creator videos while keeping authentic engagement intact — perfect for social proof and trust building.",
+      "image": "/seo/services/technical.webp",
+      "link": "/paid-advertisement/tiktok-ads"
+    },
+    {
+      "id": "tiktok-branded-hashtag",
+      "name": "Branded Hashtag Challenges",
+      "title": "TikTok Hashtag Challenges | Drive User-Generated Engagement",
+      "description": "Encourage viral participation through branded hashtag challenges. Our team designs interactive campaigns that inspire users to create content around your brand, fueling exponential engagement.",
+      "image": "/seo/services/on-page.webp",
+      "link": "/paid-advertisement/tiktok-ads"
+    },
+    {
+      "id": "tiktok-brand-effects",
+      "name": "TikTok Branded Effects",
+      "title": "TikTok Branded Effects | Interactive AR Experiences",
+      "description": "Enhance brand memorability with AR filters, stickers, and effects. Our TikTok Ads Agency creates immersive branded experiences that entertain users while subtly promoting your message.",
+      "image": "/seo/services/technical.webp",
+      "link": "/paid-advertisement/tiktok-ads"
+    }
+  ],
     "content": { "heading": "Expert Tiktok Ads Agency Services for Short-Form Video That Converts", "text1": "Trending content drives viral engagement. Our Tiktok Ads Agency expertise includes comprehensive trend analysis, viral content development, and audience engagement strategies to maximize reach and engagement on TikTok's algorithm-driven platform.", "text2": "Authentic storytelling resonates with Gen Z. As a leading Tiktok Ads Management Company, we create authentic, engaging video content that feels native to TikTok, using trending sounds, effects, and formats that capture attention and drive both brand awareness and direct response conversions.", "text3": "Track viral performance and optimize for conversions. Our comprehensive Tiktok Ads Agency Services include detailed engagement tracking, viral metrics analysis, and conversion attribution to ensure accurate measurement of your TikTok advertising impact and ROI.", "image": "seo.png", "alt": "Tiktok Ads Agency Services" },
     "faq": { 
       "serviceName": "Tiktok Ads",
@@ -869,40 +933,56 @@
         "We scale performing segments and reallocate budget to maximize ROI while maintaining efficiency."
       ]
     },
+    "process": {
+      "steps": [
+        "Audit & Research",
+        "Strategy & Channel Selection",
+        "Campaign Setup & Tracking",
+        "Optimization & Testing",
+        "Scaling & Performance Growth"
+      ],
+      "content": [
+        "We begin with an in-depth PPC account audit, competitor analysis, and market research to identify gaps, opportunities, and quick wins.",
+        "Based on insights, we build a tailored strategy — selecting the most profitable platforms (Google, Bing, Display) and defining ad groups, targeting, and bidding models.",
+        "We set up high-converting campaigns with structured ad groups, optimized copy, strong CTAs, and robust conversion tracking.",
+        "Our team continuously tests ads, refines keywords, adjusts bids, and optimizes landing pages to improve click-through rate (CTR) and conversion rate (CVR).",
+        "We scale what works — reallocating budgets, expanding audiences, and leveraging automation to drive sustainable PPC performance growth."
+      ]
+    },  
     "serviceCards": [
-  {
-    "id": "pay-per-click",
-    "name": "Pay Per Click Marketing Services",
-    "title": "Expert Pay Per Click Company",
-    "description": "Dominate search results with strategic PPC campaigns that attract high-intent customers. Our Pay Per Click Agency structures, manages, and optimizes campaigns across Google and Bing to maximize clicks, conversions, and ROI.",
-    "image": "/seo/services/seo.webp",
-    "link": "/paid-advertisement/pay-per-click"
-  },
-  {
-    "id": "google-ads",
-    "name": "Google Ads Management",
-    "title": "Google Search & Performance Max Campaigns",
-    "description": "Drive measurable growth with expert Google Ads management. We handle keyword research, ad copywriting, bid strategies, and landing page optimization to maximize conversions and profitability from search and shopping campaigns.",
-    "image": "/seo/services/on-page.webp",
-    "link": "/paid-advertisement/google-ads"
-  },
-  {
-    "id": "bing-ads",
-    "name": "Microsoft Bing Ads",
-    "title": "Expand Reach Beyond Google",
-    "description": "Reach untapped audiences through Bing Ads. Our Bing Ads management services focus on keyword targeting, ad copy optimization, and bid strategy refinement to capture additional high-quality leads at lower competition levels.",
-    "image": "/seo/services/off-page.webp",
-    "link": "/paid-advertisement/bing-ads"
-  },
-  {
-    "id": "google-display-remarketing",
-    "name": "Display & Remarketing Campaigns",
-    "title": "Cross-Channel PPC Retargeting",
-    "description": "Re-engage potential customers through intelligent display and remarketing campaigns. Our Pay Per Click Agency designs visually engaging creatives and strategic audience segments to boost conversions and brand recall.",
-    "image": "/seo/services/technical.webp",
-    "link": "/paid-advertisement/google-display-remarketing"
-  }
-],
+      {
+        "id": "google-ads",
+        "name": "Google Ads Management",
+        "title": "Drive Results with Google Ads Campaigns",
+        "description": "Unlock scalable growth through expert Google Ads management. We specialize in keyword optimization, ad copy testing, bid management, and Performance Max strategies to capture high-intent traffic and maximize ROI.",
+        "image": "/seo/services/on-page.webp",
+        "link": "/paid-advertisement/google-ads"
+      },
+      {
+        "id": "bing-ads",
+        "name": "Bing Ads Management",
+        "title": "Expand Reach with Microsoft Bing Ads",
+        "description": "Tap into untapped audiences through Bing Ads. Our Pay Per Click Agency optimizes campaigns for lower CPC and higher-quality leads, providing strong ROI beyond Google’s ecosystem.",
+        "image": "/seo/services/off-page.webp",
+        "link": "/paid-advertisement/bing-ads"
+      },
+      {
+        "id": "display-remarketing",
+        "name": "Display & Remarketing Campaigns",
+        "title": "Re-engage and Convert with Smart Retargeting",
+        "description": "Stay top-of-mind with targeted display and remarketing campaigns. We create data-driven visuals and dynamic audience segments to boost brand recall and conversion performance.",
+        "image": "/seo/services/technical.webp",
+        "link": "/paid-advertisement/google-display-ads"
+      },
+      {
+        "id": "shopping-ads",
+        "name": "Ecommerce Shopping Ads",
+        "title": "Optimize Sales with Shopping Campaigns",
+        "description": "Boost ecommerce performance with optimized Shopping Ads. Our PPC experts ensure accurate product feed setup, bid strategy alignment, and conversion-driven ad placements to increase sales and ROAS.",
+        "image": "/seo/services/seo.webp",
+        "link": "/paid-advertisement/google-shopping-ads"
+      }
+    ],
     "content": { "heading": "Expert Pay Per Click Marketing Services That Drive Results", "text1": "Strategic keyword research and campaign optimization. Our Pay Per Click Company expertise includes comprehensive keyword research, competitor analysis, ad copy testing, and campaign structure optimization to ensure maximum visibility and conversion rates for high-intent search queries across all PPC platforms.", "text2": "Advanced bidding strategies and budget optimization. As a leading Pay Per Click Agency, we implement sophisticated bidding strategies, budget allocation optimization, and performance monitoring to ensure your PPC campaigns deliver maximum ROI while maintaining cost efficiency and reaching your most valuable prospects.", "text3": "Comprehensive tracking and conversion optimization. Our Pay Per Click Marketing Services include detailed conversion tracking, attribution modeling, and performance analysis to ensure accurate measurement of your PPC campaign impact and continuous optimization of your advertising ROI across all platforms.", "image": "seo.png", "alt": "Pay Per Click Marketing Services" },
     "faq": { 
       "serviceName": "Pay Per Click",
@@ -921,40 +1001,56 @@
     "hero": { "heading": "Bing Ads Campaigns Services | Expert Bing Ads Campaigns Company & Agency", "subheading": "Dominate Microsoft's search network and drive explosive growth with our proven Bing Ads Campaigns Services. As a leading Bing Ads Campaigns Company, we deliver comprehensive Bing Ads Campaigns Agency solutions that capture high-intent traffic, maximize conversions, and deliver measurable ROI across Microsoft's search ecosystem." },
     "form": { "heading": "Scale with Expert Bing Ads Campaigns Services", "content": "As a trusted Bing Ads Campaigns Company, we structure and optimize Bing Ads campaigns for maximum performance and profitability. Our comprehensive Bing Ads Campaigns Agency services include detailed account audits, keyword research and management, ad copy optimization, landing page testing, bid management, and ongoing campaign optimization to ensure maximum ROI from your Microsoft advertising investment.", "subContent": "Strategic Microsoft network targeting and conversion optimization. Our Bing Ads Campaigns Services implement advanced keyword strategies, negative keyword management, ad copy testing, landing page optimization, and conversion tracking to capture high-intent search traffic and maximize your conversion rates across Microsoft's search network.", "cta": "Request a free audit of your Bing Ads account from our expert Bing Ads Campaigns Agency. Our comprehensive audit covers account structure, keyword performance, ad copy effectiveness, landing page optimization, and conversion tracking to identify immediate improvement opportunities and growth potential.", "formHeading": "Free Bing Ads Campaigns Agency Audit", "buttonText": "Get My Audit" },
     "services": "Bing Ads Campaigns",
-    "serviceCards": [
-      {
-        "id": "bing-ads",
-        "name": "Bing Ads Campaigns Services",
-        "title": "Expert Bing Ads Campaigns Company",
-        "description": "Dominate Microsoft's search network with strategic Bing Ads campaigns that drive qualified traffic and conversions. Our Bing Ads Campaigns Agency creates compelling ad copy, implements advanced keyword strategies, optimizes landing pages, and leverages Microsoft's search ecosystem to maximize your advertising ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/bing-ads"
-      },
-      {
-        "id": "google-ads",
-        "name": "Google Ads Agency Services",
-        "title": "Expert Google Ads Company | Search & Performance Max",
-        "description": "Capture demand with high-intent search, Shopping, and Performance Max campaigns tuned for profitability. Our Google Ads agency expertise includes comprehensive keyword research, ad copy optimization, landing page testing, conversion tracking setup, and ongoing campaign management to maximize your search advertising ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/google-ads"
-      },
-      {
-        "id": "pay-per-click",
-        "name": "Pay Per Click Marketing Services",
-        "title": "Expert Pay Per Click Company",
-        "description": "Dominate search results with strategic PPC campaigns that drive qualified traffic and conversions. Our Pay Per Click Agency creates compelling ad copy, implements advanced keyword strategies, optimizes landing pages, and leverages all major PPC platforms to maximize your advertising ROI.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/pay-per-click"
-      },
-      {
-        "id": "google-shopping-ads",
-        "name": "Google Shopping Ads Agency Services",
-        "title": "Expert Google Shopping Ads Company",
-        "description": "Showcase products with visual shopping ads that drive qualified traffic. Our Google Shopping Ads agency provides comprehensive Google Shopping Ads services.",
-        "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/google-shopping-ads"
-      }
+    "process": {
+    "steps": [
+      "Account Audit & Strategy Development",
+      "Keyword Research & Ad Copy Creation",
+      "Campaign Setup & Tracking Integration",
+      "Optimization & Budget Efficiency",
+      "Reporting & Growth Scaling"
     ],
+    "content": [
+      "We begin with a deep audit of your Bing Ads account and analytics setup to identify inefficiencies and align strategy with business goals.",
+      "We conduct keyword research tailored to Microsoft’s audience, create compelling ad copy, and design campaign structures for maximum relevance and reach.",
+      "We set up campaigns with robust tracking integrations to monitor conversions, clicks, and quality scores across Microsoft Ads networks.",
+      "We optimize bids, devices, and demographics while refining ad variations and extensions to lower CPA and boost ROI.",
+      "We scale winning campaigns, reallocate budgets efficiently, and continuously enhance performance through A/B testing and audience segmentation."
+    ]
+  },
+    "serviceCards": [
+    {
+      "id": "bing-ads",
+      "name": "Bing Ads Management",
+      "title": "Expert Bing Ads Agency",
+      "description": "Drive conversions through Microsoft’s search and display network with optimized Bing Ads campaigns. We manage keyword bidding, ad copy, and audience targeting to deliver maximum visibility and ROI.",
+      "image": "/seo/services/seo.webp",
+      "link": "/paid-advertisement/bing-ads"
+    },
+    {
+      "id": "microsoft-shopping",
+      "name": "Microsoft Shopping Ads",
+      "title": "Product Listing Optimization for Microsoft Shopping",
+      "description": "Showcase products on Microsoft’s shopping network with optimized data feeds, bid management, and conversion tracking to drive eCommerce growth.",
+      "image": "/seo/services/on-page.webp",
+      "link": "/paid-advertisement/bing-ads"
+    },
+    {
+      "id": "remarketing-campaigns",
+      "name": "Microsoft Remarketing Campaigns",
+      "title": "Re-Engage Audiences Across Microsoft Ecosystem",
+      "description": "Re-target high-value audiences across Bing, MSN, and Outlook placements to drive repeat engagement and conversions using dynamic ad formats.",
+      "image": "/seo/services/off-page.webp",
+      "link": "/paid-advertisement/bing-ads"
+    },
+    {
+      "id": "ppc-management",
+      "name": "Cross-Platform PPC Management",
+      "title": "Unified PPC Strategy Across Search Engines",
+      "description": "Leverage our cross-channel PPC expertise to manage Bing Ads alongside Google Ads and other platforms for a cohesive, performance-driven paid search strategy.",
+      "image": "/seo/services/technical.webp",
+      "link": "/paid-advertisement/bing-ads"
+    }
+  ],
     "content": { "heading": "Expert Bing Ads Campaigns Services That Drive Microsoft Network Results", "text1": "Strategic Microsoft network keyword research and campaign optimization. Our Bing Ads Campaigns Company expertise includes comprehensive keyword research, competitor analysis, ad copy testing, and campaign structure optimization to ensure maximum visibility and conversion rates for high-intent search queries across Microsoft's search network.", "text2": "Advanced Bing Ads bidding strategies and budget optimization. As a leading Bing Ads Campaigns Agency, we implement sophisticated bidding strategies, budget allocation optimization, and performance monitoring to ensure your Bing Ads campaigns deliver maximum ROI while maintaining cost efficiency and reaching your most valuable prospects on Microsoft's platform.", "text3": "Comprehensive Bing Ads tracking and conversion optimization. Our Bing Ads Campaigns Services include detailed conversion tracking, attribution modeling, and performance analysis to ensure accurate measurement of your Bing Ads campaign impact and continuous optimization of your Microsoft advertising ROI.", "image": "seo.png", "alt": "Bing Ads Campaigns Services" },
     "faq": { 
       "serviceName": "Bing Ads",
@@ -977,34 +1073,34 @@
       {
         "id": "linkedin-ads-management",
         "name": "LinkedIn Ads Management",
-        "title": "Expert LinkedIn Ads Management Company",
-        "description": "Precisely target decision-makers with tailored messaging, offers, and high-signal lead flows. Our LinkedIn Ads Management focuses on B2B lead generation, account-based marketing, professional audience targeting, and creating compelling offers that resonate with business decision-makers and drive qualified leads.",
+        "title": "Expert LinkedIn Ads Management Agency",
+        "description": "Connect with the right professionals through precision-targeted LinkedIn campaigns. Our LinkedIn Ads Management Agency specializes in account-based marketing, lead generation, and professional audience engagement to help businesses reach decision-makers and generate high-quality B2B leads.",
         "image": "/seo/services/seo.webp",
         "link": "/paid-advertisement/linkedin-ads-management"
       },
       {
-        "id": "meta-ads",
-        "name": "Meta Ads",
-        "title": "Meta (Facebook/Instagram) Campaigns",
-        "description": "Scale attention with creative-led prospecting and conversion-focused retargeting on Meta. We develop compelling visual and video content, implement advanced audience targeting strategies, optimize for various campaign objectives, and create sophisticated retargeting sequences to maximize engagement and conversions.",
+        "id": "linkedin-lead-generation",
+        "name": "LinkedIn Lead Generation Services",
+        "title": "Professional B2B Lead Generation",
+        "description": "Turn LinkedIn connections into customers. We design tailored LinkedIn lead generation campaigns with compelling offers, personalized messaging, and advanced targeting to deliver a consistent flow of qualified business leads.",
         "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/meta-ads"
+        "link": "/paid-advertisement/linkedin-lead-generation"
       },
       {
-        "id": "facebook-ads",
-        "name": "Facebook Ads Management Agency Services",
-        "title": "Expert Facebook Ads Management Agency",
-        "description": "Dominate Facebook advertising with targeted campaigns that drive conversions. Our Facebook Ads Management Agency creates compelling social content, implements advanced audience targeting, optimizes for engagement and conversions, and leverages Facebook's powerful advertising platform to maximize your social media ROI.",
+        "id": "linkedin-abm",
+        "name": "LinkedIn Account-Based Marketing (ABM)",
+        "title": "Target High-Value Accounts",
+        "description": "Engage key accounts with ABM-driven LinkedIn ad strategies. Our experts develop hyper-targeted campaigns that align your marketing and sales teams around shared business objectives, improving pipeline velocity and deal quality.",
         "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/facebook-ads"
+        "link": "/paid-advertisement/linkedin-abm"
       },
       {
-        "id": "tiktok-ads",
-        "name": "Tiktok Ads Agency Services",
-        "title": "Expert Tiktok Ads Management Company",
-        "description": "Dominate TikTok advertising with engaging short-form video content that drives viral engagement and conversions. Our Tiktok Ads Agency creates compelling video narratives, implements advanced audience targeting, optimizes for engagement and conversions, and leverages TikTok's powerful short-form video platform to maximize your social media ROI.",
+        "id": "linkedin-creative-ads",
+        "name": "LinkedIn Creative & Sponsored Content",
+        "title": "Engage Through Professional Content",
+        "description": "Boost engagement and awareness with Sponsored Content and Video Ads. We craft professional, platform-native creatives that communicate your brand story and value proposition to the right audience segments on LinkedIn.",
         "image": "/seo/services/on-page.webp",
-        "link": "/paid-advertisement/tiktok-ads"
+        "link": "/paid-advertisement/linkedin-creative-ads"
       }
     ],
     "content": { "heading": "Expert LinkedIn Ads Management for High-Quality B2B Leads", "text1": "Target by title, skills, and company lists. Our LinkedIn expertise includes sophisticated professional audience targeting, job title segmentation, skill-based targeting, and company list management to ensure your campaigns reach the most relevant B2B decision-makers and influencers.", "text2": "Use content and offers to warm accounts. We develop compelling content strategies, lead magnets, and professional offers that resonate with your target audience, building trust and engagement before conversion to maximize lead quality and sales success.", "text3": "Optimise for downstream revenue, not only CPL. Our approach focuses on lead quality optimization, sales pipeline development, and revenue attribution to ensure your campaigns generate leads that convert into actual business value and long-term customer relationships.", "image": "hero.png", "alt": "LinkedIn Ads Management" },
@@ -1023,40 +1119,60 @@
     "hero": { "heading": "Snapchat Ads Agency | Expert Snapchat Ads Company & Services", "subheading": "Dominate Snapchat advertising and drive explosive brand growth with our proven Snapchat Ads Agency expertise. As a leading Snapchat Ads Company, we deliver comprehensive Snapchat Ads Services that capture attention, boost engagement, and convert Gen Z audiences into customers through compelling AR filters, Snap Ads, and Stories advertising." },
     "form": { "heading": "Scale with Expert Snapchat Ads Agency Services", "content": "As a trusted Snapchat Ads Company, we create engaging AR experiences and Snap Ads that drive conversions among Gen Z audiences. Our comprehensive Snapchat Ads Agency services include detailed AR filter development, Snap Ads creation, Stories advertising, audience targeting optimization, and performance analysis to maximize engagement and conversion rates on Snapchat.", "subContent": "AR experiences that convert. Our Snapchat Ads Services develop compelling augmented reality filters, interactive Snap Ads, and engaging Stories content that resonates with Snapchat's young, mobile-first audience, driving both brand awareness and direct response conversions.", "cta": "Request a free audit of your Snapchat account from our expert Snapchat Ads Agency. Our detailed audit covers account optimization, AR filter performance, Snap Ads effectiveness, audience targeting, and conversion tracking to identify opportunities for improving your Snapchat advertising ROI.", "formHeading": "Free Snapchat Ads Agency Audit", "buttonText": "Get My Audit" },
     "services": "Snapchat Ads",
+    "process": {
+  "steps": [
+    "Audit & Analysis",
+    "Strategy Development",
+    "Campaign Setup & Launch",
+    "Optimization & Testing",
+    "Scale & Growth"
+  ],
+  "content": [
+    "We begin with a detailed audit of your current Snapchat Ads performance and presence. Our team reviews your AR filters, Snap Ads, and Stories campaigns, analyzing engagement metrics, audience targeting accuracy, creative performance, and conversion tracking setup to uncover optimization opportunities and quick wins.",
+    
+    "Based on the audit insights, we craft a custom Snapchat Ads strategy aligned with your brand objectives and audience. This includes defining campaign goals, audience segmentation, creative directions for AR experiences, budget distribution, and measurable KPIs that ensure alignment with your overall marketing objectives.",
+    
+    "Next, our Snapchat Ads experts set up and launch campaigns across relevant ad formats — including Snap Ads, Story Ads, and AR Lenses. We implement precise conversion tracking, audience targeting, and creative testing to ensure campaigns are structured for maximum engagement, retention, and ROI.",
+    
+    "Once live, we continuously monitor and optimize campaigns through performance testing. Our team conducts A/B tests across AR filters, ad creatives, and calls-to-action, refining audience segments and bid strategies to maximize engagement, reduce cost per action, and improve return on ad spend (ROAS).",
+    
+    "After identifying high-performing creatives and audiences, we scale your Snapchat campaigns strategically. This involves expanding budget allocations, testing new AR experiences, exploring advanced audience lookalikes, and leveraging automation to drive sustainable growth and brand visibility among Gen Z audiences."
+  ]
+},
     "serviceCards": [
-      {
-        "id": "snapchat-ads",
-        "name": "Snapchat Ads Agency Services",
-        "title": "Expert Snapchat Ads Company",
-        "description": "Dominate Snapchat advertising with engaging AR filters and Snap Ads that drive conversions among Gen Z audiences. Our Snapchat Ads Agency creates compelling augmented reality experiences, implements advanced audience targeting, optimizes for engagement and conversions, and leverages Snapchat's powerful mobile advertising platform to maximize your social media ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/snapchat-ads"
-      },
-      {
-        "id": "tiktok-ads",
-        "name": "Tiktok Ads Agency Services",
-        "title": "Expert Tiktok Ads Management Company",
-        "description": "Dominate TikTok advertising with engaging short-form video content that drives viral engagement and conversions. Our Tiktok Ads Agency creates compelling video narratives, implements advanced audience targeting, optimizes for engagement and conversions, and leverages TikTok's powerful short-form video platform to maximize your social media ROI.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/tiktok-ads"
-      },
-      {
-        "id": "instagram-ads",
-        "name": "Instagram Ads Services",
-        "title": "Expert Instagram Ads Company",
-        "description": "Dominate Instagram advertising with compelling visual content and Stories ads that drive conversions. Our Instagram Ads Agency creates engaging visual narratives, implements advanced audience targeting, optimizes for engagement and conversions, and leverages Instagram's powerful visual advertising platform to maximize your social media ROI.",
-        "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/instagram-ads"
-      },
-      {
-        "id": "meta-ads",
-        "name": "Meta Ads",
-        "title": "Meta (Facebook/Instagram) Campaigns",
-        "description": "Scale attention with creative-led prospecting and conversion-focused retargeting on Meta. We develop compelling visual and video content, implement advanced audience targeting strategies, optimize for various campaign objectives, and create sophisticated retargeting sequences to maximize engagement and conversions.",
-        "image": "/seo/services/on-page.webp",
-        "link": "/paid-advertisement/meta-ads"
-      }
-    ],
+    {
+      "id": "snapchat-ads",
+      "name": "Snapchat Ads Management",
+      "title": "Expert Snapchat Ads Agency Services",
+      "description": "Reach and engage Gen Z audiences through powerful Snapchat advertising. Our Snapchat Ads Agency creates interactive AR Lenses, creative Snap Ads, and impactful Story campaigns that capture attention and drive both brand awareness and direct response results.",
+      "image": "/seo/services/seo.webp",
+      "link": "/paid-advertisement/snapchat-ads"
+    },
+    {
+      "id": "snapchat-ar-filters",
+      "name": "Snapchat AR Filter Development",
+      "title": "Immersive AR Experiences for Engagement",
+      "description": "Stand out with interactive augmented reality filters and lenses that let users engage directly with your brand. Our Snapchat AR Filter experts design and deploy custom branded experiences that go viral and deepen audience connection.",
+      "image": "/seo/services/off-page.webp",
+      "link": "/paid-advertisement/snapchat-ads"
+    },
+    {
+      "id": "snapchat-story-ads",
+      "name": "Snapchat Story Ads",
+      "title": "Story Ads for Awareness & Conversions",
+      "description": "Tell your brand story through immersive, full-screen Story Ads. We combine visuals, storytelling, and interactive elements to boost engagement, awareness, and conversions among Snapchat's young and active user base.",
+      "image": "/seo/services/technical.webp",
+      "link": "/paid-advertisement/snapchat-ads"
+    },
+    {
+      "id": "snapchat-brand-campaigns",
+      "name": "Snapchat Brand Campaigns",
+      "title": "Creative Campaigns for Brand Growth",
+      "description": "Launch high-impact brand campaigns with innovative AR concepts, influencer collaborations, and Snap Ads testing. We manage the entire creative and performance pipeline to ensure your Snapchat campaigns deliver maximum ROI.",
+      "image": "/seo/services/on-page.webp",
+      "link": "/paid-advertisement/snapchat-ads"
+    }
+  ],
     "content": { "heading": "Expert Snapchat Ads Agency Services for Gen Z Engagement", "text1": "AR filters and Snap Ads drive engagement. Our Snapchat Ads Company expertise includes comprehensive AR filter development, Snap Ads creation, and Stories advertising to maximize engagement and conversion rates on Snapchat's most engaging formats.", "text2": "Mobile-first experiences resonate with Gen Z. As a leading Snapchat Ads Agency, we create compelling augmented reality experiences, interactive Snap Ads, and engaging Stories content that capture attention and drive both brand awareness and direct response conversions on Snapchat.", "text3": "Track AR performance and optimize for conversions. Our comprehensive Snapchat Ads Services include detailed AR engagement tracking, conversion attribution, and performance analysis to ensure accurate measurement of your Snapchat advertising impact and ROI.", "image": "seo.png", "alt": "Snapchat Ads Agency Services" },
     "faq": { 
       "serviceName": "Snapchat Ads",
@@ -1076,39 +1192,59 @@
     "form": { "heading": "Scale with Expert Twitter Ads Agency Services", "content": "As a trusted Twitter Ads Agency Company, we create engaging Promoted Tweets and Video ads that drive conversions and brand awareness. Our comprehensive Twitter Ads Agency services include detailed campaign management, audience targeting optimization, creative development, trend analysis, and performance monitoring to maximize engagement and conversion rates on Twitter (X).", "subContent": "Real-time engagement that converts. Our Twitter Ads Agency develops compelling Promoted Tweets, trending topic strategies, and interactive video content that resonates with Twitter's active, news-driven audience, driving both brand awareness and direct response conversions.", "cta": "Request a free audit of your Twitter (X) account from our expert Twitter Ads Agency. Our detailed audit covers account optimization, Promoted Tweet performance, audience targeting effectiveness, trend analysis, and conversion tracking to identify opportunities for improving your Twitter advertising ROI.", "formHeading": "Free Twitter Ads Agency Audit", "buttonText": "Get My Audit" },
     "services": "Twitter Ads",
     "serviceCards": [
-      {
-        "id": "twitter-x-ads",
-        "name": "Twitter Ads Agency Services",
-        "title": "Expert Twitter Ads Agency Company",
-        "description": "Dominate Twitter (X) advertising with strategic Promoted Tweets and Video ads that drive engagement and conversions. Our Twitter Ads Agency creates compelling content, implements advanced audience targeting, optimizes for real-time engagement, and leverages Twitter's powerful social advertising platform to maximize your social media ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/twitter-x-ads"
-      },
-      {
-        "id": "linkedin-ads",
-        "name": "LinkedIn Ads",
-        "title": "B2B LinkedIn Lead Gen",
-        "description": "Precisely target decision-makers with tailored messaging, offers, and high-signal lead flows. Our LinkedIn advertising strategies focus on B2B lead generation, account-based marketing, professional audience targeting, and creating compelling offers that resonate with business decision-makers and drive qualified leads.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/linkedin-ads"
-      },
-      {
-        "id": "meta-ads",
-        "name": "Meta Ads",
-        "title": "Meta (Facebook/Instagram) Campaigns",
-        "description": "Scale attention with creative-led prospecting and conversion-focused retargeting on Meta. We develop compelling visual and video content, implement advanced audience targeting strategies, optimize for various campaign objectives, and create sophisticated retargeting sequences to maximize engagement and conversions.",
-        "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/meta-ads"
-      },
-      {
-        "id": "youtube-ads",
-        "name": "Youtube Ads Agency Services",
-        "title": "Expert Youtube Ads Company | Awareness & Direct Response",
-        "description": "Build demand and conversions with creative testing and audience layering on YouTube. Our Youtube Ads Agency creates engaging video content, implements strategic audience targeting, optimizes for both brand awareness and direct response objectives, and leverages YouTube's powerful advertising platform to drive meaningful business results.",
-        "image": "/seo/services/on-page.webp",
-        "link": "/paid-advertisement/youtube-ads"
-      }
-    ],
+  {
+    "id": "twitter-promoted-ads",
+    "name": "Promoted Ads",
+    "title": "Boost Visibility with Promoted Tweets",
+    "description": "Get your message seen by the right audience through Promoted Tweets and Videos. We craft scroll-stopping creative and hyper-targeted campaigns that amplify engagement, impressions, and conversions on Twitter (X).",
+    "image": "/seo/services/off-page.webp",
+    "link": "/paid-advertisement/twitter-x-ads"
+  },
+  {
+    "id": "twitter-follower-ads",
+    "name": "Follower Ads",
+    "title": "Grow Your Audience with Follower Campaigns",
+    "description": "Expand your community with Follower Ads designed to attract high-value users who resonate with your brand. We help you increase followers strategically for long-term engagement and credibility.",
+    "image": "/seo/services/technical.webp",
+    "link": "/paid-advertisement/twitter-x-ads"
+  },
+  {
+    "id": "twitter-trend-ads",
+    "name": "Trend Takeover Ads",
+    "title": "Own the Conversation with Trend Takeover",
+    "description": "Dominate trending topics with Twitter Trend Takeover campaigns that put your brand at the center of real-time conversations. Ideal for product launches, major events, and awareness campaigns.",
+    "image": "/seo/services/on-page.webp",
+    "link": "/paid-advertisement/twitter-x-ads"
+  },
+  {
+    "id": "twitter-amplify-ads",
+    "name": "Twitter Amplify",
+    "title": "Video Amplification for Maximum Reach",
+    "description": "Leverage Twitter’s premium video inventory to align your brand with trending content and top publishers. Twitter Amplify boosts visibility, brand recall, and engagement through powerful video storytelling.",
+    "image": "/seo/services/on-page.webp",
+    "link": "/paid-advertisement/twitter-x-ads"
+  }
+],
+"process": {
+  "steps": [
+    "Audit & Analysis",
+    "Strategy Development",
+    "Campaign Setup & Launch",
+    "Optimization & Testing",
+    "Scale & Growth"
+  ],
+  "content": [
+    "We start with an in-depth audit of your existing Twitter (X) activity and advertising performance. Our team analyzes audience engagement, creative formats, targeting accuracy, and conversion tracking to identify optimization opportunities and untapped potential.",
+    
+    "Based on our findings, we develop a tailored Twitter Ads strategy focused on real-time brand engagement. This includes defining campaign objectives, audience segmentation, creative direction, budget allocation, and performance KPIs to ensure every ad aligns with your brand’s goals.",
+    
+    "Next, we set up and launch your Twitter Ads campaigns — from Promoted Tweets to Follower and Trend Takeovers. Every campaign is built with proper tracking, conversion setup, and creative testing to maximize reach and engagement.",
+    
+    "We continuously optimize campaigns by monitoring performance metrics, running A/B tests, and refining targeting and bidding strategies. Our team ensures your ads stay relevant, efficient, and consistently drive measurable ROI.",
+    
+    "Once performance data reveals strong results, we scale the winning campaigns across additional objectives and audience segments. Through smart automation and performance insights, we help your brand dominate conversations and maintain long-term growth on Twitter (X)."
+  ]
+},
     "content": { "heading": "Expert Twitter Ads Agency Services for Real-Time Engagement", "text1": "Promoted Tweets and trending topics drive engagement. Our Twitter Ads Agency Company expertise includes comprehensive Promoted Tweet campaigns, trending topic analysis, and real-time content optimization to maximize engagement and conversion rates on Twitter's dynamic platform.", "text2": "Real-time conversations resonate with audiences. As a leading Twitter Ads Agency, we create compelling Promoted Tweets, interactive video content, and trending topic strategies that capture attention and drive both brand awareness and direct response conversions on Twitter (X).", "text3": "Track real-time performance and optimize for conversions. Our comprehensive Twitter Ads Agency services include detailed engagement tracking, conversion attribution, and performance analysis to ensure accurate measurement of your Twitter advertising impact and ROI.", "image": "seo.png", "alt": "Twitter Ads Agency Services" },
     "faq": { 
       "serviceName": "Twitter Ads",
@@ -1128,39 +1264,55 @@
     "form": { "heading": "Scale with Expert Pinterest Ads Agency Services", "content": "As a trusted Pinterest Ads Company, we create engaging Promoted Pins and Shopping ads that drive conversions and brand discovery. Our comprehensive Pinterest Ads Agency services include detailed campaign management, audience targeting optimization, visual creative development, shopping campaign optimization, and performance monitoring to maximize engagement and conversion rates on Pinterest.", "subContent": "Visual discovery that converts. Our Pinterest Ads Services develop compelling Promoted Pins, shopping campaigns, and visual content that resonates with Pinterest's discovery-focused audience, driving both brand awareness and direct response conversions.", "cta": "Request a free audit of your Pinterest account from our expert Pinterest Ads Agency. Our detailed audit covers account optimization, Promoted Pin performance, audience targeting effectiveness, shopping campaign analysis, and conversion tracking to identify opportunities for improving your Pinterest advertising ROI.", "formHeading": "Free Pinterest Ads Agency Audit", "buttonText": "Get My Audit" },
     "services": "Pinterest Ads",
     "serviceCards": [
-      {
-        "id": "pinterest-ads",
-        "name": "Pinterest Ads Agency Services",
-        "title": "Expert Pinterest Ads Company",
-        "description": "Dominate Pinterest advertising with strategic Promoted Pins and Shopping ads that drive discovery and conversions. Our Pinterest Ads Agency creates compelling visual content, implements advanced audience targeting, optimizes for discovery and engagement, and leverages Pinterest's powerful visual search platform to maximize your social commerce ROI.",
-        "image": "/seo/services/seo.webp",
-        "link": "/paid-advertisement/pinterest-ads"
-      },
-      {
-        "id": "google-shopping-ads",
-        "name": "Google Shopping Ads Agency Services",
-        "title": "Expert Google Shopping Ads Company",
-        "description": "Showcase products with visual shopping ads that drive qualified traffic. Our Google Shopping Ads agency provides comprehensive Google Shopping Ads services.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/paid-advertisement/google-shopping-ads"
-      },
-      {
-        "id": "instagram-ads",
-        "name": "Instagram Ads Services",
-        "title": "Expert Instagram Ads Company",
-        "description": "Dominate Instagram advertising with compelling visual content and Stories ads that drive conversions. Our Instagram Ads Agency creates engaging visual narratives, implements advanced audience targeting, optimizes for engagement and conversions, and leverages Instagram's powerful visual advertising platform to maximize your social media ROI.",
-        "image": "/seo/services/technical.webp",
-        "link": "/paid-advertisement/instagram-ads"
-      },
-      {
-        "id": "meta-ads",
-        "name": "Meta Ads",
-        "title": "Meta (Facebook/Instagram) Campaigns",
-        "description": "Scale attention with creative-led prospecting and conversion-focused retargeting on Meta. We develop compelling visual and video content, implement advanced audience targeting strategies, optimize for various campaign objectives, and create sophisticated retargeting sequences to maximize engagement and conversions.",
-        "image": "/seo/services/on-page.webp",
-        "link": "/paid-advertisement/meta-ads"
-      }
+    {
+      "id": "promoted-pins",
+      "name": "Promoted Pins",
+      "title": "Boost Visibility with Promoted Pins",
+      "description": "Drive discovery and engagement with visually stunning Promoted Pins that inspire action. Our Pinterest Ads Agency crafts compelling creatives that seamlessly integrate into user feeds and boards, generating awareness and traffic that converts.",
+      "image": "/seo/services/technical.webp",
+      "link": "/paid-advertisement/pinterest-ads"
+    },
+    {
+      "id": "shopping-ads",
+      "name": "Pinterest Shopping Ads",
+      "title": "Increase Sales with Pinterest Shopping Ads",
+      "description": "Turn browsers into buyers with Pinterest Shopping Ads. We optimize product catalogs, manage data feeds, and create visually consistent shopping experiences that drive high-intent conversions and measurable ROAS.",
+      "image": "/seo/services/off-page.webp",
+      "link": "/paid-advertisement/pinterest-ads"
+    },
+    {
+      "id": "idea-ads",
+      "name": "Idea Ads",
+      "title": "Engage Audiences with Pinterest Idea Ads",
+      "description": "Showcase your brand story with interactive Idea Ads that combine video, imagery, and product tagging. Perfect for lifestyle brands, these ads increase time spent on content and inspire users to explore and save your pins.",
+      "image": "/seo/services/technical.webp",
+      "link": "/paid-advertisement/pinterest-ads"
+    },
+    {
+      "id": "retargeting-ads",
+      "name": "Retargeting Campaigns",
+      "title": "Re-Engage Interested Shoppers",
+      "description": "Reconnect with users who engaged with your content or visited your site. Our retargeting campaigns leverage Pinterest's tracking insights to deliver personalized ads that increase conversions and customer lifetime value.",
+      "image": "/seo/services/on-page.webp",
+      "link": "/paid-advertisement/pinterest-ads"
+    }
+  ],
+  "process": {
+    "steps": [
+      "Audit & Analysis",
+      "Strategy Development",
+      "Campaign Setup & Launch",
+      "Optimization & Testing",
+      "Scale & Growth"
     ],
+    "content": [
+      "We begin with an in-depth Pinterest Ads audit — analyzing your current performance, creative assets, audience engagement, and catalog health. This helps us identify quick wins and build a foundation for improved visibility and conversions.",
+      "Next, we create a data-driven Pinterest Ads strategy focused on discovery, engagement, and commerce. This includes selecting ad formats, defining audience segments, crafting creative concepts, and aligning KPIs with your business goals.",
+      "Our team then launches your Pinterest campaigns — from Promoted Pins to Shopping Ads — ensuring proper tracking, feed setup, and creative testing for maximum impact and discoverability.",
+      "We continuously optimize campaigns using A/B testing, bid adjustments, and creative iteration. We monitor engagement metrics and audience signals to enhance CTR, CPC efficiency, and conversion rate performance.",
+      "Once winning strategies are identified, we scale campaigns by expanding audiences, testing new creative formats, and leveraging seasonal trends to drive sustained growth and increased ROI."
+    ]
+  },
     "content": { "heading": "Expert Pinterest Ads Agency Services for Visual Discovery", "text1": "Promoted Pins and shopping campaigns drive discovery. Our Pinterest Ads Company expertise includes comprehensive Promoted Pin campaigns, shopping ad optimization, and visual content strategy to maximize engagement and conversion rates on Pinterest's discovery platform.", "text2": "Visual discovery resonates with shoppers. As a leading Pinterest Ads Agency, we create compelling Promoted Pins, shopping campaigns, and visual content that capture attention and drive both brand awareness and direct response conversions on Pinterest.", "text3": "Track discovery performance and optimize for conversions. Our comprehensive Pinterest Ads Services include detailed engagement tracking, conversion attribution, and performance analysis to ensure accurate measurement of your Pinterest advertising impact and ROI.", "image": "seo.png", "alt": "Pinterest Ads Agency Services" },
     "faq": { 
       "serviceName": "Pinterest Ads",
