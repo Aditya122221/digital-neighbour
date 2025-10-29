@@ -56,12 +56,12 @@
       }
     ],
     "painpoints": {
-      "heading": "Tired of social media efforts that don’t deliver?",
+      "heading": "Tired of social media efforts that don't deliver?",
       "items": [
-        { "icon": "💸", "title": "Not seeing leads or sales from social even with regular posting?" },
-        { "icon": "⚡", "title": "Hard to keep up with trends and platform changes?" },
-        { "icon": "📊", "title": "Unsure which metrics matter or how to prove ROI?" },
-        { "icon": "🎨", "title": "Limited creative capacity for consistent quality content?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Not seeing leads or sales from social even with regular posting?" },
+        { "image": "/socialMedia/icon-2.svg", "title": "Hard to keep up with trends and platform changes?" },
+        { "image": "/socialMedia/icon-3.svg", "title": "Unsure which metrics matter or how to prove ROI?" },
+        { "image": "/socialMedia/icon-4.svg", "title": "Limited creative capacity for consistent quality content?" }
       ]
     },
     "content": {
@@ -93,7 +93,13 @@
       "faqs": [
         { "q": "How do you measure success?", "a": "We track reach, engagement, community health, and conversions—reporting monthly with clear next steps." },
         { "q": "Do you create content?", "a": "Yes. We can run end-to-end production or collaborate with your in-house team and creators." },
-        { "q": "Which platforms do you support?", "a": "Meta (Facebook & Instagram), LinkedIn, TikTok, YouTube, Pinterest, and X (Twitter)." }
+        { "q": "Which platforms do you support?", "a": "Meta (Facebook & Instagram), LinkedIn, TikTok, YouTube, Pinterest, and X (Twitter)." },
+        { "q": "How long does it take to see results?", "a": "Initial engagement improvements typically appear within 2-4 weeks. Sustainable growth and conversion outcomes compound over 3-6 months as algorithms learn your content patterns and audience signals strengthen." },
+        { "q": "Can you manage multiple platforms simultaneously?", "a": "Absolutely. We coordinate cross-platform strategies while tailoring content to each platform's native formats, audience behavior, and algorithm preferences for maximum effectiveness." },
+        { "q": "What's included in your social media management?", "a": "Our service includes strategy development, content planning and creation, monthly content calendars, community management, performance analytics, competitor analysis, and regular optimization based on data insights." },
+        { "q": "How often do you post content?", "a": "Posting frequency is customized per platform and audience. We typically recommend 3-5 times per week on Facebook, daily Stories on Instagram, weekly on LinkedIn, and daily on TikTok and Twitter to maintain algorithm favor." },
+        { "q": "Do you handle social media advertising?", "a": "While we focus on organic social media management, we can collaborate with your paid ads team or provide strategic recommendations for budget allocation across organic and paid efforts." },
+        { "q": "What reporting do you provide?", "a": "We deliver monthly analytics reports covering reach, engagement rates, follower growth, top-performing content, audience insights, and conversion tracking. Reports include actionable recommendations for improvement." }
       ]
     }
   },
@@ -140,10 +146,10 @@
     "painpoints": {
       "heading": "Struggling to grow on Facebook?",
       "items": [
-        { "icon": "📉", "title": "Low reach and engagement despite posting each week?" },
-        { "icon": "💬", "title": "No time to manage comments/DMs while staying on brand?" },
-        { "icon": "🧭", "title": "No content calendar aligned to campaigns and seasons?" },
-        { "icon": "📊", "title": "Unclear what’s working and what to double down on?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Low reach and engagement despite posting each week?" },
+        { "image": "/socialMedia/icon-2.svg", "title": "No time to manage comments/DMs while staying on brand?" },
+        { "image": "/socialMedia/icon-3.svg", "title": "No content calendar aligned to campaigns and seasons?" },
+        { "image": "/socialMedia/icon-4.svg", "title": "Unclear what's working and what to double down on?" }
       ]
     },
     "serviceCards": [
@@ -184,7 +190,14 @@
       "serviceName": "Facebook Marketing",
       "faqs": [
         { "q": "Do you manage Facebook Groups?", "a": "Yes. We support strategy, moderation and programming to grow healthy communities." },
-        { "q": "Can you post to Instagram too?", "a": "We can run cross‑platform ops while tailoring creative to each format." }
+        { "q": "Can you post to Instagram too?", "a": "We can run cross‑platform ops while tailoring creative to each format." },
+        { "q": "How often should I post on Facebook?", "a": "We recommend posting 3-5 times per week on Facebook pages, with daily Stories engagement. Posting too frequently can reduce reach, while too infrequent posting hurts algorithm ranking. We optimize cadence based on your audience's active times." },
+        { "q": "What types of content perform best on Facebook?", "a": "Native video, especially short-form Reels, typically drive highest engagement. Carousel posts, behind-the-scenes content, and user-generated content also perform well. We test formats and iterate based on your specific audience signals." },
+        { "q": "How do you handle negative comments or reviews?", "a": "We respond professionally and promptly, addressing concerns publicly when appropriate or taking conversations offline for sensitive matters. Our moderation approach protects brand reputation while maintaining authentic community engagement." },
+        { "q": "Can you help with Facebook Events and Live streaming?", "a": "Yes. We can plan event promotion strategies, coordinate live streaming content calendars, and manage real-time engagement during broadcasts to maximize reach and participation." },
+        { "q": "What metrics matter most for Facebook success?", "a": "Key metrics include reach, engagement rate, click-through rate, and profile actions (saves, shares, clicks). For business pages, we also track message inquiries, event responses, and conversion actions that tie to your business goals." },
+        { "q": "How do you optimize Facebook posts for the algorithm?", "a": "We optimize posting times, use native video formats, craft engaging captions with clear CTAs, leverage relevant hashtags strategically, encourage meaningful interactions, and maintain consistent posting cadence to signal quality to Facebook's algorithm." },
+        { "q": "Do you manage Facebook Messenger for customer inquiries?", "a": "Yes. We can handle Messenger conversations, set up automated responses for common questions, and ensure timely human responses during business hours to improve customer satisfaction and response rates." }
       ]
     }
   },
@@ -202,10 +215,10 @@
     "painpoints": {
       "heading": "Is Instagram growth stalling?",
       "items": [
-        { "icon": "🎣", "title": "Hooks fail to hold attention past 3 seconds on most Reels?" },
-        { "icon": "📆", "title": "Inconsistent cadence makes it hard to build momentum?" },
-        { "icon": "🧩", "title": "Grid lacks a clear narrative for first‑time visitors?" },
-        { "icon": "📈", "title": "Few profile actions or link clicks despite decent reach?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Hooks fail to hold attention past 3 seconds on most Reels?" },
+        { "image": "/socialMedia/icon-2.svg", "title": "Inconsistent cadence makes it hard to build momentum?" },
+        { "image": "/socialMedia/icon-3.svg", "title": "Grid lacks a clear narrative for first‑time visitors?" },
+        { "image": "/socialMedia/icon-4.svg", "title": "Few profile actions or link clicks despite decent reach?" }
       ]
     },
     "serviceCards": [
@@ -246,7 +259,14 @@
       "serviceName": "Instagram Marketing",
       "faqs": [
         { "q": "Do you edit Reels?", "a": "Yes. We provide editing systems, thumbnails and templates that scale output." },
-        { "q": "Can you keep my brand voice?", "a": "We build a tone guide and review loop to keep content on‑brand." }
+        { "q": "Can you keep my brand voice?", "a": "We build a tone guide and review loop to keep content on‑brand." },
+        { "q": "How often should I post Reels vs regular posts?", "a": "Reels currently receive the highest reach on Instagram. We recommend daily Reels when possible, supplemented by 2-3 feed posts per week and consistent Stories. The algorithm heavily favors Reels for discoverability, especially for new followers." },
+        { "q": "What makes an Instagram Reel successful?", "a": "Successful Reels have strong hooks in the first 3 seconds, clear value propositions, trending audio when relevant, native vertical formatting, engaging visuals, and calls-to-action. We test hooks and formats to identify what resonates with your audience." },
+        { "q": "How do you grow Instagram followers organically?", "a": "We focus on consistent Reels output, strategic hashtag use, engagement with your audience and relevant accounts, collaboration opportunities, and creating shareable content that earns saves and shares—all signals the algorithm rewards." },
+        { "q": "Can you help with Instagram Shopping and product tags?", "a": "Yes. We can set up Instagram Shopping, tag products in posts and Reels, optimize product catalogs, and create shopping-focused content that drives direct sales through the platform." },
+        { "q": "What's the best strategy for Instagram Stories?", "a": "Stories should post daily with 3-5 story frames per day when possible. Mix educational, behind-the-scenes, and promotional content. Use interactive features like polls, questions, and countdown stickers. We sequence Stories to drive profile visits and link clicks." },
+        { "q": "How important is Instagram grid aesthetics?", "a": "Grid design creates strong first impressions and signals quality. While feed posts matter less algorithmically than Reels, a cohesive aesthetic builds brand recognition. We maintain visual consistency while prioritizing Reels performance." },
+        { "q": "Do you manage Instagram comments and DMs?", "a": "Yes. We monitor and respond to comments to boost engagement signals, handle DMs professionally, and use engagement to identify content opportunities and audience questions that inform future content." }
       ]
     }
   },
@@ -264,10 +284,10 @@
     "painpoints": {
       "heading": "Not seeing traction on LinkedIn?",
       "items": [
-        { "icon": "🧑🏻‍💼", "title": "Exec brand lacks consistent posting and recognizable voice?" },
-        { "icon": "🧠", "title": "No clear POV or content themes tied to your market?" },
-        { "icon": "💬", "title": "Low comments and conversations from the right decision‑makers?" },
-        { "icon": "🗓️", "title": "Hard to sustain a weekly cadence while running the business?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Exec brand lacks consistent posting and recognizable voice?" },
+        { "image": "/socialMedia/icon-2.svg", "title": "No clear POV or content themes tied to your market?" },
+        { "image": "/socialMedia/icon-3.svg", "title": "Low comments and conversations from the right decision‑makers?" },
+        { "image": "/socialMedia/icon-4.svg", "title": "Hard to sustain a weekly cadence while running the business?" }
       ]
     },
     "serviceCards": [
@@ -308,7 +328,14 @@
       "serviceName": "LinkedIn Marketing",
       "faqs": [
         { "q": "Do you ghostwrite for executives?", "a": "Yes. We collaborate with leaders to produce credible, original posts at a weekly cadence." },
-        { "q": "Can you help with company pages?", "a": "We support company programming alongside executive profiles for maximum coverage." }
+        { "q": "Can you help with company pages?", "a": "We support company programming alongside executive profiles for maximum coverage." },
+        { "q": "How often should executives post on LinkedIn?", "a": "We recommend 2-3 posts per week for optimal reach without oversaturation. Consistency matters more than frequency. We balance original content, comment engagement, and strategic reposting of company content to maximize visibility." },
+        { "q": "What types of LinkedIn content drive B2B results?", "a": "Thought leadership posts, industry insights, case studies, carousel posts explaining concepts, polls to drive engagement, and narrative-driven stories perform best. We focus on content that starts conversations with decision-makers." },
+        { "q": "How do you generate leads from LinkedIn?", "a": "LinkedIn drives leads through thought leadership that builds trust, strategic commenting on target accounts' posts, engaging with relevant content in your industry, providing value in groups, and clear CTAs that direct prospects to meaningful next steps." },
+        { "q": "Should I post on personal profiles or company pages?", "a": "Both. Personal executive profiles typically outperform company pages algorithmically. We coordinate both—personal profiles for thought leadership and company pages for brand messaging, job postings, and company updates—creating a comprehensive presence." },
+        { "q": "How do you measure LinkedIn success for B2B?", "a": "Key metrics include impressions, engagement rate, profile views, connection requests, and most importantly, pipeline signals like comments from target accounts, messages from prospects, and profile visits from decision-makers. We track attribution where possible." },
+        { "q": "Can you help with LinkedIn articles vs posts?", "a": "Yes. We develop content strategies that balance short-form posts (for algorithm favor) with longer-form articles (for SEO and deep engagement). Articles can be repurposed into multiple posts, maximizing content efficiency." },
+        { "q": "How do you build thought leadership on LinkedIn?", "a": "We develop a clear point of view, identify key themes aligned to your expertise, create original insights from your experience, engage authentically in industry conversations, and maintain consistent posting cadence. Authenticity and value drive thought leadership." }
       ]
     }
   },
@@ -326,10 +353,10 @@
     "painpoints": {
       "heading": "Publishing on TikTok without momentum?",
       "items": [
-        { "icon": "⏱️", "title": "Inconsistent output makes the algorithm forget your content?" },
-        { "icon": "🧲", "title": "Hooks don’t retain viewers long enough to build watch time?" },
-        { "icon": "🎬", "title": "Editing pipeline too slow to capitalize on trend windows?" },
-        { "icon": "🔁", "title": "Struggling to test, learn and iterate on hooks each week?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Inconsistent output makes the algorithm forget your content?" },
+        { "image": "/socialMedia/icon-2.svg", "title": "Hooks don't retain viewers long enough to build watch time?" },
+        { "image": "/socialMedia/icon-3.svg", "title": "Editing pipeline too slow to capitalize on trend windows?" },
+        { "image": "/socialMedia/icon-4.svg", "title": "Struggling to test, learn and iterate on hooks each week?" }
       ]
     },
     "serviceCards": [
@@ -370,7 +397,14 @@
       "serviceName": "TikTok Marketing",
       "faqs": [
         { "q": "Do you work with creators?", "a": "Yes. We collaborate with your team or external creators to scale content." },
-        { "q": "How do you track success?", "a": "We measure hook performance, retention and actions with weekly iteration." }
+        { "q": "How do you track success?", "a": "We measure hook performance, retention and actions with weekly iteration." },
+        { "q": "How often should I post on TikTok?", "a": "TikTok rewards daily posting for algorithm favor. We recommend posting at least once daily, ideally 2-3 times per day when possible. The algorithm forgets content quickly, so consistency maintains momentum and discoverability." },
+        { "q": "What makes a TikTok hook effective?", "a": "Effective hooks capture attention within the first 3 seconds with compelling visuals, intriguing questions, or bold statements. We test hook frameworks like pattern interrupts, problem statements, and curiosity gaps to identify what keeps viewers watching." },
+        { "q": "How do you balance trends with brand authenticity?", "a": "We identify trends that align with your brand values and audience, adapt trending sounds and formats to your brand voice, and create trend-responsive content that feels authentic rather than forced. Not every trend fits every brand." },
+        { "q": "What video length works best on TikTok?", "a": "TikTok now favors longer content (30-60+ seconds) when retention is strong. We test various lengths, starting with shorter videos to build momentum, then expanding to longer-form content that delivers deeper value and improves overall watch time signals." },
+        { "q": "Can you help with TikTok advertising integration?", "a": "While we focus on organic TikTok growth, we can coordinate with your paid ads team to ensure organic and paid strategies complement each other. Organic content often tests well for paid campaigns." },
+        { "q": "How do you grow followers on TikTok?", "a": "Follower growth comes from consistent daily posting, creating shareable content that earns saves, engaging authentically with comments and other creators' content, using trending sounds strategically, and focusing on retention metrics that signal quality to the algorithm." },
+        { "q": "What metrics should I focus on for TikTok?", "a": "Priority metrics include video view rate, average watch time and retention curves, engagement rate (likes, comments, shares), follower growth rate, and profile visits. We analyze retention curves to identify where viewers drop off and optimize accordingly." }
       ]
     }
   },
@@ -388,10 +422,10 @@
     "painpoints": {
       "heading": "YouTube not compounding yet?",
       "items": [
-        { "icon": "🖼️", "title": "Thumbnails don’t earn clicks even when topics are strong?" },
-        { "icon": "📉", "title": "Retention drops early and view duration stays low?" },
-        { "icon": "🗂️", "title": "No clear programming cadence or seasonal themes?" },
-        { "icon": "🧰", "title": "Comments/moderation are ad‑hoc, community feels unmanaged?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Thumbnails don't earn clicks even when topics are strong?" },
+        { "image": "/socialMedia/icon-2.svg", "title": "Retention drops early and view duration stays low?" },
+        { "image": "/socialMedia/icon-3.svg", "title": "No clear programming cadence or seasonal themes?" },
+        { "image": "/socialMedia/icon-4.svg", "title": "Comments/moderation are ad‑hoc, community feels unmanaged?" }
       ]
     },
     "serviceCards": [
@@ -432,7 +466,14 @@
       "serviceName": "YouTube Community Marketing",
       "faqs": [
         { "q": "Do you design thumbnails?", "a": "Yes. We iterate concepts and test to improve CTR." },
-        { "q": "Do you manage comments?", "a": "We provide response systems and moderation to keep the community healthy." }
+        { "q": "Do you manage comments?", "a": "We provide response systems and moderation to keep the community healthy." },
+        { "q": "How do you improve YouTube click-through rates?", "a": "We test thumbnail designs with bold text, contrasting colors, expressive faces when appropriate, and clear value propositions. We A/B test multiple thumbnail concepts, analyze CTR data, and iterate on what drives clicks without misleading viewers." },
+        { "q": "What video retention strategies work best?", "a": "Retention starts with strong hooks, maintaining pacing, using visual variety, delivering on thumbnail promises, structuring content with clear value delivery points, and ending with compelling CTAs. We analyze retention curves to identify drop-off points and optimize content structure." },
+        { "q": "How often should I upload YouTube videos?", "a": "Upload frequency depends on your content capacity and audience expectations. Consistent weekly uploads typically perform well. Quality over quantity matters—better to upload less frequently with strong retention than daily with poor watch time. We develop realistic schedules based on your resources." },
+        { "q": "Can you help with YouTube SEO and metadata?", "a": "Yes. We optimize titles for search and clickability, write descriptions with keywords and CTAs, research tags strategically, create engaging titles that deliver on promises, and structure content to align with viewer search intent." },
+        { "q": "How do you grow YouTube subscribers?", "a": "Subscriber growth comes from consistent upload schedules, delivering value that viewers can't find elsewhere, clear calls-to-action in videos, compelling channel branding, engaging with comments, creating playlists that encourage binge-watching, and community posts that maintain engagement between uploads." },
+        { "q": "What's included in YouTube community management?", "a": "We respond to comments promptly, moderate spam and inappropriate content, engage with top contributors, use community posts to maintain engagement between videos, manage YouTube Community tab content, and build relationships with active subscribers to foster loyalty." },
+        { "q": "How do you measure YouTube success beyond views?", "a": "We track click-through rates (CTR), average view duration (AVD), audience retention curves, subscriber growth rate, engagement metrics (likes, comments, shares), watch time, and revenue metrics when applicable. Retention and watch time often matter more than raw view counts." }
       ]
     }
   }
@@ -451,10 +492,10 @@
     "painpoints": {
       "heading": "Pins not driving traffic?",
       "items": [
-        { "icon": "📌", "title": "Low saves and outbound clicks even with strong visuals?" },
-        { "icon": "🔍", "title": "Weak pin SEO/metadata prevents discovery in search?" },
-        { "icon": "🧭", "title": "Boards lack structure and don't map to search intent?" },
-        { "icon": "📆", "title": "Irregular cadence makes it hard to build predictable traffic?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Low saves and outbound clicks even with strong visuals?" },
+        { "image": "/socialMedia/icon-2.svg", "title": "Weak pin SEO/metadata prevents discovery in search?" },
+        { "image": "/socialMedia/icon-3.svg", "title": "Boards lack structure and don't map to search intent?" },
+        { "image": "/socialMedia/icon-4.svg", "title": "Irregular cadence makes it hard to build predictable traffic?" }
       ]
     },
     "serviceCards": [
@@ -474,7 +515,14 @@
       "serviceName": "Pinterest Marketing",
       "faqs": [
         { "q": "Do you design pin templates?", "a": "Yes. We build reusable templates to ship more, faster." },
-        { "q": "How do you measure success?", "a": "We track saves, outbound clicks and conversions via analytics." }
+        { "q": "How do you measure success?", "a": "We track saves, outbound clicks and conversions via analytics." },
+        { "q": "How often should I pin on Pinterest?", "a": "Pinterest favors consistent daily pinning. We recommend pinning 5-15 pins per day for optimal reach, spread throughout the day to maximize visibility. Fresh pins perform better than repinning the same content repeatedly." },
+        { "q": "What makes a Pinterest pin successful?", "a": "Successful pins have vertical formatting (2:3 ratio), clear text overlays that are readable at thumbnail size, compelling visuals, keyword-rich descriptions, relevant boards, and clear calls-to-action. We test pin designs and iterate based on save and click rates." },
+        { "q": "How do Pinterest boards affect discoverability?", "a": "Board organization directly impacts Pinterest SEO. We create keyword-rich board titles and descriptions, organize content logically by theme or product category, maintain board freshness with regular pins, and ensure boards align with search intent to improve overall account visibility." },
+        { "q": "Can Pinterest drive e-commerce traffic?", "a": "Yes. Pinterest is highly effective for e-commerce when optimized correctly. We focus on product pins with rich metadata, optimized board strategies for product categories, seasonal pinning aligned to shopping cycles, and conversion-focused pin descriptions that drive qualified traffic to product pages." },
+        { "q": "What's the difference between saves and clicks?", "a": "Saves indicate interest and future intent—users are bookmarking content for later. Clicks show immediate action and traffic generation. Both matter: saves improve Pinterest algorithm ranking, while clicks drive direct website traffic. We optimize for both, prioritizing clicks for traffic goals." },
+        { "q": "How do you optimize Pinterest pin descriptions for SEO?", "a": "We write keyword-rich descriptions (500+ characters when possible), use relevant keywords naturally, include brand names and product terms, add clear CTAs, and ensure descriptions accurately describe visuals to improve Pinterest search ranking and discovery." },
+        { "q": "Should I create fresh pins or repin existing content?", "a": "Fresh pins typically perform better algorithmically. We create multiple pin variations for the same content, test different designs and descriptions, and focus on original pins rather than repinning. When repinning, we optimize descriptions and ensure content fits board themes." }
       ]
     }
   },
@@ -492,10 +540,10 @@
     "painpoints": {
       "heading": "Hard to gain traction on X?",
       "items": [
-        { "icon": "🧵", "title": "Threads don't land or get bookmarked by right audience?" },
-        { "icon": "⚡", "title": "No engagement rhythm to enter relevant conversations?" },
-        { "icon": "🗣️", "title": "Weak point of view in your niche leads to low relevance?" },
-        { "icon": "📊", "title": "No learning loop to iterate topics, hooks and CTAs?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Threads don't land or get bookmarked by right audience?" },
+        { "image": "/socialMedia/icon-2.svg", "title": "No engagement rhythm to enter relevant conversations?" },
+        { "image": "/socialMedia/icon-3.svg", "title": "Weak point of view in your niche leads to low relevance?" },
+        { "image": "/socialMedia/icon-4.svg", "title": "No learning loop to iterate topics, hooks and CTAs?" }
       ]
     },
     "serviceCards": [
@@ -536,7 +584,14 @@
       "serviceName": "X Marketing",
       "faqs": [
         { "q": "Do you write threads?", "a": "Yes. We plan and write native, high‑signal threads with your POV." },
-        { "q": "Can you handle engagement?", "a": "We create reply systems to participate in relevant conversations daily." }
+        { "q": "Can you handle engagement?", "a": "We create reply systems to participate in relevant conversations daily." },
+        { "q": "How often should I post on X (Twitter)?", "a": "X rewards frequent, timely posting. We recommend 3-5 tweets per day minimum for organic growth, with more during peak engagement times. Threads can be posted 2-3 times per week. Real-time relevance matters—responding to trends and conversations quickly can boost visibility." },
+        { "q": "What makes a successful X thread?", "a": "Effective threads hook readers with the first tweet, provide clear value through numbered tips or narrative, maintain pacing across tweets, use formatting (bold, emojis) strategically, and end with a compelling CTA. We structure threads to be scannable yet engaging, optimized for both reading and bookmarking." },
+        { "q": "How do you grow followers on X organically?", "a": "Follower growth comes from consistent valuable posting, engaging authentically in relevant conversations, replying to trending topics in your niche, creating shareable threads, maintaining an opinionated POV, and building relationships through genuine interactions. Quality engagement beats follower counts." },
+        { "q": "Should I use hashtags on X?", "a": "Strategic hashtag use can help discovery, but overuse looks spammy. We use 1-2 relevant hashtags when appropriate, focus on niche-specific hashtags rather than overly broad ones, and prioritize engaging content that earns organic retweets over hashtag optimization." },
+        { "q": "How do you handle X engagement and replies?", "a": "We monitor mentions and replies daily, respond authentically to maintain conversations, engage with relevant accounts in your industry, participate in trending discussions when aligned with your brand, and use engagement to identify content opportunities and relationship-building moments." },
+        { "q": "What's the difference between X threads and regular tweets?", "a": "Threads allow deeper storytelling and value delivery, typically performing better for educational content and thought leadership. Regular tweets work for quick insights, links, and engagement. We balance both: threads for authority building, tweets for daily presence and conversation participation." },
+        { "q": "How do you measure X success?", "a": "Key metrics include impressions, engagement rate (likes, retweets, replies), profile visits, link clicks, follower growth, and most importantly, meaningful conversations and relationships built. We track which content drives profile visits and conversions to understand what resonates." }
       ]
     }
   },
@@ -554,10 +609,10 @@
     "painpoints": {
       "heading": "Stories not getting views?",
       "items": [
-        { "icon": "📽️", "title": "No fast templates to produce native stories daily?" },
-        { "icon": "📈", "title": "Low completion; viewers drop off before key CTAs?" },
-        { "icon": "🧪", "title": "No weekly tests to evolve hooks and formats?" },
-        { "icon": "⏱️", "title": "Production too slow to keep up with audience preferences?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "No fast templates to produce native stories daily?" },
+        { "image": "/socialMedia/icon-2.svg", "title": "Low completion; viewers drop off before key CTAs?" },
+        { "image": "/socialMedia/icon-3.svg", "title": "No weekly tests to evolve hooks and formats?" },
+        { "image": "/socialMedia/icon-4.svg", "title": "Production too slow to keep up with audience preferences?" }
       ]
     },
     "serviceCards": [
@@ -598,7 +653,14 @@
       "serviceName": "Snapchat Marketing",
       "faqs": [
         { "q": "Do you create story templates?", "a": "Yes. We provide reusable layouts to speed up production." },
-        { "q": "What metrics matter?", "a": "We focus on views, completion rate and subscriber growth with weekly iterations." }
+        { "q": "What metrics matter?", "a": "We focus on views, completion rate and subscriber growth with weekly iterations." },
+        { "q": "How often should I post Snapchat Stories?", "a": "Snapchat rewards daily story posting for algorithm favor. We recommend posting 3-5 story frames per day to maintain visibility and engagement. Consistency matters—daily posting signals active presence and keeps you in subscribers' daily viewing habits." },
+        { "q": "What makes Snapchat Stories engaging?", "a": "Engaging Snapchat Stories use vertical native formatting, front-load value in the first few frames, leverage Snapchat's creative tools (filters, lenses, stickers), tell sequential narratives across frames, use clear CTAs, and feel authentic to the platform's casual, behind-the-scenes culture." },
+        { "q": "How do you grow Snapchat subscribers?", "a": "Subscriber growth comes from consistent daily story posting, creating shareable content that gets screenshotted, using Snapchat's native features creatively, cross-promoting on other platforms, collaborating with other Snapchat creators, and delivering exclusive content that rewards subscribers for following." },
+        { "q": "Can Snapchat drive business results?", "a": "Yes. Snapchat works well for brands targeting Gen Z and younger Millennials. We use Stories to showcase products authentically, offer exclusive deals to subscribers, share behind-the-scenes content that builds brand affinity, and drive traffic through swipe-up links (when available) or clear call-to-action frames." },
+        { "q": "What Snapchat features should I use?", "a": "We leverage filters and lenses for branded experiences, use polls and questions for engagement, create location-based content with Geofilters, use Snapchat's creative tools to add personality, and experiment with Snapchat Spotlight for broader reach when content performs well." },
+        { "q": "How do you measure Snapchat performance?", "a": "Key metrics include story views, completion rate (how many viewers watch the full story), screenshot counts (indicates high engagement), subscriber growth, tap-through rates on CTAs, and demographic insights. We analyze which story frames retain viewers to optimize content structure." },
+        { "q": "Should I cross-post Snapchat content to other platforms?", "a": "We adapt Snapchat content for other platforms rather than reposting directly. Snapchat has a distinct aesthetic and culture—content should feel native. We create Snapchat-first content optimized for vertical viewing and engagement, then adapt the narrative for Instagram Stories, TikTok, or YouTube Shorts when appropriate." }
       ]
     }
   },
@@ -616,10 +678,10 @@
     "painpoints": {
       "heading": "Worried about missteps on Reddit?",
       "items": [
-        { "icon": "🚩", "title": "Posts removed by mods due to unclear rules or mis‑tagging?" },
-        { "icon": "🧭", "title": "Unsure of subreddit rules and expectations for brands?" },
-        { "icon": "💬", "title": "Little discussion or upvotes from target communities?" },
-        { "icon": "🛡️", "title": "Brand risk concerns around tone and transparency?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Posts removed by mods due to unclear rules or mis‑tagging?" },
+        { "image": "/socialMedia/icon-2.svg", "title": "Unsure of subreddit rules and expectations for brands?" },
+        { "image": "/socialMedia/icon-3.svg", "title": "Little discussion or upvotes from target communities?" },
+        { "image": "/socialMedia/icon-4.svg", "title": "Brand risk concerns around tone and transparency?" }
       ]
     },
     "serviceCards": [
@@ -660,7 +722,14 @@
       "serviceName": "Reddit Marketing",
       "faqs": [
         { "q": "Do you run AMAs?", "a": "Yes. We help plan, promote and moderate AMAs for positive outcomes." },
-        { "q": "How do you avoid backlash?", "a": "We engage within rules, add value first and escalate sensitively when needed." }
+        { "q": "How do you avoid backlash?", "a": "We engage within rules, add value first and escalate sensitively when needed." },
+        { "q": "How do you identify the right subreddits for my brand?", "a": "We research subreddits where your target audience actively participates, analyze subreddit rules and moderation styles, understand community culture and posting norms, identify relevant niche communities beyond obvious categories, and vet subreddits for brand participation opportunities before engagement." },
+        { "q": "What's the best way to participate on Reddit without being seen as spam?", "a": "Authentic participation means contributing value before promoting, engaging in discussions without mentioning your brand initially, following subreddit rules strictly, being transparent when sharing relevant content, and building genuine relationships with community members. We guide you to participate credibly." },
+        { "q": "How do you plan and execute AMAs?", "a": "We identify relevant subreddits open to AMAs, coordinate with moderators for approval, prepare Q&A frameworks for common questions, schedule optimal times for visibility, moderate in real-time during AMAs, and follow up on unanswered questions. AMAs require careful planning and authentic participation." },
+        { "q": "Can you track Reddit marketing ROI?", "a": "We track metrics like karma earned, comment quality and engagement, referral traffic from Reddit to your site (via UTM parameters), brand mentions and sentiment, and qualitative community feedback. Reddit ROI often includes brand awareness, thought leadership positioning, and relationship building beyond direct conversions." },
+        { "q": "What types of content work on Reddit?", "a": "Reddit favors helpful, educational content that solves problems. We focus on sharing expertise genuinely, answering questions comprehensively, providing value through guides and tips, engaging in niche discussions authentically, and creating content that addresses subreddit members' specific needs." },
+        { "q": "How do you handle negative Reddit interactions?", "a": "We respond professionally and transparently, acknowledge legitimate concerns, take conversations offline when appropriate, avoid defensive responses that escalate situations, and know when to disengage from unproductive discussions. Protecting brand reputation while maintaining authenticity is key." },
+        { "q": "Should I create my own subreddit?", "a": "Creating a branded subreddit can work for established brands with active communities, but requires sustained moderation and community building. We evaluate whether your audience would naturally gather on Reddit and provide guidance on whether a branded subreddit makes sense versus participating in existing relevant communities." }
       ]
     }
   },
@@ -678,10 +747,10 @@
     "painpoints": {
       "heading": "Creator programs not delivering?",
       "items": [
-        { "icon": "🧪", "title": "Hard to find creators who genuinely fit your audience?" },
-        { "icon": "📋", "title": "Briefs and approvals slow, causing missed windows?" },
-        { "icon": "🔗", "title": "Poor cross‑platform attribution makes results hard to prove?" },
-        { "icon": "💸", "title": "Unclear ROI and little insight into which creators to rebook?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Hard to find creators who genuinely fit your audience?" },
+        { "image": "/socialMedia/icon-2.svg", "title": "Briefs and approvals slow, causing missed windows?" },
+        { "image": "/socialMedia/icon-3.svg", "title": "Poor cross‑platform attribution makes results hard to prove?" },
+        { "image": "/socialMedia/icon-4.svg", "title": "Unclear ROI and little insight into which creators to rebook?" }
       ]
     },
     "serviceCards": [
@@ -722,7 +791,15 @@
       "serviceName": "Influencer Marketing",
       "faqs": [
         { "q": "Do you handle contracts and briefs?", "a": "Yes. We manage contracts, briefs and approvals to keep campaigns on track." },
-        { "q": "How do you track ROI?", "a": "We use unique links, promo codes and platform analytics for attribution." }
+        { "q": "How do you track ROI?", "a": "We use unique links, promo codes and platform analytics for attribution." },
+        { "q": "How do you find the right influencers for my brand?", "a": "We identify creators whose audience aligns with your target customers, analyze engagement quality (not just follower counts), vet influencers for brand fit and authenticity, check past partnership performance when available, and consider micro-influencers who often deliver higher engagement rates and better ROI." },
+        { "q": "What's the difference between macro and micro influencers?", "a": "Macro influencers (100K+ followers) offer broader reach but often lower engagement rates and higher costs. Micro-influencers (10K-100K) typically have higher engagement, more authentic relationships with audiences, and better cost efficiency for niche targeting. We recommend a mix based on campaign goals." },
+        { "q": "How much do influencer partnerships cost?", "a": "Costs vary widely by follower count, platform, and deliverables. Rates typically range from a few hundred dollars for micro-influencers to tens of thousands for macro creators. We negotiate fair rates, often package multiple creators for efficiency, and focus on ROI rather than just reach—tracking actual conversions and brand lift." },
+        { "q": "What should be included in an influencer brief?", "a": "Effective briefs include campaign objectives and key messaging, content requirements and brand guidelines, required deliverables (posts, stories, videos), usage rights and timeline, disclosure requirements (FTC compliance), performance expectations, and creative freedom allowances. We create clear briefs that set expectations while allowing creator authenticity." },
+        { "q": "How do you ensure FTC compliance for influencer partnerships?", "a": "We ensure proper disclosure requirements are met (e.g., #ad, #sponsored), include disclosure language in contracts, review content before posting to verify compliance, and stay current with FTC guidelines. Proper disclosure protects both brands and creators while maintaining transparency with audiences." },
+        { "q": "Can you manage long-term influencer relationships?", "a": "Yes. We coordinate ongoing partnerships, negotiate multi-campaign deals for better rates, develop brand ambassador programs for sustained relationships, and track long-term performance to identify creators worth investing in repeatedly. Long-term partnerships often yield better content and stronger results." },
+        { "q": "What metrics matter for influencer campaign success?", "a": "We track engagement rates (not just impressions), click-through rates on links, conversion attribution, brand lift metrics, content quality and alignment, audience demographics match, and cost per acquisition. Reach matters less than reaching the right audience with authentic messaging." },
+        { "q": "How do you handle influencer content approvals?", "a": "We establish clear approval workflows with reasonable turnaround times, provide constructive feedback that maintains creator authenticity, use approval tools to streamline processes, balance brand requirements with creator creative freedom, and ensure final content meets disclosure and quality standards before publication." }
       ]
     }
   }

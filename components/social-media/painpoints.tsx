@@ -3,8 +3,7 @@
 import Image from "next/image";
 
 type PainPointItem = {
-  icon?: string; // emoji fallback
-  image?: string; // optional image path in public/
+  image: string; // image path in public/
   title: string;
   description?: string;
 };
@@ -18,19 +17,19 @@ export default function PainPoints({
   const items: PainPointItem[] =
     data?.items ?? [
       {
-        icon: "💸",
+        image: "/socialMedia/icon-1.svg",
         title: "Lack of leads or sales from social?",
       },
       {
-        icon: "⚡",
+        image: "/socialMedia/icon-2.svg",
         title: "Struggling to keep up with trends & platforms?",
       },
       {
-        icon: "📊",
+        image: "/socialMedia/icon-3.svg",
         title: "Unsure how to measure social media ROI?",
       },
       {
-        icon: "🎨",
+        image: "/socialMedia/icon-4.svg",
         title: "Lacking creative production capabilities?",
       },
     ];
@@ -60,12 +59,8 @@ export default function PainPoints({
                   boxShadow: "0 8px 16px rgba(250, 204, 21, 0.25)",
                 }}
               >
-                <div className="mx-auto mb-4 md:mb-5 h-12 w-12 md:h-14 md:w-14 flex items-center justify-center rounded-full bg-slate-50 text-2xl">
-                  {item.image ? (
-                    <Image src={item.image} alt="" width={48} height={48} />
-                  ) : (
-                    <span>{item.icon}</span>
-                  )}
+                <div className="mx-auto mb-4 md:mb-5 h-12 w-12 md:h-14 md:w-14 flex items-center justify-center rounded-full bg-slate-50">
+                  <Image src={item.image} alt="" width={48} height={48} />
                 </div>
                 <p className="text-sm md:text-base font-bold tracking-wide uppercase text-black leading-snug">
                   {item.title}
