@@ -1,14 +1,14 @@
 {
   "content-marketing": {
     "hero": {
-      "heading": "Strategic Content Marketing Agency | Content Strategy & Creation Services",
-      "subheading": "Drive engagement, build authority, and convert visitors into customers with our proven content marketing strategies. As a leading content marketing agency, we create compelling, SEO-optimized content that resonates with your audience, establishes your brand as an industry leader, and delivers measurable results across blogs, social media, email, and video platforms."
+      "heading": "Content Marketing Services | Strategic Content Marketing Company",
+      "subheading": "Drive engagement, build authority, and convert visitors into customers with a creative marketing company you can trust. As a results-driven content marketing company, we deliver comprehensive content marketing services—strategy, creation, and distribution—that resonate with your audience and produce measurable growth across blogs, social, email, and video."
     },
     "form": {
-      "heading": "Ready to scale with Content Marketing?",
-      "content": "We develop and execute content strategies with a data-driven mindset: strategic planning, quality content creation, and performance optimization. Our comprehensive approach includes content audits, audience research, editorial calendar development, content production, and distribution strategies that deliver measurable results and sustainable growth for your business.",
-      "subContent": "We create content that speaks directly to your target audience and drives meaningful engagement. Our team specializes in understanding your audience's needs and pain points, crafting compelling narratives that resonate, and implementing sophisticated content distribution strategies to ensure your content reaches the right people at the right time.",
-      "cta": "Get a free content audit and strategy consultation to identify immediate opportunities. Our comprehensive audit covers your current content performance, content gaps, SEO opportunities, and strategic recommendations to improve engagement and conversions.",
+      "heading": "Scale with Content Marketing Services",
+      "content": "We develop and execute content strategies with a data-driven mindset: strategic planning, quality content creation, and performance optimization. As a creative marketing company, our approach includes content audits, audience research, editorial calendar development, production, and distribution strategies that deliver measurable results and sustainable growth.",
+      "subContent": "We create content that speaks directly to your target audience and drives meaningful engagement. Our team—your dedicated content marketing company—crafts compelling narratives and implements distribution strategies that ensure your content reaches the right people at the right time.",
+      "cta": "Get a free content audit and strategy consultation to identify immediate opportunities. Our audit covers performance, content gaps, SEO opportunities, and strategic recommendations to improve engagement and conversions.",
       "formHeading": "Request your free content marketing audit",
       "buttonText": "Get My Audit"
     },
@@ -34,7 +34,7 @@
         "id": "content-strategy",
         "name": "Content Strategy",
         "title": "Strategic Content Planning & Development",
-        "description": "Develop comprehensive content strategies aligned with your business goals. We create detailed editorial calendars, conduct audience research, identify content gaps, and develop strategic content plans that drive engagement, conversions, and business growth.",
+        "description": "Develop comprehensive content strategies aligned with your goals.",
         "image": "/seo/services/seo.webp",
         "link": "/content-marketing/content-strategy"
       },
@@ -42,32 +42,24 @@
         "id": "copywriting",
         "name": "Copywriting",
         "title": "Professional Copywriting Services",
-        "description": "Drive conversions with compelling copy that resonates with your audience. Our professional copywriting services create persuasive, engaging content that speaks to your audience, builds trust, and drives action across all marketing channels.",
+        "description": "Create persuasive content that drives engagement and conversions.",
         "image": "/seo/services/off-page.webp",
         "link": "/content-marketing/copywriting"
       },
       {
-        "id": "graphic-designing",
-        "name": "Graphic Designing",
-        "title": "Professional Graphic Design Services",
-        "description": "Create stunning visuals that capture attention and communicate your brand message. Our professional graphic design services deliver compelling visual content that engages audiences and builds brand recognition.",
-        "image": "/seo/services/technical.webp",
-        "link": "/content-marketing/graphic-designing"
-      },
-      {
-        "id": "video-content",
-        "name": "Video Content",
-        "title": "Professional Video Production",
-        "description": "Create compelling video content that engages and converts. Our video content services produce professional videos for marketing, social media, and promotional campaigns that tell your story and drive results.",
+        "id": "email-marketing",
+        "name": "Email Marketing",
+        "title": "Professional Email Campaign Management",
+        "description": "Plan and send targeted email campaigns that nurture and convert.",
         "image": "/seo/services/on-page.webp",
-        "link": "/content-marketing/video-content"
+        "link": "/content-marketing/email-marketing"
       }
     ],
     "content": {
-      "heading": "Quality Content + Strategic Distribution = Scalable Growth",
-      "text1": "We combine high-quality content creation with strategic distribution for maximum reach and impact. Our systematic approach to content development involves understanding your audience deeply, creating content that addresses their needs, and distributing it across the right channels at the right times to maximize engagement and conversions.",
-      "text2": "Our measurement framework ensures accurate attribution, so we can make confident decisions about content investment and strategy. We implement comprehensive analytics tracking, content performance monitoring, and detailed reporting systems that provide clear insights into what content drives engagement, leads, and revenue.",
-      "text3": "From blog posts to social media to email campaigns, we create content that engages—then amplifies that engagement through strategic distribution and optimization. Our full-funnel content approach includes awareness-building content, educational resources, conversion-focused pieces, and retention-driven communications that maximize customer lifetime value and business growth.",
+      "heading": "Content Marketing Services That Scale Growth",
+      "text1": "We combine high-quality content creation with strategic distribution for maximum reach and impact. As a strategic content marketing company, we deeply understand your audience, craft content that addresses their needs, and distribute it across the right channels at the right time to maximize engagement and conversions.",
+      "text2": "Our measurement framework ensures accurate attribution and smarter investment decisions. We implement analytics tracking, performance monitoring, and reporting systems that reveal which content drives engagement, leads, and revenue—powering better content marketing services over time.",
+      "text3": "From blog posts to social media to email campaigns, we create content that engages—then amplify results through distribution and optimization. As a creative marketing company, our full-funnel approach spans awareness, education, conversion, and retention to grow LTV and revenue.",
       "image": "hero.png",
       "alt": "Content marketing growth illustration"
     },
@@ -129,28 +121,28 @@
     },
     "serviceCards": [
       {
-        "id": "copywriting",
-        "name": "Copywriting",
-        "title": "Professional Copywriting Services",
-        "description": "Drive conversions with compelling copy that resonates.",
+        "id": "content-strategy-services",
+        "name": "Content Strategy",
+        "title": "Content Strategy Services",
+        "description": "End-to-end strategy: audits, roadmaps, calendars, KPIs, and governance.",
         "image": "/seo/services/seo.webp",
-        "link": "/content-marketing/copywriting"
+        "link": "/content-marketing/content-strategy"
       },
       {
-        "id": "graphic-designing",
-        "name": "Graphic Designing",
-        "title": "Professional Graphic Design Services",
-        "description": "Create stunning visuals that capture attention and communicate your brand.",
+        "id": "content-strategy-agency",
+        "name": "Content Strategy",
+        "title": "Content Strategy Agency",
+        "description": "Partner with specialists to plan, operationalize, and optimize content.",
         "image": "/seo/services/technical.webp",
-        "link": "/content-marketing/graphic-designing"
+        "link": "/content-marketing/content-strategy"
       },
       {
-        "id": "video-content",
-        "name": "Video Content",
-        "title": "Professional Video Production",
-        "description": "Create compelling video content that engages and converts.",
+        "id": "content-strategy-company",
+        "name": "Content Strategy",
+        "title": "Content Strategy Company",
+        "description": "Work with a company focused on measurable, scalable content outcomes.",
         "image": "/seo/services/on-page.webp",
-        "link": "/content-marketing/video-content"
+        "link": "/content-marketing/content-strategy"
       }
     ],
     "content": {
@@ -189,14 +181,14 @@
   },
   "copywriting": {
     "hero": {
-      "heading": "Professional Copywriting Services | Expert Content Writing",
-      "subheading": "Drive conversions with compelling copy that resonates. Our professional copywriting services create persuasive, engaging content that speaks to your audience, builds trust, and drives action across all marketing channels."
+      "heading": "Copywriting Services | Strategic Copywriting Agency",
+      "subheading": "Drive conversions with compelling copy that resonates. As a results-driven copywriting company, our professional copywriting services create persuasive, engaging content that speaks to your audience, builds trust, and drives action across all marketing channels."
     },
     "form": {
-      "heading": "Scale with Professional Copywriting",
-      "content": "We create conversion-focused copy that engages your audience and drives results. Our comprehensive copywriting services include content strategy, messaging development, A/B testing, and optimization to maximize engagement and conversions.",
-      "subContent": "Our expert copywriters understand your audience and craft messages that resonate. We combine persuasive writing techniques with strategic marketing insights to create copy that not only captures attention but drives meaningful business results.",
-      "cta": "Request a free copy audit and strategy consultation. Our comprehensive analysis covers your current copy performance, messaging effectiveness, conversion opportunities, and strategic recommendations to improve engagement and results.",
+      "heading": "Scale with Professional Copywriting Services",
+      "content": "We create conversion-focused copy that engages and drives results. As a strategic copywriting agency, our services include content strategy, messaging development, A/B testing, and optimization to maximize engagement and conversions.",
+      "subContent": "Partner with a copywriting company that understands your audience. We blend persuasive writing with marketing insights to craft copy that captures attention and produces measurable business outcomes across channels.",
+      "cta": "Request a free copy audit and strategy consultation. Our analysis covers performance, messaging effectiveness, conversion opportunities, and strategic recommendations to lift results.",
       "formHeading": "Free Copywriting Audit",
       "buttonText": "Get My Audit"
     },
@@ -235,19 +227,19 @@
         "link": "/content-marketing/website-copywriting"
       },
       {
-        "id": "copywriting",
-        "name": "Copywriting",
-        "title": "Professional Copywriting Services | Expert Content Writing",
-        "description": "Drive conversions with compelling copy that resonates. Our professional copywriting services create persuasive, engaging content that speaks to your audience, builds trust, and drives action across all marketing channels.",
+        "id": "ad-copywriting",
+        "name": "Ad Copywriting",
+        "title": "Ad Copywriting Services",
+        "description": "Craft high-converting ad copy for search and social campaigns.",
         "image": "/seo/services/technical.webp",
-        "link": "/content-marketing/copywriting"
+        "link": "/content-marketing/ad-copywriting"
       }
     ],
     "content": {
-      "heading": "Persuasive Copy + Strategic Messaging = Conversion Success",
-      "text1": "We create copy that combines persuasive writing with strategic messaging to drive conversions. Our systematic approach to copywriting involves deep audience research, strategic message development, conversion-focused writing, and continuous optimization based on performance data.",
-      "text2": "Our copywriting framework ensures every piece of content serves a clear business purpose. We develop messaging strategies, craft compelling copy, implement testing frameworks, and optimize based on results to ensure your marketing copy consistently drives engagement and conversions.",
-      "text3": "From website copy to email campaigns to ad creatives, we write copy that converts—then test and optimize it for maximum impact. Our comprehensive copywriting approach includes strategy development, content creation, editing and refinement, testing, and performance optimization to ensure your copy consistently delivers measurable business value.",
+      "heading": "Copywriting Services That Drive Conversion",
+      "text1": "We combine persuasive writing with strategic messaging to increase conversions. As a copywriting agency, we conduct deep audience research, develop clear value propositions, and deliver conversion-focused copy across channels.",
+      "text2": "Our framework ensures every word serves a business goal. As your copywriting company, we build messaging strategies, implement testing, and optimize based on performance to consistently lift engagement and conversion rates.",
+      "text3": "From website copy to email campaigns to ad creatives, we write copy that converts—then test and refine it for maximum impact. Our end-to-end copywriting services cover strategy, creation, editing, testing, and optimization to deliver measurable value.",
       "image": "hero.png",
       "alt": "Copywriting illustration"
     },
@@ -279,14 +271,14 @@
   },
   "graphic-designing": {
     "hero": {
-      "heading": "Professional Graphic Design Services | Creative Design Solutions",
-      "subheading": "Create stunning visuals that capture attention and communicate your brand message. Our professional graphic design services deliver compelling visual content that engages audiences, builds brand recognition, and drives marketing success across all channels."
+      "heading": "Graphic Designing Services | Creative Graphic Designing Company",
+      "subheading": "Create stunning visuals that capture attention and communicate your brand message. As a results-driven graphic designing agency, our professional graphic designing services deliver compelling visual content that engages audiences, builds recognition, and drives marketing success across channels."
     },
     "form": {
-      "heading": "Scale with Professional Graphic Design",
-      "content": "We create visually compelling designs that enhance your brand and drive engagement. Our comprehensive graphic design services include brand identity, marketing materials, digital graphics, and creative assets that communicate your message effectively and attract your target audience.",
-      "subContent": "Our talented designers combine creativity with strategic thinking to produce designs that not only look great but serve clear business objectives. We ensure every design element supports your brand message, enhances user experience, and drives desired marketing outcomes.",
-      "cta": "Request a free design audit and consultation. Our comprehensive analysis covers your current visual assets, brand consistency, design effectiveness, and strategic recommendations to improve visual communication and brand recognition.",
+      "heading": "Scale with Professional Graphic Designing Services",
+      "content": "We create visually compelling designs that enhance your brand and drive engagement. As a creative graphic designing company, our services include brand identity, marketing materials, digital graphics, and assets that communicate your message and attract your audience.",
+      "subContent": "Partner with a graphic designing agency that blends creativity with strategy. We ensure every element supports your brand message, improves user experience, and drives measurable marketing outcomes across channels.",
+      "cta": "Request a free design audit and consultation. We review your visual assets, brand consistency, design effectiveness, and share strategic recommendations to improve communication and recognition.",
       "formHeading": "Free Graphic Design Audit",
       "buttonText": "Get My Audit"
     },
@@ -334,10 +326,10 @@
       }
     ],
     "content": {
-      "heading": "Creative Design + Strategic Thinking = Visual Success",
-      "text1": "We create designs that combine creative excellence with strategic thinking to drive marketing success. Our systematic approach to graphic design involves understanding business objectives, developing creative concepts, refining based on feedback, and optimizing for maximum visual impact and brand effectiveness.",
-      "text2": "Our design framework ensures every visual element serves a clear purpose. We develop brand-aligned designs, create compelling visuals, optimize for different channels, and measure performance to ensure your graphics consistently enhance brand recognition and drive marketing results.",
-      "text3": "From logos to marketing materials to digital graphics, we design visuals that capture attention—then optimize and adapt them for maximum impact across all channels. Our comprehensive graphic design approach includes strategy development, creative execution, refinement, delivery, and performance analysis to ensure your visual assets consistently deliver measurable brand and marketing value.",
+      "heading": "Graphic Designing Services That Elevate Your Brand",
+      "text1": "We deliver designs that blend creative excellence with strategic thinking. As a graphic designing agency, we align with your business objectives, develop strong concepts, iterate with feedback, and optimize for maximum impact and brand effectiveness.",
+      "text2": "Our framework ensures every visual element has purpose. As your graphic designing company, we create brand-aligned visuals, optimize for channels, and measure performance so your graphics consistently build recognition and drive results.",
+      "text3": "From logos to marketing materials to digital graphics, our graphic designing services capture attention—then get refined for maximum impact across channels. Our approach includes strategy, creative execution, refinement, delivery, and performance analysis to deliver measurable brand value.",
       "image": "hero.png",
       "alt": "Graphic design illustration"
     },
@@ -369,14 +361,14 @@
   },
   "video-editing": {
     "hero": {
-      "heading": "Professional Video Editing Services | Expert Video Production",
-      "subheading": "Transform raw footage into compelling video content that engages and converts. Our professional video editing services create polished, impactful videos that tell your story, showcase your brand, and drive marketing results across all platforms."
+      "heading": "Video Editing Services | Expert Video Editing Company",
+      "subheading": "Transform raw footage into compelling video content that engages and converts. As a results-driven video editing agency, our professional video editing services create polished, impactful videos that tell your story, showcase your brand, and drive marketing results across platforms."
     },
     "form": {
-      "heading": "Scale with Professional Video Editing",
-      "content": "We transform your video footage into professional content that captivates audiences. Our comprehensive video editing services include color grading, motion graphics, sound design, transitions, and optimization to create videos that engage viewers and drive marketing objectives.",
-      "subContent": "Our expert editors combine technical skill with creative storytelling to produce videos that resonate. We ensure every edit enhances your message, maintains viewer engagement, and supports your brand while optimizing content for different platforms and viewing contexts.",
-      "cta": "Request a free video editing consultation and portfolio review. Our team analyzes your raw footage, discusses your objectives, and provides strategic recommendations to maximize the impact of your video content.",
+      "heading": "Scale with Professional Video Editing Services",
+      "content": "We transform your footage into professional content that captivates. As a strategic video editing company, our services include color grading, motion graphics, sound design, transitions, and optimization to drive your marketing objectives.",
+      "subContent": "Partner with a video editing agency that blends technical skill and storytelling. We ensure every edit enhances your message, maintains engagement, supports your brand, and is optimized for each platform and viewing context.",
+      "cta": "Request a free video editing consultation and portfolio review. We assess your footage, discuss objectives, and share recommendations to maximize your video's impact.",
       "formHeading": "Free Video Editing Consultation",
       "buttonText": "Get My Consultation"
     },
@@ -424,10 +416,10 @@
       }
     ],
     "content": {
-      "heading": "Expert Editing + Creative Enhancement = Video Success",
-      "text1": "We transform raw footage into compelling video content through professional editing and creative enhancement. Our systematic approach to video editing involves understanding objectives, assembling engaging narratives, enhancing with creative elements, optimizing for platforms, and delivering professional results that drive marketing success.",
-      "text2": "Our editing framework ensures every video serves clear communication and marketing objectives. We create engaging narratives, enhance with professional polish, optimize for different platforms, and analyze performance to ensure your videos consistently captivate audiences and drive measurable results.",
-      "text3": "From marketing videos to social media content to product demonstrations, we edit footage that engages—then enhance and optimize it for maximum impact. Our comprehensive video editing approach includes strategic planning, professional editing, creative enhancement, optimization, and delivery to ensure your video content consistently delivers professional quality and marketing value.",
+      "heading": "Video Editing Services That Drive Results",
+      "text1": "We turn raw footage into compelling content with professional editing and creative enhancement. As a video editing agency, we align to objectives, assemble engaging narratives, add creative elements, and optimize for each platform.",
+      "text2": "Our framework ensures every video supports clear marketing goals. As your video editing company, we enhance with professional polish, optimize for channels, and analyze performance to consistently captivate audiences and drive measurable results.",
+      "text3": "From marketing videos to social content to product demos, our video editing services engage viewers—then get refined for maximum impact. Our end-to-end approach includes planning, editing, enhancement, optimization, and delivery for consistent quality and value.",
       "image": "hero.png",
       "alt": "Video editing illustration"
     },
@@ -459,14 +451,14 @@
   },
   "photo-shoot": {
     "hero": {
-      "heading": "Professional Photo Shoot Services | Expert Photography",
-      "subheading": "Capture stunning images that showcase your brand and products. Our professional photo shoot services deliver high-quality photography that elevates your marketing materials, builds brand recognition, and drives engagement across all channels."
+      "heading": "Photo Shoot Services | Professional Photo Shoot Company",
+      "subheading": "Capture stunning images that showcase your brand and products. As a results-driven photo shoot agency, our professional photo shoot services deliver high-quality photography that elevates your marketing materials, builds recognition, and drives engagement across channels."
     },
     "form": {
-      "heading": "Scale with Professional Photography",
-      "content": "We create compelling visual content through professional photo shoots. Our comprehensive photography services include product photography, brand photography, event coverage, and lifestyle photography that captures your brand essence and drives marketing success.",
-      "subContent": "Our experienced photographers combine technical expertise with creative vision to produce images that resonate. We ensure every photo shoot captures the right mood, showcases products effectively, and creates visual assets that support your brand and marketing objectives.",
-      "cta": "Request a free photography consultation and portfolio review. Our team discusses your vision, reviews requirements, and provides strategic recommendations to maximize the impact of your photo shoot.",
+      "heading": "Scale with Professional Photo Shoot Services",
+      "content": "We create compelling visual content through professional photo shoots. As a dedicated photo shoot company, we cover product, brand, event, and lifestyle photography that captures your essence and drives marketing success.",
+      "subContent": "Partner with a photo shoot agency that blends technical expertise and creative vision. We ensure each session captures the right mood, showcases products effectively, and delivers assets that support your brand objectives.",
+      "cta": "Request a free photography consultation and portfolio review. We discuss your vision, review requirements, and share strategic recommendations to maximize your shoot's impact.",
       "formHeading": "Free Photography Consultation",
       "buttonText": "Get My Consultation"
     },
@@ -514,10 +506,10 @@
       }
     ],
     "content": {
-      "heading": "Professional Photography + Creative Vision = Visual Success",
-      "text1": "We create compelling visual content through professional photography and creative vision. Our systematic approach to photo shoots involves understanding objectives, planning sessions, conducting professional photography, editing for quality, and delivering optimized images that drive marketing success.",
-      "text2": "Our photography framework ensures every image serves clear marketing and brand objectives. We create professional photos, maintain brand consistency, optimize for different uses, and analyze performance to ensure your visual assets consistently enhance brand recognition and drive engagement.",
-      "text3": "From product photography to brand shoots to event coverage, we capture images that engage—then edit and optimize them for maximum impact. Our comprehensive photography approach includes planning, professional shooting, post-production, and delivery to ensure your visual content consistently delivers professional quality and marketing value.",
+      "heading": "Photo Shoot Services That Elevate Your Brand",
+      "text1": "We deliver compelling visual content through professional photography and creative direction. As a photo shoot agency, we align to objectives, plan sessions, shoot professionally, edit for quality, and deliver assets optimized for results.",
+      "text2": "Our framework ensures every image serves clear marketing goals. As your photo shoot company, we maintain brand consistency, optimize for use cases, and analyze performance so your visuals consistently build recognition and engagement.",
+      "text3": "From product photography to brand shoots to events, our photo shoot services capture images that engage—then get refined for maximum impact. Our approach includes planning, shooting, post-production, and delivery for consistent quality and value.",
       "image": "hero.png",
       "alt": "Photo shoot illustration"
     },
@@ -549,14 +541,14 @@
   },
   "video-shoot": {
     "hero": {
-      "heading": "Professional Video Shoot Services | Expert Video Production",
-      "subheading": "Create compelling video content through professional video production. Our video shoot services deliver high-quality video content that tells your story, showcases your brand, and drives marketing results across all platforms."
+      "heading": "Video Shoot & Editing Services | Professional Video Shoot Company",
+      "subheading": "Create compelling video content with a video shoot agency you can trust. Our video shoot & editing services deliver high-quality content that tells your story, showcases your brand, and drives results across platforms."
     },
     "form": {
-      "heading": "Scale with Professional Video Production",
-      "content": "We produce compelling video content through professional video shoots. Our comprehensive video production services include commercial filming, product videos, brand videos, event coverage, and more that engage audiences and drive marketing success.",
-      "subContent": "Our experienced videographers combine technical expertise with creative storytelling to produce videos that resonate. We ensure every video shoot captures the right footage, tells compelling stories, and creates visual content that supports your brand and marketing objectives.",
-      "cta": "Request a free video production consultation. Our team discusses your vision, reviews requirements, and provides strategic recommendations to maximize the impact of your video shoot.",
+      "heading": "Scale with Video Shoot & Editing Services",
+      "content": "We produce compelling video content end-to-end. As a video shoot company, we handle commercial filming, product and brand videos, events, and post-production editing that engage audiences and drive marketing success.",
+      "subContent": "Partner with a video shoot agency that blends technical expertise and creative storytelling. We capture the right footage, craft compelling narratives, and deliver polished edits aligned with your brand objectives.",
+      "cta": "Request a free video production consultation. We discuss your vision, review requirements, and share strategic recommendations to maximize the impact of your shoot.",
       "formHeading": "Free Video Production Consultation",
       "buttonText": "Get My Consultation"
     },
@@ -604,10 +596,10 @@
       }
     ],
     "content": {
-      "heading": "Professional Production + Creative Vision = Video Success",
-      "text1": "We create compelling video content through professional video production and creative vision. Our systematic approach to video shoots involves understanding objectives, planning pre-production, conducting professional filming, post-production editing, and delivering optimized videos that drive marketing success.",
-      "text2": "Our video production framework ensures every video serves clear marketing and brand objectives. We create professional video content, maintain brand consistency, optimize for different platforms, and analyze performance to ensure your videos consistently enhance brand recognition and drive engagement.",
-      "text3": "From commercial videos to product demonstrations to brand stories, we produce videos that engage—then edit and optimize them for maximum impact. Our comprehensive video production approach includes pre-production, professional filming, post-production, and delivery to ensure your video content consistently delivers professional quality and marketing value.",
+      "heading": "Video Shoot & Editing Services That Drive Results",
+      "text1": "We plan, shoot, and edit videos that achieve your goals. As a video shoot agency, we align on objectives, lead pre-production, film professionally, and deliver edits optimized for each platform.",
+      "text2": "Our framework ensures every asset supports clear marketing outcomes. As your video shoot company, we maintain brand consistency, optimize for channels, and analyze performance to maximize engagement and ROI.",
+      "text3": "From commercials to product demos to brand stories, our video shoot & editing services produce content that engages—then we refine it for maximum impact. Our approach spans pre-production, filming, post-production, and delivery for consistent quality and value.",
       "image": "hero.png",
       "alt": "Video shoot illustration"
     },
@@ -639,14 +631,14 @@
   },
   "infographic-design": {
     "hero": {
-      "heading": "Infographic Design Services | Visual Data Communication",
-      "subheading": "Transform complex information into engaging visual stories. Our infographic design services create compelling visual content that simplifies complex data, communicates messages clearly, and drives engagement across all marketing channels."
+      "heading": "Infographic Design Services | Expert Infographic Design Agency",
+      "subheading": "Transform complex information into engaging visual stories with a trusted infographic design company. Our infographic design services simplify complex data, communicate messages clearly, and drive engagement across marketing channels."
     },
     "form": {
-      "heading": "Scale with Infographic Design",
-      "content": "We create visually compelling infographics that communicate your message effectively. Our comprehensive infographic design services include data visualization, information design, and visual storytelling that engage audiences and drive marketing success.",
-      "subContent": "Our talented designers transform complex information into accessible visual content. We combine data analysis with creative design to produce infographics that not only look great but effectively communicate information and support your marketing objectives.",
-      "cta": "Request a free infographic design consultation. Our team analyzes your information, discusses visual approaches, and provides strategic recommendations to maximize the impact of your infographic content.",
+      "heading": "Scale with Infographic Design Services",
+      "content": "We create compelling infographics that communicate your message effectively. As an infographic design agency, our services span data visualization, information design, and visual storytelling that engage audiences and drive results.",
+      "subContent": "Work with an infographic design company that blends data analysis with creative design. We produce infographics that look great, communicate clearly, and support your marketing objectives across channels.",
+      "cta": "Request a free infographic design consultation. We analyze your information, discuss visual approaches, and share recommendations to maximize impact.",
       "formHeading": "Free Infographic Consultation",
       "buttonText": "Get My Consultation"
     },
@@ -694,10 +686,10 @@
       }
     ],
     "content": {
-      "heading": "Visual Design + Data Analysis = Communication Success",
-      "text1": "We create compelling infographics that combine visual design with data analysis to communicate effectively. Our systematic approach to infographic design involves understanding information, developing visual concepts, refining based on feedback, optimizing for different uses, and delivering designs that drive marketing success.",
-      "text2": "Our infographic framework ensures every visual element serves clear communication objectives. We create engaging designs, ensure information clarity, optimize for different platforms, and analyze performance to ensure your infographics consistently communicate effectively and drive engagement.",
-      "text3": "From data visualizations to process diagrams to information graphics, we design infographics that communicate—then optimize and adapt them for maximum impact. Our comprehensive infographic design approach includes data analysis, concept development, creative design, optimization, and delivery to ensure your visual content consistently delivers effective communication and marketing value.",
+      "heading": "Infographic Design Services That Communicate Clearly",
+      "text1": "We create infographics that combine visual design with data analysis to communicate effectively. As an infographic design agency, we understand your information, develop visual concepts, iterate with feedback, and optimize for use cases.",
+      "text2": "Our framework ensures every visual serves clear objectives. As your infographic design company, we ensure clarity, optimize for platforms, and analyze performance so your infographics consistently drive engagement and understanding.",
+      "text3": "From data visualizations to process diagrams to information graphics, our infographic design services deliver clarity—then we refine and adapt for maximum impact. Our approach covers analysis, concepting, design, optimization, and delivery for consistent marketing value.",
       "image": "hero.png",
       "alt": "Infographic design illustration"
     },
@@ -729,14 +721,14 @@
   },
   "website-copywriting": {
     "hero": {
-      "heading": "Website Copywriting Services | Professional Web Content",
-      "subheading": "Create compelling website copy that converts visitors into customers. Our website copywriting services craft persuasive, SEO-optimized content that engages visitors, communicates your value proposition, and drives conversions."
+      "heading": "Website Copywriting Services | Strategic Website Copywriting Agency",
+      "subheading": "Create compelling website copy that converts visitors into customers. As a results-driven website copywriting company, our website copywriting services craft persuasive, SEO-optimized content that communicates value and drives conversions."
     },
     "form": {
-      "heading": "Scale with Professional Website Copy",
-      "content": "We create conversion-focused website copy that engages visitors and drives results. Our comprehensive website copywriting services include homepage copy, service pages, product descriptions, and more that effectively communicate your brand and drive business objectives.",
-      "subContent": "Our expert copywriters understand web user behavior and craft copy that guides visitors through your site. We combine persuasive writing with strategic messaging to create website content that not only captures attention but drives meaningful business results.",
-      "cta": "Request a free website copy audit. Our comprehensive analysis covers your current website content, conversion opportunities, messaging effectiveness, and strategic recommendations to improve engagement and conversions.",
+      "heading": "Scale with Website Copywriting Services",
+      "content": "We create conversion-focused website copy that engages and drives results. As a strategic website copywriting agency, we deliver homepage copy, service pages, product descriptions, and more to communicate your brand and meet business objectives.",
+      "subContent": "Work with a website copywriting company that understands user behavior. We blend persuasive writing with strategic messaging to guide visitors and produce measurable outcomes across your site.",
+      "cta": "Request a free website copy audit. We review content performance, conversion opportunities, messaging effectiveness, and share recommendations to lift engagement and conversions.",
       "formHeading": "Free Website Copy Audit",
       "buttonText": "Get My Audit"
     },
@@ -775,19 +767,19 @@
         "link": "/content-marketing/copywriting"
       },
       {
-        "id": "copywriting",
-        "name": "Copywriting",
-        "title": "Professional Copywriting Services | Expert Content Writing",
-        "description": "Drive conversions with compelling copy that resonates. Our professional copywriting services create persuasive, engaging content that speaks to your audience, builds trust, and drives action across all marketing channels.",
+        "id": "ad-copywriting",
+        "name": "Ad Copywriting",
+        "title": "Ad Copywriting Services",
+        "description": "Create persuasive ad copy for paid campaigns across platforms.",
         "image": "/seo/services/technical.webp",
-        "link": "/content-marketing/copywriting"
+        "link": "/content-marketing/ad-copywriting"
       }
     ],
     "content": {
-      "heading": "Persuasive Copy + Strategic Messaging = Website Success",
-      "text1": "We create website copy that combines persuasive writing with strategic messaging to drive conversions. Our systematic approach to website copywriting involves understanding user journeys, developing conversion-focused content, optimizing for SEO, testing performance, and continuously refining to ensure maximum impact.",
-      "text2": "Our website copy framework ensures every page serves clear business objectives. We develop compelling content, optimize for search engines, enhance user experience, and measure performance to ensure your website copy consistently engages visitors and drives measurable results.",
-      "text3": "From homepage to service pages to product descriptions, we write website copy that converts—then test and optimize it for maximum impact. Our comprehensive website copywriting approach includes strategy development, content creation, SEO optimization, testing, and performance analysis to ensure your website content consistently delivers measurable business value.",
+      "heading": "Website Copywriting Services That Convert",
+      "text1": "We combine persuasive writing with strategic messaging to increase conversions. As a website copywriting agency, we map user journeys, develop conversion-focused content, and optimize for SEO to maximize impact.",
+      "text2": "Our framework ensures every page serves business goals. As your website copywriting company, we create compelling content, enhance UX, and measure performance to consistently engage visitors and drive results.",
+      "text3": "From homepage to service pages to product descriptions, our website copywriting services deliver copy that converts—then we test and refine it for maximum impact across your site.",
       "image": "hero.png",
       "alt": "Website copywriting illustration"
     },
@@ -857,20 +849,20 @@
         "link": "/content-marketing/website-copywriting"
       },
       {
-        "id": "copywriting",
-        "name": "Copywriting",
-        "title": "Professional Copywriting Services",
-        "description": "Drive conversions with compelling copy that resonates.",
-        "image": "/seo/services/off-page.webp",
-        "link": "/content-marketing/copywriting"
+        "id": "ad-copywriting",
+        "name": "Ad Copywriting",
+        "title": "Ad Copywriting Services",
+        "description": "Create persuasive ad copy for paid campaigns across platforms.",
+        "image": "/seo/services/technical.webp",
+        "link": "/content-marketing/ad-copywriting"
       },
       {
-        "id": "video-content",
-        "name": "Video Content",
-        "title": "Video Content Services | Professional Video Production",
-        "description": "Create compelling video content that engages and converts. Our video content services produce professional videos for marketing, social media, and promotional campaigns that tell your story and drive results.",
-        "image": "/seo/services/technical.webp",
-        "link": "/content-marketing/video-content"
+        "id": "email-marketing",
+        "name": "Email Marketing",
+        "title": "Professional Email Campaign Management",
+        "description": "Write email sequences that nurture leads and drive revenue.",
+        "image": "/seo/services/off-page.webp",
+        "link": "/content-marketing/email-marketing"
       }
     ],
     "content": {
@@ -1299,28 +1291,28 @@
     },
     "serviceCards": [
       {
-        "id": "video-content",
-        "name": "Video Content",
-        "title": "Video Content Services | Professional Video Production",
-        "description": "Create compelling video content that engages and converts. Our video content services produce professional videos for marketing, social media, and promotional campaigns that tell your story and drive results.",
-        "image": "/seo/services/seo.webp",
-        "link": "/content-marketing/video-content"
-      },
-      {
         "id": "copywriting",
         "name": "Copywriting",
         "title": "Professional Copywriting Services",
-        "description": "Drive conversions with compelling copy that resonates.",
+        "description": "Craft compelling copy for newsletters and lifecycle emails.",
         "image": "/seo/services/off-page.webp",
         "link": "/content-marketing/copywriting"
       },
       {
-        "id": "content-strategy",
-        "name": "Content Strategy",
-        "title": "Strategic Content Planning & Development",
-        "description": "Develop comprehensive content strategies aligned with your business goals.",
+        "id": "data-and-analytics",
+        "name": "Data and Analytics",
+        "title": "Marketing Analytics & Insights",
+        "description": "Measure deliverability, engagement, and conversion performance.",
+        "image": "/seo/services/seo.webp",
+        "link": "/content-marketing/data-and-analytics"
+      },
+      {
+        "id": "reporting-and-dashboards",
+        "name": "Reporting and Dashboards",
+        "title": "Custom Reporting & Dashboard Services",
+        "description": "Build dashboards to monitor email KPIs and ROI.",
         "image": "/seo/services/technical.webp",
-        "link": "/content-marketing/content-strategy"
+        "link": "/content-marketing/reporting-and-dashboards"
       }
     ],
     "content": {
