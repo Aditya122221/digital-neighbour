@@ -548,6 +548,14 @@ const Navbar: React.FC = () => {
                               key={service.name}
                               href={(() => {
                                 const name = service.name.toLowerCase().replace(/\s+/g, '-');
+                                // Map Web & App Development -> /web-development slugs
+                                const webDevSlugMap: Record<string, string> = {
+                                  'e-commerce-web-development': 'ecommerce-development',
+                                  'front-end-development': 'web-app-development',
+                                  'back-end-development': 'web-app-development',
+                                  'cms-integration': 'website-development',
+                                  'custom-web-development': 'web-development',
+                                };
                                 const seoSlugs = new Set([
                                   'search-engine-optimisation',
                                   'local-seo',
@@ -624,6 +632,10 @@ const Navbar: React.FC = () => {
                                   };
                                   const slug = slugMap[name] || name;
                                   return `/social-media-marketing/${slug}`;
+                                }
+                                // Web development routes
+                                if (webDevSlugMap[name]) {
+                                  return `/web-development/${webDevSlugMap[name]}`;
                                 }
                                 if (contentMarketingSlugs.has(name)) {
                                   const slug = name;
@@ -757,6 +769,13 @@ const Navbar: React.FC = () => {
                                 key={service.name}
                                 href={(() => {
                                   const name = service.name.toLowerCase().replace(/\s+/g, '-');
+                                  const webDevSlugMap: Record<string, string> = {
+                                    'e-commerce-web-development': 'ecommerce-development',
+                                    'front-end-development': 'web-app-development',
+                                    'back-end-development': 'web-app-development',
+                                    'cms-integration': 'website-development',
+                                    'custom-web-development': 'web-development',
+                                  };
                                   const seoSlugs = new Set([
                                     'search-engine-optimisation',
                                     'local-seo',
@@ -813,6 +832,9 @@ const Navbar: React.FC = () => {
                                     };
                                     const slug = slugMap[name] || name;
                                     return `/social-media-marketing/${slug}`;
+                                  }
+                                  if (webDevSlugMap[name]) {
+                                    return `/web-development/${webDevSlugMap[name]}`;
                                   }
                                   if (contentMarketingSlugs.has(name)) {
                                     const slug = name;

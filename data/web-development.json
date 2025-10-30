@@ -1,0 +1,47 @@
+{
+  "web-development": {
+    "hero": {
+      "heading": "High-Performance Web Development",
+      "subheading": "We design, build, and scale fast, secure, and conversion-focused websites and web apps."
+    },
+    "form": {
+      "heading": "Need a high-performing website?",
+      "content": "From landing pages to complex web applications, we build scalable, fast, and SEO-friendly experiences.",
+      "subContent": "Get a free website audit and actionable recommendations for performance, UX, and conversions.",
+      "cta": "We’ll review your stack, identify bottlenecks, and outline a roadmap for improvement.",
+      "formHeading": "Boost Your Website's Performance with a Comprehensive Site Audit",
+      "buttonText": "Get My Audit"
+    },
+    "services": "Web Development"
+  },
+  "website-development": {
+    "hero": {
+      "heading": "Website Development",
+      "subheading": "Modern, responsive, and maintainable websites that convert."
+    },
+    "services": "Website Development"
+  },
+  "web-app-development": {
+    "hero": {
+      "heading": "Web App Development",
+      "subheading": "Robust, scalable applications built with modern frameworks and best practices."
+    },
+    "services": "Web App Development"
+  },
+  "ecommerce-development": {
+    "hero": {
+      "heading": "eCommerce Development",
+      "subheading": "High-converting storefronts, optimized checkout, and seamless integrations."
+    },
+    "services": "eCommerce Development"
+  },
+  "landing-page-development": {
+    "hero": {
+      "heading": "Landing Page Development",
+      "subheading": "Pixel-perfect landing pages engineered for speed and conversions."
+    },
+    "services": "Landing Page Development"
+  }
+}
+
+
