@@ -1,0 +1,895 @@
+{
+"hosting-it-security": {
+  "hero": {
+    "heading": "Hosting & IT Security Services",
+    "subheading": "Reliable, secure, and high-performance hosting solutions backed by robust IT security measures to keep your digital assets always protected and online."
+  },
+  "introParagraph": {
+    "heading": "Secure Hosting, Seamless Performance",
+    "problemStatement": "Managing hosting infrastructure and ensuring website security can be complex. Slow loading times, downtime, and vulnerabilities put your business at risk and damage customer trust.",
+    "valueProposition": "We deliver fast, reliable hosting paired with enterprise-grade IT security. From cloud hosting and server management to SSL setup and malware protection, our experts ensure your website runs smoothly and securely—24/7."
+  },
+  "painPoints": {
+    "heading": "Hosting & Security Challenges, Solved",
+    "subheading": "We handle every challenge that comes with hosting and IT protection:",
+    "painPoints": [
+      {
+        "problem": "Frequent downtime or server crashes impacting business continuity and customer trust.",
+        "solution": "We provide high-availability hosting environments with proactive monitoring, load balancing, and automated failover to ensure maximum uptime and performance."
+      },
+      {
+        "problem": "Websites becoming targets of malware, DDoS attacks, or data breaches.",
+        "solution": "Our multi-layered security includes web application firewalls (WAF), malware scanning, intrusion detection, and threat mitigation to keep your assets safe from evolving cyber threats."
+      },
+      {
+        "problem": "Difficulty choosing the right hosting type or scaling as business needs grow.",
+        "solution": "We assess your business goals and recommend the right hosting—shared, VPS, dedicated, or cloud—ensuring scalability, cost efficiency, and optimal performance."
+      },
+      {
+        "problem": "SSL configuration and certificate renewals causing technical headaches and downtime.",
+        "solution": "We handle end-to-end SSL setup—DV, OV, or EV certificates—with automated renewal and HTTPS enforcement to maintain secure, trusted connections."
+      },
+      {
+        "problem": "Slow website performance and latency affecting SEO and user experience.",
+        "solution": "Our optimized hosting stack with CDN integration, caching, and SSD servers ensures lightning-fast website load times and smooth performance across all devices."
+      }
+    ]
+  },
+  "keyBenefits": {
+    "heading": "Hosting & Security Advantages",
+    "subheading": "Speed, security, and reliability—all in one complete solution:",
+    "benefits": [
+      {
+        "title": "99.99% Uptime Guarantee",
+        "description": "Our robust hosting infrastructure ensures your website stays online and accessible around the clock, backed by proactive monitoring and maintenance."
+      },
+      {
+        "title": "Advanced Threat Protection",
+        "description": "Defend your site from malware, DDoS, and unauthorized access with cutting-edge firewalls, scanning, and security protocols."
+      },
+      {
+        "title": "Scalable Hosting Solutions",
+        "description": "Easily scale your resources up or down based on your traffic needs—without downtime or performance loss."
+      },
+      {
+        "title": "Comprehensive SSL Management",
+        "description": "We set up and manage SSL certificates (DV, OV, EV) to encrypt user data and build customer trust through secure HTTPS connections."
+      },
+      {
+        "title": "Expert Maintenance & Support",
+        "description": "Our team provides 24/7 monitoring, regular backups, patch management, and emergency response to keep your systems secure and running efficiently."
+      }
+    ]
+  },
+  "form": {
+    "heading": "Secure Your Website & Hosting Today",
+    "content": "Protect your digital assets with our fully managed hosting and IT security solutions. From server setup to continuous protection, we handle it all.",
+    "subContent": "Get a free consultation on the right hosting plan, SSL setup, or website security package for your business.",
+    "cta": "Let's discuss your hosting and security needs.",
+    "formHeading": "Get a Free Hosting & Security Consultation",
+    "buttonText": "Get My Consultation"
+  },
+  "content": {
+    "heading": "Reliable Hosting with Uncompromised Security",
+    "text1": "Our hosting and IT security services are designed to deliver blazing-fast performance and unmatched protection. Whether you need shared, VPS, dedicated, or cloud hosting, we ensure seamless uptime and scalability.",
+    "text2": "We secure your website with enterprise-grade protection—SSL certificates, WAF setup, malware removal, and constant monitoring—so you can focus on growing your business without worrying about security breaches.",
+    "text3": "From data migration to cloud management and regular maintenance, our team handles every aspect of hosting and IT security to keep your infrastructure safe, stable, and efficient.",
+    "image": "hosting-security.jpg",
+    "alt": "Hosting and IT Security Services"
+  },
+  "services": "Hosting & IT Security",
+  "process": {
+    "steps": [
+      "Hosting Assessment & Planning",
+      "Server Setup & Configuration",
+      "Security Hardening & SSL Setup",
+      "Performance Optimization",
+      "Monitoring & Maintenance"
+    ],
+    "content": [
+      "We begin by assessing your website, business requirements, and traffic load to identify the ideal hosting solution and security needs.",
+      "Our team sets up your hosting environment—shared, VPS, dedicated, or cloud—optimized for speed, stability, and scalability.",
+      "We implement advanced security layers including SSL certificates, WAF, malware scanning, and firewall rules for full protection.",
+      "Performance optimization ensures minimal latency and fast load times through caching, CDN integration, and resource allocation.",
+      "We provide continuous monitoring, backups, and maintenance to keep your servers and websites secure, up-to-date, and performing optimally."
+    ]
+  },
+  "serviceCards": [
+    {
+      "id": "web-hosting",
+      "name": "Web Hosting",
+      "title": "Web Hosting",
+      "description": "Reliable, high-speed hosting solutions for websites of all sizes with 99.99% uptime and global CDN support.",
+      "image": "/hosting/web-hosting.webp"
+    },
+    {
+      "id": "wordpress-hosting",
+      "name": "WordPress Hosting",
+      "title": "WordPress Hosting",
+      "description": "Optimized hosting environment for WordPress sites with fast load times, automatic updates, and enhanced security.",
+      "image": "/hosting/wordpress-hosting.webp"
+    },
+    {
+      "id": "email-hosting",
+      "name": "Email Hosting",
+      "title": "Email Hosting",
+      "description": "Professional and secure email hosting solutions with spam protection, encryption, and custom domain setup.",
+      "image": "/hosting/email-hosting.webp"
+    },
+    {
+      "id": "reseller-hosting",
+      "name": "Reseller Hosting",
+      "title": "Reseller Hosting",
+      "description": "Build your own hosting business with our scalable and white-labeled reseller hosting solutions.",
+      "image": "/hosting/reseller-hosting.webp"
+    },
+    {
+      "id": "ecommerce-hosting",
+      "name": "E-commerce Hosting",
+      "title": "E-commerce Hosting",
+      "description": "High-performance hosting tailored for online stores with SSL, PCI compliance, and fast checkout speeds.",
+      "image": "/hosting/ecommerce-hosting.webp"
+    },
+    {
+      "id": "dedicated-servers",
+      "name": "Dedicated Servers",
+      "title": "Dedicated Servers",
+      "description": "Exclusive resources and complete control with fully managed or unmanaged dedicated server solutions.",
+      "image": "/hosting/dedicated-servers.webp"
+    },
+    {
+      "id": "windows-vps",
+      "name": "Windows Virtual Servers",
+      "title": "Windows Virtual Servers",
+      "description": "Powerful Windows-based VPS hosting with RDP access, robust performance, and full administrative control.",
+      "image": "/hosting/windows-vps.webp"
+    },
+    {
+      "id": "linux-servers",
+      "name": "Linux Servers",
+      "title": "Linux Servers",
+      "description": "Secure and scalable Linux server hosting optimized for developers, enterprises, and web applications.",
+      "image": "/hosting/linux-servers.webp"
+    },
+    {
+      "id": "vps-hosting",
+      "name": "VPS Shared Hosting",
+      "title": "VPS Shared Hosting Services",
+      "description": "Flexible VPS hosting that bridges the gap between shared and dedicated servers, balancing performance and cost.",
+      "image": "/hosting/vps-shared.webp"
+    },
+    {
+      "id": "cloud-hosting",
+      "name": "Cloud Hosting & Management",
+      "title": "Cloud Hosting & Management",
+      "description": "Scalable cloud infrastructure with 24/7 management, backup, and monitoring across AWS, Azure, and Google Cloud.",
+      "image": "/hosting/cloud-hosting.webp"
+    },
+    {
+      "id": "dedicated-hosting",
+      "name": "Dedicated Hosting Services",
+      "title": "Dedicated Hosting Services",
+      "description": "Custom-built dedicated hosting solutions with full control, maximum performance, and zero resource sharing.",
+      "image": "/hosting/dedicated-hosting.webp"
+    },
+    {
+      "id": "aws-hosting",
+      "name": "AWS Hosting Solutions",
+      "title": "AWS Hosting Solutions",
+      "description": "Managed AWS hosting with deployment automation, scaling, and security best practices for enterprise-grade performance.",
+      "image": "/hosting/aws-hosting.webp"
+    },
+    {
+      "id": "data-migration",
+      "name": "Data Migration",
+      "title": "Data Migration",
+      "description": "Seamlessly migrate your websites, databases, and applications between servers or hosting providers with zero downtime.",
+      "image": "/hosting/data-migration.webp"
+    },
+    {
+      "id": "website-security",
+      "name": "Website Security",
+      "title": "Website Security",
+      "description": "Comprehensive security audits, firewalls, and intrusion prevention to safeguard your site from attacks.",
+      "image": "/hosting/website-security.webp"
+    },
+    {
+      "id": "ssl-certificates",
+      "name": "SSL Certificate Setup",
+      "title": "SSL Certificate Setup (DV, OV, EV)",
+      "description": "End-to-end SSL configuration with trusted DV, OV, or EV certificates to protect user data and boost SEO rankings.",
+      "image": "/hosting/ssl-cert.webp"
+    },
+    {
+      "id": "waf-setup",
+      "name": "Web Application Firewall Setup",
+      "title": "Web Application Firewall Setup",
+      "description": "Deploy intelligent WAF systems to detect, block, and mitigate malicious traffic in real time.",
+      "image": "/hosting/waf-setup.webp"
+    },
+    {
+      "id": "malware-removal",
+      "name": "Malware Removal Services",
+      "title": "Malware Removal Services",
+      "description": "Quick and thorough malware detection, removal, and prevention to restore and secure compromised websites.",
+      "image": "/hosting/malware-removal.webp"
+    },
+    {
+      "id": "web-maintenance",
+      "name": "Web Maintenance",
+      "title": "Web Maintenance",
+      "description": "Ongoing website updates, monitoring, and performance tuning to ensure continuous operation and peak security.",
+      "image": "/hosting/web-maintenance.webp"
+    }
+  ],
+  "faq": {
+    "serviceName": "Hosting & IT Security",
+    "faqs": [
+      {
+        "q": "Which hosting type is best for my business?",
+        "a": "It depends on your traffic, performance, and scalability needs. We assess your goals and recommend the best hosting—shared, VPS, dedicated, or cloud—based on your requirements and budget."
+      },
+      {
+        "q": "Do you provide website migration services?",
+        "a": "Yes. We handle complete data migration, including websites, databases, and emails, ensuring zero downtime and data integrity during transfer."
+      },
+      {
+        "q": "How do you protect websites from attacks?",
+        "a": "We implement multiple layers of defense—firewalls, SSL, malware scanners, DDoS protection, and regular audits—to safeguard your site from evolving threats."
+      },
+      {
+        "q": "Can you manage my AWS or cloud hosting?",
+        "a": "Absolutely. We offer fully managed cloud hosting services on AWS, Azure, and Google Cloud, including deployment, monitoring, scaling, and cost optimization."
+      },
+      {
+        "q": "Do you provide ongoing maintenance and monitoring?",
+        "a": "Yes, our 24/7 maintenance includes uptime monitoring, backups, patching, malware scans, and performance tuning to ensure your website stays secure and fast."
+      }
+    ]
+  }
+},
+    "web-hosting": {
+      "hero": {
+        "heading": "Web Hosting Services",
+        "subheading": "Fast, secure, and reliable web hosting solutions with 99.99% uptime and seamless scalability for businesses of all sizes."
+      },
+      "introParagraph": {
+        "heading": "Reliable Performance for Your Website",
+        "problemStatement": "Slow load times, downtime, and poor server performance can hurt your brand’s credibility and SEO rankings.",
+        "valueProposition": "Our web hosting ensures lightning-fast speed, maximum uptime, and continuous monitoring so your website stays online and performs flawlessly 24/7."
+      },
+      "keyBenefits": {
+        "heading": "Why Choose Our Web Hosting?",
+        "subheading": "Hosting that grows with your business.",
+        "benefits": [
+          { "title": "99.99% Uptime", "description": "Enterprise-grade infrastructure keeps your website running smoothly with minimal downtime." },
+          { "title": "Speed Optimization", "description": "SSD storage, caching, and CDN integration deliver ultra-fast load times." },
+          { "title": "24/7 Monitoring", "description": "Our team monitors and maintains your server round the clock for continuous reliability." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Domain Setup & DNS Configuration",
+          "Server Optimization",
+          "Security Setup",
+          "Performance Monitoring"
+        ]
+      },
+      "form": {
+        "heading": "Get Reliable Web Hosting",
+        "content": "Launch your website on a fast, secure, and scalable web hosting environment.",
+        "cta": "Get Started Today"
+      }
+    },
+  
+    "wordpress-hosting": {
+      "hero": {
+        "heading": "WordPress Hosting Services",
+        "subheading": "Lightning-fast, secure, and optimized hosting built exclusively for WordPress websites."
+      },
+      "introParagraph": {
+        "heading": "Optimized for WordPress Speed & Security",
+        "problemStatement": "Generic hosting platforms often slow down WordPress sites and cause plugin or update issues.",
+        "valueProposition": "We deliver WordPress-optimized servers with automatic updates, malware protection, and caching for unbeatable performance and reliability."
+      },
+      "keyBenefits": {
+        "heading": "WordPress Hosting Advantages",
+        "subheading": "Security, performance, and scalability built in.",
+        "benefits": [
+          { "title": "Automatic Updates", "description": "Stay current with WordPress core, theme, and plugin updates managed by us." },
+          { "title": "Advanced Caching", "description": "Integrated caching ensures near-instant page loads and improved SEO performance." },
+          { "title": "WordPress Security", "description": "Daily backups, malware protection, and SSL ensure your site is always safe." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "WordPress Installation & Setup",
+          "Plugin Optimization",
+          "Security & Backup Configuration",
+          "Performance Tuning"
+        ]
+      },
+      "form": {
+        "heading": "Launch Your WordPress Site with Confidence",
+        "content": "Host your WordPress website on secure, high-speed infrastructure with full support.",
+        "cta": "Get WordPress Hosting"
+      }
+    },
+  
+    "email-hosting": {
+      "hero": {
+        "heading": "Business Email Hosting",
+        "subheading": "Professional, reliable, and secure email hosting with your own domain name."
+      },
+      "introParagraph": {
+        "heading": "Professional Communication, Simplified",
+        "problemStatement": "Free email services limit branding and reliability, risking your business credibility.",
+        "valueProposition": "Our email hosting offers enterprise-grade spam protection, encryption, and custom domain setup so your communications stay professional and secure."
+      },
+      "keyBenefits": {
+        "heading": "Email Hosting Benefits",
+        "subheading": "Enterprise-grade features for all businesses.",
+        "benefits": [
+          { "title": "Custom Domain Emails", "description": "Build brand trust with personalized business emails." },
+          { "title": "Spam & Virus Protection", "description": "Keep inboxes clean with real-time filtering and encryption." },
+          { "title": "Easy Integration", "description": "Seamlessly connect with Outlook, Gmail, or mobile clients." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Domain Verification",
+          "Mailbox Creation",
+          "Security Setup",
+          "Migration & Integration"
+        ]
+      },
+      "form": {
+        "heading": "Set Up Professional Email Hosting",
+        "content": "Start using business-grade email with enhanced security and uptime.",
+        "cta": "Get Email Hosting"
+      }
+    },
+  
+    "reseller-hosting": {
+      "hero": {
+        "heading": "Reseller Hosting Services",
+        "subheading": "Launch your own hosting business with white-labeled, scalable reseller hosting plans."
+      },
+      "introParagraph": {
+        "heading": "Empower Your Hosting Business",
+        "problemStatement": "Starting a hosting business can be expensive and technically challenging.",
+        "valueProposition": "Our reseller hosting gives you the power to sell hosting under your brand with full WHM and cPanel access, automatic billing, and 24/7 support."
+      },
+      "keyBenefits": {
+        "heading": "Reseller Hosting Advantages",
+        "benefits": [
+          { "title": "White-Labeled Platform", "description": "Sell hosting services under your own brand." },
+          { "title": "Scalable Plans", "description": "Upgrade anytime as your client base grows." },
+          { "title": "Automated Management", "description": "Easily manage clients, invoices, and hosting from one dashboard." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Account Setup",
+          "Branding Customization",
+          "Client Onboarding",
+          "Hosting Management"
+        ]
+      },
+      "form": {
+        "heading": "Start Your Hosting Business",
+        "content": "Launch and grow your own web hosting brand today.",
+        "cta": "Get Reseller Hosting"
+      }
+    },
+  
+    "ecommerce-hosting": {
+      "hero": {
+        "heading": "E-commerce Hosting",
+        "subheading": "High-performance hosting designed for secure, fast, and scalable online stores."
+      },
+      "introParagraph": {
+        "heading": "Power Your Online Store",
+        "problemStatement": "Slow e-commerce sites lead to cart abandonment and lost revenue.",
+        "valueProposition": "We provide PCI-compliant hosting with fast checkout speeds, SSL, and daily backups—ensuring your online store runs safely and efficiently."
+      },
+      "keyBenefits": {
+        "heading": "E-commerce Hosting Benefits",
+        "benefits": [
+          { "title": "PCI Compliance", "description": "Ensure secure transactions and data protection." },
+          { "title": "Fast Load Times", "description": "Optimize checkout speed for better conversions." },
+          { "title": "Automatic Backups", "description": "Recover quickly with daily snapshots and restore points." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "E-commerce Platform Integration",
+          "Security Configuration",
+          "Performance Optimization",
+          "Monitoring & Support"
+        ]
+      },
+      "form": {
+        "heading": "Host Your E-commerce Store",
+        "content": "Reliable, secure hosting designed for e-commerce success.",
+        "cta": "Get Hosting Now"
+      }
+    },
+  
+    "dedicated-servers": {
+      "hero": {
+        "heading": "Dedicated Server Hosting",
+        "subheading": "Exclusive server resources for ultimate performance, control, and security."
+      },
+      "introParagraph": {
+        "heading": "Power & Control Without Limits",
+        "problemStatement": "Shared resources can restrict performance and control for enterprise applications.",
+        "valueProposition": "Our dedicated servers provide maximum speed, full root access, and complete configuration freedom tailored to your business needs."
+      },
+      "keyBenefits": {
+        "heading": "Dedicated Server Benefits",
+        "benefits": [
+          { "title": "Full Control", "description": "Root access and complete customization for your environment." },
+          { "title": "High Performance", "description": "Exclusive hardware resources for mission-critical workloads." },
+          { "title": "Enhanced Security", "description": "Dedicated firewalls and monitoring keep your data safe." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Server Selection",
+          "Configuration & Setup",
+          "Security Hardening",
+          "Deployment"
+        ]
+      },
+      "form": {
+        "heading": "Get a Dedicated Server",
+        "content": "Choose performance, reliability, and total control for your infrastructure.",
+        "cta": "Request a Quote"
+      }
+    },
+    
+    "windows-virtual-servers": {
+      "hero": {
+        "heading": "Windows Virtual Server Hosting",
+        "subheading": "Powerful Windows-based VPS hosting for businesses needing performance, scalability, and RDP access."
+      },
+      "introParagraph": {
+        "heading": "Run Your Business on Windows VPS",
+        "problemStatement": "Shared hosting limits configuration and flexibility for Windows-based applications.",
+        "valueProposition": "Our Windows VPS offers full administrative access, SSD performance, and isolated resources with built-in security."
+      },
+      "keyBenefits": {
+        "heading": "Windows VPS Advantages",
+        "benefits": [
+          { "title": "Full RDP Access", "description": "Manage your server remotely with full control." },
+          { "title": "Optimized for Windows", "description": "Run ASP.NET, MSSQL, and Windows applications seamlessly." },
+          { "title": "Scalable Resources", "description": "Upgrade CPU, RAM, and storage anytime as you grow." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Server Provisioning",
+          "OS Configuration",
+          "Security Setup",
+          "Monitoring & Updates"
+        ]
+      },
+      "form": {
+        "heading": "Host on Windows VPS",
+        "content": "Reliable Windows server hosting with full control and enterprise security.",
+        "cta": "Get Started"
+      }
+    },
+  
+    "linux-servers": {
+      "hero": {
+        "heading": "Linux Server Hosting",
+        "subheading": "Secure and scalable Linux hosting solutions for developers and enterprises."
+      },
+      "introParagraph": {
+        "heading": "Open-Source Power for Your Infrastructure",
+        "problemStatement": "Not all hosting platforms provide the flexibility and control Linux-based apps require.",
+        "valueProposition": "We deliver optimized Linux environments for web apps, APIs, and enterprise systems—fully managed and secure."
+      },
+      "keyBenefits": {
+        "heading": "Linux Hosting Benefits",
+        "benefits": [
+          { "title": "Root Access", "description": "Full SSH access for complete configuration freedom." },
+          { "title": "Lightweight Performance", "description": "Run efficiently with minimal resource consumption." },
+          { "title": "Strong Security", "description": "Firewall rules, fail2ban, and regular patches protect your server." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Server Setup",
+          "Security Configuration",
+          "Deployment",
+          "Maintenance"
+        ]
+      },
+      "form": {
+        "heading": "Host with Linux Power",
+        "content": "Deploy your application on reliable and secure Linux servers.",
+        "cta": "Get Linux Hosting"
+      }
+    },
+  
+    "vps-shared-hosting-services": {
+      "hero": {
+        "heading": "VPS & Shared Hosting Services",
+        "subheading": "Affordable and flexible hosting solutions balancing cost, performance, and scalability."
+      },
+      "introParagraph": {
+        "heading": "Choose the Hosting That Fits You",
+        "problemStatement": "Finding the balance between performance and affordability can be tough.",
+        "valueProposition": "Our VPS and shared hosting solutions provide secure, optimized environments with easy upgrades as your needs grow."
+      },
+      "keyBenefits": {
+        "heading": "VPS & Shared Hosting Benefits",
+        "benefits": [
+          { "title": "Affordable Plans", "description": "Start small and scale affordably as your website grows." },
+          { "title": "Optimized Speed", "description": "SSD storage and caching ensure better load times." },
+          { "title": "Secure Environment", "description": "Isolated resources and monitoring for protection." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Account Creation",
+          "Setup & Migration",
+          "Optimization",
+          "Monitoring"
+        ]
+      },
+      "form": {
+        "heading": "Get Flexible Hosting",
+        "content": "Start your website on affordable VPS or shared hosting today.",
+        "cta": "Choose Plan"
+      }
+    },
+  
+    "cloud-hosting-and-management": {
+      "hero": {
+        "heading": "Cloud Hosting & Management",
+        "subheading": "Scalable, managed cloud hosting powered by AWS, Azure, or Google Cloud."
+      },
+      "introParagraph": {
+        "heading": "The Cloud, Fully Managed for You",
+        "problemStatement": "Cloud complexity can make setup, scaling, and cost management challenging.",
+        "valueProposition": "We manage every aspect of your cloud—setup, scaling, backups, and security—so you get reliability without the hassle."
+      },
+      "keyBenefits": {
+        "heading": "Cloud Hosting Benefits",
+        "benefits": [
+          { "title": "Auto Scaling", "description": "Scale resources automatically based on traffic demand." },
+          { "title": "High Availability", "description": "Redundant architecture ensures zero downtime." },
+          { "title": "Fully Managed", "description": "We handle all configurations, updates, and security patches." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Cloud Setup",
+          "Resource Allocation",
+          "Monitoring & Scaling",
+          "Maintenance"
+        ]
+      },
+      "form": {
+        "heading": "Move to Managed Cloud Hosting",
+        "content": "Harness the full power of cloud with expert management.",
+        "cta": "Get Cloud Hosting"
+      }
+    },
+  
+    "dedicated-hosting-services": {
+      "hero": {
+        "heading": "Dedicated Hosting Services",
+        "subheading": "Premium dedicated hosting for businesses demanding top-tier performance and reliability."
+      },
+      "introParagraph": {
+        "heading": "Unmatched Performance for Your Website",
+        "problemStatement": "Shared resources can’t handle enterprise workloads or traffic spikes.",
+        "valueProposition": "Our dedicated hosting provides exclusive resources, enhanced security, and expert management—perfect for high-traffic websites and applications."
+      },
+      "keyBenefits": {
+        "heading": "Dedicated Hosting Advantages",
+        "benefits": [
+          { "title": "Exclusive Resources", "description": "Dedicated CPU, RAM, and bandwidth just for your site." },
+          { "title": "Advanced Security", "description": "Firewall and DDoS protection ensure full safety." },
+          { "title": "Full Management", "description": "Our team handles setup, monitoring, and optimization." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Server Selection",
+          "Setup & Security",
+          "Optimization",
+          "Monitoring"
+        ]
+      },
+      "form": {
+        "heading": "Upgrade to Dedicated Hosting",
+        "content": "Experience maximum power, speed, and reliability for your business.",
+        "cta": "Get a Quote"
+      }
+    },
+  
+    "aws-hosting-solutions": {
+      "hero": {
+        "heading": "AWS Hosting Solutions",
+        "subheading": "Fully managed AWS infrastructure for scalable, secure, and cost-optimized performance."
+      },
+      "introParagraph": {
+        "heading": "AWS Managed by Experts",
+        "problemStatement": "AWS is powerful but requires expert management to stay efficient and secure.",
+        "valueProposition": "We design, deploy, and manage AWS environments with best practices for cost optimization, performance, and data protection."
+      },
+      "keyBenefits": {
+        "heading": "AWS Hosting Advantages",
+        "benefits": [
+          { "title": "Optimized Architecture", "description": "Custom AWS setup for your business requirements." },
+          { "title": "Cost Efficiency", "description": "We right-size resources to minimize AWS costs." },
+          { "title": "Security & Compliance", "description": "Implement IAM, encryption, and compliance frameworks." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "AWS Assessment",
+          "Architecture Design",
+          "Deployment",
+          "Monitoring & Scaling"
+        ]
+      },
+      "form": {
+        "heading": "Host on AWS with Confidence",
+        "content": "We handle your AWS environment for peak performance and reliability.",
+        "cta": "Get AWS Management"
+      }
+    },
+  
+    "data-migration": {
+      "hero": {
+        "heading": "Data Migration Services",
+        "subheading": "Seamless, secure, and downtime-free migration for websites, databases, and servers."
+      },
+      "introParagraph": {
+        "heading": "Migrate Without Losing Data or Traffic",
+        "problemStatement": "Poorly planned migrations can lead to downtime and data loss.",
+        "valueProposition": "We migrate your entire digital environment safely, preserving SEO, uptime, and data integrity throughout the process."
+      },
+      "keyBenefits": {
+        "heading": "Migration Advantages",
+        "benefits": [
+          { "title": "Zero Downtime", "description": "Ensure continuous operations during migration." },
+          { "title": "Secure Transfer", "description": "Encrypted transfers keep data protected." },
+          { "title": "Expert Supervision", "description": "Our specialists handle every technical aspect." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Assessment",
+          "Backup & Planning",
+          "Data Transfer",
+          "Testing & Verification"
+        ]
+      },
+      "form": {
+        "heading": "Migrate Seamlessly",
+        "content": "Switch hosts or platforms safely with expert-managed migration.",
+        "cta": "Start Migration"
+      }
+    },
+  
+    "website-security": {
+      "hero": {
+        "heading": "Website Security Services",
+        "subheading": "Protect your website from malware, hackers, and data breaches with proactive security solutions."
+      },
+      "introParagraph": {
+        "heading": "Stay Protected 24/7",
+        "problemStatement": "Websites are vulnerable to cyberattacks that can compromise data and trust.",
+        "valueProposition": "We secure your website with malware protection, firewalls, and continuous monitoring to prevent threats before they occur."
+      },
+      "keyBenefits": {
+        "heading": "Website Security Benefits",
+        "benefits": [
+          { "title": "Malware Protection", "description": "Real-time scans remove and block malicious code." },
+          { "title": "Firewall Setup", "description": "Prevent unauthorized access with WAF and DDoS mitigation." },
+          { "title": "24/7 Monitoring", "description": "Constant protection and instant response to threats." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Security Audit",
+          "Threat Removal",
+          "Firewall Implementation",
+          "Monitoring & Reporting"
+        ]
+      },
+      "form": {
+        "heading": "Secure Your Website Now",
+        "content": "Protect your site and customer data from online threats.",
+        "cta": "Get Protected"
+      }
+    },
+  
+    "ssl-certificate-setup": {
+      "hero": {
+        "heading": "SSL Certificate Setup (DV, OV, EV)",
+        "subheading": "Encrypt your website and boost customer trust with professional SSL installation."
+      },
+      "introParagraph": {
+        "heading": "Protect Data & Build Trust",
+        "problemStatement": "Unsecured websites lose visitors’ trust and SEO ranking.",
+        "valueProposition": "We install and configure SSL certificates—Domain Validated (DV), Organization Validated (OV), or Extended Validation (EV)—to secure your website and improve visibility."
+      },
+      "keyBenefits": {
+        "heading": "SSL Setup Benefits",
+        "benefits": [
+          { "title": "Secure Encryption", "description": "Protect data during every transaction." },
+          { "title": "SEO Boost", "description": "HTTPS-enabled websites rank higher on Google." },
+          { "title": "Trust Indicators", "description": "Show padlock and validation badges for credibility." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Certificate Selection",
+          "Verification & Validation",
+          "Installation",
+          "Testing"
+        ]
+      },
+      "form": {
+        "heading": "Install SSL Today",
+        "content": "Enhance security and trust with professional SSL setup.",
+        "cta": "Get SSL Setup"
+      }
+    },
+  
+    "web-application-firewall-setup": {
+      "hero": {
+        "heading": "Web Application Firewall (WAF) Setup",
+        "subheading": "Protect your web applications from OWASP Top 10 threats with an advanced WAF solution."
+      },
+      "introParagraph": {
+        "heading": "Stop Attacks Before They Happen",
+        "problemStatement": "SQL injections, XSS, and bot attacks can compromise web applications.",
+        "valueProposition": "We deploy intelligent firewalls that analyze, filter, and block malicious traffic in real time to safeguard your site."
+      },
+      "keyBenefits": {
+        "heading": "WAF Setup Benefits",
+        "benefits": [
+          { "title": "Real-time Threat Detection", "description": "Block suspicious requests instantly." },
+          { "title": "Custom Rules", "description": "Fine-tune security policies to your application’s needs." },
+          { "title": "DDoS Mitigation", "description": "Reduce risk from high-volume attacks." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Assessment",
+          "Firewall Deployment",
+          "Rule Configuration",
+          "Monitoring & Optimization"
+        ]
+      },
+      "form": {
+        "heading": "Deploy a Web Firewall",
+        "content": "Defend your website with real-time attack protection.",
+        "cta": "Get WAF Setup"
+      }
+    },
+  
+    "malware-removal-services": {
+      "hero": {
+        "heading": "Malware Removal Services",
+        "subheading": "Fast, safe, and complete malware detection and removal for infected websites."
+      },
+      "introParagraph": {
+        "heading": "Restore Your Website’s Health",
+        "problemStatement": "Malware can destroy reputation, SEO, and customer trust.",
+        "valueProposition": "Our experts clean infected files, secure your hosting, and restore your website to full health with ongoing protection."
+      },
+      "keyBenefits": {
+        "heading": "Malware Removal Benefits",
+        "benefits": [
+          { "title": "Immediate Cleanup", "description": "We remove malware and restore your website quickly." },
+          { "title": "SEO Recovery", "description": "Fix Google blacklist issues and regain visibility." },
+          { "title": "Ongoing Protection", "description": "Prevent reinfection with security monitoring." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Scan & Detection",
+          "Infection Removal",
+          "Security Patching",
+          "Verification"
+        ]
+      },
+      "form": {
+        "heading": "Clean Your Website Now",
+        "content": "Remove malware and restore your site’s reputation.",
+        "cta": "Get Cleanup"
+      }
+    },
+  
+    "web-maintenance": {
+      "hero": {
+        "heading": "Website Maintenance Services",
+        "subheading": "Keep your site updated, secure, and optimized with ongoing maintenance and support."
+      },
+      "introParagraph": {
+        "heading": "Keep Your Site Performing at Its Best",
+        "problemStatement": "Neglecting updates and backups can lead to performance issues and vulnerabilities.",
+        "valueProposition": "We handle updates, backups, monitoring, and performance optimization so you can focus on your business."
+      },
+      "keyBenefits": {
+        "heading": "Maintenance Benefits",
+        "benefits": [
+          { "title": "Regular Updates", "description": "Stay secure with WordPress, plugin, and CMS updates." },
+          { "title": "Daily Backups", "description": "Never lose your data with automatic backups." },
+          { "title": "Performance Monitoring", "description": "We track uptime and speed to ensure top performance." }
+        ]
+      },
+      "process": {
+        "steps": [
+          "Audit & Setup",
+          "Update Management",
+          "Backup & Optimization",
+          "Monitoring & Reporting"
+        ]
+      },
+      "form": {
+        "heading": "Keep Your Website in Top Shape",
+        "content": "Protect and optimize your site with regular maintenance.",
+        "cta": "Get Maintenance Plan"
+      }
+    },
+    "otherServices": {
+        "hostingItSecurityServices": [
+            "Web Hosting",
+            "Email hosting",
+            "Reseller Hosting",
+            "E-commerce Hosting",
+            "Dedicated Servers",
+            "Windows Virtual Servers",
+            "Linux Servers",
+            "VPS",
+            "Shared hosting services",
+            "Cloud hosting and management",
+            "Dedicated hosting services",
+            "AWS hosting solutions",
+            "Data migration",
+            "Website security",
+            "SSL certificate setup (DV, OV, EV)",
+            "Web application firewall setup",
+            "Malware removal services",
+            "Web maintenance"
+        ],
+        "slugMapping": {
+            "Web Hosting": "web-hosting",
+            "Email hosting": "email-hosting",
+            "Reseller Hosting": "reseller-hosting",
+            "E-commerce Hosting": "ecommerce-hosting",
+            "Dedicated Servers": "dedicated-servers",
+            "Windows Virtual Servers": "windows-virtual-servers",
+            "Linux Servers": "linux-servers",
+            "VPS": "vps-shared-hosting-services",
+            "Shared hosting services": "vps-shared-hosting-services",
+            "Cloud hosting and management": "cloud-hosting-and-management",
+            "Dedicated hosting services": "dedicated-hosting-services",
+            "AWS hosting solutions": "aws-hosting-solutions",
+            "Data migration": "data-migration",
+            "Website security": "website-security",
+            "SSL certificate setup (DV, OV, EV)": "ssl-certificate-setup",
+            "Web application firewall setup": "web-application-firewall-setup",
+            "Malware removal services": "malware-removal-services",
+            "Web maintenance": "web-maintenance"
+        },
+        "config": {
+            "title": "Hosting & IT Security Services",
+            "highlightedText": "Hosting & IT Security",
+            "columns": 3,
+            "baseUrl": "/hosting-it-security/"
+        }
+    }
+}

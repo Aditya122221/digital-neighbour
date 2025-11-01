@@ -9,6 +9,7 @@ import socialMediaData from "@/data/social-media.json";
 import contentMarketingData from "@/data/content-marketing.json";
 import webDevelopmentData from "@/data/web-development.json";
 import appDevelopmentData from "@/data/app-development.json";
+import hostingData from "@/data/hosting-it-security.json";
 
 // Types for the data structure
 interface OtherServicesData {
@@ -95,6 +96,13 @@ export default function OtherServices() {
         .appDevelopmentServices,
       slugMapping: (appDevelopmentData as any).otherServices.slugMapping,
       config: (appDevelopmentData as any).otherServices.config,
+    };
+  } else if (pathname.startsWith("/hosting-it-security")) {
+    // Use hosting & IT security data
+    data = {
+      services: (hostingData as any).otherServices.hostingItSecurityServices,
+      slugMapping: (hostingData as any).otherServices.slugMapping,
+      config: (hostingData as any).otherServices.config,
     };
   } else {
     // Default to SEO data (for /seo routes)
