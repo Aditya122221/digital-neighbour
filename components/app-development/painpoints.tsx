@@ -161,13 +161,28 @@ export default function PainPoints({ data }: PainPointsProps) {
 						className="p-6 md:p-8 space-y-0"
 						style={{
 							backgroundColor:
-								"#ffe031",
+								"#1a1a1a",
 							borderTopLeftRadius:
 								"20px",
 							borderBottomLeftRadius:
 								"20px",
 						}}
 					>
+						<div className="flex items-center gap-4 mb-6">
+							<div
+								className="w-12 h-12 rounded-lg flex items-center justify-center"
+								style={{
+									backgroundColor:
+										"#ffe031",
+								}}
+							>
+								<AlertCircle className="w-6 h-6 text-black" />
+							</div>
+							<h3 className="text-xl md:text-2xl font-semibold text-white">
+								Common
+								Challenges
+							</h3>
+						</div>
 						{data.painPoints.map(
 							(item, index) => (
 								<div
@@ -177,10 +192,16 @@ export default function PainPoints({ data }: PainPointsProps) {
 									className="py-4 px-4"
 								>
 									<div className="flex items-start gap-4">
-										<div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-black/10 text-black">
-											<AlertCircle className="w-5 h-5" />
+										<div
+											className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+											style={{
+												backgroundColor:
+													"#ffe031",
+											}}
+										>
+											<AlertCircle className="w-5 h-5 text-black" />
 										</div>
-										<span className="text-base md:text-lg font-medium text-black">
+										<span className="text-base md:text-lg font-medium text-white">
 											{
 												item.problem
 											}
@@ -191,7 +212,7 @@ export default function PainPoints({ data }: PainPointsProps) {
 											.painPoints
 											.length -
 											1 && (
-										<div className="border-b border-black/30 mt-4"></div>
+										<div className="border-b border-white/30 mt-4"></div>
 									)}
 								</div>
 							)
