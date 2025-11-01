@@ -14,6 +14,7 @@ import CaseStudy from "@/components/homepage/casestudy"
 import IntroParagraph from "@/components/hosting-it-security/introparagraph"
 import PainPoints from "@/components/hosting-it-security/painpoints"
 import KeyBenefits from "@/components/hosting-it-security/keybenefits"
+import Features from "@/components/hosting-it-security/features"
 import Apart from "@/components/homepage/apart"
 
 export default function HostingItSecurityPage() {
@@ -40,6 +41,9 @@ export default function HostingItSecurityPage() {
 				data={currentData?.services}
 				serviceCards={currentData?.serviceCards}
 				basePath="/hosting-it-security"
+				premiumCloudServices={
+					currentData?.premiumCloudServices
+				}
 			/>
 			<SeoContent data={currentData?.content} />
 			<Apart />
@@ -50,12 +54,7 @@ export default function HostingItSecurityPage() {
 				processData={currentData?.process}
 			/>
 			<KeyBenefits data={currentData?.keyBenefits} />
-			<div>
-				Feature Section: Show 3–5 key benefits or
-				outcomes of the service (not just features),
-				each explained in a short block with a clear
-				headline and visual support.
-			</div>
+			<Features data={currentData?.features} />
 			<SeoFaq data={currentData?.faq} />
 			<SeoCta data={currentData?.services} />
 			<Footer />
