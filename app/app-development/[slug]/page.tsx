@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 import appDevData from "@/data/app-development.json"
 import AppDevHero from "@/components/app-development/hero"
 import Certificates from "@/components/app-development/certificates"
+import Industries from "@/components/app-development/industries"
 import SeoContent from "@/components/seo/content"
 import SeoServices from "@/components/seo/services"
 import SeoForm from "@/components/seo/form"
@@ -72,6 +73,16 @@ export default function AppDevSlugPage({
 				basePath="/app-development"
 			/>
 			<SeoContent data={currentData?.content} />
+			{(currentData?.industries ||
+				appDevData["app-development"]?.industries) && (
+				<Industries
+					data={
+						currentData?.industries ||
+						appDevData["app-development"]
+							?.industries
+					}
+				/>
+			)}
 			<CaseStudy />
 			<Certificates data={currentData?.certificates} />
 			<OtherServices />

@@ -162,6 +162,144 @@
           ]
         }
       ]
+    },
+    "industries": {
+      "heading": "Crafting Unique and Tailored Mobile Apps for a Spectrum of Industries",
+      "description": "Appinventiv is an enterprise-grade mobile app development firm that delivers industry-specific custom app solutions for 35+ industries, thus empowering businesses to innovate and achieve strategic objectives.",
+      "industries": [
+        {
+          "id": "healthcare",
+          "name": "Healthcare",
+          "icon": "heart",
+          "details": "Transform healthcare delivery with secure, HIPAA-compliant mobile apps that connect patients with providers, enable telemedicine, manage medical records, and enhance patient care experiences."
+        },
+        {
+          "id": "finance",
+          "name": "Finance",
+          "icon": "dollarSign",
+          "details": "Build secure fintech applications with advanced encryption, real-time transactions, digital wallets, investment tracking, and seamless banking integrations for next-generation financial services."
+        },
+        {
+          "id": "education",
+          "name": "Education",
+          "icon": "graduationCap",
+          "details": "Create engaging educational apps with interactive learning modules, virtual classrooms, progress tracking, and personalized learning experiences that revolutionize how students learn and educators teach."
+        },
+        {
+          "id": "on-demand",
+          "name": "On-Demand",
+          "icon": "sparkles",
+          "details": "Develop on-demand service platforms with real-time tracking, seamless payment integration, multi-service support, and efficient delivery management to connect service providers with customers instantly."
+        },
+        {
+          "id": "entertainment",
+          "name": "Entertainment",
+          "icon": "radio",
+          "details": "Build immersive entertainment apps with streaming capabilities, social sharing features, personalized content recommendations, and interactive experiences that keep users engaged and entertained."
+        },
+        {
+          "id": "government",
+          "name": "Government",
+          "icon": "building",
+          "details": "Create secure government applications with citizen services, document management, public information portals, and compliance features that enhance civic engagement and streamline government operations."
+        },
+        {
+          "id": "restaurant",
+          "name": "Restaurant",
+          "icon": "utensilsCrossed",
+          "details": "Develop restaurant apps with online ordering, table reservations, menu management, loyalty programs, and seamless payment processing to enhance customer dining experiences and boost revenue."
+        },
+        {
+          "id": "ecommerce",
+          "name": "eCommerce",
+          "icon": "shoppingCart",
+          "details": "Build e-commerce apps with seamless shopping experiences, payment gateways, order tracking, inventory management, and personalized recommendations to boost sales and customer engagement."
+        },
+        {
+          "id": "logistics",
+          "name": "Logistics",
+          "icon": "truck",
+          "details": "Optimize supply chain and delivery operations with advanced logistics apps for tracking, fleet management, and route optimization."
+        },
+        {
+          "id": "social-media",
+          "name": "Social Media",
+          "icon": "smartphone",
+          "details": "Build engaging social networking platforms, community apps, and communication tools that connect people and foster interaction."
+        },
+        {
+          "id": "games-and-sports",
+          "name": "Games and Sports",
+          "icon": "gamepad2",
+          "details": "Develop immersive gaming experiences, sports analytics apps, and fan engagement platforms for enthusiasts and professionals."
+        },
+        {
+          "id": "travel",
+          "name": "Travel",
+          "icon": "bus",
+          "details": "Create comprehensive travel apps for booking flights, hotels, car rentals, and providing personalized itinerary management and local guides."
+        },
+        {
+          "id": "aviation",
+          "name": "Aviation",
+          "icon": "plane",
+          "details": "Design specialized aviation apps for flight tracking, pilot tools, airline operations, and passenger services, enhancing efficiency and safety."
+        },
+        {
+          "id": "real-estate",
+          "name": "Real Estate",
+          "icon": "building",
+          "details": "Develop innovative real estate solutions for property listings, virtual tours, agent tools, and investment management, simplifying buying and selling."
+        },
+        {
+          "id": "electric-vehicle",
+          "name": "Electric Vehicle",
+          "icon": "zap",
+          "details": "Build smart EV apps for charging station locators, battery management, route planning, and vehicle diagnostics, supporting the electric revolution."
+        },
+        {
+          "id": "agriculture",
+          "name": "Agriculture",
+          "icon": "leaf",
+          "details": "Create modern agriculture apps for crop monitoring, farm management, weather forecasting, and livestock tracking, boosting productivity and sustainability."
+        },
+        {
+          "id": "oil-and-gas",
+          "name": "Oil and Gas",
+          "icon": "fuel",
+          "details": "Develop robust apps for oil and gas exploration, production monitoring, field operations, and safety management, ensuring efficiency and compliance."
+        },
+        {
+          "id": "insurance",
+          "name": "Insurance",
+          "icon": "shield",
+          "details": "Build secure insurance apps for policy management, claims processing, premium payments, and personalized coverage options, enhancing customer experience."
+        },
+        {
+          "id": "saas",
+          "name": "SaaS",
+          "icon": "cloudCog",
+          "details": "Develop scalable Software as a Service applications with cloud infrastructure, subscription management, multi-tenancy support, and seamless integrations for modern businesses."
+        },
+        {
+          "id": "telecom",
+          "name": "Telecom",
+          "icon": "phone",
+          "details": "Build robust telecom apps for network management, customer service, billing systems, and communication solutions that enhance connectivity and user experience."
+        },
+        {
+          "id": "automotive",
+          "name": "Automotive",
+          "icon": "car",
+          "details": "Create innovative automotive apps for vehicle diagnostics, navigation systems, fleet management, connected car features, and driver assistance technologies."
+        },
+        {
+          "id": "manufacturing",
+          "name": "Manufacturing",
+          "icon": "factory",
+          "details": "Develop manufacturing apps for production monitoring, quality control, inventory management, supply chain optimization, and industrial automation solutions."
+        }
+      ]
     }
   },
   "ios-app-development": {
