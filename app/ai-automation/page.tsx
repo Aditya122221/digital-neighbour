@@ -13,6 +13,8 @@ import SeoFaq from "@/components/seo/faq"
 import CaseStudy from "@/components/homepage/casestudy"
 import IntroParagraph from "@/components/ai-automation/introparagraph"
 import PainPoints from "@/components/ai-automation/painpoints"
+import Chaos from "@/components/ai-automation/chaos"
+import Industries from "@/components/ai-automation/industries"
 import KeyBenefits from "@/components/ai-automation/keybenefits"
 import Features from "@/components/ai-automation/features"
 import Apart from "@/components/homepage/apart"
@@ -37,6 +39,7 @@ export default function AiAutomationPage() {
 			<BrandsMarquee />
 			<IntroParagraph data={currentData?.introParagraph} />
 			<PainPoints data={currentData?.painPoints} />
+			<Chaos />
 			<AiAutomationServices
 				data={currentData?.services}
 				serviceCards={currentData?.serviceCards}
@@ -46,7 +49,8 @@ export default function AiAutomationPage() {
 				}
 			/>
 			<SeoContent data={currentData?.content} />
-			<Apart />
+				< Apart />
+				<Industries data={currentData?.industries} />
 			<CaseStudy />
 			<OtherServices />
 			<Process2
@@ -61,4 +65,3 @@ export default function AiAutomationPage() {
 		</main>
 	)
 }
-
