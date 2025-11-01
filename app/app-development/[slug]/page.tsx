@@ -18,6 +18,9 @@ import CaseStudy from "@/components/homepage/casestudy"
 import Blogs from "@/components/homepage/blogs"
 import Testimonials from "@/components/homepage/testimonials"
 import BookACall from "@/components/homepage/bookacall"
+import IntroParagraph from "@/components/app-development/introparagraph"
+import PainPoints from "@/components/app-development/painpoints"
+import KeyBenefits from "@/components/app-development/keybenefits"
 
 const allowedSlugs = [
 	"app-development",
@@ -57,16 +60,8 @@ export default function AppDevSlugPage({
 			</div>
 			<SeoForm data={currentData?.form} />
 			<BrandsMarquee />
-			<div>
-				Content Section: Intro Paragraph (Problem
-				Identification + Value Proposition)
-			</div>
-			<div>
-				Content Section: Briefly highlight the client's
-				main pain point and immediately show how our
-				service solves it — make them feel understood
-				and confident we can deliver results.
-			</div>
+			<IntroParagraph data={currentData?.introParagraph} />
+			<PainPoints data={currentData?.painPoints} />
 			<SeoServices
 				data={currentData?.services}
 				serviceCards={currentData?.serviceCards}
@@ -93,12 +88,7 @@ export default function AppDevSlugPage({
 					appDevData["app-development"]?.process
 				}
 			/>
-			<div>
-				Content Section: Show 3–5 key benefits or
-				outcomes of the service (not just features),
-				each explained in a short block with a clear
-				headline and visual support.
-			</div>
+			<KeyBenefits data={currentData?.keyBenefits} />
 			<SeoFaq data={currentData?.faq} />
 			<SeoCta data={currentData?.services} />
 			<Footer />
