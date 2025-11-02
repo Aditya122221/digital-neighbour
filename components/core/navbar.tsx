@@ -930,6 +930,29 @@ const Navbar: React.FC = () => {
 																					"x-marketing",
 																				]
 																			)
+																		const dataAnalyticsSlugs =
+																			new Set(
+																				[
+																					"data-analytics",
+																					"data-and-analytics",
+																					"business-intelligence",
+																					"data-integration",
+																					"data-warehousing",
+																					"predictive-analytics",
+																					"data-visualization",
+																					"reporting-automation",
+																					"reporting-and-dashboards",
+																					"data-governance",
+																					"customer-analytics",
+																					"operational-analytics",
+																					"financial-analytics",
+																					"conversion-rate-optimization",
+																					"conversion-rate-optimisation",
+																					"call-tracking",
+																					"google-analytics",
+																					"google-tag-manager",
+																				]
+																			)
 																		const contentMarketingSlugs =
 																			new Set(
 																				[
@@ -952,12 +975,6 @@ const Navbar: React.FC = () => {
 																					"email-marketing",
 																					"pr-outreach",
 																					"branding",
-																					"data-and-analytics",
-																					"conversion-rate-optimization",
-																					"call-tracking",
-																					"reporting-and-dashboards",
-																					"google-analytics",
-																					"google-tag-manager",
 																				]
 																			)
 																		if (
@@ -1031,6 +1048,29 @@ const Navbar: React.FC = () => {
 																				] ||
 																				name
 																			return `/social-media-marketing/${slug}`
+																		}
+																		if (
+																			dataAnalyticsSlugs.has(
+																				name
+																			)
+																		) {
+																			// Map naming differences for data analytics
+																			const slugMap: Record<
+																				string,
+																				string
+																			> =
+																				{
+																					"data-and-analytics":
+																						"data-analytics",
+																					"conversion-rate-optimisation":
+																						"conversion-rate-optimization",
+																				}
+																			const slug =
+																				slugMap[
+																					name
+																				] ||
+																				name
+																			return `/data-analytics/${slug}`
 																		}
 																		if (
 																			contentMarketingSlugs.has(
@@ -1349,6 +1389,29 @@ const Navbar: React.FC = () => {
 																															"x-marketing",
 																														]
 																													)
+																												const dataAnalyticsSlugs =
+																													new Set(
+																														[
+																															"data-analytics",
+																															"data-and-analytics",
+																															"business-intelligence",
+																															"data-integration",
+																															"data-warehousing",
+																															"predictive-analytics",
+																															"data-visualization",
+																															"reporting-automation",
+																															"reporting-and-dashboards",
+																															"data-governance",
+																															"customer-analytics",
+																															"operational-analytics",
+																															"financial-analytics",
+																															"conversion-rate-optimization",
+																															"conversion-rate-optimisation",
+																															"call-tracking",
+																															"google-analytics",
+																															"google-tag-manager",
+																														]
+																													)
 																												const contentMarketingSlugs =
 																													new Set(
 																														[
@@ -1505,6 +1568,29 @@ const Navbar: React.FC = () => {
 																													]
 																												) {
 																													return `/web-development/${webDevSlugMap[name]}`
+																												}
+																												if (
+																													dataAnalyticsSlugs.has(
+																														name
+																													)
+																												) {
+																													// Map naming differences for data analytics
+																													const slugMap: Record<
+																														string,
+																														string
+																													> =
+																														{
+																															"data-and-analytics":
+																																"data-analytics",
+																															"conversion-rate-optimisation":
+																																"conversion-rate-optimization",
+																														}
+																													const slug =
+																														slugMap[
+																															name
+																														] ||
+																														name
+																													return `/data-analytics/${slug}`
 																												}
 																												if (
 																													contentMarketingSlugs.has(

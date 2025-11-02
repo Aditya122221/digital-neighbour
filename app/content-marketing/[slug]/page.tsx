@@ -37,12 +37,6 @@ const allowedSlugs = [
   "email-marketing",
   "pr-outreach",
   "branding",
-  "data-and-analytics",
-  "conversion-rate-optimization",
-  "call-tracking",
-  "reporting-and-dashboards",
-  "google-analytics",
-  "google-tag-manager",
 ];
 
 export default function ContentMarketingSlugPage({

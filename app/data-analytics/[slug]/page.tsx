@@ -19,16 +19,11 @@ import Apart from "@/components/homepage/apart";
 
 const allowedSlugs = [
   "data-analytics",
-  "business-intelligence",
-  "data-integration",
-  "data-warehousing",
-  "predictive-analytics",
-  "data-visualization",
-  "reporting-automation",
-  "data-governance",
-  "customer-analytics",
-  "operational-analytics",
-  "financial-analytics",
+  "reporting-and-dashboards",
+  "conversion-rate-optimization",
+  "call-tracking",
+  "google-analytics",
+  "google-tag-manager",
 ];
 
 export default function DataAnalyticsSlugPage({
