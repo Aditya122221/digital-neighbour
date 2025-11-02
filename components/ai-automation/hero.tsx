@@ -142,12 +142,13 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 						className="absolute left-8 top-[15%] md:left-16 lg:left-24"
 					>
 						<div className="relative w-14 h-14 md:w-16 md:h-16">
-							<div className="w-full h-full rounded-full overflow-hidden">
+							<div className="w-full h-full overflow-hidden">
 								<Image
 									src="/homepage/hero/1.jpg"
 									alt="AI Bot"
 									fill
-									className="object-cover"
+className = "object-cover"
+style={{ borderRadius: "50%" }}
 								/>
 							</div>
 							{/* Online indicator */}
@@ -190,7 +191,8 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 									src="/homepage/hero/2.jpg"
 									alt="User 1"
 									fill
-									className="object-cover"
+className = "object-cover"
+style={{ borderRadius: "50%" }}
 								/>
 							</div>
 							<div className="absolute bottom-0 right-0 w-3 h-3 md:w-4 md:h-4 bg-green3 rounded-full border-2 border-white"></div>
@@ -232,7 +234,8 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 									src="/homepage/hero/3.jpg"
 									alt="User 2"
 									fill
-									className="object-cover"
+className = "object-cover"
+										style={{ borderRadius: "50%" }}
 								/>
 							</div>
 							<div className="absolute bottom-0 right-0 w-3 h-3 md:w-4 md:h-4 bg-green3 rounded-full border-2 border-white"></div>
