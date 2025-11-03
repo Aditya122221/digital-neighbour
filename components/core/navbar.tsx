@@ -1081,7 +1081,7 @@ const Navbar: React.FC = () => {
 																				name
 																			return `/content-marketing/${slug}`
 																		}
-																		// Map AI & Automation items to ai-automation routes
+                                                                        // Map AI & Automation items to ai-automation routes
 																		if (
 																			activeCategory ===
 																			"AI & Automation"
@@ -1114,6 +1114,13 @@ const Navbar: React.FC = () => {
 																			// If no specific mapping, use the kebab-case name
 																			return `/ai-automation/${name}`
 																		}
+                                                                        // Map Industries items to industries routes
+                                                                        if (
+                                                                            activeCategory ===
+                                                                            "Industries"
+                                                                        ) {
+                                                                            return `/industry/${name}`
+                                                                        }
 																		// Map Hosting, IT & Security items to hosting-it-security routes
 																		if (
 																			activeCategory ===
@@ -1621,7 +1628,7 @@ const Navbar: React.FC = () => {
 																														name
 																													return `/content-marketing/${slug}`
 																												}
-																												// Map AI & Automation items to ai-automation routes
+                                                                                                                // Map AI & Automation items to ai-automation routes
 																												if (
 																													categoryKey ===
 																													"AI & Automation"
@@ -1654,6 +1661,13 @@ const Navbar: React.FC = () => {
 																													// If no specific mapping, use the kebab-case name
 																													return `/ai-automation/${name}`
 																												}
+                                                                                                                // Map Industries items to industries routes
+                                                                                                                if (
+                                                                                                                    categoryKey ===
+                                                                                                                    "Industries"
+                                                                                                                ) {
+                                                                                                                    return `/industry/${name}`
+                                                                                                                }
 																												return `/services/${name}`
 																											})()}
 																											className="flex items-center gap-2 px-2 py-1 text-gray-400 hover:text-white text-xs"

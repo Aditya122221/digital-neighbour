@@ -17,6 +17,7 @@ import PainPoints from "@/components/data-analytics/painpoints";
 import KeyBenefits from "@/components/data-analytics/keybenefits";
 import Apart from "@/components/homepage/apart";
 import Features from "@/components/ai-automation/features";
+import DataAnalyticsServices from "@/components/data-analytics/services";
 
 const allowedSlugs = [
   "data-analytics",
@@ -58,10 +59,11 @@ export default function DataAnalyticsSlugPage({
       <BrandsMarquee />
       <IntroParagraph data={currentData?.introParagraph} />
       <PainPoints data={currentData?.painPoints} />
-      <SeoServices
+      <DataAnalyticsServices
         data={currentData?.services}
         serviceCards={currentData?.serviceCards}
         basePath="/data-analytics"
+        premiumCloudServices={currentData?.premiumCloudServices}
       />
       <SeoContent data={currentData?.content} />
       <Apart />

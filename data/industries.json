@@ -1,0 +1,246 @@
+{
+  "industries": {
+    "hero": {
+      "heading": "Home Services",
+      "subheading": "Choose your industry.",
+      "industries": [
+        { "name": "Electrical", "slug": "electrical", "image": "/industry/electrical.webp" },
+        { "name": "HVAC", "slug": "hvac", "image": "/industry/hvac.webp" },
+        { "name": "Pest Control", "slug": "pest-control", "image": "/industry/pestcontrol.webp" },
+        { "name": "Plumbing", "slug": "plumbing", "image": "/industry/plumber.webp" },
+        { "name": "Landscaping", "slug": "landscaping", "image": "/industry/landscaping.webp" },
+        { "name": "Roofing", "slug": "roofing", "image": "/industry/roofing.webp" }
+      ]
+    },
+    "form": {
+      "heading": "Let’s talk about your industry",
+      "subheading": "Share your goals and challenges — we’ll propose a tailored plan."
+    },
+    "introParagraph": {
+      "heading": "Industry-specific solutions",
+      "paragraphs": [
+        "We understand each industry has unique needs. Our approach blends domain expertise with modern technology to deliver measurable outcomes.",
+        "From lead generation to retention, we tailor strategies around your audience, geography, and service mix to consistently drive ROI."
+      ]
+    },
+    "painPoints": {
+      "heading": "Common challenges we solve",
+      "items": [
+        {
+          "title": "Siloed data and fragmented tools",
+          "description": "We integrate platforms and processes to create reliable, unified visibility."
+        },
+        {
+          "title": "Inefficient workflows",
+          "description": "We automate repetitive work and optimize your operating model."
+        },
+        {
+          "title": "Inconsistent lead quality",
+          "description": "We refine targeting, landing pages, and qualification to improve close rates."
+        },
+        {
+          "title": "Poor local visibility",
+          "description": "We optimise GBP, citations, and local SEO to dominate your service area."
+        },
+        {
+          "title": "Limited tracking and attribution",
+          "description": "We implement call tracking and analytics to attribute revenue accurately."
+        },
+        {
+          "title": "Seasonality and demand swings",
+          "description": "We build always-on campaigns and promos to smooth demand throughout the year."
+        }
+      ]
+    },
+    "services": {
+      "heading": "What we do",
+      "description": "End-to-end services, tailored for your industry."
+    },
+    "serviceCards": [
+      {
+        "title": "Strategy & Roadmapping",
+        "description": "Define clear outcomes, phases, and ROI for your transformation.",
+        "slug": "industries"
+      }
+    ],
+    "premiumCloudServices": [],
+    "content": {
+      "heading": "How we deliver",
+      "sections": [
+        {
+          "title": "Discovery",
+          "points": [
+            "Stakeholder interviews",
+            "Process mapping",
+            "Gap analysis"
+          ]
+        }
+      ]
+    },
+    "process": {
+      "heading": "Our process",
+      "steps": [
+        { "title": "Discover", "description": "Understand goals, audience, competitors, and service geographies. Align on KPIs and constraints." },
+        { "title": "Design", "description": "Architect the channel mix, messaging, and tracking. Produce the roadmap with timelines and owners." },
+        { "title": "Build", "description": "Launch campaigns, content, and automations. Configure analytics, call tracking, and reporting." },
+        { "title": "Optimise", "description": "Iterate on ads, landing pages, and SEO. Improve conversion rate and lower CAC with experiments." },
+        { "title": "Scale", "description": "Double down on winners, expand to new areas and services, and forecast growth with confidence." }
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Why partner with us",
+      "items": [
+        { "title": "Domain expertise", "description": "Experience across electrical, HVAC, plumbing, roofing, and more." },
+        { "title": "Measurable outcomes", "description": "KPIs and reporting baked in with full-funnel attribution." },
+        { "title": "Faster time-to-value", "description": "Launch battle-tested playbooks in days, not months." },
+        { "title": "Local-first SEO", "description": "Rank in maps and organic for the services that matter in your area." },
+        { "title": "High-intent lead gen", "description": "Performance creative and CRO to lift lead quality and close rates." },
+        { "title": "Automation-ready", "description": "AI assistants, workflows, and integrations to reduce manual work." }
+      ]
+    },
+    "features": {
+      "heading": "Platform features",
+      "items": [
+        { "title": "Secure by default", "description": "Best practices across the stack." },
+        { "title": "Call tracking", "description": "Know which channels and keywords drive revenue, not just calls." },
+        { "title": "Reporting dashboards", "description": "Transparent KPIs updated daily for full visibility." },
+        { "title": "Lead routing", "description": "Instantly route calls and forms to the right team with SLAs." }
+      ]
+    },
+    "faq": {
+      "serviceName": "Industries",
+      "faqs": [
+        {
+          "q": "Can you customize services for our industry?",
+          "a": "Yes — we tailor every engagement to your context, goals, and constraints."
+        },
+        {
+          "q": "Do you work with single‑location and multi‑location businesses?",
+          "a": "Yes. We support both, including local SEO and paid media structures for multi‑location rollouts."
+        },
+        {
+          "q": "How soon can we launch?",
+          "a": "Discovery starts immediately. Most engagements go live within 10–14 days using proven playbooks."
+        }
+      ]
+    }
+  },
+  "otherServices": {
+    "industriesServices": [
+      "Architect marketing",
+      "Recruitment agency marketing",
+      "HR services marketing",
+      "IT services marketing",
+      "Car  Wreckers Marketing",
+      "Automotive Repair ",
+      "Construction Marketing",
+      "Florist Marketing",
+      "Daycare Marketing",
+      "Mobile Repair Marketing",
+      "Supermarket Marketing",
+      "Window Tinting Services Marketing",
+      "Fencing Solutions Marketing",
+      "Movers marketing",
+      "Travel and Tourism marketing",
+      "Auto Parts Marketing",
+      "Jewellery Shop Marketing",
+      "Cleaning Company Marketing",
+      "Digital marketing for healthcare",
+      "Digital marketing for dentists",
+      "Dental marketing agency",
+      "Chiropractic marketing",
+      "Physiotherapist marketing",
+      "Veterinary clinic marketing",
+      "Medical practice marketing",
+      "Tutoring marketing",
+      "GYM Digital marketing Agency",
+      "Salons  Digital marketing Agency",
+      "Restaurants Digital marketing Agency",
+      "NGO Digital marketing Agency",
+      "SaaS Digital marketing Agency",
+      "fintech Digital marketing Agency",
+      "B2B Digital marketing Agency",
+      "B2C Digital marketing Agency",
+      "Automotive business marketing",
+      "Plumbing marketing agency",
+      "Roofing marketing agency",
+      "HVAC marketing agency",
+      "Electrical services marketing",
+      "Landscaping marketing",
+      "Pest control marketing",
+      "Painting contractors marketing",
+      "Flooring contractors marketing",
+      "Garage door repair marketing",
+      "Solar panel installation marketing",
+      "Appliance repair marketing",
+      "Locksmith marketing",
+      "Towing services marketing",
+      "Handyman marketing",
+      "Carpenter marketing",
+      "Cabinet Maker marketing",
+      "Tiling  marketing",
+      "Flooring marketing"
+    ],
+    "slugMapping": {
+      "Architect marketing": "architect-marketing",
+      "Recruitment agency marketing": "recruitment-agency-marketing",
+      "HR services marketing": "hr-marketing-agency",
+      "IT services marketing": "it-marketing-agency",
+      "Car  Wreckers Marketing": "wreckers-marketing-agency",
+      "Automotive Repair ": "automotive-repair-marketing-agency",
+      "Construction Marketing": "construction-marketing-agency",
+      "Florist Marketing": "florist-marketing-agency",
+      "Daycare Marketing": "daycare-marketing-agency",
+      "Mobile Repair Marketing": "mobile-repair-marketing-agency",
+      "Supermarket Marketing": "supermarket-marketing-agency",
+      "Window Tinting Services Marketing": "window-tinting-marketing-agency",
+      "Fencing Solutions Marketing": "fencing-marketing-agency",
+      "Movers marketing": "movers-marketing-agency",
+      "Travel and Tourism marketing": "travel-marketing-agency",
+      "Auto Parts Marketing": "auto-marketing-agency",
+      "Jewellery Shop Marketing": "jewellery-marketing-agency",
+      "Cleaning Company Marketing": "cleaning-marketing-agency",
+      "Digital marketing for healthcare": "healthcare-marketing-agency",
+      "Digital marketing for dentists": "dentists-marketing-agency",
+      "Dental marketing agency": "dental-marketing-agency",
+      "Chiropractic marketing": "chiropractic-marketing-agency",
+      "Physiotherapist marketing": "physiotherapist-marketing-agency",
+      "Veterinary clinic marketing": "veterinary-marketing-agency",
+      "Medical practice marketing": "medical-marketing-agency",
+      "Tutoring marketing": "tutoring-marketing-agency",
+      "GYM Digital marketing Agency": "gym-marketing-agency",
+      "Salons  Digital marketing Agency": "salons-marketing-agency",
+      "Restaurants Digital marketing Agency": "restaurants-marketing-agency",
+      "NGO Digital marketing Agency": "ngo-marketing-agency",
+      "SaaS Digital marketing Agency": "saas-marketing-agency",
+      "fintech Digital marketing Agency": "fintech-marketing-agency",
+      "B2B Digital marketing Agency": "b2b-marketing-agency",
+      "B2C Digital marketing Agency": "b2c-marketing-agency",
+      "Automotive business marketing": "automotive-marketing-agency",
+      "Plumbing marketing agency": "plumbing-marketing-agency",
+      "Roofing marketing agency": "roofing-marketing-agency",
+      "HVAC marketing agency": "hvac-marketing-agency",
+      "Electrical services marketing": "electrical-marketing-agency",
+      "Landscaping marketing": "landscaping-marketing-agency",
+      "Pest control marketing": "pest-control-marketing-agency",
+      "Painting contractors marketing": "painting-contractors-marketing-agency",
+      "Flooring contractors marketing": "flooring-marketing-agency",
+      "Garage door repair marketing": "garage-marketing-agency",
+      "Solar panel installation marketing": "solar-marketing-agency",
+      "Appliance repair marketing": "appliance-repair-marketing-agency",
+      "Locksmith marketing": "locksmith-marketing-agency",
+      "Towing services marketing": "towing-marketing-agency",
+      "Handyman marketing": "handyman-marketing-agency",
+      "Carpenter marketing": "carpenter-marketing-agency",
+      "Cabinet Maker marketing": "cabinet-maker-marketing-agency",
+      "Tiling  marketing": "tiling-marketing-agency",
+      "Flooring marketing": "flooring-marketing-agency"
+    },
+    "config": {
+      "title": "Industries",
+      "highlightedText": "Industries",
+      "columns": 3,
+      "baseUrl": "/industry/"
+    }
+  }
+}

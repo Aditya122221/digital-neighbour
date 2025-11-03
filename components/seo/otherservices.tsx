@@ -12,6 +12,7 @@ import appDevelopmentData from "@/data/app-development.json"
 import hostingData from "@/data/hosting-it-security.json"
 import aiAutomationData from "@/data/ai-automation.json"
 import dataAnalyticsData from "@/data/data-analytics.json"
+import industriesData from "@/data/industries.json"
 
 // Types for the data structure
 interface OtherServicesData {
@@ -125,7 +126,7 @@ export default function OtherServices() {
 				.slugMapping,
 			config: (aiAutomationData as any).otherServices.config,
 		}
-	} else if (pathname.startsWith("/data-analytics")) {
+    } else if (pathname.startsWith("/data-analytics")) {
 		data = {
 			services: (dataAnalyticsData as any).otherServices
 				.dataAnalyticsServices,
@@ -133,6 +134,14 @@ export default function OtherServices() {
 				.slugMapping,
 			config: (dataAnalyticsData as any).otherServices.config,
 		}
+    } else if (pathname.startsWith("/industries")) {
+        data = {
+            services: (industriesData as any).otherServices
+                .industriesServices,
+            slugMapping: (industriesData as any).otherServices
+                .slugMapping,
+            config: (industriesData as any).otherServices.config,
+        }
 	} else {
 		// Default to SEO data (for /seo routes)
 		data = {
