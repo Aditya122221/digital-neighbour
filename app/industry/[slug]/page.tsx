@@ -45,7 +45,7 @@ export default async function IndustryServicePage({
 	}
 
 	const serviceName = getServiceNameFromSlug(slug) || "Industry"
-	const currentData = (industriesData as any)["industries"] || {}
+	const currentData = (industriesData as any)[slug] || {}
 
 	const introData = currentData?.introParagraph
 		? {
@@ -137,9 +137,7 @@ export default async function IndustryServicePage({
 			/>
 			<KeyBenefits data={benefitsData} />
 			<Features data={currentData?.features} />
-			<SeoFaq
-				data={(industriesData as any).industries?.faq}
-			/>
+			<SeoFaq data={currentData?.faq} />
 			<SeoCta data={currentData?.services} />
 			<Footer />
 		</main>

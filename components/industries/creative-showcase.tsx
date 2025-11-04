@@ -125,8 +125,13 @@ export default function CreativeShowcase({
 		<section className="relative py-16 md:py-24">
 			<div className="container mx-auto px-6 lg:px-12">
 				<div className="mb-8 md:mb-12 text-center">
-					<h2 className="font-cal-sans text-3xl md:text-4xl lg:text-5xl font-semibold">
-						{title}
+					<h2 className="text-4xl md:text-5xl lg:text-6xl font-regular text-blackbrown leading-tight font-cal-sans">
+						<span className="relative inline-block">
+							<span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow"></span>
+							<span className="relative z-10 font-medium italic">
+								{title}
+							</span>
+						</span>
 					</h2>
 				</div>
 				<div className="space-y-8 md:space-y-10">

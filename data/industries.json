@@ -124,6 +124,130 @@
       ]
     }
   },
+  "architect-marketing": {
+  "hero": {
+    "heading": "Architect Marketing",
+    "subheading": "Build visibility, demand, and trust for your architecture practice.",
+    "industries": [
+      { "name": "Residential Architecture", "slug": "residential-architecture", "image": "/industry/electrical.webp" },
+      { "name": "Commercial Architecture", "slug": "commercial-architecture", "image": "/industry/hvac.webp" },
+      { "name": "Interior Design", "slug": "interior-design", "image": "/industry/pestcontrol.webp" },
+      { "name": "Landscape Architecture", "slug": "landscape-architecture", "image": "/industry/landscaping.webp" },
+      { "name": "Urban Planning", "slug": "urban-planning", "image": "/industry/roofing.webp" },
+      { "name": "Sustainable Design", "slug": "sustainable-design", "image": "/industry/plumber.webp" }
+    ]
+  },
+  "form": {
+    "heading": "Let’s talk about your architecture firm",
+    "subheading": "Share your goals and challenges — we’ll propose a tailored growth plan."
+  },
+  "introParagraph": {
+    "heading": "Specialised marketing for architecture firms",
+    "paragraphs": [
+      "Architectural practices thrive on reputation, referrals, and distinctive portfolios. We position your brand to attract high-value clients through digital authority and consistent visibility.",
+      "From project showcases to local SEO, we craft end-to-end strategies that align with how property developers, homeowners, and partners search for your services."
+    ]
+  },
+  "painPoints": {
+    "heading": "Common challenges we solve",
+    "items": [
+      {
+        "title": "Low online visibility",
+        "description": "We optimise your presence on Google, maps, and directories to ensure your firm appears for relevant project searches."
+      },
+      {
+        "title": "Unclear differentiation",
+        "description": "We refine your messaging and portfolio positioning to highlight your design strengths and niche expertise."
+      },
+      {
+        "title": "Limited qualified leads",
+        "description": "We generate inquiries from property owners, developers, and partners actively seeking architectural services."
+      },
+      {
+        "title": "Inefficient marketing workflows",
+        "description": "We streamline content publishing, ad campaigns, and lead follow-up using automation."
+      },
+      {
+        "title": "Weak project showcase strategy",
+        "description": "We create high-impact case studies and landing pages to showcase past projects and attract similar clients."
+      },
+      {
+        "title": "Dependence on referrals",
+        "description": "We build a sustainable inbound pipeline that complements and scales beyond word-of-mouth leads."
+      }
+    ]
+  },
+  "serviceCards": [
+    {
+      "title": "Strategy & Roadmapping",
+      "description": "Define a marketing blueprint that reflects your design philosophy, goals, and market positioning.",
+      "slug": "architect-marketing"
+    }
+  ],
+  "content": {
+    "heading": "Build authority and attract your ideal clients.",
+    "text1": "Architectural marketing isn’t one-size-fits-all. We tailor every campaign to your firm’s service focus, client type, and region.",
+    "text2": "From SEO and paid ads to portfolio optimization and local campaigns, we ensure every effort drives visibility and inbound opportunities.",
+    "text3": "Your dashboard tracks every lead, call, and proposal request — empowering you to scale what drives measurable project wins.",
+    "image": "wordpress-seo.jpg",
+    "alt": "Architecture marketing illustration"
+  },
+  "process": {
+    "heading": "Our process",
+    "steps": [
+      "Discover",
+      "Design",
+      "Launch",
+      "Optimise",
+      "Scale"
+    ],
+    "content": [
+      "Understand your practice goals, portfolio, audience, and current marketing setup.",
+      "Map messaging, design assets, and campaigns to align with your firm’s brand and audience.",
+      "Deploy SEO, paid ads, and outreach campaigns with rapid iteration cycles.",
+      "Refine lead quality and conversion rates through data-driven creative testing.",
+      "Expand reach, add service areas, and scale what delivers the highest ROI."
+    ]
+  },
+  "keyBenefits": {
+    "heading": "Why partner with us",
+    "items": [
+      { "title": "Industry experience", "description": "We’ve helped architects, designers, and builders establish digital authority." },
+      { "title": "High-quality leads", "description": "Campaigns built to attract clients ready to start their next project." },
+      { "title": "Design-driven approach", "description": "Marketing visuals that reflect your firm’s aesthetic and expertise." },
+      { "title": "Local SEO excellence", "description": "Rank in maps and search results for architectural services in your area." },
+      { "title": "Transparent reporting", "description": "Real-time dashboards that show ROI, not just traffic." },
+      { "title": "Automation-ready systems", "description": "From inquiry routing to proposal follow-ups — we simplify your workflows." }
+    ]
+  },
+  "features": {
+    "heading": "Platform features",
+    "items": [
+      { "title": "Secure by default", "description": "Built on trusted technologies and best practices." },
+      { "title": "Call tracking", "description": "See which campaigns lead to consultations and project inquiries." },
+      { "title": "Reporting dashboards", "description": "Transparent KPIs updated daily for total visibility." },
+      { "title": "Lead routing", "description": "Automatically assign inquiries to the right partner or department." }
+    ]
+  },
+  "services": "Architect Marketing",
+  "faq": {
+    "serviceName": "Architect Marketing",
+    "faqs": [
+      {
+        "q": "Do you work with independent architects or large firms?",
+        "a": "Both. We adapt our strategies for solo practitioners, boutique studios, and multi-office firms alike."
+      },
+      {
+        "q": "How soon can results be expected?",
+        "a": "Most clients see visibility and lead improvements within 4–6 weeks after launch."
+      },
+      {
+        "q": "Can you help showcase our past projects?",
+        "a": "Yes — we build portfolio landing pages, optimize imagery, and promote case studies to attract similar clients."
+      }
+    ]
+  }
+},
   "otherServices": {
     "industriesServices": [
       "Architect marketing",
