@@ -117,37 +117,98 @@ export default function KeyBenefits({ data }: KeyBenefitsProps) {
 					{data.heading && (
 						<h2 className="text-4xl md:text-5xl lg:text-6xl font-regular text-blackbrown leading-tight font-cal-sans mb-4">
 							{(() => {
-								const heading = data.heading
+								const heading =
+									data.heading
 								// Highlight "Benefits", "Advantages", or "Outcomes"
-								const highlightWords = ["Benefits", "Advantages", "Outcomes"]
-								const words = heading.split(" ")
+								const highlightWords =
+									[
+										"Benefits",
+										"Advantages",
+										"Outcomes",
+									]
+								const words =
+									heading.split(
+										" "
+									)
 								let result = []
 
-								for (let i = 0; i < words.length; i++) {
-									const word = words[i].replace(/[.,;:!?]/g, "")
-									const punctuation = words[i].replace(word, "")
+								for (
+									let i = 0;
+									i <
+									words.length;
+									i++
+								) {
+									const word =
+										words[
+											i
+										].replace(
+											/[.,;:!?]/g,
+											""
+										)
+									const punctuation =
+										words[
+											i
+										].replace(
+											word,
+											""
+										)
 
 									if (
 										highlightWords.some(
-											(hw) => word.toLowerCase() === hw.toLowerCase()
+											(
+												hw
+											) =>
+												word.toLowerCase() ===
+												hw.toLowerCase()
 										)
 									) {
 										result.push(
-											<span key={i} className="relative inline-block">
+											<span
+												key={
+													i
+												}
+												className="relative inline-block"
+											>
 												<span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow"></span>
 												<span className="relative z-10 font-medium italic">
-													{word}
-													{punctuation}
+													{
+														word
+													}
+													{
+														punctuation
+													}
 												</span>
 											</span>
 										)
 									} else {
-										result.push(<span key={i}>{words[i]}</span>)
+										result.push(
+											<span
+												key={
+													i
+												}
+											>
+												{
+													words[
+														i
+													]
+												}
+											</span>
+										)
 									}
-									if (i < words.length - 1) result.push(" ")
+									if (
+										i <
+										words.length -
+											1
+									)
+										result.push(
+											" "
+										)
 								}
 
-								return result.length > 0 ? result : heading
+								return result.length >
+									0
+									? result
+									: heading
 							})()}
 						</h2>
 					)}
@@ -176,27 +237,40 @@ export default function KeyBenefits({ data }: KeyBenefitsProps) {
 							transition={{
 								duration: 0.6,
 								ease: "easeOut",
-								delay: index * 0.1,
+								delay:
+									index *
+									0.1,
 							}}
-							className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+							className="bg-white !rounded-none md:!rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
 						>
 							{/* Icon/Image Section */}
 							<div className="mb-6">
 								{benefit.image ? (
-									<div className="relative w-full h-48 rounded-xl overflow-hidden bg-gradient-to-br from-yellow/20 to-pink/20">
+									<div className="relative w-full h-48 !rounded-none md:!rounded-xl overflow-hidden bg-gradient-to-br from-yellow/20 to-pink/20">
 										<Image
-											src={benefit.image}
-											alt={benefit.title}
+											src={
+												benefit.image
+											}
+											alt={
+												benefit.title
+											}
 											fill
 											className="object-cover"
 										/>
 									</div>
 								) : (
-									<div className="w-16 h-16 rounded-xl bg-gradient-to-br from-yellow/20 to-yellow/40 flex items-center justify-center text-yellow mb-4">
+									<div className="w-16 h-16 !rounded-none md:!rounded-xl bg-gradient-to-br from-yellow/20 to-yellow/40 flex items-center justify-center text-yellow mb-4">
 										{benefit.icon ? (
-											<span className="text-3xl">{benefit.icon}</span>
+											<span className="text-3xl">
+												{
+													benefit.icon
+												}
+											</span>
 										) : (
-											defaultIcons[index % defaultIcons.length]
+											defaultIcons[
+												index %
+													defaultIcons.length
+											]
 										)}
 									</div>
 								)}
@@ -205,10 +279,14 @@ export default function KeyBenefits({ data }: KeyBenefitsProps) {
 							{/* Content Section */}
 							<div className="space-y-3">
 								<h3 className="text-xl md:text-2xl font-semibold text-blackbrown leading-tight">
-									{benefit.title}
+									{
+										benefit.title
+									}
 								</h3>
 								<p className="text-base md:text-lg text-gray-700 leading-relaxed">
-									{benefit.description}
+									{
+										benefit.description
+									}
 								</p>
 							</div>
 						</motion.div>
@@ -218,4 +296,3 @@ export default function KeyBenefits({ data }: KeyBenefitsProps) {
 		</section>
 	)
 }
-

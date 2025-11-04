@@ -92,11 +92,103 @@ export default function DataAnalyticsServices({
 	return (
 		<section className="py-20 px-6 bg-gradient-to-b from-pink/20 to-white">
 			<div className="container max-w-7xl mx-auto">
-				{/* Main Layout: Left (tabs), Middle (image), Right (content) */}
+				{/* Mobile layout */}
+				{activeService && (
+					<div className="lg:hidden">
+						<div className="flex gap-3 overflow-x-auto pb-2 -mx-2 px-2">
+							{services.map(
+								(service) => {
+									const isActive =
+										activeTab ===
+										service.id
+									return (
+										<button
+											key={
+												service.id
+											}
+											onClick={() =>
+												setActiveTab(
+													service.id
+												)
+											}
+											className={`whitespace-nowrap rounded-full border transition-colors px-4 py-2 text-sm ${
+												isActive
+													? "bg-yellow border-yellow text-black"
+													: "bg-white border-black/20 text-blackbrown"
+											}`}
+										>
+											{
+												service.name
+											}
+										</button>
+									)
+								}
+							)}
+						</div>
+
+						<motion.div
+							key={`m-${activeTab}`}
+							initial={{
+								opacity: 0,
+								y: 12,
+							}}
+							whileInView={{
+								opacity: 1,
+								y: 0,
+							}}
+							viewport={{
+								once: true,
+							}}
+							transition={{
+								duration: 0.4,
+								ease: "easeOut",
+							}}
+							className="mt-4 bg-[#f7f7fa] rounded-2xl p-4"
+						>
+							<h2 className="text-2xl font-light text-blackbrown font-cal-sans">
+								{
+									activeService.title
+								}
+							</h2>
+							<p className="mt-2 text-base text-blackbrown/80 leading-relaxed">
+								{
+									activeService.description
+								}
+							</p>
+							<div className="mt-4">
+								<CustomButton
+									text="Learn More"
+									href={
+										activeService.link ||
+										"/contact"
+									}
+									textColor="black"
+									borderColor="black"
+								/>
+							</div>
+							<div className="mt-5">
+								<div className="relative w-full h-[220px] rounded-xl overflow-hidden bg-black flex items-center justify-center">
+									<Image
+										src={
+											activeService.image
+										}
+										alt={
+											activeService.title
+										}
+										fill
+										className="object-contain p-4"
+									/>
+								</div>
+							</div>
+						</motion.div>
+					</div>
+				)}
+
+				{/* Desktop layout */}
 				{activeService && (
 					<motion.div
 						key={activeTab}
-						className="grid grid-cols-1 lg:grid-cols-12"
+						className="hidden lg:grid lg:grid-cols-12"
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{
 							opacity: 1,
@@ -110,7 +202,15 @@ export default function DataAnalyticsServices({
 					>
 						{/* Left - Vertical Buttons matching design */}
 						<div className="lg:col-span-4">
-							<div className="bg-black p-6 md:p-8 lg:p-10 h-full overflow-hidden" style={{borderTopLeftRadius: "54px", borderBottomLeftRadius: "54px"}}>
+							<div
+								className="bg-black p-6 md:p-8 lg:p-10 h-full overflow-hidden"
+								style={{
+									borderTopLeftRadius:
+										"54px",
+									borderBottomLeftRadius:
+										"54px",
+								}}
+							>
 								<div className="flex flex-col gap-6 md:gap-7">
 									{services.map(
 										(
@@ -148,7 +248,14 @@ export default function DataAnalyticsServices({
 
 						{/* Right - Details and Image */}
 						<div className="lg:col-span-8">
-							<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-[#f7f7fa]" style={{padding: "25px", borderRadius: "54px"}}>
+							<div
+								className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-[#f7f7fa]"
+								style={{
+									padding: "25px",
+									borderRadius:
+										"54px",
+								}}
+							>
 								{/* Details */}
 								<div className="space-y-6">
 									<motion.h2

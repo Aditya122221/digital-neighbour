@@ -374,6 +374,256 @@
     ]
   }
 },
+"physiotherapists-marketing-agency": {
+  "hero": {
+    "heading": "Physiotherapists Marketing Agency",
+    "subheading": "Attract, retain, and grow patients with data-driven digital marketing built for physiotherapy practices."
+  },
+  "form": {
+    "heading": "Let’s talk about your physiotherapy practice",
+    "subheading": "Share your goals and challenges — we’ll propose a tailored growth plan."
+  },
+  "introParagraph": {
+    "heading": "Specialised marketing for physiotherapists",
+    "paragraphs": [
+      "We help physiotherapy clinics increase bookings, build local visibility, and strengthen their online reputation.",
+      "From local SEO to performance ads, we design marketing programs that convert searchers into loyal patients."
+    ]
+  },
+  "painPoints": {
+    "heading": "Common challenges we solve",
+    "subheading": "",
+    "items": [
+      { "title": "Low patient bookings", "description": "Optimise visibility and conversion to attract new local patients consistently." },
+      { "title": "Poor online presence", "description": "Improve Google rankings, reviews, and social proof to build trust." },
+      { "title": "Ineffective ads", "description": "Run targeted campaigns focused on treatment areas and high-intent searches." }
+    ]
+  },
+  "premiumCloudServices": {
+    "title": "Marketing programs for physiotherapy clinics",
+    "topCards": [
+      {
+        "title": "Local growth engine",
+        "description": "SEO, Google Ads, and content campaigns that drive patient enquiries in your service areas."
+      },
+      {
+        "title": "Patient conversion system",
+        "description": "Landing pages, booking flows, and remarketing that turn website visitors into appointments."
+      }
+    ],
+    "customApi": {
+      "title": "Attribution & CRM",
+      "badge": "Data",
+      "description": "Track calls, forms, and bookings — linked directly to your practice management system.",
+      "buttonText": "View reporting",
+      "buttonLink": "#reporting"
+    },
+    "maximumCustomization": {
+      "title": "Practice-aligned execution",
+      "description": "We adapt to your systems, compliance needs, and patient intake processes for seamless collaboration.",
+      "buttonText": "How we work",
+      "buttonLink": "#engagement",
+      "features": [
+        { "title": "PMS integration", "description": "Connect bookings and patient data for closed-loop performance tracking." },
+        { "title": "Call & form tracking", "description": "Measure which channels drive qualified patient leads." },
+        { "title": "Reputation building", "description": "Review generation and content strategies to build patient trust." }
+      ]
+    }
+  },
+  "content": {
+    "heading": "Grow awareness, bookings, and retention.",
+    "text1": "Physiotherapy patients search locally and choose based on trust. We position your clinic as the top choice with strong local SEO and credible patient-focused content.",
+    "text2": "From high-intent Google Ads to referral-optimised landing pages, every channel is built to increase new bookings and reactivations.",
+    "text3": "With full attribution from call and booking data, we optimise campaigns weekly to improve ROI and patient acquisition cost.",
+    "image": "wordpress-seo.jpg",
+    "alt": "Physiotherapy marketing illustration"
+  },
+  "process": {
+    "heading": "Our process",
+    "steps": [
+      "Discover",
+      "Strategy",
+      "Launch",
+      "Optimize & Report",
+      "Scale"
+    ],
+    "content": [
+      "Understand clinic goals, services, competition, and patient journey.",
+      "Develop positioning, offers, and local marketing plan.",
+      "Launch tracking, campaigns, and booking pages.",
+      "Refine weekly with insights from calls, bookings, and analytics.",
+      "Scale service areas, ads, and retention programs."
+    ]
+  },
+  "keyBenefits": {
+    "heading": "Why partner with us",
+    "subheading": "",
+    "items": [
+      { "title": "Healthcare marketing expertise", "description": "Proven results for physiotherapy and allied health practices." },
+      { "title": "Local patient focus", "description": "Targeting and messaging tailored to your clinic’s neighbourhood and audience." },
+      { "title": "Full-funnel visibility", "description": "Every enquiry and booking tracked for accurate ROI measurement." }
+    ]
+  },
+  "features": {
+    "heading": "Platform features",
+    "items": [
+      { "title": "Lead routing", "description": "Send patient enquiries directly to reception or practitioners with tracking." },
+      { "title": "Call tracking", "description": "Attribute calls and bookings to campaigns and keywords." },
+      { "title": "Reporting dashboards", "description": "Real-time visibility into campaigns, leads, and booked appointments." }
+    ]
+  },
+  "services": "Physiotherapists Marketing",
+  "faq": {
+    "serviceName": "Physiotherapists Marketing",
+    "faqs": [
+      {
+        "q": "How do you help physiotherapy clinics attract more patients?",
+        "a": "We combine local SEO, Google Ads, and conversion-optimised landing pages to generate consistent, high-intent patient bookings."
+      },
+      {
+        "q": "Can you integrate with our clinic management software?",
+        "a": "Yes. We integrate with leading PMS tools to track bookings, automate follow-ups, and measure ROI across campaigns."
+      },
+      {
+        "q": "Do you handle online reviews and reputation management?",
+        "a": "Yes. We help collect verified reviews, manage listings, and showcase patient testimonials to build trust and visibility."
+      },
+      {
+        "q": "How long before results show?",
+        "a": "Paid campaigns typically perform within weeks; SEO and content programs build momentum over 2–3 months with compounding growth."
+      },
+      {
+        "q": "Do you support multi-location physiotherapy clinics?",
+        "a": "Yes. We build scalable campaigns with location-specific tracking, call routing, and reporting for each branch."
+      }
+    ]
+  }
+},
+"coaches-marketing-agency": {
+  "hero": {
+    "heading": "Coaches Marketing Agency",
+    "subheading": "Grow visibility, authority, and client enrolments for coaches, consultants, and mentors."
+  },
+  "form": {
+    "heading": "Let’s talk about your coaching business",
+    "subheading": "Share your goals and challenges — we’ll design a marketing system that attracts qualified clients consistently."
+  },
+  "introParagraph": {
+    "heading": "Specialised marketing for coaches and consultants",
+    "paragraphs": [
+      "We help coaches build authority, attract ideal clients, and scale enrolments through data-driven marketing systems.",
+      "From personal branding to automated lead funnels, we tailor strategies to your niche, audience, and offer type."
+    ]
+  },
+  "painPoints": {
+    "heading": "Common challenges we solve",
+    "subheading": "",
+    "items": [
+      { "title": "Unclear positioning", "description": "We help define your niche, audience, and offer so clients instantly understand your value." },
+      { "title": "Inconsistent leads and enrolments", "description": "Build automated funnels and campaigns that consistently attract ready-to-invest clients." },
+      { "title": "Low visibility and authority", "description": "Boost awareness with SEO, thought leadership, and targeted paid promotion." }
+    ]
+  },
+  "premiumCloudServices": {
+    "title": "Marketing programs for coaches and consultants",
+    "topCards": [
+      {
+        "title": "Lead generation engine",
+        "description": "SEO, content, and paid campaigns designed to bring in qualified prospects aligned with your coaching niche."
+      },
+      {
+        "title": "Conversion systems",
+        "description": "Optimized landing pages, lead magnets, and follow-up automations that convert interest into booked sessions."
+      }
+    ],
+    "customApi": {
+      "title": "Attribution & CRM",
+      "badge": "Data",
+      "description": "Track leads from first click to paid client with integrated dashboards and CRM automations.",
+      "buttonText": "View reporting",
+      "buttonLink": "#reporting"
+    },
+    "maximumCustomization": {
+      "title": "Niche-aligned execution",
+      "description": "We adapt to your content style, coaching model, and platform preferences while maintaining performance discipline.",
+      "buttonText": "How we work",
+      "buttonLink": "#engagement",
+      "features": [
+        { "title": "CRM & email integration", "description": "Automate nurturing and bookings with tools like HubSpot, ActiveCampaign, or GoHighLevel." },
+        { "title": "Call insights", "description": "Record and tag discovery calls to improve messaging and qualification." },
+        { "title": "Offer & content strategy", "description": "Position your programs and publish authority content that builds trust and converts." }
+      ]
+    }
+  },
+  "content": {
+    "heading": "Build authority, generate leads, and enrol clients predictably.",
+    "text1": "Coaching success depends on consistent visibility and credibility. We help you build both — with clear positioning, powerful content, and targeted campaigns.",
+    "text2": "From SEO and content funnels to retargeting and CRM automation, we focus on attracting, qualifying, and converting leads who fit your ideal client profile.",
+    "text3": "Reporting dashboards show which campaigns drive calls, forms, and paid enrolments — helping you refine and scale what works.",
+    "image": "wordpress-seo.jpg",
+    "alt": "Coaching business marketing illustration"
+  },
+  "process": {
+    "heading": "Our process",
+    "steps": [
+      "Discover",
+      "Strategy",
+      "Launch",
+      "Optimize & Report",
+      "Scale"
+    ],
+    "content": [
+      "Define goals, niche, audience, and current marketing assets.",
+      "Craft your brand message, offers, funnel plan, and ad strategy.",
+      "Launch campaigns, content, and automations to generate leads quickly.",
+      "Measure and optimise based on call quality, conversion rates, and engagement data.",
+      "Scale traffic, expand audience segments, and introduce new offers."
+    ]
+  },
+  "keyBenefits": {
+    "heading": "Why partner with us",
+    "subheading": "",
+    "items": [
+      { "title": "Coaching niche expertise", "description": "Experience across business, life, health, and executive coaching." },
+      { "title": "Proven lead systems", "description": "Funnels and campaigns optimised for discovery calls and enrolments." },
+      { "title": "Personal brand alignment", "description": "Authentic positioning and content that reflect your unique coaching voice." }
+    ]
+  },
+  "features": {
+    "heading": "Platform features",
+    "items": [
+      { "title": "Lead routing", "description": "Instantly route leads to the right calendar or CRM workflow." },
+      { "title": "Call tracking", "description": "Track calls, forms, and DMs back to campaigns and content sources." },
+      { "title": "Reporting dashboards", "description": "Real-time performance tracking for visibility, leads, and revenue." }
+    ]
+  },
+  "services": "Coaches Marketing Agency",
+  "faq": {
+    "serviceName": "Coaches Marketing Agency",
+    "faqs": [
+      {
+        "q": "How do you generate leads for coaches?",
+        "a": "We use SEO, paid ads, and content funnels tailored to your niche and audience. Each system is designed to capture high-intent prospects and convert them into booked calls."
+      },
+      {
+        "q": "Do you work with solo coaches or larger teams?",
+        "a": "Both. We build scalable systems for solo practitioners and multi-coach organisations, adapting campaigns to your structure and delivery model."
+      },
+      {
+        "q": "How soon can I expect results?",
+        "a": "Most coaching clients see consistent enquiries and bookings within 2–4 weeks after launch, with compounding results through optimisation and retargeting."
+      },
+      {
+        "q": "Can you help with content and positioning?",
+        "a": "Yes. We refine your offers, messaging, and authority content to make your value clear and attract ideal-fit clients."
+      },
+      {
+        "q": "What platforms do you integrate with?",
+        "a": "We integrate with tools like Calendly, HubSpot, GoHighLevel, and ActiveCampaign for seamless lead tracking and automation."
+      }
+    ]
+  }
+},
 "law-firm-marketing-agency": {
   "hero": {
     "heading": "Law Firm Marketing Agency",
@@ -1003,6 +1253,8 @@
     "professionalsServices": [
         "Real estate agent marketing",
         "Mortgage broker marketing",
+        "Physiotherapists Marketing Agency",
+        "Coaches Marketing Agency",
         "Law firm marketing",
         "Accountant marketing",
         "Financial advisor marketing",
@@ -1012,6 +1264,8 @@
     "slugMapping": {
         "Real estate agent marketing": "real-estate-marketing-agency",
         "Mortgage broker marketing": "mortgage-broker-marketing-agency",
+        "Physiotherapists Marketing Agency":"physiotherapists-marketing-agency",
+        "Coaches Marketing Agency":"coaches-marketing-agency",
         "Law firm marketing": "law-firm-marketing-agency",
         "Accountant marketing": "accountant-marketing-agency",
         "Financial advisor marketing": "financial-advisor-marketing-agency",

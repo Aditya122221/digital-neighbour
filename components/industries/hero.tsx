@@ -60,7 +60,7 @@ export default function IndustriesHero({ data }: IndustriesHeroProps) {
 									key={
 										item.slug
 									}
-									className="group relative rounded-3xl overflow-hidden"
+									className={`group relative rounded-3xl overflow-hidden ${index >= 3 ? "hidden lg:block" : index >= 2 ? "hidden sm:block" : ""}`}
 								>
 									<div className="relative h-full">
 										<Image

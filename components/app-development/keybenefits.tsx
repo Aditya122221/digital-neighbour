@@ -241,12 +241,12 @@ export default function KeyBenefits({ data }: KeyBenefitsProps) {
 									index *
 									0.1,
 							}}
-							className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+							className="bg-white !rounded-none md:!rounded-2xl p-6 md:p-8 shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
 						>
 							{/* Icon/Image Section */}
 							<div className="mb-6">
 								{benefit.image ? (
-									<div className="relative w-full h-48 rounded-xl overflow-hidden bg-gradient-to-br from-yellow/20 to-pink/20">
+									<div className="relative w-full h-48 !rounded-none md:!rounded-xl overflow-hidden bg-gradient-to-br from-yellow/20 to-pink/20">
 										<Image
 											src={
 												benefit.image
@@ -259,7 +259,7 @@ export default function KeyBenefits({ data }: KeyBenefitsProps) {
 										/>
 									</div>
 								) : (
-									<div className="w-16 h-16 rounded-xl bg-gradient-to-br from-yellow/20 to-yellow/40 flex items-center justify-center text-yellow mb-4">
+									<div className="w-16 h-16 !rounded-none md:!rounded-xl bg-gradient-to-br from-yellow/20 to-yellow/40 flex items-center justify-center text-yellow mb-4">
 										{benefit.icon ? (
 											<span className="text-3xl">
 												{
