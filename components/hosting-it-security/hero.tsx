@@ -28,13 +28,6 @@ export default function HostingHero({ data }: HostingHeroProps) {
 							borderColor="black"
 							className="mt-6"
 						/>
-						<CustomButton
-							text="Contact Sales"
-							href="/contact"
-							textColor="black"
-							borderColor="black"
-							className="mt-6"
-						/>
 					</div>
 				</div>
 				<div className="relative w-full h-full min-h-[400px] lg:h-full lg:min-h-[700px] overflow-hidden">
