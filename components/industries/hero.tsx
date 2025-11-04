@@ -45,11 +45,22 @@ export default function IndustriesHero({ data }: IndustriesHeroProps) {
 			slug: "landscaping",
 			image: "/industry/landscaping.webp",
 		},
-		{ name: "Roofing", slug: "roofing", image: "/industry/roofing.webp" },
+		{
+			name: "Roofing",
+			slug: "roofing",
+			image: "/industry/roofing.webp",
+		},
 	]
 
 	return (
-		<section className="relative pt-24 md:pt-32 lg:pt-40 overflow-x-hidden bg-gradient-to-br from-black via-black to-yellow">
+		<section
+			className="relative pt-24 md:pt-32 lg:pt-40 overflow-x-hidden bg-gradient-to-br from-black via-black to-yellow"
+			style={{
+				paddingBottom: "50px",
+				paddingLeft: "12px",
+				paddingRight: "12px",
+			}}
+		>
 			<div className="relative z-10 w-full px-0">
 				{/* Cards container with fixed responsive height */}
 				<div className="h-[420px] sm:h-[480px] lg:h-[640px]">
@@ -60,7 +71,15 @@ export default function IndustriesHero({ data }: IndustriesHeroProps) {
 									key={
 										item.slug
 									}
-									className={`group relative rounded-3xl overflow-hidden ${index >= 3 ? "hidden lg:block" : index >= 2 ? "hidden sm:block" : ""}`}
+									className={`group relative rounded-3xl overflow-hidden ${
+										index >=
+										3
+											? "hidden lg:block"
+											: index >=
+											  2
+											? "hidden sm:block"
+											: ""
+									}`}
 								>
 									<div className="relative h-full">
 										<Image
@@ -111,7 +130,10 @@ export default function IndustriesHero({ data }: IndustriesHeroProps) {
 					</p>
 					<motion.div
 						initial={{ opacity: 0, y: 20 }}
-						whileInView={{ opacity: 1, y: 0 }}
+						whileInView={{
+							opacity: 1,
+							y: 0,
+						}}
 						viewport={{ once: true }}
 						transition={{
 							duration: 0.6,
