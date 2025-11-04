@@ -9,7 +9,7 @@
 			{ "value": "60%", "label": "Growth in DTC sales" }
 		],
 		"tags": ["Copywriting", "Pitch Deck"],
-		"image": "/homepage/blog-1.jpg",
+		"image": "/Portfolio/ImageOne.jpg",
 		"imageAlt": "Lumé product photography"
 	},
 	{
@@ -22,7 +22,7 @@
 			{ "value": "40%", "label": "Cost reduction" }
 		],
 		"tags": ["Website", "SEO"],
-		"image": "/homepage/blog-2.jpg",
+		"image": "/Portfolio/ImageTwo.jpg",
 		"imageAlt": "Brandco digital transformation"
 	},
 	{
@@ -35,7 +35,7 @@
 			{ "value": "2.5x", "label": "Lead generation" }
 		],
 		"tags": ["Social Media", "Content"],
-		"image": "/homepage/blog-3.jpg",
+		"image": "/Portfolio/ImageThree.jpg",
 		"imageAlt": "TechStart campaign"
 	},
 	{
@@ -48,7 +48,7 @@
 			{ "value": "4x", "label": "Brand recognition" }
 		],
 		"tags": ["Brand Identity", "Design"],
-		"image": "/homepage/blog-4.jpg",
+		"image": "/Portfolio/ImageFour.jpg",
 		"imageAlt": "DesignHub rebrand"
 	},
 	{
@@ -61,7 +61,7 @@
 			{ "value": "$5M", "label": "Revenue increase" }
 		],
 		"tags": ["E-commerce", "Paid Ads"],
-		"image": "/homepage/blog-5.jpg",
+		"image": "/Portfolio/ImageFive.jpg",
 		"imageAlt": "InnovateLab e-commerce"
 	},
 	{
@@ -74,34 +74,8 @@
 			{ "value": "8x", "label": "Customer lifetime value" }
 		],
 		"tags": ["Analytics", "Strategy"],
-		"image": "/homepage/blog-6.jpg",
+		"image": "/Portfolio/ImageSix.jpg",
 		"imageAlt": "GrowthCo analytics"
-	},
-	{
-		"id": 7,
-		"logoText": "CreativeStudio",
-		"headline": "Content marketing drives organic brand growth",
-		"metrics": [
-			{ "value": "500K", "label": "Monthly visitors" },
-			{ "value": "120%", "label": "Traffic growth" },
-			{ "value": "35%", "label": "Engagement rate" }
-		],
-		"tags": ["Content Marketing", "SEO"],
-		"image": "/homepage/blog-1.jpg",
-		"imageAlt": "CreativeStudio content"
-	},
-	{
-		"id": 8,
-		"logoText": "MarketLeaders",
-		"headline": "Integrated campaign achieves industry recognition",
-		"metrics": [
-			{ "value": "15", "label": "Industry awards" },
-			{ "value": "95%", "label": "Client satisfaction" },
-			{ "value": "200%", "label": "Brand visibility" }
-		],
-		"tags": ["Integrated Marketing", "PR"],
-		"image": "/homepage/blog-2.jpg",
-		"imageAlt": "MarketLeaders campaign"
 	}
 ]
 
