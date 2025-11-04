@@ -19,31 +19,6 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 			<div className="relative z-20 container mx-auto py-6 md:py-0 px-6 lg:px-12">
 				<div className="relative flex items-center justify-center min-h-[70vh]">
 					<div className="max-w-5xl mx-auto text-center space-y-8">
-						{/* Top Tagline */}
-						<motion.div
-							initial={{
-								opacity: 0,
-								y: -20,
-							}}
-							animate={{
-								opacity: 1,
-								y: 0,
-							}}
-							transition={{
-								duration: 0.6,
-								ease: "easeOut",
-							}}
-						>
-							{data.tagline && (
-								<div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
-									<span className="text-sm text-white/80">
-										{
-											data.tagline
-										}
-									</span>
-								</div>
-							)}
-						</motion.div>
 
 						{/* Main Title */}
 						<motion.h1

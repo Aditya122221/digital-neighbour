@@ -19,27 +19,6 @@ export default function DataAnalyticsHero({ data }: DataAnalyticsHeroProps) {
       <div className="relative z-20 container mx-auto py-6 md:py-0 px-6 lg:px-12">
         <div className="relative flex items-center justify-center min-h-[70vh]">
           <div className="max-w-5xl mx-auto text-center space-y-8">
-            {/* Top Tagline */}
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: -20,
-              }}
-              animate={{
-                opacity: 1,
-                y: 0,
-              }}
-              transition={{
-                duration: 0.6,
-                ease: "easeOut",
-              }}
-            >
-              {data.tagline && (
-                <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full">
-                  <span className="text-sm text-white/80">{data.tagline}</span>
-                </div>
-              )}
-            </motion.div>
 
             {/* Main Title */}
             <motion.h1
@@ -142,7 +121,7 @@ export default function DataAnalyticsHero({ data }: DataAnalyticsHeroProps) {
                   src="/homepage/hero/1.jpg"
                   alt="Data Analyst"
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-full"
                 />
               </div>
               {/* Online indicator */}
@@ -185,7 +164,7 @@ export default function DataAnalyticsHero({ data }: DataAnalyticsHeroProps) {
                   src="/homepage/hero/2.jpg"
                   alt="User 1"
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-full"
                 />
               </div>
               <div className="absolute bottom-0 right-0 w-3 h-3 md:w-4 md:h-4 bg-green3 rounded-full border-2 border-white"></div>
@@ -227,7 +206,7 @@ export default function DataAnalyticsHero({ data }: DataAnalyticsHeroProps) {
                   src="/homepage/hero/3.jpg"
                   alt="User 2"
                   fill
-                  className="object-cover"
+                  className="object-cover rounded-full"
                 />
               </div>
               <div className="absolute bottom-0 right-0 w-3 h-3 md:w-4 md:h-4 bg-green3 rounded-full border-2 border-white"></div>
