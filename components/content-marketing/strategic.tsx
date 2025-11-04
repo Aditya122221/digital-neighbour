@@ -97,15 +97,13 @@ export default function Strategic({
     <section className="relative py-16 md:py-24 lg:py-32">
       {/* Background with image */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 md:rounded-tl-[10%] md:rounded-tr-[10%]"
         style={{
           backgroundColor: "#1a1a1a",
           backgroundImage: `url('/bullets-bg.png')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          borderTopLeftRadius: "10%",
-          borderTopRightRadius: "10%",
         }}
       />
 
