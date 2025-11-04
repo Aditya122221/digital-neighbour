@@ -31,7 +31,7 @@ export default function SeoHero({ data }: SeoHeroProps) {
             </p>
             <CustomButton
               text="Talk to our SEO expert"
-              href="#contact"
+              href="/contact"
               textColor="black"
               borderColor="black"
               className="mt-6"

@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { CustomButton } from "@/components/core/button"
 import {
 	Accordion,
 	AccordionContent,
@@ -88,12 +87,6 @@ export default function SeoFaq({ data }: SeoFaqProps) {
 						}}
 						className="space-y-6"
 					>
-						<CustomButton
-							text="Learn more"
-							href="#resources"
-							textColor="black"
-							borderColor="black"
-						/>
 						<h2 className="text-4xl md:text-6xl font-regular text-blackbrown font-cal-sans leading-tight">
 							Learn more about{" "}
 							<span className={`relative inline-block ${getServiceNameSize(serviceName)}`}>

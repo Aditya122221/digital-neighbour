@@ -27,7 +27,7 @@ export default function Blogs() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             >
-              <CustomButton text="More Insights" textColor="black" borderColor="black" />
+              <CustomButton text="More Insights" href="/resources" textColor="black" borderColor="black" />
             </motion.div>
           </motion.div>
           <motion.div 
@@ -37,7 +37,7 @@ export default function Blogs() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
-            <CustomButton text="More Insights" textColor="black" borderColor="black" />
+            <CustomButton text="More Insights" href="/resources" textColor="black" borderColor="black" />
           </motion.div>
         </div>
 

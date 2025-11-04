@@ -256,7 +256,7 @@ export default function Hero3() {
         >
           <CustomButton
             text="Get Started Today"
-            href="#contact"
+            href="/contact"
             textColor="black"
             borderColor="white"
           />

@@ -179,7 +179,7 @@ export default function DataAnalyticsServices({
 										text="Learn More"
 										href={
 											activeService.link ||
-											basePath
+											"/contact"
 										}
 										textColor="black"
 										borderColor="black"

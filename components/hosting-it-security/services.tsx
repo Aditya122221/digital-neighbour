@@ -62,14 +62,14 @@ export default function HostingServices({
 			description:
 				"A robust API, Terraform provider, and WHMCS plugin allow easy integration and automation across our cloud hosting platform.",
 			buttonText: "Learn more",
-			buttonLink: "https://api.liquidweb.com/docs",
+			buttonLink: "/contact",
 		},
 		maximumCustomization: {
 			title: "Maximum customization and control",
 			description:
 				"A robust API, Terraform provider, and WHMCS plugin allow easy integration and automation across our cloud hosting platform.",
 			buttonText: "Explore cloud servers",
-			buttonLink: "#plans",
+			buttonLink: "/contact",
 			features: [
 				{
 					title: "Management options",

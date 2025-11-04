@@ -13,21 +13,14 @@ export default function AboutHero() {
 
 	const springConfig = { stiffness: 120, damping: 24, mass: 0.35 }
 
-	// Background image positions - alternate left and right
-	const bg1X = useSpring(
-		useTransform(scrollYProgress, [0.1, 0.6], ["0%", "-40%"]),
+	// Blur effect for text - clears as scroll down, blurs when scroll up
+	// Starts clear (blur 0), gets blurry when scrolling up past a certain point
+	const textBlur = useSpring(
+		useTransform(scrollYProgress, [0, 0.3], [0, 15]),
 		springConfig
 	)
-	const bg2X = useSpring(
-		useTransform(scrollYProgress, [0.1, 0.6], ["0%", "40%"]),
-		springConfig
-	)
-	const bg3X = useSpring(
-		useTransform(scrollYProgress, [0.1, 0.6], ["0%", "-30%"]),
-		springConfig
-	)
-	const bg4X = useSpring(
-		useTransform(scrollYProgress, [0.1, 0.6], ["0%", "30%"]),
+	const textOpacity = useSpring(
+		useTransform(scrollYProgress, [0, 0.3], [1, 0.6]),
 		springConfig
 	)
 
@@ -55,62 +48,29 @@ export default function AboutHero() {
 	return (
 		<section
 			ref={sectionRef}
-			className="relative py-32 px-6 bg-gradient-to-b from-white to-pink/20 overflow-hidden"
+			className="relative px-6 bg-gradient-to-b from-white to-pink/20 overflow-hidden"
 		>
-			{/* Background Images */}
-			<div className="absolute inset-0 overflow-hidden pointer-events-none">
-				<motion.div
-					className="absolute top-10 left-0 w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden opacity-20"
-					style={{ x: bg1X }}
-				>
-					<Image
-						src="/homepage/hero/1.jpg"
-						alt="Team member"
-						fill
-						className="object-cover"
-					/>
-				</motion.div>
-				<motion.div
-					className="absolute top-20 right-0 w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden opacity-20"
-					style={{ x: bg2X }}
-				>
-					<Image
-						src="/homepage/hero/2.jpg"
-						alt="Team member"
-						fill
-						className="object-cover"
-					/>
-				</motion.div>
-				<motion.div
-					className="absolute top-1/3 left-10 w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden opacity-20"
-					style={{ x: bg3X }}
-				>
-					<Image
-						src="/homepage/hero/3.jpg"
-						alt="Team member"
-						fill
-						className="object-cover"
-					/>
-				</motion.div>
-				<motion.div
-					className="absolute top-1/2 right-10 w-60 h-60 md:w-80 md:h-80 rounded-full overflow-hidden opacity-20"
-					style={{ x: bg4X }}
-				>
-					<Image
-						src="/homepage/hero/4.jpg"
-						alt="Team member"
-						fill
-						className="object-cover"
-					/>
-				</motion.div>
+			{/* Big Image at Top */}
+			<div className="relative w-full h-[60vh] md:h-[70vh] mb-16">
+				<Image
+					src="/aboutImage.avif"
+					alt="Team Behind Your Growth"
+					fill
+					className="object-cover"
+					priority
+				/>
 			</div>
 
-			<div className="container max-w-7xl mx-auto relative z-10">
-				{/* Hero content */}
+			<div className="container max-w-7xl mx-auto relative z-10 pb-32">
+				{/* Hero content centered - no blur at start */}
 				<motion.div
 					className="text-center mb-16"
-					initial={{ opacity: 0, y: 50 }}
-					animate={{ opacity: 1, y: 0 }}
+					style={{
+						filter: `blur(${textBlur}px)`,
+						opacity: textOpacity,
+					}}
+					initial={{ opacity: 1 }}
+					animate={{ opacity: 1 }}
 					transition={{
 						duration: 0.8,
 						ease: "easeOut",
@@ -150,8 +110,14 @@ export default function AboutHero() {
 					</p>
 				</motion.div>
 
-				{/* Animated text block with scroll reveal */}
-				<div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-20 relative z-10">
+				{/* Animated text block with scroll reveal - centered, no blur at start */}
+				<motion.div
+					className="flex flex-wrap justify-center gap-2 md:gap-3 mb-20 relative z-10"
+					style={{
+						filter: `blur(${textBlur}px)`,
+						opacity: textOpacity,
+					}}
+				>
 					{words.map((word, index) => {
 						const startProgress =
 							index * 0.05
@@ -194,7 +160,7 @@ export default function AboutHero() {
 							</motion.span>
 						)
 					})}
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	)

@@ -31,7 +31,7 @@ export default function AppDevHero({ data }: AppDevHeroProps) {
             </p>
             <CustomButton
               text="Talk to our App Development expert"
-              href="#contact"
+              href="/contact"
               textColor="black"
               borderColor="black"
               className="mt-6"

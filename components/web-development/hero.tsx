@@ -47,7 +47,7 @@ export default function WebDevHero({ data }: WebDevHeroProps) {
               <div className="w-full md:w-auto md:self-center">
                 <CustomButton
                   text="Talk to our WEB DEVELOPMENT expert"
-                  href="#contact"
+                  href="/contact"
                   textColor="black"
                   borderColor="black"
                   className="mt-6 md:mt-0"

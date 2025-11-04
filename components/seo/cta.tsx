@@ -35,7 +35,7 @@ export default function SeoCta({ data }: SeoCtaProps) {
           <div className="lg:col-span-4 flex flex-col items-start lg:items-end gap-4">
             <CustomButton
               text="Book a free consultation"
-              href="#contact"
+              href="/contact"
               textColor="black"
               borderColor="white"
               className="whitespace-nowrap"

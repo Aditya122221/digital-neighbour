@@ -122,7 +122,7 @@ export default function IndustriesHero({ data }: IndustriesHeroProps) {
 					>
 						<CustomButton
 							text={buttonText}
-							href="#contact"
+							href="/contact"
 							textColor="black"
 							borderColor="black"
 						/>

@@ -72,7 +72,7 @@ export default function SocialMediaHero({ data }: SocialMediaHeroProps) {
             </p>
             <CustomButton
               text={ctaText}
-              href="#contact"
+              href="/contact"
               textColor="black"
               borderColor="white"
               className="mt-4"

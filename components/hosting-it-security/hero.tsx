@@ -23,7 +23,7 @@ export default function HostingHero({ data }: HostingHeroProps) {
 					<div className="flex w-full flex-col items-start gap-4 md:flex-row md:gap-6 lg:pt-8">
 						<CustomButton
 							text="Get Started for Free"
-							href="#contact"
+							href="/contact"
 							textColor="black"
 							borderColor="black"
 							className="mt-6"

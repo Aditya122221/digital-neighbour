@@ -151,7 +151,7 @@ export default function SeoServices({ data, serviceCards, basePath = "#" }: SeoS
                 <div>
                   <CustomButton
                     text="Get Started"
-                    href={activeService.link || "#contact"}
+                    href={activeService.link || "/contact"}
                     textColor="black"
                     borderColor="black"
                   />

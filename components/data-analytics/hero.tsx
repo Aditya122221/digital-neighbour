@@ -78,7 +78,7 @@ export default function DataAnalyticsHero({ data }: DataAnalyticsHeroProps) {
             >
               <CustomButton
                 text="Talk to our Data & Analytics expert"
-                href="#contact"
+                href="/contact"
                 textColor="black"
                 borderColor="black"
               />

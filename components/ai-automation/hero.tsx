@@ -79,7 +79,7 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 						>
 							<CustomButton
 								text="Talk to our AI & Automation expert"
-								href="#contact"
+								href="/contact"
 								textColor="black"
 								borderColor="black"
 							/>

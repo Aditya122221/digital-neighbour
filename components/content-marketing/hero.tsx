@@ -45,7 +45,7 @@ export default function ContentMarketingHero({
             </p>
             <CustomButton
               text="Talk to our CONTENT MARKETING expert"
-              href="#contact"
+              href="/contact"
               textColor="black"
               borderColor="black"
               className="mt-6"

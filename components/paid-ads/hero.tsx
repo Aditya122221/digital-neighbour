@@ -43,7 +43,7 @@ export default function PaidAdsHero({ data }: PaidAdsHeroProps) {
             </p>
             <CustomButton
               text="Talk to our ADVERTISING expert"
-              href="#contact"
+              href="/contact"
               textColor="black"
               borderColor="black"
               className="mt-6"
