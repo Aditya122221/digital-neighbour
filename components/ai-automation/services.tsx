@@ -90,28 +90,35 @@ export default function AiAutomationServices({
 
 	return (
 		<section ref={sectionRef} className="py-20 px-6 bg-white">
-			<div className="container max-w-7xl mx-auto">
-				{/* Heading */}
-				<motion.h2
-					className="text-4xl md:text-5xl lg:text-6xl font-regular text-blackbrown mb-16 font-cal-sans text-center"
-					initial={{ opacity: 0, y: 30 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{
-						duration: 0.8,
-						ease: "easeOut",
-					}}
-				>
-					Our{" "}
-					<span className="relative inline-block">
-						<span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow"></span>
-						<span className="relative z-10 font-medium italic">
-							Services
-						</span>
-					</span>{" "}
-					for {data || "AI & Automation"}
-				</motion.h2>
+			{/* Heading - sticky to stay visible, full width */}
+			<div className="sticky top-0 z-50 w-full bg-white pb-8 pt-4 -mx-6">
+				<div className="container max-w-7xl mx-auto px-6">
+					<motion.h2
+						className="text-4xl md:text-5xl lg:text-6xl font-regular text-blackbrown font-cal-sans text-center"
+						initial={{ opacity: 0, y: 30 }}
+						whileInView={{
+							opacity: 1,
+							y: 0,
+						}}
+						viewport={{ once: true }}
+						transition={{
+							duration: 0.8,
+							ease: "easeOut",
+						}}
+					>
+						Our{" "}
+						<span className="relative inline-block">
+							<span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow"></span>
+							<span className="relative z-10 font-medium italic">
+								Services
+							</span>
+						</span>{" "}
+						for {data || "AI & Automation"}
+					</motion.h2>
+				</div>
+			</div>
 
+			<div className="container max-w-7xl mx-auto">
 				{/* Cards stacked vertically */}
 				<div className="relative min-h-[400vh]">
 					{services.map((service, index) => {
@@ -126,7 +133,7 @@ export default function AiAutomationServices({
 									y: anim.y,
 									opacity: anim.opacity,
 								}}
-								className="sticky top-24 bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden"
+								className="sticky top-32 bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden"
 							>
 								<div
 									className={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${

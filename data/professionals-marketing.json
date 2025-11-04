@@ -1019,8 +1019,8 @@
         "Consulting firm marketing": "consulting-firm-marketing-agency"
     },
     "config": {
-      "title": "Explore more in ",
-      "highlightedText": "Professionals",
+      "title": "Our Other Professionals Marketing Services & Solutions",
+      "highlightedText": "Services & Solutions",
       "columns": 3,
       "baseUrl": "/professionals-marketing-agency/"
     }

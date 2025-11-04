@@ -1255,8 +1255,8 @@
       "Progressive Web Apps (PWA)": "progressive-web-apps"
     },
     "config": {
-      "title": "Other Services",
-      "highlightedText": "App Development",
+      "title": "Our Other App Development Services & Solutions",
+      "highlightedText": "Services & Solutions",
       "columns": 3,
       "baseUrl": "/app-development/"
     }

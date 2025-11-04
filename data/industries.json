@@ -7554,8 +7554,8 @@
       "Flooring marketing": "flooring-marketing-agency"
     },
     "config": {
-      "title": "Industries",
-      "highlightedText": "Industries",
+      "title": "Our Other Industries Services & Solutions",
+      "highlightedText": "Services & Solutions",
       "columns": 3,
       "baseUrl": "/industry/"
     }
