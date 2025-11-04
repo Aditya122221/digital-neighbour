@@ -2,6 +2,7 @@ import PortfolioCard from "./portfolio-card"
 
 type PortfolioItem = {
 	id: number
+	slug?: string
 	logoText: string
 	headline: string
 	metrics: { value: string; label: string }[]
@@ -11,9 +12,9 @@ type PortfolioItem = {
 }
 
 export default async function PortfolioGrid() {
-	const portfolio: PortfolioItem[] = await import("@/data/portfolio.json").then(
-		(m) => m.default as PortfolioItem[]
-	)
+	const portfolio: PortfolioItem[] = await import(
+		"@/data/portfolio.json"
+	).then((m) => m.default as PortfolioItem[])
 
 	return (
 		<section className="py-16 md:py-24 px-4">
@@ -22,6 +23,11 @@ export default async function PortfolioGrid() {
 					{portfolio.map((item) => (
 						<PortfolioCard
 							key={item.id}
+							slug={
+								(item as any)
+									.slug ||
+								`portfolio-${item.id}`
+							}
 							logoText={item.logoText}
 							headline={item.headline}
 							metrics={item.metrics}
@@ -35,4 +41,3 @@ export default async function PortfolioGrid() {
 		</section>
 	)
 }
-

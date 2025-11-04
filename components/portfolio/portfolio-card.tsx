@@ -1,6 +1,8 @@
 import Image from "next/image"
+import Link from "next/link"
 
 interface PortfolioCardProps {
+	slug: string
 	logo?: string
 	logoText: string
 	headline: string
@@ -14,6 +16,7 @@ interface PortfolioCardProps {
 }
 
 export default function PortfolioCard({
+	slug,
 	logo,
 	logoText,
 	headline,
@@ -23,7 +26,10 @@ export default function PortfolioCard({
 	imageAlt = "Portfolio project",
 }: PortfolioCardProps) {
 	return (
-		<div className="group flex flex-col rounded-xl bg-white shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl">
+		<Link
+			href={`/portfolio/${slug}`}
+			className="group flex flex-col rounded-xl bg-white shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl"
+		>
 			{/* Image Section */}
 			<div className="relative w-full aspect-[16/10] overflow-hidden">
 				<Image
@@ -40,11 +46,18 @@ export default function PortfolioCard({
 				<div className="flex items-center gap-2">
 					{logo ? (
 						<div className="relative h-5 w-5">
-							<Image src={logo} alt="" fill className="object-contain" />
+							<Image
+								src={logo}
+								alt=""
+								fill
+								className="object-contain"
+							/>
 						</div>
 					) : (
 						<div className="h-5 w-5 rounded bg-foreground flex items-center justify-center">
-							<span className="text-white text-xs font-bold">U</span>
+							<span className="text-white text-xs font-bold">
+								U
+							</span>
 						</div>
 					)}
 					<span className="text-xs font-medium text-foreground">
@@ -60,7 +73,10 @@ export default function PortfolioCard({
 				{/* Metrics */}
 				<div className="flex gap-5 py-2.5 border-b border-muted">
 					{metrics.map((metric, index) => (
-						<div key={index} className="flex flex-col">
+						<div
+							key={index}
+							className="flex flex-col"
+						>
 							<span className="text-lg md:text-xl font-bold text-foreground leading-none">
 								{metric.value}
 							</span>
@@ -83,7 +99,6 @@ export default function PortfolioCard({
 					))}
 				</div>
 			</div>
-		</div>
+		</Link>
 	)
 }
-

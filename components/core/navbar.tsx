@@ -28,6 +28,11 @@ const Navbar: React.FC = () => {
 
 	// Check if we're on a SEO route
 	const isSeoRoute = pathname?.startsWith("/seo/")
+	// Check if we're on portfolio or resources slug pages
+	const isPortfolioSlug =
+		pathname?.startsWith("/portfolio/") && pathname !== "/portfolio"
+	const isResourcesSlug =
+		pathname?.startsWith("/resources/") && pathname !== "/resources"
 
 	const navigationLinks = [
 		{ name: "Home", href: "/" },
@@ -593,7 +598,9 @@ const Navbar: React.FC = () => {
 				isVisible
 					? "translate-y-0"
 					: "-translate-y-full",
-				hasScrolledPast80vh
+				isPortfolioSlug || isResourcesSlug
+					? "bg-black"
+					: hasScrolledPast80vh
 					? "bg-black/70"
 					: "bg-black/10"
 			)}
@@ -1081,7 +1088,7 @@ const Navbar: React.FC = () => {
 																				name
 																			return `/content-marketing/${slug}`
 																		}
-                                                                        // Map AI & Automation items to ai-automation routes
+																		// Map AI & Automation items to ai-automation routes
 																		if (
 																			activeCategory ===
 																			"AI & Automation"
@@ -1114,28 +1121,35 @@ const Navbar: React.FC = () => {
 																			// If no specific mapping, use the kebab-case name
 																			return `/ai-automation/${name}`
 																		}
-                                                                        // Map Industries items to industries routes
-                                                                        if (
-                                                                            activeCategory ===
-                                                                            "Industries"
-                                                                        ) {
-                                                                            // Check if it's a Professionals Marketing service
-                                                                            const professionalsMarketingServices = new Set([
-                                                                                "real-estate-marketing-agency",
-                                                                                "mortgage-broker-marketing-agency",
-                                                                                "physiotherapists-marketing-agency",
-                                                                                "coaches-marketing-agency",
-                                                                                "law-firm-marketing-agency",
-                                                                                "accountant-marketing-agency",
-                                                                                "financial-advisor-marketing-agency",
-                                                                                "insurance-broker-marketing-agency",
-                                                                                "consulting-firm-marketing-agency"
-                                                                            ])
-                                                                            if (professionalsMarketingServices.has(name)) {
-                                                                                return `/professionals-marketing-agency/${name}`
-                                                                            }
-                                                                            return `/industry/${name}`
-                                                                        }
+																		// Map Industries items to industries routes
+																		if (
+																			activeCategory ===
+																			"Industries"
+																		) {
+																			// Check if it's a Professionals Marketing service
+																			const professionalsMarketingServices =
+																				new Set(
+																					[
+																						"real-estate-marketing-agency",
+																						"mortgage-broker-marketing-agency",
+																						"physiotherapists-marketing-agency",
+																						"coaches-marketing-agency",
+																						"law-firm-marketing-agency",
+																						"accountant-marketing-agency",
+																						"financial-advisor-marketing-agency",
+																						"insurance-broker-marketing-agency",
+																						"consulting-firm-marketing-agency",
+																					]
+																				)
+																			if (
+																				professionalsMarketingServices.has(
+																					name
+																				)
+																			) {
+																				return `/professionals-marketing-agency/${name}`
+																			}
+																			return `/industry/${name}`
+																		}
 																		// Map Hosting, IT & Security items to hosting-it-security routes
 																		if (
 																			activeCategory ===
@@ -1643,7 +1657,7 @@ const Navbar: React.FC = () => {
 																														name
 																													return `/content-marketing/${slug}`
 																												}
-                                                                                                                // Map AI & Automation items to ai-automation routes
+																												// Map AI & Automation items to ai-automation routes
 																												if (
 																													categoryKey ===
 																													"AI & Automation"
@@ -1676,28 +1690,35 @@ const Navbar: React.FC = () => {
 																													// If no specific mapping, use the kebab-case name
 																													return `/ai-automation/${name}`
 																												}
-                                                                                                                // Map Industries items to industries routes
-                                                                                                                if (
-                                                                                                                    categoryKey ===
-                                                                                                                    "Industries"
-                                                                                                                ) {
-                                                                                                                    // Check if it's a Professionals Marketing service
-                                                                                                                    const professionalsMarketingServices = new Set([
-                                                                                                                        "real-estate-marketing-agency",
-                                                                                                                        "mortgage-broker-marketing-agency",
-                                                                                                                        "physiotherapists-marketing-agency",
-                                                                                                                        "coaches-marketing-agency",
-                                                                                                                        "law-firm-marketing-agency",
-                                                                                                                        "accountant-marketing-agency",
-                                                                                                                        "financial-advisor-marketing-agency",
-                                                                                                                        "insurance-broker-marketing-agency",
-                                                                                                                        "consulting-firm-marketing-agency"
-                                                                                                                    ])
-                                                                                                                    if (professionalsMarketingServices.has(name)) {
-                                                                                                                        return `/professionals-marketing-agency/${name}`
-                                                                                                                    }
-                                                                                                                    return `/industry/${name}`
-                                                                                                                }
+																												// Map Industries items to industries routes
+																												if (
+																													categoryKey ===
+																													"Industries"
+																												) {
+																													// Check if it's a Professionals Marketing service
+																													const professionalsMarketingServices =
+																														new Set(
+																															[
+																																"real-estate-marketing-agency",
+																																"mortgage-broker-marketing-agency",
+																																"physiotherapists-marketing-agency",
+																																"coaches-marketing-agency",
+																																"law-firm-marketing-agency",
+																																"accountant-marketing-agency",
+																																"financial-advisor-marketing-agency",
+																																"insurance-broker-marketing-agency",
+																																"consulting-firm-marketing-agency",
+																															]
+																														)
+																													if (
+																														professionalsMarketingServices.has(
+																															name
+																														)
+																													) {
+																														return `/professionals-marketing-agency/${name}`
+																													}
+																													return `/industry/${name}`
+																												}
 																												return `/services/${name}`
 																											})()}
 																											className="flex items-center gap-2 px-2 py-1 text-gray-400 hover:text-white text-xs"

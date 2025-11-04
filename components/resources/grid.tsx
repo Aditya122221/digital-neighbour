@@ -31,19 +31,12 @@ export default async function ResourcesGrid() {
 						<div className="aspect-[16/10] w-full overflow-hidden rounded-t-xl bg-muted">
 							{item.image ? (
 								<Image
-									src={
-										item.image
-									}
-									alt={
-										item.title
-									}
-									width={
-										640
-									}
-									height={
-										400
-									}
+									src={item.image}
+									alt={item.title}
+									width={640}
+									height={400}
 									className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+									unoptimized
 								/>
 							) : null}
 						</div>

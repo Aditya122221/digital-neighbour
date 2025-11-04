@@ -48,15 +48,18 @@ export default function AboutHero() {
 	return (
 		<section
 			ref={sectionRef}
-			className="relative px-6 bg-gradient-to-b from-white to-pink/20 overflow-hidden"
+			className="relative px-6 bg-gradient-to-b from-white to-pink/20 overflow-hidden pt-28 md:pt-32"
 		>
+			{/* Black background spacer for navbar only */}
+			<div className="absolute top-0 left-0 right-0 h-16 md:h-20 bg-black z-0" />
+
 			{/* Big Image at Top */}
-			<div className="relative w-full h-[60vh] md:h-[70vh] mb-16">
+			<div className="relative w-full h-[60vh] md:h-[65vh] mb-16 z-10">
 				<Image
 					src="/aboutImage.avif"
 					alt="Team Behind Your Growth"
 					fill
-					className="object-cover"
+					className="object-cover rounded-xl"
 					priority
 				/>
 			</div>
