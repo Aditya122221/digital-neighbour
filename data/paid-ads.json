@@ -97,6 +97,43 @@
         }
       ]
     },
+    "introparagraph": {
+      "heading": "Paid Advertising Challenges & Opportunities",
+      "problemStatement": "Scaling paid media profitably is hard — platform changes, signal loss, creative fatigue, and attribution gaps make confident decision-making difficult.",
+      "valueProposition": "We combine clean tracking, structured testing, and creative iteration to compound performance across Google, Meta, LinkedIn, and YouTube."
+    },
+    "painpoints": {
+      "heading": "Common Paid Advertising Challenges",
+      "subheading": "What’s holding performance back (and how we fix it)",
+      "painPoints": [
+        { "problem": "Noisy data and unclear attribution", "solution": "Implement CAPI/Enhanced Conversions, standardize events, and align KPIs for clear decision-making." },
+        { "problem": "Creative fatigue and rising CPAs", "solution": "Run structured creative sprints with hooks/angles testing to refresh winning ads." },
+        { "problem": "Inefficient account structure", "solution": "Rebuild into intent-based, scalable architectures with clear naming and budget control." },
+        { "problem": "Underutilized audiences", "solution": "Layer high-signal audiences, first-party data, and clean exclusions for efficiency." }
+      ]
+    },
+    "keybenefits": {
+      "heading": "Key Benefits of Performance-Driven Paid Media",
+      "subheading": "Compounding growth through testing, tracking, and creative",
+      "benefits": [
+        { "title": "Cleaner Measurement", "description": "Decision-grade tracking and attribution across channels." },
+        { "title": "Faster Iteration", "description": "Rapid creative and audience testing cycles find winners quickly." },
+        { "title": "Scalable Structure", "description": "Account architectures that enable control and clear insights." },
+        { "title": "Efficient Spend", "description": "Bidding and budget allocation tuned to your goals and economics." },
+        { "title": "Full-Funnel Impact", "description": "Prospecting, retargeting, and nurture flows that convert consistently." }
+      ]
+    },
+    "features": {
+      "heading": "What Makes Our Paid Media Engine Different",
+      "subheading": "Built for clarity, speed, and scale",
+      "features": [
+        { "title": "Structured Testing", "description": "Hypothesis-led sprints across hooks, formats, and audiences." },
+        { "title": "Signal Quality", "description": "Event hygiene, deduping, and CAPI/EC integrations for robust data." },
+        { "title": "Creative Systems", "description": "Repeatable frameworks for producing high-performing assets." },
+        { "title": "Granular Reporting", "description": "Naming conventions and dashboards for fast, confident decisions." },
+        { "title": "Scale Playbooks", "description": "From first wins to cross-platform expansion without losing efficiency." }
+      ]
+    },
     "content": {
       "heading": "Creative + Data = Scalable Paid Media",
       "text1": "We combine rapid creative testing with structured account architecture for durable learnings and efficient spend. Our systematic approach to creative testing involves developing multiple ad variations, implementing A/B testing frameworks, and analyzing performance data to identify winning creative elements that drive engagement and conversions.",
@@ -180,6 +217,43 @@
         { "icon": "📈", "title": "Scale Winners Confidently", "description": "Expand keywords, layer audiences, and introduce PMax/Discovery to compound growth." }
       ]
     },
+    "introparagraph": {
+      "heading": "Google Ads Challenges & Opportunities",
+      "problemStatement": "Crowded auctions and limited signal make profitable growth difficult without clean structure, deduped events, and intent-driven keyword strategy.",
+      "valueProposition": "We build query-aligned architectures, clean up measurement, and iterate creatives to steadily improve ROAS and revenue."
+    },
+    "painpoints": {
+      "heading": "Common Google Ads Challenges",
+      "subheading": "Fix the fundamentals, unlock scale",
+      "painPoints": [
+        { "problem": "Messy account structures and overlap", "solution": "Re-architect by intent and match type; enforce negatives and naming standards." },
+        { "problem": "Poor conversion data quality", "solution": "Implement Enhanced Conversions, server-side tracking, and event hygiene." },
+        { "problem": "Wasted spend on broad queries", "solution": "Tight themes, negatives, audience layering, and RSAs aligned to intent." },
+        { "problem": "Shopping feed underperformance", "solution": "Title/attribute enrichment, diagnostics cleanup, and item-level optimization." }
+      ]
+    },
+    "keybenefits": {
+      "heading": "Why Our Google Ads Approach Wins",
+      "subheading": "Structure + signals + iteration",
+      "benefits": [
+        { "title": "Intent-Driven Structure", "description": "Themes and match types aligned to user intent for clarity and control." },
+        { "title": "Decision-Grade Data", "description": "Enhanced Conversions and naming systems for accurate attribution." },
+        { "title": "Iterative Testing", "description": "Systematic RSA, assets, and landing page experiments to lift CVR." },
+        { "title": "Shopping Excellence", "description": "Feed enrichment and item-level optimization for profitable scale." },
+        { "title": "Scalable Playbooks", "description": "PMax/Discovery layering and audience strategies for expansion." }
+      ]
+    },
+    "features": {
+      "heading": "Google Ads Capabilities",
+      "subheading": "Built to own high-intent moments",
+      "features": [
+        { "title": "Keyword Architecture", "description": "Query mapping, negatives, and RSA frameworks that convert." },
+        { "title": "Tracking Integrity", "description": "EC, value rules, and deduping to guide smart bidding." },
+        { "title": "Feed Optimization", "description": "Titles, attributes, and diagnostics to maximize Shopping reach." },
+        { "title": "Audience Layering", "description": "Leverage first-party and in-market signals for efficiency." },
+        { "title": "Insights & Reporting", "description": "Naming standards and dashboards for fast iteration." }
+      ]
+    },
     "content": { "heading": "Expert Google Ads Agency Services That Own High-Intent Moments", "text1": "Win the SERP with smart bidding + clean structure. Our Google Ads agency expertise includes advanced bidding strategy implementation, account structure optimization, keyword research and expansion, and ongoing campaign management to ensure maximum visibility and conversion rates for high-intent search queries.", "text2": "Feed health and product data matter for Shopping. As a leading Google Ads company, we specialize in Google Shopping campaign optimization, including product feed management, data quality improvement, shopping campaign structure optimization, and performance monitoring to maximize your e-commerce advertising success.", "text3": "We track granular conversions to guide bids. Our comprehensive Google Ads services include detailed attribution modeling, conversion value optimization, and data-driven bidding strategies that ensure every dollar spent delivers maximum return on investment.", "image": "seo.png", "alt": "Google Ads Agency Services" },
     "faq": { 
       "serviceName": "Google Ads",
@@ -256,6 +330,43 @@
         { "icon": "🧪", "title": "Structured Testing Sprints", "description": "Iterate angles, formats, and offers to find durable winners that scale." },
         { "icon": "🔁", "title": "Full-Funnel Retargeting", "description": "Segmented sequences that convert attention into revenue with tailored messaging." },
         { "icon": "📊", "title": "Measurement That Matters", "description": "CAPI, enhanced matching, and clean naming conventions for decision-ready insights." }
+      ]
+    },
+    "introparagraph": {
+      "heading": "Meta Ads Challenges & Opportunities",
+      "problemStatement": "Creative fatigue, signal loss, and attribution gaps make scaling Meta profitably challenging without structured testing and clean measurement.",
+      "valueProposition": "We combine rapid creative iteration, CAPI implementation, and audience layering to compound performance across Facebook and Instagram."
+    },
+    "painpoints": {
+      "heading": "Common Meta Ads Challenges",
+      "subheading": "What's holding performance back (and how we fix it)",
+      "painPoints": [
+        { "problem": "Creative fatigue and declining performance", "solution": "Run structured creative sprints testing hooks, angles, and formats to refresh winning ads." },
+        { "problem": "iOS 14.5+ signal loss and attribution gaps", "solution": "Implement Conversions API, enhanced matching, and first-party data collection." },
+        { "problem": "Inefficient audience targeting and overlap", "solution": "Layer high-signal audiences, custom lookalikes, and clean exclusions for efficiency." },
+        { "problem": "Unclear campaign structure and naming", "solution": "Rebuild into intent-based architectures with clear naming conventions for fast iteration." }
+      ]
+    },
+    "keybenefits": {
+      "heading": "Key Benefits of Performance-Driven Meta Ads",
+      "subheading": "Creative + signals + structure = scalable growth",
+      "benefits": [
+        { "title": "Creative Testing Systems", "description": "Structured sprints that identify winning hooks, formats, and angles quickly." },
+        { "title": "Signal Quality", "description": "CAPI and enhanced matching for decision-grade attribution despite iOS limitations." },
+        { "title": "Audience Layering", "description": "High-signal audiences, lookalikes, and exclusions that drive efficiency." },
+        { "title": "Full-Funnel Strategy", "description": "Prospecting, retargeting, and nurture flows that convert consistently." },
+        { "title": "Measurement Clarity", "description": "Clean naming conventions and dashboards for confident decision-making." }
+      ]
+    },
+    "features": {
+      "heading": "What Makes Our Meta Ads Approach Different",
+      "subheading": "Built for creative iteration and signal quality",
+      "features": [
+        { "title": "Creative Sprints", "description": "Hypothesis-led testing across hooks, formats, and angles." },
+        { "title": "CAPI Integration", "description": "Server-side tracking and enhanced matching for robust data." },
+        { "title": "Audience Systems", "description": "Repeatable frameworks for prospecting and retargeting." },
+        { "title": "Performance Dashboards", "description": "Clear naming and reporting for fast, confident decisions." },
+        { "title": "Scale Playbooks", "description": "From first wins to cross-platform expansion without losing efficiency." }
       ]
     },
     "content": { "heading": "Creative drives outcomes", "text1": "We iterate fast on angles and formats. Our Meta advertising approach includes rapid creative testing, format experimentation, angle optimization, and performance analysis to identify the most engaging and effective creative elements that drive audience engagement and conversion.", "text2": "Signal quality and events shape performance. We implement sophisticated audience targeting strategies, event tracking optimization, and signal quality improvement to ensure your Meta campaigns reach the most relevant audiences and generate high-quality engagement and conversions.", "text3": "Retargeting converts attention into revenue. Our retargeting strategies include sophisticated audience segmentation, personalized messaging, and conversion-focused campaigns that re-engage previous visitors and convert them into customers, maximizing your return on advertising investment.", "image": "hero.png", "alt": "Meta Ads" },
@@ -335,6 +446,43 @@
         { "icon": "📊", "title": "Account-Based Expansion", "description": "Scale through account lists, lookalike audiences, and warm sequences while maintaining efficiency." }
       ]
     },
+    "introparagraph": {
+      "heading": "LinkedIn Ads Challenges & Opportunities",
+      "problemStatement": "High CPLs and long sales cycles make LinkedIn ROI difficult without precision targeting, lead quality focus, and downstream revenue tracking.",
+      "valueProposition": "We combine ICP-aligned targeting, CRM integration, and revenue attribution to generate high-quality B2B leads that convert."
+    },
+    "painpoints": {
+      "heading": "Common LinkedIn Ads Challenges",
+      "subheading": "What's holding performance back (and how we fix it)",
+      "painPoints": [
+        { "problem": "High cost per lead without quality focus", "solution": "Optimize for Sales Qualified Leads and downstream revenue, not just CPL." },
+        { "problem": "Poor targeting and irrelevant leads", "solution": "Refine ICP targeting with job titles, seniority, company lists, and skills." },
+        { "problem": "Disconnected lead management", "solution": "Integrate CRM, automate routing, and implement lead scoring for seamless handoff." },
+        { "problem": "Limited account-based marketing", "solution": "Implement ABM strategies with account lists, lookalikes, and multi-touch sequences." }
+      ]
+    },
+    "keybenefits": {
+      "heading": "Key Benefits of Performance-Driven LinkedIn Ads",
+      "subheading": "Precision targeting + pipeline focus = qualified leads",
+      "benefits": [
+        { "title": "ICP-Aligned Targeting", "description": "Precision targeting by title, seniority, industry, and company lists." },
+        { "title": "Pipeline Velocity", "description": "CRM integration and lead routing that accelerates sales cycles." },
+        { "title": "Lead Quality Focus", "description": "Optimization for SQL and downstream revenue, not just CPL." },
+        { "title": "Account-Based Marketing", "description": "ABM strategies that engage key accounts and buying committees." },
+        { "title": "Revenue Attribution", "description": "Track downstream revenue to measure true campaign impact." }
+      ]
+    },
+    "features": {
+      "heading": "What Makes Our LinkedIn Ads Approach Different",
+      "subheading": "Built for B2B lead quality and pipeline velocity",
+      "features": [
+        { "title": "ICP Targeting", "description": "Job title, seniority, and company list targeting for precision." },
+        { "title": "CRM Integration", "description": "Automated lead routing, scoring, and enrichment workflows." },
+        { "title": "ABM Strategies", "description": "Account-based campaigns that align marketing and sales." },
+        { "title": "Revenue Tracking", "description": "Downstream revenue attribution for accurate ROI measurement." },
+        { "title": "Multi-Format Campaigns", "description": "Sponsored Content, Message Ads, and dynamic formats for engagement." }
+      ]
+    },
     "content": { "heading": "High-signal demand gen", "text1": "Target by title, skills, and company lists. Our LinkedIn advertising expertise includes sophisticated professional audience targeting, job title segmentation, skill-based targeting, and company list management to ensure your campaigns reach the most relevant B2B decision-makers and influencers.", "text2": "Use content and offers to warm accounts. We develop compelling content strategies, lead magnets, and professional offers that resonate with your target audience, building trust and engagement before conversion to maximize lead quality and sales success.", "text3": "Optimise for downstream revenue, not only CPL. Our LinkedIn advertising approach focuses on lead quality optimization, sales pipeline development, and revenue attribution to ensure your campaigns generate leads that convert into actual business value and long-term customer relationships.", "image": "hero.png", "alt": "LinkedIn Ads" },
     "faq": { 
       "serviceName": "LinkedIn Ads",
@@ -409,6 +557,43 @@
         { "icon": "📺", "title": "Audience Layering & Sequencing", "description": "Build sophisticated targeting stacks that guide viewers from awareness to conversion." },
         { "icon": "📈", "title": "Performance Measurement", "description": "Track view-through conversions, assisted conversions, and brand lift to capture full campaign impact." },
         { "icon": "🚀", "title": "Scale Through Iteration", "description": "Test hooks, CTAs, and placements continuously to improve CPV and CAC at scale." }
+      ]
+    },
+    "introparagraph": {
+      "heading": "YouTube Ads Challenges & Opportunities",
+      "problemStatement": "High CPVs and attribution gaps make YouTube ROI difficult without hook-driven creatives, audience sequencing, and view-through conversion tracking.",
+      "valueProposition": "We combine creative testing frameworks, audience layering, and comprehensive measurement to drive scalable video performance."
+    },
+    "painpoints": {
+      "heading": "Common YouTube Ads Challenges",
+      "subheading": "What's holding performance back (and how we fix it)",
+      "painPoints": [
+        { "problem": "High cost per view without conversions", "solution": "Test hooks, CTAs, and audience sequencing to improve CPV and conversion rates." },
+        { "problem": "Poor creative performance and low engagement", "solution": "Develop hook-driven scripts and visuals that capture attention in the first 5 seconds." },
+        { "problem": "Limited attribution and measurement", "solution": "Track view-through conversions, assisted conversions, and brand lift for full impact." },
+        { "problem": "Inefficient audience targeting", "solution": "Layer audiences and sequence campaigns to guide viewers from awareness to conversion." }
+      ]
+    },
+    "keybenefits": {
+      "heading": "Key Benefits of Performance-Driven YouTube Ads",
+      "subheading": "Creative + sequencing + measurement = video ROI",
+      "benefits": [
+        { "title": "Hook-Driven Creatives", "description": "Scripts and visuals that capture attention and maximize view-through rates." },
+        { "title": "Audience Sequencing", "description": "Sophisticated targeting stacks that guide viewers through the funnel." },
+        { "title": "Multi-Format Strategy", "description": "In-stream, discovery, bumper, and Shorts ads for comprehensive reach." },
+        { "title": "Comprehensive Measurement", "description": "View-through and assisted conversion tracking for accurate ROI." },
+        { "title": "Creative Iteration", "description": "Continuous testing of hooks, CTAs, and placements to improve performance." }
+      ]
+    },
+    "features": {
+      "heading": "What Makes Our YouTube Ads Approach Different",
+      "subheading": "Built for video performance and attribution",
+      "features": [
+        { "title": "Creative Frameworks", "description": "Hook-driven scripts and visual testing for engagement." },
+        { "title": "Audience Layering", "description": "Sequencing strategies that guide viewers through the funnel." },
+        { "title": "Multi-Format Campaigns", "description": "In-stream, discovery, bumper, and Shorts for maximum reach." },
+        { "title": "Attribution Tracking", "description": "View-through and assisted conversion measurement." },
+        { "title": "Performance Optimization", "description": "Continuous testing and iteration for improved CPV and CAC." }
       ]
     },
     "content": { "heading": "Expert Youtube Ads Agency Services for Video That Sells", "text1": "Creative frameworks accelerate testing. Our Youtube Ads Agency expertise includes systematic video creative testing, storytelling frameworks, hook optimization, and performance analysis to identify the most engaging and effective video content that drives audience engagement and conversion.", "text2": "Audience layering and sequencing matter. As a leading Youtube Ads Company, we implement sophisticated audience targeting strategies, audience layering techniques, and campaign sequencing to ensure your YouTube ads reach the right viewers at the right time in their customer journey, maximizing engagement and conversion rates.", "text3": "Measure view-through and assisted conversions. Our comprehensive Youtube Ads Services include detailed conversion tracking, view-through attribution, assisted conversion analysis, and ROI optimization to ensure accurate measurement of your video advertising impact and return on investment.", "image": "seo.png", "alt": "Youtube Ads Agency Services" },
@@ -489,6 +674,43 @@
         { "icon": "📊", "title": "Scale Through Similar Audiences", "description": "Expand beyond site visitors with predictive modeling to grow conversions efficiently." }
       ]
     },
+    "introparagraph": {
+      "heading": "Google Remarketing Challenges & Opportunities",
+      "problemStatement": "Ad fatigue, audience overlap, and attribution gaps make remarketing ROI difficult without proper segmentation, frequency control, and dynamic creative.",
+      "valueProposition": "We combine intent-based segmentation, omnichannel retargeting, and dynamic creative to maximize remarketing performance."
+    },
+    "painpoints": {
+      "heading": "Common Google Remarketing Challenges",
+      "subheading": "What's holding performance back (and how we fix it)",
+      "painPoints": [
+        { "problem": "Ad fatigue and declining performance", "solution": "Implement frequency caps, creative rotation, and audience refresh to prevent fatigue." },
+        { "problem": "Audience overlap and wasted spend", "solution": "Segment audiences by intent and behavior, manage exclusions, and optimize overlap." },
+        { "problem": "Limited personalization and relevance", "solution": "Use dynamic remarketing and personalized messaging based on user behavior." },
+        { "problem": "Poor tracking and attribution", "solution": "Implement proper pixel setup, event tracking, and conversion attribution." }
+      ]
+    },
+    "keybenefits": {
+      "heading": "Key Benefits of Performance-Driven Google Remarketing",
+      "subheading": "Segmentation + personalization + control = remarketing ROI",
+      "benefits": [
+        { "title": "Intent-Based Segmentation", "description": "Granular audience lists by behavior for personalized messaging." },
+        { "title": "Omnichannel Retargeting", "description": "Reach users across Display, Search, and YouTube for maximum impact." },
+        { "title": "Dynamic Creative", "description": "Personalized ad experiences that showcase viewed products automatically." },
+        { "title": "Frequency Control", "description": "Manage caps and overlap to prevent fatigue and maximize ROAS." },
+        { "title": "Audience Expansion", "description": "Scale with similar audiences and predictive modeling." }
+      ]
+    },
+    "features": {
+      "heading": "What Makes Our Google Remarketing Approach Different",
+      "subheading": "Built for remarketing performance and control",
+      "features": [
+        { "title": "Audience Segmentation", "description": "Intent-based lists by behavior for personalization." },
+        { "title": "Dynamic Remarketing", "description": "Product-specific ads that automatically adjust to user interests." },
+        { "title": "Omnichannel Strategy", "description": "Cross-platform retargeting for maximum reach." },
+        { "title": "Frequency Management", "description": "Caps and overlap control to prevent fatigue." },
+        { "title": "Performance Optimization", "description": "Bidding, creative, and audience optimization for ROAS." }
+      ]
+    },
     "content": { "heading": "Re-engage with precision", "text1": "Create custom audiences from website visitors. Our Google remarketing expertise includes sophisticated audience segmentation, dynamic audience creation, and cross-platform audience management to ensure your remarketing campaigns reach the most relevant and valuable prospects across Google's entire advertising ecosystem.", "text2": "Test different creative approaches for retargeting. We implement comprehensive creative testing strategies, personalized messaging, and format optimization to ensure your remarketing campaigns deliver compelling and relevant content that drives engagement and conversion from previous website visitors.", "text3": "Optimise for conversions with smart bidding. Our remarketing optimization includes advanced bidding strategies, conversion tracking setup, and performance analysis to ensure your remarketing campaigns deliver maximum ROI and convert your most valuable prospects into customers.", "image": "seo.png", "alt": "Google Remarketing" },
     "faq": { 
       "serviceName": "Google Remarketing",
@@ -555,6 +777,43 @@
         { "icon": "🎯", "title": "Strategic Campaign Structure", "description": "Organize by priority, product groups, and performance tiers for better control and insights." },
         { "icon": "📈", "title": "Query & Performance Optimization", "description": "Refine negative keywords, audience layering, and item-level bidding to improve ROAS." },
         { "icon": "🚀", "title": "Scale with Performance Max", "description": "Expand reach across Google networks with dynamic campaigns that combine Shopping, Display, and more." }
+      ]
+    },
+    "introparagraph": {
+      "heading": "Google Shopping Challenges & Opportunities",
+      "problemStatement": "Poor feed quality, inefficient bidding, and limited visibility make Shopping ROI difficult without feed optimization, smart bidding, and strategic campaign structure.",
+      "valueProposition": "We combine feed enrichment, target ROAS bidding, and Performance Max integration to maximize Shopping performance."
+    },
+    "painpoints": {
+      "heading": "Common Google Shopping Challenges",
+      "subheading": "What's holding performance back (and how we fix it)",
+      "painPoints": [
+        { "problem": "Poor product feed quality and visibility", "solution": "Enrich titles, attributes, images, and categories to maximize feed health and ranking." },
+        { "problem": "Inefficient bidding and wasted spend", "solution": "Implement target ROAS and Performance Max bidding for profitable conversions." },
+        { "problem": "Unclear campaign structure and control", "solution": "Organize by priority, product groups, and performance tiers for better insights." },
+        { "problem": "Limited query and performance optimization", "solution": "Refine negative keywords, audience layering, and item-level bidding to improve ROAS." }
+      ]
+    },
+    "keybenefits": {
+      "heading": "Key Benefits of Performance-Driven Google Shopping",
+      "subheading": "Feed quality + smart bidding + structure = Shopping ROI",
+      "benefits": [
+        { "title": "Feed Optimization", "description": "Enhanced product data, titles, and attributes for maximum visibility." },
+        { "title": "Smart Bidding", "description": "Target ROAS and Performance Max strategies for profitable conversions." },
+        { "title": "Strategic Structure", "description": "Priority-based organization for better control and insights." },
+        { "title": "Performance Optimization", "description": "Negative keywords, audience layering, and item-level bidding for ROAS." },
+        { "title": "Scale with PMax", "description": "Expand reach across Google networks with dynamic campaigns." }
+      ]
+    },
+    "features": {
+      "heading": "What Makes Our Google Shopping Approach Different",
+      "subheading": "Built for Shopping performance and scale",
+      "features": [
+        { "title": "Feed Enrichment", "description": "Product data optimization for visibility and ranking." },
+        { "title": "Smart Bidding", "description": "Target ROAS and Performance Max for profitable conversions." },
+        { "title": "Campaign Structure", "description": "Priority-based organization for control and insights." },
+        { "title": "Query Optimization", "description": "Negative keywords and audience layering for efficiency." },
+        { "title": "Performance Max", "description": "Dynamic campaigns that combine Shopping, Display, and more." }
       ]
     },
     "content": { "heading": "Expert Google Shopping Ads Agency Services for Visual Product Advertising", "text1": "Optimise product feeds for maximum visibility. Our Google Shopping Ads agency expertise includes comprehensive product feed optimization, data quality improvement, category enhancement, and feed management to ensure your products appear prominently in Google Shopping results and drive maximum qualified traffic to your e-commerce store.", "text2": "Strategic bidding for shopping campaigns. As a leading Google Shopping Ads company, we implement advanced bidding strategies, product-level optimization, and performance monitoring to ensure your Google Shopping campaigns deliver maximum ROI and drive qualified traffic that converts into sales for your e-commerce business.", "text3": "Track performance and optimise for sales. Our comprehensive Google Shopping Ads services include detailed conversion tracking, sales attribution analysis, and performance optimization to ensure accurate measurement of your shopping campaign impact and continuous improvement of your e-commerce advertising ROI.", "image": "seo.png", "alt": "Google Shopping Ads Agency Services" },
@@ -635,6 +894,43 @@
         { "icon": "🚀", "title": "Scale Winning Campaigns", "description": "Expand validated strategies across platforms while preserving profitability and freshness." }
       ]
     },
+    "introparagraph": {
+      "heading": "Paid Social Challenges & Opportunities",
+      "problemStatement": "Platform fragmentation, creative fatigue, and attribution gaps make cross-platform social ROI difficult without unified strategy, platform-native creative, and comprehensive measurement.",
+      "valueProposition": "We combine cross-platform optimization, platform-specific creative, and unified measurement to maximize social media performance."
+    },
+    "painpoints": {
+      "heading": "Common Paid Social Challenges",
+      "subheading": "What's holding performance back (and how we fix it)",
+      "painPoints": [
+        { "problem": "Platform fragmentation and inconsistent performance", "solution": "Unified cross-platform strategy with platform-specific optimization for consistent results." },
+        { "problem": "Creative fatigue across multiple platforms", "solution": "Platform-native creative testing and refresh schedules to maintain engagement." },
+        { "problem": "Unclear attribution and measurement", "solution": "Comprehensive cross-platform tracking and unified reporting for accurate ROI." },
+        { "problem": "Inefficient budget allocation", "solution": "Continuous testing and budget reallocation to maintain cost efficiency." }
+      ]
+    },
+    "keybenefits": {
+      "heading": "Key Benefits of Performance-Driven Paid Social",
+      "subheading": "Cross-platform + platform-native creative + unified measurement = social ROI",
+      "benefits": [
+        { "title": "Cross-Platform Strategy", "description": "Unified campaigns across all major social platforms for maximum reach." },
+        { "title": "Platform-Native Creative", "description": "Tailored content for each platform's unique audience behavior." },
+        { "title": "Audience Segmentation", "description": "Demographic, behavioral, and psychographic targeting for relevance." },
+        { "title": "Performance Optimization", "description": "Continuous testing and budget reallocation for efficiency." },
+        { "title": "Unified Measurement", "description": "Cross-platform tracking and reporting for accurate ROI." }
+      ]
+    },
+    "features": {
+      "heading": "What Makes Our Paid Social Approach Different",
+      "subheading": "Built for cross-platform performance and scale",
+      "features": [
+        { "title": "Multi-Platform Strategy", "description": "Unified campaigns across Facebook, Instagram, LinkedIn, TikTok, and more." },
+        { "title": "Platform-Specific Creative", "description": "Tailored content for each platform's audience behavior." },
+        { "title": "Audience Intelligence", "description": "Demographic, behavioral, and psychographic segmentation." },
+        { "title": "Performance Optimization", "description": "Continuous testing and budget reallocation for efficiency." },
+        { "title": "Unified Reporting", "description": "Cross-platform tracking and measurement for accurate ROI." }
+      ]
+    },
     "content": { "heading": "Expert Paid Social Ads Agency Services That Convert", "text1": "Multi-platform social media advertising. Our comprehensive Paid Social Services include platform-specific campaign development, cross-platform optimization, and unified reporting across Facebook, Instagram, LinkedIn, TikTok, and other emerging social platforms to maximize your social media advertising reach and ROI.", "text2": "Creative testing and audience targeting. As a leading Paid Social Agency, we implement sophisticated creative testing frameworks, audience research and segmentation, and performance optimization techniques to ensure your social media campaigns reach the right audiences with the most engaging content, driving maximum engagement and conversion rates across all platforms.", "text3": "Track performance across all social channels. Our Paid Social Ads Agency measurement includes comprehensive cross-platform tracking, conversion attribution, and performance analysis to ensure accurate measurement of your social media advertising impact and continuous optimization of your social media ROI.", "image": "seo.png", "alt": "Paid Social Ads Agency Services" },
     "faq": { 
       "serviceName": "Paid Social Ads",
@@ -703,6 +999,43 @@
         { "icon": "👥", "title": "Audience Segmentation", "description": "Target by interests, behaviors, and demographics to reach ideal customers at every stage." },
         { "icon": "🛍️", "title": "Shopping Integration", "description": "Connect product catalogs and tags to turn discovery into direct purchases." },
         { "icon": "📊", "title": "Performance Optimization", "description": "Monitor engagement, refine targeting, and scale winning creatives for sustained growth." }
+      ]
+    },
+    "introparagraph": {
+      "heading": "Instagram Ads Challenges & Opportunities",
+      "problemStatement": "Visual fatigue, format complexity, and attribution gaps make Instagram ROI difficult without visual-first creative, format testing, and shopping integration.",
+      "valueProposition": "We combine visual storytelling, multi-format testing, and shopping integration to maximize Instagram performance."
+    },
+    "painpoints": {
+      "heading": "Common Instagram Ads Challenges",
+      "subheading": "What's holding performance back (and how we fix it)",
+      "painPoints": [
+        { "problem": "Visual fatigue and declining engagement", "solution": "Test hooks, formats, and visual styles across Feed, Stories, and Reels to refresh winning ads." },
+        { "problem": "Format complexity and unclear strategy", "solution": "Leverage Feed, Stories, and Reels formats with platform-native creative for engagement." },
+        { "problem": "Limited shopping integration and conversions", "solution": "Connect product catalogs and tags to turn discovery into direct purchases." },
+        { "problem": "Poor audience targeting and segmentation", "solution": "Target by interests, behaviors, and demographics to reach ideal customers." }
+      ]
+    },
+    "keybenefits": {
+      "heading": "Key Benefits of Performance-Driven Instagram Ads",
+      "subheading": "Visual-first + multi-format + shopping = Instagram ROI",
+      "benefits": [
+        { "title": "Visual-First Strategy", "description": "Scroll-stopping visuals optimized for Feed, Stories, and Reels engagement." },
+        { "title": "Creative Testing Framework", "description": "Systematic testing of hooks, formats, and visual styles for performance." },
+        { "title": "Audience Segmentation", "description": "Interest, behavioral, and demographic targeting for relevance." },
+        { "title": "Shopping Integration", "description": "Product catalogs and tags that turn discovery into purchases." },
+        { "title": "Performance Optimization", "description": "Engagement monitoring and creative scaling for sustained growth." }
+      ]
+    },
+    "features": {
+      "heading": "What Makes Our Instagram Ads Approach Different",
+      "subheading": "Built for visual performance and shopping conversion",
+      "features": [
+        { "title": "Multi-Format Strategy", "description": "Feed, Stories, and Reels formats for comprehensive reach." },
+        { "title": "Visual Creative Testing", "description": "Hook, format, and style testing for engagement." },
+        { "title": "Audience Intelligence", "description": "Interest, behavioral, and demographic segmentation." },
+        { "title": "Shopping Integration", "description": "Product catalog and tag optimization for conversions." },
+        { "title": "Performance Analytics", "description": "Engagement and conversion tracking for optimization." }
       ]
     },
 "process": {
@@ -805,6 +1138,43 @@
         { "icon": "🎨", "title": "Creative Testing & Optimization", "description": "Test hooks, formats, and messaging to identify what drives engagement and conversions." },
         { "icon": "💬", "title": "Community Engagement", "description": "Build authentic connections through interactive formats that foster brand loyalty." },
         { "icon": "📊", "title": "Performance Tracking & Scaling", "description": "Monitor metrics, refine strategies, and scale winning campaigns for sustained growth." }
+      ]
+    },
+    "introparagraph": {
+      "heading": "Facebook Ads Challenges & Opportunities",
+      "problemStatement": "Creative fatigue, signal loss, and community engagement gaps make Facebook ROI difficult without multi-format strategy, audience targeting, and community building.",
+      "valueProposition": "We combine multi-format campaigns, precision targeting, and community engagement to maximize Facebook performance."
+    },
+    "painpoints": {
+      "heading": "Common Facebook Ads Challenges",
+      "subheading": "What's holding performance back (and how we fix it)",
+      "painPoints": [
+        { "problem": "Creative fatigue and declining performance", "solution": "Test hooks, formats, and messaging across Feed, Stories, Reels, and Marketplace to refresh winning ads." },
+        { "problem": "Poor audience targeting and wasted spend", "solution": "Leverage interests, behaviors, and lookalikes to reach ideal customers at scale." },
+        { "problem": "Limited community engagement and loyalty", "solution": "Build authentic connections through interactive formats that foster brand loyalty." },
+        { "problem": "Unclear performance tracking and scaling", "solution": "Monitor metrics, refine strategies, and scale winning campaigns for sustained growth." }
+      ]
+    },
+    "keybenefits": {
+      "heading": "Key Benefits of Performance-Driven Facebook Ads",
+      "subheading": "Multi-format + targeting + community = Facebook ROI",
+      "benefits": [
+        { "title": "Multi-Format Strategy", "description": "Feed, Stories, Reels, and Marketplace ads for comprehensive reach." },
+        { "title": "Precision Targeting", "description": "Interest, behavioral, and lookalike targeting for relevance." },
+        { "title": "Creative Testing", "description": "Hook, format, and messaging testing for engagement and conversions." },
+        { "title": "Community Engagement", "description": "Interactive formats that foster brand loyalty and connections." },
+        { "title": "Performance Scaling", "description": "Metrics monitoring and campaign scaling for sustained growth." }
+      ]
+    },
+    "features": {
+      "heading": "What Makes Our Facebook Ads Approach Different",
+      "subheading": "Built for Facebook performance and community building",
+      "features": [
+        { "title": "Multi-Format Campaigns", "description": "Feed, Stories, Reels, and Marketplace for maximum reach." },
+        { "title": "Audience Intelligence", "description": "Interest, behavioral, and lookalike targeting for precision." },
+        { "title": "Creative Optimization", "description": "Hook, format, and messaging testing for performance." },
+        { "title": "Community Building", "description": "Interactive formats that foster brand loyalty." },
+        { "title": "Performance Analytics", "description": "Metrics tracking and campaign scaling for growth." }
       ]
     },
     "content": { "heading": "Expert Facebook Ads Management Agency Services That Convert", "text1": "Targeted campaigns reach the right audiences. Our Facebook Ads Management Agency expertise includes sophisticated audience targeting, demographic segmentation, and interest-based targeting to ensure your campaigns reach the most relevant Facebook users for your brand.", "text2": "Engaging content drives social engagement. As a leading Facebook Ads Management Agency, we create compelling social content, community engagement strategies, and interactive ad formats that capture attention and drive both brand awareness and direct response conversions on Facebook.", "text3": "Track social performance and optimize for conversions. Our comprehensive Facebook Ads Services include detailed social engagement tracking, conversion attribution, and performance analysis to ensure accurate measurement of your Facebook advertising impact and ROI.", "image": "seo.png", "alt": "Facebook Ads Management Agency Services" },

@@ -79,6 +79,12 @@ export default function SeoSlugPage({ params }: { params: { slug: string } }) {
 				data={currentSeoData?.services}
 				serviceCards={currentSeoData?.serviceCards}
 			/>
+			<Content
+				data={currentSeoData?.content}
+				imagePathPrefix="/seo/content"
+			/>
+			<Cta data={currentSeoData?.services} />
+			<Apart />
 			<Process2
 				data={currentSeoData?.services}
 				processData={
@@ -87,17 +93,11 @@ export default function SeoSlugPage({ params }: { params: { slug: string } }) {
 						?.process
 				}
 			/>
-			<Content
-				data={currentSeoData?.content}
-				imagePathPrefix="/seo/content"
-			/>
 			<KeyBenefits data={currentSeoData?.keyBenefits} />
 			<Features data={currentSeoData?.features} />
-			<Cta data={currentSeoData?.services} />
-			<Apart />
-			<OtherServices />
 			<CaseStudy />
 			<Faq data={currentSeoData?.faq} />
+			<OtherServices />
 			<Blogs />
 			<Testimonials />
 			<BookACall />

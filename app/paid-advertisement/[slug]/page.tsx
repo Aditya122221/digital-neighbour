@@ -15,6 +15,9 @@ import OtherServices from "@/components/commonSections/otherservices"
 import Faq from "@/components/commonSections/faq"
 import CaseStudy from "@/components/homepage/casestudy"
 import Features from "@/components/commonSections/features"
+import IntroParagraph from "@/components/commonSections/introparagraph"
+import PainPoints from "@/components/commonSections/painpoints"
+import KeyBenefits from "@/components/commonSections/keybenefits"
 
 const allowedSlugs = [
 	"paid-advertisement",
@@ -65,6 +68,8 @@ export default function PaidAdsSlugPage({
 			</div>
 			<Form data={currentData?.form} />
 			<BrandsMarquee />
+			<IntroParagraph data={currentData?.introparagraph} />
+			<PainPoints data={currentData?.painpoints} />
 			<Services
 				data={currentData?.services}
 				serviceCards={currentData?.serviceCards}
@@ -78,19 +83,16 @@ export default function PaidAdsSlugPage({
 				data={currentData?.content}
 				imagePathPrefix="/seo/content"
 			/>
-			<Process2
-				data={currentData?.services}
-				processData={
-					currentData?.process ||
-					paidAdsData["paid-advertisement"]
-						?.process
-				}
-			/>
 			<Apart />
 			<CaseStudy />
-			<OtherServices />
+			<Process2
+				data={currentData?.services}
+				processData={currentData?.process}
+			/>
+			<KeyBenefits data={currentData?.keybenefits} />
 			<Features data={currentData?.features} />
 			<Faq data={currentData?.faq} />
+			<OtherServices />
 			<Cta data={currentData?.services} />
 			<Footer />
 		</main>

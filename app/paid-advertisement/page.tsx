@@ -13,6 +13,10 @@ import Apart from "@/components/homepage/apart";
 import OtherServices from "@/components/commonSections/otherservices";
 import Faq from "@/components/commonSections/faq";
 import CaseStudy from "@/components/homepage/casestudy";
+import IntroParagraph from "@/components/commonSections/introparagraph";
+import PainPoints from "@/components/commonSections/painpoints";
+import KeyBenefits from "@/components/commonSections/keybenefits";
+import Features from "@/components/commonSections/features";
 
 export default function PaidAdvertisementPage() {
   const currentData = paidAdsData["paid-advertisement"] as any;
@@ -24,15 +28,19 @@ export default function PaidAdvertisementPage() {
         <PaidAdsHero data={currentData?.hero || { heading: "Performance-Driven Paid Advertising", subheading: "We scale profitable paid media across Google, Meta, LinkedIn, and YouTube." }} />
       </div>
       <Form data={currentData?.form} />
-      <BrandsMarquee />
+        <BrandsMarquee />
+        <IntroParagraph data={currentData?.introparagraph} />
+      <PainPoints data={currentData?.painpoints} />
       <Services data={currentData?.services} serviceCards={currentData?.serviceCards} basePath="/paid-advertisement" />
-      <Strategic data={currentData?.strategic} serviceName={currentData?.services} />
-      <Content data={currentData?.content} imagePathPrefix="/seo/content" />
-      <Process2 data={currentData?.services} processData={currentData?.process} />
-      <Apart />
-      <CaseStudy />
+  <Strategic data={ currentData?.strategic } serviceName = { currentData?.services } />
+  <Content data={ currentData?.content } imagePathPrefix = "/seo/content" />
+    <Apart />
+    < CaseStudy />
+    <Process2 data={currentData?.services} processData={currentData?.process} />
+      <KeyBenefits data={currentData?.keybenefits} />
+  < Features data = { currentData?.features } />
+  <Faq data={currentData?.faq} />
       <OtherServices />
-      <Faq data={currentData?.faq} />
       <Cta data={currentData?.services} />
       <Footer />
     </main>
