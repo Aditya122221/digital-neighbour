@@ -17,6 +17,7 @@ import Apart from "@/components/homepage/apart"
 import OtherServices from "@/components/commonSections/otherservices"
 import Faq from "@/components/commonSections/faq"
 import CaseStudy from "@/components/homepage/casestudy"
+import WhyWork from "@/components/social-media/whywork"
 
 export default function SocialMediaMarketingPage() {
 	const currentData = (socialData as any)["social-media-marketing"] as any
@@ -86,7 +87,7 @@ export default function SocialMediaMarketingPage() {
 				imagePathPrefix="/seo/content"
 			/>
 			<SectionPainPoint />
-          < Apart />
+			<WhyWork />
           <CaseStudy />
 			<Process2
 				data={currentData?.services}

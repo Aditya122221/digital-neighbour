@@ -42,7 +42,7 @@ export default function Industries() {
 
 			<div className="mt-10">
 				<div className="container mx-auto px-5">
-					<div className="flex flex-wrap gap-y-4 md:gap-y-10 -mx-2 md:-mx-5">
+					<div className="flex flex-wrap gap-y-3 md:gap-y-6 -mx-2 md:-mx-5">
 						{[
 							{
 								title: "Real Estate",
@@ -106,28 +106,28 @@ export default function Industries() {
 									}
 									className="shrink-0 w-1/2 md:w-1/3 xl:w-1/5 px-2 md:px-5"
 								>
-									<div className="bg-[#212121] text-center flex flex-col items-center justify-center px-4 h-full group relative rounded-md">
-										<div className="md:group-hover:opacity-0 py-6 md:py-0 md:absolute">
+									<div className="bg-[#212121] text-center flex flex-col items-center justify-center px-3 h-full group relative rounded-md">
+										<div className="md:group-hover:opacity-0 py-4 md:py-0 md:absolute">
 											<Icon
 												size={
-													64
+													48
 												}
-												className="mb-3 text-yellow"
+												className="mb-2 text-yellow"
 												aria-hidden="true"
 											/>
-											<p className="rfs:text-lg font-semibold text-white">
+											<p className="rfs:text-base font-semibold text-white">
 												{
 													title
 												}
 											</p>
 										</div>
-										<div className="opacity-0 group-hover:opacity-100 translate-y-10 group-hover:translate-y-0 py-8 transition-all ease-in duration-200 hidden md:block">
-											<h3 className="font-semibold rfs:text-lg text-white">
+										<div className="opacity-0 group-hover:opacity-100 translate-y-10 group-hover:translate-y-0 py-5 transition-all ease-in duration-200 hidden md:block">
+											<h3 className="font-semibold rfs:text-base text-white">
 												{
 													title
 												}
 											</h3>
-											<p className="rfs:text-xs font-light mt-4 text-white/80">
+											<p className="rfs:text-xs font-light mt-3 text-white/80">
 												{
 													desc
 												}

@@ -30,7 +30,7 @@ export default function HostingHero({ data }: HostingHeroProps) {
 						/>
 					</div>
 				</div>
-				<div className="relative w-full h-full min-h-[400px] lg:h-full lg:min-h-[700px] overflow-hidden">
+				<div className="hidden lg:block relative w-full h-full min-h-[400px] lg:h-full lg:min-h-[700px] overflow-hidden">
 					<video
 						className="w-full h-full object-cover"
 						autoPlay
@@ -47,6 +47,7 @@ export default function HostingHero({ data }: HostingHeroProps) {
 					</video>
 				</div>
 			</div>
+			<div className="w-full border-t border-gray-200"></div>
 		</section>
 	)
 }

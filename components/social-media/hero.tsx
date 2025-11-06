@@ -48,7 +48,7 @@ export default function SocialMediaHero({ data }: SocialMediaHeroProps) {
   }, []);
 
   return (
-    <section className="relative pt-24 md:pt-32 lg:pt-40 pb-0 overflow-x-hidden">
+    <section className="relative pt-20 md:pt-24 lg:pt-28 pb-0 overflow-x-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-black" />
 
@@ -64,7 +64,7 @@ export default function SocialMediaHero({ data }: SocialMediaHeroProps) {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="text-center space-y-6 max-w-6xl mx-auto"
           >
-            <h1 className="font-cal-sans font-semibold text-white leading-[0.95] text-[38px] md:text-6xl lg:text-7xl xl:text-8xl">
+            <h1 className="font-cal-sans font-semibold text-white leading-[0.95] text-[32px] md:text-5xl lg:text-6xl xl:text-7xl">
               {heading}
             </h1>
             <p className="text-white/80 text-base md:text-lg lg:text-xl max-w-3xl mx-auto">
@@ -79,8 +79,8 @@ export default function SocialMediaHero({ data }: SocialMediaHeroProps) {
             />
 
             {/* Video section: plays when in view, pauses when out of view */}
-            <div className="mt-10 relative left-1/2 -translate-x-1/2 w-screen">
-              <div className="relative w-full h-[90vh] md:h-[95vh] lg:h-[90vh] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl">
+            <div className="mt-8 relative left-1/2 -translate-x-1/2 w-screen">
+              <div className="relative w-full h-[60vh] md:h-[70vh] lg:h-[65vh] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl">
                 <video
                   ref={videoRef}
                   className="h-full w-full object-cover pointer-events-none rounded-4xl"

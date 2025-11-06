@@ -7,6 +7,7 @@ import Form from "@/components/commonSections/form"
 import Navbar from "@/components/core/navbar"
 import Footer from "@/components/core/footer"
 import BrandsMarquee from "@/components/homepage/brandsmarquee"
+import HostingProcess from "@/components/hosting-it-security/hostingProcess"
 import Process2 from "@/components/homepage/process2"
 import Cta from "@/components/commonSections/cta"
 import OtherServices from "@/components/commonSections/otherservices"
@@ -83,14 +84,7 @@ export default function HostingItSecuritySlugPage({
 			<Content data={currentData?.content} imagePathPrefix="/seo/content" />
 			<Apart />
 			<CaseStudy />
-			<Process2
-				data={currentData?.services}
-				processData={
-					currentData?.process ||
-					hostingData["hosting-it-security"]
-						?.process
-				}
-			/>
+			<HostingProcess />
 			<KeyBenefits data={currentData?.keyBenefits} />
 			<Features data={currentData?.features} />
 	< Faq data = { currentData?.faq } />

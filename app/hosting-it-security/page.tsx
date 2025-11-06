@@ -48,10 +48,7 @@ export default function HostingItSecurityPage() {
 			<Content data={currentData?.content} imagePathPrefix="/seo/content" />
 			<Apart />
 			<CaseStudy />
-			<Process2
-				data={currentData?.services}
-				processData={currentData?.process}
-			/>
+			
 			<KeyBenefits data={currentData?.keyBenefits} />
 			<Features data={currentData?.features} />
 	<Faq data={ currentData?.faq } />
