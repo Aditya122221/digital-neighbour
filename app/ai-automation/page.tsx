@@ -16,7 +16,7 @@ import PainPoints from "@/components/commonSections/painpoints"
 import Chaos from "@/components/ai-automation/chaos"
 import Industries from "@/components/ai-automation/industries"
 import KeyBenefits from "@/components/commonSections/keybenefits"
-import Features from "@/components/ai-automation/features"
+import Features from "@/components/commonSections/features"
 import Apart from "@/components/homepage/apart"
 
 export default function AiAutomationPage() {

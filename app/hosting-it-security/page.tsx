@@ -14,7 +14,7 @@ import CaseStudy from "@/components/homepage/casestudy"
 import IntroParagraph from "@/components/commonSections/introparagraph"
 import PainPoints from "@/components/commonSections/painpoints"
 import KeyBenefits from "@/components/commonSections/keybenefits"
-import Features from "@/components/hosting-it-security/features"
+import Features from "@/components/commonSections/features"
 import Apart from "@/components/homepage/apart"
 
 export default function HostingItSecurityPage() {

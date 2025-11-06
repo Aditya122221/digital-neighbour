@@ -16,7 +16,7 @@ import IntroParagraph from "@/components/commonSections/introparagraph";
 import PainPoints from "@/components/commonSections/painpoints";
 import KeyBenefits from "@/components/commonSections/keybenefits";
 import Apart from "@/components/homepage/apart";
-import Features from "@/components/ai-automation/features";
+import Features from "@/components/commonSections/features";
 import DataAnalyticsServices from "@/components/data-analytics/services";
 
 const allowedSlugs = [

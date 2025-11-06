@@ -17,7 +17,7 @@ import PainPoints from "@/components/commonSections/painpoints"
 import KeyBenefits from "@/components/commonSections/keybenefits"
 import Apart from "@/components/homepage/apart"
 import HostingServices from "@/components/hosting-it-security/services"
-import Features from "@/components/ai-automation/features"
+import Features from "@/components/commonSections/features"
 
 const allowedSlugs = [
 	"hosting-it-security",

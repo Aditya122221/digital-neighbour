@@ -14,6 +14,7 @@ import Apart from "@/components/homepage/apart";
 import OtherServices from "@/components/commonSections/otherservices";
 import Faq from "@/components/commonSections/faq";
 import CaseStudy from "@/components/homepage/casestudy";
+import Features from "@/components/commonSections/features";
 
 const allowedSlugs = [
   "social-media-marketing",
@@ -76,6 +77,7 @@ export default function SocialMediaMarketingSlugPage({ params }: { params: { slu
       <Apart />
       <CaseStudy />
       <OtherServices />
+      <Features data={currentData?.features} />
       <Faq data={currentData?.faq} />
       <Cta data={currentData?.services} />
       <Footer />

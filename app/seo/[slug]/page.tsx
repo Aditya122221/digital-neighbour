@@ -19,6 +19,7 @@ import BookACall from "@/components/homepage/bookacall"
 import IntroParagraph from "@/components/commonSections/introparagraph"
 import PainPoints from "@/components/commonSections/painpoints"
 import KeyBenefits from "@/components/commonSections/keybenefits"
+import Features from "@/components/commonSections/features"
 
 const allowedSlugs = [
 	"search-engine-optimisation",
@@ -91,6 +92,7 @@ export default function SeoSlugPage({ params }: { params: { slug: string } }) {
 				imagePathPrefix="/seo/content"
 			/>
 			<KeyBenefits data={currentSeoData?.keyBenefits} />
+			<Features data={currentSeoData?.features} />
 			<Cta data={currentSeoData?.services} />
 			<Apart />
 			<OtherServices />

@@ -15,7 +15,7 @@ import IntroParagraph from "@/components/commonSections/introparagraph";
 import PainPoints from "@/components/commonSections/painpoints";
 import Industries from "@/components/data-analytics/industries";
 import KeyBenefits from "@/components/commonSections/keybenefits";
-import Features from "@/components/data-analytics/features";
+import Features from "@/components/commonSections/features";
 import Apart from "@/components/homepage/apart";
 
 export default function DataAnalyticsPage() {

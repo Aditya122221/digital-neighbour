@@ -21,6 +21,7 @@ import BookACall from "@/components/homepage/bookacall"
 import IntroParagraph from "@/components/commonSections/introparagraph"
 import PainPoints from "@/components/commonSections/painpoints"
 import KeyBenefits from "@/components/commonSections/keybenefits"
+import Features from "@/components/commonSections/features"
 
 const allowedSlugs = [
 	"app-development",
@@ -89,6 +90,7 @@ export default function AppDevSlugPage({
 				}
 			/>
 			<KeyBenefits data={currentData?.keyBenefits} />
+			<Features data={currentData?.features} />
 			<Faq data={currentData?.faq} />
 			<Cta data={currentData?.services} />
 			<Footer />

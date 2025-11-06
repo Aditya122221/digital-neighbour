@@ -73,6 +73,152 @@
         }
       ]
     },
+    "features": {
+      "heading": "Why Choose Our SEO Services",
+      "subheading": "Comprehensive SEO solutions designed to drive sustainable organic growth and measurable results:",
+      "features": [
+        {
+          "title": "Comprehensive Keyword Research",
+          "description": "Discover high-value keywords your target audience is searching for with advanced research tools and NZ market insights that identify opportunities your competitors miss.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Technical SEO Excellence",
+          "description": "Optimize your website's technical foundation with site speed improvements, mobile responsiveness, crawl optimization, and structured data implementation for maximum search visibility.",
+          "icon": "⚙️"
+        },
+        {
+          "title": "Content Optimization Strategy",
+          "description": "Create and optimize content that resonates with both search engines and your audience, driving qualified traffic and establishing your brand as an industry authority.",
+          "icon": "📝"
+        },
+        {
+          "title": "Strategic Link Building",
+          "description": "Build authoritative backlinks through white-hat techniques that improve domain authority and search rankings while establishing your brand's credibility in your industry.",
+          "icon": "🔗"
+        },
+        {
+          "title": "Data-Driven Performance Tracking",
+          "description": "Monitor and analyze SEO performance with comprehensive reporting that tracks keyword rankings, organic traffic growth, conversion rates, and ROI metrics.",
+          "icon": "📊"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Win your backyard first.",
+      "problemStatement": "Local customers can’t find you when they search nearby. Inconsistent listings, weak GBP presence, and thin local content are costing you calls and foot traffic.",
+      "valueProposition": "We make you the obvious local choice with optimized Google Business Profile, consistent citations, and location-focused content that drives ‘near me’ demand."
+    },
+    "painPoints": {
+      "heading": "Fix what blocks local visibility",
+      "subheading": "The most common local SEO issues we solve:",
+      "painPoints": [
+        {"problem": "Weak Google Business Profile signals (categories, photos, posts).","solution": "We fully optimize GBP with data completeness, category tuning, visuals, and posting cadence."},
+        {"problem": "NAP inconsistencies across directories.","solution": "We audit and correct citations at scale so Google always sees a single source of truth."},
+        {"problem": "No location/service pages targeting local intent.","solution": "We create high‑intent pages that rank for ‘service + suburb’ queries and convert."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Local outcomes that matter",
+      "subheading": "Be found, chosen, and visited by nearby customers:",
+      "benefits": [
+        {"title": "Map Pack Visibility","description": "Appear more often in top 3 map results for revenue keywords."},
+        {"title": "More Calls & Bookings","description": "Turn local searches into phone calls, directions, and enquiries."},
+        {"title": "Consistent Presence","description": "Clean, accurate listings across the web that build trust and rankings."}
+      ]
+    },
+    "introParagraph": {
+      "heading": "Built for WordPress realities.",
+      "problemStatement": "Plugins, themes and media bloat slow WordPress sites and block rankings. Duplicate archives and poor markup confuse crawlers.",
+      "valueProposition": "We fix WordPress‑specific SEO issues at the root—theme, plugins, architecture—so content can rank fast and safely."
+    },
+    "painPoints": {
+      "heading": "WordPress SEO blockers",
+      "subheading": "What typically holds WP sites back:",
+      "painPoints": [
+        {"problem": "Slow Core Web Vitals from heavy themes/plugins.","solution": "We streamline assets, enable caching/CDN, and optimize images for CWV wins."},
+        {"problem": "Duplicate archives and taxonomy bloat.","solution": "We normalize archive behavior, refine taxonomies, and implement sane indexing rules."},
+        {"problem": "Messy schema and meta from conflicting plugins.","solution": "We set a single source of truth for SEO metadata and structured data."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "WP results you can feel",
+      "subheading": "Cleaner architecture, faster pages, stronger rankings:",
+      "benefits": [
+        {"title": "Faster Pages","description": "Pass CWV with optimized assets and lean theme code."},
+        {"title": "Clear Structure","description": "Taxonomies and internal links that build topical authority."},
+        {"title": "Stable SEO Setup","description": "Conflict‑free plugin configuration and durable governance."}
+      ]
+    },
+    "introParagraph": {
+      "heading": "Make your store discoverable.",
+      "problemStatement": "Category sprawl, thin PDPs, and index bloat stop shoppers finding your products. Technical issues drain crawl budget and kill rankings.",
+      "valueProposition": "We engineer e‑commerce SEO that scales—clean architecture, fast PDPs, rich schema—so more qualified buyers land on your products."
+    },
+    "painPoints": {
+      "heading": "E‑commerce SEO pain",
+      "subheading": "The most common blockers we fix:",
+      "painPoints": [
+        {"problem": "Duplicate content from facets, parameters, and variants.","solution": "We define canonical rules, pagination, and crawl directives that preserve equity and reduce bloat."},
+        {"problem": "Weak PDPs without intent coverage.","solution": "We enrich PDPs with optimized titles, content, media, and structured data."},
+        {"problem": "Slow pages at scale.","solution": "We optimize delivery, images, and scripts to speed up collection and product templates."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Store outcomes",
+      "subheading": "Rank more SKUs, grow non‑brand demand, convert better:",
+      "benefits": [
+        {"title": "More Ranked PDPs","description": "Product pages that win long‑tail queries reliably."},
+        {"title": "Category Growth","description": "Collections structured to capture non‑brand demand."},
+        {"title": "Revenue Lift","description": "SEO that compounds with CRO for higher AOV and CVR."}
+      ]
+    },
+    "introParagraph": {
+      "heading": "Ship SEO faster with AI.",
+      "problemStatement": "Teams drown in research and production cycles. Opportunities are missed because manual workflows can’t keep up with the market.",
+      "valueProposition": "We pair AI systems with human guardrails to accelerate research, briefs, and optimization—without sacrificing quality or accuracy."
+    },
+    "painPoints": {
+      "heading": "Bottlenecks AI removes",
+      "subheading": "Where AI adds leverage without risk:",
+      "painPoints": [
+        {"problem": "Slow topic research and clustering.","solution": "We automate discovery and clustering, then validate with experts for precision."},
+        {"problem": "Inconsistent on‑page optimization.","solution": "AI‑assisted optimization with editorial rules enforces consistency at scale."},
+        {"problem": "Production roadblocks.","solution": "Human‑in‑the‑loop workflows speed briefs, outlines, and edits with QA."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Speed and scale",
+      "subheading": "Do more, ship faster, keep quality high:",
+      "benefits": [
+        {"title": "Faster Time‑to‑Publish","description": "Compress weeks into days with AI‑accelerated workflows."},
+        {"title": "Coverage Expansion","description": "Target more intents and topics without ballooning headcount."},
+        {"title": "Consistent Quality","description": "Editorial guardrails and human QA keep outputs on‑brand and accurate."}
+      ]
+    },
+    "introParagraph": {
+      "heading": "Make Shopify SEO work for growth.",
+      "problemStatement": "Apps, duplicate URLs, and heavy themes slow Shopify and dilute equity. Collections and PDPs don’t capture enough non‑brand demand.",
+      "valueProposition": "We tune theme and Liquid, fix duplication, and structure collections/PDPs to rank—and convert—at scale."
+    },
+    "painPoints": {
+      "heading": "Shopify SEO hurdles",
+      "subheading": "Where most stores get stuck:",
+      "painPoints": [
+        {"problem": "Duplicate content from collections/tags.","solution": "We implement canonical rules, template logic, and indexing guardrails."},
+        {"problem": "Slow theme and third‑party scripts.","solution": "We optimize Liquid, defer scripts, and compress media for CWV gains."},
+        {"problem": "Thin collection and PDP content.","solution": "We add contextual content, FAQs, and schema to capture long‑tail demand."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Shopify outcomes",
+      "subheading": "Cleaner, faster store that ranks and converts:",
+      "benefits": [
+        {"title": "Better Rankings","description": "Collections and PDPs that consistently win target queries."},
+        {"title": "Faster Experience","description": "Theme and asset optimizations that improve CVR and SEO."},
+        {"title": "Stable Governance","description": "Sensible rules that keep SEO healthy as you scale apps and SKUs."}
+      ]
+    },
     "content": {
       "heading": "Helping you stay competitive.",
       "text1": "This requires a very different approach than what you'd find in global SEO campaigns. The key point to remember is this:",
@@ -185,6 +331,37 @@
       "formHeading": "Get Your Local Search Visibility Report",
       "buttonText": "Get My Local Audit"
     },
+    "features": {
+      "heading": "Why Choose Our Local SEO Services",
+      "subheading": "Comprehensive local SEO solutions designed to dominate local search results and drive foot traffic:",
+      "features": [
+        {
+          "title": "Google Business Profile Optimization",
+          "description": "Maximize your visibility in local search results with expertly optimized Google Business Profile listings that include accurate information, compelling descriptions, and regular updates.",
+          "icon": "📍"
+        },
+        {
+          "title": "Local Citation Building",
+          "description": "Build consistent business citations across relevant directories and local listings to improve your local search rankings and help customers find your business.",
+          "icon": "📋"
+        },
+        {
+          "title": "Location-Based Content Strategy",
+          "description": "Create location-specific content that targets local search intent and resonates with your community, driving qualified local traffic to your business.",
+          "icon": "🗺️"
+        },
+        {
+          "title": "Review Management & Acquisition",
+          "description": "Build and manage your online reputation with strategic review acquisition and professional response strategies that improve local search visibility.",
+          "icon": "⭐"
+        },
+        {
+          "title": "Local Link Building",
+          "description": "Acquire high-quality local backlinks from community websites, local directories, and industry-specific platforms to boost your local authority.",
+          "icon": "🔗"
+        }
+      ]
+    },
     "content": {
       "heading": "Dominate your local market.",
       "text1": "Local SEO isn't just about ranking well globally – it's about being the first business customers see when they search for services in your area. This requires a targeted approach that focuses on local search signals.",
@@ -292,6 +469,37 @@
       "cta": "We'll analyze your WordPress site's SEO health and provide a detailed report showing exactly what's holding you back from better rankings.",
       "formHeading": "WordPress SEO Health Check & Optimisation Report",
       "buttonText": "Analyze My WordPress Site"
+    },
+    "features": {
+      "heading": "Why Choose Our WordPress SEO Services",
+      "subheading": "Specialized WordPress SEO solutions designed to maximize your site's search visibility and performance:",
+      "features": [
+        {
+          "title": "WordPress Plugin Optimization",
+          "description": "Optimize and configure WordPress SEO plugins like Yoast, RankMath, and All in One SEO for maximum effectiveness, ensuring proper meta tags, sitemaps, and schema markup.",
+          "icon": "🔌"
+        },
+        {
+          "title": "Theme & Code Optimization",
+          "description": "Ensure your WordPress theme is SEO-friendly with clean code, proper schema markup, mobile responsiveness, and optimized site structure for search engines.",
+          "icon": "🎨"
+        },
+        {
+          "title": "Speed & Performance Optimization",
+          "description": "Improve WordPress site speed with image optimization, caching implementation, database cleanup, and Core Web Vitals optimization for better search rankings.",
+          "icon": "⚡"
+        },
+        {
+          "title": "Technical SEO Audits",
+          "description": "Identify and fix WordPress-specific technical issues including duplicate content, crawl errors, indexation problems, and plugin conflicts that hurt SEO.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Content Architecture & Structure",
+          "description": "Design clear category and tag structures with strategic internal linking to improve content discoverability and topical depth for search engines.",
+          "icon": "📐"
+        }
+      ]
     },
     "content": {
       "heading": "Optimize your WordPress site for success.",
@@ -401,6 +609,37 @@
       "formHeading": "E-commerce SEO Audit & Sales Optimisation Report",
       "buttonText": "Audit My Online Store"
     },
+    "features": {
+      "heading": "Why Choose Our E-commerce SEO Services",
+      "subheading": "Specialized e-commerce SEO solutions designed to boost product rankings and drive sales:",
+      "features": [
+        {
+          "title": "Product Page Optimization",
+          "description": "Optimize every product page with targeted keywords, compelling descriptions, schema markup, and conversion-focused elements that drive both rankings and sales.",
+          "icon": "🛍️"
+        },
+        {
+          "title": "Category & Collection Strategy",
+          "description": "Structure and optimize category pages to capture high-intent shoppers and improve your site's overall SEO performance with strategic taxonomy.",
+          "icon": "📂"
+        },
+        {
+          "title": "E-commerce Technical SEO",
+          "description": "Solve complex technical challenges unique to e-commerce sites including crawl budget optimization, duplicate content management, and pagination strategies.",
+          "icon": "⚙️"
+        },
+        {
+          "title": "Product Schema & Rich Snippets",
+          "description": "Implement product schema markup to enhance your listings in search results with prices, ratings, and availability, boosting click-through rates.",
+          "icon": "🏷️"
+        },
+        {
+          "title": "Conversion-Focused SEO",
+          "description": "Optimize your e-commerce site not just for traffic, but for converting visitors into paying customers with strategic CRO integration.",
+          "icon": "💰"
+        }
+      ]
+    },
     "content": {
       "heading": "Turn browsers into buyers.",
       "text1": "E-commerce SEO is fundamentally different from traditional website SEO. Your online store needs to rank for thousands of product-specific keywords while maintaining technical excellence across every page.",
@@ -508,6 +747,37 @@
       "cta": "Let us show you how AI can revolutionize your SEO strategy with a comprehensive AI-powered audit that reveals opportunities your competitors are missing.",
       "formHeading": "AI-Powered SEO Analysis & Strategy Report",
       "buttonText": "Get My AI SEO Audit"
+    },
+    "features": {
+      "heading": "Why Choose Our AI SEO Services",
+      "subheading": "Cutting-edge AI-powered SEO solutions designed to accelerate your search optimization and deliver faster results:",
+      "features": [
+        {
+          "title": "AI-Powered Keyword Research",
+          "description": "Leverage AI to discover high-value keyword opportunities and predict search trends before your competitors with advanced pattern recognition and data analysis.",
+          "icon": "🤖"
+        },
+        {
+          "title": "Intelligent Content Optimization",
+          "description": "Use AI tools to optimize your existing content for better rankings and create data-driven content strategies that outperform traditional methods.",
+          "icon": "📝"
+        },
+        {
+          "title": "AI Competitor Analysis",
+          "description": "Analyze your competitors' SEO strategies with AI to identify gaps and opportunities in your market that human analysis might miss.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Automated Content Generation",
+          "description": "Create SEO-optimized content faster with AI assistance while maintaining quality and authenticity through expert human oversight.",
+          "icon": "⚡"
+        },
+        {
+          "title": "Predictive SEO Analytics",
+          "description": "Stay ahead of the curve by using AI to predict emerging search trends and capitalize on opportunities early before competitors.",
+          "icon": "📊"
+        }
+      ]
     },
     "content": {
       "heading": "Harness the power of AI for SEO.",
@@ -617,6 +887,37 @@
       "formHeading": "Shopify SEO Audit & optimisation Report",
       "buttonText": "Audit My Shopify Store"
     },
+    "features": {
+      "heading": "Why Choose Our Shopify SEO Services",
+      "subheading": "Specialized Shopify SEO solutions designed to maximize your store's search visibility and drive sales:",
+      "features": [
+        {
+          "title": "Shopify Product Optimization",
+          "description": "Optimize every product page with targeted keywords, compelling descriptions, and proper schema markup to help your products rank better in search results.",
+          "icon": "🛍️"
+        },
+        {
+          "title": "Shopify Technical SEO",
+          "description": "Fix technical issues unique to Shopify including duplicate content, site speed optimization, mobile optimization, and app conflicts that hurt SEO.",
+          "icon": "⚙️"
+        },
+        {
+          "title": "Shopify App SEO Audit",
+          "description": "Audit and optimize your Shopify apps to ensure they don't negatively impact your search rankings or site performance.",
+          "icon": "🔌"
+        },
+        {
+          "title": "Collection & Theme Optimization",
+          "description": "Structure collections, filters, and optimize your Shopify theme code and templates for maximum search visibility and user experience.",
+          "icon": "🎨"
+        },
+        {
+          "title": "Conversion-Focused SEO",
+          "description": "Optimize your Shopify store not just for traffic, but for converting visitors into paying customers with strategic CRO integration.",
+          "icon": "💰"
+        }
+      ]
+    },
     "content": {
       "heading": "Dominate search results with Shopify SEO.",
       "text1": "Shopify is an excellent e-commerce platform, but it requires specialized SEO knowledge to rank well in search results. Many store owners struggle with technical issues that prevent their products from being discovered.",
@@ -724,6 +1025,60 @@
       "cta": "Let us conduct a thorough SEO audit of your website and show you exactly what's preventing better rankings and how to fix it.",
       "formHeading": "Complete SEO Audit & Action Plan",
       "buttonText": "Get My SEO Audit"
+    },
+    "features": {
+      "heading": "Why Choose Our SEO Audit Services",
+      "subheading": "Comprehensive SEO audit solutions designed to identify opportunities and improve your search rankings:",
+      "features": [
+        {
+          "title": "Technical SEO Analysis",
+          "description": "Comprehensive analysis of your site's technical health including crawl errors, site speed, mobile optimization, and indexation issues.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Content Quality Analysis",
+          "description": "Evaluate your content strategy, keyword optimization, and identify content gaps and opportunities for improvement.",
+          "icon": "📝"
+        },
+        {
+          "title": "Competitive SEO Analysis",
+          "description": "Analyze your competitors' SEO strategies to identify opportunities and benchmark your performance against industry leaders.",
+          "icon": "📊"
+        },
+        {
+          "title": "Link Profile Analysis",
+          "description": "Review your backlink profile, identify toxic links, and find new link-building opportunities to improve domain authority.",
+          "icon": "🔗"
+        },
+        {
+          "title": "Actionable Roadmap",
+          "description": "Receive a prioritized roadmap with impact/effort scoring and timelines to guide your SEO improvements effectively.",
+          "icon": "🗺️"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Know what to fix and why.",
+      "problemStatement": "Hidden technical issues, weak content alignment, and risky links quietly suppress rankings and waste budget.",
+      "valueProposition": "Our audit surfaces precise, prioritized fixes with impact/effort scoring so you ship the right improvements first."
+    },
+    "painPoints": {
+      "heading": "Audit the whole picture",
+      "subheading": "We diagnose the real SEO blockers:",
+      "painPoints": [
+        {"problem": "Crawl/index gaps and duplication.","solution": "We correct discovery, canonicalization, and coverage so equity consolidates."},
+        {"problem": "Misaligned content and weak intent coverage.","solution": "We map topics to intents and create a coverage plan that ranks."},
+        {"problem": "Toxic/low‑value links.","solution": "We assess risk, remove liabilities, and target authority gaps."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Clarity → Action → Results",
+      "subheading": "A roadmap your team can execute with confidence:",
+      "benefits": [
+        {"title": "Prioritized Fixes","description": "High‑impact changes sequenced for fastest wins."},
+        {"title": "Executive Clarity","description": "Clear metrics, baselines, and targets to align teams."},
+        {"title": "Sustained Gains","description": "Guardrails to keep technical and content hygiene high."}
+      ]
     },
     "content": {
       "heading": "Uncover the truth about your SEO.",
@@ -833,6 +1188,60 @@
       "formHeading": "Online Reputation Analysis & Strategy",
       "buttonText": "Analyze My Reputation"
     },
+    "features": {
+      "heading": "Why Choose Our Online Reputation Management Services",
+      "subheading": "Comprehensive ORM solutions designed to protect and enhance your brand's online reputation:",
+      "features": [
+        {
+          "title": "24/7 Reputation Monitoring",
+          "description": "Continuous monitoring of your online mentions, reviews, and search results across all major platforms to stay ahead of reputation issues.",
+          "icon": "👁️"
+        },
+        {
+          "title": "Professional Review Management",
+          "description": "Respond to reviews professionally, encourage positive feedback, and develop review acquisition strategies that build trust.",
+          "icon": "⭐"
+        },
+        {
+          "title": "Positive Content Creation",
+          "description": "Create and publish positive content that showcases your expertise and pushes down negative search results effectively.",
+          "icon": "📝"
+        },
+        {
+          "title": "Reputation Crisis Management",
+          "description": "Rapid response strategies for reputation crises and damage control to minimize negative impact on your brand.",
+          "icon": "🛡️"
+        },
+        {
+          "title": "Search Result Suppression",
+          "description": "Push down negative search results through strategic content creation and SEO optimization that improves your online visibility.",
+          "icon": "🔍"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Own your brand narrative.",
+      "problemStatement": "Negative results and unmanaged reviews push customers away before they meet you.",
+      "valueProposition": "We monitor, improve, and promote the right signals so searchers see trust, proof, and professionalism first."
+    },
+    "painPoints": {
+      "heading": "ORM realities",
+      "subheading": "Where brands lose control—and how we fix it:",
+      "painPoints": [
+        {"problem": "Outdated or inconsistent listings.","solution": "We correct and maintain accurate business data across platforms."},
+        {"problem": "Unmanaged negative reviews.","solution": "We implement review response, acquisition, and escalation playbooks."},
+        {"problem": "Unfavorable page‑one results.","solution": "We publish positive, optimized assets that outrank negatives."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Be chosen with confidence",
+      "subheading": "Searchers see trust signals—so they convert:",
+      "benefits": [
+        {"title": "Better First Impression","description": "Positive, consistent results across the SERP."},
+        {"title": "Review Momentum","description": "Steady acquisition of authentic, high‑quality reviews."},
+        {"title": "Crisis Readiness","description": "Clear processes minimize impact when issues arise."}
+      ]
+    },
     "content": {
       "heading": "Build trust through reputation management.",
       "text1": "Your online reputation is often the first impression potential customers have of your business. In today's digital world, customers research businesses online before making purchasing decisions, making reputation management crucial for success.",
@@ -924,6 +1333,60 @@
       "cta": "Get a comprehensive SEO migration strategy that protects your rankings and ensures a smooth transition to your new platform.",
       "formHeading": "SEO Migration Strategy & Risk Assessment",
       "buttonText": "Plan My Migration"
+    },
+    "features": {
+      "heading": "Why Choose Our SEO Migration Services",
+      "subheading": "Expert SEO migration solutions designed to preserve your rankings and ensure zero traffic loss:",
+      "features": [
+        {
+          "title": "Pre-Migration Risk Assessment",
+          "description": "Comprehensive analysis of your current SEO status and migration risks to create a detailed migration plan that protects your rankings.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Strategic URL Mapping",
+          "description": "Create detailed URL mapping and redirect strategies to preserve all existing rankings and traffic during platform transitions.",
+          "icon": "🗺️"
+        },
+        {
+          "title": "Content Transfer & Optimization",
+          "description": "Safely transfer all content while preserving SEO elements and optimizing for the new platform to maintain search visibility.",
+          "icon": "📦"
+        },
+        {
+          "title": "Technical SEO Preservation",
+          "description": "Maintain all technical SEO elements including schema markup, site structure, and performance optimization throughout migration.",
+          "icon": "⚙️"
+        },
+        {
+          "title": "Post-Migration Monitoring",
+          "description": "Monitor rankings, traffic, and technical issues for 90 days post-migration to ensure successful transition and quick issue resolution.",
+          "icon": "📊"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Migrate without losing equity.",
+      "problemStatement": "Unplanned migrations cause traffic drops, broken links, and months of recovery.",
+      "valueProposition": "We safeguard rankings with meticulous URL mapping, redirect specs, and post‑launch monitoring."
+    },
+    "painPoints": {
+      "heading": "Migration risks",
+      "subheading": "Common failure points we prevent:",
+      "painPoints": [
+        {"problem": "Missing or wrong redirects.","solution": "We deliver complete redirect specs with QA and coverage checks."},
+        {"problem": "Lost metadata and schema.","solution": "We preserve titles, canonicals, schema, and internal links."},
+        {"problem": "Index volatility post‑launch.","solution": "We monitor logs, coverage, and rankings and fix gaps fast."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Preserve and improve",
+      "subheading": "Launch smoothly and stabilize quickly:",
+      "benefits": [
+        {"title": "Minimal Traffic Impact","description": "Careful planning avoids the typical 20–40% drop."},
+        {"title": "Clean Architecture","description": "A chance to fix legacy issues during the move."},
+        {"title": "Faster Recovery","description": "Close monitoring accelerates stabilization and growth."}
+      ]
     },
     "content": {
       "heading": "Migrate without losing your SEO progress.",
@@ -1033,6 +1496,60 @@
       "formHeading": "Small Business SEO Assessment & Strategy",
       "buttonText": "Get My Business Analysis"
     },
+    "features": {
+      "heading": "Why Choose Our Small Business SEO Services",
+      "subheading": "Affordable SEO solutions designed to help small businesses compete with larger companies:",
+      "features": [
+        {
+          "title": "Local SEO Focus",
+          "description": "Dominate local search results and get found by customers in your area with targeted local SEO strategies that level the playing field.",
+          "icon": "📍"
+        },
+        {
+          "title": "Google Business Profile Optimization",
+          "description": "Optimize your Google My Business listing to appear in local searches and attract more customers with accurate information and regular updates.",
+          "icon": "🏢"
+        },
+        {
+          "title": "Community-Focused Content",
+          "description": "Create content that resonates with your local community and establishes you as the local expert in your industry.",
+          "icon": "📝"
+        },
+        {
+          "title": "Affordable SEO Packages",
+          "description": "Flexible SEO packages that fit different budgets while delivering maximum impact for your investment and faster results than large corporations.",
+          "icon": "💰"
+        },
+        {
+          "title": "Quick Wins & Fast Results",
+          "description": "Focus on high-impact, low-cost opportunities that deliver quick gains and help you compete effectively with larger competitors.",
+          "icon": "⚡"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Compete—and win—locally.",
+      "problemStatement": "Bigger competitors dominate search results and soak up local demand.",
+      "valueProposition": "We prioritize quick, affordable wins that put your business in front of nearby customers fast."
+    },
+    "painPoints": {
+      "heading": "Big results, small budget",
+      "subheading": "Focus on the levers that move the needle:",
+      "painPoints": [
+        {"problem": "No local visibility.","solution": "Optimize GBP, citations, and local pages to appear where it counts."},
+        {"problem": "Thin or generic content.","solution": "Publish helpful, local content that answers buyer questions."},
+        {"problem": "Slow site hurts conversions.","solution": "Improve speed and UX to turn clicks into calls and visits."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Right work, right order",
+      "subheading": "See impact quickly, then scale:",
+      "benefits": [
+        {"title": "Faster Wins","description": "Unlock rankings with basic fixes and clear signals."},
+        {"title": "Lower CPA","description": "Organic leads reduce reliance on paid budgets."},
+        {"title": "Local Authority","description": "Earn trust in your community and online."}
+      ]
+    },
     "content": {
       "heading": "Compete with the big players.",
       "text1": "Small businesses have unique advantages in SEO that larger companies often miss. You can be more nimble, create more personalized content, and build stronger local relationships that translate into better search rankings.",
@@ -1140,6 +1657,60 @@
       "cta": "Let us analyze your conversion funnel and show you exactly how to turn more of your SEO traffic into qualified leads and paying customers.",
       "formHeading": "Lead Generation Audit & optimisation Strategy",
       "buttonText": "Audit My Conversions"
+    },
+    "features": {
+      "heading": "Why Choose Our SEO Lead Generation Services",
+      "subheading": "Comprehensive lead generation SEO solutions designed to convert traffic into qualified leads:",
+      "features": [
+        {
+          "title": "Intent-Based Keyword Strategy",
+          "description": "Target keywords that indicate purchase intent to attract visitors ready to buy or request information, maximizing conversion potential.",
+          "icon": "🎯"
+        },
+        {
+          "title": "Landing Page Optimization",
+          "description": "Optimize your landing pages and forms to maximize conversions from your SEO traffic with clear CTAs and trust signals.",
+          "icon": "📄"
+        },
+        {
+          "title": "Compelling Offer Creation",
+          "description": "Create valuable lead magnets and offers that encourage visitors to provide their contact information and move through your funnel.",
+          "icon": "🎁"
+        },
+        {
+          "title": "Conversion Funnel Optimization",
+          "description": "Analyze and optimize every step of your conversion funnel to maximize lead generation and reduce friction.",
+          "icon": "🔄"
+        },
+        {
+          "title": "Lead Attribution & Tracking",
+          "description": "Track leads back to specific keywords and content to optimize your strategy for maximum ROI and conversion rates.",
+          "icon": "📊"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Turn traffic into pipeline.",
+      "problemStatement": "Rankings without conversions waste opportunity. Offers, pages, and forms aren’t mapped to intent.",
+      "valueProposition": "We align keywords to offers and optimize journeys so organic visitors become qualified leads."
+    },
+    "painPoints": {
+      "heading": "Fix funnel friction",
+      "subheading": "Close the gap between visit and lead:",
+      "painPoints": [
+        {"problem": "Mismatched intent to page.","solution": "We map queries to the right offers and landing experiences."},
+        {"problem": "Low converting forms.","solution": "We simplify fields, add trust, and speed up performance."},
+        {"problem": "No attribution.","solution": "We track sources and content so budgets back what works."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "More leads, better leads",
+      "subheading": "Organic that impacts revenue:",
+      "benefits": [
+        {"title": "Higher CVR","description": "Intent‑aligned pages that remove friction."},
+        {"title": "Qualified Pipeline","description": "Offers matched to buyer stages and needs."},
+        {"title": "Clear ROI","description": "Attribution that proves what drives pipeline."}
+      ]
     },
     "content": {
       "heading": "Turn traffic into leads.",
@@ -1249,6 +1820,60 @@
       "formHeading": "Link Building Services NZ Analysis & Strategy Report",
       "buttonText": "Analyze My Links"
     },
+    "features": {
+      "heading": "Why Choose Our Link Building Services",
+      "subheading": "Professional link building solutions designed to build authority and improve search rankings:",
+      "features": [
+        {
+          "title": "Content-Based Link Building",
+          "description": "Create valuable content that naturally attracts high-quality backlinks from authoritative websites in your industry.",
+          "icon": "📝"
+        },
+        {
+          "title": "Digital PR & Outreach",
+          "description": "Build relationships with journalists and influencers to earn high-authority media mentions and links that boost your credibility.",
+          "icon": "📰"
+        },
+        {
+          "title": "Resource Page Link Building",
+          "description": "Identify and secure links from relevant resource pages and industry directories to build your domain authority.",
+          "icon": "📚"
+        },
+        {
+          "title": "Strategic Guest Posting",
+          "description": "Write high-quality guest posts for authoritative websites in your industry to earn valuable backlinks and establish expertise.",
+          "icon": "✍️"
+        },
+        {
+          "title": "Backlink Profile Analysis",
+          "description": "Analyze your current backlink profile and identify opportunities for improvement and harmful link removal.",
+          "icon": "🔍"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Earn authority that lasts.",
+      "problemStatement": "Random outreach and low‑quality links risk penalties and waste spend.",
+      "valueProposition": "We earn editorial, relevant links through content assets, PR, and relationships—quality over quantity."
+    },
+    "painPoints": {
+      "heading": "Link building done right",
+      "subheading": "No shortcuts—just durable authority:",
+      "painPoints": [
+        {"problem": "Low‑relevance placements.","solution": "We target contextually aligned sites audiences actually read."},
+        {"problem": "Anchor risk and footprints.","solution": "We diversify anchors and enforce strict QA."},
+        {"problem": "One‑off campaigns.","solution": "We build programs that compound authority over time."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Authority that moves rankings",
+      "subheading": "Editorial links, measurable impact:",
+      "benefits": [
+        {"title": "Safer Profile","description": "White‑hat tactics with rigorous vetting."},
+        {"title": "Topical Relevance","description": "Links that reinforce your expertise areas."},
+        {"title": "Ranking Lift","description": "Better positions and faster index response."}
+      ]
+    },
     "content": {
       "heading": "Build authority through strategic link building services.",
       "text1": "Link building is crucial for SEO success, but it's also one of the most difficult and time-consuming aspects of search optimisation. As a trusted link building services company in NZ, we understand that building high-quality backlinks requires expertise, relationships, and strategic planning.",
@@ -1357,6 +1982,60 @@
       "formHeading": "International SEO Services Strategy & Market Analysis",
       "buttonText": "Analyze My Global Potential"
     },
+    "features": {
+      "heading": "Why Choose Our International SEO Services",
+      "subheading": "Comprehensive international SEO solutions designed to reach global audiences:",
+      "features": [
+        {
+          "title": "International Market Analysis",
+          "description": "Research target markets, competitors, and opportunities to create effective international SEO strategies for each region.",
+          "icon": "🌍"
+        },
+        {
+          "title": "Hreflang Implementation",
+          "description": "Properly implement hreflang tags to help search engines understand your international content structure and language targeting.",
+          "icon": "🔗"
+        },
+        {
+          "title": "Content Localization",
+          "description": "Adapt your content for different cultures, not just languages, to resonate with local audiences and search behaviors.",
+          "icon": "🌐"
+        },
+        {
+          "title": "Country-Specific Optimization",
+          "description": "Optimize for country-specific search engines and local search behaviors in each target market for maximum visibility.",
+          "icon": "📍"
+        },
+        {
+          "title": "International Link Building",
+          "description": "Build authoritative backlinks from relevant websites in your target countries and languages to boost global authority.",
+          "icon": "🔗"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Go global with confidence.",
+      "problemStatement": "Literal translations and generic structures fail in new markets with different behavior and engines.",
+      "valueProposition": "We localize strategy, content, and tech so each locale ranks—and resonates—like a native."
+    },
+    "painPoints": {
+      "heading": "Cross‑border hurdles",
+      "subheading": "What blocks international traction:",
+      "painPoints": [
+        {"problem": "Wrong hreflang or URL strategy.","solution": "We implement correct targeting via subfolders/subdomains and hreflang."},
+        {"problem": "Cultural misfit content.","solution": "We localize messaging, examples, and proof to the market."},
+        {"problem": "Split equity between locales.","solution": "We consolidate signals and interlink regions properly."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Local wins, global scale",
+      "subheading": "Each market gets the best version of you:",
+      "benefits": [
+        {"title": "Correct Targeting","description": "Hreflang and structure that search engines trust."},
+        {"title": "Market Fit","description": "Content that matches local language and expectations."},
+        {"title": "Compounding Equity","description": "International strategy that reinforces the whole domain."}
+      ]
+    },
     "content": {
       "heading": "Reach customers worldwide with expert international SEO services.",
       "text1": "International SEO is complex and requires specialized knowledge of different markets, languages, and cultural preferences. Simply translating your content isn't enough to succeed in international markets. Our international SEO company brings deep expertise in global market expansion.",
@@ -1448,6 +2127,60 @@
       "cta": "Let our expert mobile SEO services team audit your mobile SEO performance and show you exactly how to optimize your site for mobile search and improve your rankings.",
       "formHeading": "Mobile SEO Services Audit & optimisation Strategy",
       "buttonText": "Audit My Mobile SEO"
+    },
+    "features": {
+      "heading": "Why Choose Our Mobile SEO Services",
+      "subheading": "Comprehensive mobile SEO solutions designed to maximize mobile search visibility:",
+      "features": [
+        {
+          "title": "Mobile Speed Optimization",
+          "description": "Optimize your mobile site loading speed with image compression, caching, and performance improvements for better rankings.",
+          "icon": "⚡"
+        },
+        {
+          "title": "Mobile-Friendly Design",
+          "description": "Ensure your site design works perfectly on mobile devices with touch-friendly navigation and responsive layouts.",
+          "icon": "📱"
+        },
+        {
+          "title": "Mobile Content Optimization",
+          "description": "Optimize your content for mobile reading with shorter paragraphs, larger fonts, and mobile-friendly formatting.",
+          "icon": "📝"
+        },
+        {
+          "title": "Mobile Technical SEO",
+          "description": "Implement mobile-specific technical optimizations including viewport tags, mobile sitemaps, and structured data.",
+          "icon": "⚙️"
+        },
+        {
+          "title": "Mobile User Experience",
+          "description": "Optimize the mobile user experience with intuitive navigation, easy-to-use forms, and mobile-specific features.",
+          "icon": "👆"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Be fast on the device that matters.",
+      "problemStatement": "Mobile‑first indexing means desktop‑nice is not enough—slow, clunky mobile kills rankings and revenue.",
+      "valueProposition": "We make mobile blazing fast and effortless to use, unlocking visibility and conversions."
+    },
+    "painPoints": {
+      "heading": "Mobile blockers",
+      "subheading": "Top issues we eliminate:",
+      "painPoints": [
+        {"problem": "Heavy scripts and images.","solution": "We optimize delivery, lazy‑load, and compress for instant render."},
+        {"problem": "Tap targets and forms that frustrate.","solution": "We improve layout, inputs, and interactions for thumbs."},
+        {"problem": "Layout shifts and CLS.","solution": "We stabilize assets and reserve space to pass CWV."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Mobile that ranks and converts",
+      "subheading": "Speed + UX = growth:",
+      "benefits": [
+        {"title": "Better CWV","description": "Lower LCP, CLS, and INP for stronger rankings."},
+        {"title": "Happier Users","description": "Faster, clearer, touch‑friendly journeys."},
+        {"title": "Higher Revenue","description": "Mobile sessions that convert, not bounce."}
+      ]
     },
     "content": {
       "heading": "Dominate mobile search results with expert mobile SEO services.",
@@ -1541,6 +2274,60 @@
       "formHeading": "Voice Search optimisation Services Analysis & Strategy",
       "buttonText": "Analyze My Voice Search"
     },
+    "features": {
+      "heading": "Why Choose Our Voice Search Optimization Services",
+      "subheading": "Comprehensive voice search solutions designed to capture the growing voice search market:",
+      "features": [
+        {
+          "title": "Voice Search Keyword Research",
+          "description": "Research and target conversational, question-based keywords that people use in voice searches for better visibility.",
+          "icon": "🎤"
+        },
+        {
+          "title": "Featured Snippet Optimization",
+          "description": "Optimize your content to capture featured snippets, which are often the source of voice search answers.",
+          "icon": "⭐"
+        },
+        {
+          "title": "Question-Based Content Creation",
+          "description": "Create content that directly answers the questions your customers are asking through voice search.",
+          "icon": "❓"
+        },
+        {
+          "title": "Local Voice Search Optimization",
+          "description": "Optimize your local business for 'near me' voice searches and location-based queries.",
+          "icon": "📍"
+        },
+        {
+          "title": "Natural Language Optimization",
+          "description": "Optimize your content to match the natural, conversational way people speak in voice searches.",
+          "icon": "💬"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Answer how people speak.",
+      "problemStatement": "Voice queries are conversational and question‑based—traditional pages rarely win the answer.",
+      "valueProposition": "We structure content for spoken questions and featured answers to capture voice traffic."
+    },
+    "painPoints": {
+      "heading": "Voice gaps",
+      "subheading": "Close the distance to position zero:",
+      "painPoints": [
+        {"problem": "No snippet‑ready answers.","solution": "We add concise, factual blocks that earn featured positions."},
+        {"problem": "Wrong question format.","solution": "We rewrite headings to match natural language queries."},
+        {"problem": "Local voice intent ignored.","solution": "We optimize for ‘near me’ voice queries with complete local signals."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Be the spoken answer",
+      "subheading": "More impressions with fewer clicks required:",
+      "benefits": [
+        {"title": "Featured Visibility","description": "Content structured to win assistant responses."},
+        {"title": "Local Discovery","description": "Better voice presence for ‘near me’ moments."},
+        {"title": "Frictionless Access","description": "Answers delivered without typing or tapping."}
+      ]
+    },
     "content": {
       "heading": "Capture the voice search revolution with expert voice search optimisation services.",
       "text1": "Voice search is fundamentally different from traditional text search. Users speak naturally, ask questions, and expect conversational responses. Our voice search optimisation company understands these unique requirements and optimizes your content accordingly.",
@@ -1632,6 +2419,60 @@
       "cta": "Let our expert video SEO agency analyze your video content and show you exactly how to optimize your videos for better search rankings and visibility.",
       "formHeading": "Video SEO Services Analysis & optimisation Strategy",
       "buttonText": "Analyze My Videos"
+    },
+    "features": {
+      "heading": "Why Choose Our Video SEO Services",
+      "subheading": "Comprehensive video SEO solutions designed to maximize video search visibility:",
+      "features": [
+        {
+          "title": "Video Keyword Research",
+          "description": "Research high-value keywords specifically for video content to improve search visibility and discoverability.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Video Content Optimization",
+          "description": "Optimize video titles, descriptions, tags, and thumbnails for maximum search visibility across platforms.",
+          "icon": "📹"
+        },
+        {
+          "title": "Video Transcript Creation",
+          "description": "Create accurate transcripts for your videos to improve search engine understanding and accessibility.",
+          "icon": "📝"
+        },
+        {
+          "title": "Video Schema Markup",
+          "description": "Implement video schema markup to help search engines better understand and display your video content.",
+          "icon": "🏷️"
+        },
+        {
+          "title": "Multi-Platform Optimization",
+          "description": "Optimize for YouTube, Google Video search, and other video platforms with platform-specific strategies.",
+          "icon": "📺"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Let your videos get found.",
+      "problemStatement": "Unoptimized titles, metadata, and transcripts hide great videos from searchers.",
+      "valueProposition": "We optimize every element—keywords, schema, transcripts, thumbnails—so videos rank and get watched."
+    },
+    "painPoints": {
+      "heading": "Video SEO hurdles",
+      "subheading": "Fix discoverability and engagement:",
+      "painPoints": [
+        {"problem": "Poor metadata.","solution": "We research keywords and optimize titles, descriptions, and tags."},
+        {"problem": "No transcripts or schema.","solution": "We add transcripts and video schema for indexability and rich results."},
+        {"problem": "Low CTR thumbnails.","solution": "We design thumbnails that earn the click without clickbait."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Views that matter",
+      "subheading": "More discovery, more watch time, more impact:",
+      "benefits": [
+        {"title": "Higher Rankings","description": "Optimized metadata and schema drive visibility."},
+        {"title": "Better Engagement","description": "Content packaged to maximize watch time and retention."},
+        {"title": "Cross‑Channel Lift","description": "Video supports and strengthens overall SEO."}
+      ]
     },
     "content": {
       "heading": "Maximize your video content reach with expert video SEO services.",
@@ -1725,6 +2566,60 @@
       "formHeading": "YouTube SEO Services Analysis & Strategy",
       "buttonText": "Analyze My YouTube Channel"
     },
+    "features": {
+      "heading": "Why Choose Our YouTube SEO Services",
+      "subheading": "Comprehensive YouTube SEO solutions designed to maximize video rankings and views:",
+      "features": [
+        {
+          "title": "YouTube Keyword Research",
+          "description": "Research high-performing keywords specifically for YouTube to improve video discoverability and rankings.",
+          "icon": "🔍"
+        },
+        {
+          "title": "YouTube Title Optimization",
+          "description": "Create compelling, keyword-rich titles that attract clicks and improve search rankings on YouTube.",
+          "icon": "📝"
+        },
+        {
+          "title": "YouTube Description Optimization",
+          "description": "Write detailed, keyword-optimized descriptions that improve search visibility and provide value to viewers.",
+          "icon": "📄"
+        },
+        {
+          "title": "YouTube Thumbnail Optimization",
+          "description": "Design eye-catching thumbnails that improve click-through rates and video performance.",
+          "icon": "🖼️"
+        },
+        {
+          "title": "YouTube Tag Strategy",
+          "description": "Develop strategic tag strategies that help YouTube understand and categorize your content effectively.",
+          "icon": "🏷️"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Win YouTube search and suggested.",
+      "problemStatement": "Strong videos underperform without keyword alignment, thumbnails, and metadata tuned for YouTube’s algorithm.",
+      "valueProposition": "We optimize channel and video fundamentals so your content earns clicks, watch time, and subscribers."
+    },
+    "painPoints": {
+      "heading": "Channel growth blockers",
+      "subheading": "Fix what holds back discovery:",
+      "painPoints": [
+        {"problem": "Weak titles and packaging.","solution": "We create keyword‑rich titles and visuals that drive CTR."},
+        {"problem": "Unclear topic targeting.","solution": "We research clusters and align content with viewer intent."},
+        {"problem": "Poor metadata hygiene.","solution": "We standardize tags, descriptions, and end cards for consistency."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Grow views and subs",
+      "subheading": "Better packaging, better performance:",
+      "benefits": [
+        {"title": "More Discoverability","description": "Videos that rank and appear in Suggested."},
+        {"title": "Higher CTR","description": "Thumbnails and titles that earn the click."},
+        {"title": "Channel Momentum","description": "Compounding growth with a clean content strategy."}
+      ]
+    },
     "content": {
       "heading": "Dominate YouTube search with expert YouTube SEO services.",
       "text1": "YouTube SEO is crucial for getting your videos discovered on the world's second-largest search engine. With over 2 billion logged-in users, YouTube offers massive opportunities for businesses. Our YouTube SEO company understands the platform's unique algorithm and optimisation requirements.",
@@ -1816,6 +2711,60 @@
       "cta": "Let our expert SEO strategy consulting agency analyze your current approach and create a comprehensive strategy that aligns with your business objectives and drives real results.",
       "formHeading": "SEO Strategy Consulting Analysis & Roadmap",
       "buttonText": "Get My SEO Strategy"
+    },
+    "features": {
+      "heading": "Why Choose Our SEO Strategy Consulting Services",
+      "subheading": "Comprehensive SEO strategy solutions designed to drive sustainable growth:",
+      "features": [
+        {
+          "title": "SEO Competitive Intelligence",
+          "description": "Analyze your competitors' SEO strategies to identify opportunities and develop competitive advantages.",
+          "icon": "🔍"
+        },
+        {
+          "title": "SEO Market Analysis",
+          "description": "Research market trends, search volumes, and opportunities to inform strategic decisions.",
+          "icon": "📊"
+        },
+        {
+          "title": "SEO Goal Development",
+          "description": "Set realistic, measurable SEO goals that align with your business objectives and market potential.",
+          "icon": "🎯"
+        },
+        {
+          "title": "SEO Roadmap Development",
+          "description": "Create detailed, actionable roadmaps that guide your SEO efforts and measure progress.",
+          "icon": "🗺️"
+        },
+        {
+          "title": "SEO Resource Allocation",
+          "description": "Plan and allocate resources effectively to maximize SEO ROI and achieve strategic objectives.",
+          "icon": "💰"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Plan first. Then scale.",
+      "problemStatement": "Tactics without strategy waste time and budget—and rarely compound.",
+      "valueProposition": "We build data‑driven roadmaps that align teams, sequence work, and produce durable growth."
+    },
+    "painPoints": {
+      "heading": "Why strategy matters",
+      "subheading": "Replace guesswork with clarity:",
+      "painPoints": [
+        {"problem": "No prioritization.","solution": "We score opportunities by impact/effort to decide what’s next."},
+        {"problem": "Fragmented execution.","solution": "We align content, technical, and authority into one plan."},
+        {"problem": "Unclear KPIs.","solution": "We define goals, baselines, and measurement cadence."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Confident execution",
+      "subheading": "Everyone knows the why, what, and when:",
+      "benefits": [
+        {"title": "Focused Effort","description": "Resources go to the highest‑leverage work."},
+        {"title": "Accountability","description": "Clear owners, timelines, and milestones."},
+        {"title": "Measurable Outcomes","description": "Progress tracked against business KPIs."}
+      ]
     },
     "content": {
       "heading": "Build a winning SEO strategy with expert SEO strategy consulting.",
@@ -1909,6 +2858,60 @@
       "formHeading": "Generative Engine optimisation Analysis & Strategy",
       "buttonText": "Analyze My GEO Potential"
     },
+    "features": {
+      "heading": "Why Choose Our Generative Engine Optimization Services",
+      "subheading": "Cutting-edge GEO solutions designed to prepare you for the AI-powered future of search:",
+      "features": [
+        {
+          "title": "Content for AI Systems",
+          "description": "Optimize your content to be easily processed and referenced by AI search systems and generative engines.",
+          "icon": "🤖"
+        },
+        {
+          "title": "Conversational Query Optimization",
+          "description": "Optimize for conversational queries and natural language that AI systems use to generate responses.",
+          "icon": "💬"
+        },
+        {
+          "title": "AI-Friendly Structured Data",
+          "description": "Implement structured data that helps AI systems understand and present your content effectively.",
+          "icon": "📊"
+        },
+        {
+          "title": "Knowledge Graph Optimization",
+          "description": "Optimize your content to be included in knowledge graphs and AI knowledge bases.",
+          "icon": "🧠"
+        },
+        {
+          "title": "Multi-Platform AI Optimization",
+          "description": "Optimize for various AI-powered platforms and search interfaces beyond traditional search engines.",
+          "icon": "🌐"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Prepare for AI search.",
+      "problemStatement": "Generative engines reward structured, authoritative answers—most sites aren’t built for that yet.",
+      "valueProposition": "We adapt content and data so AI systems can reference and prefer your answers."
+    },
+    "painPoints": {
+      "heading": "GEO challenges",
+      "subheading": "Structure for AI consumption:",
+      "painPoints": [
+        {"problem": "Unstructured long‑form content.","solution": "We add answer blocks, summaries, and citations AI can parse."},
+        {"problem": "Sparse structured data.","solution": "We implement rich schema aligned to entities and claims."},
+        {"problem": "No knowledge graph presence.","solution": "We connect content to recognized entities for credibility."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "AI‑readable by design",
+      "subheading": "Increase inclusion in generative answers:",
+      "benefits": [
+        {"title": "Clear Citability","description": "Content sections that can be quoted reliably."},
+        {"title": "Entity Alignment","description": "Schema and links that reinforce facts and context."},
+        {"title": "Future‑proofing","description": "Content strategy ready for AI search shifts."}
+      ]
+    },
     "content": {
       "heading": "Master AI search with expert generative engine optimisation.",
       "text1": "Generative Engine optimisation (GEO) is the future of search optimisation as AI-powered search engines become mainstream. Our generative engine optimisation company understands that traditional SEO approaches need to evolve for AI search environments.",
@@ -2000,6 +3003,60 @@
       "cta": "Let our expert Search Generative Experience company analyze your current SEO approach and develop strategies that optimize for Google's AI-powered search experience.",
       "formHeading": "Search Generative Experience SEO Analysis",
       "buttonText": "Analyze My SGE Readiness"
+    },
+    "features": {
+      "heading": "Why Choose Our Search Generative Experience SEO Services",
+      "subheading": "Comprehensive SGE SEO solutions designed to optimize for Google's AI-powered search:",
+      "features": [
+        {
+          "title": "SGE Content Optimization",
+          "description": "Optimize your content to be featured in Google's AI-generated search responses and SGE results.",
+          "icon": "📝"
+        },
+        {
+          "title": "Question-Based Content Strategy",
+          "description": "Create content that directly answers the questions users ask, optimizing for SGE's question-answering format.",
+          "icon": "❓"
+        },
+        {
+          "title": "SGE-Optimized Structured Data",
+          "description": "Implement structured data that helps Google's AI understand and feature your content in SGE responses.",
+          "icon": "📊"
+        },
+        {
+          "title": "Comprehensive Content Creation",
+          "description": "Develop thorough, authoritative content that provides complete answers suitable for AI-generated responses.",
+          "icon": "📚"
+        },
+        {
+          "title": "SGE Technical Optimization",
+          "description": "Optimize technical aspects of your site to ensure content is easily processable by Google's AI systems.",
+          "icon": "⚙️"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Optimize for generative SERPs.",
+      "problemStatement": "AI answers can siphon clicks unless your content is selected as a cited source.",
+      "valueProposition": "We engineer content to win inclusion in SGE responses with clear, comprehensive answers and schema."
+    },
+    "painPoints": {
+      "heading": "SGE realities",
+      "subheading": "What selection demands:",
+      "painPoints": [
+        {"problem": "Incomplete topical coverage.","solution": "We produce thorough, question‑driven hubs that cover the intent space."},
+        {"problem": "Ambiguous data structures.","solution": "We add schema and content patterns aligned to answer extraction."},
+        {"problem": "Thin authority.","solution": "We support content with references, evidence, and links."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Visibility in AI answers",
+      "subheading": "Protect and grow organic demand:",
+      "benefits": [
+        {"title": "Inclusion Odds","description": "Content built for answer selection and citation."},
+        {"title": "Resilient Traffic","description": "Maintain discoverability as SERPs evolve."},
+        {"title": "Authority Signals","description": "Evidence and structure that AIs prefer."}
+      ]
     },
     "content": {
       "heading": "Dominate Google's AI search with Search Generative Experience SEO.",
@@ -2093,6 +3150,60 @@
       "formHeading": "App Store Optimisation Services Analysis & Strategy",
       "buttonText": "Analyze My App"
     },
+    "features": {
+      "heading": "Why Choose Our App Store Optimization Services",
+      "subheading": "Comprehensive ASO solutions designed to maximize app visibility and downloads:",
+      "features": [
+        {
+          "title": "App Store Keyword Research",
+          "description": "Research high-value keywords for your app store listing to improve search visibility and discoverability.",
+          "icon": "🔍"
+        },
+        {
+          "title": "App Title Optimization",
+          "description": "Optimize your app title with strategic keywords and compelling copy that improves search rankings.",
+          "icon": "📱"
+        },
+        {
+          "title": "App Store Description Optimization",
+          "description": "Write compelling app descriptions that convert browsers into downloaders and improve ASO rankings.",
+          "icon": "📝"
+        },
+        {
+          "title": "App Visual Asset Optimization",
+          "description": "Optimize app screenshots, icons, and visual assets to improve conversion rates and user engagement.",
+          "icon": "🖼️"
+        },
+        {
+          "title": "App Store Review Management",
+          "description": "Manage user reviews and ratings to maintain positive app store presence and improve rankings.",
+          "icon": "⭐"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Make your app discoverable.",
+      "problemStatement": "Crowded stores and weak listings bury great apps below better‑optimized competitors.",
+      "valueProposition": "We tune keywords, creatives, and reviews so more users find—and download—your app."
+    },
+    "painPoints": {
+      "heading": "ASO obstacles",
+      "subheading": "Fix what blocks installs:",
+      "painPoints": [
+        {"problem": "Poor keyword targeting.","solution": "We research store‑specific queries and localize for markets."},
+        {"problem": "Low‑performing creatives.","solution": "We optimize icons, screenshots, and sequences for conversions."},
+        {"problem": "Weak review volume.","solution": "We implement ethical prompts and flows to grow ratings."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "More installs, lower CPI",
+      "subheading": "Visibility and conversion improvements:",
+      "benefits": [
+        {"title": "Ranking Lift","description": "Better keyword fit increases impressions."},
+        {"title": "Install Conversion","description": "Compelling creatives win more taps."},
+        {"title": "Market Reach","description": "Localized listings for global growth."}
+      ]
+    },
     "content": {
       "heading": "Dominate app stores with expert app store optimisation services.",
       "text1": "App Store Optimisation (ASO) is essential for getting your mobile app discovered in crowded app stores. Our app store optimisation company understands that ASO requires a different approach than traditional SEO, focusing on app store algorithms and user behavior.",
@@ -2184,6 +3295,60 @@
       "cta": "Let our expert guest posting company analyze your content and find the best guest posting opportunities to build your authority and improve your SEO performance.",
       "formHeading": "Guest Posting Services Strategy & Outreach",
       "buttonText": "Get My Guest Posting Plan"
+    },
+    "features": {
+      "heading": "Why Choose Our Guest Posting Services",
+      "subheading": "Comprehensive guest posting solutions designed to build authority and earn quality backlinks:",
+      "features": [
+        {
+          "title": "Guest Posting Opportunity Research",
+          "description": "Identify high-authority, relevant websites that accept guest posts in your industry.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Guest Posting Outreach & Pitching",
+          "description": "Develop compelling pitches and build relationships with website editors and owners.",
+          "icon": "📧"
+        },
+        {
+          "title": "Guest Post Content Development",
+          "description": "Create high-quality, valuable content that editors want to publish and audiences want to read.",
+          "icon": "✍️"
+        },
+        {
+          "title": "Guest Post SEO Optimization",
+          "description": "Optimize guest posts for search engines while providing value to the host website's audience.",
+          "icon": "📝"
+        },
+        {
+          "title": "Long-term Editorial Relationships",
+          "description": "Build lasting relationships with editors and website owners for ongoing guest posting opportunities.",
+          "icon": "🤝"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Earn reach through contribution.",
+      "problemStatement": "Cold pitches and low‑quality articles get rejected—or placed on sites that don’t move the needle.",
+      "valueProposition": "We secure placements with relevant editors using valuable content that audiences actually read."
+    },
+    "painPoints": {
+      "heading": "Guest posting pitfalls",
+      "subheading": "We do the hard parts right:",
+      "painPoints": [
+        {"problem": "Weak topic fit.","solution": "We align ideas to each publication’s readers and gaps."},
+        {"problem": "Template outreach.","solution": "We craft personalized pitches and maintain relationships."},
+        {"problem": "Thin articles.","solution": "We deliver expert, original content that editors want."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Authority via contribution",
+      "subheading": "Better placements, better links:",
+      "benefits": [
+        {"title": "Quality Publications","description": "Relevant sites with real audiences."},
+        {"title": "Brand Credibility","description": "Demonstrate expertise with bylines that matter."},
+        {"title": "Search Impact","description": "Links that improve rankings and referral traffic."}
+      ]
     },
     "content": {
       "heading": "Build authority and backlinks with the best guest posting services.",
@@ -2277,6 +3442,60 @@
       "formHeading": "Local Citation Building Services Analysis & Strategy",
       "buttonText": "Analyze My Citations"
     },
+    "features": {
+      "heading": "Why Choose Our Local Citation Building Services",
+      "subheading": "Comprehensive local citation solutions designed to improve local search rankings:",
+      "features": [
+        {
+          "title": "Local Citation Audit & Analysis",
+          "description": "Audit your existing citations to identify inconsistencies and opportunities for improvement.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Name, Address, Phone Optimization",
+          "description": "Ensure consistent and accurate business information across all citation sources.",
+          "icon": "📋"
+        },
+        {
+          "title": "Local Directory Submissions",
+          "description": "Submit your business to relevant local directories and industry-specific listings.",
+          "icon": "📁"
+        },
+        {
+          "title": "Strategic Citation Building",
+          "description": "Build new citations on high-authority, relevant directories and business listings.",
+          "icon": "🔗"
+        },
+        {
+          "title": "Citation Monitoring & Maintenance",
+          "description": "Continuously monitor your citations to ensure accuracy and identify new opportunities.",
+          "icon": "👁️"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Consistency wins local.",
+      "problemStatement": "Mismatched NAP details erode trust and rankings across local ecosystems.",
+      "valueProposition": "We audit and standardize citations everywhere your business appears—then keep them clean."
+    },
+    "painPoints": {
+      "heading": "Citation headaches",
+      "subheading": "We handle the grunt work:",
+      "painPoints": [
+        {"problem": "Conflicting listings.","solution": "We reconcile and correct records across major directories."},
+        {"problem": "Missing profiles.","solution": "We build presence on relevant, authoritative sites."},
+        {"problem": "Ongoing drift.","solution": "We monitor and maintain accuracy at scale."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Trust and findability",
+      "subheading": "A clean footprint that ranks:",
+      "benefits": [
+        {"title": "Higher Local Rankings","description": "Consistent signals Google can rely on."},
+        {"title": "More Calls","description": "Accurate info everywhere customers search."},
+        {"title": "Fewer Support Issues","description": "No more wrong numbers or hours online."}
+      ]
+    },
     "content": {
       "heading": "Dominate local search with expert local citation building services.",
       "text1": "Local citation building is essential for local SEO success, but it requires more than just listing your business in directories. Our local SEO citation building services understand that consistency, accuracy, and strategic placement are key to improving local search rankings.",
@@ -2369,6 +3588,60 @@
       "formHeading": "Penalty Recovery Services Analysis & Strategy",
       "buttonText": "Analyze My Penalty"
     },
+    "features": {
+      "heading": "Why Choose Our Penalty Recovery Services",
+      "subheading": "Comprehensive penalty recovery solutions designed to restore your search rankings:",
+      "features": [
+        {
+          "title": "Penalty Identification & Analysis",
+          "description": "Identify the type and cause of Google penalties affecting your website's search rankings.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Strategic Penalty Remediation",
+          "description": "Implement corrective actions to address penalty issues and improve your site's compliance.",
+          "icon": "🔧"
+        },
+        {
+          "title": "Reconsideration Request Management",
+          "description": "Prepare and submit compelling reconsideration requests to Google for manual penalty removal.",
+          "icon": "📝"
+        },
+        {
+          "title": "Penalty Recovery Monitoring",
+          "description": "Monitor your recovery progress and ensure long-term compliance with Google guidelines.",
+          "icon": "📊"
+        },
+        {
+          "title": "Penalty Prevention Strategies",
+          "description": "Develop strategies and best practices to prevent future Google penalties and maintain rankings.",
+          "icon": "🛡️"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Recover—then harden.",
+      "problemStatement": "Manual or algorithmic penalties crush traffic until causes are fixed and trust is rebuilt.",
+      "valueProposition": "We identify root causes, remediate safely, and implement compliance guardrails for durable recovery."
+    },
+    "painPoints": {
+      "heading": "Penalty causes",
+      "subheading": "We tackle the tough ones:",
+      "painPoints": [
+        {"problem": "Toxic link profile.","solution": "We audit anchors and sources, remove/deny liabilities, and rebuild authority."},
+        {"problem": "Thin/duplicative content.","solution": "We consolidate, improve, or remove harmful patterns and set rules."},
+        {"problem": "Spammy tactics.","solution": "We replace risky methods with sustainable SEO practices."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Restore rankings safely",
+      "subheading": "Path back to stability and growth:",
+      "benefits": [
+        {"title": "Risk Reduction","description": "Lower chance of future actions with better hygiene."},
+        {"title": "Ranking Return","description": "Recover positions and rebuild momentum."},
+        {"title": "Compliance by Design","description": "Documentation and workflows that keep you clean."}
+      ]
+    },
     "content": {
       "heading": "Bounce back from penalties with expert penalty recovery services.",
       "text1": "Google penalties can severely impact your search rankings and organic traffic, but they're not permanent. Our penalty recovery services company understands the complex process of identifying penalty causes and implementing effective recovery strategies.",
@@ -2460,6 +3733,60 @@
       "cta": "Let our expert multilingual SEO agency analyze your international opportunities and develop strategies that help you reach customers in new markets and languages.",
       "formHeading": "Multilingual SEO Services Strategy & Analysis",
       "buttonText": "Analyze My Global Potential"
+    },
+    "features": {
+      "heading": "Why Choose Our Multilingual SEO Services",
+      "subheading": "Comprehensive multilingual SEO solutions designed to reach global audiences:",
+      "features": [
+        {
+          "title": "Multilingual Market Research",
+          "description": "Research target languages, markets, and search behaviors to create effective multilingual SEO strategies.",
+          "icon": "🌍"
+        },
+        {
+          "title": "Hreflang Implementation",
+          "description": "Properly implement hreflang tags to help search engines understand your multilingual content structure.",
+          "icon": "🔗"
+        },
+        {
+          "title": "Multilingual Content Localization",
+          "description": "Localize your content for different languages and cultures, not just translation but cultural adaptation.",
+          "icon": "🌐"
+        },
+        {
+          "title": "Language-Specific Keyword Research",
+          "description": "Research keywords in different languages to optimize for local search behaviors and preferences.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Multilingual Technical SEO",
+          "description": "Implement technical SEO best practices for multilingual websites including URL structure and site architecture.",
+          "icon": "⚙️"
+        }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Speak the market’s language.",
+      "problemStatement": "Direct translations miss intent and cultural nuance—so pages underperform internationally.",
+      "valueProposition": "We localize content and structure for each language and region to earn relevance and rankings."
+    },
+    "painPoints": {
+      "heading": "Multilingual pitfalls",
+      "subheading": "Where global sites go wrong:",
+      "painPoints": [
+        {"problem": "Wrong URL and hreflang setup.","solution": "We implement scalable structures and correct language/region targeting."},
+        {"problem": "Literal translation only.","solution": "We adapt messaging, examples, and CTAs to culture and queries."},
+        {"problem": "Fragmented interlinking.","solution": "We connect language versions and hubs to share equity."}
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Local relevance worldwide",
+      "subheading": "Each locale feels native—and ranks:",
+      "benefits": [
+        {"title": "Correct Targeting","description": "Search engines send the right users to the right pages."},
+        {"title": "Higher Engagement","description": "Localized content that resonates and converts."},
+        {"title": "Scalable Ops","description": "Governance that keeps quality high as you add languages."}
+      ]
     },
     "content": {
       "heading": "Dominate global markets with expert multilingual SEO services.",

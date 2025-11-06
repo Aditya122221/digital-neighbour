@@ -16,34 +16,34 @@ interface FeaturesProps {
 	}
 }
 
-const defaultIcons = ["⚡", "🛡️", "🚀", "📊", "☁️"]
+const defaultIcons = ["🤖", "⚡", "🧠", "📊", "🔄"]
 
 export default function Features({ data }: FeaturesProps) {
 	const fallbackFeatures: Feature[] = [
 		{
-			title: "Blazing-Fast Performance",
+			title: "Intelligent Automation",
 			description:
-				"Experience lightning-quick load times and exceptional speed with our optimized hosting infrastructure and CDN integration, ensuring your users never wait.",
+				"Streamline your business processes with AI-powered automation that learns and adapts to your workflow, reducing manual effort and increasing efficiency.",
 		},
 		{
-			title: "Enterprise-Grade Security",
+			title: "Advanced Machine Learning",
 			description:
-				"Protect your digital assets with multi-layered security including firewalls, malware scanning, and real-time threat detection that keeps hackers at bay.",
+				"Leverage cutting-edge machine learning models to extract insights, predict trends, and make data-driven decisions that drive business growth.",
 		},
 		{
-			title: "Instant Scalability",
+			title: "Seamless Integration",
 			description:
-				"Scale your resources seamlessly as your business grows. Handle traffic spikes effortlessly without any downtime or performance degradation.",
+				"Easily integrate AI solutions into your existing systems with robust APIs and comprehensive integration support across all major platforms.",
 		},
 		{
-			title: "24/7 Expert Monitoring",
+			title: "Scalable Solutions",
 			description:
-				"Rest easy knowing our team monitors your infrastructure around the clock, proactively addressing issues before they impact your business.",
+				"Scale your AI infrastructure seamlessly as your business grows, handling increased workloads without compromising performance or reliability.",
 		},
 		{
-			title: "Seamless Backups & Recovery",
+			title: "Custom AI Development",
 			description:
-				"Automated daily backups with one-click restore ensure your data is always safe and recoverable, giving you peace of mind.",
+				"Build tailored AI models and automation workflows designed specifically for your industry and business requirements with expert guidance.",
 		},
 	]
 
@@ -202,4 +202,3 @@ export default function Features({ data }: FeaturesProps) {
 		</section>
 	)
 }
-

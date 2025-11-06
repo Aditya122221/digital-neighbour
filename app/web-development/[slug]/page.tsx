@@ -15,6 +15,7 @@ import Industries from "@/components/web-development/industries"
 import OtherServices from "@/components/commonSections/otherservices"
 import Faq from "@/components/commonSections/faq"
 import CaseStudy from "@/components/homepage/casestudy"
+import Features from "@/components/commonSections/features"
 
 type WebDevJson = Record<string, any> & {
 	otherServices?: { webdevelopmentServices?: string[] }
@@ -117,10 +118,14 @@ export default function WebDevSlugPage({
 						?.process
 				}
 			/>
-			<Content data={currentData?.content} imagePathPrefix="/seo/content" />
+			<Content
+				data={currentData?.content}
+				imagePathPrefix="/seo/content"
+			/>
 			<Industries />
 			<CaseStudy />
 			<OtherServices />
+			<Features data={currentData?.features} />
 			<Faq data={currentData?.faq} />
 			<Cta data={currentData?.services} />
 			<Footer />
