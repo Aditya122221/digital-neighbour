@@ -96,19 +96,18 @@ export default function IndustryPage() {
 			<PainPoints data={painData} />
 			<IndustryBrowserSection />
 			<Content data={currentData?.content} imagePathPrefix="/seo/content" />
-			<CreativeShowcase speedMsPerLoop={3000} />
-			<Apart />
-			<CaseStudy />
-			<OtherServices />
+		<CreativeShowcase speedMsPerLoop={ 3000 } />
+			< CaseStudy />
 			<Process2
 				data={"industries"}
 				processData={compatibleProcess}
 			/>
 			<KeyBenefits data={benefitsData} />
-			<Features data={currentData?.features} />
+		< Features data = { currentData?.features } />
 			<Faq
 				data={(industriesData as any).industries?.faq}
 			/>
+			<OtherServices />
 			<Cta data={currentData?.services} />
 			<Footer />
 		</main>

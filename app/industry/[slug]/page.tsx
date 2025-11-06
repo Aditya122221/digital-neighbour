@@ -117,29 +117,30 @@ export default async function IndustryServicePage({
 
 	return (
 		<main>
-			<div className="relative">
-				<Navbar />
-				<IndustriesHero data={currentData?.hero} />
-			</div>
-			<Form data={currentData?.form} />
-			<BrandsMarquee />
-			<IntroParagraph data={introData} />
-			<PainPoints data={painData} />
-			<IndustryBrowserSection />
-			<Content data={currentData?.content} imagePathPrefix="/seo/content" />
-			<CreativeShowcase speedMsPerLoop={3000} />
-			<Apart />
-			<CaseStudy />
-			<OtherServices />
-			<Process2
-				data={currentData?.services || serviceName}
-				processData={compatibleProcess}
-			/>
-			<KeyBenefits data={benefitsData} />
-			<Features data={currentData?.features} />
-			<Faq data={currentData?.faq} />
-			<Cta data={currentData?.services} />
-			<Footer />
+		<div className="relative">
+		<Navbar />
+		<IndustriesHero data={currentData?.hero} />
+	</div>
+	<Form data={currentData?.form} />
+	<BrandsMarquee />
+	<IntroParagraph data={introData} />
+	<PainPoints data={painData} />
+	<IndustryBrowserSection />
+	<Content data={currentData?.content} imagePathPrefix="/seo/content" />
+<CreativeShowcase speedMsPerLoop={ 3000 } />
+	< CaseStudy />
+	<Process2
+		data={"industries"}
+		processData={compatibleProcess}
+	/>
+	<KeyBenefits data={benefitsData} />
+< Features data = { currentData?.features } />
+	<Faq
+		data={(industriesData as any).industries?.faq}
+	/>
+	<OtherServices />
+	<Cta data={currentData?.services} />
+	<Footer />
 		</main>
 	)
 }

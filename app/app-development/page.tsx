@@ -16,6 +16,7 @@ import CaseStudy from "@/components/homepage/casestudy"
 import IntroParagraph from "@/components/commonSections/introparagraph"
 import PainPoints from "@/components/commonSections/painpoints"
 import KeyBenefits from "@/components/commonSections/keybenefits"
+import Features from "@/components/commonSections/features"
 
 export default function AppDevelopmentPage() {
 	const currentData = appDevData["app-development"] as any
@@ -42,22 +43,25 @@ export default function AppDevelopmentPage() {
 				serviceCards={currentData?.serviceCards}
 				basePath="/app-development"
 			/>
-			<Content data={currentData?.content} imagePathPrefix="/seo/content" />
+			<Content
+				data={currentData?.content}
+				imagePathPrefix="/seo/content"
+			/>
 			{currentData?.industries && (
 				<Industries data={currentData?.industries} />
 			)}
 			<CaseStudy />
 			<Certificates data={currentData?.certificates} />
-			<OtherServices />
 			<Process2
 				data={currentData?.services}
 				processData={currentData?.process}
 			/>
 			<KeyBenefits data={currentData?.keyBenefits} />
+			<Features data={currentData?.features} />
 			<Faq data={currentData?.faq} />
+			<OtherServices />
 			<Cta data={currentData?.services} />
 			<Footer />
 		</main>
 	)
 }
-

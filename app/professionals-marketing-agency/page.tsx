@@ -109,7 +109,6 @@ export default function ProfessionalsMarketingPage() {
 			<Content data={currentData?.content} imagePathPrefix="/seo/content" />
 			<Apart />
 			<CaseStudy />
-			<OtherServices />
 			<Process2
 				data={"Professional Marketing"}
 				processData={compatibleProcess}
@@ -122,6 +121,7 @@ export default function ProfessionalsMarketingPage() {
 						?.faq
 				}
 			/>
+			<OtherServices />
 			<Cta data={currentData?.services} />
 			<Footer />
 		</main>

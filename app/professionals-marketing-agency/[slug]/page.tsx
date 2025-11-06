@@ -138,7 +138,6 @@ export default async function ProfessionalsMarketingServicePage({
 			<Content data={currentData?.content} imagePathPrefix="/seo/content" />
 			<Apart />
 			<CaseStudy />
-			<OtherServices />
 			<Process2
 				data={currentData?.services}
 				processData={compatibleProcess}
@@ -146,6 +145,7 @@ export default async function ProfessionalsMarketingServicePage({
 			<KeyBenefits data={benefitsData} />
 			<Features data={currentData?.features} />
 			<Faq data={currentData?.faq} />
+			<OtherServices />
 			<Cta data={currentData?.services} />
 			<Footer />
 		</main>

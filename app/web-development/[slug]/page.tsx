@@ -2,6 +2,10 @@ import React from "react"
 import { notFound } from "next/navigation"
 import webDevData from "@/data/web-development.json"
 import WebDevHero from "@/components/web-development/hero"
+import IntroParagraph from "@/components/commonSections/introparagraph"
+import PainPoints from "@/components/commonSections/painpoints"
+import KeyBenefits from "@/components/commonSections/keybenefits"
+import Features from "@/components/commonSections/features"
 import Functionalities from "@/components/web-development/functionalities"
 import Content from "@/components/commonSections/content"
 import Services from "@/components/commonSections/services"
@@ -15,7 +19,6 @@ import Industries from "@/components/web-development/industries"
 import OtherServices from "@/components/commonSections/otherservices"
 import Faq from "@/components/commonSections/faq"
 import CaseStudy from "@/components/homepage/casestudy"
-import Features from "@/components/commonSections/features"
 
 type WebDevJson = Record<string, any> & {
 	otherServices?: { webdevelopmentServices?: string[] }
@@ -67,6 +70,10 @@ function resolveDataForSlug(slug: string) {
 		content: base?.content || {},
 		serviceCards: base?.serviceCards || [],
 		process: base?.process || {},
+		introParagraph: base?.introParagraph || {},
+		painPoints: base?.painPoints || {},
+		keyBenefits: base?.keyBenefits || {},
+		features: base?.features || {},
 		faq: {
 			...(base?.faq || {}),
 			serviceName: match,
@@ -94,41 +101,80 @@ export default function WebDevSlugPage({
 		subheading: "We design, build, and scale fast, secure, and conversion-focused websites and web apps.",
 	}
 
+	const introData = currentData?.introParagraph
+		? {
+				heading: currentData.introParagraph.heading,
+				problemStatement:
+					currentData.introParagraph
+						?.paragraphs?.[0],
+				valueProposition:
+					currentData.introParagraph
+						?.paragraphs?.[1],
+		  }
+		: undefined
+	const painData = currentData?.painPoints
+		? {
+				heading: currentData.painPoints.heading,
+				subheading: currentData.painPoints.subheading,
+				painPoints: (
+					currentData.painPoints.items || []
+				).map((p: any) => ({
+					problem: p.title,
+					solution: p.description,
+				})),
+		  }
+		: undefined
+	const benefitsData = currentData?.keyBenefits
+		? {
+				heading: currentData.keyBenefits.heading,
+				subheading: currentData.keyBenefits.subheading,
+				benefits: (
+					currentData.keyBenefits.items || []
+				).map((b: any) => ({
+					title: b.title,
+					description: b.description,
+					icon: b.icon,
+					image: b.image,
+				})),
+		  }
+		: undefined
+
 	return (
 		<main>
-			<div className="relative">
-				<Navbar />
-				<WebDevHero
-					data={currentData?.hero || heroFallback}
-				/>
-			</div>
-			<Form data={currentData?.form} />
-			<BrandsMarquee />
-			<Functionalities />
-			<Services
-				data={currentData?.services}
-				serviceCards={currentData?.serviceCards}
-				basePath="/web-development"
-			/>
-			<Process2
-				data={currentData?.services}
-				processData={
-					currentData?.process ||
-					(data as any)["web-development"]
-						?.process
+		<div className="relative">
+		<Navbar />
+		<WebDevHero
+			data={
+				currentData?.hero || {
+					heading: "High-Performance Web Development",
+					subheading: "We design, build, and scale fast, secure, and conversion-focused websites and web apps.",
 				}
+			}
+		/>
+	</div>
+	<Form data={currentData?.form} />
+	<BrandsMarquee />
+<IntroParagraph data = { introData } />
+<PainPoints data={painData} />
+	<Functionalities />
+	<Services
+		data={currentData?.services}
+		serviceCards={currentData?.serviceCards}
+		basePath="/web-development"
 			/>
-			<Content
-				data={currentData?.content}
-				imagePathPrefix="/seo/content"
+<Content data={ currentData?.content } imagePathPrefix = "/seo/content" />
+<Industries />
+<CaseStudy />
+	<Process2
+		data={currentData?.services}
+		processData={currentData?.process}
 			/>
-			<Industries />
-			<CaseStudy />
-			<OtherServices />
-			<Features data={currentData?.features} />
-			<Faq data={currentData?.faq} />
-			<Cta data={currentData?.services} />
-			<Footer />
+			<KeyBenefits data={benefitsData} />
+< Features data = { currentData?.features } />
+<Faq data={currentData?.faq} />
+	<OtherServices />
+	<Cta data={currentData?.services} />
+	<Footer />
 		</main>
 	)
 }

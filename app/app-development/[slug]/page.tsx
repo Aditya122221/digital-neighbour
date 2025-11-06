@@ -68,30 +68,23 @@ export default function AppDevSlugPage({
 				serviceCards={currentData?.serviceCards}
 				basePath="/app-development"
 			/>
-			<Content data={currentData?.content} imagePathPrefix="/seo/content" />
-			{(currentData?.industries ||
-				appDevData["app-development"]?.industries) && (
-				<Industries
-					data={
-						currentData?.industries ||
-						appDevData["app-development"]
-							?.industries
-					}
-				/>
+			<Content
+				data={currentData?.content}
+				imagePathPrefix="/seo/content"
+			/>
+			{currentData?.industries && (
+				<Industries data={currentData?.industries} />
 			)}
 			<CaseStudy />
 			<Certificates data={currentData?.certificates} />
-			<OtherServices />
 			<Process2
 				data={currentData?.services}
-				processData={
-					currentData?.process ||
-					appDevData["app-development"]?.process
-				}
+				processData={currentData?.process}
 			/>
 			<KeyBenefits data={currentData?.keyBenefits} />
 			<Features data={currentData?.features} />
 			<Faq data={currentData?.faq} />
+			<OtherServices />
 			<Cta data={currentData?.services} />
 			<Footer />
 		</main>

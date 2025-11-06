@@ -68,7 +68,6 @@ export default function DataAnalyticsSlugPage({
       <Content data={currentData?.content} imagePathPrefix="/seo/content" />
       <Apart />
       <CaseStudy />
-      <OtherServices />
       <Process2
         data={currentData?.services}
         processData={
@@ -77,7 +76,8 @@ export default function DataAnalyticsSlugPage({
       />
       <KeyBenefits data={currentData?.keyBenefits} />
       <Features data={currentData?.features} />
-      <Faq data={currentData?.faq} />
+  < Faq data = { currentData?.faq } />
+  <OtherServices />
       <Cta data={currentData?.services} />
       <Footer />
     </main>

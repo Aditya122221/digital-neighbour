@@ -52,14 +52,14 @@ export default function AiAutomationPage() {
 			<Apart />
 			<Industries data={currentData?.industries} />
 			<CaseStudy />
-			<OtherServices />
 			<Process2
 				data={currentData?.services}
 				processData={currentData?.process}
 			/>
 			<KeyBenefits data={currentData?.keyBenefits} />
 			<Features data={currentData?.features} />
-			<Faq data={currentData?.faq} />
+	<Faq data={ currentData?.faq } />
+	<OtherServices />
 			<Cta data={currentData?.services} />
 			<Footer />
 		</main>
