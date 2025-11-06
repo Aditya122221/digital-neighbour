@@ -43,6 +43,21 @@ const Navbar: React.FC = () => {
 	]
 
 	// Icon mapping for services
+	// Mapping from column titles to their default page routes
+	const columnTitleToRoute: { [key: string]: string } = {
+		"Search Engine Optimisation": "/seo",
+		"Paid Advertising": "/paid-advertisement",
+		"Social Media Management": "/social-media-marketing",
+		"Content Marketing": "/content-marketing",
+		"Web Development": "/web-development",
+		"App Development": "/app-development",
+		"Hosting, IT & Security": "/hosting-it-security",
+		"AI & Automation": "/ai-automation",
+		"Data & Analytics": "/data-analytics",
+		Industries: "/industry",
+		"Professionals Marketing": "/professionals-marketing-agency",
+	}
+
 	const iconMapping: { [key: string]: string } = {
 		"Search Engine Optimisation": "/navbar/black/seo.png",
 		"Local SEO": "/navbar/black/local-seo.png",
@@ -836,11 +851,22 @@ const Navbar: React.FC = () => {
 													}
 													className="space-y-2 relative"
 												>
-													<h3 className="text-base font-semibold text-gray-900 mb-2">
-														{
-															column.title
-														}
-													</h3>
+													{columnTitleToRoute[column.title] ? (
+														<Link
+															href={columnTitleToRoute[column.title]}
+															className="text-base font-semibold text-gray-900 mb-2 block hover:text-yellow-700 transition-colors duration-200"
+														>
+															{
+																column.title
+															}
+														</Link>
+													) : (
+														<h3 className="text-base font-semibold text-gray-900 mb-2">
+															{
+																column.title
+															}
+														</h3>
+													)}
 													<div className="space-y-1 max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 pr-1">
 														{column.services.map(
 															(
@@ -1349,38 +1375,56 @@ const Navbar: React.FC = () => {
 																							column.title
 																						}
 																					>
-																						<button
-																							onClick={() =>
-																								handleMobileColumnToggle(
-																									column.title
-																								)
-																							}
-																							className="w-full flex items-center justify-between px-2 py-2 text-gray-300 hover:text-white transition-colors duration-200 rounded-md font-medium text-xs"
-																						>
-																							<span>
-																								{
-																									column.title
+																						<div className="w-full flex items-center justify-between px-2 py-2 text-gray-300 hover:text-white transition-colors duration-200 rounded-md font-medium text-xs">
+																							{columnTitleToRoute[column.title] ? (
+																								<Link
+																									href={columnTitleToRoute[column.title]}
+																									className="flex-1 hover:text-yellow transition-colors duration-200"
+																									onClick={() =>
+																										setIsMenuOpen(
+																											false
+																										)
+																									}
+																								>
+																									{
+																										column.title
+																									}
+																								</Link>
+																							) : (
+																								<span>
+																									{
+																										column.title
+																									}
+																								</span>
+																							)}
+																							<button
+																								onClick={() =>
+																									handleMobileColumnToggle(
+																										column.title
+																									)
 																								}
-																							</span>
-																							<svg
-																								className={cn(
-																									"w-3 h-3 transition-transform duration-200",
-																									expandedMobileColumn ===
-																										column.title &&
-																										"rotate-180"
-																								)}
-																								fill="none"
-																								stroke="currentColor"
-																								viewBox="0 0 24 24"
+																								className="ml-2 p-1"
 																							>
-																								<path
-																									strokeLinecap="round"
-																									strokeLinejoin="round"
-																									strokeWidth="2"
-																									d="M19 9l-7 7-7-7"
-																								/>
-																							</svg>
-																						</button>
+																								<svg
+																									className={cn(
+																										"w-3 h-3 transition-transform duration-200",
+																										expandedMobileColumn ===
+																											column.title &&
+																											"rotate-180"
+																									)}
+																									fill="none"
+																									stroke="currentColor"
+																									viewBox="0 0 24 24"
+																								>
+																									<path
+																										strokeLinecap="round"
+																										strokeLinejoin="round"
+																										strokeWidth="2"
+																										d="M19 9l-7 7-7-7"
+																									/>
+																								</svg>
+																							</button>
+																						</div>
 																						{expandedMobileColumn ===
 																							column.title && (
 																							<div className="ml-4 space-y-1">

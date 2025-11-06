@@ -12,6 +12,67 @@
       "formHeading": "Boost Your Website's Performance with a Comprehensive Site Audit",
       "buttonText": "Get My Audit"
     },
+    "introParagraph": {
+      "heading": "The SEO Challenge: Are You Missing Out on Organic Traffic?",
+      "problemStatement": "Your competitors are ranking on page one of Google while you're stuck on page 10 or worse. Every day you delay optimizing your website, potential customers choose your competitors who have invested in SEO. You're losing valuable organic traffic, leads, and revenue to businesses that understand the power of search engine optimization.",
+      "valueProposition": "We transform your website into a search engine magnet—delivering sustainable organic growth that drives qualified traffic, generates leads, and scales your revenue without the ongoing costs of paid advertising."
+    },
+    "painPoints": {
+      "heading": "We Understand Your SEO Challenges",
+      "subheading": "From poor rankings to wasted ad spend, we've seen it all. Here's how we solve the most common SEO pain points:",
+      "painPoints": [
+        {
+          "problem": "Your website isn't ranking for keywords your customers are searching for, leaving you invisible to potential customers who are actively looking for your services.",
+          "solution": "Our comprehensive keyword research identifies high-value, achievable keywords your target audience is searching for. We optimize your content and technical SEO to rank for these terms, ensuring you're found when customers are ready to buy."
+        },
+        {
+          "problem": "You're spending thousands on paid ads while your competitors get free organic traffic from Google, draining your marketing budget month after month.",
+          "solution": "SEO delivers sustainable organic traffic that compounds over time. While paid ads stop working when you stop paying, SEO continues driving free qualified traffic long after implementation, reducing your customer acquisition costs significantly."
+        },
+        {
+          "problem": "Your website has technical issues preventing Google from properly indexing and ranking your pages, wasting all your content efforts.",
+          "solution": "Our technical SEO audits identify and fix critical issues like site speed, mobile responsiveness, crawl errors, and structured data. We ensure Google can easily find, understand, and rank your content for maximum visibility."
+        },
+        {
+          "problem": "You don't have quality backlinks or domain authority, so even great content isn't ranking against established competitors.",
+          "solution": "Our strategic link building campaigns earn high-quality backlinks from authoritative websites in your industry. We build your domain authority through white-hat techniques that improve rankings and establish your brand as an industry leader."
+        },
+        {
+          "problem": "You're not sure if your SEO is working because you lack clear reporting and don't understand which metrics actually matter for your business.",
+          "solution": "We provide transparent monthly reports that track keyword rankings, organic traffic growth, conversion rates, and ROI. You'll always know exactly how SEO is impacting your bottom line with metrics that matter to your business goals."
+        }
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Key Benefits of Our SEO Services",
+      "subheading": "Beyond rankings—these outcomes drive real business value and sustainable growth:",
+      "benefits": [
+        {
+          "title": "Sustainable Organic Growth",
+          "description": "Build long-term organic traffic that compounds over time. Unlike paid ads that stop when you stop paying, SEO continues driving qualified visitors to your website for months and years after implementation."
+        },
+        {
+          "title": "Higher Quality Leads",
+          "description": "Attract customers who are actively searching for your services. SEO targets high-intent keywords, delivering visitors who are ready to convert rather than just browsing, resulting in better lead quality and higher conversion rates."
+        },
+        {
+          "title": "Cost-Effective Marketing",
+          "description": "Reduce your customer acquisition costs significantly. Once you rank for target keywords, you get free organic traffic without ongoing ad spend, making SEO one of the most cost-effective marketing channels available."
+        },
+        {
+          "title": "Competitive Advantage",
+          "description": "Outrank competitors who haven't invested in SEO. Dominate search results for your target keywords, capture market share, and establish your brand as the go-to solution in your industry."
+        },
+        {
+          "title": "Scalable Results",
+          "description": "Scale your SEO success by targeting additional keywords, creating more content, and expanding into new markets. As your domain authority grows, ranking for new keywords becomes easier and faster."
+        },
+        {
+          "title": "Data-Driven Strategy",
+          "description": "Make informed decisions with comprehensive SEO analytics. Track keyword rankings, organic traffic, conversion rates, and ROI with detailed monthly reports that show exactly how SEO impacts your business."
+        }
+      ]
+    },
     "content": {
       "heading": "Helping you stay competitive.",
       "text1": "This requires a very different approach than what you'd find in global SEO campaigns. The key point to remember is this:",
