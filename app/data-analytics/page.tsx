@@ -1,20 +1,20 @@
 import dataAnalyticsData from "@/data/data-analytics.json";
 import DataAnalyticsHero from "@/components/data-analytics/hero";
-import SeoContent from "@/components/seo/content";
+import Content from "@/components/commonSections/content";
 import DataAnalyticsServices from "@/components/data-analytics/services";
-import SeoForm from "@/components/seo/form";
+import Form from "@/components/commonSections/form";
 import Navbar from "@/components/core/navbar";
 import Footer from "@/components/core/footer";
 import BrandsMarquee from "@/components/homepage/brandsmarquee";
 import Process2 from "@/components/homepage/process2";
-import SeoCta from "@/components/seo/cta";
-import OtherServices from "@/components/seo/otherservices";
-import SeoFaq from "@/components/seo/faq";
+import Cta from "@/components/commonSections/cta";
+import OtherServices from "@/components/commonSections/otherservices";
+import Faq from "@/components/commonSections/faq";
 import CaseStudy from "@/components/homepage/casestudy";
-import IntroParagraph from "@/components/data-analytics/introparagraph";
-import PainPoints from "@/components/data-analytics/painpoints";
+import IntroParagraph from "@/components/commonSections/introparagraph";
+import PainPoints from "@/components/commonSections/painpoints";
 import Industries from "@/components/data-analytics/industries";
-import KeyBenefits from "@/components/data-analytics/keybenefits";
+import KeyBenefits from "@/components/commonSections/keybenefits";
 import Features from "@/components/data-analytics/features";
 import Apart from "@/components/homepage/apart";
 
@@ -35,7 +35,7 @@ export default function DataAnalyticsPage() {
           }
         />
       </div>
-      <SeoForm data={currentData?.form} />
+      <Form data={currentData?.form} />
       <BrandsMarquee />
       <IntroParagraph data={currentData?.introParagraph} />
       <PainPoints data={currentData?.painPoints} />
@@ -45,7 +45,7 @@ export default function DataAnalyticsPage() {
         basePath="/data-analytics"
         premiumCloudServices={currentData?.premiumCloudServices}
       />
-      <SeoContent data={currentData?.content} />
+      <Content data={currentData?.content} imagePathPrefix="/seo/content" />
       <Apart />
       <CaseStudy />
       <OtherServices />
@@ -55,8 +55,8 @@ export default function DataAnalyticsPage() {
       />
       <KeyBenefits data={currentData?.keyBenefits} />
       <Features data={currentData?.features} />
-      <SeoFaq data={currentData?.faq} />
-      <SeoCta data={currentData?.services} />
+      <Faq data={currentData?.faq} />
+      <Cta data={currentData?.services} />
       <Footer />
     </main>
   );

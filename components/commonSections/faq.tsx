@@ -13,7 +13,7 @@ interface FaqItem {
 	a: string
 }
 
-interface SeoFaqProps {
+interface FaqProps {
 	data?: {
 		serviceName?: string
 		faqs?: FaqItem[]
@@ -51,7 +51,7 @@ const defaultFaqs: FaqItem[] = [
 	},
 ]
 
-export default function SeoFaq({ data }: SeoFaqProps) {
+export default function Faq({ data }: FaqProps) {
 	const faqs = data?.faqs || defaultFaqs
 	const serviceName = data?.serviceName || "SEO"
 	
@@ -154,3 +154,4 @@ export default function SeoFaq({ data }: SeoFaqProps) {
 		</section>
 	)
 }
+

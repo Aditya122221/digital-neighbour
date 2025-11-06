@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { CustomButton } from "@/components/core/button";
 
-interface SeoFormProps {
+interface FormProps {
   data?: {
     heading: string;
     content: string;
@@ -15,7 +15,7 @@ interface SeoFormProps {
   };
 }
 
-export default function SeoForm({ data }: SeoFormProps) {
+export default function Form({ data }: FormProps) {
   const [formData, setFormData] = useState({
     website: "",
     email: "",

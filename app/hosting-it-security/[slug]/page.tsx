@@ -1,20 +1,20 @@
 import { notFound } from "next/navigation"
 import hostingData from "@/data/hosting-it-security.json"
 import HostingHero from "@/components/hosting-it-security/hero"
-import SeoContent from "@/components/seo/content"
-import SeoServices from "@/components/seo/services"
-import SeoForm from "@/components/seo/form"
+import Content from "@/components/commonSections/content"
+import Services from "@/components/commonSections/services"
+import Form from "@/components/commonSections/form"
 import Navbar from "@/components/core/navbar"
 import Footer from "@/components/core/footer"
 import BrandsMarquee from "@/components/homepage/brandsmarquee"
 import Process2 from "@/components/homepage/process2"
-import SeoCta from "@/components/seo/cta"
-import OtherServices from "@/components/seo/otherservices"
-import SeoFaq from "@/components/seo/faq"
+import Cta from "@/components/commonSections/cta"
+import OtherServices from "@/components/commonSections/otherservices"
+import Faq from "@/components/commonSections/faq"
 import CaseStudy from "@/components/homepage/casestudy"
-import IntroParagraph from "@/components/hosting-it-security/introparagraph"
-import PainPoints from "@/components/hosting-it-security/painpoints"
-import KeyBenefits from "@/components/hosting-it-security/keybenefits"
+import IntroParagraph from "@/components/commonSections/introparagraph"
+import PainPoints from "@/components/commonSections/painpoints"
+import KeyBenefits from "@/components/commonSections/keybenefits"
 import Apart from "@/components/homepage/apart"
 import HostingServices from "@/components/hosting-it-security/services"
 import Features from "@/components/ai-automation/features"
@@ -68,7 +68,7 @@ export default function HostingItSecuritySlugPage({
 					}
 				/>
 			</div>
-			<SeoForm data={currentData?.form} />
+			<Form data={currentData?.form} />
 			<BrandsMarquee />
 			<IntroParagraph data={currentData?.introParagraph} />
 			<PainPoints data={currentData?.painPoints} />
@@ -80,7 +80,7 @@ export default function HostingItSecuritySlugPage({
 					currentData?.premiumCloudServices
 				}
 			/>
-			<SeoContent data={currentData?.content} />
+			<Content data={currentData?.content} imagePathPrefix="/seo/content" />
 			<Apart />
 			<CaseStudy />
 			<OtherServices />
@@ -94,8 +94,8 @@ export default function HostingItSecuritySlugPage({
 			/>
 			<KeyBenefits data={currentData?.keyBenefits} />
 			<Features data={currentData?.features} />
-			<SeoFaq data={currentData?.faq} />
-			<SeoCta data={currentData?.services} />
+			<Faq data={currentData?.faq} />
+			<Cta data={currentData?.services} />
 			<Footer />
 		</main>
 	)

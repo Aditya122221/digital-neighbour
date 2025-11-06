@@ -87,8 +87,7 @@ export default function OtherServices() {
 				.contentMarketingServices,
 			slugMapping: (contentMarketingData as any).otherServices
 				.slugMapping,
-			config: (contentMarketingData as any).otherServices
-				.config,
+			config: (contentMarketingData as any).otherServices.config,
 		}
 	} else if (pathname.startsWith("/web-development")) {
 		// Use web development data
@@ -268,3 +267,4 @@ export default function OtherServices() {
 		</section>
 	)
 }
+

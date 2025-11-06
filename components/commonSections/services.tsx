@@ -14,7 +14,7 @@ interface Service {
   link?: string;
 }
 
-interface SeoServicesProps {
+interface ServicesProps {
   data?: string;
   serviceCards?: Service[];
   basePath?: string;
@@ -72,7 +72,7 @@ const defaultServices: Service[] = [
   },
 ];
 
-export default function SeoServices({ data, serviceCards, basePath = "#" }: SeoServicesProps) {
+export default function Services({ data, serviceCards, basePath = "#" }: ServicesProps) {
   const services = serviceCards || defaultServices;
   const [activeTab, setActiveTab] = useState(services[0]?.id || "");
 

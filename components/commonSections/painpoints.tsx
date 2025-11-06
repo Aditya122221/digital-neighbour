@@ -179,3 +179,4 @@ export default function PainPoints({ data }: PainPointsProps) {
     </section>
   );
 }
+

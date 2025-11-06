@@ -3,11 +3,11 @@
 import { motion } from "framer-motion";
 import { CustomButton } from "@/components/core/button";
 
-interface SeoCtaProps {
+interface CtaProps {
   data?: string;
 }
 
-export default function SeoCta({ data }: SeoCtaProps) {
+export default function Cta({ data }: CtaProps) {
   return (
     <section className="px-6 py-20 bg-gradient-to-b from-pink/20 to-white">
       <motion.div
@@ -27,7 +27,7 @@ export default function SeoCta({ data }: SeoCtaProps) {
               Quality {data ? `${data} ` : ""}services that exceed expectations
             </h2>
             <p className="text-white/80 text-base md:text-lg max-w-3xl">
-              We’ll only move forward if we’re absolutely confident in our ability to deliver the results you need. Schedule a free consultation to see if we’re the right fit for your goals.
+              We'll only move forward if we're absolutely confident in our ability to deliver the results you need. Schedule a free consultation to see if we're the right fit for your goals.
             </p>
           </div>
 
@@ -49,3 +49,4 @@ export default function SeoCta({ data }: SeoCtaProps) {
     </section>
   );
 }
+

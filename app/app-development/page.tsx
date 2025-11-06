@@ -2,20 +2,20 @@ import appDevData from "@/data/app-development.json"
 import AppDevHero from "@/components/app-development/hero"
 import Certificates from "@/components/app-development/certificates"
 import Industries from "@/components/app-development/industries"
-import SeoContent from "@/components/seo/content"
-import SeoServices from "@/components/seo/services"
-import SeoForm from "@/components/seo/form"
+import Content from "@/components/commonSections/content"
+import Services from "@/components/commonSections/services"
+import Form from "@/components/commonSections/form"
 import Navbar from "@/components/core/navbar"
 import Footer from "@/components/core/footer"
 import BrandsMarquee from "@/components/homepage/brandsmarquee"
 import Process2 from "@/components/homepage/process2"
-import SeoCta from "@/components/seo/cta"
-import OtherServices from "@/components/seo/otherservices"
-import SeoFaq from "@/components/seo/faq"
+import Cta from "@/components/commonSections/cta"
+import OtherServices from "@/components/commonSections/otherservices"
+import Faq from "@/components/commonSections/faq"
 import CaseStudy from "@/components/homepage/casestudy"
-import IntroParagraph from "@/components/app-development/introparagraph"
-import PainPoints from "@/components/app-development/painpoints"
-import KeyBenefits from "@/components/app-development/keybenefits"
+import IntroParagraph from "@/components/commonSections/introparagraph"
+import PainPoints from "@/components/commonSections/painpoints"
+import KeyBenefits from "@/components/commonSections/keybenefits"
 
 export default function AppDevelopmentPage() {
 	const currentData = appDevData["app-development"] as any
@@ -33,16 +33,16 @@ export default function AppDevelopmentPage() {
 					}
 				/>
 			</div>
-			<SeoForm data={currentData?.form} />
+			<Form data={currentData?.form} />
 			<BrandsMarquee />
 			<IntroParagraph data={currentData?.introParagraph} />
 			<PainPoints data={currentData?.painPoints} />
-			<SeoServices
+			<Services
 				data={currentData?.services}
 				serviceCards={currentData?.serviceCards}
 				basePath="/app-development"
 			/>
-			<SeoContent data={currentData?.content} />
+			<Content data={currentData?.content} imagePathPrefix="/seo/content" />
 			{currentData?.industries && (
 				<Industries data={currentData?.industries} />
 			)}
@@ -54,8 +54,8 @@ export default function AppDevelopmentPage() {
 				processData={currentData?.process}
 			/>
 			<KeyBenefits data={currentData?.keyBenefits} />
-			<SeoFaq data={currentData?.faq} />
-			<SeoCta data={currentData?.services} />
+			<Faq data={currentData?.faq} />
+			<Cta data={currentData?.services} />
 			<Footer />
 		</main>
 	)

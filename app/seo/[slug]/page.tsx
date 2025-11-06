@@ -1,24 +1,24 @@
 import { notFound } from "next/navigation"
 import seoData from "@/data/seo.json"
 import SeoHero from "@/components/seo/hero"
-import SeoContent from "@/components/seo/content"
-import SeoServices from "@/components/seo/services"
-import SeoForm from "@/components/seo/form"
+import Content from "@/components/commonSections/content"
+import Services from "@/components/commonSections/services"
+import Form from "@/components/commonSections/form"
 import Navbar from "@/components/core/navbar"
 import Footer from "@/components/core/footer"
 import BrandsMarquee from "@/components/homepage/brandsmarquee"
 import Process2 from "@/components/homepage/process2"
-import SeoCta from "@/components/seo/cta"
+import Cta from "@/components/commonSections/cta"
 import Apart from "@/components/homepage/apart"
-import OtherServices from "@/components/seo/otherservices"
-import SeoFaq from "@/components/seo/faq"
+import OtherServices from "@/components/commonSections/otherservices"
+import Faq from "@/components/commonSections/faq"
 import CaseStudy from "@/components/homepage/casestudy"
 import Blogs from "@/components/homepage/blogs"
 import Testimonials from "@/components/homepage/testimonials"
 import BookACall from "@/components/homepage/bookacall"
-import IntroParagraph from "@/components/seo/introparagraph"
-import PainPoints from "@/components/seo/painpoints"
-import KeyBenefits from "@/components/seo/keybenefits"
+import IntroParagraph from "@/components/commonSections/introparagraph"
+import PainPoints from "@/components/commonSections/painpoints"
+import KeyBenefits from "@/components/commonSections/keybenefits"
 
 const allowedSlugs = [
 	"search-engine-optimisation",
@@ -70,11 +70,11 @@ export default function SeoSlugPage({ params }: { params: { slug: string } }) {
 					}
 				/>
 			</div>
-			<SeoForm data={currentSeoData?.form} />
+			<Form data={currentSeoData?.form} />
 			<BrandsMarquee />
 			<IntroParagraph data={currentSeoData?.introParagraph} />
 			<PainPoints data={currentSeoData?.painPoints} />
-			<SeoServices
+			<Services
 				data={currentSeoData?.services}
 				serviceCards={currentSeoData?.serviceCards}
 			/>
@@ -86,13 +86,16 @@ export default function SeoSlugPage({ params }: { params: { slug: string } }) {
 						?.process
 				}
 			/>
-			<SeoContent data={currentSeoData?.content} />
+			<Content
+				data={currentSeoData?.content}
+				imagePathPrefix="/seo/content"
+			/>
 			<KeyBenefits data={currentSeoData?.keyBenefits} />
-			<SeoCta data={currentSeoData?.services} />
+			<Cta data={currentSeoData?.services} />
 			<Apart />
 			<OtherServices />
 			<CaseStudy />
-			<SeoFaq data={currentSeoData?.faq} />
+			<Faq data={currentSeoData?.faq} />
 			<Blogs />
 			<Testimonials />
 			<BookACall />

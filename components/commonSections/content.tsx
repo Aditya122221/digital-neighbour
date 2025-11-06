@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 
-interface SeoContentProps {
+interface ContentProps {
 	data?: {
 		heading: string
 		text1: string
@@ -12,9 +12,10 @@ interface SeoContentProps {
 		image: string
 		alt: string
 	}
+	imagePathPrefix?: string
 }
 
-export default function SeoContent({ data }: SeoContentProps) {
+export default function Content({ data, imagePathPrefix = "/seo/content" }: ContentProps) {
 	return (
 		<section className="py-20 px-6 bg-gradient-to-b from-pink/20 to-white">
 			<div className="container max-w-7xl mx-auto">
@@ -34,14 +35,8 @@ export default function SeoContent({ data }: SeoContentProps) {
 						className="relative w-full h-[400px] md:h-[500px]"
 					>
 						<Image
-							src={`/seo/content/${
-								data?.image ||
-								"seo.png"
-							}`}
-							alt={
-								data?.alt ||
-								"SEO Marketing illustration"
-							}
+							src={`${imagePathPrefix}/${data?.image || "seo.png"}`}
+							alt={data?.alt || "Marketing illustration"}
 							fill
 							className="object-contain"
 						/>
@@ -63,8 +58,7 @@ export default function SeoContent({ data }: SeoContentProps) {
 						className="space-y-6"
 					>
 						<h2 className="text-4xl md:text-5xl font-semibold text-blackbrown leading-tight">
-							{data?.heading ||
-								"Helping you stay competitive."}
+							{data?.heading || "Helping you stay competitive."}
 						</h2>
 						<p className="text-lg text-gray-700 leading-relaxed">
 							{data?.text1 ||
@@ -84,3 +78,4 @@ export default function SeoContent({ data }: SeoContentProps) {
 		</section>
 	)
 }
+

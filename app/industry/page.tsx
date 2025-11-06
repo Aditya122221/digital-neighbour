@@ -1,19 +1,19 @@
 import industriesData from "@/data/industries.json"
 import IndustriesHero from "@/components/industries/hero"
-import SeoContent from "@/components/seo/content"
+import Content from "@/components/commonSections/content"
 import DataAnalyticsServices from "@/components/data-analytics/services"
-import SeoForm from "@/components/seo/form"
+import Form from "@/components/commonSections/form"
 import Navbar from "@/components/core/navbar"
 import Footer from "@/components/core/footer"
 import BrandsMarquee from "@/components/homepage/brandsmarquee"
 import Process2 from "@/components/homepage/process2"
-import SeoCta from "@/components/seo/cta"
-import OtherServices from "@/components/seo/otherservices"
-import SeoFaq from "@/components/seo/faq"
+import Cta from "@/components/commonSections/cta"
+import OtherServices from "@/components/commonSections/otherservices"
+import Faq from "@/components/commonSections/faq"
 import CaseStudy from "@/components/homepage/casestudy"
-import IntroParagraph from "@/components/data-analytics/introparagraph"
-import PainPoints from "@/components/data-analytics/painpoints"
-import KeyBenefits from "@/components/data-analytics/keybenefits"
+import IntroParagraph from "@/components/commonSections/introparagraph"
+import PainPoints from "@/components/commonSections/painpoints"
+import KeyBenefits from "@/components/commonSections/keybenefits"
 import Features from "@/components/ai-automation/features"
 import Apart from "@/components/homepage/apart"
 import IndustryBrowserSection from "@/components/industries/industry-browser"
@@ -90,13 +90,13 @@ export default function IndustryPage() {
 				<Navbar />
 				<IndustriesHero data={currentData?.hero} />
 			</div>
-			<SeoForm data={currentData?.form} />
+			<Form data={currentData?.form} />
 			<BrandsMarquee />
 			<IntroParagraph data={introData} />
 			<PainPoints data={painData} />
 			<IndustryBrowserSection />
-    <SeoContent data={ currentData?.content } />
-    <CreativeShowcase speedMsPerLoop={3000} />
+			<Content data={currentData?.content} imagePathPrefix="/seo/content" />
+			<CreativeShowcase speedMsPerLoop={3000} />
 			<Apart />
 			<CaseStudy />
 			<OtherServices />
@@ -106,10 +106,10 @@ export default function IndustryPage() {
 			/>
 			<KeyBenefits data={benefitsData} />
 			<Features data={currentData?.features} />
-			<SeoFaq
+			<Faq
 				data={(industriesData as any).industries?.faq}
 			/>
-			<SeoCta data={currentData?.services} />
+			<Cta data={currentData?.services} />
 			<Footer />
 		</main>
 	)

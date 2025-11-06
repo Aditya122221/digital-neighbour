@@ -13,7 +13,7 @@ import Navbar from "@/components/core/navbar"
 import Apart from "@/components/homepage/apart"
 import Process2 from "@/components/homepage/process2"
 // import RevealCursor from "@/components/homepage/revealcursor"
-import Form from "@/components/seo/form"
+import Form from "@/components/commonSections/form"
 import HeroSix from "@/components/homepage/herosix"
 //mport Hero5 from "@/components/homepage/hero4"
 

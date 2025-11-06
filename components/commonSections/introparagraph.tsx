@@ -106,3 +106,4 @@ export default function IntroParagraph({ data }: IntroParagraphProps) {
     </section>
   );
 }
+

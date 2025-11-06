@@ -1,17 +1,17 @@
 import { notFound } from "next/navigation";
 import contentMarketingData from "@/data/content-marketing.json";
 import ContentMarketingHero from "@/components/content-marketing/hero";
-import SeoContent from "@/components/seo/content";
-import SeoServices from "@/components/seo/services";
-import SeoForm from "@/components/seo/form";
+import Content from "@/components/commonSections/content";
+import Services from "@/components/commonSections/services";
+import Form from "@/components/commonSections/form";
 import Navbar from "@/components/core/navbar";
 import Footer from "@/components/core/footer";
 import BrandsMarquee from "@/components/homepage/brandsmarquee";
 import Process2 from "@/components/homepage/process2";
-import SeoCta from "@/components/seo/cta";
+import Cta from "@/components/commonSections/cta";
 import Apart from "@/components/homepage/apart";
-import OtherServices from "@/components/seo/otherservices";
-import SeoFaq from "@/components/seo/faq";
+import OtherServices from "@/components/commonSections/otherservices";
+import Faq from "@/components/commonSections/faq";
 import CaseStudy from "@/components/homepage/casestudy";
 
 const allowedSlugs = [
@@ -67,9 +67,9 @@ export default function ContentMarketingSlugPage({
           }
         />
       </div>
-      <SeoForm data={currentData?.form} />
+      <Form data={currentData?.form} />
       <BrandsMarquee />
-      <SeoServices
+      <Services
         data={currentData?.services}
         serviceCards={currentData?.serviceCards}
         basePath="/content-marketing"
@@ -81,12 +81,12 @@ export default function ContentMarketingSlugPage({
           contentMarketingData["content-marketing"]?.process
         }
       />
-      <SeoContent data={currentData?.content} />
+      <Content data={currentData?.content} imagePathPrefix="/seo/content" />
       <Apart />
       <CaseStudy />
       <OtherServices />
-      <SeoFaq data={currentData?.faq} />
-      <SeoCta data={currentData?.services} />
+      <Faq data={currentData?.faq} />
+      <Cta data={currentData?.services} />
       <Footer />
     </main>
   );
