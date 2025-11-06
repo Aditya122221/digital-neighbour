@@ -12,6 +12,13 @@
       "formHeading": "Get a free Social Media Audit & Strategy Outline",
       "buttonText": "Get My Social Audit"
     },
+    "introParagraph": {
+      "heading": "The Social Media Challenge",
+      "paragraphs": [
+        "Posting without a system leads to inconsistent reach, weak engagement, and unpredictable results across platforms.",
+        "We build platform‑native programs that compound output and outcomes—so social becomes a reliable growth engine."
+      ]
+    },
     "services": "Social Media Marketing",
     "serviceCards": [
       {
@@ -58,10 +65,10 @@
     "painpoints": {
       "heading": "Tired of social media efforts that don't deliver?",
       "items": [
-        { "image": "/socialMedia/icon-1.svg", "title": "Not seeing leads or sales from social even with regular posting?" },
-        { "image": "/socialMedia/icon-2.svg", "title": "Hard to keep up with trends and platform changes?" },
-        { "image": "/socialMedia/icon-3.svg", "title": "Unsure which metrics matter or how to prove ROI?" },
-        { "image": "/socialMedia/icon-4.svg", "title": "Limited creative capacity for consistent quality content?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Not seeing leads or sales from social even with regular posting?", "description": "We align content pillars, formats, and CTAs with clear conversion paths and track profile actions that ladder to revenue." },
+        { "image": "/socialMedia/icon-2.svg", "title": "Hard to keep up with trends and platform changes?", "description": "We maintain platform‑native playbooks and iterate weekly so you benefit from trends without losing brand fit." },
+        { "image": "/socialMedia/icon-3.svg", "title": "Unsure which metrics matter or how to prove ROI?", "description": "We define leading and lagging indicators—engagement quality, profile actions, and assisted conversions—inside clean dashboards." },
+        { "image": "/socialMedia/icon-4.svg", "title": "Limited creative capacity for consistent quality content?", "description": "We implement lightweight production systems and templates to scale output without sacrificing quality or brand voice." }
       ]
     },
     "content": {
@@ -100,6 +107,26 @@
         { "q": "How often do you post content?", "a": "Posting frequency is customized per platform and audience. We typically recommend 3-5 times per week on Facebook, daily Stories on Instagram, weekly on LinkedIn, and daily on TikTok and Twitter to maintain algorithm favor." },
         { "q": "Do you handle social media advertising?", "a": "While we focus on organic social media management, we can collaborate with your paid ads team or provide strategic recommendations for budget allocation across organic and paid efforts." },
         { "q": "What reporting do you provide?", "a": "We deliver monthly analytics reports covering reach, engagement rates, follower growth, top-performing content, audience insights, and conversion tracking. Reports include actionable recommendations for improvement." }
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Key Benefits",
+      "subheading": "Systems that turn social from sporadic to scalable.",
+      "items": [
+        { "title": "Platform‑Native Output", "description": "Cadences and formats tailored to each algorithm for discoverability and engagement." },
+        { "title": "Predictable Production", "description": "Calendars, templates, and workflows that ship quality content consistently." },
+        { "title": "Community Growth", "description": "Moderation and reply ops that convert attention into relationships and actions." }
+      ]
+    },
+    "features": {
+      "heading": "What You Get",
+      "subheading": "Everything needed to run a modern social program.",
+      "features": [
+        { "title": "Content Pillars", "description": "Clear themes and angles aligned to your audience and goals.", "icon": "📚" },
+        { "title": "Creative Systems", "description": "Reusable templates for posts, Reels, Shorts, and carousels.", "icon": "🎨" },
+        { "title": "Scheduling Ops", "description": "Native scheduling and QA workflows for on‑time delivery.", "icon": "🗓️" },
+        { "title": "Community Management", "description": "Comment/DM systems that scale with tone guardrails.", "icon": "💬" },
+        { "title": "Analytics & Iteration", "description": "Dashboards and weekly learnings to double down on winners.", "icon": "📈" }
       ]
     }
   },
@@ -146,10 +173,37 @@
     "painpoints": {
       "heading": "Struggling to grow on Facebook?",
       "items": [
-        { "image": "/socialMedia/icon-1.svg", "title": "Low reach and engagement despite posting each week?" },
-        { "image": "/socialMedia/icon-2.svg", "title": "No time to manage comments/DMs while staying on brand?" },
-        { "image": "/socialMedia/icon-3.svg", "title": "No content calendar aligned to campaigns and seasons?" },
-        { "image": "/socialMedia/icon-4.svg", "title": "Unclear what's working and what to double down on?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Low reach and engagement despite posting each week?", "description": "We implement native formats, hook frameworks, and optimal timing to restore reach and interactions." },
+        { "image": "/socialMedia/icon-2.svg", "title": "No time to manage comments/DMs while staying on brand?", "description": "We set up moderation playbooks and response systems that protect brand voice and build affinity." },
+        { "image": "/socialMedia/icon-3.svg", "title": "No content calendar aligned to campaigns and seasons?", "description": "We run monthly calendars synced to launches and seasonal themes for consistent momentum." },
+        { "image": "/socialMedia/icon-4.svg", "title": "Unclear what's working and what to double down on?", "description": "We track post‑level signals and audience actions to prioritize repeatable winners." }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Your Facebook Challenge",
+      "paragraphs": [
+        "Random posting produces random results—Facebook rewards native, consistent programming.",
+        "We design page programs that compound reach, conversations, and page actions."
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Key Benefits",
+      "subheading": "Grow a healthy page with consistent output.",
+      "items": [
+        { "title": "Native Formats", "description": "Reels, posts, and stories tuned to Facebook's algorithm." },
+        { "title": "Community Ops", "description": "Comments and Messenger handled with brand‑safe responses." },
+        { "title": "Clear Insights", "description": "Monthly reviews with actions tied to business goals." }
+      ]
+    },
+    "features": {
+      "heading": "Facebook Capabilities",
+      "subheading": "Everything needed for consistent page growth.",
+      "features": [
+        { "title": "Calendar & Cadence", "description": "Editorial planning aligned to campaigns and seasons.", "icon": "🗓️" },
+        { "title": "Creative Templates", "description": "Reusable assets for speed across posts and Reels.", "icon": "🎨" },
+        { "title": "Group/Community", "description": "Moderation and participation for stronger affinity.", "icon": "👥" },
+        { "title": "Page Hygiene", "description": "Profile, tabs, and metadata optimized for actions.", "icon": "🧹" },
+        { "title": "Insights Dashboard", "description": "Reach, engagement, CTR, and page actions tracked.", "icon": "📈" }
       ]
     },
     "serviceCards": [
@@ -215,10 +269,37 @@
     "painpoints": {
       "heading": "Is Instagram growth stalling?",
       "items": [
-        { "image": "/socialMedia/icon-1.svg", "title": "Hooks fail to hold attention past 3 seconds on most Reels?" },
-        { "image": "/socialMedia/icon-2.svg", "title": "Inconsistent cadence makes it hard to build momentum?" },
-        { "image": "/socialMedia/icon-3.svg", "title": "Grid lacks a clear narrative for first‑time visitors?" },
-        { "image": "/socialMedia/icon-4.svg", "title": "Few profile actions or link clicks despite decent reach?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Hooks fail to hold attention past 3 seconds on most Reels?", "description": "We test hook frameworks and editing pacing to improve retention and watch time." },
+        { "image": "/socialMedia/icon-2.svg", "title": "Inconsistent cadence makes it hard to build momentum?", "description": "We build a feasible Reels‑first cadence with templates to ship daily." },
+        { "image": "/socialMedia/icon-3.svg", "title": "Grid lacks a clear narrative for first‑time visitors?", "description": "We design a cohesive grid and highlights to signal quality instantly." },
+        { "image": "/socialMedia/icon-4.svg", "title": "Few profile actions or link clicks despite decent reach?", "description": "We craft captions and CTAs that convert attention into profile actions and clicks." }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Your Instagram Challenge",
+      "paragraphs": [
+        "Winning on IG means shipping native Reels and Stories with strong hooks.",
+        "We create repeatable systems that grow reach, profile actions, and followers."
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Key Benefits",
+      "subheading": "Momentum through native creative and cadence.",
+      "items": [
+        { "title": "Reels‑First Growth", "description": "Hooks, pacing, and thumbnails optimized for reach and retention." },
+        { "title": "Story Sequencing", "description": "Daily flows that drive replies, visits, and clicks." },
+        { "title": "Cohesive Grid", "description": "Aesthetic and narrative that improves follow‑through." }
+      ]
+    },
+    "features": {
+      "heading": "Instagram Capabilities",
+      "subheading": "Everything to run IG at pace.",
+      "features": [
+        { "title": "Reels Systems", "description": "Hook library, editing templates, and packaging.", "icon": "🎬" },
+        { "title": "Stories Ops", "description": "Daily sequences and interactive elements for replies.", "icon": "📖" },
+        { "title": "Grid Design", "description": "Cohesive layout and highlights that signal quality.", "icon": "🧩" },
+        { "title": "Hashtag & Sounds", "description": "Smart discovery inputs without spam.", "icon": "#" },
+        { "title": "Analytics", "description": "Retention, saves, and shares to inform iteration.", "icon": "📊" }
       ]
     },
     "serviceCards": [
@@ -284,10 +365,37 @@
     "painpoints": {
       "heading": "Not seeing traction on LinkedIn?",
       "items": [
-        { "image": "/socialMedia/icon-1.svg", "title": "Exec brand lacks consistent posting and recognizable voice?" },
-        { "image": "/socialMedia/icon-2.svg", "title": "No clear POV or content themes tied to your market?" },
-        { "image": "/socialMedia/icon-3.svg", "title": "Low comments and conversations from the right decision‑makers?" },
-        { "image": "/socialMedia/icon-4.svg", "title": "Hard to sustain a weekly cadence while running the business?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Exec brand lacks consistent posting and recognizable voice?", "description": "We define POV lanes and a weekly cadence that leaders can sustain credibly." },
+        { "image": "/socialMedia/icon-2.svg", "title": "No clear POV or content themes tied to your market?", "description": "We craft thought leadership narratives that create conversation with your ICP." },
+        { "image": "/socialMedia/icon-3.svg", "title": "Low comments and conversations from the right decision‑makers?", "description": "We optimize formats and prompts that invite replies from target accounts." },
+        { "image": "/socialMedia/icon-4.svg", "title": "Hard to sustain a weekly cadence while running the business?", "description": "We provide templates and a light approval loop that keeps posts shipping." }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Your LinkedIn Challenge",
+      "paragraphs": [
+        "Executives need consistent, credible content that sparks conversations—not generic posts.",
+        "We turn expertise into a weekly program that grows reach, profile views, and pipeline signals."
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Key Benefits",
+      "subheading": "Credible executive presence that drives pipeline.",
+      "items": [
+        { "title": "Clear POV", "description": "Themes and takes that resonate with your market." },
+        { "title": "Repeatable Output", "description": "Templates for carousels, posts, and polls that ship weekly." },
+        { "title": "Conversation Signals", "description": "Engagement from target accounts tracked and reported." }
+      ]
+    },
+    "features": {
+      "heading": "LinkedIn Capabilities",
+      "subheading": "Everything to run a consistent exec program.",
+      "features": [
+        { "title": "Narrative & Themes", "description": "POV lanes aligned to market problems.", "icon": "🗣️" },
+        { "title": "Templates", "description": "Carousels, post formats, and prompts for speed.", "icon": "📄" },
+        { "title": "Comment Strategy", "description": "Systems to show up in relevant threads.", "icon": "💬" },
+        { "title": "Profile Hygiene", "description": "Optimized headlines, about, and featured content.", "icon": "🧭" },
+        { "title": "Reporting", "description": "Impressions, ER, profile views, and pipeline signals.", "icon": "📈" }
       ]
     },
     "serviceCards": [
@@ -353,10 +461,37 @@
     "painpoints": {
       "heading": "Publishing on TikTok without momentum?",
       "items": [
-        { "image": "/socialMedia/icon-1.svg", "title": "Inconsistent output makes the algorithm forget your content?" },
-        { "image": "/socialMedia/icon-2.svg", "title": "Hooks don't retain viewers long enough to build watch time?" },
-        { "image": "/socialMedia/icon-3.svg", "title": "Editing pipeline too slow to capitalize on trend windows?" },
-        { "image": "/socialMedia/icon-4.svg", "title": "Struggling to test, learn and iterate on hooks each week?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Inconsistent output makes the algorithm forget your content?", "description": "We build daily posting systems with creator‑friendly workflows." },
+        { "image": "/socialMedia/icon-2.svg", "title": "Hooks don't retain viewers long enough to build watch time?", "description": "We test hook patterns and pacing to lift average watch time and retention." },
+        { "image": "/socialMedia/icon-3.svg", "title": "Editing pipeline too slow to capitalize on trend windows?", "description": "We streamline editing and approvals so content ships inside trend windows." },
+        { "image": "/socialMedia/icon-4.svg", "title": "Struggling to test, learn and iterate on hooks each week?", "description": "We run weekly reviews and iterate formats to double down on winners." }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Your TikTok Challenge",
+      "paragraphs": [
+        "Momentum requires daily output with strong hooks and fast iteration.",
+        "We create lightweight production and testing loops that make consistency achievable."
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Key Benefits",
+      "subheading": "Compounding short‑form without chaos.",
+      "items": [
+        { "title": "Daily Output", "description": "Systems and templates to post consistently with quality." },
+        { "title": "Hook Performance", "description": "Retention‑driven creative optimized weekly." },
+        { "title": "Fast Iteration", "description": "Rapid testing to find and scale winning formats." }
+      ]
+    },
+    "features": {
+      "heading": "TikTok Capabilities",
+      "subheading": "From concept to publish—fast.",
+      "features": [
+        { "title": "Hook Library", "description": "Frameworks and examples for first 3 seconds.", "icon": "🎯" },
+        { "title": "Lightweight Production", "description": "Creator‑friendly pipeline and templates.", "icon": "🎬" },
+        { "title": "Trend Ops", "description": "Evaluation and adaptation that fits your brand.", "icon": "📈" },
+        { "title": "Thumbnails & Captions", "description": "Packaging that earns clicks and watch time.", "icon": "🖼️" },
+        { "title": "Analytics Loops", "description": "Weekly retention and actions learning.", "icon": "🔁" }
       ]
     },
     "serviceCards": [
@@ -422,12 +557,13 @@
     "painpoints": {
       "heading": "YouTube not compounding yet?",
       "items": [
-        { "image": "/socialMedia/icon-1.svg", "title": "Thumbnails don't earn clicks even when topics are strong?" },
-        { "image": "/socialMedia/icon-2.svg", "title": "Retention drops early and view duration stays low?" },
-        { "image": "/socialMedia/icon-3.svg", "title": "No clear programming cadence or seasonal themes?" },
-        { "image": "/socialMedia/icon-4.svg", "title": "Comments/moderation are ad‑hoc, community feels unmanaged?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Thumbnails don't earn clicks even when topics are strong?", "description": "We design and test thumbnail concepts to increase CTR without clickbait." },
+        { "image": "/socialMedia/icon-2.svg", "title": "Retention drops early and view duration stays low?", "description": "We restructure openings, pacing, and visual variety to lift AVD." },
+        { "image": "/socialMedia/icon-3.svg", "title": "No clear programming cadence or seasonal themes?", "description": "We build episode programming with predictable publishing." },
+        { "image": "/socialMedia/icon-4.svg", "title": "Comments/moderation are ad‑hoc, community feels unmanaged?", "description": "We implement moderation and engagement systems that scale." }
       ]
     },
+    
     "serviceCards": [
       {
         "id": "yt-content",
@@ -475,6 +611,33 @@
         { "q": "What's included in YouTube community management?", "a": "We respond to comments promptly, moderate spam and inappropriate content, engage with top contributors, use community posts to maintain engagement between videos, manage YouTube Community tab content, and build relationships with active subscribers to foster loyalty." },
         { "q": "How do you measure YouTube success beyond views?", "a": "We track click-through rates (CTR), average view duration (AVD), audience retention curves, subscriber growth rate, engagement metrics (likes, comments, shares), watch time, and revenue metrics when applicable. Retention and watch time often matter more than raw view counts." }
       ]
+    },
+    "introParagraph": {
+      "heading": "Your YouTube Challenge",
+      "paragraphs": [
+        "Clicks and retention drive everything—both require deliberate programming and packaging.",
+        "We combine content ops with analytics to raise CTR, AVD, and subscriptions."
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Key Benefits",
+      "subheading": "Retention‑first content and healthy community.",
+      "items": [
+        { "title": "Higher CTR", "description": "Concepts and thumbnails that earn the click." },
+        { "title": "Better Retention", "description": "Hooks and structure that keep viewers watching." },
+        { "title": "Managed Community", "description": "Comments and moderation that build loyalty." }
+      ]
+    },
+    "features": {
+      "heading": "YouTube Capabilities",
+      "subheading": "From episode planning to Studio insights.",
+      "features": [
+        { "title": "Programming", "description": "Cadence, seasons, and topics that fit your niche.", "icon": "📺" },
+        { "title": "Thumbnails", "description": "Concepting and design with testing.", "icon": "🖼️" },
+        { "title": "Metadata", "description": "Search‑aligned titles and descriptions that deliver.", "icon": "🏷️" },
+        { "title": "Community", "description": "Response systems and moderation standards.", "icon": "💬" },
+        { "title": "Dashboards", "description": "CTR, AVD, subs, and next steps weekly.", "icon": "📊" }
+      ]
     }
   }
   ,
@@ -492,10 +655,37 @@
     "painpoints": {
       "heading": "Pins not driving traffic?",
       "items": [
-        { "image": "/socialMedia/icon-1.svg", "title": "Low saves and outbound clicks even with strong visuals?" },
-        { "image": "/socialMedia/icon-2.svg", "title": "Weak pin SEO/metadata prevents discovery in search?" },
-        { "image": "/socialMedia/icon-3.svg", "title": "Boards lack structure and don't map to search intent?" },
-        { "image": "/socialMedia/icon-4.svg", "title": "Irregular cadence makes it hard to build predictable traffic?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Low saves and outbound clicks even with strong visuals?", "description": "We design templates and copy that boost saves and drive clicks." },
+        { "image": "/socialMedia/icon-2.svg", "title": "Weak pin SEO/metadata prevents discovery in search?", "description": "We optimize titles, descriptions, and tags for Pinterest search." },
+        { "image": "/socialMedia/icon-3.svg", "title": "Boards lack structure and don't map to search intent?", "description": "We create keyword‑rich boards aligned to user intent." },
+        { "image": "/socialMedia/icon-4.svg", "title": "Irregular cadence makes it hard to build predictable traffic?", "description": "We set daily pinning cadences with scheduling and QA." }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Your Pinterest Challenge",
+      "paragraphs": [
+        "Pinterest rewards fresh, keyworded pins and organized boards.",
+        "We turn pins into predictable, compounding traffic to site."
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Key Benefits",
+      "subheading": "Templates, metadata, and cadence for traffic.",
+      "items": [
+        { "title": "Clickable Pins", "description": "Designs and copy that earn saves and clicks." },
+        { "title": "Search Visibility", "description": "Optimized metadata for discovery." },
+        { "title": "Predictable Cadence", "description": "Daily output without manual overhead." }
+      ]
+    },
+    "features": {
+      "heading": "Pinterest Capabilities",
+      "subheading": "From design systems to analytics.",
+      "features": [
+        { "title": "Template Library", "description": "Reusable pin designs for speed.", "icon": "🎨" },
+        { "title": "Pin SEO", "description": "Titles, descriptions, and tags that rank.", "icon": "🏷️" },
+        { "title": "Board Strategy", "description": "Structure and naming aligned to intent.", "icon": "🧭" },
+        { "title": "Scheduling", "description": "Cadence that maintains freshness.", "icon": "🗓️" },
+        { "title": "Analytics", "description": "Saves, clicks, and conversions tracked.", "icon": "📈" }
       ]
     },
     "serviceCards": [
@@ -540,10 +730,37 @@
     "painpoints": {
       "heading": "Hard to gain traction on X?",
       "items": [
-        { "image": "/socialMedia/icon-1.svg", "title": "Threads don't land or get bookmarked by right audience?" },
-        { "image": "/socialMedia/icon-2.svg", "title": "No engagement rhythm to enter relevant conversations?" },
-        { "image": "/socialMedia/icon-3.svg", "title": "Weak point of view in your niche leads to low relevance?" },
-        { "image": "/socialMedia/icon-4.svg", "title": "No learning loop to iterate topics, hooks and CTAs?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Threads don't land or get bookmarked by right audience?", "description": "We structure threads to be scannable, opinionated, and bookmark‑worthy." },
+        { "image": "/socialMedia/icon-2.svg", "title": "No engagement rhythm to enter relevant conversations?", "description": "We implement reply ops to participate daily in the right conversations." },
+        { "image": "/socialMedia/icon-3.svg", "title": "Weak point of view in your niche leads to low relevance?", "description": "We define a clear POV that attracts your ideal audience." },
+        { "image": "/socialMedia/icon-4.svg", "title": "No learning loop to iterate topics, hooks and CTAs?", "description": "We run tight feedback loops on hooks, topics, and CTAs weekly." }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Your X Challenge",
+      "paragraphs": [
+        "Relevance on X comes from speed, POV, and consistent engagement.",
+        "We build systems for daily posting and replies that grow reach and relationships."
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Key Benefits",
+      "subheading": "Fast, native content that earns replies.",
+      "items": [
+        { "title": "Opinionated POV", "description": "Clarity that drives follows and engagement." },
+        { "title": "Engagement Rhythm", "description": "Daily reply systems to join relevant threads." },
+        { "title": "Tight Iteration", "description": "Feedback loops on topics, hooks, and CTAs." }
+      ]
+    },
+    "features": {
+      "heading": "X Capabilities",
+      "subheading": "From threads to analytics.",
+      "features": [
+        { "title": "Threads Systems", "description": "Frameworks that make threads scannable and valuable.", "icon": "🧵" },
+        { "title": "Engagement Ops", "description": "Reply and network building playbooks.", "icon": "💬" },
+        { "title": "Signal Tracking", "description": "Profile visits, link clicks, and bookmarks.", "icon": "📊" },
+        { "title": "Packaging", "description": "Hooks and visuals that increase reach.", "icon": "🎯" },
+        { "title": "Cadence", "description": "Schedules aligned to peak activity.", "icon": "🗓️" }
       ]
     },
     "serviceCards": [
@@ -609,10 +826,37 @@
     "painpoints": {
       "heading": "Stories not getting views?",
       "items": [
-        { "image": "/socialMedia/icon-1.svg", "title": "No fast templates to produce native stories daily?" },
-        { "image": "/socialMedia/icon-2.svg", "title": "Low completion; viewers drop off before key CTAs?" },
-        { "image": "/socialMedia/icon-3.svg", "title": "No weekly tests to evolve hooks and formats?" },
-        { "image": "/socialMedia/icon-4.svg", "title": "Production too slow to keep up with audience preferences?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "No fast templates to produce native stories daily?", "description": "We build story templates so daily posting becomes practical." },
+        { "image": "/socialMedia/icon-2.svg", "title": "Low completion; viewers drop off before key CTAs?", "description": "We sequence stories to retain viewers and drive actions." },
+        { "image": "/socialMedia/icon-3.svg", "title": "No weekly tests to evolve hooks and formats?", "description": "We run weekly tests to evolve hooks and sequences." },
+        { "image": "/socialMedia/icon-4.svg", "title": "Production too slow to keep up with audience preferences?", "description": "We streamline production to match platform pace." }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Your Snapchat Challenge",
+      "paragraphs": [
+        "Snapchat rewards daily, native stories with quick production.",
+        "We provide templates and ops to post consistently and learn weekly."
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Key Benefits",
+      "subheading": "Ship native stories with consistency.",
+      "items": [
+        { "title": "Template Speed", "description": "Reusable layouts that keep quality high and output steady." },
+        { "title": "Retention", "description": "Sequences that keep viewers watching and tapping through." },
+        { "title": "Iteration", "description": "Weekly learnings to refine hooks and CTAs." }
+      ]
+    },
+    "features": {
+      "heading": "Snapchat Capabilities",
+      "subheading": "From templates to insights.",
+      "features": [
+        { "title": "Story Templates", "description": "On‑brand layouts for rapid production.", "icon": "📱" },
+        { "title": "Sequencing", "description": "Flows that drive replies and actions.", "icon": "🧩" },
+        { "title": "Native Tools", "description": "Creative use of filters, lenses, and stickers.", "icon": "✨" },
+        { "title": "Scheduling", "description": "Cadence to maintain algorithm favor.", "icon": "🗓️" },
+        { "title": "Insights", "description": "Views, completion, and actions tracked.", "icon": "📈" }
       ]
     },
     "serviceCards": [
@@ -678,10 +922,37 @@
     "painpoints": {
       "heading": "Worried about missteps on Reddit?",
       "items": [
-        { "image": "/socialMedia/icon-1.svg", "title": "Posts removed by mods due to unclear rules or mis‑tagging?" },
-        { "image": "/socialMedia/icon-2.svg", "title": "Unsure of subreddit rules and expectations for brands?" },
-        { "image": "/socialMedia/icon-3.svg", "title": "Little discussion or upvotes from target communities?" },
-        { "image": "/socialMedia/icon-4.svg", "title": "Brand risk concerns around tone and transparency?" }
+        { "image": "/socialMedia/icon-1.svg", "title": "Posts removed by mods due to unclear rules or mis‑tagging?", "description": "We map subreddit rules and posting norms to avoid removals." },
+        { "image": "/socialMedia/icon-2.svg", "title": "Unsure of subreddit rules and expectations for brands?", "description": "We define transparent participation guidelines and value‑first contributions." },
+        { "image": "/socialMedia/icon-3.svg", "title": "Little discussion or upvotes from target communities?", "description": "We craft credible posts and comments that invite discussion." },
+        { "image": "/socialMedia/icon-4.svg", "title": "Brand risk concerns around tone and transparency?", "description": "We manage tone, disclosures, and escalation paths for safety." }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Your Reddit Challenge",
+      "paragraphs": [
+        "Reddit requires authenticity, rules compliance, and value before promotion.",
+        "We design credible participation that earns trust and discussion."
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Key Benefits",
+      "subheading": "Participate credibly without brand risk.",
+      "items": [
+        { "title": "Rules‑Aligned", "description": "Posts and AMAs that meet moderator expectations." },
+        { "title": "Trust‑Building", "description": "Helpful contributions before any promotion." },
+        { "title": "Measured Impact", "description": "Karma, comment quality, and referrals tracked." }
+      ]
+    },
+    "features": {
+      "heading": "Reddit Capabilities",
+      "subheading": "From discovery to reporting.",
+      "features": [
+        { "title": "Sub Mapping", "description": "Identify relevant subs, rules, and culture.", "icon": "🗺️" },
+        { "title": "Participation", "description": "Helpful posts, comments, and AMA ops.", "icon": "💬" },
+        { "title": "Tone & Safety", "description": "Guidelines and escalation paths.", "icon": "🛡️" },
+        { "title": "Attribution", "description": "UTMs and qualitative tracking.", "icon": "🔗" },
+        { "title": "Reporting", "description": "Karma, comment velocity, and actions.", "icon": "📈" }
       ]
     },
     "serviceCards": [
@@ -746,11 +1017,38 @@
     },
     "painpoints": {
       "heading": "Creator programs not delivering?",
+    "items": [
+        { "image": "/socialMedia/icon-1.svg", "title": "Hard to find creators who genuinely fit your audience?", "description": "We source vetted creators whose audiences match your ICP." },
+        { "image": "/socialMedia/icon-2.svg", "title": "Briefs and approvals slow, causing missed windows?", "description": "We manage briefs and approvals with clear timelines." },
+        { "image": "/socialMedia/icon-3.svg", "title": "Poor cross‑platform attribution makes results hard to prove?", "description": "We implement unique links, codes, and pixel strategies." },
+        { "image": "/socialMedia/icon-4.svg", "title": "Unclear ROI and little insight into which creators to rebook?", "description": "We report on outcomes and recommend rebooks based on performance." }
+      ]
+    },
+    "introParagraph": {
+      "heading": "Your Influencer Challenge",
+      "paragraphs": [
+        "Creator campaigns fail without the right fit, briefs, and attribution.",
+        "We run sourcing and ops with clear measurement to scale what works."
+      ]
+    },
+    "keyBenefits": {
+      "heading": "Key Benefits",
+      "subheading": "Confident creator programs across platforms.",
       "items": [
-        { "image": "/socialMedia/icon-1.svg", "title": "Hard to find creators who genuinely fit your audience?" },
-        { "image": "/socialMedia/icon-2.svg", "title": "Briefs and approvals slow, causing missed windows?" },
-        { "image": "/socialMedia/icon-3.svg", "title": "Poor cross‑platform attribution makes results hard to prove?" },
-        { "image": "/socialMedia/icon-4.svg", "title": "Unclear ROI and little insight into which creators to rebook?" }
+        { "title": "Quality Sourcing", "description": "Creators vetted for fit and authenticity." },
+        { "title": "Smooth Ops", "description": "Briefs and approvals that keep content on schedule." },
+        { "title": "Clear ROI", "description": "Attribution across posts, stories, and links." }
+      ]
+    },
+    "features": {
+      "heading": "Influencer Capabilities",
+      "subheading": "From sourcing to reporting.",
+      "features": [
+        { "title": "Creator Database", "description": "Shortlisted creators by niche and budget.", "icon": "🧑‍🎤" },
+        { "title": "Briefs & Approvals", "description": "Clear deliverables and timelines.", "icon": "📝" },
+        { "title": "Content QA", "description": "Reviews for brand fit and compliance.", "icon": "✅" },
+        { "title": "Attribution", "description": "Unique links, codes, and pixel setup.", "icon": "🔗" },
+        { "title": "Reporting", "description": "Cross‑platform outcomes and recommendations.", "icon": "📊" }
       ]
     },
     "serviceCards": [
