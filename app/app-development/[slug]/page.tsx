@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation"
+import { notFound, redirect } from "next/navigation"
 import appDevData from "@/data/app-development.json"
 import AppDevHero from "@/components/app-development/hero"
 import Certificates from "@/components/app-development/certificates"
@@ -38,6 +38,11 @@ export default function AppDevSlugPage({
 }: {
 	params: { slug: string }
 }) {
+	// Redirect "app-development" to the main app development page
+	if (params.slug === "app-development") {
+		redirect("/app-development")
+	}
+
 	if (!allowedSlugs.includes(params.slug)) {
 		notFound()
 	}

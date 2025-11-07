@@ -933,12 +933,13 @@ const Navbar: React.FC = () => {
 																					"react-native-development":
 																						"react-native-development",
 																				}
-																			if (
-																				appSlugMap[
-																					name
-																				]
-																			) {
-																				return `/app-development/${appSlugMap[name]}`
+																			const mappedSlug = appSlugMap[name]
+																			// Redirect "app-development" to the main app development page
+																			if (mappedSlug === "app-development") {
+																				return "/app-development"
+																			}
+																			if (mappedSlug) {
+																				return `/app-development/${mappedSlug}`
 																			}
 																		}
 																		const paidAdsSlugs =
@@ -1013,10 +1014,12 @@ const Navbar: React.FC = () => {
 												const mappedSlug =
 													seoServiceSlugMap[name] ||
 													seoServiceLabelMap[service.name]
-												if (mappedSlug) {
-													return `/seo/${mappedSlug}`
+												const finalSlug = mappedSlug || name
+												// Redirect "search-engine-optimisation" to the main SEO page
+												if (finalSlug === "search-engine-optimisation") {
+													return "/seo"
 												}
-												return `/seo/${name}`
+												return `/seo/${finalSlug}`
 											}
 																		if (
 																			paidAdsSlugs.has(
@@ -1095,8 +1098,10 @@ const Navbar: React.FC = () => {
 																				name
 																			)
 																		) {
-																			const slug =
-																				name
+																			const slug = name
+																			if (slug === "content-marketing") {
+																				return "/content-marketing"
+																			}
 																			return `/content-marketing/${slug}`
 																		}
 																		// Map AI & Automation items to ai-automation routes
@@ -1495,10 +1500,12 @@ const Navbar: React.FC = () => {
 														const mappedSlug =
 															seoServiceSlugMap[name] ||
 															seoServiceLabelMap[service.name]
-														if (mappedSlug) {
-															return `/seo/${mappedSlug}`
+														const finalSlug = mappedSlug || name
+														// Redirect "search-engine-optimisation" to the main SEO page
+														if (finalSlug === "search-engine-optimisation") {
+															return "/seo"
 														}
-														return `/seo/${name}`
+														return `/seo/${finalSlug}`
 													}
 																												// For items under the Web Development column in mobile, link to /web-development/<kebab>
 																												if (
@@ -1530,16 +1537,17 @@ const Navbar: React.FC = () => {
 																															"software-development":
 																																"software-development",
 																															"flutter-app-development":
-																"flutter-app-development",
+																								"flutter-app-development",
 																															"react-native-development":
 																																"react-native-development",
 																														}
-																													if (
-																														appSlugMap[
-																															name
-																														]
-																													) {
-																														return `/app-development/${appSlugMap[name]}`
+																													const mappedSlug = appSlugMap[name]
+																													// Redirect "app-development" to the main app development page
+																													if (mappedSlug === "app-development") {
+																														return "/app-development"
+																													}
+																													if (mappedSlug) {
+																														return `/app-development/${mappedSlug}`
 																													}
 																												}
 																												// Map Hosting, IT & Security items to hosting-it-security routes
@@ -1648,8 +1656,10 @@ const Navbar: React.FC = () => {
 																														name
 																													)
 																												) {
-																													const slug =
-																														name
+																													const slug = name
+																													if (slug === "content-marketing") {
+																														return "/content-marketing"
+																													}
 																													return `/content-marketing/${slug}`
 																												}
 																												// Map AI & Automation items to ai-automation routes

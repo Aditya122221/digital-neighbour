@@ -75,7 +75,7 @@ export default function ContentMarketingPage() {
 			<BrandsMarquee />
   < IntroParagraph data = { introData } />
   <PainPoints data={ painData } />
-    why work with us
+    <Apart />
     < CaseStudy />
     <Process2
 				data={currentData?.services}

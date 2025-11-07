@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation"
+import { notFound, redirect } from "next/navigation"
 import contentMarketingData from "@/data/content-marketing.json"
 import ContentMarketingHero from "@/components/content-marketing/hero"
 import IntroParagraph from "@/components/commonSections/introparagraph"
@@ -48,6 +48,10 @@ export default function ContentMarketingSlugPage({
 }: {
 	params: { slug: string }
 }) {
+	if (params.slug === "content-marketing") {
+		redirect("/content-marketing")
+	}
+
 	if (!allowedSlugs.includes(params.slug)) {
 		notFound()
 	}
@@ -111,7 +115,7 @@ export default function ContentMarketingSlugPage({
 	<BrandsMarquee />
 < IntroParagraph data = { introData } />
 <PainPoints data={ painData } />
-why work with us
+<Apart />
 < CaseStudy />
 <Process2
 		data={currentData?.services}

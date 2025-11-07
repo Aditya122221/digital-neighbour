@@ -1316,6 +1316,7 @@
   },
   "otherServices": {
     "appDevelopmentServices": [
+      "App Development",
       "Android App Development",
       "IOS App Development",
       "Software Development",
@@ -1324,6 +1325,7 @@
       "Progressive Web Apps (PWA)"
     ],
     "slugMapping": {
+      "App Development": "",
       "Android App Development": "android-app-development",
       "IOS App Development": "ios-app-development",
       "Software Development": "software-development",

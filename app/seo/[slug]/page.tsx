@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation"
+import { notFound, redirect } from "next/navigation"
 import seoData from "@/data/seo.json"
 import SeoHero from "@/components/seo/hero"
 import Content from "@/components/commonSections/content"
@@ -30,11 +30,17 @@ const slugAliases: Record<string, keyof typeof seoData> = {
 
 export default function SeoSlugPage({ params }: { params: { slug: string } }) {
 	const requestedSlug = params.slug
+	
 	const resolvedKey = (
 		Object.prototype.hasOwnProperty.call(seoData, requestedSlug)
 			? requestedSlug
 			: slugAliases[requestedSlug]
 	) as keyof typeof seoData | undefined
+
+	// Redirect "search-engine-optimisation" to the main SEO page
+	if (requestedSlug === "search-engine-optimisation" || resolvedKey === "search-engine-optimisation") {
+		redirect("/seo")
+	}
 
 	if (!resolvedKey || !seoData[resolvedKey]) {
 		notFound()
