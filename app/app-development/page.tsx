@@ -1,7 +1,7 @@
 import appDevData from "@/data/app-development.json"
 import AppDevHero from "@/components/app-development/hero"
 import Certificates from "@/components/app-development/certificates"
-import Industries from "@/components/app-development/industries"
+import Industries from "@/components/commonSections/industries"
 import Content from "@/components/commonSections/content"
 import Services from "@/components/commonSections/services"
 import Form from "@/components/commonSections/form"
@@ -47,9 +47,7 @@ export default function AppDevelopmentPage() {
 				data={currentData?.content}
 				imagePathPrefix="/seo/content"
 			/>
-			{currentData?.industries && (
-				<Industries data={currentData?.industries} />
-			)}
+			<Industries />
 			<CaseStudy />
 			<Certificates data={currentData?.certificates} />
 			<Process2

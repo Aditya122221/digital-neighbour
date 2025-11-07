@@ -35,8 +35,8 @@ export default function WebDevHero({ data }: WebDevHeroProps) {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="w-full"
           >
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start justify-between gap-6">
-              <div className="text-left space-y-6 max-w-3xl">
+            <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-6 text-center">
+              <div className="space-y-6 max-w-3xl">
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight font-cal-sans">
                   {data.heading}
                 </h1>

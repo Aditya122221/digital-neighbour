@@ -1,28 +1,28 @@
 {
   "app-development": {
     "hero": {
-      "heading": "Mobile App Development Services",
-      "subheading": "Design, build, and scale high-performance mobile apps for iOS, Android, and cross-platform platforms that engage users and drive business growth."
+      "heading": "App Development Services",
+      "subheading": "Design, build, and scale high-performance apps for iOS, Android, and cross-platform platforms that engage users and drive business growth."
     },
     "form": {
-      "heading": "Ready to build your mobile app?",
+      "heading": "Ready to build your app?",
       "content": "From concept to launch, we create mobile experiences that users love and businesses rely on.",
-      "subContent": "Get expert consultation on mobile app strategy, platform selection, and development approach.",
-      "cta": "Let's discuss your vision and create a mobile app that exceeds your expectations.",
-      "formHeading": "Get a Free Mobile App Consultation and Custom Proposal",
+      "subContent": "Get expert consultation on app strategy, platform selection, and development approach.",
+      "cta": "Let's discuss your vision and create a app that exceeds your expectations.",
+      "formHeading": "Get a Free App Consultation and Custom Proposal",
       "buttonText": "Get My Consultation"
     },
     "introParagraph": {
       "heading": "The Mobile-First Challenge: Are You Missing Out?",
-      "problemStatement": "Your competitors are winning customers through mobile apps while you're stuck with a website that doesn't convert on mobile. Every day you delay, potential customers choose your competitors who offer seamless mobile experiences.",
-      "valueProposition": "We transform your mobile app vision into reality—delivering high-performance apps that engage users, drive conversions, and scale with your business growth."
+      "problemStatement": "Your competitors are winning customers through apps while you're stuck with a website that doesn't convert on mobile. Every day you delay, potential customers choose your competitors who offer seamless mobile experiences.",
+      "valueProposition": "We transform your app vision into reality—delivering high-performance apps that engage users, drive conversions, and scale with your business growth."
     },
     "painPoints": {
-      "heading": "We Understand Your Mobile App Challenges",
-      "subheading": "From development delays to poor user experience, we've seen it all. Here's how we solve the most common mobile app development pain points:",
+      "heading": "We Understand Your App Challenges",
+      "subheading": "From development delays to poor user experience, we've seen it all. Here's how we solve the most common app development pain points:",
       "painPoints": [
         {
-          "problem": "Complex mobile app development processes that take months and blow past budgets, leaving you frustrated and behind schedule.",
+          "problem": "Complex app development processes that take months and blow past budgets, leaving you frustrated and behind schedule.",
           "solution": "Our streamlined agile development process delivers MVPs in 8-12 weeks and full apps in 16-24 weeks, with transparent pricing and regular progress updates so you're always in control."
         },
         {
@@ -30,7 +30,7 @@
           "solution": "We analyze your target audience, business goals, and budget to recommend the optimal platform strategy. Whether native iOS/Android or cross-platform React Native/Flutter, we ensure you choose the right path from day one."
         },
         {
-          "problem": "Mobile apps that look great but perform poorly—slow load times, crashes, and poor user experience that drives customers away.",
+          "problem": "Apps that look great but perform poorly—slow load times, crashes, and poor user experience that drives customers away.",
           "solution": "Performance is built into every app we develop. We optimize for speed, battery efficiency, and smooth 60fps animations, ensuring your app performs flawlessly and keeps users engaged."
         },
         {
@@ -40,20 +40,20 @@
       ]
     },
     "content": {
-      "heading": "Building Mobile Apps That Make a Difference",
-      "text1": "In today's mobile-first world, your customers expect seamless mobile experiences. Whether they're shopping, booking services, or managing their business—your mobile app is their gateway to your brand.",
-      "text2": "Our mobile app development services combine cutting-edge technology with user-centric design to create apps that not only look stunning but deliver exceptional performance and measurable business results.",
-      "text3": "From native iOS and Android apps to cross-platform solutions, we build mobile applications tailored to your business needs. We leverage the latest frameworks, cloud infrastructure, and best practices to create apps that scale with your growth and engage your users.",
+      "heading": "Building Apps That Make a Difference",
+      "text1": "In today's mobile-first world, your customers expect seamless mobile experiences. Whether they're shopping, booking services, or managing their business—your app is their gateway to your brand.",
+      "text2": "Our app development services combine cutting-edge technology with user-centric design to create apps that not only look stunning but deliver exceptional performance and measurable business results.",
+      "text3": "From native iOS and Android apps to cross-platform solutions, we build applications tailored to your business needs. We leverage the latest frameworks, cloud infrastructure, and best practices to create apps that scale with your growth and engage your users.",
       "image": "local-seo.jpg",
-      "alt": "Mobile App Development Services"
+      "alt": "App Development Services"
     },
     "keyBenefits": {
-      "heading": "Key Benefits of Our Mobile App Development",
+      "heading": "Key Benefits of Our App Development",
       "subheading": "Beyond features—these outcomes drive real business value and user satisfaction:",
       "benefits": [
         {
           "title": "Faster Time to Market",
-          "description": "Launch your mobile app 30-40% faster with our streamlined development process and cross-platform solutions that reach iOS and Android users simultaneously."
+          "description": "Launch your app 30-40% faster with our streamlined development process and cross-platform solutions that reach iOS and Android users simultaneously."
         },
         {
           "title": "Measurable Business Growth",
@@ -69,16 +69,16 @@
         },
         {
           "title": "Expert Ongoing Support",
-          "description": "Get dedicated support from mobile app experts who understand your business. From bug fixes to feature updates, we ensure your app stays competitive and secure."
+          "description": "Get dedicated support from app experts who understand your business. From bug fixes to feature updates, we ensure your app stays competitive and secure."
         }
       ]
     },
     "features": {
       "heading": "What You Get",
-      "subheading": "Everything needed to build and launch successful mobile apps.",
+      "subheading": "Everything needed to build and launch successful apps.",
       "features": [
         { "title": "Native & Cross-Platform Development", "description": "Build native iOS, Android, or cross-platform apps with React Native and Flutter for maximum reach.", "icon": "📱" },
-        { "title": "UI/UX Design", "description": "User-centered mobile app design that creates intuitive, engaging experiences users love.", "icon": "🎨" },
+        { "title": "UI/UX Design", "description": "User-centered app design that creates intuitive, engaging experiences users love.", "icon": "🎨" },
         { "title": "App Store Optimization", "description": "ASO strategies to maximize visibility, downloads, and rankings on App Store and Play Store.", "icon": "📈" },
         { "title": "Performance Optimization", "description": "Optimize for speed, battery efficiency, and smooth 60fps performance across all devices.", "icon": "⚡" },
         { "title": "Ongoing Maintenance", "description": "Comprehensive maintenance packages to keep your app updated, secure, and competitive.", "icon": "🛠️" }
@@ -117,14 +117,14 @@
     ],
     "process": {
       "steps": [
-        "Mobile App Discovery & Strategy",
+        "App Discovery & Strategy",
         "Platform Selection & Design",
         "Mobile Development & Implementation",
         "Mobile Testing & QA",
         "App Store Launch & Growth"
       ],
       "content": [
-        "We start by understanding your business goals, target audience, and mobile app vision. Our team conducts market research, competitor analysis, and technical feasibility studies to determine whether native iOS, native Android, or cross-platform solutions best serve your needs.",
+        "We start by understanding your business goals, target audience, and app vision. Our team conducts market research, competitor analysis, and technical feasibility studies to determine whether native iOS, native Android, or cross-platform solutions best serve your needs.",
         "We help you choose the right platform (iOS, Android, or both) and create detailed wireframes, user flows, and interactive prototypes. This phase ensures we're building the right mobile features and allows for early user feedback and iteration across your target platforms.",
         "Our skilled mobile developers build your app using the best mobile technologies—Swift/SwiftUI for iOS, Kotlin/Jetpack for Android, or React Native/Flutter for cross-platform. We prioritize mobile performance, battery efficiency, security, and ensure your app works flawlessly across target devices.",
         "We rigorously test every mobile feature, integration, and user scenario on real devices. Our mobile QA process includes functional testing, performance testing on various device types, security audits, and compatibility checks across different screen sizes and OS versions.",
@@ -132,236 +132,27 @@
       ]
     },
     "faq": {
-      "serviceName": "Mobile App Development",
+      "serviceName": "App Development",
       "faqs": [
         {
-          "q": "How long does it take to build a mobile app?",
-          "a": "Mobile app development timelines vary based on complexity and platform choice. A simple MVP typically takes 8-12 weeks, while a full-featured native or cross-platform mobile app can take 16-24 weeks. We'll provide a detailed timeline after understanding your mobile app requirements and target platforms."
+          "q": "How long does it take to build a app?",
+          "a": "App development timelines vary based on complexity and platform choice. A simple MVP typically takes 8-12 weeks, while a full-featured native or cross-platform app can take 16-24 weeks. We'll provide a detailed timeline after understanding your app requirements and target platforms."
         },
         {
-          "q": "Should I build native iOS, native Android, or cross-platform mobile apps?",
-          "a": "It depends on your mobile app goals, budget, and target audience. Native apps offer the best performance and platform-specific features but require separate development. Cross-platform (React Native/Flutter) is faster and more cost-effective for reaching both iOS and Android users. We'll recommend the best mobile app approach for your needs."
+          "q": "Should I build native iOS, native Android, or cross-platform apps?",
+          "a": "It depends on your app goals, budget, and target audience. Native apps offer the best performance and platform-specific features but require separate development. Cross-platform (React Native/Flutter) is faster and more cost-effective for reaching both iOS and Android users. We'll recommend the best app approach for your needs."
         },
         {
-          "q": "Do you handle mobile app store submissions for iOS and Android?",
-          "a": "Yes, we handle the entire mobile app store submission process for both iOS App Store and Google Play Store, including preparing assets, compliance checks, store listing optimization, and managing the approval process. We ensure your mobile app meets all guidelines."
+          "q": "Do you handle app store submissions for iOS and Android?",
+          "a": "Yes, we handle the entire app store submission process for both iOS App Store and Google Play Store, including preparing assets, compliance checks, store listing optimization, and managing the approval process. We ensure your app meets all guidelines."
         },
         {
-          "q": "What about ongoing mobile app maintenance and updates?",
-          "a": "We offer comprehensive mobile app maintenance packages that include bug fixes, security updates, feature enhancements, platform compatibility updates as iOS and Android evolve, and performance optimization to keep your mobile app running smoothly."
+          "q": "What about ongoing app maintenance and updates?",
+          "a": "We offer comprehensive app maintenance packages that include bug fixes, security updates, feature enhancements, platform compatibility updates as iOS and Android evolve, and performance optimization to keep your app running smoothly."
         },
         {
-          "q": "Can you help with mobile app analytics and performance optimization?",
-          "a": "Absolutely! We integrate mobile analytics from day one and provide insights on user behavior, mobile performance metrics, battery usage, crash reports, and conversion funnels to help you optimize your mobile app's engagement and retention."
-        }
-      ]
-    },
-    "certificates": {
-      "heading": "Compliances & Certifications We Adhere to for Secure App Development",
-      "description": "For enterprises, complying with essential industry regulations is a dire necessity to protect brand reputation and avert legal repercussions. Therefore, we at Appinventiv embed a compliance-first approach into every stage of development.",
-      "categories": [
-        {
-          "number": "01",
-          "title": "Data Protection & Privacy Regulations",
-          "items": [
-            { "name": "GDPR" },
-            { "name": "CCPA" },
-            { "name": "FTC" },
-            { "name": "HIPAA" },
-            { "name": "PIPEDA" },
-            { "name": "ISO/IEC 27001" },
-            { "name": "DPDP Act, 2023 (Data Protection Bill India)" }
-          ]
-        },
-        {
-          "number": "02",
-          "title": "Payment & Transaction Security",
-          "items": [
-            { "name": "PCI DSS" },
-            { "name": "PCI DSS Level 1" },
-            { "name": "PCI DSS Level 2" },
-            { "name": "Payment Card Industry Data Security Standard" },
-            { "name": "EMVCo" },
-            { "name": "3D Secure" },
-            { "name": "Tokenization Standards" }
-          ]
-        },
-        {
-          "number": "03",
-          "title": "App Development & Security Standards",
-          "items": [
-            { "name": "OWASP Mobile Top 10" },
-            { "name": "OWASP ASVS" },
-            { "name": "ISO/IEC 27001" },
-            { "name": "ISO/IEC 27017" },
-            { "name": "ISO/IEC 27018" },
-            { "name": "SOC 2 Type II" },
-            { "name": "NIST Cybersecurity Framework" }
-          ]
-        },
-        {
-          "number": "04",
-          "title": "Mobile App Store Guidelines",
-          "items": [
-            { "name": "Apple App Store Guidelines" },
-            { "name": "Google Play Store Policies" },
-            { "name": "Apple Human Interface Guidelines" },
-            { "name": "Material Design Guidelines" },
-            { "name": "Firebase App Check" },
-            { "name": "App Transport Security" },
-            { "name": "Google Play Security Policies" }
-          ]
-        },
-        {
-          "number": "05",
-          "title": "Industry Standards & Protocols",
-          "items": [
-            { "name": "ISO 27001" },
-            { "name": "ISO 9001" },
-            { "name": "CMMI Level 5" },
-            { "name": "Agile/Scrum Certification" },
-            { "name": "AWS Well-Architected Framework" },
-            { "name": "Google Cloud Security Framework" },
-            { "name": "Azure Compliance" }
-          ]
-        }
-      ]
-    },
-    "industries": {
-      "heading": "Crafting Unique and Tailored Mobile Apps for a Spectrum of Industries",
-      "description": "Appinventiv is an enterprise-grade mobile app development firm that delivers industry-specific custom app solutions for 35+ industries, thus empowering businesses to innovate and achieve strategic objectives.",
-      "industries": [
-        {
-          "id": "healthcare",
-          "name": "Healthcare",
-          "icon": "heart",
-          "details": "Transform healthcare delivery with secure, HIPAA-compliant mobile apps that connect patients with providers, enable telemedicine, manage medical records, and enhance patient care experiences."
-        },
-        {
-          "id": "finance",
-          "name": "Finance",
-          "icon": "dollarSign",
-          "details": "Build secure fintech applications with advanced encryption, real-time transactions, digital wallets, investment tracking, and seamless banking integrations for next-generation financial services."
-        },
-        {
-          "id": "education",
-          "name": "Education",
-          "icon": "graduationCap",
-          "details": "Create engaging educational apps with interactive learning modules, virtual classrooms, progress tracking, and personalized learning experiences that revolutionize how students learn and educators teach."
-        },
-        {
-          "id": "on-demand",
-          "name": "On-Demand",
-          "icon": "sparkles",
-          "details": "Develop on-demand service platforms with real-time tracking, seamless payment integration, multi-service support, and efficient delivery management to connect service providers with customers instantly."
-        },
-        {
-          "id": "entertainment",
-          "name": "Entertainment",
-          "icon": "radio",
-          "details": "Build immersive entertainment apps with streaming capabilities, social sharing features, personalized content recommendations, and interactive experiences that keep users engaged and entertained."
-        },
-        {
-          "id": "government",
-          "name": "Government",
-          "icon": "building",
-          "details": "Create secure government applications with citizen services, document management, public information portals, and compliance features that enhance civic engagement and streamline government operations."
-        },
-        {
-          "id": "restaurant",
-          "name": "Restaurant",
-          "icon": "utensilsCrossed",
-          "details": "Develop restaurant apps with online ordering, table reservations, menu management, loyalty programs, and seamless payment processing to enhance customer dining experiences and boost revenue."
-        },
-        {
-          "id": "ecommerce",
-          "name": "eCommerce",
-          "icon": "shoppingCart",
-          "details": "Build e-commerce apps with seamless shopping experiences, payment gateways, order tracking, inventory management, and personalized recommendations to boost sales and customer engagement."
-        },
-        {
-          "id": "logistics",
-          "name": "Logistics",
-          "icon": "truck",
-          "details": "Optimize supply chain and delivery operations with advanced logistics apps for tracking, fleet management, and route optimization."
-        },
-        {
-          "id": "social-media",
-          "name": "Social Media",
-          "icon": "smartphone",
-          "details": "Build engaging social networking platforms, community apps, and communication tools that connect people and foster interaction."
-        },
-        {
-          "id": "games-and-sports",
-          "name": "Games and Sports",
-          "icon": "gamepad2",
-          "details": "Develop immersive gaming experiences, sports analytics apps, and fan engagement platforms for enthusiasts and professionals."
-        },
-        {
-          "id": "travel",
-          "name": "Travel",
-          "icon": "bus",
-          "details": "Create comprehensive travel apps for booking flights, hotels, car rentals, and providing personalized itinerary management and local guides."
-        },
-        {
-          "id": "aviation",
-          "name": "Aviation",
-          "icon": "plane",
-          "details": "Design specialized aviation apps for flight tracking, pilot tools, airline operations, and passenger services, enhancing efficiency and safety."
-        },
-        {
-          "id": "real-estate",
-          "name": "Real Estate",
-          "icon": "building",
-          "details": "Develop innovative real estate solutions for property listings, virtual tours, agent tools, and investment management, simplifying buying and selling."
-        },
-        {
-          "id": "electric-vehicle",
-          "name": "Electric Vehicle",
-          "icon": "zap",
-          "details": "Build smart EV apps for charging station locators, battery management, route planning, and vehicle diagnostics, supporting the electric revolution."
-        },
-        {
-          "id": "agriculture",
-          "name": "Agriculture",
-          "icon": "leaf",
-          "details": "Create modern agriculture apps for crop monitoring, farm management, weather forecasting, and livestock tracking, boosting productivity and sustainability."
-        },
-        {
-          "id": "oil-and-gas",
-          "name": "Oil and Gas",
-          "icon": "fuel",
-          "details": "Develop robust apps for oil and gas exploration, production monitoring, field operations, and safety management, ensuring efficiency and compliance."
-        },
-        {
-          "id": "insurance",
-          "name": "Insurance",
-          "icon": "shield",
-          "details": "Build secure insurance apps for policy management, claims processing, premium payments, and personalized coverage options, enhancing customer experience."
-        },
-        {
-          "id": "saas",
-          "name": "SaaS",
-          "icon": "cloudCog",
-          "details": "Develop scalable Software as a Service applications with cloud infrastructure, subscription management, multi-tenancy support, and seamless integrations for modern businesses."
-        },
-        {
-          "id": "telecom",
-          "name": "Telecom",
-          "icon": "phone",
-          "details": "Build robust telecom apps for network management, customer service, billing systems, and communication solutions that enhance connectivity and user experience."
-        },
-        {
-          "id": "automotive",
-          "name": "Automotive",
-          "icon": "car",
-          "details": "Create innovative automotive apps for vehicle diagnostics, navigation systems, fleet management, connected car features, and driver assistance technologies."
-        },
-        {
-          "id": "manufacturing",
-          "name": "Manufacturing",
-          "icon": "factory",
-          "details": "Develop manufacturing apps for production monitoring, quality control, inventory management, supply chain optimization, and industrial automation solutions."
+          "q": "Can you help with app analytics and performance optimization?",
+          "a": "Absolutely! We integrate mobile analytics from day one and provide insights on user behavior, mobile performance metrics, battery usage, crash reports, and conversion funnels to help you optimize your app's engagement and retention."
         }
       ]
     }
