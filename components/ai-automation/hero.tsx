@@ -118,7 +118,7 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 						<div className="relative w-12 h-12 md:w-16 md:h-16">
 							<div className="w-full h-full overflow-hidden">
 								<Image
-									src="/homepage/hero/1.jpg"
+									src="/ai-automation/heroOne.webp"
 									alt="AI Bot"
 									fill
 									className="object-cover"
@@ -165,7 +165,7 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 						<div className="relative w-12 h-12 md:w-16 md:h-16">
 							<div className="w-full h-full rounded-full overflow-hidden">
 								<Image
-									src="/homepage/hero/2.jpg"
+									src="/ai-automation/heroTwo.webp"
 									alt="User 1"
 									fill
 									className="object-cover"
@@ -211,7 +211,7 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 						<div className="relative w-12 h-12 md:w-16 md:h-16">
 							<div className="w-full h-full rounded-full overflow-hidden">
 								<Image
-									src="/homepage/hero/3.jpg"
+									src="/ai-automation/heroThree.webp"
 									alt="User 2"
 									fill
 									className="object-cover"

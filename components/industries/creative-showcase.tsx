@@ -98,18 +98,18 @@ export default function CreativeShowcase({
 	speedMsPerLoop = 18000,
 }: CreativeShowcaseProps) {
 	const fallback: string[] = [
-		"/hero.webp",
-		"/lightbulb-and-brain-wooden-blocks-creative-concept.jpg",
-		"/man-in-video-call-meeting.jpg",
-		"/two-women-laughing-with-headphones-podcast-setup.jpg",
-		"/elegant-product-packaging-boxes-branding.jpg",
-		"/seo/services/localcit.webp",
-		"/seo/services/seo-audit.png",
-		"/seo/services/secu.webp",
-		"/seo/services/seo.webp",
-		"/seo/services/on-page.webp",
-		"/seo/services/technical.webp",
-		"/seo/services/companaly.webp"
+		"/industry/showOne.webp",
+		"/industry/showTwo.webp",
+		"/industry/showThree.webp",
+		"/industry/showFour.webp",
+		"/industry/showFive.webp",
+		"/industry/showSix.webp",
+		"/industry/showSeven.webp",
+		"/industry/showEight.webp",
+		"/industry/showNine.webp",
+		"/industry/showTen.webp",
+		"/industry/showEleven.webp",
+		"/industry/showTwelve.webp.webp"
 	]
 	const list = Array.isArray(images) && images.length ? images : fallback
 
