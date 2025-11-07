@@ -19,7 +19,6 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 			<div className="relative z-20 container mx-auto py-6 md:py-0 px-6 lg:px-12">
 				<div className="relative flex items-center justify-center min-h-[70vh]">
 					<div className="max-w-5xl mx-auto text-center space-y-8">
-
 						{/* Main Title */}
 						<motion.h1
 							initial={{
@@ -114,16 +113,19 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 								delay: 1,
 							},
 						}}
-						className="absolute left-8 top-[15%] md:left-16 lg:left-24"
+						className="pointer-events-none absolute top-0 left-3 md:left-16 md:top-[2%]"
 					>
-						<div className="relative w-14 h-14 md:w-16 md:h-16">
+						<div className="relative w-12 h-12 md:w-16 md:h-16">
 							<div className="w-full h-full overflow-hidden">
 								<Image
 									src="/homepage/hero/1.jpg"
 									alt="AI Bot"
 									fill
-className = "object-cover"
-style={{ borderRadius: "50%" }}
+									className="object-cover"
+									style={{
+										borderRadius:
+											"50%",
+									}}
 								/>
 							</div>
 							{/* Online indicator */}
@@ -158,23 +160,26 @@ style={{ borderRadius: "50%" }}
 								delay: 1.2,
 							},
 						}}
-						className="absolute right-8 top-[15%] md:right-16 lg:right-24"
+						className="pointer-events-none absolute top-0 right-3 md:right-16 md:top-[3%]"
 					>
-						<div className="relative w-14 h-14 md:w-16 md:h-16">
+						<div className="relative w-12 h-12 md:w-16 md:h-16">
 							<div className="w-full h-full rounded-full overflow-hidden">
 								<Image
 									src="/homepage/hero/2.jpg"
 									alt="User 1"
 									fill
-className = "object-cover"
-style={{ borderRadius: "50%" }}
+									className="object-cover"
+									style={{
+										borderRadius:
+											"50%",
+									}}
 								/>
 							</div>
 							<div className="absolute bottom-0 right-0 w-3 h-3 md:w-4 md:h-4 bg-green3 rounded-full border-2 border-white"></div>
 						</div>
 					</motion.div>
 
-					{/* User Avatar 2 - Bottom Left */}
+					{/* User Avatar 2 - Bottom */}
 					<motion.div
 						initial={{
 							opacity: 0,
@@ -201,16 +206,19 @@ style={{ borderRadius: "50%" }}
 								delay: 1.4,
 							},
 						}}
-						className="absolute left-8 bottom-[25%] md:left-16 lg:left-24"
+						className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 md:bottom-[6%] md:left-32 md:translate-x-0 lg:left-24"
 					>
-						<div className="relative w-14 h-14 md:w-16 md:h-16">
+						<div className="relative w-12 h-12 md:w-16 md:h-16">
 							<div className="w-full h-full rounded-full overflow-hidden">
 								<Image
 									src="/homepage/hero/3.jpg"
 									alt="User 2"
 									fill
-className = "object-cover"
-										style={{ borderRadius: "50%" }}
+									className="object-cover"
+									style={{
+										borderRadius:
+											"50%",
+									}}
 								/>
 							</div>
 							<div className="absolute bottom-0 right-0 w-3 h-3 md:w-4 md:h-4 bg-green3 rounded-full border-2 border-white"></div>
