@@ -21,42 +21,26 @@ import PainPoints from "@/components/commonSections/painpoints"
 import KeyBenefits from "@/components/commonSections/keybenefits"
 import Features from "@/components/commonSections/features"
 
-const allowedSlugs = [
-	"search-engine-optimisation",
-	"local-seo",
-	"wordpress-seo",
-	"ecom-seo",
-	"ai-seo",
-	"shopify-seo",
-	"seo-audits",
-	"online-reputation-management",
-	"seo-migration",
-	"small-business-seo",
-	"lead-generation",
-	"link-building",
-	"international-seo",
-	"mobile-seo",
-	"voice-search-optimisation",
-	"video-seo",
-	"youtube-seo",
-	"seo-strategy",
-	"geo",
-	"sge",
-	"app-store-optimisation",
-	"guest-posting",
-	"local-citations",
-	"penalty-recovery",
-	"multilingual-seo",
-]
+const slugAliases: Record<string, keyof typeof seoData> = {
+	seo: "search-engine-optimisation",
+	localseo: "local-seo",
+	"seo-audit": "seo-audits",
+	orm: "online-reputation-management",
+}
 
 export default function SeoSlugPage({ params }: { params: { slug: string } }) {
-	if (!allowedSlugs.includes(params.slug)) {
+	const requestedSlug = params.slug
+	const resolvedKey = (
+		Object.prototype.hasOwnProperty.call(seoData, requestedSlug)
+			? requestedSlug
+			: slugAliases[requestedSlug]
+	) as keyof typeof seoData | undefined
+
+	if (!resolvedKey || !seoData[resolvedKey]) {
 		notFound()
 	}
 
-	const currentSeoData = seoData[
-		params.slug as keyof typeof seoData
-	] as any
+	const currentSeoData = seoData[resolvedKey] as any
 
 	return (
 		<main>

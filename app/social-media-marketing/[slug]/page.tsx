@@ -18,6 +18,7 @@ import Faq from "@/components/commonSections/faq"
 import CaseStudy from "@/components/homepage/casestudy"
 import Features from "@/components/commonSections/features"
 import KeyBenefits from "@/components/commonSections/keybenefits"
+import WhyWork from "@/components/social-media/whywork"
 
 const allowedSlugs = [
 	"social-media-marketing",
@@ -95,44 +96,44 @@ export default function SocialMediaMarketingSlugPage({
 
 	return (
 		<main>
-    <div className="relative">
-    <Navbar />
-    <SocialMediaHero
-      data={
-        currentData?.hero || {
-          heading: "Social Media Marketing that Drives Growth",
-          subheading: "Strategic content, community marketing, and insights for Meta, LinkedIn, TikTok, and more.",
-          ctaText: "Market My Brand",
-        }
-      }
-    />
-  </div>
-  <Form data={currentData?.form} />
-  <BrandsMarquee />
-  <IntroParagraph data={introData} />
-  <PainPoints data={painData} />
-  <Services
-    data={currentData?.services}
-    serviceCards={currentData?.serviceCards}
-    basePath="/social-media-marketing"
-  />
-  <Content
-    data={currentData?.content}
-    imagePathPrefix="/seo/content"
-  />
-  <SectionPainPoint />
-      < Apart />
-      <CaseStudy />
-  <Process2
-    data={currentData?.services}
-    processData={currentData?.process}
-      />
-      <KeyBenefits data={benefitsData} />
-< Features data = { currentData?.features } />
-<Faq data={currentData?.faq} />
-  <OtherServices />
-  <Cta data={currentData?.services} />
-  <Footer />
+			<div className="relative">
+				<Navbar />
+				<SocialMediaHero
+					data={
+						currentData?.hero || {
+							heading: "Social Media Marketing that Drives Growth",
+							subheading: "Strategic content, community marketing, and insights for Meta, LinkedIn, TikTok, and more.",
+							ctaText: "Market My Brand",
+						}
+					}
+				/>
+			</div>
+			<Form data={currentData?.form} />
+			<BrandsMarquee />
+			<IntroParagraph data={introData} />
+			<PainPoints data={painData} />
+			<Services
+				data={currentData?.services}
+				serviceCards={currentData?.serviceCards}
+				basePath="/social-media-marketing"
+			/>
+			<Content
+				data={currentData?.content}
+				imagePathPrefix="/seo/content"
+			/>
+			<SectionPainPoint />
+			<WhyWork />
+			<CaseStudy />
+			<Process2
+				data={currentData?.services}
+				processData={currentData?.process}
+			/>
+			<KeyBenefits data={benefitsData} />
+			<Features data={currentData?.features} />
+			<Faq data={currentData?.faq} />
+			<OtherServices />
+			<Cta data={currentData?.services} />
+			<Footer />
 		</main>
 	)
 }

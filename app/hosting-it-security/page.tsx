@@ -16,6 +16,7 @@ import PainPoints from "@/components/commonSections/painpoints"
 import KeyBenefits from "@/components/commonSections/keybenefits"
 import Features from "@/components/commonSections/features"
 import Apart from "@/components/homepage/apart"
+import HostingProcess from "@/components/hosting-it-security/hostingProcess"
 
 export default function HostingItSecurityPage() {
 	const currentData = hostingData["hosting-it-security"] as any
@@ -45,14 +46,17 @@ export default function HostingItSecurityPage() {
 					currentData?.premiumCloudServices
 				}
 			/>
-			<Content data={currentData?.content} imagePathPrefix="/seo/content" />
+			<Content
+				data={currentData?.content}
+				imagePathPrefix="/seo/content"
+			/>
 			<Apart />
 			<CaseStudy />
-			
+			<HostingProcess />
 			<KeyBenefits data={currentData?.keyBenefits} />
 			<Features data={currentData?.features} />
-	<Faq data={ currentData?.faq } />
-	<OtherServices />
+			<Faq data={currentData?.faq} />
+			<OtherServices />
 			<Cta data={currentData?.services} />
 			<Footer />
 		</main>

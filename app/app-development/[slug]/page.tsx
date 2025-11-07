@@ -28,7 +28,7 @@ const allowedSlugs = [
 	"ios-app-development",
 	"android-app-development",
 	"react-native-development",
-	"flutter-development",
+	"flutter-app-development",
 	"software-development",
 	"progressive-web-apps",
 ]

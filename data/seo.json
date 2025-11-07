@@ -104,121 +104,233 @@
         }
       ]
     },
-    "introParagraph": {
-      "heading": "Win your backyard first.",
-      "problemStatement": "Local customers can’t find you when they search nearby. Inconsistent listings, weak GBP presence, and thin local content are costing you calls and foot traffic.",
-      "valueProposition": "We make you the obvious local choice with optimized Google Business Profile, consistent citations, and location-focused content that drives ‘near me’ demand."
-    },
-    "painPoints": {
-      "heading": "Fix what blocks local visibility",
-      "subheading": "The most common local SEO issues we solve:",
-      "painPoints": [
-        {"problem": "Weak Google Business Profile signals (categories, photos, posts).","solution": "We fully optimize GBP with data completeness, category tuning, visuals, and posting cadence."},
-        {"problem": "NAP inconsistencies across directories.","solution": "We audit and correct citations at scale so Google always sees a single source of truth."},
-        {"problem": "No location/service pages targeting local intent.","solution": "We create high‑intent pages that rank for ‘service + suburb’ queries and convert."}
-      ]
-    },
-    "keyBenefits": {
-      "heading": "Local outcomes that matter",
-      "subheading": "Be found, chosen, and visited by nearby customers:",
-      "benefits": [
-        {"title": "Map Pack Visibility","description": "Appear more often in top 3 map results for revenue keywords."},
-        {"title": "More Calls & Bookings","description": "Turn local searches into phone calls, directions, and enquiries."},
-        {"title": "Consistent Presence","description": "Clean, accurate listings across the web that build trust and rankings."}
-      ]
-    },
-    "introParagraph": {
-      "heading": "Built for WordPress realities.",
-      "problemStatement": "Plugins, themes and media bloat slow WordPress sites and block rankings. Duplicate archives and poor markup confuse crawlers.",
-      "valueProposition": "We fix WordPress‑specific SEO issues at the root—theme, plugins, architecture—so content can rank fast and safely."
-    },
-    "painPoints": {
-      "heading": "WordPress SEO blockers",
-      "subheading": "What typically holds WP sites back:",
-      "painPoints": [
-        {"problem": "Slow Core Web Vitals from heavy themes/plugins.","solution": "We streamline assets, enable caching/CDN, and optimize images for CWV wins."},
-        {"problem": "Duplicate archives and taxonomy bloat.","solution": "We normalize archive behavior, refine taxonomies, and implement sane indexing rules."},
-        {"problem": "Messy schema and meta from conflicting plugins.","solution": "We set a single source of truth for SEO metadata and structured data."}
-      ]
-    },
-    "keyBenefits": {
-      "heading": "WP results you can feel",
-      "subheading": "Cleaner architecture, faster pages, stronger rankings:",
-      "benefits": [
-        {"title": "Faster Pages","description": "Pass CWV with optimized assets and lean theme code."},
-        {"title": "Clear Structure","description": "Taxonomies and internal links that build topical authority."},
-        {"title": "Stable SEO Setup","description": "Conflict‑free plugin configuration and durable governance."}
-      ]
-    },
-    "introParagraph": {
-      "heading": "Make your store discoverable.",
-      "problemStatement": "Category sprawl, thin PDPs, and index bloat stop shoppers finding your products. Technical issues drain crawl budget and kill rankings.",
-      "valueProposition": "We engineer e‑commerce SEO that scales—clean architecture, fast PDPs, rich schema—so more qualified buyers land on your products."
-    },
-    "painPoints": {
-      "heading": "E‑commerce SEO pain",
-      "subheading": "The most common blockers we fix:",
-      "painPoints": [
-        {"problem": "Duplicate content from facets, parameters, and variants.","solution": "We define canonical rules, pagination, and crawl directives that preserve equity and reduce bloat."},
-        {"problem": "Weak PDPs without intent coverage.","solution": "We enrich PDPs with optimized titles, content, media, and structured data."},
-        {"problem": "Slow pages at scale.","solution": "We optimize delivery, images, and scripts to speed up collection and product templates."}
-      ]
-    },
-    "keyBenefits": {
-      "heading": "Store outcomes",
-      "subheading": "Rank more SKUs, grow non‑brand demand, convert better:",
-      "benefits": [
-        {"title": "More Ranked PDPs","description": "Product pages that win long‑tail queries reliably."},
-        {"title": "Category Growth","description": "Collections structured to capture non‑brand demand."},
-        {"title": "Revenue Lift","description": "SEO that compounds with CRO for higher AOV and CVR."}
-      ]
-    },
-    "introParagraph": {
-      "heading": "Ship SEO faster with AI.",
-      "problemStatement": "Teams drown in research and production cycles. Opportunities are missed because manual workflows can’t keep up with the market.",
-      "valueProposition": "We pair AI systems with human guardrails to accelerate research, briefs, and optimization—without sacrificing quality or accuracy."
-    },
-    "painPoints": {
-      "heading": "Bottlenecks AI removes",
-      "subheading": "Where AI adds leverage without risk:",
-      "painPoints": [
-        {"problem": "Slow topic research and clustering.","solution": "We automate discovery and clustering, then validate with experts for precision."},
-        {"problem": "Inconsistent on‑page optimization.","solution": "AI‑assisted optimization with editorial rules enforces consistency at scale."},
-        {"problem": "Production roadblocks.","solution": "Human‑in‑the‑loop workflows speed briefs, outlines, and edits with QA."}
-      ]
-    },
-    "keyBenefits": {
-      "heading": "Speed and scale",
-      "subheading": "Do more, ship faster, keep quality high:",
-      "benefits": [
-        {"title": "Faster Time‑to‑Publish","description": "Compress weeks into days with AI‑accelerated workflows."},
-        {"title": "Coverage Expansion","description": "Target more intents and topics without ballooning headcount."},
-        {"title": "Consistent Quality","description": "Editorial guardrails and human QA keep outputs on‑brand and accurate."}
-      ]
-    },
-    "introParagraph": {
-      "heading": "Make Shopify SEO work for growth.",
-      "problemStatement": "Apps, duplicate URLs, and heavy themes slow Shopify and dilute equity. Collections and PDPs don’t capture enough non‑brand demand.",
-      "valueProposition": "We tune theme and Liquid, fix duplication, and structure collections/PDPs to rank—and convert—at scale."
-    },
-    "painPoints": {
-      "heading": "Shopify SEO hurdles",
-      "subheading": "Where most stores get stuck:",
-      "painPoints": [
-        {"problem": "Duplicate content from collections/tags.","solution": "We implement canonical rules, template logic, and indexing guardrails."},
-        {"problem": "Slow theme and third‑party scripts.","solution": "We optimize Liquid, defer scripts, and compress media for CWV gains."},
-        {"problem": "Thin collection and PDP content.","solution": "We add contextual content, FAQs, and schema to capture long‑tail demand."}
-      ]
-    },
-    "keyBenefits": {
-      "heading": "Shopify outcomes",
-      "subheading": "Cleaner, faster store that ranks and converts:",
-      "benefits": [
-        {"title": "Better Rankings","description": "Collections and PDPs that consistently win target queries."},
-        {"title": "Faster Experience","description": "Theme and asset optimizations that improve CVR and SEO."},
-        {"title": "Stable Governance","description": "Sensible rules that keep SEO healthy as you scale apps and SKUs."}
-      ]
-    },
+    "specialisations": [
+      {
+        "slug": "localseo",
+        "title": "Local SEO",
+        "introParagraph": {
+          "heading": "Win your backyard first.",
+          "problemStatement": "Local customers can’t find you when they search nearby. Inconsistent listings, weak GBP presence, and thin local content are costing you calls and foot traffic.",
+          "valueProposition": "We make you the obvious local choice with optimized Google Business Profile, consistent citations, and location-focused content that drives ‘near me’ demand."
+        },
+        "painPoints": {
+          "heading": "Fix what blocks local visibility",
+          "subheading": "The most common local SEO issues we solve:",
+          "painPoints": [
+            {
+              "problem": "Weak Google Business Profile signals (categories, photos, posts).",
+              "solution": "We fully optimize GBP with data completeness, category tuning, visuals, and posting cadence."
+            },
+            {
+              "problem": "NAP inconsistencies across directories.",
+              "solution": "We audit and correct citations at scale so Google always sees a single source of truth."
+            },
+            {
+              "problem": "No location/service pages targeting local intent.",
+              "solution": "We create high‑intent pages that rank for ‘service + suburb’ queries and convert."
+            }
+          ]
+        },
+        "keyBenefits": {
+          "heading": "Local outcomes that matter",
+          "subheading": "Be found, chosen, and visited by nearby customers:",
+          "benefits": [
+            {
+              "title": "Map Pack Visibility",
+              "description": "Appear more often in top 3 map results for revenue keywords."
+            },
+            {
+              "title": "More Calls & Bookings",
+              "description": "Turn local searches into phone calls, directions, and enquiries."
+            },
+            {
+              "title": "Consistent Presence",
+              "description": "Clean, accurate listings across the web that build trust and rankings."
+            }
+          ]
+        }
+      },
+      {
+        "slug": "wordpress-seo",
+        "title": "WordPress SEO",
+        "introParagraph": {
+          "heading": "Built for WordPress realities.",
+          "problemStatement": "Plugins, themes and media bloat slow WordPress sites and block rankings. Duplicate archives and poor markup confuse crawlers.",
+          "valueProposition": "We fix WordPress‑specific SEO issues at the root—theme, plugins, architecture—so content can rank fast and safely."
+        },
+        "painPoints": {
+          "heading": "WordPress SEO blockers",
+          "subheading": "What typically holds WP sites back:",
+          "painPoints": [
+            {
+              "problem": "Slow Core Web Vitals from heavy themes/plugins.",
+              "solution": "We streamline assets, enable caching/CDN, and optimize images for CWV wins."
+            },
+            {
+              "problem": "Duplicate archives and taxonomy bloat.",
+              "solution": "We normalize archive behavior, refine taxonomies, and implement sane indexing rules."
+            },
+            {
+              "problem": "Messy schema and meta from conflicting plugins.",
+              "solution": "We set a single source of truth for SEO metadata and structured data."
+            }
+          ]
+        },
+        "keyBenefits": {
+          "heading": "WP results you can feel",
+          "subheading": "Cleaner architecture, faster pages, stronger rankings:",
+          "benefits": [
+            {
+              "title": "Faster Pages",
+              "description": "Pass CWV with optimized assets and lean theme code."
+            },
+            {
+              "title": "Clear Structure",
+              "description": "Taxonomies and internal links that build topical authority."
+            },
+            {
+              "title": "Stable SEO Setup",
+              "description": "Conflict‑free plugin configuration and durable governance."
+            }
+          ]
+        }
+      },
+      {
+        "slug": "ecom-seo",
+        "title": "E-commerce SEO",
+        "introParagraph": {
+          "heading": "Make your store discoverable.",
+          "problemStatement": "Category sprawl, thin PDPs, and index bloat stop shoppers finding your products. Technical issues drain crawl budget and kill rankings.",
+          "valueProposition": "We engineer e‑commerce SEO that scales—clean architecture, fast PDPs, rich schema—so more qualified buyers land on your products."
+        },
+        "painPoints": {
+          "heading": "E‑commerce SEO pain",
+          "subheading": "The most common blockers we fix:",
+          "painPoints": [
+            {
+              "problem": "Duplicate content from facets, parameters, and variants.",
+              "solution": "We define canonical rules, pagination, and crawl directives that preserve equity and reduce bloat."
+            },
+            {
+              "problem": "Weak PDPs without intent coverage.",
+              "solution": "We enrich PDPs with optimized titles, content, media, and structured data."
+            },
+            {
+              "problem": "Slow pages at scale.",
+              "solution": "We optimize delivery, images, and scripts to speed up collection and product templates."
+            }
+          ]
+        },
+        "keyBenefits": {
+          "heading": "Store outcomes",
+          "subheading": "Rank more SKUs, grow non‑brand demand, convert better:",
+          "benefits": [
+            {
+              "title": "More Ranked PDPs",
+              "description": "Product pages that win long‑tail queries reliably."
+            },
+            {
+              "title": "Category Growth",
+              "description": "Collections structured to capture non‑brand demand."
+            },
+            {
+              "title": "Revenue Lift",
+              "description": "SEO that compounds with CRO for higher AOV and CVR."
+            }
+          ]
+        }
+      },
+      {
+        "slug": "ai-seo",
+        "title": "AI-Accelerated SEO",
+        "introParagraph": {
+          "heading": "Ship SEO faster with AI.",
+          "problemStatement": "Teams drown in research and production cycles. Opportunities are missed because manual workflows can’t keep up with the market.",
+          "valueProposition": "We pair AI systems with human guardrails to accelerate research, briefs, and optimization—without sacrificing quality or accuracy."
+        },
+        "painPoints": {
+          "heading": "Bottlenecks AI removes",
+          "subheading": "Where AI adds leverage without risk:",
+          "painPoints": [
+            {
+              "problem": "Slow topic research and clustering.",
+              "solution": "We automate discovery and clustering, then validate with experts for precision."
+            },
+            {
+              "problem": "Inconsistent on‑page optimization.",
+              "solution": "AI‑assisted optimization with editorial rules enforces consistency at scale."
+            },
+            {
+              "problem": "Production roadblocks.",
+              "solution": "Human‑in-the-loop workflows speed briefs, outlines, and edits with QA."
+            }
+          ]
+        },
+        "keyBenefits": {
+          "heading": "Speed and scale",
+          "subheading": "Do more, ship faster, keep quality high:",
+          "benefits": [
+            {
+              "title": "Faster Time‑to‑Publish",
+              "description": "Compress weeks into days with AI‑accelerated workflows."
+            },
+            {
+              "title": "Coverage Expansion",
+              "description": "Target more intents and topics without ballooning headcount."
+            },
+            {
+              "title": "Consistent Quality",
+              "description": "Editorial guardrails and human QA keep outputs on‑brand and accurate."
+            }
+          ]
+        }
+      },
+      {
+        "slug": "shopify-seo",
+        "title": "Shopify SEO",
+        "introParagraph": {
+          "heading": "Make Shopify SEO work for growth.",
+          "problemStatement": "Apps, duplicate URLs, and heavy themes slow Shopify and dilute equity. Collections and PDPs don’t capture enough non‑brand demand.",
+          "valueProposition": "We tune theme and Liquid, fix duplication, and structure collections/PDPs to rank—and convert—at scale."
+        },
+        "painPoints": {
+          "heading": "Shopify SEO hurdles",
+          "subheading": "Where most stores get stuck:",
+          "painPoints": [
+            {
+              "problem": "Duplicate content from collections/tags.",
+              "solution": "We implement canonical rules, template logic, and indexing guardrails."
+            },
+            {
+              "problem": "Slow theme and third-party scripts.",
+              "solution": "We optimize Liquid, defer scripts, and compress media for CWV gains."
+            },
+            {
+              "problem": "Thin collection and PDP content.",
+              "solution": "We add contextual content, FAQs, and schema to capture long‑tail demand."
+            }
+          ]
+        },
+        "keyBenefits": {
+          "heading": "Shopify outcomes",
+          "subheading": "Cleaner, faster store that ranks and converts:",
+          "benefits": [
+            {
+              "title": "Better Rankings",
+              "description": "Collections and PDPs that consistently win target queries."
+            },
+            {
+              "title": "Faster Experience",
+              "description": "Theme and asset optimizations that improve CVR and SEO."
+            },
+            {
+              "title": "Stable Governance",
+              "description": "Sensible rules that keep SEO healthy as you scale apps and SKUs."
+            }
+          ]
+        }
+      }
+    ],
     "content": {
       "heading": "Helping you stay competitive.",
       "text1": "This requires a very different approach than what you'd find in global SEO campaigns. The key point to remember is this:",
@@ -231,20 +343,16 @@
     "process": {
       "steps": [
         "Discovery & Research",
-        "Strategy & Planning", 
+        "Strategy & Planning",
         "Implementation & Optimization",
         "Monitoring & Analysis",
         "Growth & Scaling"
       ],
       "content": [
         "We begin by conducting comprehensive research into your current SEO performance, competitor landscape, and target market opportunities. Our team analyzes your website's technical foundation, content quality, and backlink profile to identify growth potential and develop a data-driven SEO strategy tailored to your business goals.",
-        
         "Based on our research findings, we develop a customized SEO strategy that aligns with your business objectives. This includes keyword targeting, content planning, technical optimization roadmap, and link building strategies. We create detailed project timelines and set measurable KPIs to track progress and ensure accountability.",
-        
         "Our team implements the approved SEO strategy through systematic optimization of your website's technical elements, content structure, and off-page factors. We focus on improving site speed, mobile responsiveness, user experience, and creating high-quality content that resonates with your target audience and search engines.",
-        
         "We continuously monitor your SEO performance through advanced analytics and reporting tools. Our team tracks keyword rankings, organic traffic growth, conversion rates, and other key metrics. We provide detailed monthly reports and adjust strategies based on performance data and algorithm updates.",
-        
         "As your SEO foundation strengthens, we scale successful strategies and expand into new opportunities. This includes targeting additional keywords, creating more content, building more backlinks, and exploring new SEO channels to maximize your organic growth potential and market dominance."
       ]
     },
@@ -1066,18 +1174,36 @@
       "heading": "Audit the whole picture",
       "subheading": "We diagnose the real SEO blockers:",
       "painPoints": [
-        {"problem": "Crawl/index gaps and duplication.","solution": "We correct discovery, canonicalization, and coverage so equity consolidates."},
-        {"problem": "Misaligned content and weak intent coverage.","solution": "We map topics to intents and create a coverage plan that ranks."},
-        {"problem": "Toxic/low‑value links.","solution": "We assess risk, remove liabilities, and target authority gaps."}
+        {
+          "problem": "Crawl/index gaps and duplication.",
+          "solution": "We correct discovery, canonicalization, and coverage so equity consolidates."
+        },
+        {
+          "problem": "Misaligned content and weak intent coverage.",
+          "solution": "We map topics to intents and create a coverage plan that ranks."
+        },
+        {
+          "problem": "Toxic/low‑value links.",
+          "solution": "We assess risk, remove liabilities, and target authority gaps."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Clarity → Action → Results",
       "subheading": "A roadmap your team can execute with confidence:",
       "benefits": [
-        {"title": "Prioritized Fixes","description": "High‑impact changes sequenced for fastest wins."},
-        {"title": "Executive Clarity","description": "Clear metrics, baselines, and targets to align teams."},
-        {"title": "Sustained Gains","description": "Guardrails to keep technical and content hygiene high."}
+        {
+          "title": "Prioritized Fixes",
+          "description": "High‑impact changes sequenced for fastest wins."
+        },
+        {
+          "title": "Executive Clarity",
+          "description": "Clear metrics, baselines, and targets to align teams."
+        },
+        {
+          "title": "Sustained Gains",
+          "description": "Guardrails to keep technical and content hygiene high."
+        }
       ]
     },
     "content": {
@@ -1228,18 +1354,36 @@
       "heading": "ORM realities",
       "subheading": "Where brands lose control—and how we fix it:",
       "painPoints": [
-        {"problem": "Outdated or inconsistent listings.","solution": "We correct and maintain accurate business data across platforms."},
-        {"problem": "Unmanaged negative reviews.","solution": "We implement review response, acquisition, and escalation playbooks."},
-        {"problem": "Unfavorable page‑one results.","solution": "We publish positive, optimized assets that outrank negatives."}
+        {
+          "problem": "Outdated or inconsistent listings.",
+          "solution": "We correct and maintain accurate business data across platforms."
+        },
+        {
+          "problem": "Unmanaged negative reviews.",
+          "solution": "We implement review response, acquisition, and escalation playbooks."
+        },
+        {
+          "problem": "Unfavorable page‑one results.",
+          "solution": "We publish positive, optimized assets that outrank negatives."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Be chosen with confidence",
       "subheading": "Searchers see trust signals—so they convert:",
       "benefits": [
-        {"title": "Better First Impression","description": "Positive, consistent results across the SERP."},
-        {"title": "Review Momentum","description": "Steady acquisition of authentic, high‑quality reviews."},
-        {"title": "Crisis Readiness","description": "Clear processes minimize impact when issues arise."}
+        {
+          "title": "Better First Impression",
+          "description": "Positive, consistent results across the SERP."
+        },
+        {
+          "title": "Review Momentum",
+          "description": "Steady acquisition of authentic, high‑quality reviews."
+        },
+        {
+          "title": "Crisis Readiness",
+          "description": "Clear processes minimize impact when issues arise."
+        }
       ]
     },
     "content": {
@@ -1374,18 +1518,36 @@
       "heading": "Migration risks",
       "subheading": "Common failure points we prevent:",
       "painPoints": [
-        {"problem": "Missing or wrong redirects.","solution": "We deliver complete redirect specs with QA and coverage checks."},
-        {"problem": "Lost metadata and schema.","solution": "We preserve titles, canonicals, schema, and internal links."},
-        {"problem": "Index volatility post‑launch.","solution": "We monitor logs, coverage, and rankings and fix gaps fast."}
+        {
+          "problem": "Missing or wrong redirects.",
+          "solution": "We deliver complete redirect specs with QA and coverage checks."
+        },
+        {
+          "problem": "Lost metadata and schema.",
+          "solution": "We preserve titles, canonicals, schema, and internal links."
+        },
+        {
+          "problem": "Index volatility post‑launch.",
+          "solution": "We monitor logs, coverage, and rankings and fix gaps fast."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Preserve and improve",
       "subheading": "Launch smoothly and stabilize quickly:",
       "benefits": [
-        {"title": "Minimal Traffic Impact","description": "Careful planning avoids the typical 20–40% drop."},
-        {"title": "Clean Architecture","description": "A chance to fix legacy issues during the move."},
-        {"title": "Faster Recovery","description": "Close monitoring accelerates stabilization and growth."}
+        {
+          "title": "Minimal Traffic Impact",
+          "description": "Careful planning avoids the typical 20–40% drop."
+        },
+        {
+          "title": "Clean Architecture",
+          "description": "A chance to fix legacy issues during the move."
+        },
+        {
+          "title": "Faster Recovery",
+          "description": "Close monitoring accelerates stabilization and growth."
+        }
       ]
     },
     "content": {
@@ -1536,18 +1698,36 @@
       "heading": "Big results, small budget",
       "subheading": "Focus on the levers that move the needle:",
       "painPoints": [
-        {"problem": "No local visibility.","solution": "Optimize GBP, citations, and local pages to appear where it counts."},
-        {"problem": "Thin or generic content.","solution": "Publish helpful, local content that answers buyer questions."},
-        {"problem": "Slow site hurts conversions.","solution": "Improve speed and UX to turn clicks into calls and visits."}
+        {
+          "problem": "No local visibility.",
+          "solution": "Optimize GBP, citations, and local pages to appear where it counts."
+        },
+        {
+          "problem": "Thin or generic content.",
+          "solution": "Publish helpful, local content that answers buyer questions."
+        },
+        {
+          "problem": "Slow site hurts conversions.",
+          "solution": "Improve speed and UX to turn clicks into calls and visits."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Right work, right order",
       "subheading": "See impact quickly, then scale:",
       "benefits": [
-        {"title": "Faster Wins","description": "Unlock rankings with basic fixes and clear signals."},
-        {"title": "Lower CPA","description": "Organic leads reduce reliance on paid budgets."},
-        {"title": "Local Authority","description": "Earn trust in your community and online."}
+        {
+          "title": "Faster Wins",
+          "description": "Unlock rankings with basic fixes and clear signals."
+        },
+        {
+          "title": "Lower CPA",
+          "description": "Organic leads reduce reliance on paid budgets."
+        },
+        {
+          "title": "Local Authority",
+          "description": "Earn trust in your community and online."
+        }
       ]
     },
     "content": {
@@ -1698,18 +1878,36 @@
       "heading": "Fix funnel friction",
       "subheading": "Close the gap between visit and lead:",
       "painPoints": [
-        {"problem": "Mismatched intent to page.","solution": "We map queries to the right offers and landing experiences."},
-        {"problem": "Low converting forms.","solution": "We simplify fields, add trust, and speed up performance."},
-        {"problem": "No attribution.","solution": "We track sources and content so budgets back what works."}
+        {
+          "problem": "Mismatched intent to page.",
+          "solution": "We map queries to the right offers and landing experiences."
+        },
+        {
+          "problem": "Low converting forms.",
+          "solution": "We simplify fields, add trust, and speed up performance."
+        },
+        {
+          "problem": "No attribution.",
+          "solution": "We track sources and content so budgets back what works."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "More leads, better leads",
       "subheading": "Organic that impacts revenue:",
       "benefits": [
-        {"title": "Higher CVR","description": "Intent‑aligned pages that remove friction."},
-        {"title": "Qualified Pipeline","description": "Offers matched to buyer stages and needs."},
-        {"title": "Clear ROI","description": "Attribution that proves what drives pipeline."}
+        {
+          "title": "Higher CVR",
+          "description": "Intent‑aligned pages that remove friction."
+        },
+        {
+          "title": "Qualified Pipeline",
+          "description": "Offers matched to buyer stages and needs."
+        },
+        {
+          "title": "Clear ROI",
+          "description": "Attribution that proves what drives pipeline."
+        }
       ]
     },
     "content": {
@@ -1860,18 +2058,36 @@
       "heading": "Link building done right",
       "subheading": "No shortcuts—just durable authority:",
       "painPoints": [
-        {"problem": "Low‑relevance placements.","solution": "We target contextually aligned sites audiences actually read."},
-        {"problem": "Anchor risk and footprints.","solution": "We diversify anchors and enforce strict QA."},
-        {"problem": "One‑off campaigns.","solution": "We build programs that compound authority over time."}
+        {
+          "problem": "Low‑relevance placements.",
+          "solution": "We target contextually aligned sites audiences actually read."
+        },
+        {
+          "problem": "Anchor risk and footprints.",
+          "solution": "We diversify anchors and enforce strict QA."
+        },
+        {
+          "problem": "One‑off campaigns.",
+          "solution": "We build programs that compound authority over time."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Authority that moves rankings",
       "subheading": "Editorial links, measurable impact:",
       "benefits": [
-        {"title": "Safer Profile","description": "White‑hat tactics with rigorous vetting."},
-        {"title": "Topical Relevance","description": "Links that reinforce your expertise areas."},
-        {"title": "Ranking Lift","description": "Better positions and faster index response."}
+        {
+          "title": "Safer Profile",
+          "description": "White‑hat tactics with rigorous vetting."
+        },
+        {
+          "title": "Topical Relevance",
+          "description": "Links that reinforce your expertise areas."
+        },
+        {
+          "title": "Ranking Lift",
+          "description": "Better positions and faster index response."
+        }
       ]
     },
     "content": {
@@ -2022,18 +2238,36 @@
       "heading": "Cross‑border hurdles",
       "subheading": "What blocks international traction:",
       "painPoints": [
-        {"problem": "Wrong hreflang or URL strategy.","solution": "We implement correct targeting via subfolders/subdomains and hreflang."},
-        {"problem": "Cultural misfit content.","solution": "We localize messaging, examples, and proof to the market."},
-        {"problem": "Split equity between locales.","solution": "We consolidate signals and interlink regions properly."}
+        {
+          "problem": "Wrong hreflang or URL strategy.",
+          "solution": "We implement correct targeting via subfolders/subdomains and hreflang."
+        },
+        {
+          "problem": "Cultural misfit content.",
+          "solution": "We localize messaging, examples, and proof to the market."
+        },
+        {
+          "problem": "Split equity between locales.",
+          "solution": "We consolidate signals and interlink regions properly."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Local wins, global scale",
       "subheading": "Each market gets the best version of you:",
       "benefits": [
-        {"title": "Correct Targeting","description": "Hreflang and structure that search engines trust."},
-        {"title": "Market Fit","description": "Content that matches local language and expectations."},
-        {"title": "Compounding Equity","description": "International strategy that reinforces the whole domain."}
+        {
+          "title": "Correct Targeting",
+          "description": "Hreflang and structure that search engines trust."
+        },
+        {
+          "title": "Market Fit",
+          "description": "Content that matches local language and expectations."
+        },
+        {
+          "title": "Compounding Equity",
+          "description": "International strategy that reinforces the whole domain."
+        }
       ]
     },
     "content": {
@@ -2168,18 +2402,36 @@
       "heading": "Mobile blockers",
       "subheading": "Top issues we eliminate:",
       "painPoints": [
-        {"problem": "Heavy scripts and images.","solution": "We optimize delivery, lazy‑load, and compress for instant render."},
-        {"problem": "Tap targets and forms that frustrate.","solution": "We improve layout, inputs, and interactions for thumbs."},
-        {"problem": "Layout shifts and CLS.","solution": "We stabilize assets and reserve space to pass CWV."}
+        {
+          "problem": "Heavy scripts and images.",
+          "solution": "We optimize delivery, lazy‑load, and compress for instant render."
+        },
+        {
+          "problem": "Tap targets and forms that frustrate.",
+          "solution": "We improve layout, inputs, and interactions for thumbs."
+        },
+        {
+          "problem": "Layout shifts and CLS.",
+          "solution": "We stabilize assets and reserve space to pass CWV."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Mobile that ranks and converts",
       "subheading": "Speed + UX = growth:",
       "benefits": [
-        {"title": "Better CWV","description": "Lower LCP, CLS, and INP for stronger rankings."},
-        {"title": "Happier Users","description": "Faster, clearer, touch‑friendly journeys."},
-        {"title": "Higher Revenue","description": "Mobile sessions that convert, not bounce."}
+        {
+          "title": "Better CWV",
+          "description": "Lower LCP, CLS, and INP for stronger rankings."
+        },
+        {
+          "title": "Happier Users",
+          "description": "Faster, clearer, touch‑friendly journeys."
+        },
+        {
+          "title": "Higher Revenue",
+          "description": "Mobile sessions that convert, not bounce."
+        }
       ]
     },
     "content": {
@@ -2314,18 +2566,36 @@
       "heading": "Voice gaps",
       "subheading": "Close the distance to position zero:",
       "painPoints": [
-        {"problem": "No snippet‑ready answers.","solution": "We add concise, factual blocks that earn featured positions."},
-        {"problem": "Wrong question format.","solution": "We rewrite headings to match natural language queries."},
-        {"problem": "Local voice intent ignored.","solution": "We optimize for ‘near me’ voice queries with complete local signals."}
+        {
+          "problem": "No snippet‑ready answers.",
+          "solution": "We add concise, factual blocks that earn featured positions."
+        },
+        {
+          "problem": "Wrong question format.",
+          "solution": "We rewrite headings to match natural language queries."
+        },
+        {
+          "problem": "Local voice intent ignored.",
+          "solution": "We optimize for ‘near me’ voice queries with complete local signals."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Be the spoken answer",
       "subheading": "More impressions with fewer clicks required:",
       "benefits": [
-        {"title": "Featured Visibility","description": "Content structured to win assistant responses."},
-        {"title": "Local Discovery","description": "Better voice presence for ‘near me’ moments."},
-        {"title": "Frictionless Access","description": "Answers delivered without typing or tapping."}
+        {
+          "title": "Featured Visibility",
+          "description": "Content structured to win assistant responses."
+        },
+        {
+          "title": "Local Discovery",
+          "description": "Better voice presence for ‘near me’ moments."
+        },
+        {
+          "title": "Frictionless Access",
+          "description": "Answers delivered without typing or tapping."
+        }
       ]
     },
     "content": {
@@ -2460,18 +2730,36 @@
       "heading": "Video SEO hurdles",
       "subheading": "Fix discoverability and engagement:",
       "painPoints": [
-        {"problem": "Poor metadata.","solution": "We research keywords and optimize titles, descriptions, and tags."},
-        {"problem": "No transcripts or schema.","solution": "We add transcripts and video schema for indexability and rich results."},
-        {"problem": "Low CTR thumbnails.","solution": "We design thumbnails that earn the click without clickbait."}
+        {
+          "problem": "Poor metadata.",
+          "solution": "We research keywords and optimize titles, descriptions, and tags."
+        },
+        {
+          "problem": "No transcripts or schema.",
+          "solution": "We add transcripts and video schema for indexability and rich results."
+        },
+        {
+          "problem": "Low CTR thumbnails.",
+          "solution": "We design thumbnails that earn the click without clickbait."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Views that matter",
       "subheading": "More discovery, more watch time, more impact:",
       "benefits": [
-        {"title": "Higher Rankings","description": "Optimized metadata and schema drive visibility."},
-        {"title": "Better Engagement","description": "Content packaged to maximize watch time and retention."},
-        {"title": "Cross‑Channel Lift","description": "Video supports and strengthens overall SEO."}
+        {
+          "title": "Higher Rankings",
+          "description": "Optimized metadata and schema drive visibility."
+        },
+        {
+          "title": "Better Engagement",
+          "description": "Content packaged to maximize watch time and retention."
+        },
+        {
+          "title": "Cross‑Channel Lift",
+          "description": "Video supports and strengthens overall SEO."
+        }
       ]
     },
     "content": {
@@ -2606,18 +2894,36 @@
       "heading": "Channel growth blockers",
       "subheading": "Fix what holds back discovery:",
       "painPoints": [
-        {"problem": "Weak titles and packaging.","solution": "We create keyword‑rich titles and visuals that drive CTR."},
-        {"problem": "Unclear topic targeting.","solution": "We research clusters and align content with viewer intent."},
-        {"problem": "Poor metadata hygiene.","solution": "We standardize tags, descriptions, and end cards for consistency."}
+        {
+          "problem": "Weak titles and packaging.",
+          "solution": "We create keyword‑rich titles and visuals that drive CTR."
+        },
+        {
+          "problem": "Unclear topic targeting.",
+          "solution": "We research clusters and align content with viewer intent."
+        },
+        {
+          "problem": "Poor metadata hygiene.",
+          "solution": "We standardize tags, descriptions, and end cards for consistency."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Grow views and subs",
       "subheading": "Better packaging, better performance:",
       "benefits": [
-        {"title": "More Discoverability","description": "Videos that rank and appear in Suggested."},
-        {"title": "Higher CTR","description": "Thumbnails and titles that earn the click."},
-        {"title": "Channel Momentum","description": "Compounding growth with a clean content strategy."}
+        {
+          "title": "More Discoverability",
+          "description": "Videos that rank and appear in Suggested."
+        },
+        {
+          "title": "Higher CTR",
+          "description": "Thumbnails and titles that earn the click."
+        },
+        {
+          "title": "Channel Momentum",
+          "description": "Compounding growth with a clean content strategy."
+        }
       ]
     },
     "content": {
@@ -2752,18 +3058,36 @@
       "heading": "Why strategy matters",
       "subheading": "Replace guesswork with clarity:",
       "painPoints": [
-        {"problem": "No prioritization.","solution": "We score opportunities by impact/effort to decide what’s next."},
-        {"problem": "Fragmented execution.","solution": "We align content, technical, and authority into one plan."},
-        {"problem": "Unclear KPIs.","solution": "We define goals, baselines, and measurement cadence."}
+        {
+          "problem": "No prioritization.",
+          "solution": "We score opportunities by impact/effort to decide what’s next."
+        },
+        {
+          "problem": "Fragmented execution.",
+          "solution": "We align content, technical, and authority into one plan."
+        },
+        {
+          "problem": "Unclear KPIs.",
+          "solution": "We define goals, baselines, and measurement cadence."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Confident execution",
       "subheading": "Everyone knows the why, what, and when:",
       "benefits": [
-        {"title": "Focused Effort","description": "Resources go to the highest‑leverage work."},
-        {"title": "Accountability","description": "Clear owners, timelines, and milestones."},
-        {"title": "Measurable Outcomes","description": "Progress tracked against business KPIs."}
+        {
+          "title": "Focused Effort",
+          "description": "Resources go to the highest‑leverage work."
+        },
+        {
+          "title": "Accountability",
+          "description": "Clear owners, timelines, and milestones."
+        },
+        {
+          "title": "Measurable Outcomes",
+          "description": "Progress tracked against business KPIs."
+        }
       ]
     },
     "content": {
@@ -2898,18 +3222,36 @@
       "heading": "GEO challenges",
       "subheading": "Structure for AI consumption:",
       "painPoints": [
-        {"problem": "Unstructured long‑form content.","solution": "We add answer blocks, summaries, and citations AI can parse."},
-        {"problem": "Sparse structured data.","solution": "We implement rich schema aligned to entities and claims."},
-        {"problem": "No knowledge graph presence.","solution": "We connect content to recognized entities for credibility."}
+        {
+          "problem": "Unstructured long‑form content.",
+          "solution": "We add answer blocks, summaries, and citations AI can parse."
+        },
+        {
+          "problem": "Sparse structured data.",
+          "solution": "We implement rich schema aligned to entities and claims."
+        },
+        {
+          "problem": "No knowledge graph presence.",
+          "solution": "We connect content to recognized entities for credibility."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "AI‑readable by design",
       "subheading": "Increase inclusion in generative answers:",
       "benefits": [
-        {"title": "Clear Citability","description": "Content sections that can be quoted reliably."},
-        {"title": "Entity Alignment","description": "Schema and links that reinforce facts and context."},
-        {"title": "Future‑proofing","description": "Content strategy ready for AI search shifts."}
+        {
+          "title": "Clear Citability",
+          "description": "Content sections that can be quoted reliably."
+        },
+        {
+          "title": "Entity Alignment",
+          "description": "Schema and links that reinforce facts and context."
+        },
+        {
+          "title": "Future‑proofing",
+          "description": "Content strategy ready for AI search shifts."
+        }
       ]
     },
     "content": {
@@ -3044,18 +3386,36 @@
       "heading": "SGE realities",
       "subheading": "What selection demands:",
       "painPoints": [
-        {"problem": "Incomplete topical coverage.","solution": "We produce thorough, question‑driven hubs that cover the intent space."},
-        {"problem": "Ambiguous data structures.","solution": "We add schema and content patterns aligned to answer extraction."},
-        {"problem": "Thin authority.","solution": "We support content with references, evidence, and links."}
+        {
+          "problem": "Incomplete topical coverage.",
+          "solution": "We produce thorough, question‑driven hubs that cover the intent space."
+        },
+        {
+          "problem": "Ambiguous data structures.",
+          "solution": "We add schema and content patterns aligned to answer extraction."
+        },
+        {
+          "problem": "Thin authority.",
+          "solution": "We support content with references, evidence, and links."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Visibility in AI answers",
       "subheading": "Protect and grow organic demand:",
       "benefits": [
-        {"title": "Inclusion Odds","description": "Content built for answer selection and citation."},
-        {"title": "Resilient Traffic","description": "Maintain discoverability as SERPs evolve."},
-        {"title": "Authority Signals","description": "Evidence and structure that AIs prefer."}
+        {
+          "title": "Inclusion Odds",
+          "description": "Content built for answer selection and citation."
+        },
+        {
+          "title": "Resilient Traffic",
+          "description": "Maintain discoverability as SERPs evolve."
+        },
+        {
+          "title": "Authority Signals",
+          "description": "Evidence and structure that AIs prefer."
+        }
       ]
     },
     "content": {
@@ -3190,18 +3550,36 @@
       "heading": "ASO obstacles",
       "subheading": "Fix what blocks installs:",
       "painPoints": [
-        {"problem": "Poor keyword targeting.","solution": "We research store‑specific queries and localize for markets."},
-        {"problem": "Low‑performing creatives.","solution": "We optimize icons, screenshots, and sequences for conversions."},
-        {"problem": "Weak review volume.","solution": "We implement ethical prompts and flows to grow ratings."}
+        {
+          "problem": "Poor keyword targeting.",
+          "solution": "We research store‑specific queries and localize for markets."
+        },
+        {
+          "problem": "Low‑performing creatives.",
+          "solution": "We optimize icons, screenshots, and sequences for conversions."
+        },
+        {
+          "problem": "Weak review volume.",
+          "solution": "We implement ethical prompts and flows to grow ratings."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "More installs, lower CPI",
       "subheading": "Visibility and conversion improvements:",
       "benefits": [
-        {"title": "Ranking Lift","description": "Better keyword fit increases impressions."},
-        {"title": "Install Conversion","description": "Compelling creatives win more taps."},
-        {"title": "Market Reach","description": "Localized listings for global growth."}
+        {
+          "title": "Ranking Lift",
+          "description": "Better keyword fit increases impressions."
+        },
+        {
+          "title": "Install Conversion",
+          "description": "Compelling creatives win more taps."
+        },
+        {
+          "title": "Market Reach",
+          "description": "Localized listings for global growth."
+        }
       ]
     },
     "content": {
@@ -3336,18 +3714,36 @@
       "heading": "Guest posting pitfalls",
       "subheading": "We do the hard parts right:",
       "painPoints": [
-        {"problem": "Weak topic fit.","solution": "We align ideas to each publication’s readers and gaps."},
-        {"problem": "Template outreach.","solution": "We craft personalized pitches and maintain relationships."},
-        {"problem": "Thin articles.","solution": "We deliver expert, original content that editors want."}
+        {
+          "problem": "Weak topic fit.",
+          "solution": "We align ideas to each publication’s readers and gaps."
+        },
+        {
+          "problem": "Template outreach.",
+          "solution": "We craft personalized pitches and maintain relationships."
+        },
+        {
+          "problem": "Thin articles.",
+          "solution": "We deliver expert, original content that editors want."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Authority via contribution",
       "subheading": "Better placements, better links:",
       "benefits": [
-        {"title": "Quality Publications","description": "Relevant sites with real audiences."},
-        {"title": "Brand Credibility","description": "Demonstrate expertise with bylines that matter."},
-        {"title": "Search Impact","description": "Links that improve rankings and referral traffic."}
+        {
+          "title": "Quality Publications",
+          "description": "Relevant sites with real audiences."
+        },
+        {
+          "title": "Brand Credibility",
+          "description": "Demonstrate expertise with bylines that matter."
+        },
+        {
+          "title": "Search Impact",
+          "description": "Links that improve rankings and referral traffic."
+        }
       ]
     },
     "content": {
@@ -3482,18 +3878,36 @@
       "heading": "Citation headaches",
       "subheading": "We handle the grunt work:",
       "painPoints": [
-        {"problem": "Conflicting listings.","solution": "We reconcile and correct records across major directories."},
-        {"problem": "Missing profiles.","solution": "We build presence on relevant, authoritative sites."},
-        {"problem": "Ongoing drift.","solution": "We monitor and maintain accuracy at scale."}
+        {
+          "problem": "Conflicting listings.",
+          "solution": "We reconcile and correct records across major directories."
+        },
+        {
+          "problem": "Missing profiles.",
+          "solution": "We build presence on relevant, authoritative sites."
+        },
+        {
+          "problem": "Ongoing drift.",
+          "solution": "We monitor and maintain accuracy at scale."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Trust and findability",
       "subheading": "A clean footprint that ranks:",
       "benefits": [
-        {"title": "Higher Local Rankings","description": "Consistent signals Google can rely on."},
-        {"title": "More Calls","description": "Accurate info everywhere customers search."},
-        {"title": "Fewer Support Issues","description": "No more wrong numbers or hours online."}
+        {
+          "title": "Higher Local Rankings",
+          "description": "Consistent signals Google can rely on."
+        },
+        {
+          "title": "More Calls",
+          "description": "Accurate info everywhere customers search."
+        },
+        {
+          "title": "Fewer Support Issues",
+          "description": "No more wrong numbers or hours online."
+        }
       ]
     },
     "content": {
@@ -3628,18 +4042,36 @@
       "heading": "Penalty causes",
       "subheading": "We tackle the tough ones:",
       "painPoints": [
-        {"problem": "Toxic link profile.","solution": "We audit anchors and sources, remove/deny liabilities, and rebuild authority."},
-        {"problem": "Thin/duplicative content.","solution": "We consolidate, improve, or remove harmful patterns and set rules."},
-        {"problem": "Spammy tactics.","solution": "We replace risky methods with sustainable SEO practices."}
+        {
+          "problem": "Toxic link profile.",
+          "solution": "We audit anchors and sources, remove/deny liabilities, and rebuild authority."
+        },
+        {
+          "problem": "Thin/duplicative content.",
+          "solution": "We consolidate, improve, or remove harmful patterns and set rules."
+        },
+        {
+          "problem": "Spammy tactics.",
+          "solution": "We replace risky methods with sustainable SEO practices."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Restore rankings safely",
       "subheading": "Path back to stability and growth:",
       "benefits": [
-        {"title": "Risk Reduction","description": "Lower chance of future actions with better hygiene."},
-        {"title": "Ranking Return","description": "Recover positions and rebuild momentum."},
-        {"title": "Compliance by Design","description": "Documentation and workflows that keep you clean."}
+        {
+          "title": "Risk Reduction",
+          "description": "Lower chance of future actions with better hygiene."
+        },
+        {
+          "title": "Ranking Return",
+          "description": "Recover positions and rebuild momentum."
+        },
+        {
+          "title": "Compliance by Design",
+          "description": "Documentation and workflows that keep you clean."
+        }
       ]
     },
     "content": {
@@ -3774,18 +4206,36 @@
       "heading": "Multilingual pitfalls",
       "subheading": "Where global sites go wrong:",
       "painPoints": [
-        {"problem": "Wrong URL and hreflang setup.","solution": "We implement scalable structures and correct language/region targeting."},
-        {"problem": "Literal translation only.","solution": "We adapt messaging, examples, and CTAs to culture and queries."},
-        {"problem": "Fragmented interlinking.","solution": "We connect language versions and hubs to share equity."}
+        {
+          "problem": "Wrong URL and hreflang setup.",
+          "solution": "We implement scalable structures and correct language/region targeting."
+        },
+        {
+          "problem": "Literal translation only.",
+          "solution": "We adapt messaging, examples, and CTAs to culture and queries."
+        },
+        {
+          "problem": "Fragmented interlinking.",
+          "solution": "We connect language versions and hubs to share equity."
+        }
       ]
     },
     "keyBenefits": {
       "heading": "Local relevance worldwide",
       "subheading": "Each locale feels native—and ranks:",
       "benefits": [
-        {"title": "Correct Targeting","description": "Search engines send the right users to the right pages."},
-        {"title": "Higher Engagement","description": "Localized content that resonates and converts."},
-        {"title": "Scalable Ops","description": "Governance that keeps quality high as you add languages."}
+        {
+          "title": "Correct Targeting",
+          "description": "Search engines send the right users to the right pages."
+        },
+        {
+          "title": "Higher Engagement",
+          "description": "Localized content that resonates and converts."
+        },
+        {
+          "title": "Scalable Ops",
+          "description": "Governance that keeps quality high as you add languages."
+        }
       ]
     },
     "content": {
@@ -3896,14 +4346,14 @@
       "Multilingual SEO"
     ],
     "slugMapping": {
-      "Search Engine Optimisation": "search-engine-optimisation",
-      "Local SEO": "local-seo",
+      "Search Engine Optimisation": "seo",
+      "Local SEO": "localseo",
       "Wordpress SEO": "wordpress-seo",
       "E-commerce SEO": "ecom-seo",
       "AI SEO": "ai-seo",
       "Shopify SEO": "shopify-seo",
-      "SEO audits": "seo-audits",
-      "Online Reputation Management": "online-reputation-management",
+      "SEO audits": "seo-audit",
+      "Online Reputation Management": "orm",
       "SEO Migration": "seo-migration",
       "Small Business SEO": "small-business-seo",
       "Lead Generation": "lead-generation",
@@ -3927,68 +4377,6 @@
       "highlightedText": "Services & Solutions",
       "columns": 3,
       "baseUrl": "/seo/"
-    }
-  },
-  "otherServicesPaidAds": {
-    "paidAdsServices": [
-      "Google Ads",
-      "Google Remarketing",
-      "Google Shopping",
-      "Meta Ads (Facebook)",
-      "Meta Ads (Instagram)",
-      "LinkedIn Ads",
-      "YouTube Ads",
-      "TikTok Ads",
-      "Twitter Ads",
-      "Snapchat Ads",
-      "Pinterest Ads",
-      "Amazon Ads",
-      "Microsoft Ads",
-      "Display Advertising",
-      "Video Advertising",
-      "Mobile App Advertising",
-      "Retargeting Campaigns",
-      "Lookalike Audiences",
-      "Conversion Tracking",
-      "Landing Page Optimization",
-      "A/B Testing",
-      "Campaign Management",
-      "Ad Creative Design",
-      "Performance Analytics",
-      "ROI Optimization"
-    ],
-    "slugMapping": {
-      "Google Ads": "google-ads",
-      "Google Remarketing": "google-remarketing",
-      "Google Shopping": "google-shopping",
-      "Meta Ads (Facebook)": "meta-facebook-ads",
-      "Meta Ads (Instagram)": "meta-instagram-ads",
-      "LinkedIn Ads": "linkedin-ads",
-      "YouTube Ads": "youtube-ads",
-      "TikTok Ads": "tiktok-ads",
-      "Twitter Ads": "twitter-ads",
-      "Snapchat Ads": "snapchat-ads",
-      "Pinterest Ads": "pinterest-ads",
-      "Amazon Ads": "amazon-ads",
-      "Microsoft Ads": "microsoft-ads",
-      "Display Advertising": "display-advertising",
-      "Video Advertising": "video-advertising",
-      "Mobile App Advertising": "mobile-app-advertising",
-      "Retargeting Campaigns": "retargeting-campaigns",
-      "Lookalike Audiences": "lookalike-audiences",
-      "Conversion Tracking": "conversion-tracking",
-      "Landing Page Optimization": "landing-page-optimization",
-      "A/B Testing": "ab-testing",
-      "Campaign Management": "campaign-management",
-      "Ad Creative Design": "ad-creative-design",
-      "Performance Analytics": "performance-analytics",
-      "ROI Optimization": "roi-optimization"
-    },
-    "config": {
-      "title": "Our Other Paid Advertising Services & Solutions",
-      "highlightedText": "Services & Solutions",
-      "columns": 3,
-      "baseUrl": "/paid-advertisement/"
     }
   }
 }

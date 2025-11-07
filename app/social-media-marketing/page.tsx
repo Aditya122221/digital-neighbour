@@ -86,8 +86,8 @@ export default function SocialMediaMarketingPage() {
 				data={currentData?.content}
 				imagePathPrefix="/seo/content"
 			/>
-			<SectionPainPoint />
-			<WhyWork />
+					<SectionPainPoint />
+					<WhyWork />
           <CaseStudy />
 			<Process2
 				data={currentData?.services}

@@ -6,6 +6,25 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { CustomButton } from "./button"
 import { cn } from "@/lib/utils"
+import seoData from "@/data/seo.json"
+
+const slugify = (value: string) =>
+	value
+		.toLowerCase()
+		.replace(/[^a-z0-9]+/g, "-")
+		.replace(/(^-|-$)+/g, "")
+
+const seoServiceLabelMap = (seoData.otherServices?.slugMapping || {}) as Record<
+	string,
+	string
+>
+
+const seoServiceSlugMap: Record<string, string> = Object.entries(
+	seoServiceLabelMap
+).reduce((acc, [label, slug]) => {
+	acc[slugify(label)] = slug
+	return acc
+}, {} as Record<string, string>)
 
 const Navbar: React.FC = () => {
 	const pathname = usePathname()
@@ -878,17 +897,7 @@ const Navbar: React.FC = () => {
 																		service.name
 																	}
 																	href={(() => {
-																		const name =
-																			service.name
-																				.toLowerCase()
-																				.replace(
-																					/[^a-z0-9]+/g,
-																					"-"
-																				)
-																				.replace(
-																					/(^-|-$)+/g,
-																					""
-																				)
+											const name = slugify(service.name)
 																		// Map Web & App Development -> /web-development slugs
 																		// For items under the Web Development column, link directly to /web-development/<kebab>
 																		if (
@@ -919,8 +928,8 @@ const Navbar: React.FC = () => {
 																						"ios-app-development",
 																					"software-development":
 																						"app-development",
-																					"flutter-app-development":
-																						"flutter-development",
+															"flutter-app-development":
+																"flutter-app-development",
 																					"react-native-development":
 																						"react-native-development",
 																				}
@@ -932,16 +941,6 @@ const Navbar: React.FC = () => {
 																				return `/app-development/${appSlugMap[name]}`
 																			}
 																		}
-																		const seoSlugs =
-																			new Set(
-																				[
-																					"search-engine-optimisation",
-																					"local-seo",
-																					"wordpress-seo",
-																					"e-commerce-seo",
-																					"ai-seo",
-																				]
-																			)
 																		const paidAdsSlugs =
 																			new Set(
 																				[
@@ -1010,29 +1009,15 @@ const Navbar: React.FC = () => {
 																					"branding",
 																				]
 																			)
-																		if (
-																			seoSlugs.has(
-																				name
-																			)
-																		) {
-																			// Map naming differences
-																			const slugMap: Record<
-																				string,
-																				string
-																			> =
-																				{
-																					"search-engine-optimisation":
-																						"search-engine-optimisation",
-																					"e-commerce-seo":
-																						"ecom-seo",
-																				}
-																			const slug =
-																				slugMap[
-																					name
-																				] ||
-																				name
-																			return `/seo/${slug}`
-																		}
+											if (column.title === "Search Engine Optimisation") {
+												const mappedSlug =
+													seoServiceSlugMap[name] ||
+													seoServiceLabelMap[service.name]
+												if (mappedSlug) {
+													return `/seo/${mappedSlug}`
+												}
+												return `/seo/${name}`
+											}
 																		if (
 																			paidAdsSlugs.has(
 																				name
@@ -1437,27 +1422,7 @@ const Navbar: React.FC = () => {
 																												service.name
 																											}
 																											href={(() => {
-																												const name =
-																													service.name
-																														.toLowerCase()
-																														.replace(
-																															/[^a-z0-9]+/g,
-																															"-"
-																														)
-																														.replace(
-																															/(^-|-$)+/g,
-																															""
-																														)
-																												const seoSlugs =
-																													new Set(
-																														[
-																															"search-engine-optimisation",
-																															"local-seo",
-																															"wordpress-seo",
-																															"e-commerce-seo",
-																															"ai-seo",
-																														]
-																													)
+													const name = slugify(service.name)
 																												const paidAdsSlugs =
 																													new Set(
 																														[
@@ -1526,29 +1491,15 @@ const Navbar: React.FC = () => {
 																															"branding",
 																														]
 																													)
-																												if (
-																													seoSlugs.has(
-																														name
-																													)
-																												) {
-																													// Map naming differences
-																													const slugMap: Record<
-																														string,
-																														string
-																													> =
-																														{
-																															"search-engine-optimisation":
-																																"search-engine-optimisation",
-																															"e-commerce-seo":
-																																"ecom-seo",
-																														}
-																													const slug =
-																														slugMap[
-																															name
-																														] ||
-																														name
-																													return `/seo/${slug}`
-																												}
+													if (column.title === "Search Engine Optimisation") {
+														const mappedSlug =
+															seoServiceSlugMap[name] ||
+															seoServiceLabelMap[service.name]
+														if (mappedSlug) {
+															return `/seo/${mappedSlug}`
+														}
+														return `/seo/${name}`
+													}
 																												// For items under the Web Development column in mobile, link to /web-development/<kebab>
 																												if (
 																													categoryKey ===
@@ -1579,7 +1530,7 @@ const Navbar: React.FC = () => {
 																															"software-development":
 																																"software-development",
 																															"flutter-app-development":
-																																"flutter-development",
+																"flutter-app-development",
 																															"react-native-development":
 																																"react-native-development",
 																														}
