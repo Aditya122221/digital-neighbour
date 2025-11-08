@@ -18,7 +18,7 @@ import {
 
 export default function Industries() {
 	return (
-		<section className="pt-24">
+		<section className="pt-24" style={{overflowY: "hidden"}}>
 			<div className="container mx-auto px-5">
 				<div className="w-full lg:w-2/3 mx-auto text-center">
 					<h2 className="font-bold mb-8 text-4xl md:text-5xl lg:text-6xl">

@@ -26,7 +26,6 @@ export default function HomePage() {
     {/* <Hero5 /> */}
       </div>
       {/* <Banner /> */}
-      <Form />
       <BrandsMarquee />
       {/* <RevealCursor /> */}
       <Services />

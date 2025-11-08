@@ -23,30 +23,71 @@
       "heading": "Struggling with websites that don't perform?",
       "subheading": "Common web development challenges and our solutions.",
       "items": [
-        { "title": "Website loads slowly and loses visitors?", "description": "We optimize performance with modern frameworks, efficient code, and cloud infrastructure to ensure lightning-fast load times." },
-        { "title": "Website doesn't convert visitors into customers?", "description": "We design conversion-focused experiences with strategic UX, clear CTAs, and optimized user journeys that drive results." },
-        { "title": "Website isn't mobile-responsive or accessible?", "description": "We build fully responsive, accessible websites that work flawlessly across all devices and meet WCAG standards." },
-        { "title": "Website is difficult to update or maintain?", "description": "We provide user-friendly CMS integration and clean, maintainable code so you can manage content independently." }
+        {
+          "title": "Website loads slowly and loses visitors?",
+          "description": "We optimize performance with modern frameworks, efficient code, and cloud infrastructure to ensure lightning-fast load times."
+        },
+        {
+          "title": "Website doesn't convert visitors into customers?",
+          "description": "We design conversion-focused experiences with strategic UX, clear CTAs, and optimized user journeys that drive results."
+        },
+        {
+          "title": "Website isn't mobile-responsive or accessible?",
+          "description": "We build fully responsive, accessible websites that work flawlessly across all devices and meet WCAG standards."
+        },
+        {
+          "title": "Website is difficult to update or maintain?",
+          "description": "We provide user-friendly CMS integration and clean, maintainable code so you can manage content independently."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Web Development",
       "subheading": "Web development that drives measurable business results.",
       "items": [
-        { "title": "High Performance", "description": "Lightning-fast websites optimized for speed and conversions." },
-        { "title": "Modern Technology", "description": "Built with cutting-edge frameworks and best practices for scalability." },
-        { "title": "Conversion-Focused", "description": "Strategic design and UX that guides visitors toward action." }
+        {
+          "title": "High Performance",
+          "description": "Lightning-fast websites optimized for speed and conversions."
+        },
+        {
+          "title": "Modern Technology",
+          "description": "Built with cutting-edge frameworks and best practices for scalability."
+        },
+        {
+          "title": "Conversion-Focused",
+          "description": "Strategic design and UX that guides visitors toward action."
+        }
       ]
     },
     "features": {
-      "heading": "What You Get",
+      "heading": "Web Development Capabilities",
       "subheading": "Everything needed to build and scale successful web experiences.",
       "features": [
-        { "title": "Custom Development", "description": "Tailored solutions built to your exact specifications and business needs.", "icon": "💻" },
-        { "title": "Modern Frameworks", "description": "Built with React, Next.js, and other modern technologies for performance.", "icon": "⚡" },
-        { "title": "Responsive Design", "description": "Mobile-first designs that work perfectly on all devices.", "icon": "📱" },
-        { "title": "SEO Optimization", "description": "Built with SEO best practices to maximize search visibility.", "icon": "🔍" },
-        { "title": "Ongoing Support", "description": "Maintenance, updates, and support to keep your site running smoothly.", "icon": "🛠️" }
+        {
+          "title": "Custom Development",
+          "description": "Tailored solutions built to your exact specifications and business needs.",
+          "icon": "💻"
+        },
+        {
+          "title": "Modern Frameworks",
+          "description": "Built with React, Next.js, and other modern technologies for performance.",
+          "icon": "⚡"
+        },
+        {
+          "title": "Responsive Design",
+          "description": "Mobile-first designs that work perfectly on all devices.",
+          "icon": "📱"
+        },
+        {
+          "title": "SEO Optimization",
+          "description": "Built with SEO best practices to maximize search visibility.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Ongoing Support",
+          "description": "Maintenance, updates, and support to keep your site running smoothly.",
+          "icon": "🛠️"
+        }
       ]
     },
     "content": {
@@ -154,30 +195,71 @@
       "heading": "Struggling with websites that don't convert?",
       "subheading": "Common website development challenges and our solutions.",
       "items": [
-        { "title": "Website doesn't represent your brand or stand out?", "description": "We create custom designs tailored to your brand that differentiate you from competitors and build recognition." },
-        { "title": "Website loads slowly and frustrates visitors?", "description": "We optimize performance with efficient code, modern frameworks, and cloud infrastructure for lightning-fast load times." },
-        { "title": "Website isn't mobile-friendly or accessible?", "description": "We build fully responsive, accessible websites that work flawlessly on all devices and meet accessibility standards." },
-        { "title": "Can't update content without developer help?", "description": "We integrate user-friendly CMS systems so you can manage content independently without technical knowledge." }
+        {
+          "title": "Website doesn't represent your brand or stand out?",
+          "description": "We create custom designs tailored to your brand that differentiate you from competitors and build recognition."
+        },
+        {
+          "title": "Website loads slowly and frustrates visitors?",
+          "description": "We optimize performance with efficient code, modern frameworks, and cloud infrastructure for lightning-fast load times."
+        },
+        {
+          "title": "Website isn't mobile-friendly or accessible?",
+          "description": "We build fully responsive, accessible websites that work flawlessly on all devices and meet accessibility standards."
+        },
+        {
+          "title": "Can't update content without developer help?",
+          "description": "We integrate user-friendly CMS systems so you can manage content independently without technical knowledge."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Website Development",
       "subheading": "Website development that converts visitors into customers.",
       "items": [
-        { "title": "Custom Design", "description": "Unique websites tailored to your brand and business objectives." },
-        { "title": "Fast Performance", "description": "Lightning-fast load times optimized for speed and conversions." },
-        { "title": "Easy Management", "description": "User-friendly CMS so you can update content independently." }
+        {
+          "title": "Custom Design",
+          "description": "Unique websites tailored to your brand and business objectives."
+        },
+        {
+          "title": "Fast Performance",
+          "description": "Lightning-fast load times optimized for speed and conversions."
+        },
+        {
+          "title": "Easy Management",
+          "description": "User-friendly CMS so you can update content independently."
+        }
       ]
     },
     "features": {
       "heading": "Website Development Capabilities",
       "subheading": "Everything needed to create a professional, conversion-focused website.",
       "features": [
-        { "title": "Custom Design", "description": "Unique designs tailored to your brand and industry.", "icon": "🎨" },
-        { "title": "Responsive Development", "description": "Mobile-first development that works on all devices.", "icon": "📱" },
-        { "title": "CMS Integration", "description": "User-friendly content management for easy updates.", "icon": "📝" },
-        { "title": "SEO Optimization", "description": "Built with SEO best practices for search visibility.", "icon": "🔍" },
-        { "title": "Performance Optimization", "description": "Fast load times and optimized user experience.", "icon": "⚡" }
+        {
+          "title": "Custom Design",
+          "description": "Unique designs tailored to your brand and industry.",
+          "icon": "🎨"
+        },
+        {
+          "title": "Responsive Development",
+          "description": "Mobile-first development that works on all devices.",
+          "icon": "📱"
+        },
+        {
+          "title": "CMS Integration",
+          "description": "User-friendly content management for easy updates.",
+          "icon": "📝"
+        },
+        {
+          "title": "SEO Optimization",
+          "description": "Built with SEO best practices for search visibility.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Fast load times and optimized user experience.",
+          "icon": "⚡"
+        }
       ]
     },
     "content": {
@@ -285,30 +367,71 @@
       "heading": "Struggling with limited functionality?",
       "subheading": "Common web app challenges and our solutions.",
       "items": [
-        { "title": "Need custom functionality beyond standard websites?", "description": "We build custom web applications with tailored features that automate processes and handle complex workflows." },
-        { "title": "Application doesn't scale with business growth?", "description": "We design scalable architectures using modern frameworks and cloud infrastructure that grow with your business." },
-        { "title": "Application isn't secure or reliable?", "description": "We implement comprehensive security measures and conduct thorough testing to ensure reliability and data protection." },
-        { "title": "Can't integrate with existing systems?", "description": "We specialize in API integration and connecting applications with your existing tools and databases." }
+        {
+          "title": "Need custom functionality beyond standard websites?",
+          "description": "We build custom web applications with tailored features that automate processes and handle complex workflows."
+        },
+        {
+          "title": "Application doesn't scale with business growth?",
+          "description": "We design scalable architectures using modern frameworks and cloud infrastructure that grow with your business."
+        },
+        {
+          "title": "Application isn't secure or reliable?",
+          "description": "We implement comprehensive security measures and conduct thorough testing to ensure reliability and data protection."
+        },
+        {
+          "title": "Can't integrate with existing systems?",
+          "description": "We specialize in API integration and connecting applications with your existing tools and databases."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Web App Development",
       "subheading": "Web applications that transform business operations.",
       "items": [
-        { "title": "Custom Functionality", "description": "Tailored applications built to your exact specifications and workflows." },
-        { "title": "Scalable Architecture", "description": "Applications designed to scale with your business growth." },
-        { "title": "Secure & Reliable", "description": "Comprehensive security and testing for reliable performance." }
+        {
+          "title": "Custom Functionality",
+          "description": "Tailored applications built to your exact specifications and workflows."
+        },
+        {
+          "title": "Scalable Architecture",
+          "description": "Applications designed to scale with your business growth."
+        },
+        {
+          "title": "Secure & Reliable",
+          "description": "Comprehensive security and testing for reliable performance."
+        }
       ]
     },
     "features": {
       "heading": "Web App Development Capabilities",
       "subheading": "Everything needed to build powerful custom applications.",
       "features": [
-        { "title": "Custom Development", "description": "Tailored applications built to your exact requirements.", "icon": "💻" },
-        { "title": "Modern Frameworks", "description": "Built with React, Node.js, and modern technologies.", "icon": "⚡" },
-        { "title": "API Integration", "description": "Seamless integration with existing systems and services.", "icon": "🔌" },
-        { "title": "Security & Testing", "description": "Comprehensive security measures and thorough testing.", "icon": "🔒" },
-        { "title": "Scalable Infrastructure", "description": "Cloud-based architecture that scales with your growth.", "icon": "☁️" }
+        {
+          "title": "Custom Development",
+          "description": "Tailored applications built to your exact requirements.",
+          "icon": "💻"
+        },
+        {
+          "title": "Modern Frameworks",
+          "description": "Built with React, Node.js, and modern technologies.",
+          "icon": "⚡"
+        },
+        {
+          "title": "API Integration",
+          "description": "Seamless integration with existing systems and services.",
+          "icon": "🔌"
+        },
+        {
+          "title": "Security & Testing",
+          "description": "Comprehensive security measures and thorough testing.",
+          "icon": "🔒"
+        },
+        {
+          "title": "Scalable Infrastructure",
+          "description": "Cloud-based architecture that scales with your growth.",
+          "icon": "☁️"
+        }
       ]
     },
     "content": {
@@ -416,30 +539,71 @@
       "heading": "Struggling with e-commerce that doesn't convert?",
       "subheading": "Common e-commerce challenges and our solutions.",
       "items": [
-        { "title": "Online store doesn't convert visitors into customers?", "description": "We design conversion-focused shopping experiences with optimized checkout flows and strategic UX that drive sales." },
-        { "title": "Checkout process is complicated or slow?", "description": "We streamline checkout processes, integrate secure payment gateways, and optimize for conversions." },
-        { "title": "Inventory management is difficult or manual?", "description": "We build powerful inventory management systems that automate tracking and streamline operations." },
-        { "title": "Store doesn't work well on mobile devices?", "description": "We ensure mobile-first responsive design so customers can shop seamlessly on any device." }
+        {
+          "title": "Online store doesn't convert visitors into customers?",
+          "description": "We design conversion-focused shopping experiences with optimized checkout flows and strategic UX that drive sales."
+        },
+        {
+          "title": "Checkout process is complicated or slow?",
+          "description": "We streamline checkout processes, integrate secure payment gateways, and optimize for conversions."
+        },
+        {
+          "title": "Inventory management is difficult or manual?",
+          "description": "We build powerful inventory management systems that automate tracking and streamline operations."
+        },
+        {
+          "title": "Store doesn't work well on mobile devices?",
+          "description": "We ensure mobile-first responsive design so customers can shop seamlessly on any device."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of eCommerce Development",
       "subheading": "E-commerce platforms that drive sales and delight customers.",
       "items": [
-        { "title": "High Conversion", "description": "Optimized shopping experiences designed to maximize sales." },
-        { "title": "Seamless Payments", "description": "Secure payment integrations with major gateways for easy checkout." },
-        { "title": "Powerful Management", "description": "Comprehensive inventory and order management systems." }
+        {
+          "title": "High Conversion",
+          "description": "Optimized shopping experiences designed to maximize sales."
+        },
+        {
+          "title": "Seamless Payments",
+          "description": "Secure payment integrations with major gateways for easy checkout."
+        },
+        {
+          "title": "Powerful Management",
+          "description": "Comprehensive inventory and order management systems."
+        }
       ]
     },
     "features": {
-      "heading": "E-Commerce Development Capabilities",
+      "heading": "eCommerce Development Capabilities",
       "subheading": "Everything needed to build a successful online store.",
       "features": [
-        { "title": "Storefront Design", "description": "Beautiful, conversion-focused shopping experiences.", "icon": "🛍️" },
-        { "title": "Payment Integration", "description": "Secure payment gateways and checkout optimization.", "icon": "💳" },
-        { "title": "Inventory Management", "description": "Powerful systems to manage products and stock.", "icon": "📦" },
-        { "title": "Order Management", "description": "Comprehensive systems to track and fulfill orders.", "icon": "📋" },
-        { "title": "Mobile Optimization", "description": "Mobile-first design for seamless mobile shopping.", "icon": "📱" }
+        {
+          "title": "Storefront Design",
+          "description": "Beautiful, conversion-focused shopping experiences.",
+          "icon": "🛍️"
+        },
+        {
+          "title": "Payment Integration",
+          "description": "Secure payment gateways and checkout optimization.",
+          "icon": "💳"
+        },
+        {
+          "title": "Inventory Management",
+          "description": "Powerful systems to manage products and stock.",
+          "icon": "📦"
+        },
+        {
+          "title": "Order Management",
+          "description": "Comprehensive systems to track and fulfill orders.",
+          "icon": "📋"
+        },
+        {
+          "title": "Mobile Optimization",
+          "description": "Mobile-first design for seamless mobile shopping.",
+          "icon": "📱"
+        }
       ]
     },
     "content": {
@@ -547,30 +711,71 @@
       "heading": "Struggling with landing pages that don't convert?",
       "subheading": "Common landing page challenges and our solutions.",
       "items": [
-        { "title": "Landing pages don't convert traffic into leads or sales?", "description": "We create conversion-focused landing pages with strategic design, compelling copy, and optimized CTAs that drive action." },
-        { "title": "Landing pages load slowly and lose visitors?", "description": "We optimize for lightning-fast load times to keep visitors engaged and reduce bounce rates." },
-        { "title": "No A/B testing or optimization strategy?", "description": "We set up A/B testing frameworks and continuously optimize based on performance data to maximize conversions." },
-        { "title": "Landing pages don't align with ad campaigns?", "description": "We ensure messaging consistency and alignment between ads and landing pages for maximum effectiveness." }
+        {
+          "title": "Landing pages don't convert traffic into leads or sales?",
+          "description": "We create conversion-focused landing pages with strategic design, compelling copy, and optimized CTAs that drive action."
+        },
+        {
+          "title": "Landing pages load slowly and lose visitors?",
+          "description": "We optimize for lightning-fast load times to keep visitors engaged and reduce bounce rates."
+        },
+        {
+          "title": "No A/B testing or optimization strategy?",
+          "description": "We set up A/B testing frameworks and continuously optimize based on performance data to maximize conversions."
+        },
+        {
+          "title": "Landing pages don't align with ad campaigns?",
+          "description": "We ensure messaging consistency and alignment between ads and landing pages for maximum effectiveness."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Landing Page Development",
       "subheading": "Landing pages that convert traffic into revenue.",
       "items": [
-        { "title": "Conversion-Focused", "description": "Strategic design optimized for maximum conversions and ROI." },
-        { "title": "Lightning Fast", "description": "Optimized for speed to keep visitors engaged and reduce bounce rates." },
-        { "title": "Data-Driven", "description": "A/B testing and optimization based on performance metrics." }
+        {
+          "title": "Conversion-Focused",
+          "description": "Strategic design optimized for maximum conversions and ROI."
+        },
+        {
+          "title": "Lightning Fast",
+          "description": "Optimized for speed to keep visitors engaged and reduce bounce rates."
+        },
+        {
+          "title": "Data-Driven",
+          "description": "A/B testing and optimization based on performance metrics."
+        }
       ]
     },
     "features": {
       "heading": "Landing Page Development Capabilities",
       "subheading": "Everything needed to create high-converting landing pages.",
       "features": [
-        { "title": "Conversion Optimization", "description": "Strategic design and copy optimized for conversions.", "icon": "🎯" },
-        { "title": "Speed Optimization", "description": "Lightning-fast load times to maximize engagement.", "icon": "⚡" },
-        { "title": "A/B Testing", "description": "Testing frameworks to continuously optimize performance.", "icon": "🧪" },
-        { "title": "Mobile-First", "description": "Mobile-optimized design for seamless mobile experience.", "icon": "📱" },
-        { "title": "Campaign Alignment", "description": "Messaging consistency with ad campaigns for effectiveness.", "icon": "📢" }
+        {
+          "title": "Conversion Optimization",
+          "description": "Strategic design and copy optimized for conversions.",
+          "icon": "🎯"
+        },
+        {
+          "title": "Speed Optimization",
+          "description": "Lightning-fast load times to maximize engagement.",
+          "icon": "⚡"
+        },
+        {
+          "title": "A/B Testing",
+          "description": "Testing frameworks to continuously optimize performance.",
+          "icon": "🧪"
+        },
+        {
+          "title": "Mobile-First",
+          "description": "Mobile-optimized design for seamless mobile experience.",
+          "icon": "📱"
+        },
+        {
+          "title": "Campaign Alignment",
+          "description": "Messaging consistency with ad campaigns for effectiveness.",
+          "icon": "📢"
+        }
       ]
     },
     "content": {
@@ -678,30 +883,71 @@
       "heading": "Struggling with interfaces that don't engage?",
       "subheading": "Common front-end challenges and our solutions.",
       "items": [
-        { "title": "User interface doesn't engage or convert visitors?", "description": "We create responsive, interactive interfaces using modern frameworks that provide smooth user experiences and drive conversions." },
-        { "title": "Interface doesn't work well on mobile devices?", "description": "We implement mobile-first design principles and ensure flawless responsiveness across all devices and screen sizes." },
-        { "title": "Interface has cross-browser compatibility issues?", "description": "We test across all major browsers to ensure consistent performance and appearance everywhere." },
-        { "title": "Interface loads slowly or performs poorly?", "description": "We optimize code, assets, and loading strategies to ensure fast load times and excellent performance." }
+        {
+          "title": "User interface doesn't engage or convert visitors?",
+          "description": "We create responsive, interactive interfaces using modern frameworks that provide smooth user experiences and drive conversions."
+        },
+        {
+          "title": "Interface doesn't work well on mobile devices?",
+          "description": "We implement mobile-first design principles and ensure flawless responsiveness across all devices and screen sizes."
+        },
+        {
+          "title": "Interface has cross-browser compatibility issues?",
+          "description": "We test across all major browsers to ensure consistent performance and appearance everywhere."
+        },
+        {
+          "title": "Interface loads slowly or performs poorly?",
+          "description": "We optimize code, assets, and loading strategies to ensure fast load times and excellent performance."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Front-End Development",
       "subheading": "Front-end development that engages users and drives conversions.",
       "items": [
-        { "title": "Modern Frameworks", "description": "Built with React, Vue.js, Angular, and other modern technologies." },
-        { "title": "Responsive Design", "description": "Mobile-first designs that work perfectly on all devices." },
-        { "title": "Performance Optimized", "description": "Fast load times and smooth interactions for excellent UX." }
+        {
+          "title": "Modern Frameworks",
+          "description": "Built with React, Vue.js, Angular, and other modern technologies."
+        },
+        {
+          "title": "Responsive Design",
+          "description": "Mobile-first designs that work perfectly on all devices."
+        },
+        {
+          "title": "Performance Optimized",
+          "description": "Fast load times and smooth interactions for excellent UX."
+        }
       ]
     },
     "features": {
       "heading": "Front-End Development Capabilities",
       "subheading": "Everything needed to create exceptional user interfaces.",
       "features": [
-        { "title": "UI Implementation", "description": "Pixel-perfect implementations of designs with interactive elements.", "icon": "🎨" },
-        { "title": "Modern Frameworks", "description": "React, Vue.js, Angular, and Next.js for dynamic interfaces.", "icon": "⚡" },
-        { "title": "Responsive Design", "description": "Mobile-first development that works on all devices.", "icon": "📱" },
-        { "title": "Performance Optimization", "description": "Code and asset optimization for fast load times.", "icon": "🚀" },
-        { "title": "Cross-Browser Testing", "description": "Thorough testing across all major browsers.", "icon": "🌐" }
+        {
+          "title": "UI Implementation",
+          "description": "Pixel-perfect implementations of designs with interactive elements.",
+          "icon": "🎨"
+        },
+        {
+          "title": "Modern Frameworks",
+          "description": "React, Vue.js, Angular, and Next.js for dynamic interfaces.",
+          "icon": "⚡"
+        },
+        {
+          "title": "Responsive Design",
+          "description": "Mobile-first development that works on all devices.",
+          "icon": "📱"
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Code and asset optimization for fast load times.",
+          "icon": "🚀"
+        },
+        {
+          "title": "Cross-Browser Testing",
+          "description": "Thorough testing across all major browsers.",
+          "icon": "🌐"
+        }
       ]
     },
     "content": {
@@ -809,30 +1055,71 @@
       "heading": "Struggling with back-end that doesn't scale?",
       "subheading": "Common back-end challenges and our solutions.",
       "items": [
-        { "title": "Back-end doesn't scale with business growth?", "description": "We design scalable architectures using modern technologies and cloud infrastructure that grow with your business." },
-        { "title": "Database performance is slow or inefficient?", "description": "We create efficient database schemas optimized for performance, security, and scalability." },
-        { "title": "No APIs or integration capabilities?", "description": "We develop RESTful APIs and GraphQL endpoints that enable seamless integration with front-end and third-party services." },
-        { "title": "Security vulnerabilities or data protection concerns?", "description": "We implement comprehensive security measures including authentication, encryption, and vulnerability protection." }
+        {
+          "title": "Back-end doesn't scale with business growth?",
+          "description": "We design scalable architectures using modern technologies and cloud infrastructure that grow with your business."
+        },
+        {
+          "title": "Database performance is slow or inefficient?",
+          "description": "We create efficient database schemas optimized for performance, security, and scalability."
+        },
+        {
+          "title": "No APIs or integration capabilities?",
+          "description": "We develop RESTful APIs and GraphQL endpoints that enable seamless integration with front-end and third-party services."
+        },
+        {
+          "title": "Security vulnerabilities or data protection concerns?",
+          "description": "We implement comprehensive security measures including authentication, encryption, and vulnerability protection."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Back-End Development",
       "subheading": "Back-end infrastructure that powers performance and scalability.",
       "items": [
-        { "title": "Scalable Architecture", "description": "Infrastructure designed to scale with your business growth." },
-        { "title": "Secure & Reliable", "description": "Comprehensive security measures and reliable performance." },
-        { "title": "API Development", "description": "RESTful APIs and GraphQL endpoints for seamless integration." }
+        {
+          "title": "Scalable Architecture",
+          "description": "Infrastructure designed to scale with your business growth."
+        },
+        {
+          "title": "Secure & Reliable",
+          "description": "Comprehensive security measures and reliable performance."
+        },
+        {
+          "title": "API Development",
+          "description": "RESTful APIs and GraphQL endpoints for seamless integration."
+        }
       ]
     },
     "features": {
       "heading": "Back-End Development Capabilities",
       "subheading": "Everything needed to build robust server-side infrastructure.",
       "features": [
-        { "title": "Architecture Design", "description": "Scalable back-end architectures for current and future needs.", "icon": "🏗️" },
-        { "title": "Database Design", "description": "Efficient database schemas optimized for performance.", "icon": "🗄️" },
-        { "title": "API Development", "description": "RESTful APIs and GraphQL endpoints for integration.", "icon": "🔌" },
-        { "title": "Security Implementation", "description": "Comprehensive security measures and data protection.", "icon": "🔒" },
-        { "title": "Performance Tuning", "description": "Database and server optimization for exceptional performance.", "icon": "⚡" }
+        {
+          "title": "Architecture Design",
+          "description": "Scalable back-end architectures for current and future needs.",
+          "icon": "🏗️"
+        },
+        {
+          "title": "Database Design",
+          "description": "Efficient database schemas optimized for performance.",
+          "icon": "🗄️"
+        },
+        {
+          "title": "API Development",
+          "description": "RESTful APIs and GraphQL endpoints for integration.",
+          "icon": "🔌"
+        },
+        {
+          "title": "Security Implementation",
+          "description": "Comprehensive security measures and data protection.",
+          "icon": "🔒"
+        },
+        {
+          "title": "Performance Tuning",
+          "description": "Database and server optimization for exceptional performance.",
+          "icon": "⚡"
+        }
       ]
     },
     "content": {
@@ -940,30 +1227,71 @@
       "heading": "Struggling with content management?",
       "subheading": "Common CMS challenges and our solutions.",
       "items": [
-        { "title": "Can't update content without developer help?", "description": "We integrate user-friendly CMS platforms that enable your team to manage content independently without technical knowledge." },
-        { "title": "CMS doesn't match your workflow or needs?", "description": "We customize CMS admin interfaces and workflows to match your team's processes and requirements." },
-        { "title": "Team doesn't know how to use the CMS?", "description": "We provide comprehensive training and documentation so your team feels confident managing content." },
-        { "title": "CMS integration is slow or unreliable?", "description": "We ensure seamless integration with fast performance and reliable content delivery." }
+        {
+          "title": "Can't update content without developer help?",
+          "description": "We integrate user-friendly CMS platforms that enable your team to manage content independently without technical knowledge."
+        },
+        {
+          "title": "CMS doesn't match your workflow or needs?",
+          "description": "We customize CMS admin interfaces and workflows to match your team's processes and requirements."
+        },
+        {
+          "title": "Team doesn't know how to use the CMS?",
+          "description": "We provide comprehensive training and documentation so your team feels confident managing content."
+        },
+        {
+          "title": "CMS integration is slow or unreliable?",
+          "description": "We ensure seamless integration with fast performance and reliable content delivery."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of CMS Integration",
       "subheading": "CMS integration that empowers your team.",
       "items": [
-        { "title": "Easy Management", "description": "User-friendly CMS interfaces for independent content management." },
-        { "title": "Custom Workflows", "description": "Customized workflows and interfaces that match your needs." },
-        { "title": "Team Training", "description": "Comprehensive training and documentation for confident content management." }
+        {
+          "title": "Easy Management",
+          "description": "User-friendly CMS interfaces for independent content management."
+        },
+        {
+          "title": "Custom Workflows",
+          "description": "Customized workflows and interfaces that match your needs."
+        },
+        {
+          "title": "Team Training",
+          "description": "Comprehensive training and documentation for confident content management."
+        }
       ]
     },
     "features": {
       "heading": "CMS Integration Capabilities",
       "subheading": "Everything needed to enable independent content management.",
       "features": [
-        { "title": "CMS Selection", "description": "Recommendation of the best CMS platform for your needs.", "icon": "📋" },
-        { "title": "Seamless Integration", "description": "Integration into your existing website with all pages manageable.", "icon": "🔌" },
-        { "title": "Custom Configuration", "description": "Customized admin interfaces and workflows for your team.", "icon": "⚙️" },
-        { "title": "Team Training", "description": "Hands-on training so your team can confidently manage content.", "icon": "👥" },
-        { "title": "Documentation & Support", "description": "Comprehensive documentation and ongoing support.", "icon": "📚" }
+        {
+          "title": "CMS Selection",
+          "description": "Recommendation of the best CMS platform for your needs.",
+          "icon": "📋"
+        },
+        {
+          "title": "Seamless Integration",
+          "description": "Integration into your existing website with all pages manageable.",
+          "icon": "🔌"
+        },
+        {
+          "title": "Custom Configuration",
+          "description": "Customized admin interfaces and workflows for your team.",
+          "icon": "⚙️"
+        },
+        {
+          "title": "Team Training",
+          "description": "Hands-on training so your team can confidently manage content.",
+          "icon": "👥"
+        },
+        {
+          "title": "Documentation & Support",
+          "description": "Comprehensive documentation and ongoing support.",
+          "icon": "📚"
+        }
       ]
     },
     "content": {
@@ -1071,30 +1399,71 @@
       "heading": "Struggling with design that doesn't convert?",
       "subheading": "Common UI/UX challenges and our solutions.",
       "items": [
-        { "title": "Design doesn't guide users or drive conversions?", "description": "We create user-centered interfaces backed by research and best practices that guide users toward their goals." },
-        { "title": "No user research or understanding of audience needs?", "description": "We conduct user research, competitive analysis, and usability testing to ensure designs meet user needs." },
-        { "title": "Design isn't accessible or inclusive?", "description": "We follow accessibility guidelines and best practices to ensure designs work for all users." },
-        { "title": "No design system or consistency?", "description": "We create comprehensive design systems with component libraries and style guides for consistency." }
+        {
+          "title": "Design doesn't guide users or drive conversions?",
+          "description": "We create user-centered interfaces backed by research and best practices that guide users toward their goals."
+        },
+        {
+          "title": "No user research or understanding of audience needs?",
+          "description": "We conduct user research, competitive analysis, and usability testing to ensure designs meet user needs."
+        },
+        {
+          "title": "Design isn't accessible or inclusive?",
+          "description": "We follow accessibility guidelines and best practices to ensure designs work for all users."
+        },
+        {
+          "title": "No design system or consistency?",
+          "description": "We create comprehensive design systems with component libraries and style guides for consistency."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of UI/UX Design",
       "subheading": "UI/UX design that delights users and drives conversions.",
       "items": [
-        { "title": "User-Centered", "description": "Designs backed by research and focused on user needs." },
-        { "title": "Conversion-Focused", "description": "Strategic design optimized for conversions and business goals." },
-        { "title": "Accessible & Inclusive", "description": "Designs that work for all users and meet accessibility standards." }
+        {
+          "title": "User-Centered",
+          "description": "Designs backed by research and focused on user needs."
+        },
+        {
+          "title": "Conversion-Focused",
+          "description": "Strategic design optimized for conversions and business goals."
+        },
+        {
+          "title": "Accessible & Inclusive",
+          "description": "Designs that work for all users and meet accessibility standards."
+        }
       ]
     },
     "features": {
       "heading": "UI/UX Design Capabilities",
       "subheading": "Everything needed to create exceptional user experiences.",
       "features": [
-        { "title": "User Research", "description": "Research and analysis to understand user needs and goals.", "icon": "🔍" },
-        { "title": "Wireframing & Prototyping", "description": "Interactive prototypes that validate design concepts.", "icon": "📐" },
-        { "title": "Visual Design", "description": "Beautiful, consistent interfaces with attention to branding.", "icon": "🎨" },
-        { "title": "Usability Testing", "description": "Testing with real users to identify and fix issues.", "icon": "🧪" },
-        { "title": "Design Systems", "description": "Comprehensive design systems for consistency.", "icon": "📚" }
+        {
+          "title": "User Research",
+          "description": "Research and analysis to understand user needs and goals.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Wireframing & Prototyping",
+          "description": "Interactive prototypes that validate design concepts.",
+          "icon": "📐"
+        },
+        {
+          "title": "Visual Design",
+          "description": "Beautiful, consistent interfaces with attention to branding.",
+          "icon": "🎨"
+        },
+        {
+          "title": "Usability Testing",
+          "description": "Testing with real users to identify and fix issues.",
+          "icon": "🧪"
+        },
+        {
+          "title": "Design Systems",
+          "description": "Comprehensive design systems for consistency.",
+          "icon": "📚"
+        }
       ]
     },
     "content": {
@@ -1202,30 +1571,71 @@
       "heading": "Struggling with solutions that don't fit?",
       "subheading": "Common custom development challenges and our solutions.",
       "items": [
-        { "title": "Off-the-shelf solutions don't meet your specific needs?", "description": "We build custom solutions designed specifically for your industry, workflow, and brand with tailored functionality." },
-        { "title": "Solution doesn't scale with business growth?", "description": "We design scalable architectures and flexible code that evolves with your business needs." },
-        { "title": "Solution is difficult to maintain or extend?", "description": "We write clean, documented code that your team can build upon and maintain independently." },
-        { "title": "Solution doesn't integrate with existing systems?", "description": "We ensure seamless integration with your existing tools, databases, and workflows." }
+        {
+          "title": "Off-the-shelf solutions don't meet your specific needs?",
+          "description": "We build custom solutions designed specifically for your industry, workflow, and brand with tailored functionality."
+        },
+        {
+          "title": "Solution doesn't scale with business growth?",
+          "description": "We design scalable architectures and flexible code that evolves with your business needs."
+        },
+        {
+          "title": "Solution is difficult to maintain or extend?",
+          "description": "We write clean, documented code that your team can build upon and maintain independently."
+        },
+        {
+          "title": "Solution doesn't integrate with existing systems?",
+          "description": "We ensure seamless integration with your existing tools, databases, and workflows."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Custom Web Development",
       "subheading": "Custom solutions that perfectly match your business needs.",
       "items": [
-        { "title": "Tailored Solutions", "description": "Custom-built to your exact specifications and requirements." },
-        { "title": "Scalable & Flexible", "description": "Solutions designed to scale and evolve with your business." },
-        { "title": "Maintainable Code", "description": "Clean, documented code that's easy to maintain and extend." }
+        {
+          "title": "Tailored Solutions",
+          "description": "Custom-built to your exact specifications and requirements."
+        },
+        {
+          "title": "Scalable & Flexible",
+          "description": "Solutions designed to scale and evolve with your business."
+        },
+        {
+          "title": "Maintainable Code",
+          "description": "Clean, documented code that's easy to maintain and extend."
+        }
       ]
     },
     "features": {
       "heading": "Custom Web Development Capabilities",
       "subheading": "Everything needed to build tailored web solutions.",
       "features": [
-        { "title": "Requirements Analysis", "description": "Thorough analysis to understand your unique business needs.", "icon": "🔍" },
-        { "title": "Custom Architecture", "description": "Scalable architectures designed for your specific requirements.", "icon": "🏗️" },
-        { "title": "Custom Development", "description": "Clean, documented code built to your exact specifications.", "icon": "💻" },
-        { "title": "Quality Assurance", "description": "Comprehensive testing including functionality, security, and performance.", "icon": "✅" },
-        { "title": "Deployment & Support", "description": "Complete deployment, documentation, and ongoing support.", "icon": "🚀" }
+        {
+          "title": "Requirements Analysis",
+          "description": "Thorough analysis to understand your unique business needs.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Custom Architecture",
+          "description": "Scalable architectures designed for your specific requirements.",
+          "icon": "🏗️"
+        },
+        {
+          "title": "Custom Development",
+          "description": "Clean, documented code built to your exact specifications.",
+          "icon": "💻"
+        },
+        {
+          "title": "Quality Assurance",
+          "description": "Comprehensive testing including functionality, security, and performance.",
+          "icon": "✅"
+        },
+        {
+          "title": "Deployment & Support",
+          "description": "Complete deployment, documentation, and ongoing support.",
+          "icon": "🚀"
+        }
       ]
     },
     "content": {
@@ -1333,30 +1743,71 @@
       "heading": "Struggling with Wix sites that don't convert?",
       "subheading": "Common Wix challenges and our solutions.",
       "items": [
-        { "title": "Wix site looks generic or doesn't stand out?", "description": "We create custom designs that go beyond templates and represent your brand professionally." },
-        { "title": "Wix site loads slowly or performs poorly?", "description": "We optimize performance with efficient design, image optimization, and best practices for fast load times." },
-        { "title": "Wix site isn't optimized for SEO?", "description": "We configure SEO settings, optimize content, and implement best practices for search visibility." },
-        { "title": "Can't customize Wix to match your brand?", "description": "We use custom CSS and advanced features to create unique designs while maintaining ease of use." }
+        {
+          "title": "Wix site looks generic or doesn't stand out?",
+          "description": "We create custom designs that go beyond templates and represent your brand professionally."
+        },
+        {
+          "title": "Wix site loads slowly or performs poorly?",
+          "description": "We optimize performance with efficient design, image optimization, and best practices for fast load times."
+        },
+        {
+          "title": "Wix site isn't optimized for SEO?",
+          "description": "We configure SEO settings, optimize content, and implement best practices for search visibility."
+        },
+        {
+          "title": "Can't customize Wix to match your brand?",
+          "description": "We use custom CSS and advanced features to create unique designs while maintaining ease of use."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Wix Website Development",
       "subheading": "Wix development that drives results.",
       "items": [
-        { "title": "Professional Design", "description": "Custom Wix sites that stand out from templates." },
-        { "title": "Easy Management", "description": "Intuitive Wix editor for independent content management." },
-        { "title": "Optimized Performance", "description": "Speed and SEO optimization for better results." }
+        {
+          "title": "Professional Design",
+          "description": "Custom Wix sites that stand out from templates."
+        },
+        {
+          "title": "Easy Management",
+          "description": "Intuitive Wix editor for independent content management."
+        },
+        {
+          "title": "Optimized Performance",
+          "description": "Speed and SEO optimization for better results."
+        }
       ]
     },
     "features": {
-      "heading": "Wix Development Capabilities",
+      "heading": "Wix Website Development Capabilities",
       "subheading": "Everything needed to build a professional Wix site.",
       "features": [
-        { "title": "Custom Design", "description": "Unique designs that go beyond default templates.", "icon": "🎨" },
-        { "title": "Performance Optimization", "description": "Speed optimization and best practices for fast load times.", "icon": "⚡" },
-        { "title": "SEO Setup", "description": "SEO configuration and optimization for search visibility.", "icon": "🔍" },
-        { "title": "Content Optimization", "description": "Content optimization for conversions and user experience.", "icon": "📝" },
-        { "title": "Training & Support", "description": "Training on managing your Wix site independently.", "icon": "👥" }
+        {
+          "title": "Custom Design",
+          "description": "Unique designs that go beyond default templates.",
+          "icon": "🎨"
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Speed optimization and best practices for fast load times.",
+          "icon": "⚡"
+        },
+        {
+          "title": "SEO Setup",
+          "description": "SEO configuration and optimization for search visibility.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Content Optimization",
+          "description": "Content optimization for conversions and user experience.",
+          "icon": "📝"
+        },
+        {
+          "title": "Training & Support",
+          "description": "Training on managing your Wix site independently.",
+          "icon": "👥"
+        }
       ]
     },
     "content": {
@@ -1464,30 +1915,71 @@
       "heading": "Struggling with static websites that don't engage?",
       "subheading": "Common React.js challenges and our solutions.",
       "items": [
-        { "title": "Website lacks interactivity or dynamic features?", "description": "We build component-based React applications with rich interactivity and smooth user experiences." },
-        { "title": "Application doesn't perform well or loads slowly?", "description": "We optimize React apps with code splitting, lazy loading, and performance techniques for fast load times." },
-        { "title": "Code is difficult to maintain or scale?", "description": "We write clean, modular React code with best practices for maintainability and scalability." },
-        { "title": "No state management or complex data handling?", "description": "We implement state management solutions like Redux or Context API for complex application state." }
+        {
+          "title": "Website lacks interactivity or dynamic features?",
+          "description": "We build component-based React applications with rich interactivity and smooth user experiences."
+        },
+        {
+          "title": "Application doesn't perform well or loads slowly?",
+          "description": "We optimize React apps with code splitting, lazy loading, and performance techniques for fast load times."
+        },
+        {
+          "title": "Code is difficult to maintain or scale?",
+          "description": "We write clean, modular React code with best practices for maintainability and scalability."
+        },
+        {
+          "title": "No state management or complex data handling?",
+          "description": "We implement state management solutions like Redux or Context API for complex application state."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of React.js Website Development",
       "subheading": "React.js development for superior performance and user experiences.",
       "items": [
-        { "title": "Component-Based", "description": "Reusable components for maintainable, scalable applications." },
-        { "title": "High Performance", "description": "Optimized React apps with fast load times and smooth interactions." },
-        { "title": "Rich Interactivity", "description": "Dynamic user interfaces with engaging interactions." }
+        {
+          "title": "Component-Based",
+          "description": "Reusable components for maintainable, scalable applications."
+        },
+        {
+          "title": "High Performance",
+          "description": "Optimized React apps with fast load times and smooth interactions."
+        },
+        {
+          "title": "Rich Interactivity",
+          "description": "Dynamic user interfaces with engaging interactions."
+        }
       ]
     },
     "features": {
-      "heading": "React.js Development Capabilities",
+      "heading": "React.js Website Development Capabilities",
       "subheading": "Everything needed to build modern React applications.",
       "features": [
-        { "title": "Component Architecture", "description": "Scalable component architecture using React best practices.", "icon": "🧩" },
-        { "title": "State Management", "description": "Redux or Context API for complex application state.", "icon": "📊" },
-        { "title": "Performance Optimization", "description": "Code splitting, lazy loading, and memoization techniques.", "icon": "⚡" },
-        { "title": "API Integration", "description": "Seamless integration with back-end APIs and services.", "icon": "🔌" },
-        { "title": "Testing & Deployment", "description": "Comprehensive testing and deployment to hosting environments.", "icon": "🚀" }
+        {
+          "title": "Component Architecture",
+          "description": "Scalable component architecture using React best practices.",
+          "icon": "🧩"
+        },
+        {
+          "title": "State Management",
+          "description": "Redux or Context API for complex application state.",
+          "icon": "📊"
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Code splitting, lazy loading, and memoization techniques.",
+          "icon": "⚡"
+        },
+        {
+          "title": "API Integration",
+          "description": "Seamless integration with back-end APIs and services.",
+          "icon": "🔌"
+        },
+        {
+          "title": "Testing & Deployment",
+          "description": "Comprehensive testing and deployment to hosting environments.",
+          "icon": "🚀"
+        }
       ]
     },
     "content": {
@@ -1595,30 +2087,71 @@
       "heading": "Struggling with WordPress that doesn't perform?",
       "subheading": "Common WordPress challenges and our solutions.",
       "items": [
-        { "title": "WordPress site looks generic or doesn't stand out?", "description": "We create custom designs and themes that differentiate your site and represent your brand professionally." },
-        { "title": "WordPress site loads slowly or performs poorly?", "description": "We optimize performance with caching, efficient code, and hosting configuration for fast load times." },
-        { "title": "WordPress site has security vulnerabilities?", "description": "We implement security hardening, regular updates, and security plugins to protect your site." },
-        { "title": "Can't customize WordPress to match your needs?", "description": "We provide custom development, plugin integration, and theme customization tailored to your requirements." }
+        {
+          "title": "WordPress site looks generic or doesn't stand out?",
+          "description": "We create custom designs and themes that differentiate your site and represent your brand professionally."
+        },
+        {
+          "title": "WordPress site loads slowly or performs poorly?",
+          "description": "We optimize performance with caching, efficient code, and hosting configuration for fast load times."
+        },
+        {
+          "title": "WordPress site has security vulnerabilities?",
+          "description": "We implement security hardening, regular updates, and security plugins to protect your site."
+        },
+        {
+          "title": "Can't customize WordPress to match your needs?",
+          "description": "We provide custom development, plugin integration, and theme customization tailored to your requirements."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of WordPress Website Development",
       "subheading": "WordPress development that drives results.",
       "items": [
-        { "title": "Custom Design", "description": "Unique WordPress sites tailored to your brand and business." },
-        { "title": "Easy Management", "description": "User-friendly WordPress admin for independent content management." },
-        { "title": "Secure & Optimized", "description": "Security hardening and performance optimization for reliable sites." }
+        {
+          "title": "Custom Design",
+          "description": "Unique WordPress sites tailored to your brand and business."
+        },
+        {
+          "title": "Easy Management",
+          "description": "User-friendly WordPress admin for independent content management."
+        },
+        {
+          "title": "Secure & Optimized",
+          "description": "Security hardening and performance optimization for reliable sites."
+        }
       ]
     },
     "features": {
-      "heading": "WordPress Development Capabilities",
+      "heading": "WordPress Website Development Capabilities",
       "subheading": "Everything needed to build a professional WordPress site.",
       "features": [
-        { "title": "Theme Customization", "description": "Custom themes and designs tailored to your brand.", "icon": "🎨" },
-        { "title": "Plugin Integration", "description": "Integration of essential plugins for functionality.", "icon": "🔌" },
-        { "title": "Security Hardening", "description": "Security best practices and protection measures.", "icon": "🔒" },
-        { "title": "Performance Optimization", "description": "Caching, optimization, and fast load times.", "icon": "⚡" },
-        { "title": "Content Management", "description": "Training and support for easy content management.", "icon": "📝" }
+        {
+          "title": "Theme Customization",
+          "description": "Custom themes and designs tailored to your brand.",
+          "icon": "🎨"
+        },
+        {
+          "title": "Plugin Integration",
+          "description": "Integration of essential plugins for functionality.",
+          "icon": "🔌"
+        },
+        {
+          "title": "Security Hardening",
+          "description": "Security best practices and protection measures.",
+          "icon": "🔒"
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Caching, optimization, and fast load times.",
+          "icon": "⚡"
+        },
+        {
+          "title": "Content Management",
+          "description": "Training and support for easy content management.",
+          "icon": "📝"
+        }
       ]
     },
     "content": {
@@ -1726,30 +2259,71 @@
       "heading": "Struggling with WooCommerce that doesn't convert?",
       "subheading": "Common WooCommerce challenges and our solutions.",
       "items": [
-        { "title": "WooCommerce store doesn't convert visitors into customers?", "description": "We design conversion-focused shopping experiences with optimized checkout flows and strategic UX that drive sales." },
-        { "title": "Payment integration is complicated or unreliable?", "description": "We integrate secure payment gateways including Stripe, PayPal, and others for seamless checkout." },
-        { "title": "Inventory management is difficult or manual?", "description": "We configure powerful inventory management systems that automate tracking and streamline operations." },
-        { "title": "Store doesn't work well on mobile devices?", "description": "We ensure mobile-first responsive design so customers can shop seamlessly on any device." }
+        {
+          "title": "WooCommerce store doesn't convert visitors into customers?",
+          "description": "We design conversion-focused shopping experiences with optimized checkout flows and strategic UX that drive sales."
+        },
+        {
+          "title": "Payment integration is complicated or unreliable?",
+          "description": "We integrate secure payment gateways including Stripe, PayPal, and others for seamless checkout."
+        },
+        {
+          "title": "Inventory management is difficult or manual?",
+          "description": "We configure powerful inventory management systems that automate tracking and streamline operations."
+        },
+        {
+          "title": "Store doesn't work well on mobile devices?",
+          "description": "We ensure mobile-first responsive design so customers can shop seamlessly on any device."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of WooCommerce Development",
       "subheading": "WooCommerce stores that convert visitors to customers.",
       "items": [
-        { "title": "High Conversion", "description": "Optimized shopping experiences designed to maximize sales." },
-        { "title": "Flexible Platform", "description": "Powerful e-commerce platform with extensive customization options." },
-        { "title": "Easy Management", "description": "User-friendly interface for managing products and orders." }
+        {
+          "title": "High Conversion",
+          "description": "Optimized shopping experiences designed to maximize sales."
+        },
+        {
+          "title": "Flexible Platform",
+          "description": "Powerful e-commerce platform with extensive customization options."
+        },
+        {
+          "title": "Easy Management",
+          "description": "User-friendly interface for managing products and orders."
+        }
       ]
     },
     "features": {
       "heading": "WooCommerce Development Capabilities",
       "subheading": "Everything needed to build a successful WooCommerce store.",
       "features": [
-        { "title": "Store Setup", "description": "Complete WooCommerce setup and configuration.", "icon": "🛍️" },
-        { "title": "Payment Integration", "description": "Secure payment gateways and checkout optimization.", "icon": "💳" },
-        { "title": "Product Management", "description": "Product catalog setup and inventory management.", "icon": "📦" },
-        { "title": "Custom Design", "description": "Custom themes and designs tailored to your brand.", "icon": "🎨" },
-        { "title": "Training & Support", "description": "Training on managing your WooCommerce store.", "icon": "👥" }
+        {
+          "title": "Store Setup",
+          "description": "Complete WooCommerce setup and configuration.",
+          "icon": "🛍️"
+        },
+        {
+          "title": "Payment Integration",
+          "description": "Secure payment gateways and checkout optimization.",
+          "icon": "💳"
+        },
+        {
+          "title": "Product Management",
+          "description": "Product catalog setup and inventory management.",
+          "icon": "📦"
+        },
+        {
+          "title": "Custom Design",
+          "description": "Custom themes and designs tailored to your brand.",
+          "icon": "🎨"
+        },
+        {
+          "title": "Training & Support",
+          "description": "Training on managing your WooCommerce store.",
+          "icon": "👥"
+        }
       ]
     },
     "content": {
@@ -1857,30 +2431,71 @@
       "heading": "Struggling with e-commerce that doesn't scale?",
       "subheading": "Common Magento challenges and our solutions.",
       "items": [
-        { "title": "E-commerce platform can't handle large product catalogs?", "description": "We configure Magento to handle millions of products and complex catalogs with optimal performance." },
-        { "title": "Store doesn't scale with business growth?", "description": "We design scalable Magento architectures that grow with your business and handle increased traffic." },
-        { "title": "No advanced features or custom functionality?", "description": "We develop custom modules, themes, and functionality tailored to your business requirements." },
-        { "title": "Performance is slow or optimization is poor?", "description": "We optimize server configuration, caching, and database performance for exceptional speed." }
+        {
+          "title": "E-commerce platform can't handle large product catalogs?",
+          "description": "We configure Magento to handle millions of products and complex catalogs with optimal performance."
+        },
+        {
+          "title": "Store doesn't scale with business growth?",
+          "description": "We design scalable Magento architectures that grow with your business and handle increased traffic."
+        },
+        {
+          "title": "No advanced features or custom functionality?",
+          "description": "We develop custom modules, themes, and functionality tailored to your business requirements."
+        },
+        {
+          "title": "Performance is slow or optimization is poor?",
+          "description": "We optimize server configuration, caching, and database performance for exceptional speed."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Magento Development",
       "subheading": "Magento development for serious e-commerce.",
       "items": [
-        { "title": "Enterprise-Grade", "description": "Powerful platform built for large-scale e-commerce." },
-        { "title": "Highly Scalable", "description": "Architecture designed to handle millions of products and high traffic." },
-        { "title": "Advanced Features", "description": "Custom development and advanced features for complex requirements." }
+        {
+          "title": "Enterprise-Grade",
+          "description": "Powerful platform built for large-scale e-commerce."
+        },
+        {
+          "title": "Highly Scalable",
+          "description": "Architecture designed to handle millions of products and high traffic."
+        },
+        {
+          "title": "Advanced Features",
+          "description": "Custom development and advanced features for complex requirements."
+        }
       ]
     },
     "features": {
       "heading": "Magento Development Capabilities",
       "subheading": "Everything needed to build enterprise e-commerce solutions.",
       "features": [
-        { "title": "Enterprise Setup", "description": "Magento installation and enterprise configuration.", "icon": "🏢" },
-        { "title": "Custom Development", "description": "Custom themes, modules, and functionality.", "icon": "💻" },
-        { "title": "Performance Optimization", "description": "Server optimization, caching, and database tuning.", "icon": "⚡" },
-        { "title": "Scalability", "description": "Architecture designed for growth and high traffic.", "icon": "📈" },
-        { "title": "Support & Maintenance", "description": "Ongoing Magento support and maintenance.", "icon": "🛠️" }
+        {
+          "title": "Enterprise Setup",
+          "description": "Magento installation and enterprise configuration.",
+          "icon": "🏢"
+        },
+        {
+          "title": "Custom Development",
+          "description": "Custom themes, modules, and functionality.",
+          "icon": "💻"
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Server optimization, caching, and database tuning.",
+          "icon": "⚡"
+        },
+        {
+          "title": "Scalability",
+          "description": "Architecture designed for growth and high traffic.",
+          "icon": "📈"
+        },
+        {
+          "title": "Support & Maintenance",
+          "description": "Ongoing Magento support and maintenance.",
+          "icon": "🛠️"
+        }
       ]
     },
     "content": {
@@ -1988,30 +2603,71 @@
       "heading": "Struggling with Squarespace sites that don't stand out?",
       "subheading": "Common Squarespace challenges and our solutions.",
       "items": [
-        { "title": "Squarespace site looks like a template?", "description": "We use custom CSS and advanced features to create unique designs that go far beyond default templates." },
-        { "title": "Site isn't optimized for SEO or speed?", "description": "We configure SEO settings, optimize images, and implement performance best practices for fast load times." },
-        { "title": "Can't customize Squarespace to match your brand?", "description": "We customize layouts, colors, fonts, and functionality to perfectly match your brand identity." },
-        { "title": "Content isn't optimized for conversions?", "description": "We optimize content structure, CTAs, and user flows for maximum conversions." }
+        {
+          "title": "Squarespace site looks like a template?",
+          "description": "We use custom CSS and advanced features to create unique designs that go far beyond default templates."
+        },
+        {
+          "title": "Site isn't optimized for SEO or speed?",
+          "description": "We configure SEO settings, optimize images, and implement performance best practices for fast load times."
+        },
+        {
+          "title": "Can't customize Squarespace to match your brand?",
+          "description": "We customize layouts, colors, fonts, and functionality to perfectly match your brand identity."
+        },
+        {
+          "title": "Content isn't optimized for conversions?",
+          "description": "We optimize content structure, CTAs, and user flows for maximum conversions."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Squarespace Development",
       "subheading": "Squarespace sites that stand out.",
       "items": [
-        { "title": "Custom Design", "description": "Unique Squarespace sites that go beyond templates." },
-        { "title": "Easy Management", "description": "Intuitive Squarespace editor for independent content management." },
-        { "title": "Optimized Performance", "description": "SEO and speed optimization for better results." }
+        {
+          "title": "Custom Design",
+          "description": "Unique Squarespace sites that go beyond templates."
+        },
+        {
+          "title": "Easy Management",
+          "description": "Intuitive Squarespace editor for independent content management."
+        },
+        {
+          "title": "Optimized Performance",
+          "description": "SEO and speed optimization for better results."
+        }
       ]
     },
     "features": {
       "heading": "Squarespace Development Capabilities",
       "subheading": "Everything needed to build a professional Squarespace site.",
       "features": [
-        { "title": "Custom Design", "description": "Unique designs using custom CSS and advanced features.", "icon": "🎨" },
-        { "title": "SEO Optimization", "description": "SEO configuration and content optimization.", "icon": "🔍" },
-        { "title": "Performance Setup", "description": "Speed optimization and performance best practices.", "icon": "⚡" },
-        { "title": "Content Optimization", "description": "Content structure and conversion optimization.", "icon": "📝" },
-        { "title": "Training & Support", "description": "Training on managing your Squarespace site.", "icon": "👥" }
+        {
+          "title": "Custom Design",
+          "description": "Unique designs using custom CSS and advanced features.",
+          "icon": "🎨"
+        },
+        {
+          "title": "SEO Optimization",
+          "description": "SEO configuration and content optimization.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Performance Setup",
+          "description": "Speed optimization and performance best practices.",
+          "icon": "⚡"
+        },
+        {
+          "title": "Content Optimization",
+          "description": "Content structure and conversion optimization.",
+          "icon": "📝"
+        },
+        {
+          "title": "Training & Support",
+          "description": "Training on managing your Squarespace site.",
+          "icon": "👥"
+        }
       ]
     },
     "content": {
@@ -2119,30 +2775,71 @@
       "heading": "Struggling with PHP applications that don't scale?",
       "subheading": "Common PHP challenges and our solutions.",
       "items": [
-        { "title": "PHP application doesn't scale with business growth?", "description": "We design scalable PHP architectures using modern frameworks and cloud infrastructure that grow with your business." },
-        { "title": "Code is outdated or difficult to maintain?", "description": "We write modern PHP code using object-oriented programming and MVC patterns for maintainability." },
-        { "title": "Application has security vulnerabilities?", "description": "We implement modern security practices, follow OWASP guidelines, and conduct security audits to protect your application." },
-        { "title": "No modern framework or best practices?", "description": "We use Laravel, Symfony, or other modern frameworks with best practices for robust applications." }
+        {
+          "title": "PHP application doesn't scale with business growth?",
+          "description": "We design scalable PHP architectures using modern frameworks and cloud infrastructure that grow with your business."
+        },
+        {
+          "title": "Code is outdated or difficult to maintain?",
+          "description": "We write modern PHP code using object-oriented programming and MVC patterns for maintainability."
+        },
+        {
+          "title": "Application has security vulnerabilities?",
+          "description": "We implement modern security practices, follow OWASP guidelines, and conduct security audits to protect your application."
+        },
+        {
+          "title": "No modern framework or best practices?",
+          "description": "We use Laravel, Symfony, or other modern frameworks with best practices for robust applications."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Custom PHP Web Development",
       "subheading": "PHP development for dynamic web solutions.",
       "items": [
-        { "title": "Modern Frameworks", "description": "Built with Laravel, Symfony, and modern PHP practices." },
-        { "title": "Scalable Architecture", "description": "Applications designed to scale with your business." },
-        { "title": "Secure & Reliable", "description": "Comprehensive security measures and reliable performance." }
+        {
+          "title": "Modern Frameworks",
+          "description": "Built with Laravel, Symfony, and modern PHP practices."
+        },
+        {
+          "title": "Scalable Architecture",
+          "description": "Applications designed to scale with your business."
+        },
+        {
+          "title": "Secure & Reliable",
+          "description": "Comprehensive security measures and reliable performance."
+        }
       ]
     },
     "features": {
-      "heading": "PHP Development Capabilities",
+      "heading": "Custom PHP Web Development Capabilities",
       "subheading": "Everything needed to build robust PHP applications.",
       "features": [
-        { "title": "Modern Frameworks", "description": "Laravel, Symfony, CodeIgniter, and vanilla PHP development.", "icon": "💻" },
-        { "title": "Architecture Design", "description": "Scalable PHP architecture using best practices.", "icon": "🏗️" },
-        { "title": "Security Implementation", "description": "Modern security practices and vulnerability protection.", "icon": "🔒" },
-        { "title": "Performance Optimization", "description": "Code optimization and performance tuning.", "icon": "⚡" },
-        { "title": "Testing & Deployment", "description": "Comprehensive testing and deployment support.", "icon": "🚀" }
+        {
+          "title": "Modern Frameworks",
+          "description": "Laravel, Symfony, CodeIgniter, and vanilla PHP development.",
+          "icon": "💻"
+        },
+        {
+          "title": "Architecture Design",
+          "description": "Scalable PHP architecture using best practices.",
+          "icon": "🏗️"
+        },
+        {
+          "title": "Security Implementation",
+          "description": "Modern security practices and vulnerability protection.",
+          "icon": "🔒"
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Code optimization and performance tuning.",
+          "icon": "⚡"
+        },
+        {
+          "title": "Testing & Deployment",
+          "description": "Comprehensive testing and deployment support.",
+          "icon": "🚀"
+        }
       ]
     },
     "content": {
@@ -2250,30 +2947,71 @@
       "heading": "Struggling with slow websites that don't rank?",
       "subheading": "Common Next.js challenges and our solutions.",
       "items": [
-        { "title": "Website loads slowly and loses visitors?", "description": "We leverage Next.js server-side rendering and static generation for lightning-fast load times." },
-        { "title": "Website doesn't rank well in search engines?", "description": "We optimize SEO with Next.js built-in features including automatic meta tags and structured data." },
-        { "title": "No server-side rendering or API routes?", "description": "We implement server-side rendering, API routes, and static site generation for optimal performance." },
-        { "title": "Bundle sizes are large or performance is poor?", "description": "We optimize images, code splitting, caching, and bundle sizes for exceptional performance." }
+        {
+          "title": "Website loads slowly and loses visitors?",
+          "description": "We leverage Next.js server-side rendering and static generation for lightning-fast load times."
+        },
+        {
+          "title": "Website doesn't rank well in search engines?",
+          "description": "We optimize SEO with Next.js built-in features including automatic meta tags and structured data."
+        },
+        {
+          "title": "No server-side rendering or API routes?",
+          "description": "We implement server-side rendering, API routes, and static site generation for optimal performance."
+        },
+        {
+          "title": "Bundle sizes are large or performance is poor?",
+          "description": "We optimize images, code splitting, caching, and bundle sizes for exceptional performance."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Next.js Web Development",
       "subheading": "Next.js development for blazing-fast performance and SEO.",
       "items": [
-        { "title": "Blazing Fast", "description": "Server-side rendering and static generation for instant load times." },
-        { "title": "SEO Optimized", "description": "Built-in SEO features for maximum search visibility." },
-        { "title": "Production Ready", "description": "React framework optimized for production performance." }
+        {
+          "title": "Blazing Fast",
+          "description": "Server-side rendering and static generation for instant load times."
+        },
+        {
+          "title": "SEO Optimized",
+          "description": "Built-in SEO features for maximum search visibility."
+        },
+        {
+          "title": "Production Ready",
+          "description": "React framework optimized for production performance."
+        }
       ]
     },
     "features": {
-      "heading": "Next.js Development Capabilities",
+      "heading": "Next.js Web Development Capabilities",
       "subheading": "Everything needed to build high-performance Next.js applications.",
       "features": [
-        { "title": "SSR & SSG", "description": "Server-side rendering and static site generation for performance.", "icon": "⚡" },
-        { "title": "API Routes", "description": "Built-in API routes for seamless back-end integration.", "icon": "🔌" },
-        { "title": "SEO Optimization", "description": "Automatic meta tags, structured data, and SEO best practices.", "icon": "🔍" },
-        { "title": "Performance Optimization", "description": "Image optimization, code splitting, and caching strategies.", "icon": "🚀" },
-        { "title": "Deployment", "description": "Deployment to Vercel, Netlify, or custom hosting platforms.", "icon": "☁️" }
+        {
+          "title": "SSR & SSG",
+          "description": "Server-side rendering and static site generation for performance.",
+          "icon": "⚡"
+        },
+        {
+          "title": "API Routes",
+          "description": "Built-in API routes for seamless back-end integration.",
+          "icon": "🔌"
+        },
+        {
+          "title": "SEO Optimization",
+          "description": "Automatic meta tags, structured data, and SEO best practices.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Image optimization, code splitting, and caching strategies.",
+          "icon": "🚀"
+        },
+        {
+          "title": "Deployment",
+          "description": "Deployment to Vercel, Netlify, or custom hosting platforms.",
+          "icon": "☁️"
+        }
       ]
     },
     "content": {
@@ -2381,30 +3119,71 @@
       "heading": "Struggling with applications that don't scale?",
       "subheading": "Common Angular challenges and our solutions.",
       "items": [
-        { "title": "Application can't handle large-scale complexity?", "description": "We design Angular architectures using modules, lazy loading, and clean architecture patterns for enterprise-scale applications." },
-        { "title": "No type safety or code organization?", "description": "We use TypeScript with Angular for type safety, better tooling, and improved code quality." },
-        { "title": "State management is complex or unorganized?", "description": "We implement state management with NgRx or RxJS to handle complex application state efficiently." },
-        { "title": "Performance is poor or bundle sizes are large?", "description": "We optimize bundle sizes, implement OnPush change detection, and lazy loading for exceptional performance." }
+        {
+          "title": "Application can't handle large-scale complexity?",
+          "description": "We design Angular architectures using modules, lazy loading, and clean architecture patterns for enterprise-scale applications."
+        },
+        {
+          "title": "No type safety or code organization?",
+          "description": "We use TypeScript with Angular for type safety, better tooling, and improved code quality."
+        },
+        {
+          "title": "State management is complex or unorganized?",
+          "description": "We implement state management with NgRx or RxJS to handle complex application state efficiently."
+        },
+        {
+          "title": "Performance is poor or bundle sizes are large?",
+          "description": "We optimize bundle sizes, implement OnPush change detection, and lazy loading for exceptional performance."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Angular Web Development",
       "subheading": "Angular development for enterprise solutions.",
       "items": [
-        { "title": "Enterprise-Grade", "description": "Complete framework built for large-scale applications." },
-        { "title": "Type Safety", "description": "TypeScript integration for enhanced code quality." },
-        { "title": "Scalable Patterns", "description": "Clean architecture and scalable patterns for growth." }
+        {
+          "title": "Enterprise-Grade",
+          "description": "Complete framework built for large-scale applications."
+        },
+        {
+          "title": "Type Safety",
+          "description": "TypeScript integration for enhanced code quality."
+        },
+        {
+          "title": "Scalable Patterns",
+          "description": "Clean architecture and scalable patterns for growth."
+        }
       ]
     },
     "features": {
-      "heading": "Angular Development Capabilities",
+      "heading": "Angular Web Development Capabilities",
       "subheading": "Everything needed to build enterprise Angular applications.",
       "features": [
-        { "title": "Architecture Design", "description": "Angular architecture using modules and lazy loading.", "icon": "🏗️" },
-        { "title": "Component Development", "description": "Modular components and reusable modules.", "icon": "🧩" },
-        { "title": "State Management", "description": "NgRx or RxJS for complex application state.", "icon": "📊" },
-        { "title": "Performance Optimization", "description": "Bundle optimization and OnPush change detection.", "icon": "⚡" },
-        { "title": "Testing & Deployment", "description": "Comprehensive testing including unit, integration, and e2e tests.", "icon": "🧪" }
+        {
+          "title": "Architecture Design",
+          "description": "Angular architecture using modules and lazy loading.",
+          "icon": "🏗️"
+        },
+        {
+          "title": "Component Development",
+          "description": "Modular components and reusable modules.",
+          "icon": "🧩"
+        },
+        {
+          "title": "State Management",
+          "description": "NgRx or RxJS for complex application state.",
+          "icon": "📊"
+        },
+        {
+          "title": "Performance Optimization",
+          "description": "Bundle optimization and OnPush change detection.",
+          "icon": "⚡"
+        },
+        {
+          "title": "Testing & Deployment",
+          "description": "Comprehensive testing including unit, integration, and e2e tests.",
+          "icon": "🧪"
+        }
       ]
     },
     "content": {
@@ -2512,30 +3291,71 @@
       "heading": "Struggling with applications that don't engage?",
       "subheading": "Common Vue.js challenges and our solutions.",
       "items": [
-        { "title": "Application lacks interactivity or smooth experiences?", "description": "We build Vue.js applications with rich interactivity, smooth animations, and intuitive user interfaces." },
-        { "title": "No state management for complex data?", "description": "We set up state management with Vuex or Pinia to handle complex application state efficiently." },
-        { "title": "Application doesn't perform well or loads slowly?", "description": "We optimize performance using Vue's built-in optimizations, lazy loading, and code splitting." },
-        { "title": "Code is difficult to maintain or scale?", "description": "We use Vue 3 Composition API and modern best practices for maintainable, scalable code." }
+        {
+          "title": "Application lacks interactivity or smooth experiences?",
+          "description": "We build Vue.js applications with rich interactivity, smooth animations, and intuitive user interfaces."
+        },
+        {
+          "title": "No state management for complex data?",
+          "description": "We set up state management with Vuex or Pinia to handle complex application state efficiently."
+        },
+        {
+          "title": "Application doesn't perform well or loads slowly?",
+          "description": "We optimize performance using Vue's built-in optimizations, lazy loading, and code splitting."
+        },
+        {
+          "title": "Code is difficult to maintain or scale?",
+          "description": "We use Vue 3 Composition API and modern best practices for maintainable, scalable code."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Vue.js Web Development",
       "subheading": "Vue.js development for elegant web experiences.",
       "items": [
-        { "title": "Progressive Framework", "description": "Approachable yet powerful framework for interactive applications." },
-        { "title": "Excellent Performance", "description": "Optimized Vue apps with fast load times and smooth interactions." },
-        { "title": "Elegant Code", "description": "Clean, maintainable code with Vue 3 Composition API." }
+        {
+          "title": "Progressive Framework",
+          "description": "Approachable yet powerful framework for interactive applications."
+        },
+        {
+          "title": "Excellent Performance",
+          "description": "Optimized Vue apps with fast load times and smooth interactions."
+        },
+        {
+          "title": "Elegant Code",
+          "description": "Clean, maintainable code with Vue 3 Composition API."
+        }
       ]
     },
     "features": {
-      "heading": "Vue.js Development Capabilities",
+      "heading": "Vue.js Web Development Capabilities",
       "subheading": "Everything needed to build elegant Vue.js applications.",
       "features": [
-        { "title": "Vue 3 Setup", "description": "Vue 3 with Composition API for modern development.", "icon": "⚡" },
-        { "title": "Component Development", "description": "Reusable Vue components with reactive system.", "icon": "🧩" },
-        { "title": "State Management", "description": "Vuex or Pinia for complex application state.", "icon": "📊" },
-        { "title": "Performance Tuning", "description": "Lazy loading, code splitting, and memoization.", "icon": "🚀" },
-        { "title": "Testing & Deployment", "description": "Comprehensive testing and deployment support.", "icon": "🧪" }
+        {
+          "title": "Vue 3 Setup",
+          "description": "Vue 3 with Composition API for modern development.",
+          "icon": "⚡"
+        },
+        {
+          "title": "Component Development",
+          "description": "Reusable Vue components with reactive system.",
+          "icon": "🧩"
+        },
+        {
+          "title": "State Management",
+          "description": "Vuex or Pinia for complex application state.",
+          "icon": "📊"
+        },
+        {
+          "title": "Performance Tuning",
+          "description": "Lazy loading, code splitting, and memoization.",
+          "icon": "🚀"
+        },
+        {
+          "title": "Testing & Deployment",
+          "description": "Comprehensive testing and deployment support.",
+          "icon": "🧪"
+        }
       ]
     },
     "content": {
@@ -2643,30 +3463,71 @@
       "heading": "Struggling with slow websites that lose visitors?",
       "subheading": "Common speed challenges and our solutions.",
       "items": [
-        { "title": "Website loads slowly and visitors bounce?", "description": "We identify bottlenecks and implement optimizations including code minification, caching, and CDN setup for fast load times." },
-        { "title": "Images are too large or unoptimized?", "description": "We optimize images with compression, modern formats, and lazy loading to reduce load times." },
-        { "title": "Hosting is slow or server configuration is poor?", "description": "We optimize server configuration, recommend better hosting, and implement caching strategies." },
-        { "title": "No performance monitoring or ongoing optimization?", "description": "We set up monitoring tools and provide ongoing optimization to maintain fast performance." }
+        {
+          "title": "Website loads slowly and visitors bounce?",
+          "description": "We identify bottlenecks and implement optimizations including code minification, caching, and CDN setup for fast load times."
+        },
+        {
+          "title": "Images are too large or unoptimized?",
+          "description": "We optimize images with compression, modern formats, and lazy loading to reduce load times."
+        },
+        {
+          "title": "Hosting is slow or server configuration is poor?",
+          "description": "We optimize server configuration, recommend better hosting, and implement caching strategies."
+        },
+        {
+          "title": "No performance monitoring or ongoing optimization?",
+          "description": "We set up monitoring tools and provide ongoing optimization to maintain fast performance."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Speed Optimization",
       "subheading": "Speed optimization that converts visitors and improves rankings.",
       "items": [
-        { "title": "50-80% Faster", "description": "Dramatic improvements in page load times and performance." },
-        { "title": "Better Rankings", "description": "Improved Core Web Vitals and SEO rankings." },
-        { "title": "Higher Conversions", "description": "Faster sites convert more visitors into customers." }
+        {
+          "title": "50-80% Faster",
+          "description": "Dramatic improvements in page load times and performance."
+        },
+        {
+          "title": "Better Rankings",
+          "description": "Improved Core Web Vitals and SEO rankings."
+        },
+        {
+          "title": "Higher Conversions",
+          "description": "Faster sites convert more visitors into customers."
+        }
       ]
     },
     "features": {
       "heading": "Speed Optimization Capabilities",
       "subheading": "Everything needed to dramatically improve website speed.",
       "features": [
-        { "title": "Performance Audit", "description": "Comprehensive speed audits using industry-standard tools.", "icon": "🔍" },
-        { "title": "Code Optimization", "description": "Code minification, compression, and optimization.", "icon": "💻" },
-        { "title": "Image Optimization", "description": "Image compression, modern formats, and lazy loading.", "icon": "🖼️" },
-        { "title": "Caching & CDN", "description": "Caching strategies and CDN setup for fast delivery.", "icon": "⚡" },
-        { "title": "Monitoring & Reporting", "description": "Performance monitoring and detailed optimization reports.", "icon": "📊" }
+        {
+          "title": "Performance Audit",
+          "description": "Comprehensive speed audits using industry-standard tools.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Code Optimization",
+          "description": "Code minification, compression, and optimization.",
+          "icon": "💻"
+        },
+        {
+          "title": "Image Optimization",
+          "description": "Image compression, modern formats, and lazy loading.",
+          "icon": "🖼️"
+        },
+        {
+          "title": "Caching & CDN",
+          "description": "Caching strategies and CDN setup for fast delivery.",
+          "icon": "⚡"
+        },
+        {
+          "title": "Monitoring & Reporting",
+          "description": "Performance monitoring and detailed optimization reports.",
+          "icon": "📊"
+        }
       ]
     },
     "content": {
@@ -2774,30 +3635,71 @@
       "heading": "Struggling with portfolios that don't convert?",
       "subheading": "Common portfolio challenges and our solutions.",
       "items": [
-        { "title": "Portfolio doesn't showcase your work effectively?", "description": "We create beautiful galleries, project showcases, and case studies that highlight your best work and tell your story." },
-        { "title": "Portfolio doesn't convert visitors into clients?", "description": "We design conversion-focused portfolios with clear CTAs, contact forms, and strategic user flows that drive client inquiries." },
-        { "title": "Portfolio isn't mobile-friendly or accessible?", "description": "We build fully responsive portfolios that look perfect on all devices and are accessible to all users." },
-        { "title": "Can't update portfolio with new work easily?", "description": "We provide easy content management so you can add new work, update content, and keep your portfolio fresh independently." }
+        {
+          "title": "Portfolio doesn't showcase your work effectively?",
+          "description": "We create beautiful galleries, project showcases, and case studies that highlight your best work and tell your story."
+        },
+        {
+          "title": "Portfolio doesn't convert visitors into clients?",
+          "description": "We design conversion-focused portfolios with clear CTAs, contact forms, and strategic user flows that drive client inquiries."
+        },
+        {
+          "title": "Portfolio isn't mobile-friendly or accessible?",
+          "description": "We build fully responsive portfolios that look perfect on all devices and are accessible to all users."
+        },
+        {
+          "title": "Can't update portfolio with new work easily?",
+          "description": "We provide easy content management so you can add new work, update content, and keep your portfolio fresh independently."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Portfolio Websites",
       "subheading": "Portfolio websites that win clients.",
       "items": [
-        { "title": "Beautiful Showcase", "description": "Professional portfolios that highlight your best work." },
-        { "title": "Conversion-Focused", "description": "Strategic design that converts visitors into clients." },
-        { "title": "Easy Management", "description": "Simple content management for independent updates." }
+        {
+          "title": "Beautiful Showcase",
+          "description": "Professional portfolios that highlight your best work."
+        },
+        {
+          "title": "Conversion-Focused",
+          "description": "Strategic design that converts visitors into clients."
+        },
+        {
+          "title": "Easy Management",
+          "description": "Simple content management for independent updates."
+        }
       ]
     },
     "features": {
-      "heading": "Portfolio Website Capabilities",
+      "heading": "Portfolio Websites Capabilities",
       "subheading": "Everything needed to create a standout portfolio.",
       "features": [
-        { "title": "Work Showcase", "description": "Beautiful galleries and project showcases.", "icon": "🎨" },
-        { "title": "Case Studies", "description": "Detailed case studies that tell your story.", "icon": "📖" },
-        { "title": "Contact Integration", "description": "Contact forms and easy ways for clients to reach you.", "icon": "📧" },
-        { "title": "Responsive Design", "description": "Mobile-first design that works on all devices.", "icon": "📱" },
-        { "title": "Content Management", "description": "Easy updates to keep your portfolio fresh.", "icon": "📝" }
+        {
+          "title": "Work Showcase",
+          "description": "Beautiful galleries and project showcases.",
+          "icon": "🎨"
+        },
+        {
+          "title": "Case Studies",
+          "description": "Detailed case studies that tell your story.",
+          "icon": "📖"
+        },
+        {
+          "title": "Contact Integration",
+          "description": "Contact forms and easy ways for clients to reach you.",
+          "icon": "📧"
+        },
+        {
+          "title": "Responsive Design",
+          "description": "Mobile-first design that works on all devices.",
+          "icon": "📱"
+        },
+        {
+          "title": "Content Management",
+          "description": "Easy updates to keep your portfolio fresh.",
+          "icon": "📝"
+        }
       ]
     },
     "content": {
@@ -2905,30 +3807,71 @@
       "heading": "Struggling with real estate sites that don't generate leads?",
       "subheading": "Common real estate website challenges and our solutions.",
       "items": [
-        { "title": "Website doesn't showcase properties effectively?", "description": "We create beautiful property listings with photo galleries, virtual tours, and detailed property information that attract buyers." },
-        { "title": "No property search or IDX integration?", "description": "We integrate IDX systems and property search functionality to display live MLS listings and help visitors find properties." },
-        { "title": "Website doesn't capture leads or contact information?", "description": "We integrate lead capture forms, contact systems, and follow-up automation to convert visitors into qualified leads." },
-        { "title": "Website isn't mobile-friendly for on-the-go agents?", "description": "We ensure mobile-first responsive design so agents can show properties to clients anywhere on any device." }
+        {
+          "title": "Website doesn't showcase properties effectively?",
+          "description": "We create beautiful property listings with photo galleries, virtual tours, and detailed property information that attract buyers."
+        },
+        {
+          "title": "No property search or IDX integration?",
+          "description": "We integrate IDX systems and property search functionality to display live MLS listings and help visitors find properties."
+        },
+        {
+          "title": "Website doesn't capture leads or contact information?",
+          "description": "We integrate lead capture forms, contact systems, and follow-up automation to convert visitors into qualified leads."
+        },
+        {
+          "title": "Website isn't mobile-friendly for on-the-go agents?",
+          "description": "We ensure mobile-first responsive design so agents can show properties to clients anywhere on any device."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Real Estate Websites",
       "subheading": "Real estate websites that sell properties.",
       "items": [
-        { "title": "Property Showcase", "description": "Beautiful property listings with virtual tours and galleries." },
-        { "title": "Lead Generation", "description": "Integrated lead capture systems that convert visitors into leads." },
-        { "title": "IDX Integration", "description": "Live MLS listings and property search functionality." }
+        {
+          "title": "Property Showcase",
+          "description": "Beautiful property listings with virtual tours and galleries."
+        },
+        {
+          "title": "Lead Generation",
+          "description": "Integrated lead capture systems that convert visitors into leads."
+        },
+        {
+          "title": "IDX Integration",
+          "description": "Live MLS listings and property search functionality."
+        }
       ]
     },
     "features": {
-      "heading": "Real Estate Website Capabilities",
+      "heading": "Real Estate Websites Capabilities",
       "subheading": "Everything needed to build a successful real estate website.",
       "features": [
-        { "title": "Property Search", "description": "Advanced property search and filter functionality.", "icon": "🔍" },
-        { "title": "IDX Integration", "description": "Live MLS listings and property data integration.", "icon": "🏠" },
-        { "title": "Lead Capture", "description": "Contact forms and lead generation systems.", "icon": "📧" },
-        { "title": "Virtual Tours", "description": "Virtual tour integration for property showcases.", "icon": "📹" },
-        { "title": "Mobile Optimization", "description": "Mobile-first design for agents and clients.", "icon": "📱" }
+        {
+          "title": "Property Search",
+          "description": "Advanced property search and filter functionality.",
+          "icon": "🔍"
+        },
+        {
+          "title": "IDX Integration",
+          "description": "Live MLS listings and property data integration.",
+          "icon": "🏠"
+        },
+        {
+          "title": "Lead Capture",
+          "description": "Contact forms and lead generation systems.",
+          "icon": "📧"
+        },
+        {
+          "title": "Virtual Tours",
+          "description": "Virtual tour integration for property showcases.",
+          "icon": "📹"
+        },
+        {
+          "title": "Mobile Optimization",
+          "description": "Mobile-first design for agents and clients.",
+          "icon": "📱"
+        }
       ]
     },
     "content": {
@@ -3036,30 +3979,71 @@
       "heading": "Struggling with healthcare sites that don't connect with patients?",
       "subheading": "Common healthcare website challenges and our solutions.",
       "items": [
-        { "title": "Website isn't HIPAA-compliant or secure?", "description": "We implement HIPAA-compliant forms, secure patient portals, encrypted data transmission, and business associate agreements to protect patient information." },
-        { "title": "Patients can't book appointments online?", "description": "We integrate online appointment booking systems that sync with your scheduling software and send automated confirmations and reminders." },
-        { "title": "Website doesn't build trust or convey professionalism?", "description": "We create professional, trustworthy healthcare websites with accessible navigation and clear information that build patient confidence." },
-        { "title": "No patient portal or secure communication?", "description": "We set up secure patient portals where patients can access medical records, test results, and communicate securely." }
+        {
+          "title": "Website isn't HIPAA-compliant or secure?",
+          "description": "We implement HIPAA-compliant forms, secure patient portals, encrypted data transmission, and business associate agreements to protect patient information."
+        },
+        {
+          "title": "Patients can't book appointments online?",
+          "description": "We integrate online appointment booking systems that sync with your scheduling software and send automated confirmations and reminders."
+        },
+        {
+          "title": "Website doesn't build trust or convey professionalism?",
+          "description": "We create professional, trustworthy healthcare websites with accessible navigation and clear information that build patient confidence."
+        },
+        {
+          "title": "No patient portal or secure communication?",
+          "description": "We set up secure patient portals where patients can access medical records, test results, and communicate securely."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Healthcare Websites",
       "subheading": "Healthcare websites that patients trust.",
       "items": [
-        { "title": "HIPAA-Compliant", "description": "Secure websites that protect patient information." },
-        { "title": "Patient Portals", "description": "Secure portals for patient access and communication." },
-        { "title": "Appointment Booking", "description": "Online appointment systems that streamline scheduling." }
+        {
+          "title": "HIPAA-Compliant",
+          "description": "Secure websites that protect patient information."
+        },
+        {
+          "title": "Patient Portals",
+          "description": "Secure portals for patient access and communication."
+        },
+        {
+          "title": "Appointment Booking",
+          "description": "Online appointment systems that streamline scheduling."
+        }
       ]
     },
     "features": {
-      "heading": "Healthcare Website Capabilities",
+      "heading": "Healthcare Websites Capabilities",
       "subheading": "Everything needed to build a HIPAA-compliant healthcare website.",
       "features": [
-        { "title": "HIPAA Compliance", "description": "HIPAA-compliant forms and secure data handling.", "icon": "🔒" },
-        { "title": "Patient Portals", "description": "Secure portals for patient access and communication.", "icon": "👤" },
-        { "title": "Appointment Booking", "description": "Online appointment systems with automated reminders.", "icon": "📅" },
-        { "title": "EHR Integration", "description": "Integration with EHR systems for seamless workflows.", "icon": "💻" },
-        { "title": "Security & Privacy", "description": "Comprehensive security measures and data protection.", "icon": "🛡️" }
+        {
+          "title": "HIPAA Compliance",
+          "description": "HIPAA-compliant forms and secure data handling.",
+          "icon": "🔒"
+        },
+        {
+          "title": "Patient Portals",
+          "description": "Secure portals for patient access and communication.",
+          "icon": "👤"
+        },
+        {
+          "title": "Appointment Booking",
+          "description": "Online appointment systems with automated reminders.",
+          "icon": "📅"
+        },
+        {
+          "title": "EHR Integration",
+          "description": "Integration with EHR systems for seamless workflows.",
+          "icon": "💻"
+        },
+        {
+          "title": "Security & Privacy",
+          "description": "Comprehensive security measures and data protection.",
+          "icon": "🛡️"
+        }
       ]
     },
     "content": {
@@ -3167,30 +4151,71 @@
       "heading": "Struggling with law firm sites that don't attract clients?",
       "subheading": "Common law firm website challenges and our solutions.",
       "items": [
-        { "title": "Website doesn't establish credibility or trust?", "description": "We create professional law firm websites that convey professionalism and trust with attorney profiles, credentials, and clear practice area information." },
-        { "title": "No clear practice area pages or expertise demonstration?", "description": "We create detailed practice area pages that demonstrate your expertise and help potential clients understand your services." },
-        { "title": "Website doesn't capture leads or consultation requests?", "description": "We integrate contact forms, consultation request systems, and lead capture tools to convert visitors into clients." },
-        { "title": "Website isn't mobile-friendly for on-the-go clients?", "description": "We ensure mobile-first responsive design so potential clients can easily access your site and contact you from any device." }
+        {
+          "title": "Website doesn't establish credibility or trust?",
+          "description": "We create professional law firm websites that convey professionalism and trust with attorney profiles, credentials, and clear practice area information."
+        },
+        {
+          "title": "No clear practice area pages or expertise demonstration?",
+          "description": "We create detailed practice area pages that demonstrate your expertise and help potential clients understand your services."
+        },
+        {
+          "title": "Website doesn't capture leads or consultation requests?",
+          "description": "We integrate contact forms, consultation request systems, and lead capture tools to convert visitors into clients."
+        },
+        {
+          "title": "Website isn't mobile-friendly for on-the-go clients?",
+          "description": "We ensure mobile-first responsive design so potential clients can easily access your site and contact you from any device."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Law Firm Websites",
       "subheading": "Law firm websites that build trust.",
       "items": [
-        { "title": "Professional Design", "description": "Credible websites that establish trust and professionalism." },
-        { "title": "Practice Area Pages", "description": "Detailed pages that demonstrate your expertise." },
-        { "title": "Lead Generation", "description": "Contact forms and consultation request systems." }
+        {
+          "title": "Professional Design",
+          "description": "Credible websites that establish trust and professionalism."
+        },
+        {
+          "title": "Practice Area Pages",
+          "description": "Detailed pages that demonstrate your expertise."
+        },
+        {
+          "title": "Lead Generation",
+          "description": "Contact forms and consultation request systems."
+        }
       ]
     },
     "features": {
-      "heading": "Law Firm Website Capabilities",
+      "heading": "Law Firm Websites Capabilities",
       "subheading": "Everything needed to build a professional law firm website.",
       "features": [
-        { "title": "Attorney Profiles", "description": "Comprehensive profiles highlighting credentials and experience.", "icon": "👨‍⚖️" },
-        { "title": "Practice Areas", "description": "Detailed practice area pages demonstrating expertise.", "icon": "📚" },
-        { "title": "Lead Capture", "description": "Contact forms and consultation request systems.", "icon": "📧" },
-        { "title": "Case Results", "description": "Appropriate presentation of case results within ethics rules.", "icon": "📊" },
-        { "title": "Mobile Optimization", "description": "Mobile-first design for on-the-go clients.", "icon": "📱" }
+        {
+          "title": "Attorney Profiles",
+          "description": "Comprehensive profiles highlighting credentials and experience.",
+          "icon": "👨‍⚖️"
+        },
+        {
+          "title": "Practice Areas",
+          "description": "Detailed practice area pages demonstrating expertise.",
+          "icon": "📚"
+        },
+        {
+          "title": "Lead Capture",
+          "description": "Contact forms and consultation request systems.",
+          "icon": "📧"
+        },
+        {
+          "title": "Case Results",
+          "description": "Appropriate presentation of case results within ethics rules.",
+          "icon": "📊"
+        },
+        {
+          "title": "Mobile Optimization",
+          "description": "Mobile-first design for on-the-go clients.",
+          "icon": "📱"
+        }
       ]
     },
     "content": {
@@ -3298,30 +4323,71 @@
       "heading": "Struggling with education sites that don't engage?",
       "subheading": "Common education website challenges and our solutions.",
       "items": [
-        { "title": "Website doesn't serve multiple audiences effectively?", "description": "We create websites that serve students, parents, and staff with clear organization, accessible navigation, and modern design." },
-        { "title": "No student portals or LMS integration?", "description": "We integrate student portals, parent portals, LMS systems, and communication tools for seamless online learning." },
-        { "title": "Content isn't organized or easy to find?", "description": "We organize course catalogs, event calendars, news, and program information in an intuitive, easy-to-find format." },
-        { "title": "Website isn't accessible or inclusive?", "description": "We follow WCAG accessibility guidelines to ensure your site is accessible to all users, including those with disabilities." }
+        {
+          "title": "Website doesn't serve multiple audiences effectively?",
+          "description": "We create websites that serve students, parents, and staff with clear organization, accessible navigation, and modern design."
+        },
+        {
+          "title": "No student portals or LMS integration?",
+          "description": "We integrate student portals, parent portals, LMS systems, and communication tools for seamless online learning."
+        },
+        {
+          "title": "Content isn't organized or easy to find?",
+          "description": "We organize course catalogs, event calendars, news, and program information in an intuitive, easy-to-find format."
+        },
+        {
+          "title": "Website isn't accessible or inclusive?",
+          "description": "We follow WCAG accessibility guidelines to ensure your site is accessible to all users, including those with disabilities."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Education Websites",
       "subheading": "Education websites that engage students and parents.",
       "items": [
-        { "title": "Multi-Audience", "description": "Websites that serve students, parents, and staff effectively." },
-        { "title": "Portal Integration", "description": "Student and parent portals with LMS integration." },
-        { "title": "Accessible Design", "description": "WCAG-compliant accessible design for all users." }
+        {
+          "title": "Multi-Audience",
+          "description": "Websites that serve students, parents, and staff effectively."
+        },
+        {
+          "title": "Portal Integration",
+          "description": "Student and parent portals with LMS integration."
+        },
+        {
+          "title": "Accessible Design",
+          "description": "WCAG-compliant accessible design for all users."
+        }
       ]
     },
     "features": {
-      "heading": "Education Website Capabilities",
+      "heading": "Education Websites Capabilities",
       "subheading": "Everything needed to build an engaging education website.",
       "features": [
-        { "title": "Course Catalogs", "description": "Organized course catalogs and program information.", "icon": "📚" },
-        { "title": "Student Portals", "description": "Student and parent portals for access and communication.", "icon": "👥" },
-        { "title": "LMS Integration", "description": "Integration with learning management systems.", "icon": "💻" },
-        { "title": "Event Calendars", "description": "Event calendars and news management.", "icon": "📅" },
-        { "title": "Accessibility", "description": "WCAG-compliant accessible design.", "icon": "♿" }
+        {
+          "title": "Course Catalogs",
+          "description": "Organized course catalogs and program information.",
+          "icon": "📚"
+        },
+        {
+          "title": "Student Portals",
+          "description": "Student and parent portals for access and communication.",
+          "icon": "👥"
+        },
+        {
+          "title": "LMS Integration",
+          "description": "Integration with learning management systems.",
+          "icon": "💻"
+        },
+        {
+          "title": "Event Calendars",
+          "description": "Event calendars and news management.",
+          "icon": "📅"
+        },
+        {
+          "title": "Accessibility",
+          "description": "WCAG-compliant accessible design.",
+          "icon": "♿"
+        }
       ]
     },
     "content": {
@@ -3429,30 +4495,71 @@
       "heading": "Struggling with non-profit sites that don't drive impact?",
       "subheading": "Common non-profit website challenges and our solutions.",
       "items": [
-        { "title": "Website doesn't inspire donations or action?", "description": "We create compelling non-profit websites with powerful storytelling, impact stories, and clear calls-to-action that inspire donations and volunteer sign-ups." },
-        { "title": "No donation system or fundraising integration?", "description": "We set up secure donation systems, recurring giving options, and integrate with fundraising platforms like PayPal, Stripe, and others." },
-        { "title": "Website doesn't tell your story powerfully?", "description": "We create impact storytelling sections, success stories, photo galleries, and infographics that show the difference you're making." },
-        { "title": "No volunteer sign-up or engagement tools?", "description": "We integrate volunteer sign-up forms, event calendars, and engagement tools to mobilize your community and grow support." }
+        {
+          "title": "Website doesn't inspire donations or action?",
+          "description": "We create compelling non-profit websites with powerful storytelling, impact stories, and clear calls-to-action that inspire donations and volunteer sign-ups."
+        },
+        {
+          "title": "No donation system or fundraising integration?",
+          "description": "We set up secure donation systems, recurring giving options, and integrate with fundraising platforms like PayPal, Stripe, and others."
+        },
+        {
+          "title": "Website doesn't tell your story powerfully?",
+          "description": "We create impact storytelling sections, success stories, photo galleries, and infographics that show the difference you're making."
+        },
+        {
+          "title": "No volunteer sign-up or engagement tools?",
+          "description": "We integrate volunteer sign-up forms, event calendars, and engagement tools to mobilize your community and grow support."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of NGO / Non-Profit Websites",
       "subheading": "Non-profit websites that drive impact.",
       "items": [
-        { "title": "Donation Systems", "description": "Secure donation systems with recurring giving options." },
-        { "title": "Impact Stories", "description": "Powerful storytelling that shows your impact." },
-        { "title": "Volunteer Engagement", "description": "Volunteer sign-up and engagement tools." }
+        {
+          "title": "Donation Systems",
+          "description": "Secure donation systems with recurring giving options."
+        },
+        {
+          "title": "Impact Stories",
+          "description": "Powerful storytelling that shows your impact."
+        },
+        {
+          "title": "Volunteer Engagement",
+          "description": "Volunteer sign-up and engagement tools."
+        }
       ]
     },
     "features": {
-      "heading": "Non-Profit Website Capabilities",
+      "heading": "NGO / Non-Profit Websites Capabilities",
       "subheading": "Everything needed to build a compelling non-profit website.",
       "features": [
-        { "title": "Donation Systems", "description": "Secure donation systems with recurring giving options.", "icon": "💝" },
-        { "title": "Volunteer Sign-Up", "description": "Volunteer sign-up forms and engagement tools.", "icon": "👥" },
-        { "title": "Impact Stories", "description": "Success stories and impact communication.", "icon": "📖" },
-        { "title": "Event Calendars", "description": "Event calendars and news management.", "icon": "📅" },
-        { "title": "Fundraising Integration", "description": "Integration with fundraising platforms.", "icon": "💰" }
+        {
+          "title": "Donation Systems",
+          "description": "Secure donation systems with recurring giving options.",
+          "icon": "💝"
+        },
+        {
+          "title": "Volunteer Sign-Up",
+          "description": "Volunteer sign-up forms and engagement tools.",
+          "icon": "👥"
+        },
+        {
+          "title": "Impact Stories",
+          "description": "Success stories and impact communication.",
+          "icon": "📖"
+        },
+        {
+          "title": "Event Calendars",
+          "description": "Event calendars and news management.",
+          "icon": "📅"
+        },
+        {
+          "title": "Fundraising Integration",
+          "description": "Integration with fundraising platforms.",
+          "icon": "💰"
+        }
       ]
     },
     "content": {
@@ -3560,30 +4667,71 @@
       "heading": "Struggling with job portals that don't connect?",
       "subheading": "Common job portal challenges and our solutions.",
       "items": [
-        { "title": "Job portal lacks robust search or filter functionality?", "description": "We develop powerful search functionality, advanced filters, location-based search, and autocomplete features to help users find opportunities." },
-        { "title": "No resume uploads or candidate profiles?", "description": "We build job seeker features including profile creation, resume uploads, saved jobs, and application tracking for seamless job searching." },
-        { "title": "No employer dashboards or job posting tools?", "description": "We create employer dashboards for posting jobs, reviewing applications, managing candidates, and tracking recruitment metrics." },
-        { "title": "Application process is complicated or slow?", "description": "We implement application systems with resume parsing, candidate matching, email notifications, and interview scheduling for efficient recruitment." }
+        {
+          "title": "Job portal lacks robust search or filter functionality?",
+          "description": "We develop powerful search functionality, advanced filters, location-based search, and autocomplete features to help users find opportunities."
+        },
+        {
+          "title": "No resume uploads or candidate profiles?",
+          "description": "We build job seeker features including profile creation, resume uploads, saved jobs, and application tracking for seamless job searching."
+        },
+        {
+          "title": "No employer dashboards or job posting tools?",
+          "description": "We create employer dashboards for posting jobs, reviewing applications, managing candidates, and tracking recruitment metrics."
+        },
+        {
+          "title": "Application process is complicated or slow?",
+          "description": "We implement application systems with resume parsing, candidate matching, email notifications, and interview scheduling for efficient recruitment."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Job Portal Websites",
       "subheading": "Job portals that connect people with opportunities.",
       "items": [
-        { "title": "Advanced Search", "description": "Powerful search and filter functionality for job seekers." },
-        { "title": "Employer Dashboards", "description": "Comprehensive dashboards for employers to manage recruitment." },
-        { "title": "Seamless Applications", "description": "Streamlined application processes with resume parsing and matching." }
+        {
+          "title": "Advanced Search",
+          "description": "Powerful search and filter functionality for job seekers."
+        },
+        {
+          "title": "Employer Dashboards",
+          "description": "Comprehensive dashboards for employers to manage recruitment."
+        },
+        {
+          "title": "Seamless Applications",
+          "description": "Streamlined application processes with resume parsing and matching."
+        }
       ]
     },
     "features": {
-      "heading": "Job Portal Website Capabilities",
+      "heading": "Job Portal Websites Capabilities",
       "subheading": "Everything needed to build a successful job portal.",
       "features": [
-        { "title": "Job Search", "description": "Advanced search and filter functionality.", "icon": "🔍" },
-        { "title": "Resume Uploads", "description": "Resume uploads and candidate profiles.", "icon": "📄" },
-        { "title": "Employer Dashboards", "description": "Dashboards for posting jobs and managing candidates.", "icon": "💼" },
-        { "title": "Application Tracking", "description": "Application tracking and candidate matching.", "icon": "📊" },
-        { "title": "Mobile Optimization", "description": "Mobile-first design for on-the-go job searching.", "icon": "📱" }
+        {
+          "title": "Job Search",
+          "description": "Advanced search and filter functionality.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Resume Uploads",
+          "description": "Resume uploads and candidate profiles.",
+          "icon": "📄"
+        },
+        {
+          "title": "Employer Dashboards",
+          "description": "Dashboards for posting jobs and managing candidates.",
+          "icon": "💼"
+        },
+        {
+          "title": "Application Tracking",
+          "description": "Application tracking and candidate matching.",
+          "icon": "📊"
+        },
+        {
+          "title": "Mobile Optimization",
+          "description": "Mobile-first design for on-the-go job searching.",
+          "icon": "📱"
+        }
       ]
     },
     "content": {
@@ -3691,30 +4839,71 @@
       "heading": "Struggling with directories that don't help users find businesses?",
       "subheading": "Common directory challenges and our solutions.",
       "items": [
-        { "title": "Directory lacks powerful search or filter options?", "description": "We develop powerful search functionality, advanced filters, location-based search, and autocomplete features to help users find exactly what they need." },
-        { "title": "Business profiles are incomplete or unorganized?", "description": "We create comprehensive business profile pages with contact info, hours, descriptions, photos, and map integration for complete information." },
-        { "title": "No review system or quality verification?", "description": "We integrate review and rating systems, verification badges, and moderation tools to maintain quality listings and build trust." },
-        { "title": "Spam listings or poor quality control?", "description": "We implement verification systems, moderation tools, user reporting features, and anti-spam measures to maintain directory quality." }
+        {
+          "title": "Directory lacks powerful search or filter options?",
+          "description": "We develop powerful search functionality, advanced filters, location-based search, and autocomplete features to help users find exactly what they need."
+        },
+        {
+          "title": "Business profiles are incomplete or unorganized?",
+          "description": "We create comprehensive business profile pages with contact info, hours, descriptions, photos, and map integration for complete information."
+        },
+        {
+          "title": "No review system or quality verification?",
+          "description": "We integrate review and rating systems, verification badges, and moderation tools to maintain quality listings and build trust."
+        },
+        {
+          "title": "Spam listings or poor quality control?",
+          "description": "We implement verification systems, moderation tools, user reporting features, and anti-spam measures to maintain directory quality."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Directory Listing Websites",
       "subheading": "Directory sites that help people find what they need.",
       "items": [
-        { "title": "Advanced Search", "description": "Powerful search and filter functionality for finding businesses." },
-        { "title": "Business Profiles", "description": "Comprehensive profiles with complete business information." },
-        { "title": "Review Systems", "description": "Review and rating systems with quality verification." }
+        {
+          "title": "Advanced Search",
+          "description": "Powerful search and filter functionality for finding businesses."
+        },
+        {
+          "title": "Business Profiles",
+          "description": "Comprehensive profiles with complete business information."
+        },
+        {
+          "title": "Review Systems",
+          "description": "Review and rating systems with quality verification."
+        }
       ]
     },
     "features": {
-      "heading": "Directory Website Capabilities",
+      "heading": "Directory Listing Websites Capabilities",
       "subheading": "Everything needed to build a comprehensive directory.",
       "features": [
-        { "title": "Search & Filters", "description": "Advanced search and filter functionality.", "icon": "🔍" },
-        { "title": "Business Profiles", "description": "Comprehensive business profile pages.", "icon": "🏢" },
-        { "title": "Review Systems", "description": "Review and rating systems with verification.", "icon": "⭐" },
-        { "title": "Map Integration", "description": "Google Maps integration for location-based search.", "icon": "🗺️" },
-        { "title": "Quality Control", "description": "Verification and moderation tools.", "icon": "✅" }
+        {
+          "title": "Search & Filters",
+          "description": "Advanced search and filter functionality.",
+          "icon": "🔍"
+        },
+        {
+          "title": "Business Profiles",
+          "description": "Comprehensive business profile pages.",
+          "icon": "🏢"
+        },
+        {
+          "title": "Review Systems",
+          "description": "Review and rating systems with verification.",
+          "icon": "⭐"
+        },
+        {
+          "title": "Map Integration",
+          "description": "Google Maps integration for location-based search.",
+          "icon": "🗺️"
+        },
+        {
+          "title": "Quality Control",
+          "description": "Verification and moderation tools.",
+          "icon": "✅"
+        }
       ]
     },
     "content": {
@@ -3822,30 +5011,71 @@
       "heading": "Struggling with marketplaces that don't scale?",
       "subheading": "Common marketplace challenges and our solutions.",
       "items": [
-        { "title": "Marketplace can't handle multiple vendors or high traffic?", "description": "We design scalable marketplace architectures that handle multiple vendors, high traffic, complex transactions, and growth effectively." },
-        { "title": "No vendor dashboards or seller management tools?", "description": "We develop comprehensive vendor dashboards where sellers can list products, manage inventory, track sales, and view analytics independently." },
-        { "title": "Payment and commission systems are complicated?", "description": "We implement secure commission systems, escrow payments, automated payouts, and financial reporting for marketplace operators." },
-        { "title": "Product management is difficult or manual?", "description": "We build product management tools including bulk uploads, variations, categories, search optimization, and recommendation engines." }
+        {
+          "title": "Marketplace can't handle multiple vendors or high traffic?",
+          "description": "We design scalable marketplace architectures that handle multiple vendors, high traffic, complex transactions, and growth effectively."
+        },
+        {
+          "title": "No vendor dashboards or seller management tools?",
+          "description": "We develop comprehensive vendor dashboards where sellers can list products, manage inventory, track sales, and view analytics independently."
+        },
+        {
+          "title": "Payment and commission systems are complicated?",
+          "description": "We implement secure commission systems, escrow payments, automated payouts, and financial reporting for marketplace operators."
+        },
+        {
+          "title": "Product management is difficult or manual?",
+          "description": "We build product management tools including bulk uploads, variations, categories, search optimization, and recommendation engines."
+        }
       ]
     },
     "keyBenefits": {
-      "heading": "Key Benefits",
+      "heading": "Key Benefits of Multi-Vendor Marketplace Websites",
       "subheading": "Marketplaces that enable multiple sellers.",
       "items": [
-        { "title": "Vendor Dashboards", "description": "Comprehensive dashboards for sellers to manage their shops." },
-        { "title": "Commission Systems", "description": "Secure commission systems with escrow payments." },
-        { "title": "Scalable Architecture", "description": "Architecture designed to handle growth and high traffic." }
+        {
+          "title": "Vendor Dashboards",
+          "description": "Comprehensive dashboards for sellers to manage their shops."
+        },
+        {
+          "title": "Commission Systems",
+          "description": "Secure commission systems with escrow payments."
+        },
+        {
+          "title": "Scalable Architecture",
+          "description": "Architecture designed to handle growth and high traffic."
+        }
       ]
     },
     "features": {
-      "heading": "Multi-Vendor Marketplace Capabilities",
+      "heading": "Multi-Vendor Marketplace Websites Capabilities",
       "subheading": "Everything needed to build a successful marketplace.",
       "features": [
-        { "title": "Vendor Dashboards", "description": "Comprehensive dashboards for sellers to manage shops.", "icon": "👥" },
-        { "title": "Commission Systems", "description": "Secure commission and escrow payment systems.", "icon": "💰" },
-        { "title": "Product Management", "description": "Product management tools and bulk uploads.", "icon": "📦" },
-        { "title": "Order Management", "description": "Order tracking and fulfillment systems.", "icon": "📋" },
-        { "title": "Security & Verification", "description": "Vendor verification and fraud prevention.", "icon": "🔒" }
+        {
+          "title": "Vendor Dashboards",
+          "description": "Comprehensive dashboards for sellers to manage shops.",
+          "icon": "👥"
+        },
+        {
+          "title": "Commission Systems",
+          "description": "Secure commission and escrow payment systems.",
+          "icon": "💰"
+        },
+        {
+          "title": "Product Management",
+          "description": "Product management tools and bulk uploads.",
+          "icon": "📦"
+        },
+        {
+          "title": "Order Management",
+          "description": "Order tracking and fulfillment systems.",
+          "icon": "📋"
+        },
+        {
+          "title": "Security & Verification",
+          "description": "Vendor verification and fraud prevention.",
+          "icon": "🔒"
+        }
       ]
     },
     "content": {

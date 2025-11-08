@@ -109,7 +109,7 @@ export default function CreativeShowcase({
 		"/industry/showNine.webp",
 		"/industry/showTen.webp",
 		"/industry/showEleven.webp",
-		"/industry/showTwelve.webp.webp"
+		"/industry/showTwelve.webp"
 	]
 	const list = Array.isArray(images) && images.length ? images : fallback
 
