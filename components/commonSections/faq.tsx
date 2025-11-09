@@ -67,7 +67,7 @@ export default function Faq({ data }: FaqProps) {
 	}
 
 	return (
-		<section className="py-20 px-6 bg-white">
+		<section className="py-20 px-6 bg-white" style={{overflowX: "hidden"}}>
 			<div className="container max-w-7xl mx-auto">
 				<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 					{/* Left column */}

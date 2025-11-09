@@ -55,7 +55,7 @@ const Navbar: React.FC = () => {
 
 	const navigationLinks = [
 		{ name: "Home", href: "/" },
-		{ name: "Services", href: "/services", hasMegaMenu: true },
+		{ name: "Services", href: "", hasMegaMenu: true },
 		{ name: "Portfolio", href: "/portfolio" },
 		{ name: "About Us", href: "/about" },
 		{ name: "Resources", href: "/resources" },

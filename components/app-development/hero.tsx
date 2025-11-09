@@ -17,27 +17,27 @@ export default function AppDevHero({ data }: AppDevHeroProps) {
 		() => [
 			{
 				id: "slide-1",
-				image: "/seo/mobileHero.webp",
+				image: "/app-development/HeroImageOne.png",
 				alt: "Account information dashboard",
 			},
 			{
 				id: "slide-2",
-				image: "/seo/hero.webp",
+				image: "/app-development/HeroImageTwo.png",
 				alt: "Loan details dashboard",
 			},
 			{
 				id: "slide-3",
-				image: "/seo/services/contstra.webp",
+				image: "/app-development/HeroImageThree.png",
 				alt: "Construction services dashboard",
 			},
 			{
 				id: "slide-4",
-				image: "/seo/services/localkey.webp",
+				image: "/app-development/HeroImageFour.png",
 				alt: "Local key metrics dashboard",
 			},
 			{
 				id: "slide-5",
-				image: "/seo/services/locallink.webp",
+				image: "/app-development/HeroImageFive.png",
 				alt: "Local link analysis dashboard",
 			},
 		],
@@ -108,103 +108,86 @@ export default function AppDevHero({ data }: AppDevHeroProps) {
 						/>
 					</motion.div>
 
-					{/* Right side - Auto carousel */}
+					{/* Right side - Phone carousel */}
 					<div className="relative mx-auto hidden w-full max-w-xl items-center justify-center lg:flex">
-						<button
-							type="button"
-							onClick={goToPrev}
-							aria-label="Previous slide"
-							className="flex h-12 w-12 items-center justify-center border-white/40 bg-white/10 text-2xl text-white shadow-lg backdrop-blur transition hover:bg-white/20"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="20"
-								height="20"
-								viewBox="0 0 20 20"
-								fill="none"
-								className="block rtl:-scale-x-100"
-							>
-								<path
-									fill-rule="evenodd"
-									clip-rule="evenodd"
-									d="M13.8316 17.5554L7.11573 10L13.8316 2.44464L12.8351 1.55883L5.72548 9.5571L5.72548 10.4429L12.8351 18.4412L13.8316 17.5554Z"
-									fill="#666D73"
-								></path>
-							</svg>
-						</button>
+						<div
+							aria-hidden="true"
+							className="absolute -inset-20 rounded-full bg-gradient-to-br from-white/20 via-yellow/40 to-transparent blur-3xl"
+						/>
 
-						<div className="relative w-full overflow-hidden rounded-[32px] bg-white/5 px-6 pb-10 pt-8 shadow-2xl backdrop-blur-lg">
-							<AnimatePresence
-								mode="wait"
-								initial={false}
+						<div
+							className="relative z-10 flex h-[600px] w-[320px] items-center justify-center rounded-[56px] border border-black/80 bg-black p-3"
+							style={{
+								borderWidth:
+									"0.75px",
+							}}
+						>
+							<div
+								aria-hidden="true"
+								className="absolute inset-3"
+							/>
+							<div
+								aria-hidden="true"
+								className="absolute left-1/2 top-6 h-1.5 w-24 -translate-x-1/2 bg-white/40"
+							/>
+
+							<div
+								className="relative h-full w-full overflow-hidden rounded-[40px] border border-black/50 bg-black"
+								style={{
+									borderWidth:
+										"0.75px",
+								}}
 							>
-								<motion.div
-									key={
-										slides[
-											activeIndex
-										]
-											.id
+								<AnimatePresence
+									mode="wait"
+									initial={
+										false
 									}
-									custom={
-										direction
-									}
-									variants={
-										slideVariants
-									}
-									initial="enter"
-									animate="center"
-									exit="exit"
-									transition={{
-										duration: 0.6,
-										ease: "easeOut",
-									}}
-									className="relative flex h-[360px] w-full items-center justify-center"
 								>
-									<Image
-										src={
+									<motion.div
+										key={
 											slides[
 												activeIndex
 											]
-												.image
+												.id
 										}
-										alt={
-											slides[
-												activeIndex
-											]
-												.alt
+										custom={
+											direction
 										}
-										fill
-										sizes="(min-width: 1024px) 480px, 90vw"
-										className="rounded-[24px] object-cover"
-										priority
-									/>
-								</motion.div>
-							</AnimatePresence>
-							<div className="pointer-events-none absolute inset-0 rounded-[32px] border border-white/10" />
+										variants={
+											slideVariants
+										}
+										initial="enter"
+										animate="center"
+										exit="exit"
+										transition={{
+											duration: 0.6,
+											ease: "easeOut",
+										}}
+										className="absolute inset-0"
+									>
+										<Image
+											src={
+												slides[
+													activeIndex
+												]
+													.image
+											}
+											alt={
+												slides[
+													activeIndex
+												]
+													.alt
+											}
+											fill
+											sizes="(min-width: 1024px) 320px, 90vw"
+											className="object-cover"
+											priority
+										/>
+									</motion.div>
+								</AnimatePresence>
+							</div>
 						</div>
-
-						<button
-							type="button"
-							onClick={goToNext}
-							aria-label="Next slide"
-							className="flex h-12 w-12 items-center justify-center bg-white/10 text-2xl text-white shadow-lg backdrop-blur transition hover:bg-white/20"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="20"
-								height="20"
-								viewBox="0 0 20 20"
-								fill="none"
-								className="block rtl:-scale-x-100"
-							>
-								<path
-									fill-rule="evenodd"
-									clip-rule="evenodd"
-									d="M6.16833 17.5554L12.8842 10L6.16833 2.44464L7.16488 1.55883L14.2745 9.5571L14.2745 10.4429L7.16488 18.4412L6.16833 17.5554Z"
-									fill="#464849"
-								></path>
-							</svg>
-						</button>
 					</div>
 				</div>
 			</div>
