@@ -113,7 +113,7 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 								delay: 1,
 							},
 						}}
-						className="pointer-events-none absolute top-0 left-3 md:left-16 md:top-[2%]"
+						className="hidden md:block pointer-events-none absolute md:left-16 md:top-[2%]"
 					>
 						<div className="relative w-12 h-12 md:w-16 md:h-16">
 							<div className="w-full h-full overflow-hidden">
@@ -160,7 +160,7 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 								delay: 1.2,
 							},
 						}}
-						className="pointer-events-none absolute top-0 right-3 md:right-16 md:top-[3%]"
+						className="hidden md:block pointer-events-none absolute md:right-16 md:top-[3%]"
 					>
 						<div className="relative w-12 h-12 md:w-16 md:h-16">
 							<div className="w-full h-full rounded-full overflow-hidden">
@@ -206,7 +206,7 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 								delay: 1.4,
 							},
 						}}
-						className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 md:bottom-[6%] md:left-32 md:translate-x-0 lg:left-24"
+						className="hidden md:block pointer-events-none absolute md:bottom-[6%] md:left-32 md:translate-x-0 lg:left-24"
 					>
 						<div className="relative w-12 h-12 md:w-16 md:h-16">
 							<div className="w-full h-full rounded-full overflow-hidden">

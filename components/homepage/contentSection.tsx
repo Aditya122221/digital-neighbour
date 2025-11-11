@@ -51,9 +51,6 @@ export default function ContentSection() {
     <section className="bg-white py-20">
       <div className="mx-auto flex max-w-6xl flex-col gap-12 px-6 lg:px-12">
         <header className="text-center">
-          <span className="inline-flex items-center justify-center rounded-full bg-yellow px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-black">
-            Outcomes
-          </span>
           <h2 className="mt-8 text-4xl font-semibold leading-tight text-black md:text-5xl lg:text-6xl font-cal-sans">
             The{" "}
             <span className="relative inline-block">

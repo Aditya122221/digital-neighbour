@@ -37,9 +37,6 @@ export default function BrandInfo() {
 		<section className="py-20">
 			<div className="mx-auto flex max-w-6xl flex-col gap-16 px-6 lg:px-12">
 				<header className="max-w-4xl space-y-6">
-					<span className="inline-flex items-center justify-center rounded-full bg-yellow px-4 py-1 text-xs font-semibold uppercase tracking-[0.3em] text-black">
-						About Digital Neighbour
-					</span>
 					<h2 className="text-3xl font-semibold leading-tight md:text-4xl lg:text-5xl font-cal-sans">
 						The{" "}
 						<span className="relative inline-block text-black">
@@ -64,7 +61,7 @@ export default function BrandInfo() {
 				</header>
 
 				<div className="grid lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
-					<div className="bg-yellow/10 p-10" style={{ borderTopLeftRadius: "32px", borderBottomLeftRadius: "32px" }}>
+					<div className="rounded-t-[32px] bg-yellow/10 p-10 lg:rounded-bl-[32px] lg:rounded-br-none lg:rounded-tl-[32px] lg:rounded-tr-none">
 						<div className="flex items-center gap-3">
 							<span className="flex h-12 w-12 items-center justify-center text-black">
 								<Sparkles
@@ -122,7 +119,7 @@ export default function BrandInfo() {
 						</div>
 					</div>
 
-					<aside className="flex flex-col justify-between gap-6 bg-black p-8 text-white" style={{ borderTopRightRadius: "32px", borderBottomRightRadius: "32px" }}>
+					<aside className="flex flex-col justify-between gap-6 rounded-b-[32px] bg-black p-8 text-white lg:rounded-bl-none lg:rounded-br-[32px] lg:rounded-tl-none lg:rounded-tr-[32px]">
 						<div>
 							<h3 className="text-2xl font-semibold">
 								Partners, not

@@ -112,7 +112,7 @@ export default function DataAnalyticsHero({ data }: DataAnalyticsHeroProps) {
                 delay: 1,
               },
             }}
-            className="pointer-events-none absolute top-0 left-3 md:left-16 md:top-[4%]"
+            className="hidden md:block pointer-events-none absolute md:left-16 md:top-[4%]"
           >
             <div className="relative w-12 h-12 md:w-16 md:h-16">
               <div className="w-full h-full rounded-full overflow-hidden">
@@ -120,8 +120,8 @@ export default function DataAnalyticsHero({ data }: DataAnalyticsHeroProps) {
                   src="/dataanaly/heroOne.webp"
                   alt="Data Analyst"
                   fill
-className = "object-cover"
-                    style = {{ borderRadius: "50%" }}
+                  className="object-cover"
+                  style={{ borderRadius: "50%" }}
                 />
               </div>
               {/* Online indicator */}
@@ -156,7 +156,7 @@ className = "object-cover"
                 delay: 1.2,
               },
             }}
-            className="pointer-events-none absolute top-0 right-3 md:right-16 md:top-[3%]"
+            className="hidden md:block pointer-events-none absolute md:right-16 md:top-[3%]"
           >
             <div className="relative w-12 h-12 md:w-16 md:h-16">
               <div className="w-full h-full rounded-full overflow-hidden">
@@ -164,8 +164,8 @@ className = "object-cover"
                   src="/dataanaly/heroTwo.webp"
                   alt="User 1"
                   fill
-className = "object-cover"
-style = {{ borderRadius: "50%" }}
+                  className="object-cover"
+                  style={{ borderRadius: "50%" }}
                 />
               </div>
               <div className="absolute bottom-0 right-0 w-3 h-3 md:w-4 md:h-4 bg-green3 rounded-full border-2 border-white"></div>
@@ -199,7 +199,7 @@ style = {{ borderRadius: "50%" }}
                 delay: 1.4,
               },
             }}
-            className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 md:bottom-[6%] md:left-32 md:translate-x-0 lg:left-24"
+            className="hidden md:block pointer-events-none absolute md:bottom-[6%] md:left-32 md:translate-x-0 lg:left-24"
           >
             <div className="relative w-12 h-12 md:w-16 md:h-16">
               <div className="w-full h-full rounded-full overflow-hidden">
@@ -207,8 +207,8 @@ style = {{ borderRadius: "50%" }}
                   src="/dataanaly/heroThree.webp"
                   alt="User 2"
                   fill
-className = "object-cover"
-style = {{ borderRadius: "50%" }}
+                  className="object-cover"
+                  style={{ borderRadius: "50%" }}
                 />
               </div>
               <div className="absolute bottom-0 right-0 w-3 h-3 md:w-4 md:h-4 bg-green3 rounded-full border-2 border-white"></div>
