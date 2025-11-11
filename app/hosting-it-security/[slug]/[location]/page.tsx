@@ -32,7 +32,7 @@ import KeyBenefits from "@/components/commonSections/keybenefits";
 import Features from "@/components/commonSections/features";
 import type { HostingServiceSlug } from "@/config/hosting-services";
 
-const LOCATION_ENABLED_HOSTING_SLUGS: HostingServiceSlug[] = [
+export const LOCATION_ENABLED_HOSTING_SLUGS: HostingServiceSlug[] = [
   "hosting-it-security",
   "web-hosting",
   "wordpress-hosting",

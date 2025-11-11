@@ -31,7 +31,9 @@ import Faq from "@/components/commonSections/faq";
 import CaseStudy from "@/components/homepage/casestudy";
 import type { WebDevServiceSlug } from "@/config/webdev-services";
 
-const LOCATION_ENABLED_WEBDEV_SLUGS: WebDevServiceSlug[] = ["web-development"];
+export const LOCATION_ENABLED_WEBDEV_SLUGS: WebDevServiceSlug[] = [
+  "web-development",
+];
 
 const slugAliases: Record<string, WebDevServiceSlug> = {
   webdevelopment: "web-development",

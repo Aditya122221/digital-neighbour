@@ -41,7 +41,7 @@ const slugAliases: Record<string, PaidAdsServiceSlug> = {
   youtubeads: "youtube-ads",
 };
 
-const LOCATION_ENABLED_PAID_ADS_SLUGS: PaidAdsServiceSlug[] = [
+export const LOCATION_ENABLED_PAID_ADS_SLUGS: PaidAdsServiceSlug[] = [
   "google-ads",
   "google-shopping-ads",
   "youtube-ads",

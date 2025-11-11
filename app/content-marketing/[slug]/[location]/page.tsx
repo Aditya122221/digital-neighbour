@@ -33,7 +33,7 @@ import TestimonalTwo from "@/components/homepage/testimonalTwo";
 import BookACall from "@/components/homepage/bookacall";
 import type { ContentServiceSlug } from "@/config/content-services";
 
-const LOCATION_ENABLED_CONTENT_SLUGS: ContentServiceSlug[] = [
+export const LOCATION_ENABLED_CONTENT_SLUGS: ContentServiceSlug[] = [
   "content-marketing",
   "copywriting",
   "graphic-designing",
