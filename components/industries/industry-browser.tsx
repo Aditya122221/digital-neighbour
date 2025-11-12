@@ -83,9 +83,6 @@ export default function IndustryBrowserSection() {
 		<section className="w-full bg-gradient-to-b from-white to-[#F5F8FF] py-16">
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="mb-10">
-					<p className="text-center text-xs font-semibold tracking-[0.3em] text-black">
-						OUR INDUSTRIES
-					</p>
 					<h2 className="mt-3 text-center text-4xl md:text-5xl lg:text-6xl font-cal-sans font-regular leading-tight text-blackbrown">
 						We&apos;re proud to serve the{" "}
 						<span className="relative inline-block">
