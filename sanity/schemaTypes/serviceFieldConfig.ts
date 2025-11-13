@@ -472,6 +472,7 @@ export const serviceFieldConfig = {
 			"form",
 			"introParagraph",
 			"painPoints",
+			"serviceCards",
 			"process",
 			"content",
 			"keyBenefits",

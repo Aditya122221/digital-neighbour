@@ -88,9 +88,14 @@ export default function ContentMarketingPage() {
 			</div>
 			<Form data={currentData?.form} />
 			<BrandsMarquee />
-  < IntroParagraph data = { introData } />
-  <PainPoints data={ painData } />
-    <Apart />
+			<IntroParagraph data={introData} />
+			<PainPoints data={painData} />
+			<Services
+				data={currentData?.services}
+				serviceCards={currentData?.serviceCards}
+				basePath="/content-marketing"
+			/>
+			<Apart />
     < CaseStudy />
     <Process2
 				data={currentData?.services}

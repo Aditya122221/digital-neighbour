@@ -211,16 +211,8 @@ export default function HostingServices({
 									}
 								</p>
 								<CustomButton
-									text={
-										content
-											.customApi
-											.buttonText
-									}
-									href={
-										content
-											.customApi
-											.buttonLink
-									}
+									text="Learn more"
+									href="/contact"
 									textColor="black"
 									borderColor="black"
 								/>
@@ -264,20 +256,6 @@ export default function HostingServices({
 											.description
 									}
 								</p>
-								<CustomButton
-									text={
-										content
-											.maximumCustomization
-											.buttonText
-									}
-									href={
-										content
-											.maximumCustomization
-											.buttonLink
-									}
-									textColor="black"
-									borderColor="black"
-								/>
 							</div>
 
 							{/* Right Column - Bullet Points */}

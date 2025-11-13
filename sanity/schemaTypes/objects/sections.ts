@@ -210,7 +210,7 @@ export const featuresSection = defineType({
 
 export const premiumCard = defineType({
 	name: "premiumCard",
-	title: "Premium Card",
+	title: "Card",
 	type: "object",
 	fields: [
 		stringField("title", "Title"),
@@ -220,43 +220,43 @@ export const premiumCard = defineType({
 
 export const premiumButton = defineType({
 	name: "premiumButton",
-	title: "Premium CTA",
+	title: "Big Cards",
 	type: "object",
 	fields: [
 		stringField("title", "Title"),
 		stringField("badge", "Badge"),
 		textField("description", "Description"),
-		stringField("buttonText", "Button Text"),
-		stringField("buttonLink", "Button Link"),
 	],
 })
 
 export const premiumCloudServicesSection = defineType({
 	name: "premiumCloudServicesSection",
-	title: "Premium Cloud Services",
+	title: "Services",
 	type: "object",
 	fields: [
 		stringField("title", "Title"),
 		defineField({
-			name: "topCards",
-			title: "Top Cards",
-			type: "array",
-			of: [{ type: "premiumCard" }],
+			name: "cardone",
+			title: "Card One",
+			type: "premiumCard",
+		}),
+		defineField({
+			name: "cardtwo",
+			title: "Card Two",
+			type: "premiumCard",
 		}),
 		defineField({
 			name: "customApi",
-			title: "Custom API",
+			title: "Big Cards One",
 			type: "premiumButton",
 		}),
 		defineField({
 			name: "maximumCustomization",
-			title: "Maximum Customization",
+			title: "Big Cards Two",
 			type: "object",
 			fields: [
 				stringField("title", "Title"),
 				textField("description", "Description"),
-				stringField("buttonText", "Button Text"),
-				stringField("buttonLink", "Button Link"),
 				defineField({
 					name: "features",
 					title: "Features",
