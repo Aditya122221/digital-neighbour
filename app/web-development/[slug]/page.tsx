@@ -8,8 +8,8 @@ import {
   normalizeLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
-import webDevData from "@/data/web-development.json";
 import { buildMetadata, humanizeSlug } from "@/lib/site-metadata";
+import { getWebDevelopmentServiceBySlug } from "@/lib/sanity-service-data";
 import WebDevHero from "@/components/web-development/hero";
 import IntroParagraph from "@/components/commonSections/introparagraph";
 import PainPoints from "@/components/commonSections/painpoints";
@@ -31,18 +31,9 @@ import CaseStudy from "@/components/homepage/casestudy";
 
 const DEFAULT_WEBDEV_SLUG = "web-development" as const;
 
-type WebDevJson = Record<string, any> & {
-  otherServices?: { webdevelopmentServices?: string[] };
-};
-
-const data = webDevData as unknown as WebDevJson;
-
-function toKebabCase(input: string) {
-  return input
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)+/g, "");
-}
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 function fromKebabToTitle(input: string) {
   return input
@@ -51,83 +42,8 @@ function fromKebabToTitle(input: string) {
     .join(" ");
 }
 
-function getAllowedSlugs() {
-  const jsonSlugs = Object.keys(data).filter((k) => k !== "otherServices");
-  const otherServiceSlugs = (
-    data.otherServices?.webdevelopmentServices || []
-  ).map((s) => toKebabCase(s));
-  return new Set([...jsonSlugs, ...otherServiceSlugs]);
-}
-
-function resolveDataForSlug(slug: string) {
-  const base = (data as any)[DEFAULT_WEBDEV_SLUG] || {};
-  const direct = (data as any)[slug];
-  if (direct) return direct;
-
-  const otherList = data.otherServices?.webdevelopmentServices || [];
-  const match = otherList.find((label) => toKebabCase(label) === slug);
-  if (!match) return null;
-
-  // Virtualize content for other services using the base as fallback
-  return {
-    ...base,
-    hero: {
-      ...(base?.hero || {}),
-      heading: match,
-      subheading: `Professional ${match} services tailored to your business needs.`,
-    },
-    services: match,
-    form: base?.form || {},
-    content: base?.content || {},
-    serviceCards: base?.serviceCards || [],
-    process: base?.process || {},
-    introParagraph: base?.introParagraph || {},
-    painPoints: base?.painPoints || {},
-    keyBenefits: base?.keyBenefits || {},
-    features: base?.features || {},
-    faq: {
-      ...(base?.faq || {}),
-      serviceName: match,
-    },
-  };
-}
-
-function buildPageSections(data: any) {
-  const introData = data?.introParagraph
-    ? {
-        heading: data.introParagraph.heading,
-        problemStatement: data.introParagraph?.paragraphs?.[0],
-        valueProposition: data.introParagraph?.paragraphs?.[1],
-      }
-    : undefined;
-  const painData = data?.painPoints
-    ? {
-        heading: data.painPoints.heading,
-        subheading: data.painPoints.subheading,
-        painPoints: (data.painPoints.items || []).map((p: any) => ({
-          problem: p.title,
-          solution: p.description,
-        })),
-      }
-    : undefined;
-  const benefitsData = data?.keyBenefits
-    ? {
-        heading: data.keyBenefits.heading,
-        subheading: data.keyBenefits.subheading,
-        benefits: (data.keyBenefits.items || []).map((b: any) => ({
-          title: b.title,
-          description: b.description,
-          icon: b.icon,
-          image: b.image,
-        })),
-      }
-    : undefined;
-
-  return { introData, painData, benefitsData };
-}
 
 function renderWebDevPage(data: any, slug: string) {
-  const { introData, painData, benefitsData } = buildPageSections(data);
   const heroFallback = {
     heading: fromKebabToTitle(slug),
     subheading:
@@ -149,8 +65,8 @@ function renderWebDevPage(data: any, slug: string) {
       </div>
       <Form data={data?.form} />
       <BrandsMarquee />
-      <IntroParagraph data={introData} />
-      <PainPoints data={painData} />
+      <IntroParagraph data={data?.introParagraph} />
+      <PainPoints data={data?.painPoints} />
       <Functionalities />
       <Services
         data={data?.services}
@@ -161,7 +77,7 @@ function renderWebDevPage(data: any, slug: string) {
       <Industries />
       <CaseStudy />
       <Process2 data={data?.services} processData={data?.process} />
-      <KeyBenefits data={benefitsData} />
+      <KeyBenefits data={data?.keyBenefits} />
       <Features data={data?.features} />
       <Faq data={data?.faq} />
       <OtherServices />
@@ -177,9 +93,9 @@ export async function generateMetadata({
   params: { slug: string };
 }): Promise<Metadata> {
   const { slug } = params;
-  const allowed = getAllowedSlugs();
 
-  const baseData = resolveDataForSlug(DEFAULT_WEBDEV_SLUG);
+  // Get base data from Sanity
+  const baseData = await getWebDevelopmentServiceBySlug(DEFAULT_WEBDEV_SLUG);
   const baseHeading =
     baseData?.hero?.heading ?? "Web Development Services";
   const baseDescription =
@@ -194,14 +110,9 @@ export async function generateMetadata({
     });
   }
 
-  if (allowed.has(slug)) {
-    const currentData = resolveDataForSlug(slug);
-    if (!currentData) {
-      return {
-        title: "Page Not Found",
-      };
-    }
-
+  // Try to fetch from Sanity
+  const currentData = await getWebDevelopmentServiceBySlug(slug);
+  if (currentData) {
     const heading =
       currentData?.hero?.heading ?? fromKebabToTitle(slug);
     const description =
@@ -266,22 +177,14 @@ export async function generateMetadata({
   };
 }
 
-export async function generateStaticParams() {
-  return Array.from(getAllowedSlugs()).map((slug) => ({ slug }));
-}
-
 export default async function WebDevSlugPage({
   params,
 }: {
   params: { slug: string };
 }) {
-  const allowed = getAllowedSlugs();
-
-  if (allowed.has(params.slug)) {
-    const currentData = resolveDataForSlug(params.slug);
-    if (!currentData) {
-      notFound();
-    }
+  // Try to fetch from Sanity first
+  const currentData = await getWebDevelopmentServiceBySlug(params.slug);
+  if (currentData) {
     return renderWebDevPage(currentData, params.slug);
   }
 
@@ -298,7 +201,8 @@ export default async function WebDevSlugPage({
       notFound();
     }
 
-    const baseData = resolveDataForSlug(DEFAULT_WEBDEV_SLUG);
+    // Get base data from Sanity
+    const baseData = await getWebDevelopmentServiceBySlug(DEFAULT_WEBDEV_SLUG);
     if (!baseData) {
       notFound();
     }

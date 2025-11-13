@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import { buildMetadata } from "@/lib/site-metadata"
-import socialData from "@/data/social-media.json"
+import { getSocialMediaServiceBySlug } from "@/lib/sanity-service-data"
 import SocialMediaHero from "@/components/social-media/hero"
 import IntroParagraph from "@/components/commonSections/introparagraph"
 import PainPoints from "@/components/commonSections/painpoints"
@@ -21,59 +22,32 @@ import Faq from "@/components/commonSections/faq"
 import CaseStudy from "@/components/homepage/casestudy"
 import WhyWork from "@/components/social-media/whywork"
 
-const socialOverview = (socialData as any)["social-media-marketing"] as any
-const socialHeading =
-	socialOverview?.hero?.heading ??
-	"Social Media Marketing that Drives Growth"
-const socialDescription =
-	socialOverview?.hero?.subheading ??
-	"Plan, create, and optimise social media programmes that grow community, engagement, and demand across Meta, LinkedIn, TikTok, and more."
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
-export const metadata: Metadata = buildMetadata({
-	title: socialHeading,
-	description: socialDescription,
-	path: "/social-media-marketing",
-})
+export async function generateMetadata(): Promise<Metadata> {
+	const socialOverview = await getSocialMediaServiceBySlug("social-media-marketing")
+	const socialHeading =
+		socialOverview?.hero?.heading ??
+		"Social Media Marketing that Drives Growth"
+	const socialDescription =
+		socialOverview?.hero?.subheading ??
+		"Plan, create, and optimise social media programmes that grow community, engagement, and demand across Meta, LinkedIn, TikTok, and more."
 
-export default function SocialMediaMarketingPage() {
-	const currentData = socialOverview as any
-	const introData = currentData?.introParagraph
-		? {
-				heading: currentData.introParagraph.heading,
-				problemStatement:
-					currentData.introParagraph
-						?.paragraphs?.[0],
-				valueProposition:
-					currentData.introParagraph
-						?.paragraphs?.[1],
-		  }
-		: undefined
-	const painData = currentData?.painpoints
-		? {
-				heading: currentData.painpoints.heading,
-				subheading: currentData.painpoints.subheading,
-				painPoints: (
-					currentData.painpoints.items || []
-				).map((p: any) => ({
-					problem: p.title,
-					solution: p.description,
-				})),
-		  }
-		: undefined
-	const benefitsData = currentData?.keyBenefits
-		? {
-				heading: currentData.keyBenefits.heading,
-				subheading: currentData.keyBenefits.subheading,
-				benefits: (
-					currentData.keyBenefits.items || []
-				).map((b: any) => ({
-					title: b.title,
-					description: b.description,
-					icon: b.icon,
-					image: b.image,
-				})),
-		  }
-		: undefined
+	return buildMetadata({
+		title: socialHeading,
+		description: socialDescription,
+		path: "/social-media-marketing",
+	})
+}
+
+export default async function SocialMediaMarketingPage() {
+	const currentData = await getSocialMediaServiceBySlug("social-media-marketing")
+	
+	if (!currentData) {
+		notFound()
+	}
 
 	return (
 		<main>
@@ -91,8 +65,8 @@ export default function SocialMediaMarketingPage() {
 			</div>
 			<Form data={currentData?.form} />
 			<BrandsMarquee />
-			<IntroParagraph data={introData} />
-			<PainPoints data={painData} />
+			<IntroParagraph data={currentData?.introParagraph} />
+			<PainPoints data={currentData?.painPoints} />
 			<Services
 				data={currentData?.services}
 				serviceCards={currentData?.serviceCards}
@@ -109,7 +83,7 @@ export default function SocialMediaMarketingPage() {
 				data={currentData?.services}
 				processData={currentData?.process}
           />
-          <KeyBenefits data={benefitsData} />
+          <KeyBenefits data={currentData?.keyBenefits} />
   < Features data = { currentData?.features } />
   <Faq data={currentData?.faq} />
 			<OtherServices />

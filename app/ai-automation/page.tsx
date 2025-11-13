@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import { buildMetadata } from "@/lib/site-metadata"
-import aiAutomationData from "@/data/ai-automation.json"
+import { getAiAutomationServiceBySlug } from "@/lib/sanity-service-data"
 import AiAutomationHero from "@/components/ai-automation/hero"
 import Content from "@/components/commonSections/content"
 import AiAutomationServices from "@/components/ai-automation/services"
@@ -21,21 +22,31 @@ import KeyBenefits from "@/components/commonSections/keybenefits"
 import Features from "@/components/commonSections/features"
 import Apart from "@/components/homepage/apart"
 
-const aiAutomationOverview = aiAutomationData["ai-automation"] as any
-const aiAutomationHeading =
-	aiAutomationOverview?.hero?.heading ?? "AI & Automation Services"
-const aiAutomationDescription =
-	aiAutomationOverview?.hero?.subheading ??
-	"Deploy intelligent automation, machine learning, and AI assistants that streamline operations, unlock insights, and drive innovation."
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
-export const metadata: Metadata = buildMetadata({
-	title: aiAutomationHeading,
-	description: aiAutomationDescription,
-	path: "/ai-automation",
-})
+export async function generateMetadata(): Promise<Metadata> {
+	const aiAutomationOverview = await getAiAutomationServiceBySlug("ai-automation")
+	const aiAutomationHeading =
+		aiAutomationOverview?.hero?.heading ?? "AI & Automation Services"
+	const aiAutomationDescription =
+		aiAutomationOverview?.hero?.subheading ??
+		"Deploy intelligent automation, machine learning, and AI assistants that streamline operations, unlock insights, and drive innovation."
 
-export default function AiAutomationPage() {
-	const currentData = aiAutomationOverview as any
+	return buildMetadata({
+		title: aiAutomationHeading,
+		description: aiAutomationDescription,
+		path: "/ai-automation",
+	})
+}
+
+export default async function AiAutomationPage() {
+	const currentData = await getAiAutomationServiceBySlug("ai-automation")
+	
+	if (!currentData) {
+		notFound()
+	}
 
 	return (
 		<main>

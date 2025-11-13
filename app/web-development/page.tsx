@@ -1,7 +1,8 @@
 import React from "react"
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import { buildMetadata } from "@/lib/site-metadata"
-import webDevData from "@/data/web-development.json"
+import { getWebDevelopmentServiceBySlug } from "@/lib/sanity-service-data"
 import WebDevHero from "@/components/web-development/hero"
 import IntroParagraph from "@/components/commonSections/introparagraph"
 import PainPoints from "@/components/commonSections/painpoints"
@@ -21,59 +22,31 @@ import OtherServices from "@/components/commonSections/otherservices"
 import Faq from "@/components/commonSections/faq"
 import CaseStudy from "@/components/homepage/casestudy"
 
-const webDevOverview = (webDevData as any)["web-development"] as any
-const webDevHeading =
-	webDevOverview?.hero?.heading ?? "Web Development Services"
-const webDevDescription =
-	webDevOverview?.hero?.subheading ??
-	"Design and ship high-performing websites, web apps, and digital platforms with Digital Neighbour’s full-stack web development team."
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
-export const metadata: Metadata = buildMetadata({
-	title: webDevHeading,
-	description: webDevDescription,
-	path: "/web-development",
-})
+export async function generateMetadata(): Promise<Metadata> {
+	const webDevOverview = await getWebDevelopmentServiceBySlug("web-development")
+	const webDevHeading =
+		webDevOverview?.hero?.heading ?? "Web Development Services"
+	const webDevDescription =
+		webDevOverview?.hero?.subheading ??
+		"Design and ship high-performing websites, web apps, and digital platforms with Digital Neighbour's full-stack web development team."
 
-export default function WebDevelopmentPage() {
-	const currentData = webDevOverview as any
+	return buildMetadata({
+		title: webDevHeading,
+		description: webDevDescription,
+		path: "/web-development",
+	})
+}
 
-	const introData = currentData?.introParagraph
-		? {
-				heading: currentData.introParagraph.heading,
-				problemStatement:
-					currentData.introParagraph
-						?.paragraphs?.[0],
-				valueProposition:
-					currentData.introParagraph
-						?.paragraphs?.[1],
-		  }
-		: undefined
-	const painData = currentData?.painPoints
-		? {
-				heading: currentData.painPoints.heading,
-				subheading: currentData.painPoints.subheading,
-				painPoints: (
-					currentData.painPoints.items || []
-				).map((p: any) => ({
-					problem: p.title,
-					solution: p.description,
-				})),
-		  }
-		: undefined
-	const benefitsData = currentData?.keyBenefits
-		? {
-				heading: currentData.keyBenefits.heading,
-				subheading: currentData.keyBenefits.subheading,
-				benefits: (
-					currentData.keyBenefits.items || []
-				).map((b: any) => ({
-					title: b.title,
-					description: b.description,
-					icon: b.icon,
-					image: b.image,
-				})),
-		  }
-		: undefined
+export default async function WebDevelopmentPage() {
+	const currentData = await getWebDevelopmentServiceBySlug("web-development")
+	
+	if (!currentData) {
+		notFound()
+	}
 
 	return (
 		<main>
@@ -90,8 +63,8 @@ export default function WebDevelopmentPage() {
 			</div>
 			<Form data={currentData?.form} />
 			<BrandsMarquee />
-	< IntroParagraph data = { introData } />
-	<PainPoints data={painData} />
+	< IntroParagraph data = { currentData?.introParagraph } />
+	<PainPoints data={currentData?.painPoints} />
 			<Functionalities />
 			<Services
 				data={currentData?.services}
@@ -105,7 +78,7 @@ export default function WebDevelopmentPage() {
 				data={currentData?.services}
 				processData={currentData?.process}
 					/>
-					<KeyBenefits data={benefitsData} />
+					<KeyBenefits data={currentData?.keyBenefits} />
 	< Features data = { currentData?.features } />
 	<Faq data={currentData?.faq} />
 			<OtherServices />

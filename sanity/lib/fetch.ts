@@ -7,5 +7,7 @@ export async function sanityFetch<T = SanityDocument>(
   query: string,
   params: QueryParams = {},
 ) {
+  // Fetch from Sanity with CDN disabled (configured in client.ts)
+  // This ensures we always get fresh data from Sanity
   return sanityClient.fetch<T>(query, params);
 }

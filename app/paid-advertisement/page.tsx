@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/site-metadata";
-import paidAdsData from "@/data/paid-ads.json";
+import { getPaidAdsServiceBySlug } from "@/lib/sanity-service-data";
 import PaidAdsHero from "@/components/paid-ads/hero";
 import Strategic from "@/components/paid-ads/strategic";
 import Content from "@/components/commonSections/content";
@@ -20,21 +21,31 @@ import PainPoints from "@/components/commonSections/painpoints";
 import KeyBenefits from "@/components/commonSections/keybenefits";
 import Features from "@/components/commonSections/features";
 
-const paidAdsOverview = paidAdsData["paid-advertisement"] as any;
-const paidAdsHeading =
-	paidAdsOverview?.hero?.heading ?? "Paid Advertising Services";
-const paidAdsDescription =
-	paidAdsOverview?.hero?.subheading ??
-	"Launch and optimise high-ROI paid media programmes across Google, Meta, LinkedIn, and YouTube with Digital Neighbour.";
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
-export const metadata: Metadata = buildMetadata({
-	title: paidAdsHeading,
-	description: paidAdsDescription,
-	path: "/paid-advertisement",
-});
+export async function generateMetadata(): Promise<Metadata> {
+	const paidAdsOverview = await getPaidAdsServiceBySlug("paid-advertisement");
+	const paidAdsHeading =
+		paidAdsOverview?.hero?.heading ?? "Paid Advertising Services";
+	const paidAdsDescription =
+		paidAdsOverview?.hero?.subheading ??
+		"Launch and optimise high-ROI paid media programmes across Google, Meta, LinkedIn, and YouTube with Digital Neighbour.";
 
-export default function PaidAdvertisementPage() {
-  const currentData = paidAdsOverview as any;
+	return buildMetadata({
+		title: paidAdsHeading,
+		description: paidAdsDescription,
+		path: "/paid-advertisement",
+	});
+}
+
+export default async function PaidAdvertisementPage() {
+  const currentData = await getPaidAdsServiceBySlug("paid-advertisement");
+  
+  if (!currentData) {
+    notFound();
+  }
 
   return (
     <main>
@@ -44,15 +55,15 @@ export default function PaidAdvertisementPage() {
       </div>
       <Form data={currentData?.form} />
         <BrandsMarquee />
-        <IntroParagraph data={currentData?.introparagraph} />
-      <PainPoints data={currentData?.painpoints} />
+        <IntroParagraph data={currentData?.introParagraph} />
+      <PainPoints data={currentData?.painPoints} />
       <Services data={currentData?.services} serviceCards={currentData?.serviceCards} basePath="/paid-advertisement" />
   <Strategic data={ currentData?.strategic } serviceName = { currentData?.services } />
   <Content data={ currentData?.content } imagePathPrefix = "/seo/content" />
     <Apart />
     < CaseStudy />
     <Process2 data={currentData?.services} processData={currentData?.process} />
-      <KeyBenefits data={currentData?.keybenefits} />
+      <KeyBenefits data={currentData?.keyBenefits} />
   < Features data = { currentData?.features } />
   <Faq data={currentData?.faq} />
       <OtherServices />

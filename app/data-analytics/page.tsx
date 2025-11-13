@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/site-metadata";
-import dataAnalyticsData from "@/data/data-analytics.json";
+import { getDataAnalyticsServiceBySlug } from "@/lib/sanity-service-data";
 import DataAnalyticsHero from "@/components/data-analytics/hero";
 import Content from "@/components/commonSections/content";
 import DataAnalyticsServices from "@/components/data-analytics/services";
@@ -20,21 +21,31 @@ import KeyBenefits from "@/components/commonSections/keybenefits";
 import Features from "@/components/commonSections/features";
 import Apart from "@/components/homepage/apart";
 
-const dataAnalyticsOverview = dataAnalyticsData["data-analytics"] as any;
-const dataAnalyticsHeading =
-	dataAnalyticsOverview?.hero?.heading ?? "Data & Analytics Services";
-const dataAnalyticsDescription =
-	dataAnalyticsOverview?.hero?.subheading ??
-	"Operationalise data, analytics, and business intelligence to deliver insights, automation, and growth with Digital Neighbour.";
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
-export const metadata: Metadata = buildMetadata({
-	title: dataAnalyticsHeading,
-	description: dataAnalyticsDescription,
-	path: "/data-analytics",
-});
+export async function generateMetadata(): Promise<Metadata> {
+	const dataAnalyticsOverview = await getDataAnalyticsServiceBySlug("data-analytics");
+	const dataAnalyticsHeading =
+		dataAnalyticsOverview?.hero?.heading ?? "Data & Analytics Services";
+	const dataAnalyticsDescription =
+		dataAnalyticsOverview?.hero?.subheading ??
+		"Operationalise data, analytics, and business intelligence to deliver insights, automation, and growth with Digital Neighbour.";
 
-export default function DataAnalyticsPage() {
-  const currentData = dataAnalyticsOverview as any;
+	return buildMetadata({
+		title: dataAnalyticsHeading,
+		description: dataAnalyticsDescription,
+		path: "/data-analytics",
+	});
+}
+
+export default async function DataAnalyticsPage() {
+  const currentData = await getDataAnalyticsServiceBySlug("data-analytics");
+  
+  if (!currentData) {
+    notFound();
+  }
 
   return (
     <main>

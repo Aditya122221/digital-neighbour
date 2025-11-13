@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import { buildMetadata } from "@/lib/site-metadata"
-import industriesData from "@/data/industries.json"
+import { getIndustriesServiceBySlug } from "@/lib/sanity-service-data"
 import IndustriesHero from "@/components/industries/mainHero"
 
 import Content from "@/components/commonSections/content"
@@ -21,20 +22,33 @@ import Apart from "@/components/homepage/apart"
 import IndustryBrowserSection from "@/components/industries/industry-browser"
 import CreativeShowcase from "@/components/industries/creative-showcase"
 
-const industriesOverview = industriesData["industries"] as any
-const industriesHeading =
-	industriesOverview?.hero?.heading ?? "Industry Marketing Solutions"
-const industriesDescription =
-	industriesOverview?.hero?.subheading ??
-	"Tailored marketing, product, and growth programmes engineered for the sectors shaping the digital economy."
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
-export const metadata: Metadata = buildMetadata({
-	title: industriesHeading,
-	description: industriesDescription,
-	path: "/industry",
-})
+export async function generateMetadata(): Promise<Metadata> {
+	const industriesOverview = await getIndustriesServiceBySlug("industries")
+	
+	const industriesHeading =
+		industriesOverview?.hero?.heading ?? "Industry Marketing Solutions"
+	const industriesDescription =
+		industriesOverview?.hero?.subheading ??
+		"Tailored marketing, product, and growth programmes engineered for the sectors shaping the digital economy."
 
-export default function IndustryPage() {
+	return buildMetadata({
+		title: industriesHeading,
+		description: industriesDescription,
+		path: "/industry",
+	})
+}
+
+export default async function IndustryPage() {
+	const industriesOverview = await getIndustriesServiceBySlug("industries")
+	
+	if (!industriesOverview) {
+		notFound()
+	}
+
 	const currentData = industriesOverview as any
 	const introData = currentData?.introParagraph
 		? {
@@ -120,7 +134,7 @@ export default function IndustryPage() {
 			<KeyBenefits data={benefitsData} />
 		< Features data = { currentData?.features } />
 			<Faq
-				data={(industriesData as any).industries?.faq}
+				data={currentData?.faq}
 			/>
 			<OtherServices />
 			<Cta data={currentData?.services} />

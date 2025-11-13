@@ -1,6 +1,7 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import React from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { CustomButton } from "@/components/core/button"
@@ -10,7 +11,7 @@ interface Service {
 	name: string
 	title: string
 	description: string
-	image: string
+	image?: string // Optional - temporarily not used
 	link?: string
 }
 
@@ -77,8 +78,94 @@ export default function Services({
 	serviceCards,
 	basePath = "#",
 }: ServicesProps) {
-	const services = serviceCards || defaultServices
-	const [activeTab, setActiveTab] = useState(services[0]?.id || "")
+	// Ensure serviceCards are properly formatted - handle Sanity image URLs
+	const validatedServiceCards = serviceCards
+		? serviceCards
+				.filter(
+					(card) =>
+						card && typeof card === "object"
+				) // Ensure card is an object
+				.map((card) => {
+					// Ensure all required fields exist and are strings
+					const id =
+						typeof card?.id === "string"
+							? card.id
+							: ""
+					const name =
+						typeof card?.name === "string"
+							? card.name
+							: ""
+					const title =
+						typeof card?.title === "string"
+							? card.title
+							: ""
+					const description =
+						typeof card?.description ===
+						"string"
+							? card.description
+							: ""
+
+					// Handle image - should be a string URL from Sanity
+					let imageValue: string | undefined =
+						undefined
+					if (
+						typeof card?.image ===
+							"string" &&
+						card.image.trim() !== ""
+					) {
+						// Sanity returns URLs, validate it's a proper URL or path
+						const imageUrl =
+							card.image.trim()
+						// Accept Sanity CDN URLs, http/https URLs, or local paths starting with /
+						if (
+							imageUrl.startsWith(
+								"http"
+							) ||
+							imageUrl.startsWith(
+								"/"
+							) ||
+							imageUrl.startsWith(
+								"https://cdn.sanity.io"
+							)
+						) {
+							imageValue = imageUrl
+						}
+					}
+
+					return {
+						id,
+						name,
+						title,
+						description,
+						image: imageValue,
+						link:
+							typeof card?.link ===
+							"string"
+								? card.link
+								: undefined,
+					}
+				})
+				.filter((card) => card.id) // Only include cards with valid id
+		: undefined
+
+	const services =
+		validatedServiceCards && validatedServiceCards.length > 0
+			? validatedServiceCards
+			: defaultServices
+
+	// Ensure activeTab is valid
+	const firstServiceId = services[0]?.id || ""
+	const [activeTab, setActiveTab] = useState(firstServiceId)
+
+	// Update activeTab if current one is invalid
+	useEffect(() => {
+		if (
+			services.length > 0 &&
+			!services.find((s) => s.id === activeTab)
+		) {
+			setActiveTab(firstServiceId)
+		}
+	}, [services, activeTab, firstServiceId])
 
 	const activeService = services.find(
 		(service) => service.id === activeTab
@@ -182,8 +269,14 @@ export default function Services({
 							ease: "easeOut",
 						}}
 					>
-						<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
-							{/* Left side - Text content */}
+						<div
+							className={`grid ${
+								activeService?.image
+									? "grid-cols-1 lg:grid-cols-2"
+									: "grid-cols-1"
+							} gap-8 md:gap-12 items-center`}
+						>
+							{/* Text content */}
 							<div className="space-y-6">
 								<h3 className="text-3xl md:text-4xl lg:text-5xl font-light text-white font-cal-sans">
 									{
@@ -209,18 +302,26 @@ export default function Services({
 							</div>
 
 							{/* Right side - Image */}
-							<div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden bg-black p-4 flex items-center justify-center">
-								<Image
-									src={
-										activeService.image
-									}
-									alt={
-										activeService.title
-									}
-									fill
-									className="object-contain p-4"
-								/>
-							</div>
+							{activeService?.image &&
+								typeof activeService.image ===
+									"string" &&
+								activeService.image.trim() !==
+									"" && (
+									<div className="relative w-full h-[300px] md:h-[400px] rounded-2xl overflow-hidden bg-black p-4 flex items-center justify-center">
+										<Image
+											src={
+												activeService.image
+											}
+											alt={
+												activeService.title ||
+												"Service image"
+											}
+											fill
+											className="object-contain p-4"
+											unoptimized
+										/>
+									</div>
+								)}
 						</div>
 					</motion.div>
 				)}

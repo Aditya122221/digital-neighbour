@@ -8,6 +8,7 @@ import {
   getLocationDisplayName,
   getLocationPageData,
   normalizeLocationSlug,
+  isValidLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
 import contentMarketingData from "@/data/content-marketing.json";
@@ -91,18 +92,28 @@ export async function generateMetadata({
   const { slug, location } = await params;
   const canonicalSlug = resolveContentSlug(slug);
 
-  if (
-    !canonicalSlug ||
-    !LOCATION_ENABLED_CONTENT_SLUGS.includes(canonicalSlug)
-  ) {
+  // Validate that the service slug exists
+  if (!canonicalSlug) {
+    return { title: "Page Not Found" };
+  }
+
+  const dataKey = getDataKeyForSlug(canonicalSlug);
+  const baseData = contentMarketingData[dataKey as keyof typeof contentMarketingData];
+  if (!baseData) {
     return { title: "Page Not Found" };
   }
 
   const normalizedLocation = normalizeLocationSlug(location) ?? location;
 
-  const ensuredLocation =
+  // First try to ensure location is enabled for the service
+  let ensuredLocation =
     ensureLocationForService("content", canonicalSlug, normalizedLocation) ??
     normalizeLocationSlug(normalizedLocation);
+
+  // If not enabled for service, but it's a valid location slug, use it anyway
+  if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
+    ensuredLocation = normalizedLocation;
+  }
 
   if (!ensuredLocation) {
     return { title: "Page Not Found" };
@@ -140,19 +151,29 @@ export default async function ContentMarketingLocationPage({
 
   const canonicalSlug = resolveContentSlug(requestedSlug);
 
-  if (
-    !canonicalSlug ||
-    !LOCATION_ENABLED_CONTENT_SLUGS.includes(canonicalSlug)
-  ) {
+  // Validate that the service slug exists
+  if (!canonicalSlug) {
+    notFound();
+  }
+
+  const dataKey = getDataKeyForSlug(canonicalSlug);
+  const baseData = contentMarketingData[dataKey as keyof typeof contentMarketingData];
+  if (!baseData) {
     notFound();
   }
 
   const normalizedLocation =
     normalizeLocationSlug(requestedLocation) ?? requestedLocation;
 
-  const ensuredLocation =
+  // First try to ensure location is enabled for the service
+  let ensuredLocation =
     ensureLocationForService("content", canonicalSlug, normalizedLocation) ??
     normalizeLocationSlug(normalizedLocation);
+
+  // If not enabled for service, but it's a valid location slug, use it anyway
+  if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
+    ensuredLocation = normalizedLocation;
+  }
 
   if (!ensuredLocation) {
     notFound();

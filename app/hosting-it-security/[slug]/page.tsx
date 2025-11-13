@@ -6,7 +6,8 @@ import {
   normalizeLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
-import hostingData from "@/data/hosting-it-security.json";
+import { buildMetadata, humanizeSlug } from "@/lib/site-metadata";
+import { getHostingServiceBySlug } from "@/lib/sanity-service-data";
 import HostingHero from "@/components/hosting-it-security/hero";
 import Content from "@/components/commonSections/content";
 import Services from "@/components/commonSections/services";
@@ -52,6 +53,110 @@ const allowedSlugs = [
 
 const DEFAULT_HOSTING_SLUG = "web-hosting" as const;
 
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { slug } = params;
+
+  // Get base data from Sanity
+  const baseData = await getHostingServiceBySlug("hosting-it-security");
+  const baseHeading =
+    baseData?.hero?.heading ?? "Hosting, IT & Security Services";
+  const baseDescription =
+    baseData?.hero?.subheading ??
+    "Protect, optimise, and manage your digital infrastructure with secure hosting, managed IT, and cyber security services from Digital Neighbour.";
+
+  if (slug === "hosting-it-security") {
+    return buildMetadata({
+      title: baseHeading,
+      description: baseDescription,
+      path: "/hosting-it-security",
+    });
+  }
+
+  const locationSlug = normalizeLocationSlug(slug);
+
+  if (!allowedSlugs.includes(slug)) {
+    if (locationSlug) {
+      const ensuredLocation = ensureLocationForService(
+        "hosting",
+        DEFAULT_HOSTING_SLUG,
+        locationSlug,
+      );
+      if (!ensuredLocation) {
+        return {
+          title: "Page Not Found",
+        };
+      }
+
+      const baseHostingData = await getHostingServiceBySlug(DEFAULT_HOSTING_SLUG);
+      if (!baseHostingData) {
+        return {
+          title: "Page Not Found",
+        };
+      }
+
+      const localizedBase = await getLocationPageData(
+        "hosting",
+        DEFAULT_HOSTING_SLUG,
+        ensuredLocation,
+        baseHostingData,
+      );
+      const locationName =
+        getLocationDisplayName(ensuredLocation) ??
+        humanizeSlug(ensuredLocation);
+      const personalizedData = personalizeSeoData(
+        localizedBase,
+        locationName,
+      );
+
+      const heading =
+        personalizedData?.hero?.heading ??
+        `Hosting & IT Security in ${locationName}`;
+      const description =
+        personalizedData?.hero?.subheading ??
+        `Secure hosting and IT solutions in ${locationName} with Digital Neighbour.`;
+
+      return buildMetadata({
+        title: heading,
+        description,
+        path: `/hosting-it-security/${slug}`,
+      });
+    }
+
+    return {
+      title: "Page Not Found",
+    };
+  }
+
+  // Fetch from Sanity
+  const currentData = await getHostingServiceBySlug(slug);
+  if (!currentData) {
+    return {
+      title: "Page Not Found",
+    };
+  }
+
+  const heading =
+    currentData?.hero?.heading ?? `${humanizeSlug(slug)} Services`;
+  const description =
+    currentData?.hero?.subheading ??
+    currentData?.introParagraph?.heading ??
+    `Discover ${humanizeSlug(slug)} solutions from Digital Neighbour.`;
+
+  return buildMetadata({
+    title: heading,
+    description,
+    path: `/hosting-it-security/${slug}`,
+  });
+}
+
 export default async function HostingItSecuritySlugPage({
   params,
 }: {
@@ -74,7 +179,12 @@ export default async function HostingItSecuritySlugPage({
         notFound();
       }
 
-      const baseData = hostingData[DEFAULT_HOSTING_SLUG] as any;
+      // Get base data from Sanity
+      const baseData = await getHostingServiceBySlug(DEFAULT_HOSTING_SLUG);
+      if (!baseData) {
+        notFound();
+      }
+
       const localizedBase = await getLocationPageData(
         "hosting",
         DEFAULT_HOSTING_SLUG,
@@ -90,9 +200,11 @@ export default async function HostingItSecuritySlugPage({
     notFound();
   }
 
-  const currentData = hostingData[
-    params.slug as keyof typeof hostingData
-  ] as any;
+  // Fetch from Sanity
+  const currentData = await getHostingServiceBySlug(params.slug);
+  if (!currentData) {
+    notFound();
+  }
 
   return renderHostingPage(currentData);
 }

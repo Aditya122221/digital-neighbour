@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { buildMetadata, humanizeSlug } from "@/lib/site-metadata";
-import dataAnalyticsData from "@/data/data-analytics.json";
+import { getDataAnalyticsServiceBySlug } from "@/lib/sanity-service-data";
 import DataAnalyticsHero from "@/components/data-analytics/hero";
 import Content from "@/components/commonSections/content";
 import Services from "@/components/commonSections/services";
@@ -30,11 +30,15 @@ const allowedSlugs = [
   "google-tag-manager",
 ];
 
-export function generateMetadata({
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
+export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
-}): Metadata {
+}): Promise<Metadata> {
   const { slug } = params;
 
   if (!allowedSlugs.includes(slug)) {
@@ -43,9 +47,14 @@ export function generateMetadata({
     };
   }
 
-  const currentData = dataAnalyticsData[
-    slug as keyof typeof dataAnalyticsData
-  ] as any;
+  // Fetch from Sanity
+  const currentData = await getDataAnalyticsServiceBySlug(slug);
+  if (!currentData) {
+    return {
+      title: "Page Not Found",
+    };
+  }
+
   const heading =
     currentData?.hero?.heading ?? `${humanizeSlug(slug)} Services`;
   const description =
@@ -65,7 +74,7 @@ export function generateMetadata({
   });
 }
 
-export default function DataAnalyticsSlugPage({
+export default async function DataAnalyticsSlugPage({
   params,
 }: {
   params: { slug: string };
@@ -74,9 +83,11 @@ export default function DataAnalyticsSlugPage({
     notFound();
   }
 
-  const currentData = dataAnalyticsData[
-    params.slug as keyof typeof dataAnalyticsData
-  ] as any;
+  // Fetch from Sanity
+  const currentData = await getDataAnalyticsServiceBySlug(params.slug);
+  if (!currentData) {
+    notFound();
+  }
 
   return (
     <main>
@@ -107,9 +118,7 @@ export default function DataAnalyticsSlugPage({
       <CaseStudy />
       <Process2
         data={currentData?.services}
-        processData={
-          currentData?.process || dataAnalyticsData["data-analytics"]?.process
-        }
+        processData={currentData?.process}
       />
       <KeyBenefits data={currentData?.keyBenefits} />
       <Features data={currentData?.features} />

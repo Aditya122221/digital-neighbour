@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import { buildMetadata } from "@/lib/site-metadata"
-import appDevData from "@/data/app-development.json"
+import { getAppDevelopmentServiceBySlug } from "@/lib/sanity-service-data"
 import AppDevHero from "@/components/app-development/hero"
 import Certificates from "@/components/app-development/certificates"
 import Industries from "@/components/commonSections/industries"
@@ -20,21 +21,31 @@ import PainPoints from "@/components/commonSections/painpoints"
 import KeyBenefits from "@/components/commonSections/keybenefits"
 import Features from "@/components/commonSections/features"
 
-const appDevOverview = appDevData["app-development"] as any
-const appDevHeading =
-	appDevOverview?.hero?.heading ?? "App Development Services"
-const appDevDescription =
-	appDevOverview?.hero?.subheading ??
-	"Design, build, and scale customer-ready web and mobile applications with Digital Neighbour’s end-to-end product teams."
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
-export const metadata: Metadata = buildMetadata({
-	title: appDevHeading,
-	description: appDevDescription,
-	path: "/app-development",
-})
+export async function generateMetadata(): Promise<Metadata> {
+	const appDevOverview = await getAppDevelopmentServiceBySlug("app-development")
+	const appDevHeading =
+		appDevOverview?.hero?.heading ?? "App Development Services"
+	const appDevDescription =
+		appDevOverview?.hero?.subheading ??
+		"Design, build, and scale customer-ready web and mobile applications with Digital Neighbour's end-to-end product teams."
 
-export default function AppDevelopmentPage() {
-	const currentData = appDevOverview as any
+	return buildMetadata({
+		title: appDevHeading,
+		description: appDevDescription,
+		path: "/app-development",
+	})
+}
+
+export default async function AppDevelopmentPage() {
+	const currentData = await getAppDevelopmentServiceBySlug("app-development")
+	
+	if (!currentData) {
+		notFound()
+	}
 
 	return (
 		<main>

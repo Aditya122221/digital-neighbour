@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
-import socialData from "@/data/social-media.json";
 import { normalizeLocationSlug } from "@/lib/location-data";
 import { buildMetadata, humanizeSlug } from "@/lib/site-metadata";
+import { getSocialMediaServiceBySlug } from "@/lib/sanity-service-data";
 import SocialMediaHero from "@/components/social-media/hero";
 import IntroParagraph from "@/components/commonSections/introparagraph";
 import PainPoints from "@/components/commonSections/painpoints";
@@ -48,20 +48,25 @@ const allowedSlugs = [
   "youtube-community-management",
 ];
 
-const socialBaseData = (socialData as any)["social-media-marketing"] as any;
-const socialBaseHeading =
-  socialBaseData?.hero?.heading ??
-  "Social Media Marketing that Drives Growth";
-const socialBaseDescription =
-  socialBaseData?.hero?.subheading ??
-  "Build community, grow engagement, and convert attention into demand with Digital Neighbour’s social media specialists.";
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
 }: {
   params: { slug: string };
-}): Metadata {
+}): Promise<Metadata> {
   const { slug } = params;
+
+  // Get base data from Sanity
+  const socialBaseData = await getSocialMediaServiceBySlug("social-media-marketing");
+  const socialBaseHeading =
+    socialBaseData?.hero?.heading ??
+    "Social Media Marketing that Drives Growth";
+  const socialBaseDescription =
+    socialBaseData?.hero?.subheading ??
+    "Build community, grow engagement, and convert attention into demand with Digital Neighbour's social media specialists.";
 
   if (!allowedSlugs.includes(slug)) {
     const locationSlug = normalizeLocationSlug(slug);
@@ -79,9 +84,14 @@ export function generateMetadata({
     };
   }
 
-  const currentData = (socialData as any)[
-    slug as keyof typeof socialData
-  ] as any;
+  // Fetch from Sanity
+  const currentData = await getSocialMediaServiceBySlug(slug);
+  if (!currentData) {
+    return {
+      title: "Page Not Found",
+    };
+  }
+
   const heading =
     currentData?.hero?.heading ??
     `${humanizeSlug(slug)} Services`;
@@ -101,7 +111,7 @@ export function generateMetadata({
   });
 }
 
-export default function SocialMediaMarketingSlugPage({
+export default async function SocialMediaMarketingSlugPage({
   params,
 }: {
   params: { slug: string };
@@ -116,37 +126,11 @@ export default function SocialMediaMarketingSlugPage({
     notFound();
   }
 
-  const key = params.slug as string as keyof typeof socialData;
-  const currentData = (socialData as any)[key] as any;
-  const introData = currentData?.introParagraph
-    ? {
-        heading: currentData.introParagraph.heading,
-        problemStatement: currentData.introParagraph?.paragraphs?.[0],
-        valueProposition: currentData.introParagraph?.paragraphs?.[1],
-      }
-    : undefined;
-  const painData = currentData?.painpoints
-    ? {
-        heading: currentData.painpoints.heading,
-        subheading: currentData.painpoints.subheading,
-        painPoints: (currentData.painpoints.items || []).map((p: any) => ({
-          problem: p.title,
-          solution: p.description,
-        })),
-      }
-    : undefined;
-  const benefitsData = currentData?.keyBenefits
-    ? {
-        heading: currentData.keyBenefits.heading,
-        subheading: currentData.keyBenefits.subheading,
-        benefits: (currentData.keyBenefits.items || []).map((b: any) => ({
-          title: b.title,
-          description: b.description,
-          icon: b.icon,
-          image: b.image,
-        })),
-      }
-    : undefined;
+  // Fetch from Sanity
+  const currentData = await getSocialMediaServiceBySlug(params.slug);
+  if (!currentData) {
+    notFound();
+  }
 
   return (
     <main>
@@ -165,8 +149,8 @@ export default function SocialMediaMarketingSlugPage({
       </div>
       <Form data={currentData?.form} />
       <BrandsMarquee />
-      <IntroParagraph data={introData} />
-      <PainPoints data={painData} />
+      <IntroParagraph data={currentData?.introParagraph} />
+      <PainPoints data={currentData?.painPoints} />
       <Services
         data={currentData?.services}
         serviceCards={currentData?.serviceCards}
@@ -180,7 +164,7 @@ export default function SocialMediaMarketingSlugPage({
         data={currentData?.services}
         processData={currentData?.process}
       />
-      <KeyBenefits data={benefitsData} />
+      <KeyBenefits data={currentData?.keyBenefits} />
       <Features data={currentData?.features} />
       <Faq data={currentData?.faq} />
       <OtherServices />

@@ -8,6 +8,7 @@ import {
   getLocationPageData,
   getPaidAdsLocationMetadata,
   normalizeLocationSlug,
+  isValidLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
 import paidAdsData from "@/data/paid-ads.json";
@@ -70,18 +71,27 @@ export async function generateMetadata({
   const { slug, location } = await params;
   const canonicalSlug = resolvePaidAdsSlug(slug);
 
-  if (
-    !canonicalSlug ||
-    !LOCATION_ENABLED_PAID_ADS_SLUGS.includes(canonicalSlug)
-  ) {
+  // Validate that the service slug exists
+  if (!canonicalSlug) {
+    return { title: "Page Not Found" };
+  }
+
+  const baseData = paidAdsData[canonicalSlug] as any;
+  if (!baseData) {
     return { title: "Page Not Found" };
   }
 
   const normalizedLocation = normalizeLocationSlug(location) ?? location;
 
-  const ensuredLocation =
+  // First try to ensure location is enabled for the service
+  let ensuredLocation =
     ensureLocationForService("paidAds", canonicalSlug, normalizedLocation) ??
     normalizeLocationSlug(normalizedLocation);
+
+  // If not enabled for service, but it's a valid location slug, use it anyway
+  if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
+    ensuredLocation = normalizedLocation;
+  }
 
   if (!ensuredLocation) {
     return { title: "Page Not Found" };
@@ -119,19 +129,28 @@ export default async function PaidAdsLocationPage({
 
   const canonicalSlug = resolvePaidAdsSlug(requestedSlug);
 
-  if (
-    !canonicalSlug ||
-    !LOCATION_ENABLED_PAID_ADS_SLUGS.includes(canonicalSlug)
-  ) {
+  // Validate that the service slug exists
+  if (!canonicalSlug) {
+    notFound();
+  }
+
+  const baseData = paidAdsData[canonicalSlug] as any;
+  if (!baseData) {
     notFound();
   }
 
   const normalizedLocation =
     normalizeLocationSlug(requestedLocation) ?? requestedLocation;
 
-  const ensuredLocation =
+  // First try to ensure location is enabled for the service
+  let ensuredLocation =
     ensureLocationForService("paidAds", canonicalSlug, normalizedLocation) ??
     normalizeLocationSlug(normalizedLocation);
+
+  // If not enabled for service, but it's a valid location slug, use it anyway
+  if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
+    ensuredLocation = normalizedLocation;
+  }
 
   if (!ensuredLocation) {
     notFound();
@@ -142,12 +161,6 @@ export default async function PaidAdsLocationPage({
     normalizeLocationSlug(requestedLocation) !== ensuredLocation
   ) {
     redirect(`/paid-advertisement/${canonicalSlug}/${ensuredLocation}`);
-  }
-
-  const baseData = paidAdsData[canonicalSlug] as any;
-
-  if (!baseData) {
-    notFound();
   }
 
   const localizedBase = await getLocationPageData(

@@ -8,6 +8,7 @@ import {
   getLocationPageData,
   getSocialLocationMetadata,
   normalizeLocationSlug,
+  isValidLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
 import socialData from "@/data/social-media.json";
@@ -90,18 +91,28 @@ export async function generateMetadata({
   const { slug, location } = await params;
   const canonicalSlug = resolveSocialSlug(slug);
 
-  if (
-    !canonicalSlug ||
-    !LOCATION_ENABLED_SOCIAL_SLUGS.includes(canonicalSlug)
-  ) {
+  // Validate that the service slug exists
+  if (!canonicalSlug) {
+    return { title: "Page Not Found" };
+  }
+
+  const dataKey = getDataKeyForSlug(canonicalSlug);
+  const baseData = socialData[dataKey as keyof typeof socialData];
+  if (!baseData) {
     return { title: "Page Not Found" };
   }
 
   const normalizedLocation = normalizeLocationSlug(location) ?? location;
 
-  const ensuredLocation =
+  // First try to ensure location is enabled for the service
+  let ensuredLocation =
     ensureLocationForService("social", canonicalSlug, normalizedLocation) ??
     normalizeLocationSlug(normalizedLocation);
+
+  // If not enabled for service, but it's a valid location slug, use it anyway
+  if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
+    ensuredLocation = normalizedLocation;
+  }
 
   if (!ensuredLocation) {
     return { title: "Page Not Found" };
@@ -147,19 +158,29 @@ export default async function SocialMediaLocationPage({
 
   const canonicalSlug = resolveSocialSlug(requestedSlug);
 
-  if (
-    !canonicalSlug ||
-    !LOCATION_ENABLED_SOCIAL_SLUGS.includes(canonicalSlug)
-  ) {
+  // Validate that the service slug exists
+  if (!canonicalSlug) {
+    notFound();
+  }
+
+  const dataKey = getDataKeyForSlug(canonicalSlug);
+  const baseData = socialData[dataKey as keyof typeof socialData];
+  if (!baseData) {
     notFound();
   }
 
   const normalizedLocation =
     normalizeLocationSlug(requestedLocation) ?? requestedLocation;
 
-  const ensuredLocation =
+  // First try to ensure location is enabled for the service
+  let ensuredLocation =
     ensureLocationForService("social", canonicalSlug, normalizedLocation) ??
     normalizeLocationSlug(normalizedLocation);
+
+  // If not enabled for service, but it's a valid location slug, use it anyway
+  if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
+    ensuredLocation = normalizedLocation;
+  }
 
   if (!ensuredLocation) {
     notFound();

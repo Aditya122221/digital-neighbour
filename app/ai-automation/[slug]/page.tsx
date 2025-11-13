@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { buildMetadata, humanizeSlug } from "@/lib/site-metadata"
-import aiAutomationData from "@/data/ai-automation.json"
+import { getAiAutomationServiceBySlug } from "@/lib/sanity-service-data"
 import AiAutomationHero from "@/components/ai-automation/hero"
 import Content from "@/components/commonSections/content"
 import Services from "@/components/commonSections/services"
@@ -56,11 +56,15 @@ const allowedSlugs = [
 	"ai-transcription",
 ]
 
-export function generateMetadata({
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
+export async function generateMetadata({
 	params,
 }: {
 	params: { slug: string }
-}): Metadata {
+}): Promise<Metadata> {
 	const { slug } = params
 
 	if (!allowedSlugs.includes(slug)) {
@@ -69,9 +73,14 @@ export function generateMetadata({
 		}
 	}
 
-	const currentData = aiAutomationData[
-		slug as keyof typeof aiAutomationData
-	] as any
+	// Fetch from Sanity
+	const currentData = await getAiAutomationServiceBySlug(slug)
+	if (!currentData) {
+		return {
+			title: "Page Not Found",
+		}
+	}
+
 	const heading =
 		currentData?.hero?.heading ?? `${humanizeSlug(slug)} Services`
 	const description =
@@ -91,7 +100,7 @@ export function generateMetadata({
 	})
 }
 
-export default function AiAutomationSlugPage({
+export default async function AiAutomationSlugPage({
 	params,
 }: {
 	params: { slug: string }
@@ -100,9 +109,11 @@ export default function AiAutomationSlugPage({
 		notFound()
 	}
 
-	const currentData = aiAutomationData[
-		params.slug as keyof typeof aiAutomationData
-	] as any
+	// Fetch from Sanity
+	const currentData = await getAiAutomationServiceBySlug(params.slug)
+	if (!currentData) {
+		notFound()
+	}
 
 	return (
 		<main>
@@ -136,11 +147,7 @@ export default function AiAutomationSlugPage({
 			<CaseStudy />
 			<Process2
 				data={currentData?.services}
-				processData={
-					currentData?.process ||
-					aiAutomationData["ai-automation"]
-						?.process
-				}
+				processData={currentData?.process}
 			/>
 			<KeyBenefits data={currentData?.keyBenefits} />
 			<Features data={currentData?.features} />

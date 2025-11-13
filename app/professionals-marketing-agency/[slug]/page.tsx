@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import professionalsData from "@/data/professionals-marketing.json";
+import { getProfessionalMarketingServiceBySlug } from "@/lib/sanity-service-data";
 import IndustriesHero from "@/components/industries/hero";
 import Content from "@/components/commonSections/content";
 import Form from "@/components/commonSections/form";
@@ -36,6 +37,10 @@ const allowedSlugs: string[] = Object.values(
   >) || {},
 ) as string[];
 
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export function generateStaticParams() {
   return allowedSlugs.map((slug) => ({ slug }));
 }
@@ -46,11 +51,17 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  // Try to fetch from Sanity first
+  const sanityData = await getProfessionalMarketingServiceBySlug(slug);
+  
   const serviceName =
     getServiceNameFromSlug(slug) ??
     humanizeSlug(slug) ??
     "Professionals Marketing";
-  const currentData = (professionalsData as any)[slug] || {};
+  
+  // Fallback to JSON if not in Sanity
+  const jsonData = (professionalsData as any)[slug] || {};
+  const currentData = sanityData || jsonData;
 
   const heading =
     currentData?.hero?.heading ?? `${serviceName} Marketing Agency`;
@@ -76,7 +87,13 @@ export default async function ProfessionalsMarketingServicePage({
   }
 
   const serviceName = getServiceNameFromSlug(slug) || "Professionals Marketing";
-  const currentData = (professionalsData as any)[slug] || {};
+  
+  // Try to fetch from Sanity first
+  const sanityData = await getProfessionalMarketingServiceBySlug(slug);
+  
+  // Fallback to JSON if not in Sanity
+  const jsonData = (professionalsData as any)[slug] || {};
+  const currentData = sanityData || jsonData;
 
   const introData = currentData?.introParagraph
     ? {

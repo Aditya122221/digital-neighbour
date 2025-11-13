@@ -7,8 +7,8 @@ import {
   normalizeLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
-import appDevData from "@/data/app-development.json";
 import { buildMetadata, humanizeSlug } from "@/lib/site-metadata";
+import { getAppDevelopmentServiceBySlug } from "@/lib/sanity-service-data";
 import AppDevHero from "@/components/app-development/hero";
 import Certificates from "@/components/app-development/certificates";
 import Industries from "@/components/commonSections/industries";
@@ -44,6 +44,10 @@ const allowedSlugs = [
 
 const DEFAULT_APP_SLUG = "app-development" as const;
 
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function generateMetadata({
   params,
 }: {
@@ -51,7 +55,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = params;
 
-  const baseData = appDevData[DEFAULT_APP_SLUG] as any;
+  // Get base data from Sanity
+  const baseData = await getAppDevelopmentServiceBySlug(DEFAULT_APP_SLUG);
   const baseHeading =
     baseData?.hero?.heading ?? "App Development Services";
   const baseDescription =
@@ -76,6 +81,12 @@ export async function generateMetadata({
         locationSlug,
       );
       if (!ensuredLocation) {
+        return {
+          title: "Page Not Found",
+        };
+      }
+
+      if (!baseData) {
         return {
           title: "Page Not Found",
         };
@@ -114,9 +125,14 @@ export async function generateMetadata({
     };
   }
 
-  const currentData = appDevData[
-    slug as keyof typeof appDevData
-  ] as any;
+  // Fetch from Sanity
+  const currentData = await getAppDevelopmentServiceBySlug(slug);
+  if (!currentData) {
+    return {
+      title: "Page Not Found",
+    };
+  }
+
   const heading =
     currentData?.hero?.heading ??
     `${humanizeSlug(slug)} Services`;
@@ -155,7 +171,12 @@ export default async function AppDevSlugPage({
         notFound();
       }
 
-      const baseData = appDevData[DEFAULT_APP_SLUG] as any;
+      // Get base data from Sanity
+      const baseData = await getAppDevelopmentServiceBySlug(DEFAULT_APP_SLUG);
+      if (!baseData) {
+        notFound();
+      }
+
       const localizedBase = await getLocationPageData(
         "app",
         DEFAULT_APP_SLUG,
@@ -172,7 +193,11 @@ export default async function AppDevSlugPage({
     notFound();
   }
 
-  const currentData = appDevData[params.slug as keyof typeof appDevData] as any;
+  // Fetch from Sanity
+  const currentData = await getAppDevelopmentServiceBySlug(params.slug);
+  if (!currentData) {
+    notFound();
+  }
 
   return renderAppPage(currentData);
 }

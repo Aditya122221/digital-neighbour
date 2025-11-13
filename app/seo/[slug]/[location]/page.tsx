@@ -8,9 +8,10 @@ import {
   getSeoLocationMetadata,
   getLocationDisplayName,
   normalizeLocationSlug,
+  isValidLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
-import seoData from "@/data/seo.json";
+import { getSeoServiceBySlug } from "@/lib/sanity-service-data";
 import SeoHero from "@/components/seo/hero";
 import Content from "@/components/commonSections/content";
 import Services from "@/components/commonSections/services";
@@ -48,18 +49,12 @@ export const LOCATION_ENABLED_SEO_SLUGS: SeoServiceSlug[] = [
 ];
 
 function resolveSeoSlug(requestedSlug: string): SeoServiceSlug | null {
-  const directMatch = Object.prototype.hasOwnProperty.call(
-    seoData,
-    requestedSlug,
-  )
-    ? (requestedSlug as SeoServiceSlug)
-    : slugAliases[requestedSlug];
-
-  if (!directMatch) {
-    return null;
-  }
-
-  return directMatch;
+  // Check if it's a direct match or an alias
+  const directMatch = slugAliases[requestedSlug] || requestedSlug;
+  
+  // Validate it's a valid SEO service slug
+  // We'll validate by trying to fetch from Sanity
+  return directMatch as SeoServiceSlug;
 }
 
 export async function generateMetadata({
@@ -70,15 +65,27 @@ export async function generateMetadata({
   const { slug, location } = await params;
   const canonicalSlug = resolveSeoSlug(slug);
 
-  if (!canonicalSlug || !LOCATION_ENABLED_SEO_SLUGS.includes(canonicalSlug)) {
+  // Validate that the service slug exists by trying to fetch it
+  if (!canonicalSlug) {
+    return { title: "Page Not Found" };
+  }
+
+  const baseData = await getSeoServiceBySlug(canonicalSlug);
+  if (!baseData) {
     return { title: "Page Not Found" };
   }
 
   const normalizedLocation = normalizeLocationSlug(location) ?? location;
 
-  const ensuredLocation =
+  // First try to ensure location is enabled for the service
+  let ensuredLocation =
     ensureLocationForService("seo", canonicalSlug, normalizedLocation) ??
     normalizeLocationSlug(normalizedLocation);
+
+  // If not enabled for service, but it's a valid location slug, use it anyway
+  if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
+    ensuredLocation = normalizedLocation;
+  }
 
   if (!ensuredLocation) {
     return { title: "Page Not Found" };
@@ -119,16 +126,28 @@ export default async function SeoLocationPage({
 
   const canonicalSlug = resolveSeoSlug(requestedSlug);
 
-  if (!canonicalSlug || !LOCATION_ENABLED_SEO_SLUGS.includes(canonicalSlug)) {
+  // Validate that the service slug exists by trying to fetch it
+  if (!canonicalSlug) {
+    notFound();
+  }
+
+  const baseData = await getSeoServiceBySlug(canonicalSlug);
+  if (!baseData) {
     notFound();
   }
 
   const normalizedLocation =
     normalizeLocationSlug(requestedLocation) ?? requestedLocation;
 
-  const ensuredLocation =
+  // First try to ensure location is enabled for the service
+  let ensuredLocation =
     ensureLocationForService("seo", canonicalSlug, normalizedLocation) ??
     normalizeLocationSlug(normalizedLocation);
+
+  // If not enabled for service, but it's a valid location slug, use it anyway
+  if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
+    ensuredLocation = normalizedLocation;
+  }
 
   if (!ensuredLocation) {
     notFound();
@@ -139,12 +158,6 @@ export default async function SeoLocationPage({
     normalizeLocationSlug(requestedLocation) !== ensuredLocation
   ) {
     redirect(`/seo/${canonicalSlug}/${ensuredLocation}`);
-  }
-
-  const baseData = seoData[canonicalSlug] as any;
-
-  if (!baseData) {
-    notFound();
   }
 
   const localizedBase = await getLocationPageData(
@@ -187,11 +200,7 @@ export default async function SeoLocationPage({
       <Apart />
       <Process2
         data={personalizedData?.services}
-        processData={
-          personalizedData?.process ||
-          seoData["search-engine-optimisation"]?.process ||
-          baseData?.process
-        }
+        processData={personalizedData?.process || baseData?.process}
       />
       <KeyBenefits data={personalizedData?.keyBenefits} />
       <Features data={personalizedData?.features} />

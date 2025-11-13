@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import { buildMetadata } from "@/lib/site-metadata"
-import seoData from "@/data/seo.json"
+import { getSeoServiceBySlug } from "@/lib/sanity-service-data"
 import SeoHero from "@/components/seo/hero"
 import Form from "@/components/commonSections/form"
 import Navbar from "@/components/core/navbar"
@@ -23,21 +24,33 @@ import Blogs from "@/components/homepage/blogs"
 import TestimonalTwo from "@/components/homepage/testimonalTwo"
 import BookACall from "@/components/homepage/bookacall"
 
-const seoOverview = (seoData as any)["search-engine-optimisation"] as any
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
-const overviewHeading =
-	seoOverview?.hero?.heading ?? "SEO Services"
-const overviewDescription =
-	seoOverview?.hero?.subheading ??
-	"Grow organic visibility, traffic, and revenue with full-funnel SEO programmes built for ambitious brands."
+export async function generateMetadata(): Promise<Metadata> {
+	const seoOverview = await getSeoServiceBySlug("seo")
+	
+	const overviewHeading =
+		seoOverview?.hero?.heading ?? "SEO Services"
+	const overviewDescription =
+		seoOverview?.hero?.subheading ??
+		"Grow organic visibility, traffic, and revenue with full-funnel SEO programmes built for ambitious brands."
 
-export const metadata: Metadata = buildMetadata({
-	title: overviewHeading,
-	description: overviewDescription,
-	path: "/seo",
-})
+	return buildMetadata({
+		title: overviewHeading,
+		description: overviewDescription,
+		path: "/seo",
+	})
+}
 
-export default function SeoOverviewPage() {
+export default async function SeoOverviewPage() {
+	const seoOverview = await getSeoServiceBySlug("seo")
+	
+	if (!seoOverview) {
+		notFound()
+	}
+
 	const specialisations = seoOverview?.specialisations || []
 
 	return (

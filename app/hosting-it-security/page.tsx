@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import { buildMetadata } from "@/lib/site-metadata"
-import hostingData from "@/data/hosting-it-security.json"
+import { getHostingServiceBySlug } from "@/lib/sanity-service-data"
 import HostingHero from "@/components/hosting-it-security/hero"
 import Content from "@/components/commonSections/content"
 import HostingServices from "@/components/hosting-it-security/services"
@@ -20,21 +21,31 @@ import Features from "@/components/commonSections/features"
 import Apart from "@/components/homepage/apart"
 import HostingProcess from "@/components/hosting-it-security/hostingProcess"
 
-const hostingOverview = hostingData["hosting-it-security"] as any
-const hostingHeading =
-	hostingOverview?.hero?.heading ?? "Hosting, IT & Security Services"
-const hostingDescription =
-	hostingOverview?.hero?.subheading ??
-	"Protect, optimise, and manage your digital infrastructure with secure hosting, managed IT, and cyber security services from Digital Neighbour."
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
-export const metadata: Metadata = buildMetadata({
-	title: hostingHeading,
-	description: hostingDescription,
-	path: "/hosting-it-security",
-})
+export async function generateMetadata(): Promise<Metadata> {
+	const hostingOverview = await getHostingServiceBySlug("hosting-it-security")
+	const hostingHeading =
+		hostingOverview?.hero?.heading ?? "Hosting, IT & Security Services"
+	const hostingDescription =
+		hostingOverview?.hero?.subheading ??
+		"Protect, optimise, and manage your digital infrastructure with secure hosting, managed IT, and cyber security services from Digital Neighbour."
 
-export default function HostingItSecurityPage() {
-	const currentData = hostingOverview as any
+	return buildMetadata({
+		title: hostingHeading,
+		description: hostingDescription,
+		path: "/hosting-it-security",
+	})
+}
+
+export default async function HostingItSecurityPage() {
+	const currentData = await getHostingServiceBySlug("hosting-it-security")
+	
+	if (!currentData) {
+		notFound()
+	}
 
 	return (
 		<main>

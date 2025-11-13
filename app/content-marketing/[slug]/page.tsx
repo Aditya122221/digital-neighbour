@@ -8,7 +8,7 @@ import {
 } from "@/lib/location-data"
 import { personalizeSeoData } from "@/lib/seo-location-personalization"
 import { buildMetadata, humanizeSlug } from "@/lib/site-metadata"
-import contentMarketingData from "@/data/content-marketing.json"
+import { getContentMarketingServiceBySlug } from "@/lib/sanity-service-data"
 import ContentMarketingHero from "@/components/content-marketing/hero"
 import IntroParagraph from "@/components/commonSections/introparagraph"
 import PainPoints from "@/components/commonSections/painpoints"
@@ -54,6 +54,10 @@ const allowedSlugs = [
 
 const DEFAULT_CONTENT_SLUG = "content-marketing" as const
 
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function generateMetadata({
 	params,
 }: {
@@ -61,7 +65,8 @@ export async function generateMetadata({
 }): Promise<Metadata> {
 	const { slug } = params
 
-	const baseData = contentMarketingData[DEFAULT_CONTENT_SLUG] as any
+	// Get base data from Sanity
+	const baseData = await getContentMarketingServiceBySlug(DEFAULT_CONTENT_SLUG)
 	const baseHeading =
 		baseData?.hero?.heading ?? "Content Marketing Services"
 	const baseDescription =
@@ -86,6 +91,12 @@ export async function generateMetadata({
 				locationSlug
 			)
 			if (!ensuredLocation) {
+				return {
+					title: "Page Not Found",
+				}
+			}
+
+			if (!baseData) {
 				return {
 					title: "Page Not Found",
 				}
@@ -124,9 +135,14 @@ export async function generateMetadata({
 		}
 	}
 
-	const currentData = contentMarketingData[
-		slug as keyof typeof contentMarketingData
-	] as any
+	// Fetch from Sanity
+	const currentData = await getContentMarketingServiceBySlug(slug)
+	if (!currentData) {
+		return {
+			title: "Page Not Found",
+		}
+	}
+
 	const heading =
 		currentData?.hero?.heading ?? `${humanizeSlug(slug)} Services`
 	const description =
@@ -165,9 +181,12 @@ export default async function ContentMarketingSlugPage({
 				notFound()
 			}
 
-			const baseData = contentMarketingData[
-				DEFAULT_CONTENT_SLUG
-			] as any
+			// Get base data from Sanity
+			const baseData = await getContentMarketingServiceBySlug(DEFAULT_CONTENT_SLUG)
+			if (!baseData) {
+				notFound()
+			}
+
 			const localizedBase = await getLocationPageData(
 				"content",
 				DEFAULT_CONTENT_SLUG,
@@ -188,49 +207,16 @@ export default async function ContentMarketingSlugPage({
 		notFound()
 	}
 
-	const currentData = contentMarketingData[
-		params.slug as keyof typeof contentMarketingData
-	] as any
+	// Fetch from Sanity
+	const currentData = await getContentMarketingServiceBySlug(params.slug)
+	if (!currentData) {
+		notFound()
+	}
 
 	return renderContentPage(currentData)
 }
 
 function renderContentPage(data: any) {
-	const introData = data?.introParagraph
-		? {
-				heading: data.introParagraph.heading,
-				problemStatement:
-					data.introParagraph?.paragraphs?.[0],
-				valueProposition:
-					data.introParagraph?.paragraphs?.[1],
-		  }
-		: undefined
-	const painData = data?.painPoints
-		? {
-				heading: data.painPoints.heading,
-				subheading: data.painPoints.subheading,
-				painPoints: (data.painPoints.items || []).map(
-					(p: any) => ({
-						problem: p.title,
-						solution: p.description,
-					})
-				),
-		  }
-		: undefined
-	const benefitsData = data?.keyBenefits
-		? {
-				heading: data.keyBenefits.heading,
-				subheading: data.keyBenefits.subheading,
-				benefits: (data.keyBenefits.items || []).map(
-					(b: any) => ({
-						title: b.title,
-						description: b.description,
-						icon: b.icon,
-						image: b.image,
-					})
-				),
-		  }
-		: undefined
 
 	return (
 		<main>
@@ -247,8 +233,8 @@ function renderContentPage(data: any) {
 			</div>
 			<Form data={data?.form} />
 			<BrandsMarquee />
-			<IntroParagraph data={introData} />
-			<PainPoints data={painData} />
+			<IntroParagraph data={data?.introParagraph} />
+			<PainPoints data={data?.painPoints} />
 			<Services
 				data={data?.services}
 				serviceCards={data?.serviceCards}
@@ -264,7 +250,7 @@ function renderContentPage(data: any) {
 				data={data?.content}
 				imagePathPrefix="/seo/content"
 			/>
-			<KeyBenefits data={benefitsData} />
+			<KeyBenefits data={data?.keyBenefits} />
 			<Features data={data?.features} />
 			<Faq data={data?.faq} />
 			<OtherServices />

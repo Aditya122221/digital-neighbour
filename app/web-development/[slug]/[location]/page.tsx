@@ -8,6 +8,7 @@ import {
   getLocationPageData,
   getWebDevLocationMetadata,
   normalizeLocationSlug,
+  isValidLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
 import webDevData from "@/data/web-development.json";
@@ -113,18 +114,28 @@ export async function generateMetadata({
   const { slug, location } = await params;
   const canonicalSlug = resolveWebDevSlug(slug);
 
-  if (
-    !canonicalSlug ||
-    !LOCATION_ENABLED_WEBDEV_SLUGS.includes(canonicalSlug)
-  ) {
+  // Validate that the service slug exists
+  if (!canonicalSlug) {
+    return { title: "Page Not Found" };
+  }
+
+  const dataKey = getDataKeyForSlug(canonicalSlug);
+  const baseData = webDevData[dataKey as keyof typeof webDevData];
+  if (!baseData) {
     return { title: "Page Not Found" };
   }
 
   const normalizedLocation = normalizeLocationSlug(location) ?? location;
 
-  const ensuredLocation =
+  // First try to ensure location is enabled for the service
+  let ensuredLocation =
     ensureLocationForService("webDev", canonicalSlug, normalizedLocation) ??
     normalizeLocationSlug(normalizedLocation);
+
+  // If not enabled for service, but it's a valid location slug, use it anyway
+  if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
+    ensuredLocation = normalizedLocation;
+  }
 
   if (!ensuredLocation) {
     return { title: "Page Not Found" };
@@ -161,19 +172,29 @@ export default async function WebDevelopmentLocationPage({
 
   const canonicalSlug = resolveWebDevSlug(requestedSlug);
 
-  if (
-    !canonicalSlug ||
-    !LOCATION_ENABLED_WEBDEV_SLUGS.includes(canonicalSlug)
-  ) {
+  // Validate that the service slug exists
+  if (!canonicalSlug) {
+    notFound();
+  }
+
+  const dataKey = getDataKeyForSlug(canonicalSlug);
+  const baseData = webDevData[dataKey as keyof typeof webDevData];
+  if (!baseData) {
     notFound();
   }
 
   const normalizedLocation =
     normalizeLocationSlug(requestedLocation) ?? requestedLocation;
 
-  const ensuredLocation =
+  // First try to ensure location is enabled for the service
+  let ensuredLocation =
     ensureLocationForService("webDev", canonicalSlug, normalizedLocation) ??
     normalizeLocationSlug(normalizedLocation);
+
+  // If not enabled for service, but it's a valid location slug, use it anyway
+  if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
+    ensuredLocation = normalizedLocation;
+  }
 
   if (!ensuredLocation) {
     notFound();

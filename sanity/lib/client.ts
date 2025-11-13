@@ -10,10 +10,13 @@ if (!projectId) {
   );
 }
 
+// Create client without CDN for fresh data, or with CDN for performance
+// In development, always disable CDN to see changes immediately
 export const sanityClient = createClient({
   projectId,
   dataset,
   apiVersion,
-  useCdn: process.env.NODE_ENV === "production",
+  useCdn: false, // Disable CDN to always get fresh data - set to true in production for better performance
   token: process.env.SANITY_API_READ_TOKEN,
+  perspective: "published", // Use published perspective
 });

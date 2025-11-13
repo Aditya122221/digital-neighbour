@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
+import { notFound } from "next/navigation"
 import { buildMetadata } from "@/lib/site-metadata"
-import professionalsData from "@/data/professionals-marketing.json"
+import { getProfessionalMarketingServiceBySlug } from "@/lib/sanity-service-data"
 import IndustriesHero from "@/components/professionals-marketing/mainHero"
 import Content from "@/components/commonSections/content"
 import Form from "@/components/commonSections/form"
@@ -20,21 +21,34 @@ import Apart from "@/components/homepage/apart"
 import CreativeShowcase from "@/components/industries/creative-showcase"
 import HostingServices from "@/components/hosting-it-security/services"
 
-const professionalsOverview = (professionalsData as any)["professionals"]
-const professionalsHeading =
-	professionalsOverview?.hero?.heading ??
-	"Marketing Agency for Professionals"
-const professionalsDescription =
-	professionalsOverview?.hero?.subheading ??
-	"Drive demand, retention, and reputation for professional services brands with Digital Neighbour’s specialised marketing squads."
+// Force dynamic rendering to always fetch fresh data from Sanity
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
-export const metadata: Metadata = buildMetadata({
-	title: professionalsHeading,
-	description: professionalsDescription,
-	path: "/professionals-marketing-agency",
-})
+export async function generateMetadata(): Promise<Metadata> {
+	const professionalsOverview = await getProfessionalMarketingServiceBySlug("professionals")
+	
+	const professionalsHeading =
+		professionalsOverview?.hero?.heading ??
+		"Marketing Agency for Professionals"
+	const professionalsDescription =
+		professionalsOverview?.hero?.subheading ??
+		"Drive demand, retention, and reputation for professional services brands with Digital Neighbour's specialised marketing squads."
 
-export default function ProfessionalsMarketingPage() {
+	return buildMetadata({
+		title: professionalsHeading,
+		description: professionalsDescription,
+		path: "/professionals-marketing-agency",
+	})
+}
+
+export default async function ProfessionalsMarketingPage() {
+	const professionalsOverview = await getProfessionalMarketingServiceBySlug("professionals")
+	
+	if (!professionalsOverview) {
+		notFound()
+	}
+
 	const currentData = professionalsOverview
 	const introData = currentData?.introParagraph
 		? {
@@ -135,10 +149,7 @@ export default function ProfessionalsMarketingPage() {
 			<KeyBenefits data={benefitsData} />
 			<Features data={currentData?.features} />
 			<Faq
-				data={
-					(professionalsData as any).professionals
-						?.faq
-				}
+				data={currentData?.faq}
 			/>
 			<OtherServices />
 			<Cta data={currentData?.services} />
