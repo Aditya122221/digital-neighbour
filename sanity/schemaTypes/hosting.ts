@@ -2,33 +2,28 @@ import { defineField, defineType } from "sanity"
 
 import { serviceFieldConfig, type ServiceKey } from "./serviceFieldConfig"
 
-const baseServiceSlug = "seo" as const
+const baseServiceSlug = "hosting-it-security" as const
 
-const seoServiceSlugs = [
-	"local-seo",
-	"wordpress-seo",
-	"ecom-seo",
-	"ai-seo",
-	"shopify-seo",
-	"seo-audits",
-	"orm",
-	"seo-migration",
-	"small-business-seo",
-	"lead-generation",
-	"link-building",
-	"international-seo",
-	"mobile-seo",
-	"voice-search-optimisation",
-	"video-seo",
-	"youtube-seo",
-	"seo-strategy",
-	"geo",
-	"sge",
-	"app-store-optimisation",
-	"guest-posting",
-	"local-citations",
-	"penalty-recovery",
-	"multilingual-seo",
+const hostingServiceSlugs = [
+	"web-hosting",
+	"wordpress-hosting",
+	"email-hosting",
+	"reseller-hosting",
+	"ecommerce-hosting",
+	"dedicated-servers",
+	"windows-virtual-servers",
+	"linux-servers",
+	"vps",
+	"shared-hosting-services",
+	"cloud-hosting-and-management",
+	"dedicated-hosting-services",
+	"aws-hosting-solutions",
+	"data-migration",
+	"website-security",
+	"ssl-certificate-setup",
+	"web-application-firewall-setup",
+	"malware-removal-services",
+	"web-maintenance",
 ] satisfies ServiceKey[]
 
 type SectionBuilder = (args?: {
@@ -64,12 +59,11 @@ const sectionFieldBuilders: Record<string, SectionBuilder> = {
 			type: "painPointsSection",
 			validation: (rule) => rule.required(),
 		}),
-	serviceCards: () =>
+	premiumCloudServices: () =>
 		defineField({
-			name: "serviceCards",
-			title: "Service Cards",
-			type: "array",
-			of: [{ type: "serviceCard" }],
+			name: "services",
+			title: "Services",
+			type: "premiumCloudServicesSection",
 		}),
 	content: () =>
 		defineField({
@@ -132,12 +126,12 @@ const buildSectionFields = (serviceKey: ServiceKey) => {
 const baseServiceFields = buildSectionFields(baseServiceSlug)
 const selectableServiceKeys: ServiceKey[] = [
 	baseServiceSlug,
-	...seoServiceSlugs,
+	...hostingServiceSlugs,
 ]
 
-export const seoServiceType = defineType({
-	name: "seoService",
-	title: "Search Engine Optimisation",
+export const hostingServiceType = defineType({
+	name: "hostingService",
+	title: "Hosting & IT Security",
 	type: "document",
 	fields: [
 		defineField({
@@ -171,7 +165,7 @@ export const seoServiceType = defineType({
 		},
 		prepare({ title }) {
 			return {
-				title: title ?? "SEO Service",
+				title: title ?? "Hosting IT Security Service",
 			}
 		},
 	},

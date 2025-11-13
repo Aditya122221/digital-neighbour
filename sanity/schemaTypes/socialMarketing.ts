@@ -2,33 +2,19 @@ import { defineField, defineType } from "sanity"
 
 import { serviceFieldConfig, type ServiceKey } from "./serviceFieldConfig"
 
-const baseServiceSlug = "seo" as const
+const baseServiceSlug = "social-media-marketing" as const
 
-const seoServiceSlugs = [
-	"local-seo",
-	"wordpress-seo",
-	"ecom-seo",
-	"ai-seo",
-	"shopify-seo",
-	"seo-audits",
-	"orm",
-	"seo-migration",
-	"small-business-seo",
-	"lead-generation",
-	"link-building",
-	"international-seo",
-	"mobile-seo",
-	"voice-search-optimisation",
-	"video-seo",
-	"youtube-seo",
-	"seo-strategy",
-	"geo",
-	"sge",
-	"app-store-optimisation",
-	"guest-posting",
-	"local-citations",
-	"penalty-recovery",
-	"multilingual-seo",
+const socialMarketingServiceSlugs = [
+	"facebook-marketing",
+	"instagram-marketing",
+	"linkedin-marketing",
+	"tiktok-marketing",
+	"youtube-community-marketing",
+	"pinterest-marketing",
+	"x-marketing",
+	"snapchat-marketing",
+	"reddit-marketing",
+	"influencer-marketing",
 ] satisfies ServiceKey[]
 
 type SectionBuilder = (args?: {
@@ -132,12 +118,12 @@ const buildSectionFields = (serviceKey: ServiceKey) => {
 const baseServiceFields = buildSectionFields(baseServiceSlug)
 const selectableServiceKeys: ServiceKey[] = [
 	baseServiceSlug,
-	...seoServiceSlugs,
+	...socialMarketingServiceSlugs,
 ]
 
-export const seoServiceType = defineType({
-	name: "seoService",
-	title: "Search Engine Optimisation",
+export const socialMarketingServiceType = defineType({
+	name: "socialMarketingService",
+	title: "Social Media Marketing",
 	type: "document",
 	fields: [
 		defineField({
@@ -171,7 +157,9 @@ export const seoServiceType = defineType({
 		},
 		prepare({ title }) {
 			return {
-				title: title ?? "SEO Service",
+				title:
+					title ??
+					"Social Media Marketing Service",
 			}
 		},
 	},

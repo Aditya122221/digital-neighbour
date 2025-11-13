@@ -2,33 +2,15 @@ import { defineField, defineType } from "sanity"
 
 import { serviceFieldConfig, type ServiceKey } from "./serviceFieldConfig"
 
-const baseServiceSlug = "seo" as const
+const baseServiceSlug = "app-development" as const
 
-const seoServiceSlugs = [
-	"local-seo",
-	"wordpress-seo",
-	"ecom-seo",
-	"ai-seo",
-	"shopify-seo",
-	"seo-audits",
-	"orm",
-	"seo-migration",
-	"small-business-seo",
-	"lead-generation",
-	"link-building",
-	"international-seo",
-	"mobile-seo",
-	"voice-search-optimisation",
-	"video-seo",
-	"youtube-seo",
-	"seo-strategy",
-	"geo",
-	"sge",
-	"app-store-optimisation",
-	"guest-posting",
-	"local-citations",
-	"penalty-recovery",
-	"multilingual-seo",
+const appDevelopmentServiceSlugs = [
+	"ios-app-development",
+	"android-app-development",
+	"react-native-development",
+	"flutter-development",
+	"software-development",
+	"progressive-web-apps",
 ] satisfies ServiceKey[]
 
 type SectionBuilder = (args?: {
@@ -132,19 +114,19 @@ const buildSectionFields = (serviceKey: ServiceKey) => {
 const baseServiceFields = buildSectionFields(baseServiceSlug)
 const selectableServiceKeys: ServiceKey[] = [
 	baseServiceSlug,
-	...seoServiceSlugs,
+	...appDevelopmentServiceSlugs,
 ]
 
-export const seoServiceType = defineType({
-	name: "seoService",
-	title: "Search Engine Optimisation",
+export const appDevelopmentServiceType = defineType({
+	name: "appDevelopmentService",
+	title: "App Development",
 	type: "document",
 	fields: [
 		defineField({
 			name: "title",
 			title: "Title",
 			type: "string",
-			initialValue: "Untitled",
+			initialValue:"Untitled",
 			options: {
 				list: selectableServiceKeys.map(
 					(serviceKey) => {
@@ -171,7 +153,7 @@ export const seoServiceType = defineType({
 		},
 		prepare({ title }) {
 			return {
-				title: title ?? "SEO Service",
+				title: title ?? "App Development Service",
 			}
 		},
 	},

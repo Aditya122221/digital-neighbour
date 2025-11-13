@@ -2,33 +2,14 @@ import { defineField, defineType } from "sanity"
 
 import { serviceFieldConfig, type ServiceKey } from "./serviceFieldConfig"
 
-const baseServiceSlug = "seo" as const
+const baseServiceSlug = "data-analytics" as const
 
-const seoServiceSlugs = [
-	"local-seo",
-	"wordpress-seo",
-	"ecom-seo",
-	"ai-seo",
-	"shopify-seo",
-	"seo-audits",
-	"orm",
-	"seo-migration",
-	"small-business-seo",
-	"lead-generation",
-	"link-building",
-	"international-seo",
-	"mobile-seo",
-	"voice-search-optimisation",
-	"video-seo",
-	"youtube-seo",
-	"seo-strategy",
-	"geo",
-	"sge",
-	"app-store-optimisation",
-	"guest-posting",
-	"local-citations",
-	"penalty-recovery",
-	"multilingual-seo",
+const dataAnalyticsServiceSlugs = [
+	"conversion-rate-optimization",
+	"call-tracking",
+	"reporting-and-dashboards",
+	"google-analytics",
+	"google-tag-manager",
 ] satisfies ServiceKey[]
 
 type SectionBuilder = (args?: {
@@ -70,6 +51,12 @@ const sectionFieldBuilders: Record<string, SectionBuilder> = {
 			title: "Service Cards",
 			type: "array",
 			of: [{ type: "serviceCard" }],
+		}),
+	premiumCloudServices: () =>
+		defineField({
+			name: "premiumCloudServices",
+			title: "Premium Cloud Services",
+			type: "premiumCloudServicesSection",
 		}),
 	content: () =>
 		defineField({
@@ -132,19 +119,19 @@ const buildSectionFields = (serviceKey: ServiceKey) => {
 const baseServiceFields = buildSectionFields(baseServiceSlug)
 const selectableServiceKeys: ServiceKey[] = [
 	baseServiceSlug,
-	...seoServiceSlugs,
+	...dataAnalyticsServiceSlugs,
 ]
 
-export const seoServiceType = defineType({
-	name: "seoService",
-	title: "Search Engine Optimisation",
+export const dataAnalyticsServiceType = defineType({
+	name: "dataAnalyticsService",
+	title: "Data & Analytics",
 	type: "document",
 	fields: [
 		defineField({
 			name: "title",
 			title: "Title",
 			type: "string",
-			initialValue: "Untitled",
+			initialValue:"Untitled",
 			options: {
 				list: selectableServiceKeys.map(
 					(serviceKey) => {
@@ -171,7 +158,7 @@ export const seoServiceType = defineType({
 		},
 		prepare({ title }) {
 			return {
-				title: title ?? "SEO Service",
+				title: title ?? "Data & Analytics Service",
 			}
 		},
 	},

@@ -2,34 +2,7 @@ import { defineField, defineType } from "sanity"
 
 import { serviceFieldConfig, type ServiceKey } from "./serviceFieldConfig"
 
-const baseServiceSlug = "seo" as const
-
-const seoServiceSlugs = [
-	"local-seo",
-	"wordpress-seo",
-	"ecom-seo",
-	"ai-seo",
-	"shopify-seo",
-	"seo-audits",
-	"orm",
-	"seo-migration",
-	"small-business-seo",
-	"lead-generation",
-	"link-building",
-	"international-seo",
-	"mobile-seo",
-	"voice-search-optimisation",
-	"video-seo",
-	"youtube-seo",
-	"seo-strategy",
-	"geo",
-	"sge",
-	"app-store-optimisation",
-	"guest-posting",
-	"local-citations",
-	"penalty-recovery",
-	"multilingual-seo",
-] satisfies ServiceKey[]
+const baseServiceSlug = "industries" as const
 
 type SectionBuilder = (args?: {
 	initialValue?: string
@@ -63,13 +36,6 @@ const sectionFieldBuilders: Record<string, SectionBuilder> = {
 			title: "Pain Points",
 			type: "painPointsSection",
 			validation: (rule) => rule.required(),
-		}),
-	serviceCards: () =>
-		defineField({
-			name: "serviceCards",
-			title: "Service Cards",
-			type: "array",
-			of: [{ type: "serviceCard" }],
 		}),
 	content: () =>
 		defineField({
@@ -130,14 +96,10 @@ const buildSectionFields = (serviceKey: ServiceKey) => {
 }
 
 const baseServiceFields = buildSectionFields(baseServiceSlug)
-const selectableServiceKeys: ServiceKey[] = [
-	baseServiceSlug,
-	...seoServiceSlugs,
-]
 
-export const seoServiceType = defineType({
-	name: "seoService",
-	title: "Search Engine Optimisation",
+export const industriesServiceType = defineType({
+	name: "industriesService",
+	title: "Industries",
 	type: "document",
 	fields: [
 		defineField({
@@ -145,22 +107,6 @@ export const seoServiceType = defineType({
 			title: "Title",
 			type: "string",
 			initialValue: "Untitled",
-			options: {
-				list: selectableServiceKeys.map(
-					(serviceKey) => {
-						const config =
-							serviceFieldConfig[
-								serviceKey
-							]
-
-						return {
-							title: config.title,
-							value: config.title,
-						}
-					}
-				),
-				layout: "dropdown",
-			},
 			validation: (rule) => rule.required(),
 		}),
 		...baseServiceFields,
@@ -171,7 +117,7 @@ export const seoServiceType = defineType({
 		},
 		prepare({ title }) {
 			return {
-				title: title ?? "SEO Service",
+				title: title ?? "Industries",
 			}
 		},
 	},

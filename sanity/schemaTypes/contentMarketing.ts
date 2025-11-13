@@ -2,33 +2,30 @@ import { defineField, defineType } from "sanity"
 
 import { serviceFieldConfig, type ServiceKey } from "./serviceFieldConfig"
 
-const baseServiceSlug = "seo" as const
+const baseServiceSlug = "content-marketing" as const
 
-const seoServiceSlugs = [
-	"local-seo",
-	"wordpress-seo",
-	"ecom-seo",
-	"ai-seo",
-	"shopify-seo",
-	"seo-audits",
-	"orm",
-	"seo-migration",
-	"small-business-seo",
-	"lead-generation",
-	"link-building",
-	"international-seo",
-	"mobile-seo",
-	"voice-search-optimisation",
-	"video-seo",
-	"youtube-seo",
-	"seo-strategy",
-	"geo",
-	"sge",
-	"app-store-optimisation",
-	"guest-posting",
-	"local-citations",
-	"penalty-recovery",
-	"multilingual-seo",
+const contentMarketingServiceSlugs = [
+	"content-strategy",
+	"copywriting",
+	"graphic-designing",
+	"video-editing",
+	"photo-shoot",
+	"video-shoot",
+	"infographic-design",
+	"website-copywriting",
+	"sales-copywriting",
+	"logo-design",
+	"branding",
+	"press-release-writing",
+	"ad-copywriting",
+	"email-marketing",
+	"pr-outreach",
+	"video-content",
+	"infographics",
+	"whitepapers",
+	"case-studies",
+	"ebooks",
+	"podcast-content",
 ] satisfies ServiceKey[]
 
 type SectionBuilder = (args?: {
@@ -64,12 +61,11 @@ const sectionFieldBuilders: Record<string, SectionBuilder> = {
 			type: "painPointsSection",
 			validation: (rule) => rule.required(),
 		}),
-	serviceCards: () =>
+	process: () =>
 		defineField({
-			name: "serviceCards",
-			title: "Service Cards",
-			type: "array",
-			of: [{ type: "serviceCard" }],
+			name: "process",
+			title: "Process",
+			type: "processSection",
 		}),
 	content: () =>
 		defineField({
@@ -77,12 +73,6 @@ const sectionFieldBuilders: Record<string, SectionBuilder> = {
 			title: "Content Block",
 			type: "copyBlockSection",
 			validation: (rule) => rule.required(),
-		}),
-	process: () =>
-		defineField({
-			name: "process",
-			title: "Process",
-			type: "processSection",
 		}),
 	keyBenefits: () =>
 		defineField({
@@ -132,12 +122,12 @@ const buildSectionFields = (serviceKey: ServiceKey) => {
 const baseServiceFields = buildSectionFields(baseServiceSlug)
 const selectableServiceKeys: ServiceKey[] = [
 	baseServiceSlug,
-	...seoServiceSlugs,
+	...contentMarketingServiceSlugs,
 ]
 
-export const seoServiceType = defineType({
-	name: "seoService",
-	title: "Search Engine Optimisation",
+export const contentMarketingServiceType = defineType({
+	name: "contentMarketingService",
+	title: "Content Marketing",
 	type: "document",
 	fields: [
 		defineField({
@@ -171,7 +161,7 @@ export const seoServiceType = defineType({
 		},
 		prepare({ title }) {
 			return {
-				title: title ?? "SEO Service",
+				title: title ?? "Content Marketing Service",
 			}
 		},
 	},
