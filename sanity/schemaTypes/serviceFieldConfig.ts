@@ -2886,14 +2886,13 @@ export const serviceFieldConfig = {
     sections: [
       "hero",
       "form",
-      "features",
       "introParagraph",
       "painPoints",
-      "keyBenefits",
-      "content",
-      "services",
-      "faq",
       "serviceCards",
+      "content",
+      "keyBenefits",
+      "features",
+      "faq",
     ],
   },
   "video-seo": {

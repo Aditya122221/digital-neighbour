@@ -64,6 +64,26 @@ const sectionFieldBuilders: Record<string, SectionBuilder> = {
 			type: "painPointsSection",
 			validation: (rule) => rule.required(),
 		}),
+	serviceCards: () =>
+		defineField({
+			name: "serviceCards",
+			title: "Service Cards",
+			type: "array",
+			of: [{ type: "serviceCard" }],
+		}),
+	content: () =>
+		defineField({
+			name: "content",
+			title: "Content Block",
+			type: "copyBlockSection",
+			validation: (rule) => rule.required(),
+		}),
+	process: () =>
+		defineField({
+			name: "process",
+			title: "Process",
+			type: "processSection",
+		}),
 	keyBenefits: () =>
 		defineField({
 			name: "keyBenefits",
@@ -78,64 +98,11 @@ const sectionFieldBuilders: Record<string, SectionBuilder> = {
 			type: "featuresSection",
 			validation: (rule) => rule.required(),
 		}),
-	specialisations: () =>
-		defineField({
-			name: "specialisations",
-			title: "Specialisations",
-			type: "array",
-			of: [{ type: "specialisation" }],
-		}),
-	content: () =>
-		defineField({
-			name: "content",
-			title: "Content Block",
-			type: "copyBlockSection",
-			validation: (rule) => rule.required(),
-		}),
-	services: ({ initialValue } = {}) =>
-		defineField({
-			name: "services",
-			title: "Service Label",
-			type: "string",
-			initialValue,
-			validation: (rule) => rule.required(),
-		}),
-	process: () =>
-		defineField({
-			name: "process",
-			title: "Process",
-			type: "processSection",
-		}),
 	faq: () =>
 		defineField({
 			name: "faq",
 			title: "FAQ",
 			type: "faqSection",
-		}),
-	serviceCards: () =>
-		defineField({
-			name: "serviceCards",
-			title: "Service Cards",
-			type: "array",
-			of: [{ type: "serviceCard" }],
-		}),
-	industries: () =>
-		defineField({
-			name: "industries",
-			title: "Industries",
-			type: "industriesSection",
-		}),
-	premiumCloudServices: () =>
-		defineField({
-			name: "premiumCloudServices",
-			title: "Premium Cloud Services",
-			type: "premiumCloudServicesSection",
-		}),
-	strategic: () =>
-		defineField({
-			name: "strategic",
-			title: "Strategic Section",
-			type: "strategicSection",
 		}),
 }
 
