@@ -188,13 +188,6 @@ export default async function AppDevelopmentLocationPage({
 		redirect(`/app-development/${canonicalSlug}/${ensuredLocation}`)
 	}
 
-	const dataKey = getDataKeyForSlug(canonicalSlug)
-	const baseData = (appDevData as any)[dataKey] as any
-
-	if (!baseData) {
-		notFound()
-	}
-
 	const localizedBase = await getLocationPageData(
 		"app",
 		canonicalSlug,

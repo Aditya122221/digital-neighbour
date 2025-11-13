@@ -207,13 +207,6 @@ export default async function WebDevelopmentLocationPage({
     redirect(`/web-development/${canonicalSlug}/${ensuredLocation}`);
   }
 
-  const dataKey = getDataKeyForSlug(canonicalSlug);
-  const baseData = (webDevData as any)[dataKey] as any;
-
-  if (!baseData) {
-    notFound();
-  }
-
   const localizedBase = await getLocationPageData(
     "webDev",
     canonicalSlug,

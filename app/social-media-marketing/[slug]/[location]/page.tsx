@@ -197,13 +197,6 @@ export default async function SocialMediaLocationPage({
     redirect(`/social-media-marketing/${canonicalSlug}/${ensuredLocation}`);
   }
 
-  const dataKey = getDataKeyForSlug(canonicalSlug);
-  const baseData = (socialData as any)[dataKey] as any;
-
-  if (!baseData) {
-    notFound();
-  }
-
   const localizedBase = await getLocationPageData(
     "social",
     canonicalSlug,

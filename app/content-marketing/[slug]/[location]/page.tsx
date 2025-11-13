@@ -186,13 +186,6 @@ export default async function ContentMarketingLocationPage({
     redirect(`/content-marketing/${canonicalSlug}/${ensuredLocation}`);
   }
 
-  const dataKey = getDataKeyForSlug(canonicalSlug);
-  const baseData = (contentMarketingData as any)[dataKey] as any;
-
-  if (!baseData) {
-    notFound();
-  }
-
   const localizedBase = await getLocationPageData(
     "content",
     canonicalSlug,

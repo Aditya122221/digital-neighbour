@@ -179,13 +179,6 @@ export default async function HostingItSecurityLocationPage({
     redirect(`/hosting-it-security/${canonicalSlug}/${ensuredLocation}`);
   }
 
-  const dataKey = getDataKeyForSlug(canonicalSlug);
-  const baseData = (hostingData as any)[dataKey] as any;
-
-  if (!baseData) {
-    notFound();
-  }
-
   const localizedBase = await getLocationPageData(
     "hosting",
     canonicalSlug,
