@@ -18,7 +18,7 @@ import {
 
 export default function Industries() {
 	return (
-		<section className="pt-24" style={{overflowY: "hidden"}}>
+		<section className="pt-24" style={{ overflowY: "hidden" }}>
 			<div className="container mx-auto px-5">
 				<div className="w-full lg:w-2/3 mx-auto text-center">
 					<h2 className="font-bold mb-8 text-4xl md:text-5xl lg:text-6xl">
@@ -42,7 +42,7 @@ export default function Industries() {
 
 			<div className="mt-10">
 				<div className="container mx-auto px-5">
-					<div className="flex flex-wrap gap-y-3 md:gap-y-6 -mx-2 md:-mx-5">
+					<div className="flex flex-wrap justify-center gap-y-3 md:gap-y-6 -mx-2 md:-mx-5">
 						{[
 							{
 								title: "Real Estate",
@@ -107,12 +107,12 @@ export default function Industries() {
 									className="shrink-0 w-1/2 md:w-1/3 xl:w-1/5 px-2 md:px-5"
 								>
 									<div className="bg-[#212121] text-center flex flex-col items-center justify-center px-3 h-full group relative rounded-md">
-										<div className="md:group-hover:opacity-0 py-4 md:py-0 md:absolute">
+										<div className="flex flex-col items-center justify-center py-4 md:py-0 md:group-hover:opacity-0 md:absolute md:inset-0 md:flex md:flex-col md:items-center md:justify-center">
 											<Icon
 												size={
 													48
 												}
-												className="mb-2 text-yellow"
+												className="mb-2 text-yellow items-center justify-center"
 												aria-hidden="true"
 											/>
 											<p className="rfs:text-base font-semibold text-white">

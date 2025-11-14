@@ -9,7 +9,7 @@ import {
 	isValidLocationSlug,
 } from "@/lib/location-data"
 import { personalizeSeoData } from "@/lib/seo-location-personalization"
-import { getSeoServiceBySlug } from "@/lib/sanity-service-data"
+import { loadSeoPageData, type SeoPageData } from "@/lib/seo-page-data"
 import SeoHero from "@/components/seo/hero"
 import Content from "@/components/commonSections/content"
 import Services from "@/components/commonSections/services"
@@ -82,15 +82,16 @@ export async function generateMetadata({
 
 	const resolvedKey = slugAliases[requestedSlug] || requestedSlug
 
+	const defaultSeoData = await loadSeoPageData(DEFAULT_SEO_SLUG)
+
 	// Get base data from Sanity
-	const baseData = await getSeoServiceBySlug(DEFAULT_SEO_SLUG)
 	const baseHeading =
-		baseData?.metadata ??
-		baseData?.hero?.heading ??
+		defaultSeoData?.metadata ??
+		defaultSeoData?.hero?.heading ??
 		"SEO Services"
 	const baseDescription =
-		baseData?.description ??
-		baseData?.hero?.subheading ??
+		defaultSeoData?.description ??
+		defaultSeoData?.hero?.subheading ??
 		"Scale organic traffic, visibility, and revenue with full-funnel SEO programmes built by Digital Neighbour."
 
 	if (
@@ -130,7 +131,7 @@ export async function generateMetadata({
 				"seo",
 				DEFAULT_SEO_SLUG,
 				ensuredLocation,
-				baseData
+				(defaultSeoData ?? {}) as SeoPageData
 			)
 			const locationName =
 				getLocationDisplayName(ensuredLocation) ??
@@ -159,8 +160,8 @@ export async function generateMetadata({
 		}
 	}
 
-	// Fetch from Sanity
-	const currentSeoData = await getSeoServiceBySlug(resolvedKey)
+	// Fetch from Sanity with JSON fallback
+	const currentSeoData = await loadSeoPageData(resolvedKey)
 
 	if (!currentSeoData) {
 		return {
@@ -224,10 +225,8 @@ export default async function SeoSlugPage({
 				notFound()
 			}
 
-			// Get base data from Sanity
-			const baseData = await getSeoServiceBySlug(
-				DEFAULT_SEO_SLUG
-			)
+			// Get base data merged with JSON fallback
+			const baseData = await loadSeoPageData(DEFAULT_SEO_SLUG)
 
 			if (!baseData) {
 				notFound()
@@ -253,8 +252,8 @@ export default async function SeoSlugPage({
 		notFound()
 	}
 
-	// Fetch from Sanity
-	const currentSeoData = await getSeoServiceBySlug(resolvedKey)
+	// Fetch service data with JSON fallback
+	const currentSeoData = await loadSeoPageData(resolvedKey)
 
 	if (!currentSeoData) {
 		notFound()
@@ -263,7 +262,7 @@ export default async function SeoSlugPage({
 	return renderSeoPage(currentSeoData)
 }
 
-function renderSeoPage(data: any) {
+function renderSeoPage(data: SeoPageData) {
 	return (
 		<main>
 			<div className="relative">

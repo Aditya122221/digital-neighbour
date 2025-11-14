@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { buildMetadata } from "@/lib/site-metadata"
-import { getSeoServiceBySlug } from "@/lib/sanity-service-data"
+import { loadSeoPageData } from "@/lib/seo-page-data"
 import SeoHero from "@/components/seo/hero"
 import Form from "@/components/commonSections/form"
 import Navbar from "@/components/core/navbar"
@@ -10,7 +10,6 @@ import BrandsMarquee from "@/components/homepage/brandsmarquee"
 import IntroParagraph from "@/components/commonSections/introparagraph"
 import PainPoints from "@/components/commonSections/painpoints"
 import Services from "@/components/commonSections/services"
-import SeoSpecialisations from "@/components/seo/specialisations"
 import Content from "@/components/commonSections/content"
 import Cta from "@/components/commonSections/cta"
 import Apart from "@/components/homepage/apart"
@@ -29,8 +28,8 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
-	const seoOverview = await getSeoServiceBySlug("seo")
-	
+	const seoOverview = await loadSeoPageData("seo")
+
 	const overviewHeading =
 		seoOverview?.hero?.heading ?? "SEO Services"
 	const overviewDescription =
@@ -45,45 +44,35 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function SeoOverviewPage() {
-	const seoOverview = await getSeoServiceBySlug("seo")
-	
+	const seoOverview = await loadSeoPageData("seo")
+
 	if (!seoOverview) {
 		notFound()
 	}
-
-	const specialisations = seoOverview?.specialisations || []
 
 	return (
 		<main>
 			<div className="relative">
 				<Navbar />
-				<SeoHero
-					data={
-						seoOverview?.hero || {
-							heading: "Award-Winning SEO Marketing Agency",
-							subheading:
-								"We've helped leading and emerging brands scale their traffic and revenue organically for over a decade with our experience in seo consulting.",
-						}
-					}
-				/>
+				<SeoHero data={seoOverview.hero} />
 			</div>
-			<Form data={seoOverview?.form} />
+			<Form data={seoOverview.form} />
 			<BrandsMarquee />
-			<IntroParagraph data={seoOverview?.introParagraph} />
-			<PainPoints data={seoOverview?.painPoints} />
+			<IntroParagraph data={seoOverview.introParagraph} />
+			<PainPoints data={seoOverview.painPoints} />
 			<Services
-				data={seoOverview?.services}
-				serviceCards={seoOverview?.serviceCards}
+				data={seoOverview.services}
+				serviceCards={seoOverview.serviceCards}
 				basePath="/seo"
 			/>
-			<Content data={seoOverview?.content} imagePathPrefix="/seo/content" />
-			<Cta data={seoOverview?.services} />
+			<Content data={seoOverview.content} imagePathPrefix="/seo/content" />
+			<Cta data={seoOverview.services} />
 			<Apart />
-			<Process2 data={seoOverview?.services} processData={seoOverview?.process} />
-			<KeyBenefits data={seoOverview?.keyBenefits} />
-			<Features data={seoOverview?.features} />
+			<Process2 data={seoOverview.services} processData={seoOverview.process} />
+			<KeyBenefits data={seoOverview.keyBenefits} />
+			<Features data={seoOverview.features} />
 			<CaseStudy />
-			<Faq data={seoOverview?.faq} />
+			<Faq data={seoOverview.faq} />
 			<OtherServices />
 			<Blogs />
 			<TestimonalTwo />
