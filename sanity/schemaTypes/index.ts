@@ -13,9 +13,11 @@ import { aiAutomationServiceType } from "./aiAutomation"
 import { dataAnalyticsServiceType } from "./dataAnalytics"
 import { industriesServiceType } from "./industries"
 import { professionalMarketingServiceType } from "./professionalMarketing"
+import { marketingAgencyPageType } from "./marketingAgency"
 
 export const schemaTypes: SchemaTypeDefinition[] = [
 	homePageType,
+	marketingAgencyPageType,
 	seoServiceType,
 	paidAdvertisingServiceType,
 	socialMarketingServiceType,
