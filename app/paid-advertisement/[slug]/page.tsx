@@ -66,8 +66,11 @@ export async function generateMetadata({
 	// Get base data from Sanity
 	const baseData = await getPaidAdsServiceBySlug("paid-advertisement")
 	const baseHeading =
-		baseData?.hero?.heading ?? "Paid Advertising Services"
+		baseData?.metadata ??
+		baseData?.hero?.heading ??
+		"Paid Advertising Services"
 	const baseDescription =
+		baseData?.description ??
 		baseData?.hero?.subheading ??
 		"Plan, launch, and optimise high-performing paid media across Google, Meta, LinkedIn, and YouTube with Digital Neighbour."
 
@@ -153,8 +156,11 @@ export async function generateMetadata({
 	}
 
 	const heading =
-		currentData?.hero?.heading ?? `${humanizeSlug(slug)} Services`
+		currentData?.metadata ??
+		currentData?.hero?.heading ??
+		`${humanizeSlug(slug)} Services`
 	const description =
+		currentData?.description ??
 		currentData?.hero?.subheading ??
 		currentData?.introParagraph?.heading ??
 		`Discover ${humanizeSlug(

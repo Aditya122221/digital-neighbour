@@ -67,8 +67,11 @@ export async function generateMetadata({
   // Get base data from Sanity
   const baseData = await getHostingServiceBySlug("hosting-it-security");
   const baseHeading =
-    baseData?.hero?.heading ?? "Hosting, IT & Security Services";
+    baseData?.metadata ??
+    baseData?.hero?.heading ??
+    "Hosting, IT & Security Services";
   const baseDescription =
+    baseData?.description ??
     baseData?.hero?.subheading ??
     "Protect, optimise, and manage your digital infrastructure with secure hosting, managed IT, and cyber security services from Digital Neighbour.";
 
@@ -144,8 +147,11 @@ export async function generateMetadata({
   }
 
   const heading =
-    currentData?.hero?.heading ?? `${humanizeSlug(slug)} Services`;
+    currentData?.metadata ??
+    currentData?.hero?.heading ??
+    `${humanizeSlug(slug)} Services`;
   const description =
+    currentData?.description ??
     currentData?.hero?.subheading ??
     currentData?.introParagraph?.heading ??
     `Discover ${humanizeSlug(slug)} solutions from Digital Neighbour.`;

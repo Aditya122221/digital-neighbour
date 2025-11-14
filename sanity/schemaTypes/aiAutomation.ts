@@ -170,6 +170,20 @@ export const aiAutomationServiceType = defineType({
 			},
 			validation: (rule) => rule.required(),
 		}),
+		defineField({
+			name: "metadata",
+			title: "Metadata Title",
+			type: "string",
+			description:
+				"SEO metadata title for this service page. If not provided, will fall back to hero heading.",
+		}),
+		defineField({
+			name: "description",
+			title: "Metadata Description",
+			type: "text",
+			description:
+				"SEO metadata description for this service page. If not provided, will fall back to hero subheading.",
+		}),
 		...baseServiceFields,
 	],
 	preview: {

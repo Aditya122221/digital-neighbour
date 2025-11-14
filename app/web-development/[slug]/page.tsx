@@ -97,8 +97,11 @@ export async function generateMetadata({
   // Get base data from Sanity
   const baseData = await getWebDevelopmentServiceBySlug(DEFAULT_WEBDEV_SLUG);
   const baseHeading =
-    baseData?.hero?.heading ?? "Web Development Services";
+    baseData?.metadata ??
+    baseData?.hero?.heading ??
+    "Web Development Services";
   const baseDescription =
+    baseData?.description ??
     baseData?.hero?.subheading ??
     "Design and ship high-performing websites, web apps, and digital platforms with Digital Neighbour.";
 
@@ -114,8 +117,11 @@ export async function generateMetadata({
   const currentData = await getWebDevelopmentServiceBySlug(slug);
   if (currentData) {
     const heading =
-      currentData?.hero?.heading ?? fromKebabToTitle(slug);
+      currentData?.metadata ??
+      currentData?.hero?.heading ??
+      fromKebabToTitle(slug);
     const description =
+      currentData?.description ??
       currentData?.hero?.subheading ??
       currentData?.introParagraph?.heading ??
       `Explore ${fromKebabToTitle(

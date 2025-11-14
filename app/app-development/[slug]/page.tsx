@@ -58,8 +58,11 @@ export async function generateMetadata({
   // Get base data from Sanity
   const baseData = await getAppDevelopmentServiceBySlug(DEFAULT_APP_SLUG);
   const baseHeading =
-    baseData?.hero?.heading ?? "App Development Services";
+    baseData?.metadata ??
+    baseData?.hero?.heading ??
+    "App Development Services";
   const baseDescription =
+    baseData?.description ??
     baseData?.hero?.subheading ??
     "Design, build, and scale high-performance digital products with Digital Neighbour.";
 
@@ -134,9 +137,11 @@ export async function generateMetadata({
   }
 
   const heading =
+    currentData?.metadata ??
     currentData?.hero?.heading ??
     `${humanizeSlug(slug)} Services`;
   const description =
+    currentData?.description ??
     currentData?.hero?.subheading ??
     currentData?.introParagraph?.heading ??
     `Explore ${humanizeSlug(slug)} solutions from Digital Neighbour.`;

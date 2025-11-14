@@ -84,8 +84,12 @@ export async function generateMetadata({
 
 	// Get base data from Sanity
 	const baseData = await getSeoServiceBySlug(DEFAULT_SEO_SLUG)
-	const baseHeading = baseData?.hero?.heading ?? "SEO Services"
+	const baseHeading =
+		baseData?.metadata ??
+		baseData?.hero?.heading ??
+		"SEO Services"
 	const baseDescription =
+		baseData?.description ??
 		baseData?.hero?.subheading ??
 		"Scale organic traffic, visibility, and revenue with full-funnel SEO programmes built by Digital Neighbour."
 
@@ -165,9 +169,11 @@ export async function generateMetadata({
 	}
 
 	const heading =
+		currentSeoData?.metadata ??
 		currentSeoData?.hero?.heading ??
 		`${humanizeSlug(resolvedKey)} Services`
 	const description =
+		currentSeoData?.description ??
 		currentSeoData?.hero?.subheading ??
 		currentSeoData?.introParagraph?.heading ??
 		`Explore ${humanizeSlug(

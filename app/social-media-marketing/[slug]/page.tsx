@@ -62,9 +62,11 @@ export async function generateMetadata({
   // Get base data from Sanity
   const socialBaseData = await getSocialMediaServiceBySlug("social-media-marketing");
   const socialBaseHeading =
+    socialBaseData?.metadata ??
     socialBaseData?.hero?.heading ??
     "Social Media Marketing that Drives Growth";
   const socialBaseDescription =
+    socialBaseData?.description ??
     socialBaseData?.hero?.subheading ??
     "Build community, grow engagement, and convert attention into demand with Digital Neighbour's social media specialists.";
 
@@ -93,9 +95,11 @@ export async function generateMetadata({
   }
 
   const heading =
+    currentData?.metadata ??
     currentData?.hero?.heading ??
     `${humanizeSlug(slug)} Services`;
   const description =
+    currentData?.description ??
     currentData?.hero?.subheading ??
     currentData?.introParagraph?.heading ??
     `Discover ${humanizeSlug(slug)} programmes crafted by Digital Neighbour.`;

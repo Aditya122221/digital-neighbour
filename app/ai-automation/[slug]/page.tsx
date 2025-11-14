@@ -82,8 +82,11 @@ export async function generateMetadata({
 	}
 
 	const heading =
-		currentData?.hero?.heading ?? `${humanizeSlug(slug)} Services`
+		currentData?.metadata ??
+		currentData?.hero?.heading ??
+		`${humanizeSlug(slug)} Services`
 	const description =
+		currentData?.description ??
 		currentData?.hero?.subheading ??
 		currentData?.introParagraph?.heading ??
 		`Explore ${humanizeSlug(

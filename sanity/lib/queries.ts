@@ -39,6 +39,8 @@ export const seoServiceByTitleQuery = groq`
   *[_type == "seoService" && title == $title][0]{
     _id,
     title,
+    metadata,
+    description,
     hero{
       heading,
       subheading
@@ -131,6 +133,8 @@ export const allSeoServicesQuery = groq`
 const commonServiceFields = groq`
   _id,
   title,
+  metadata,
+  description,
   hero{
     heading,
     subheading
