@@ -2,35 +2,44 @@
 
 import { Sparkles, Target, TrendingUp, Users2 } from "lucide-react"
 
-const differentiators = [
-	{
-		id: 1,
-		title: "Full-Funnel Strategy",
-		description:
-			"Campaigns engineered around revenue targets—from awareness to retention—so every touchpoint pays off.",
-		icon: Target,
+const heroData = {
+	"main": {
+		"heading": "The Impact marketing agency brands trust to grow.",
+		"subheading": "Digital Neighbour is the embedded marketing partner for ambitious teams. We unite strategy, storytelling, and performance into one streamlined crew that ships ideas fast, measures what matters, and keeps momentum on your side."
 	},
-	{
-		id: 2,
-		title: "Human + Data Approach",
-		description:
-			"Our strategists blend behavioural insights with live performance dashboards to steer decisions in real time.",
-		icon: Users2,
-	},
-	{
-		id: 3,
-		title: "Momentum Mindset",
-		description:
-			"Rapid testing sprints, weekly learnings, and constant optimisation keep your brand out in front.",
-		icon: TrendingUp,
-	},
-]
-
-const stats = [
-	{ id: "years", value: "12+", label: "Years empowering growth brands" },
-	{ id: "markets", value: "18", label: "Industries scaled globally" },
-	{ id: "roi", value: "4.7x", label: "Average paid + organic ROI" },
-]
+	"differentiators": [
+		{
+			id: 1,
+			title: "Full-Funnel Strategy",
+			description:
+				"Campaigns engineered around revenue targets—from awareness to retention—so every touchpoint pays off.",
+			icon: Target,
+		},
+		{
+			id: 2,
+			title: "Human + Data Approach",
+			description:
+				"Our strategists blend behavioural insights with live performance dashboards to steer decisions in real time.",
+			icon: Users2,
+		},
+		{
+			id: 3,
+			title: "Momentum Mindset",
+			description:
+				"Rapid testing sprints, weekly learnings, and constant optimisation keep your brand out in front.",
+			icon: TrendingUp,
+		},
+	],
+	"rightCard": {
+		"heading": "Partners, not vendors.",
+		"description": "We plug into your weekly cadences, share dashboards in plain language, and make the creative + data decisions you don't have time to juggle.",
+		"stats": [
+			{ id: "years", value: "12+", label: "Years empowering growth brands" },
+			{ id: "markets", value: "18", label: "Industries scaled globally" },
+			{ id: "roi", value: "4.7x", label: "Average paid + organic ROI" },
+		]
+	}
+}
 
 export default function BrandInfo() {
 	return (
@@ -38,31 +47,16 @@ export default function BrandInfo() {
 			<div className="mx-auto flex max-w-6xl flex-col gap-16 px-6 lg:px-12">
 				<header className="max-w-4xl space-y-6">
 					<h2 className="text-3xl font-semibold leading-tight md:text-4xl lg:text-5xl font-cal-sans">
-						The{" "}
-						<span className="relative inline-block text-black">
-							<span className="absolute inset-x-0 bottom-0 h-3/5 bg-yellow" />
-							<span className="relative z-10 px-2 py-1">
-								Impact
-							</span>
-						</span>{" "}
-						marketing agency brands trust to
-						grow.
+						{heroData.main.heading}
 					</h2>
 					<p className="text-base text-black/70 md:text-lg">
-						Digital Neighbour is the
-						embedded marketing partner for
-						ambitious teams. We unite
-						strategy, storytelling, and
-						performance into one streamlined
-						crew that ships ideas fast,
-						measures what matters, and keeps
-						momentum on your side.
+						{heroData.main.subheading}
 					</p>
 				</header>
 
 				<div className="grid lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
 					<div className="rounded-t-[32px] bg-yellow/10 p-10 lg:rounded-bl-[32px] lg:rounded-br-none lg:rounded-tl-[32px] lg:rounded-tr-none">
-						<div className="flex items-center gap-3">
+						<div className="flex items-center gap-3 mb-5">
 							<span className="flex h-12 w-12 items-center justify-center text-black">
 								<Sparkles
 									className="h-5 w-6"
@@ -84,7 +78,7 @@ export default function BrandInfo() {
 						</div>
 
 						<div className="grid gap-6 md:grid-cols-2">
-							{differentiators.map(
+							{heroData.differentiators.map(
 								({
 									id,
 									title,
@@ -122,24 +116,14 @@ export default function BrandInfo() {
 					<aside className="flex flex-col justify-between gap-6 rounded-b-[32px] bg-black p-8 text-white lg:rounded-bl-none lg:rounded-br-[32px] lg:rounded-tl-none lg:rounded-tr-[32px]">
 						<div>
 							<h3 className="text-2xl font-semibold">
-								Partners, not
-								vendors.
+								{heroData.rightCard.heading}
 							</h3>
 							<p className="mt-4 text-sm leading-relaxed text-white/70">
-								We plug into
-								your weekly
-								cadences, share
-								dashboards in
-								plain language,
-								and make the
-								creative + data
-								decisions you
-								don&apos;t have
-								time to juggle.
+								{heroData.rightCard.description}
 							</p>
 						</div>
 						<ul className="grid gap-6">
-							{stats.map(
+							{heroData.rightCard.stats.map(
 								({
 									id,
 									value,

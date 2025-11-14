@@ -9,7 +9,6 @@ import KeepYourStack from "@/components/homepage/keepyourstack"
 import CaseStudy from "@/components/homepage/casestudy"
 import FeatureSection from "@/components/homepage/contentSection"
 import Blogs from "@/components/homepage/blogs"
-import Testimonials from "@/components/homepage/testimonials"
 import TestimonalTwo from "@/components/homepage/testimonalTwo"
 import BookACall from "@/components/homepage/bookacall"
 import Footer from "@/components/core/footer"
@@ -46,7 +45,6 @@ export default function HomePage() {
 			<CaseStudy />
 			<FeatureSection />
 			<Apart />
-			<Testimonials />
 			<TestimonalTwo />
 			<Process2 />
 			<Blogs />

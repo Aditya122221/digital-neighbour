@@ -4,6 +4,28 @@ import { useRef } from "react"
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 import { useIsMobile } from "@/hooks/use-mobile"
 
+const apartData = {
+	ours: [
+		"Generic, one-size-fits-all",
+		"Clear pricing, no hidden fees",
+		"Agile, efficient, no delays",
+		"Flexible terms, no long contracts",
+		"Direct access to experts",
+	],
+	others: [
+		"Generic, one-size-fits-all",
+		"Vague reports, surprise costs",
+		"Slow processes, missed deadlines",
+		"Locked into lengthy agreements",
+		"Generic account managers",
+	],
+}
+
+const SECTION_HEADING = "What sets us apart from others"
+const SECTION_TAGLINE = "We don't settle for average, and neither should you."
+const OURS_TITLE = "Digital Neighbour"
+const OTHERS_TITLE = "Other Agencies"
+
 export default function Apart() {
 	const isMobile = useIsMobile()
 	const sectionRef = useRef<HTMLDivElement | null>(null)
@@ -62,29 +84,69 @@ export default function Apart() {
 		damping: 22,
 	})
 
+	const { ours, others } = apartData
+
+	const headingParts = (() => {
+		const target = "apart"
+		const lowerHeading = SECTION_HEADING.toLowerCase()
+		const matchIndex = lowerHeading.indexOf(target)
+
+		if (matchIndex === -1) {
+			return {
+				before: SECTION_HEADING,
+				highlight: "",
+				after: "",
+			}
+		}
+
+		return {
+			before: SECTION_HEADING.slice(0, matchIndex),
+			highlight: SECTION_HEADING.slice(
+				matchIndex,
+				matchIndex + target.length
+			),
+			after: SECTION_HEADING.slice(
+				matchIndex + target.length
+			),
+		}
+	})()
+
+	const renderHighlightedWord = (italic = true) => (
+		<>
+			{headingParts.before}
+			{headingParts.highlight && (
+				<span className="relative inline-block">
+					<span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow"></span>
+					<span
+						className={`relative z-10 font-semibold${
+							italic ? " italic" : ""
+						}`}
+					>
+						{headingParts.highlight}
+					</span>
+				</span>
+			)}
+		</>
+	)
+
 	if (isMobile) {
 		return (
 			<section className="relative w-full bg-pink/20 flex flex-col items-center justify-center py-16 px-4">
 				{/* Title row */}
 				<div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-3 text-3xl sm:text-4xl font-regular mb-8 px-2">
 					<span className="text-center">
-						What sets us{" "}
-						<span className="relative inline-block">
-							<span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow"></span>
-							<span className="relative z-10 font-semibold italic">
-								apart
-							</span>
+						{renderHighlightedWord()}
+					</span>
+					{headingParts.after && (
+						<span className="text-center">
+							{headingParts.after}
 						</span>
-					</span>
-					<span className="text-center">
-						from others
-					</span>
+					)}
 				</div>
 
 				{/* Tagline above cards */}
 				<p className="text-lg font-light text-gray-700 text-center mb-8">
-					We don't settle for average, and neither
-					should you.
+					{SECTION_TAGLINE}
 				</p>
 
 				{/* Cards row */}
@@ -92,201 +154,96 @@ export default function Apart() {
 					{/* First Card */}
 					<div className="w-full max-w-sm bg-black rounded-2xl shadow-xl p-8">
 						<h3 className="text-2xl font-semibold mb-6 text-yellow">
-							Digital Neighbour
+							{OURS_TITLE}
 						</h3>
 						<ul className="space-y-4 text-base text-bone">
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-white/50 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="m4.5 12.75 6 6 9-13.5"
-									/>
-								</svg>
-								Generic,
-								one-size-fits-all
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-white/50 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="m4.5 12.75 6 6 9-13.5"
-									/>
-								</svg>
-								Clear pricing,
-								no hidden fees
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-white/50 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="m4.5 12.75 6 6 9-13.5"
-									/>
-								</svg>
-								Agile,
-								efficient, no
-								delays
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-white/50 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="m4.5 12.75 6 6 9-13.5"
-									/>
-								</svg>
-								Flexible terms,
-								no long
-								contracts
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="m4.5 12.75 6 6 9-13.5"
-									/>
-								</svg>
-								Direct access to
-								experts
-							</li>
+							{ours.map(
+								(
+									item,
+									index
+								) => {
+									const isLast =
+										index ===
+										ours.length -
+											1
+									return (
+										<li
+											key={`mobile-ours-${item}`}
+											className={`flex items-center gap-3 whitespace-nowrap ${
+												isLast
+													? "pb-2"
+													: "border-b border-white/50 pb-2"
+											}`}
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												fill="none"
+												viewBox="0 0 24 24"
+												strokeWidth="1.5"
+												stroke="currentColor"
+												className="size-6"
+											>
+												<path
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													d="m4.5 12.75 6 6 9-13.5"
+												/>
+											</svg>
+											{
+												item
+											}
+										</li>
+									)
+								}
+							)}
 						</ul>
 					</div>
 
 					{/* Second Card */}
 					<div className="w-full max-w-sm bg-gray-50 rounded-2xl shadow-xl p-8">
 						<h3 className="text-2xl font-semibold mb-6 text-yellow">
-							Other Agencies
+							{OTHERS_TITLE}
 						</h3>
 						<ul className="space-y-4 text-base text-gray-700">
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-gray-300 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6 rotate-45"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M12 4.5v15m7.5-7.5h-15"
-									/>
-								</svg>
-								Generic,
-								one-size-fits-all
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-gray-300 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6 rotate-45"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M12 4.5v15m7.5-7.5h-15"
-									/>
-								</svg>
-								Vague reports,
-								surprise costs
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-gray-300 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6 rotate-45"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M12 4.5v15m7.5-7.5h-15"
-									/>
-								</svg>
-								Slow processes,
-								missed deadlines
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-gray-300 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6 rotate-45"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M12 4.5v15m7.5-7.5h-15"
-									/>
-								</svg>
-								Locked into
-								lengthy
-								agreements
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6 rotate-45"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M12 4.5v15m7.5-7.5h-15"
-									/>
-								</svg>
-								Generic account
-								managers
-							</li>
+							{others.map(
+								(
+									item,
+									index
+								) => {
+									const isLast =
+										index ===
+										others.length -
+											1
+									return (
+										<li
+											key={`mobile-others-${item}`}
+											className={`flex items-center gap-3 whitespace-nowrap ${
+												isLast
+													? "pb-2"
+													: "border-b border-gray-300 pb-2"
+											}`}
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												fill="none"
+												viewBox="0 0 24 24"
+												strokeWidth="1.5"
+												stroke="currentColor"
+												className="size-6 rotate-45"
+											>
+												<path
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													d="M12 4.5v15m7.5-7.5h-15"
+												/>
+											</svg>
+											{
+												item
+											}
+										</li>
+									)
+								}
+							)}
 						</ul>
 					</div>
 				</div>
@@ -307,20 +264,16 @@ export default function Apart() {
 						style={{ x: leftX }}
 						className="whitespace-nowrap"
 					>
-						What sets us{" "}
-						<span className="relative inline-block">
-							<span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow"></span>
-							<span className="relative z-10 font-semibold italic">
-								apart
-							</span>
-						</span>
+						{renderHighlightedWord()}
 					</motion.span>
-					<motion.span
-						style={{ x: rightX }}
-						className="whitespace-nowrap"
-					>
-						from others
-					</motion.span>
+					{headingParts.after && (
+						<motion.span
+							style={{ x: rightX }}
+							className="whitespace-nowrap"
+						>
+							{headingParts.after}
+						</motion.span>
+					)}
 				</div>
 
 				{/* Tagline above cards */}
@@ -328,8 +281,7 @@ export default function Apart() {
 					style={{ opacity: cardOpacity }}
 					className="mt-8 text-lg md:text-3xl font-light text-gray-700 text-center"
 				>
-					We don't settle for average, and neither
-					should you.
+					{SECTION_TAGLINE}
 				</motion.p>
 
 				{/* Cards row */}
@@ -343,101 +295,48 @@ export default function Apart() {
 						className="w-96 bg-black rounded-2xl shadow-xl p-8 z-10"
 					>
 						<h3 className="text-2xl font-semibold mb-6 text-yellow">
-							Digital Neighbour
+							{OURS_TITLE}
 						</h3>
 						<ul className="space-y-4 text-base text-white">
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-white/50 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="m4.5 12.75 6 6 9-13.5"
-									/>
-								</svg>
-								Generic,
-								one-size-fits-all
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-white/50 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="m4.5 12.75 6 6 9-13.5"
-									/>
-								</svg>
-								Clear pricing,
-								no hidden fees
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-white/50 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="m4.5 12.75 6 6 9-13.5"
-									/>
-								</svg>
-								Agile,
-								efficient, no
-								delays
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-white/50 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="m4.5 12.75 6 6 9-13.5"
-									/>
-								</svg>
-								Flexible terms,
-								no long
-								contracts
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="m4.5 12.75 6 6 9-13.5"
-									/>
-								</svg>
-								Direct access to
-								experts
-							</li>
+							{ours.map(
+								(
+									item,
+									index
+								) => {
+									const isLast =
+										index ===
+										ours.length -
+											1
+									return (
+										<li
+											key={`desktop-ours-${item}`}
+											className={`flex items-center gap-3 whitespace-nowrap ${
+												isLast
+													? "pb-2"
+													: "border-b border-white/50 pb-2"
+											}`}
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												fill="none"
+												viewBox="0 0 24 24"
+												strokeWidth="1.5"
+												stroke="currentColor"
+												className="size-6"
+											>
+												<path
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													d="m4.5 12.75 6 6 9-13.5"
+												/>
+											</svg>
+											{
+												item
+											}
+										</li>
+									)
+								}
+							)}
 						</ul>
 					</motion.div>
 
@@ -450,100 +349,48 @@ export default function Apart() {
 						className="w-96 bg-gray-50 rounded-2xl shadow-xl p-8"
 					>
 						<h3 className="text-2xl font-semibold mb-6">
-							Other Agencies
+							{OTHERS_TITLE}
 						</h3>
 						<ul className="space-y-4 text-base text-gray-700">
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-gray-300 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6 rotate-45"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M12 4.5v15m7.5-7.5h-15"
-									/>
-								</svg>
-								Generic,
-								one-size-fits-all
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-gray-300 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6 rotate-45"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M12 4.5v15m7.5-7.5h-15"
-									/>
-								</svg>
-								Vague reports,
-								surprise costs
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-gray-300 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6 rotate-45"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M12 4.5v15m7.5-7.5h-15"
-									/>
-								</svg>
-								Slow processes,
-								missed deadlines
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap border-b border-gray-300 pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6 rotate-45"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M12 4.5v15m7.5-7.5h-15"
-									/>
-								</svg>
-								Locked into
-								lengthy
-								agreements
-							</li>
-							<li className="flex items-center gap-3 whitespace-nowrap pb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth="1.5"
-									stroke="currentColor"
-									className="size-6 rotate-45"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="M12 4.5v15m7.5-7.5h-15"
-									/>
-								</svg>
-								Generic account
-								managers
-							</li>
+							{others.map(
+								(
+									item,
+									index
+								) => {
+									const isLast =
+										index ===
+										others.length -
+											1
+									return (
+										<li
+											key={`desktop-others-${item}`}
+											className={`flex items-center gap-3 whitespace-nowrap ${
+												isLast
+													? "pb-2"
+													: "border-b border-gray-300 pb-2"
+											}`}
+										>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												fill="none"
+												viewBox="0 0 24 24"
+												strokeWidth="1.5"
+												stroke="currentColor"
+												className="size-6 rotate-45"
+											>
+												<path
+													strokeLinecap="round"
+													strokeLinejoin="round"
+													d="M12 4.5v15m7.5-7.5h-15"
+												/>
+											</svg>
+											{
+												item
+											}
+										</li>
+									)
+								}
+							)}
 						</ul>
 					</motion.div>
 				</div>
