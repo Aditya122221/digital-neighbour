@@ -135,7 +135,7 @@ export const portfolioPageType = defineType({
 		},
 		prepare({ title }) {
 			return {
-				title: title ?? "Portfolio Page",
+				title: "Portfolio Page",
 			}
 		},
 	},

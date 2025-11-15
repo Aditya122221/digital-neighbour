@@ -36,12 +36,12 @@ export const apartSectionType = defineType({
 	],
 	preview: {
 		select: {
-			title: "heading",
+			title: "Apart Section",
 			tagline: "tagline",
 		},
 		prepare({ title, tagline }) {
 			return {
-				title: title ?? "What Sets Us Apart",
+				title: "What Sets Us Apart",
 				subtitle: tagline,
 			}
 		},
