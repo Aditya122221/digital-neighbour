@@ -1,0 +1,95 @@
+{
+  "hero": {
+    "title": "Team Behind Your Growth",
+    "description": "We're more than just a marketing agency—we're a team of storytellers, strategists, and problem-solvers dedicated to helping brands grow and connect with their audiences.",
+    "image": "/aboutImage.avif",
+    "wordsText": "We craft strategies that feel authentic, perform exceptionally, and help brands grow in ways that actually matter."
+  },
+  "origins": {
+    "title": "The Origins",
+    "description": "Our journey began with a small group of creative minds—marketers, designers, strategists—who shared a passion for turning ideas into impact. We were tired of seeing brands waste time on cookie-cutter solutions that didn't work. So, we took a different approach: blending data-driven strategy with storytelling, creativity, and a touch of intuition.",
+    "images": [
+      {
+        "image": "/firstimage.avif",
+        "alt": "Origin story team collaboration"
+      },
+      {
+        "image": "/secondimage.avif",
+        "alt": "Creative strategy workshop"
+      }
+    ]
+  },
+  "values": {
+    "title": "Our Values",
+    "items": [
+      {
+        "title": "Clarity in Strategy",
+        "description": "We believe great marketing starts with clear, intentional strategy. Every campaign we create is driven by data, insight, and a deep understanding of our clients' goals."
+      },
+      {
+        "title": "Creativity with Purpose",
+        "description": "Innovation is at the heart of everything we do. We craft compelling, original content that doesn't just look good—it connects, engages, and drives meaningful results."
+      },
+      {
+        "title": "Collaboration that Elevates",
+        "description": "Success is a shared journey. We work closely with our clients, fostering open communication and mutual trust to build brands that thrive in the digital space."
+      }
+    ]
+  },
+  "achievements": {
+    "title": "Achievements",
+    "description": "Over the years, we've helped businesses grow, engaged audiences with compelling content, and set new benchmarks in digital marketing. Every milestone reflects our commitment to creativity, strategy, and continuous innovation in the ever-evolving digital landscape.",
+    "stats": [
+      { "number": "100+", "label": "Brands Transformed" },
+      { "number": "300M+", "label": "Impressions Generated" },
+      { "number": "5x", "label": "Average ROI on Campaigns" },
+      { "number": "$25M+", "label": "in Client Revenue Growth" }
+    ],
+    "team": {
+      "title": "Growth Experts",
+      "description": "Creative thinkers, strategic planners, and digital storytellers—our team is the driving force behind every successful brand.",
+      "members": [
+        {
+          "name": "John Smith",
+          "role": "Founder & Lead Strategist",
+          "image": "/homepage/hero/1.jpg",
+          "social": {
+            "twitter": "https://x.com",
+            "linkedin": "https://linkedin.com",
+            "instagram": "https://instagram.com"
+          }
+        },
+        {
+          "name": "Sarah Johnson",
+          "role": "Creative Director",
+          "image": "/homepage/hero/2.jpg",
+          "social": {
+            "twitter": "https://x.com",
+            "linkedin": "https://linkedin.com",
+            "instagram": "https://instagram.com"
+          }
+        },
+        {
+          "name": "Michael Chen",
+          "role": "Marketing Analyst",
+          "image": "/homepage/hero/3.jpg",
+          "social": {
+            "twitter": "https://x.com",
+            "linkedin": "https://linkedin.com",
+            "instagram": "https://instagram.com"
+          }
+        },
+        {
+          "name": "Emma Wilson",
+          "role": "Social Media Manager",
+          "image": "/homepage/hero/4.jpg",
+          "social": {
+            "twitter": "https://x.com",
+            "linkedin": "https://linkedin.com",
+            "instagram": "https://instagram.com"
+          }
+        }
+      ]
+    }
+  }
+}

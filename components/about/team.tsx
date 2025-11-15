@@ -4,17 +4,14 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-interface TeamMemberProps {
-  name: string;
-  role: string;
-  image: string;
-  social: {
-    twitter?: string;
-    linkedin?: string;
-    instagram?: string;
-  };
+import type {
+  AboutTeamContent,
+  TeamMember as TeamMemberType,
+} from "@/lib/about-data";
+
+type TeamMemberProps = TeamMemberType & {
   index: number;
-}
+};
 
 function TeamMember({ name, role, image, social, index }: TeamMemberProps) {
   return (
@@ -32,7 +29,6 @@ function TeamMember({ name, role, image, social, index }: TeamMemberProps) {
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        {/* Overlay on hover */}
         <div className="absolute inset-0 bg-junglegreen/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
       <div>
@@ -40,9 +36,8 @@ function TeamMember({ name, role, image, social, index }: TeamMemberProps) {
           {name}
         </h3>
         <p className="text-base font-light text-blackbrown/70 mb-4">{role}</p>
-        {/* Social links */}
         <div className="flex gap-4">
-          {social.twitter && (
+          {social?.twitter && (
             <Link
               href={social.twitter}
               className="w-10 h-10 rounded-full bg-blackbrown/10 flex items-center justify-center hover:bg-yellow transition-colors duration-300"
@@ -58,7 +53,7 @@ function TeamMember({ name, role, image, social, index }: TeamMemberProps) {
               </svg>
             </Link>
           )}
-          {social.linkedin && (
+          {social?.linkedin && (
             <Link
               href={social.linkedin}
               className="w-10 h-10 rounded-full bg-blackbrown/10 flex items-center justify-center hover:bg-yellow transition-colors duration-300"
@@ -74,7 +69,7 @@ function TeamMember({ name, role, image, social, index }: TeamMemberProps) {
               </svg>
             </Link>
           )}
-          {social.instagram && (
+          {social?.instagram && (
             <Link
               href={social.instagram}
               className="w-10 h-10 rounded-full bg-blackbrown/10 flex items-center justify-center hover:bg-yellow transition-colors duration-300"
@@ -96,49 +91,12 @@ function TeamMember({ name, role, image, social, index }: TeamMemberProps) {
   );
 }
 
-export default function Team() {
-  const teamMembers = [
-    {
-      name: "John Smith",
-      role: "Founder & Lead Strategist",
-      image: "/homepage/hero/1.jpg",
-      social: {
-        twitter: "https://x.com",
-        linkedin: "https://linkedin.com",
-        instagram: "https://instagram.com",
-      },
-    },
-    {
-      name: "Sarah Johnson",
-      role: "Creative Director",
-      image: "/homepage/hero/2.jpg",
-      social: {
-        twitter: "https://x.com",
-        linkedin: "https://linkedin.com",
-        instagram: "https://instagram.com",
-      },
-    },
-    {
-      name: "Michael Chen",
-      role: "Marketing Analyst",
-      image: "/homepage/hero/3.jpg",
-      social: {
-        twitter: "https://x.com",
-        linkedin: "https://linkedin.com",
-        instagram: "https://instagram.com",
-      },
-    },
-    {
-      name: "Emma Wilson",
-      role: "Social Media Manager",
-      image: "/homepage/hero/4.jpg",
-      social: {
-        twitter: "https://x.com",
-        linkedin: "https://linkedin.com",
-        instagram: "https://instagram.com",
-      },
-    },
-  ];
+type TeamProps = {
+  content: AboutTeamContent;
+};
+
+export default function Team({ content }: TeamProps) {
+  const members = content.members ?? [];
 
   return (
     <section className="py-20 px-6 bg-white">
@@ -151,18 +109,17 @@ export default function Team() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="text-4xl md:text-5xl font-regular text-blackbrown mb-6 font-cal-sans tracking-wide">
-            Growth Experts
+            {content.title}
           </h2>
           <p className="text-lg font-light text-blackbrown/80 max-w-2xl mx-auto">
-            Creative thinkers, strategic planners, and digital storytellers—our
-            team is the driving force behind every successful brand.
+            {content.description}
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
+          {members.map((member, index) => (
             <TeamMember
-              key={member.name}
+              key={`${member.name}-${index}`}
               name={member.name}
               role={member.role}
               image={member.image}

@@ -16,11 +16,13 @@ import { dataAnalyticsServiceType } from "./dataAnalytics"
 import { industriesServiceType } from "./industries"
 import { professionalMarketingServiceType } from "./professionalMarketing"
 import { marketingAgencyPageType } from "./marketingAgency"
-import { resourceArticleType, resourcesPageType } from "./resource"
+import { resourcesPageType } from "./resource"
 import { portfolioPageType } from "./portfolio"
+import { aboutPageType } from "./about"
 
 export const schemaTypes: SchemaTypeDefinition[] = [
 	homePageType,
+	aboutPageType,
 	apartSectionType,
 	caseStudiesSectionType,
 	marketingAgencyPageType,
@@ -36,7 +38,6 @@ export const schemaTypes: SchemaTypeDefinition[] = [
 	industriesServiceType,
 	professionalMarketingServiceType,
 	resourcesPageType,
-	resourceArticleType,
 	portfolioPageType,
 	...sectionTypes,
 ]

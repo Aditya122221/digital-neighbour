@@ -131,10 +131,12 @@ export const portfolioPageType = defineType({
 	],
 	preview: {
 		select: {
-			title: "hero.title",
-			subtitle: "hero.description",
+			title: "Portfolio Page",
+		},
+		prepare({ title }) {
+			return {
+				title: title ?? "Portfolio Page",
+			}
 		},
 	},
 })
-
-
