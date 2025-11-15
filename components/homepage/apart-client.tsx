@@ -3,13 +3,8 @@
 import { useRef } from "react"
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 import { useIsMobile } from "@/hooks/use-mobile"
-import type { ApartSectionData } from "@/lib/home-sections"
 
-type ApartProps = {
-	data: ApartSectionData
-}
-
-export default function ApartClient({ data }: ApartProps) {
+export default function ApartClient() {
 	const isMobile = useIsMobile()
 	const sectionRef = useRef<HTMLDivElement | null>(null)
 	const { scrollYProgress } = useScroll({
@@ -17,15 +12,13 @@ export default function ApartClient({ data }: ApartProps) {
 		offset: ["start start", "end end"],
 	})
 
-	const heading = data.heading ?? "What sets us apart from others"
-	const highlightTarget = data.highlightTarget ?? "apart"
-	const tagline =
-		data.tagline ??
-		"We don't settle for average, and neither should you."
-	const oursTitle = data.oursTitle ?? "Digital Neighbour"
-	const othersTitle = data.othersTitle ?? "Other Agencies"
-	const ours = data.ours ?? []
-	const others = data.others ?? []
+	const heading = "What sets us apart from others"
+	const highlightTarget = "apart"
+	const tagline = "We don't settle for average, and neither should you."
+	const oursTitle = "Digital Neighbour"
+	const othersTitle = "Other Agencies"
+	const ours = ["Tailored, insight-led strategy", "Clear pricing, no hidden fees", "Agile, efficient, no delays", "Flexible terms, no long contracts", "Direct access to experts"]
+	const others = ["Generic, one-size-fits-all", "Vague reports, surprise costs", "Slow processes, missed deadlines", "Locked into lengthy agreements", "Generic account managers"]
 
 	// Split text animations (wider range + spring smoothing)
 	const rawLeftX = useTransform(

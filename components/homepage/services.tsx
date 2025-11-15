@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion"
 
-import homeData from "@/data/home.json"
-
 type ServiceCard = {
 	video: string
 	title: string
@@ -18,30 +16,14 @@ type ServicesSection = {
 
 type ServicesProps = {
 	data?: ServicesSection | null
-	serviceCards?: unknown
-	basePath?: string
-}
-
-const defaultServicesData = homeData.services as ServicesSection
-
-const isServicesSection = (value: unknown): value is ServicesSection => {
-	if (!value || typeof value !== "object") {
-		return false
-	}
-
-	const section = value as ServicesSection
-	return (
-		typeof section.heading === "string" &&
-		typeof section.subheading === "string" &&
-		Array.isArray(section.rightCard)
-	)
 }
 
 export default function Services({ data }: ServicesProps) {
-	const sectionData = isServicesSection(data) ? data : defaultServicesData
-	const cards = Array.isArray(sectionData.rightCard)
-		? sectionData.rightCard
-		: defaultServicesData.rightCard
+	if (!data) {
+		return null
+	}
+
+	const cards = Array.isArray(data.rightCard) ? data.rightCard : []
 
 	return (
 		<section className="bg-gradient-to-b from-pink/20 to-white">
@@ -69,9 +51,7 @@ export default function Services({ data }: ServicesProps) {
 									ease: "easeOut",
 								}}
 							>
-								{
-									sectionData.heading
-								}
+								{data.heading}
 							</motion.h2>
 							<motion.p
 								className="md:text-xl text-lg text-blackbrown font-light leading-relaxed max-w-lg"
@@ -93,9 +73,7 @@ export default function Services({ data }: ServicesProps) {
 									ease: "easeOut",
 								}}
 							>
-								{
-									sectionData.subheading
-								}
+								{data.subheading}
 							</motion.p>
 						</div>
 					</div>
@@ -119,9 +97,7 @@ export default function Services({ data }: ServicesProps) {
 										playsInline
 									>
 										<source
-											src={
-												card.video
-											}
+											src={card.video}
 											type="video/mp4"
 										/>
 									</video>
@@ -129,25 +105,17 @@ export default function Services({ data }: ServicesProps) {
 								{/* Bottom part - Content */}
 								<div className="md:h-1/3 h-1/2 p-8 flex flex-col justify-end">
 									<h3 className="text-3xl md:text-5xl font-medium text-blackbrown md:mb-8 mb-4">
-										{
-											card.title
-										}
+										{card.title}
 									</h3>
 									<div className="space-y-2">
-										{card.subheading.map(
-											(
-												item
-											) => (
-												<h4
-													key={`${card.title}-${item}`}
-													className="text-md md:text-lg font-semibold text-gray-700"
-												>
-													{
-														item
-													}
-												</h4>
-											)
-										)}
+										{card.subheading.map((item) => (
+											<h4
+												key={`${card.title}-${item}`}
+												className="text-md md:text-lg font-semibold text-gray-700"
+											>
+												{item}
+											</h4>
+										))}
 									</div>
 								</div>
 								{/* Arrow SVG */}
