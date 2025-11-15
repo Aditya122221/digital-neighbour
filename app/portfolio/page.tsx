@@ -5,7 +5,7 @@ import PortfolioHero from "@/components/portfolio/hero"
 import PortfolioGrid from "@/components/portfolio/portfolio-grid"
 
 export const metadata: Metadata = {
-	title: "Portfolio - Success Stories | Digital Neighbour",
+	title: "Portfolio | Digital Neighbour",
 	description:
 		"Explore our portfolio of successful projects and case studies. See how Digital Neighbour has helped brands achieve remarkable growth and measurable results.",
 }

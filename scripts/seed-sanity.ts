@@ -31,6 +31,8 @@ const client = createClient({
 	token,
 })
 
+const uploadedImageCache = new Map<string, string>()
+
 // Map service slugs to Sanity document types
 const serviceTypeMap: Record<string, string> = {
 	seo: "seoService",
@@ -930,6 +932,159 @@ async function seedMarketingAgencyPage(dataDir: string) {
 	}
 }
 
+async function ensureImageAsset(imagePath?: string) {
+	if (!imagePath || typeof imagePath !== "string") {
+		return undefined
+	}
+
+	const normalizedPath = imagePath.replace(/^\/+/, "")
+	const absolutePath = path.join(process.cwd(), "public", normalizedPath)
+
+	if (!fs.existsSync(absolutePath)) {
+		console.warn(`⚠ Image file not found: ${absolutePath}`)
+		return undefined
+	}
+
+	if (uploadedImageCache.has(absolutePath)) {
+		const assetId = uploadedImageCache.get(absolutePath)!
+		return {
+			_type: "image",
+			asset: {
+				_type: "reference",
+				_ref: assetId,
+			},
+		}
+	}
+
+	const fileStream = fs.createReadStream(absolutePath)
+	const filename = path.basename(absolutePath)
+
+	const asset = await retryWithBackoff(async () => {
+		return client.assets.upload("image", fileStream, {
+			filename,
+		})
+	})
+
+	uploadedImageCache.set(absolutePath, asset._id)
+
+	return {
+		_type: "image",
+		asset: {
+			_type: "reference",
+			_ref: asset._id,
+		},
+	}
+}
+
+function createPortableTextFromString(text?: string) {
+	const content = (text ?? "").trim() || "Content coming soon."
+	const paragraphs = content.split(/\n{2,}/).filter(Boolean)
+	const source = paragraphs.length > 0 ? paragraphs : [content]
+
+	return source.map((paragraph, index) => ({
+		_type: "block",
+		style: "normal",
+		_key: `portfolio-content-${index}`,
+		children: [
+			{
+				_type: "span",
+				marks: [],
+				text: paragraph,
+			},
+		],
+	}))
+}
+
+async function seedPortfolioPage(dataDir: string) {
+	const filePath = path.join(dataDir, "portfolio.json")
+
+	if (!fs.existsSync(filePath)) {
+		console.warn("⚠ File not found: portfolio.json")
+		return
+	}
+
+	const rawData = JSON.parse(fs.readFileSync(filePath, "utf-8"))
+	const heroData = rawData?.hero ?? {}
+	const projectsData = Array.isArray(rawData?.projects) ? rawData.projects : []
+
+	const hero = {
+		label: heroData.label || "Portfolio",
+		title: heroData.title || "Success stories from brands we've helped grow",
+		description:
+			heroData.description ||
+			"Discover how our strategic approach drives measurable results for businesses across industries.",
+	}
+
+	const projects = []
+
+	for (let i = 0; i < projectsData.length; i++) {
+		const project = projectsData[i]
+
+		const metricsSource = Array.isArray(project?.metrics)
+			? project.metrics
+			: []
+		const metrics = metricsSource
+			.slice(0, 3)
+			.map((metric: any, metricIndex: number) => ({
+				_type: "metric",
+				_key: `portfolio-metric-${i}-${metricIndex}`,
+				value: metric?.value || "",
+				label: metric?.label || "",
+			}))
+
+		const tagsSource = Array.isArray(project?.tags) ? project.tags : []
+		const tags = tagsSource.slice(0, 3).map((tag: any, tagIndex: number) => ({
+			_type: "tag",
+			_key: `portfolio-tag-${i}-${tagIndex}`,
+			tag: typeof tag === "string" ? tag : tag?.tag || "",
+		}))
+
+		const image = await ensureImageAsset(project?.image)
+		const content = createPortableTextFromString(
+			project?.content || project?.headline
+		)
+
+		projects.push({
+			_type: "project",
+			_key: project?._key || `portfolio-project-${i}`,
+			headline: project?.headline || "",
+			metrics,
+			tags,
+			image,
+			content,
+		})
+	}
+
+	try {
+		const existing = await retryWithBackoff(async () => {
+			return client.fetch(`*[_type == "portfolioPage"][0]`)
+		})
+
+		const payload = {
+			hero,
+			projects,
+		}
+
+		if (existing) {
+			await retryWithBackoff(async () => {
+				await client.patch(existing._id).set(payload).commit()
+			})
+			console.log("✓ Updated: Portfolio page")
+		} else {
+			await retryWithBackoff(async () => {
+				await client.create({
+					_type: "portfolioPage",
+					...payload,
+				})
+			})
+			console.log("✓ Created: Portfolio page")
+		}
+	} catch (error) {
+		console.error("✗ Error seeding portfolio page:", error)
+		throw error
+	}
+}
+
 // Main seed function
 async function seedAllServices() {
 	const dataDir = path.join(process.cwd(), "data")
@@ -937,6 +1092,7 @@ async function seedAllServices() {
 	await seedApartSection(dataDir)
 	await seedCaseStudiesSection(dataDir)
 	await seedMarketingAgencyPage(dataDir)
+	await seedPortfolioPage(dataDir)
 	const jsonFiles = [
 		"seo.json",
 		"paid-ads.json",
