@@ -4,7 +4,7 @@ import { useRef } from "react"
 import { motion, useScroll, useTransform, useSpring } from "framer-motion"
 import { useIsMobile } from "@/hooks/use-mobile"
 
-export default function ApartClient() {
+export default function ApartClient({ oursList, othersList }: { oursList: string[], othersList: string[] }) {
 	const isMobile = useIsMobile()
 	const sectionRef = useRef<HTMLDivElement | null>(null)
 	const { scrollYProgress } = useScroll({
@@ -17,8 +17,8 @@ export default function ApartClient() {
 	const tagline = "We don't settle for average, and neither should you."
 	const oursTitle = "Digital Neighbour"
 	const othersTitle = "Other Agencies"
-	const ours = ["Tailored, insight-led strategy", "Clear pricing, no hidden fees", "Agile, efficient, no delays", "Flexible terms, no long contracts", "Direct access to experts"]
-	const others = ["Generic, one-size-fits-all", "Vague reports, surprise costs", "Slow processes, missed deadlines", "Locked into lengthy agreements", "Generic account managers"]
+	const ours = oursList
+	const others = othersList
 
 	// Split text animations (wider range + spring smoothing)
 	const rawLeftX = useTransform(

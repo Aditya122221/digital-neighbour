@@ -4,86 +4,23 @@ import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react"
 import { motion } from "framer-motion"
 
-export default function CaseStudyClient() {
+export default function CaseStudyClient({
+	caseStudiesList,
+}: {
+	caseStudiesList: any[]
+}) {
 	const [currentIndex, setCurrentIndex] = useState(0)
 	const [hoveredCard, setHoveredCard] = useState<number | null>(null)
 	const [currentImageIndex, setCurrentImageIndex] = useState<{
 		[key: number]: number
 	}>({})
 
-	const caseStudies = [
-		{
-			id: 1,
-			title: "Case Study 1",
-			textColor: "text-blackbrown",
-			bgImages: [
-				"https://images.pexels.com/photos/1671643/pexels-photo-1671643.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-				"https://images.pexels.com/photos/29646117/pexels-photo-29646117.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-				"https://images.pexels.com/photos/17183905/pexels-photo-17183905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-				"https://images.pexels.com/photos/11809060/pexels-photo-11809060.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-			],
-			metrics: [
-				{ number: "100", text: "Clients" },
-				{ number: "100", text: "Projects" },
-				{ number: "100", text: "Hours Saved" },
-			],
-			services: ["Service 1", "Service 2", "Service 3"],
-			isNew: true,
-		},
-		{
-			id: 2,
-			title: "Case Study 2",
-			textColor: "text-blackbrown",
-			bgImages: [
-				"https://images.pexels.com/photos/1036642/pexels-photo-1036642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-				"https://images.pexels.com/photos/15969201/pexels-photo-15969201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-				"https://images.pexels.com/photos/18091792/pexels-photo-18091792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-			],
-			metrics: [
-				{ number: "100", text: "Clients" },
-				{ number: "100", text: "Projects" },
-				{ number: "100", text: "Hours Saved" },
-			],
-			services: ["Service 1", "Service 2", "Service 3"],
-			isNew: false,
-		},
-		{
-			id: 3,
-			title: "Case Study 3",
-			textColor: "text-blackbrown",
-			bgImages: [
-				"https://images.pexels.com/photos/267350/pexels-photo-267350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-				"https://images.pexels.com/photos/7634159/pexels-photo-7634159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-				"https://images.pexels.com/photos/27552013/pexels-photo-27552013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-				"https://images.pexels.com/photos/33206676/pexels-photo-33206676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-			],
-			metrics: [
-				{ number: "100", text: "Clients" },
-				{ number: "100", text: "Projects" },
-				{ number: "100", text: "Hours Saved" },
-			],
-			services: ["Service 1", "Service 2", "Service 3"],
-			isNew: false,
-		},
-		{
-			"id": 4,
-			"title": "Creative Studio",
-			"bgImages": [
-			  "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-			  "https://images.pexels.com/photos/7858745/pexels-photo-7858745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-			  "https://images.pexels.com/photos/14263450/pexels-photo-14263450.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-			],
-			"textColor": "text-white",
-			"services": ["Website", "Brand Identity"],
-			"isNew": false,
-			"metrics": [
-			  { "number": "78%", "text": "portfolio views" },
-			  { "number": "45+", "text": "new clients" },
-			  { "number": "60%", "text": "social engagement" }
-			]
-		  }
-	]
+	const caseStudies = caseStudiesList || []
 	const sectionHeading = "Latest work"
+
+	if (!caseStudies || caseStudies.length === 0) {
+		return null
+	}
 
 	const nextSlide = () => {
 		setCurrentIndex((prev) => (prev + 1) % caseStudies.length)
@@ -131,6 +68,9 @@ export default function CaseStudyClient() {
 	}, [hoveredCard, caseStudies])
 
 	const getVisibleCards = () => {
+		if (!caseStudies || caseStudies.length === 0) {
+			return []
+		}
 		const cards = []
 		for (let i = 0; i < 3; i++) {
 			const index = (currentIndex + i) % caseStudies.length
@@ -215,8 +155,11 @@ export default function CaseStudyClient() {
 											<div className="grid grid-cols-1 gap-8">
 												{study.metrics.map(
 													(
-														metric,
-														index
+														metric: {
+															number: string
+															text: string
+														},
+														index: number
 													) => (
 														<div
 															key={
@@ -251,7 +194,7 @@ export default function CaseStudyClient() {
 											)}
 											{study.services.map(
 												(
-													service
+													service: string
 												) => (
 													<span
 														key={
