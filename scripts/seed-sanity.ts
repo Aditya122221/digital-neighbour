@@ -1039,9 +1039,431 @@ async function seedAboutPage(dataDir: string) {
   }
 }
 
+async function transformHomePageData(rawData: any) {
+  if (!rawData) {
+    return null;
+  }
+
+  // Transform hero images
+  const heroImages = [];
+  if (Array.isArray(rawData.hero?.images)) {
+    for (const imagePath of rawData.hero.images) {
+      try {
+        const uploadedImage = await ensureImageAsset(imagePath);
+        if (uploadedImage) {
+          heroImages.push(uploadedImage);
+        }
+      } catch (error) {
+        // Silently continue if image upload fails
+      }
+    }
+  }
+
+  // Transform differentiators (remove id field)
+  const differentiators = Array.isArray(rawData.brandInfo?.differentiators)
+    ? rawData.brandInfo.differentiators.map((item: any) => ({
+        title: item.title || "",
+        description: item.description || "",
+        icon: item.icon || "",
+      }))
+    : [];
+
+  // Transform stats (remove id field)
+  const stats = Array.isArray(rawData.brandInfo?.rightCard?.stats)
+    ? rawData.brandInfo.rightCard.stats.map((stat: any) => ({
+        value: stat.value || "",
+        label: stat.label || "",
+      }))
+    : [];
+
+  // Transform services videos
+  const servicesRightCard = [];
+  if (Array.isArray(rawData.services?.rightCard)) {
+    for (const service of rawData.services.rightCard) {
+      let uploadedVideo = null;
+      if (service.video) {
+        const videoPath = service.video.replace(/^\/+/, "");
+        const absolutePath = path.join(process.cwd(), "public", videoPath);
+
+        if (fs.existsSync(absolutePath)) {
+          if (uploadedImageCache.has(absolutePath)) {
+            const assetId = uploadedImageCache.get(absolutePath)!;
+            uploadedVideo = {
+              _type: "file",
+              asset: {
+                _type: "reference",
+                _ref: assetId,
+              },
+            };
+          } else {
+            try {
+              const fileStream = fs.createReadStream(absolutePath);
+              const filename = path.basename(absolutePath);
+
+              const asset = await retryWithBackoff(async () => {
+                return client.assets.upload("file", fileStream, {
+                  filename,
+                });
+              });
+
+              uploadedImageCache.set(absolutePath, asset._id);
+              uploadedVideo = {
+                _type: "file",
+                asset: {
+                  _type: "reference",
+                  _ref: asset._id,
+                },
+              };
+            } catch (error) {
+              // Silently continue if video upload fails
+            }
+          }
+        }
+      }
+
+      servicesRightCard.push({
+        video: uploadedVideo,
+        title: service.title || "",
+        subheading: service.subheading || [],
+      });
+    }
+  }
+
+  // Transform logos (SVG uploads)
+  const logos = [];
+  if (Array.isArray(rawData.keepYourStack?.logos)) {
+    for (const logo of rawData.keepYourStack.logos) {
+      try {
+        const uploadedSvg = await ensureImageAsset(logo.svg);
+        if (uploadedSvg) {
+          logos.push({
+            name: logo.name || "",
+            svg: uploadedSvg,
+          });
+        }
+      } catch (error) {
+        // Silently continue if logo upload fails
+      }
+    }
+  }
+
+  // Transform benefits (remove id field)
+  const benefits = Array.isArray(rawData.contentSection?.benefits)
+    ? rawData.contentSection.benefits.map((benefit: any) => ({
+        title: benefit.title || "",
+        description: benefit.description || "",
+        icon: benefit.icon || "",
+        stat: benefit.stat || "",
+      }))
+    : [];
+
+  return {
+    metadata: rawData.metadata || "",
+    description: rawData.description || "",
+    hero: {
+      heading: rawData.hero?.heading || "",
+      subheading: rawData.hero?.subheading || "",
+      images: heroImages,
+    },
+    brandInfo: {
+      main: {
+        heading: rawData.brandInfo?.main?.heading || "",
+        subheading: rawData.brandInfo?.main?.subheading || "",
+      },
+      differentiators: differentiators,
+      rightCard: {
+        heading: rawData.brandInfo?.rightCard?.heading || "",
+        description: rawData.brandInfo?.rightCard?.description || "",
+        stats: stats,
+      },
+    },
+    services: {
+      heading: rawData.services?.heading || "",
+      subheading: rawData.services?.subheading || "",
+      rightCard: servicesRightCard,
+    },
+    keepYourStack: {
+      logos: logos,
+    },
+    contentSection: {
+      heading: rawData.contentSection?.heading || "",
+      subheading: rawData.contentSection?.subheading || "",
+      benefits: benefits,
+    },
+    process: {
+      steps: rawData.process?.steps || [],
+      content: rawData.process?.content || [],
+    },
+  };
+}
+
+async function seedHomePage(dataDir: string) {
+  const filePath = path.join(dataDir, "home.json");
+
+  if (!fs.existsSync(filePath)) {
+    return;
+  }
+
+  try {
+    const rawData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+    const transformed = await transformHomePageData(rawData);
+
+    if (!transformed) {
+      return;
+    }
+
+    const existing = await retryWithBackoff(async () => {
+      return client.fetch(`*[_type == "homePage"][0]`);
+    });
+
+    if (existing) {
+      try {
+        await retryWithBackoff(async () => {
+          return await client
+            .patch(existing._id)
+            .set(transformed)
+            .commit({ returnDocuments: true });
+        });
+      } catch (patchError: any) {
+        // Try to delete and recreate if patch fails
+        try {
+          await retryWithBackoff(async () => {
+            await client.delete(existing._id);
+          });
+          
+          await retryWithBackoff(async () => {
+            return await client.create({
+              _type: "homePage",
+              ...transformed,
+            });
+          });
+        } catch (createError: any) {
+          throw createError;
+        }
+      }
+    } else {
+      await retryWithBackoff(async () => {
+        return await client.create({
+          _type: "homePage",
+          ...transformed,
+        });
+      });
+    }
+  } catch (error: any) {
+    throw error;
+  }
+}
+
+async function seedApartPage(dataDir: string) {
+  const filePath = path.join(dataDir, "apart.json");
+
+  if (!fs.existsSync(filePath)) {
+    return;
+  }
+
+  try {
+    const rawData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+
+    const transformed = {
+      ours: Array.isArray(rawData.ours) ? rawData.ours : [],
+      others: Array.isArray(rawData.others) ? rawData.others : [],
+    };
+
+    const existing = await retryWithBackoff(async () => {
+      return client.fetch(`*[_type == "apartPage"][0]`);
+    });
+
+    if (existing) {
+      try {
+        await retryWithBackoff(async () => {
+          return await client
+            .patch(existing._id)
+            .set(transformed)
+            .commit({ returnDocuments: true });
+        });
+      } catch (patchError: any) {
+        // Try to delete and recreate if patch fails
+        try {
+          await retryWithBackoff(async () => {
+            await client.delete(existing._id);
+          });
+
+          await retryWithBackoff(async () => {
+            return await client.create({
+              _type: "apartPage",
+              ...transformed,
+            });
+          });
+        } catch (createError: any) {
+          throw createError;
+        }
+      }
+    } else {
+      await retryWithBackoff(async () => {
+        return await client.create({
+          _type: "apartPage",
+          ...transformed,
+        });
+      });
+    }
+  } catch (error: any) {
+    throw error;
+  }
+}
+
+async function transformCaseStudyData(rawData: any[]) {
+  if (!Array.isArray(rawData)) {
+    return [];
+  }
+
+  const caseStudies = [];
+
+  for (const caseStudy of rawData) {
+    // Transform bgImages - handle both URLs and local paths
+    const bgImages = [];
+    if (Array.isArray(caseStudy.bgImages)) {
+      for (const imagePath of caseStudy.bgImages) {
+        // Check if it's a URL or local path
+        if (imagePath.startsWith("http://") || imagePath.startsWith("https://")) {
+          // For URLs, download and upload them
+          try {
+            if (uploadedImageCache.has(imagePath)) {
+              const assetId = uploadedImageCache.get(imagePath)!;
+              bgImages.push({
+                _type: "image",
+                asset: {
+                  _type: "reference",
+                  _ref: assetId,
+                },
+              });
+            } else {
+              const response = await fetch(imagePath);
+              if (response.ok) {
+                const buffer = Buffer.from(await response.arrayBuffer());
+                const filename = imagePath.split("/").pop() || "image.jpg";
+                
+                const asset = await retryWithBackoff(async () => {
+                  return client.assets.upload("image", buffer, {
+                    filename,
+                  });
+                });
+
+                uploadedImageCache.set(imagePath, asset._id);
+                bgImages.push({
+                  _type: "image",
+                  asset: {
+                    _type: "reference",
+                    _ref: asset._id,
+                  },
+                });
+              }
+            }
+          } catch (error) {
+            // Silently continue if image download/upload fails
+          }
+        } else {
+          // Local path - upload as asset
+          try {
+            const uploadedImage = await ensureImageAsset(imagePath);
+            if (uploadedImage) {
+              bgImages.push(uploadedImage);
+            }
+          } catch (error) {
+            // Silently continue if image upload fails
+          }
+        }
+      }
+    }
+
+    // Transform metrics (remove id if present, ensure number is string)
+    const metrics = Array.isArray(caseStudy.metrics)
+      ? caseStudy.metrics.slice(0, 3).map((metric: any) => ({
+          number: String(metric.number || ""),
+          text: metric.text || "",
+        }))
+      : [];
+
+    // Transform services (ensure exactly 3)
+    const services = Array.isArray(caseStudy.services)
+      ? caseStudy.services.slice(0, 3)
+      : [];
+
+    caseStudies.push({
+      title: caseStudy.title || "",
+      textColor: caseStudy.textColor || "text-blackbrown",
+      bgImages: bgImages,
+      metrics: metrics,
+      services: services,
+      isNew: Boolean(caseStudy.isNew),
+    });
+  }
+
+  return caseStudies;
+}
+
+async function seedCasePage(dataDir: string) {
+  const filePath = path.join(dataDir, "case.json");
+
+  if (!fs.existsSync(filePath)) {
+    return;
+  }
+
+  try {
+    const rawData = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+    const caseStudies = await transformCaseStudyData(rawData);
+
+    const transformed = {
+      caseStudies: caseStudies,
+    };
+
+    const existing = await retryWithBackoff(async () => {
+      return client.fetch(`*[_type == "casePage"][0]`);
+    });
+
+    if (existing) {
+      try {
+        await retryWithBackoff(async () => {
+          return await client
+            .patch(existing._id)
+            .set(transformed)
+            .commit({ returnDocuments: true });
+        });
+      } catch (patchError: any) {
+        // Try to delete and recreate if patch fails
+        try {
+          await retryWithBackoff(async () => {
+            await client.delete(existing._id);
+          });
+
+          await retryWithBackoff(async () => {
+            return await client.create({
+              _type: "casePage",
+              ...transformed,
+            });
+          });
+        } catch (createError: any) {
+          throw createError;
+        }
+      }
+    } else {
+      await retryWithBackoff(async () => {
+        return await client.create({
+          _type: "casePage",
+          ...transformed,
+        });
+      });
+    }
+  } catch (error: any) {
+    throw error;
+  }
+}
+
 // Main seed function
 async function seedAllServices() {
   const dataDir = path.join(process.cwd(), "data");
+  await seedHomePage(dataDir);
+  await seedApartPage(dataDir);
+  await seedCasePage(dataDir);
   await seedAboutPage(dataDir);
   await seedMarketingAgencyPage(dataDir);
   await seedPortfolioPage(dataDir);
