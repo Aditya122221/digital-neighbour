@@ -23,32 +23,32 @@ const FALLBACK_INDUSTRIES: Required<IndustryItem>[] = [
 	{
 		name: "Real Estate",
 		slug: "real-estate-marketing-agency",
-		image: "/industry/electrical.webp",
+		image: "/professional/HeroOne.webp",
 	},
 	{
 		name: "Law firm",
 		slug: "law-firm-marketing-agency",
-		image: "/industry/hvac.webp",
+		image: "/professional/HeroTwo.webp",
 	},
 	{
 		name: "Accountant Marketing",
 		slug: "accountant-marketing-agency",
-		image: "/industry/pestcontrol.webp",
+		image: "/professional/HeroThree.webp",
 	},
 	{
 		name: "Financial Advisor",
 		slug: "financial-advisor-marketing-agency",
-		image: "/industry/plumber.webp",
+		image: "/professional/HeroFour.webp",
 	},
 	{
 		name: "Consulting firm",
 		slug: "consulting-firm-marketing-agency",
-		image: "/industry/landscaping.webp",
+		image: "/professional/HeroFive.webp",
 	},
 	{
 		name: "Coaches Marketing",
 		slug: "coaches-marketing-agency",
-		image: "/industry/roofing.webp",
+		image: "/professional/HeroSix.webp",
 	},
 ]
 
