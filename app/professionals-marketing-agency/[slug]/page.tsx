@@ -145,7 +145,7 @@ export default async function ProfessionalsMarketingServicePage({
     <main>
       <div className="relative">
         <Navbar />
-        <IndustriesHero data={currentData?.hero} />
+        <IndustriesHero data={currentData?.hero} videoSrc={"/professional/heroVideo.webm" as const} />
       </div>
       <Form data={currentData?.form} />
       <BrandsMarquee />

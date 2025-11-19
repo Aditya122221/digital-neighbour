@@ -9,9 +9,13 @@ interface IndustriesHeroProps {
 		subheading?: string
 		buttonText?: string
 	}
+	videoSrc?: string
 }
 
-export default function IndustriesHero({ data }: IndustriesHeroProps) {
+export default function IndustriesHero({
+	data,
+	videoSrc = "/industry/heroVideo.webm",
+}: IndustriesHeroProps) {
 	const heading = data?.heading || "Home Services"
 	const subheading = data?.subheading || "Choose your industry."
 	const buttonText = data?.buttonText || "Talk to our experts"
@@ -32,10 +36,7 @@ export default function IndustriesHero({ data }: IndustriesHeroProps) {
 				muted
 				playsInline
 			>
-				<source
-					src="/socialMedia/contentBGVideo.mp4"
-					type="video/mp4"
-				/>
+				<source src={videoSrc} />
 				Your browser does not support the video tag.
 			</video>
 			<div className="absolute inset-0" />
