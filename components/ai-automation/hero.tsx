@@ -79,8 +79,8 @@ export default function AiAutomationHero({ data }: AiAutomationHeroProps) {
 							<CustomButton
 								text="Talk to our AI & Automation expert"
 								href="/contact"
-								textColor="black"
-								borderColor="black"
+								textColor="#5D50EB"
+								borderColor="#5D50EB"
 							/>
 						</motion.div>
 					</div>

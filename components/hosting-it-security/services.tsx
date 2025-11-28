@@ -171,7 +171,7 @@ export default function HostingServices({
 				{/* Middle Section - Custom API Card */}
 				{content.customApi && (
 					<motion.div
-						className="bg-black rounded-2xl p-8 md:p-12 mb-8 shadow-lg"
+						className="bg-[#5D50EB] rounded-2xl p-8 md:p-12 mb-8 shadow-lg"
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{
 							opacity: 1,
@@ -226,7 +226,7 @@ export default function HostingServices({
 				{/* Bottom Section - Maximum customization and control */}
 				{content.maximumCustomization && (
 					<motion.div
-						className="bg-gradient-to-br from-blackbrown to-black rounded-2xl p-8 md:p-12 shadow-lg"
+						className="bg-[#0e0e59] rounded-2xl p-8 md:p-12 shadow-lg"
 						initial={{ opacity: 0, y: 20 }}
 						whileInView={{
 							opacity: 1,
@@ -279,7 +279,7 @@ export default function HostingServices({
 													}
 												>
 													<h4 className="text-xl font-semibold text-white mb-2 font-cal-sans flex items-center gap-2">
-														<span className="w-2 h-2 bg-yellow rounded-full"></span>
+														<span className="w-2 h-2 bg-[#5D50EB] rounded-full"></span>
 														{
 															feature.title
 														}

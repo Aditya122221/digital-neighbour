@@ -94,7 +94,18 @@ export default function AppDevHero({ data }: AppDevHeroProps) {
 						className="space-y-6 max-w-xl mx-auto"
 					>
 						<h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black leading-tight font-cal-sans">
-							{data.heading}
+							{(() => {
+								const heading = data.heading;
+								const words = heading.split(/\s+/);
+								const firstWord = words[0] || "";
+								const restWords = words.slice(1).join(" ");
+								return (
+									<>
+										<span style={{ color: "#5D50EB" }}>{firstWord}</span>
+										{restWords && <span> {restWords}</span>}
+									</>
+								);
+							})()}
 						</h1>
 						<p className="text-lg md:text-xl text-black leading-relaxed">
 							{data.subheading}

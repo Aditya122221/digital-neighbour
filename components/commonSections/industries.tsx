@@ -234,7 +234,11 @@ export default function Industries() {
 
 	const IconComponent = ({ iconName }: { iconName: IconName }) => {
 		const Icon = iconMap[iconName] || Heart
-		return <Icon className="w-6 h-6 text-white" />
+		return (
+			<div className="w-10 h-10 bg-[#0e0e59] rounded flex items-center justify-center">
+				<Icon className="w-6 h-6 text-white" />
+			</div>
+		)
 	}
 
 	const headingParts = INDUSTRIES_DATA.heading.split(
@@ -244,7 +248,7 @@ export default function Industries() {
 	const afterHighlight = headingParts[1] || ""
 
 	return (
-		<section className="bg-black py-16 md:py-24 lg:py-32 relative">
+		<section className="bg-[#5D50EB] py-16 md:py-24 lg:py-32 relative">
 			<div className="container mx-auto px-6 lg:px-12">
 				<div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
 					{/* Left Column */}
@@ -299,7 +303,7 @@ export default function Industries() {
 															}
 														/>
 													</div>
-													<span className="text-lg md:text-xl text-white underline underline-offset-4 decoration-white/50 hover:text-yellow transition-colors">
+													<span className="text-lg md:text-xl text-white underline underline-offset-4 decoration-white/50 hover:text-white/80 transition-colors">
 														{
 															industry.name
 														}

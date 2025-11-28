@@ -69,7 +69,7 @@ export default function Industries({ data }: IndustriesProps) {
     : "";
 
   return (
-    <section className="bg-black py-16 md:py-24 lg:py-32 relative">
+    <section className="bg-[#5D50EB] py-16 md:py-24 lg:py-32 relative">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
           {/* Left Column - Sticky Content */}
@@ -78,7 +78,7 @@ export default function Industries({ data }: IndustriesProps) {
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight font-cal-sans">
                 {beforeHighlight}
                 <span className="relative inline-block">
-                  <span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow"></span>
+                  <span className="absolute bottom-1 left-0 right-0 h-2/4 bg-[#0e0e59]"></span>
                   <span className="relative z-10 font-medium italic">
                     Data Analytics Solutions
                   </span>
@@ -106,7 +106,7 @@ export default function Industries({ data }: IndustriesProps) {
                         <div className="flex-shrink-0">
                           <IconComponent iconName={industry.icon} />
                         </div>
-                        <span className="text-lg md:text-xl text-white underline underline-offset-4 decoration-white/50 hover:text-yellow transition-colors">
+                        <span className="text-lg md:text-xl text-white underline underline-offset-4 decoration-white/50 hover:text-white/80 transition-colors">
                           {industry.name}
                         </span>
                       </div>

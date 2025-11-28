@@ -113,7 +113,7 @@ export default function DataAnalyticsServices({
 											}
 											className={`whitespace-nowrap rounded-full border transition-colors px-4 py-2 text-sm ${
 												isActive
-													? "bg-yellow border-yellow text-black"
+													? "bg-[#5D50EB] border-[#5D50EB] text-white"
 													: "bg-white border-black/20 text-blackbrown"
 											}`}
 										>
@@ -160,7 +160,7 @@ export default function DataAnalyticsServices({
 								/>
 							</div>
 							<div className="mt-5">
-								<div className="relative w-full h-[220px] rounded-xl overflow-hidden bg-black flex items-center justify-center">
+								<div className="relative w-full h-[220px] rounded-xl overflow-hidden bg-[#0e0e59] flex items-center justify-center">
 									<Image
 										src={
 											activeService.image
@@ -191,7 +191,7 @@ export default function DataAnalyticsServices({
 						{/* Left - Vertical Buttons matching design */}
 						<div className="lg:col-span-4">
 							<div
-								className="bg-black p-6 md:p-8 lg:p-10 h-full overflow-hidden"
+								className="bg-[#5D50EB] p-6 md:p-8 lg:p-10 h-full overflow-hidden"
 								style={{
 									borderTopLeftRadius:
 										"54px",
@@ -219,7 +219,7 @@ export default function DataAnalyticsServices({
 													}
 													className={`w-full text-left rounded-[64px] transition-all duration-300 font-medium ${
 														isActive
-															? "px-8 py-5 md:py-6 text-xl md:text-xl bg-yellow text-black shadow-xl"
+															? "px-8 py-5 md:py-6 text-xl md:text-xl bg-[#0e0e59] text-white shadow-xl"
 															: "px-2 md:px-3 py-3 md:py-4 text-white/95 hover:text-white"
 													}`}
 												>

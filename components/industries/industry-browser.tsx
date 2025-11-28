@@ -120,7 +120,7 @@ export default function IndustryBrowserSection() {
 												className={`flex w-full items-center justify-between rounded-2xl px-4 py-5 text-left transition-all ${
 													index ===
 													activeIndex
-														? "bg-yellow/30 ring-1 ring-yellow/60"
+														? "bg-[#5D50EB]/30 ring-1 ring-[#5D50EB]/60"
 														: "bg-gray-50 hover:bg-gray-100"
 												}`}
 											>
@@ -129,8 +129,8 @@ export default function IndustryBrowserSection() {
 														className={`inline-flex h-9 w-9 items-center justify-center rounded-xl text-lg ${
 															index ===
 															activeIndex
-																? "bg-yellow text-black"
-																: "bg-yellow/40 text-black"
+																? "bg-[#5D50EB] text-white"
+																: "bg-[#5D50EB]/40 text-white"
 														}`}
 													>
 														{getIconForSlug(

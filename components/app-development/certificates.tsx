@@ -144,7 +144,7 @@ export default function Certificates({ data }: CertificatesProps) {
 	const activeData = categories[activeCategory]
 
 	return (
-		<section className="relative py-16 md:py-24 lg:py-32 bg-black">
+		<section className="relative py-16 md:py-24 lg:py-32 bg-[#5D50EB]">
 			<div className="container mx-auto px-6 lg:px-12">
 				{/* Header Section */}
 				<motion.div
@@ -207,10 +207,8 @@ export default function Certificates({ data }: CertificatesProps) {
 				>
 					{/* Left Panel - Navigation/Category List */}
 					<div
-						className="p-6 md:p-8 space-y-0"
+						className="p-6 md:p-8 space-y-0 bg-[#0e0e59]"
 						style={{
-							backgroundColor:
-								"#ffbe11",
 							borderTopLeftRadius:
 								"20px",
 							borderBottomLeftRadius:
@@ -231,8 +229,8 @@ export default function Certificates({ data }: CertificatesProps) {
 									className={`w-full text-left py-4 px-4 transition-all duration-300 cursor-pointer ${
 										activeCategory ===
 										index
-											? "text-black"
-											: "text-black/70 hover:text-black"
+											? "text-white"
+											: "text-white/70 hover:text-white"
 									}`}
 								>
 									<div className="flex items-center gap-4">
@@ -251,7 +249,7 @@ export default function Certificates({ data }: CertificatesProps) {
 									{index <
 										categories.length -
 											1 && (
-										<div className="border-b border-black/30 mt-4"></div>
+										<div className="border-b border-white/30 mt-4"></div>
 									)}
 								</button>
 							)
@@ -262,7 +260,7 @@ export default function Certificates({ data }: CertificatesProps) {
 					{activeData && (
 						<motion.div
 							key={activeCategory}
-							className="bg-gray-800 p-6 md:p-8"
+							className="bg-[#0e0e59] p-6 md:p-8"
 							style={{
 								borderTopRightRadius:
 									"20px",
@@ -286,11 +284,7 @@ export default function Certificates({ data }: CertificatesProps) {
 							<div className="flex items-center gap-4 mb-6">
 								{activeData.icon && (
 									<div
-										className="w-12 h-12 rounded-lg flex items-center justify-center text-black"
-										style={{
-											backgroundColor:
-												"#ffbe11",
-										}}
+										className="w-12 h-12 rounded-lg flex items-center justify-center bg-[#5D50EB] text-white"
 									>
 										{
 											activeData.icon
@@ -319,18 +313,14 @@ export default function Certificates({ data }: CertificatesProps) {
 												item.link ||
 												"#"
 											}
-											className="flex items-center gap-3 text-white group hover:text-yellow transition-colors duration-200"
+											className="flex items-center gap-3 text-white group hover:text-white/80 transition-colors duration-200"
 										>
 											<div
-												className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-black"
-												style={{
-													backgroundColor:
-														"#ffbe11",
-												}}
+												className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 bg-[#5D50EB] text-white"
 											>
 												<ArrowRight className="w-3 h-3" />
 											</div>
-											<span className="text-base md:text-lg border-b border-white/30 group-hover:border-yellow transition-colors duration-200">
+											<span className="text-base md:text-lg border-b border-white/30 group-hover:border-white/60 transition-colors duration-200">
 												{
 													item.name
 												}

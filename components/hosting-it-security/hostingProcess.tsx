@@ -91,7 +91,7 @@ export default function HostingProcess() {
 	const activeTab = tabs[activeTabIndex]
 
 	return (
-		<section className="relative min-h-screen bg-black overflow-hidden">
+		<section className="relative min-h-screen bg-[#5D50EB] overflow-hidden">
 			{/* Dotted pattern background */}
 			<div
 				className="absolute inset-0 opacity-20"
@@ -131,14 +131,14 @@ export default function HostingProcess() {
 												}
 												className={`flex flex-col items-center gap-1 sm:gap-2 transition-all duration-300 ${
 													isActive
-														? "text-yellow scale-105 sm:scale-110"
+														? "text-white scale-105 sm:scale-110"
 														: "text-white/60 hover:text-white/80"
 												}`}
 											>
 												<Icon
 													className={`w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 transition-all duration-300 ${
 														isActive
-															? "text-yellow"
+															? "text-white"
 															: ""
 													}`}
 												/>
@@ -152,7 +152,7 @@ export default function HostingProcess() {
 											<motion.div
 												className={`w-full rounded-full transition-all duration-300 ${
 													isActive
-														? "bg-yellow"
+														? "bg-[#0e0e59]"
 														: "bg-white/20"
 												}`}
 												initial={{

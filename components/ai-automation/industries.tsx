@@ -60,7 +60,7 @@ export default function Industries({ data }: IndustriesProps) {
 	const afterHighlight = headingParts[1] || ""
 
 	return (
-		<section className="bg-black py-16 md:py-24 lg:py-32 relative">
+		<section className="bg-[#5D50EB] py-16 md:py-24 lg:py-32 relative">
 			<div className="container mx-auto px-6 lg:px-12">
 				<div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
 					{/* Left Column - Sticky Content */}
@@ -118,7 +118,7 @@ export default function Industries({ data }: IndustriesProps) {
 															}
 														/>
 													</div>
-													<span className="text-lg md:text-xl text-white underline underline-offset-4 decoration-white/50 hover:text-yellow transition-colors">
+													<span className="text-lg md:text-xl text-white underline underline-offset-4 decoration-white/50 hover:text-white/80 transition-colors">
 														{
 															industry.name
 														}

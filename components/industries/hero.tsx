@@ -56,7 +56,17 @@ export default function IndustriesHero({
 					className="pointer-events-none select-none flex flex-col items-center text-center"
 				>
 					<h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-cal-sans font-semibold tracking-tight">
-						{heading}
+						{(() => {
+							const words = heading.split(/\s+/);
+							const firstWord = words[0] || "";
+							const restWords = words.slice(1).join(" ");
+							return (
+								<>
+									<span style={{ color: "#5D50EB" }}>{firstWord}</span>
+									{restWords && <span> {restWords}</span>}
+								</>
+							);
+						})()}
 					</h1>
 					<p className="mt-4 text-white/90 text-lg md:text-xl">
 						{subheading}
