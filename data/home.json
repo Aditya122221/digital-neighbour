@@ -95,7 +95,9 @@
     "logos": [
       {
         "name": "LinkedIn",
-        "svg": "/homepage/techstack/linkedin.svg"
+        "svg": "/homepage/techstack/linkedin.svg",
+        "bgColor": "#0a66c2",
+        "textColor": "#fff"
       },
       {
         "name": "Salesforce",

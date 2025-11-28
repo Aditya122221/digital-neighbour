@@ -86,44 +86,49 @@ export default function TestimonalTwo() {
 								alt={
 									featured.author
 								}
-    className = "object-cover"
-    fill
+								className="object-cover"
+								fill
 								priority
 							/>
 						</div>
 					</div>
 
-					<div className="flex h-full flex-col justify-between rounded-[32px] p-8 bg-yellow/10 md:p-12">
+					<div
+						className="flex h-full flex-col justify-between rounded-[32px] p-8 bg-[#e9e5ff] md:p-12"
+						style={{
+							boxShadow: "8px 8px 0 0 #0e0e59",
+						}}
+					>
 						<div className="flex items-center gap-4">
-							<div className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 text-sm font-semibold uppercase tracking-[0.3em]">
+							<div className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 text-sm font-semibold uppercase tracking-[0.3em] text-white">
 								{getInitials(
 									featured.author
 								)}
 							</div>
 							<div className="flex flex-col">
-								<span className="text-sm font-semibold uppercase tracking-[0.3em]">
+								<span className="text-sm font-semibold uppercase tracking-[0.3em] text-black">
 									{getCompany(
 										featured.position
 									)}
 								</span>
-								<span className="text-xs">
+								<span className="text-xs text-black">
 									Client
 									spotlight
 								</span>
 							</div>
 						</div>
 
-						<blockquote className="mt-10 text-2xl leading-relaxed md:text-[1.75rem] md:leading-[2.5rem] font-cal-sans">
-							“{featured.quote}”
+						<blockquote className="mt-10 text-2xl leading-relaxed md:text-[1.75rem] md:leading-[2.5rem] font-cal-sans text-black">
+							"{featured.quote}"
 						</blockquote>
 
 						<div className="mt-10 flex flex-col gap-1">
-							<span className="text-base font-semibold">
+							<span className="text-base font-semibold text-black">
 								{
 									featured.author
 								}
 							</span>
-							<span className="text-sm">
+							<span className="text-sm text-black">
 								{
 									featured.position
 								}
@@ -136,29 +141,32 @@ export default function TestimonalTwo() {
 					{secondary.map((testimonial) => (
 						<article
 							key={testimonial.id}
-							className="flex h-full flex-col justify-between rounded-[24px] p-6 bg-yellow/10"
+							className="flex h-full flex-col justify-between rounded-[24px] p-6 bg-[#0e0e59]"
+							style={{
+								boxShadow: "8px 8px 0 0 black",
+							}}
 						>
 							<div className="flex items-center justify-between">
-								<span className="text-xs font-semibold uppercase tracking-[0.3em]">
+								<span className="text-xs font-semibold uppercase tracking-[0.3em] text-white">
 									{getCompany(
 										testimonial.position
 									)}
 								</span>
 							</div>
-							<blockquote className="mt-6 flex-1 text-base leading-relaxed font-cal-sans">
-								“
+							<blockquote className="mt-6 flex-1 text-base leading-relaxed font-cal-sans text-white">
+								"
 								{
 									testimonial.quote
 								}
-								”
+								"
 							</blockquote>
 							<div className="mt-6">
-								<p className="text-sm font-semibold">
+								<p className="text-sm font-semibold text-white">
 									{
 										testimonial.author
 									}
 								</p>
-								<p className="text-xs">
+								<p className="text-xs text-white">
 									{
 										testimonial.position
 									}

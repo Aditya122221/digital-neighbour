@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, ArrowUpRight } from "lucide-react"
 import { motion } from "framer-motion"
+import { CustomButton } from "@/components/core/button"
 
 export default function CaseStudyClient({
 	caseStudiesList,
@@ -145,12 +146,19 @@ export default function CaseStudyClient({
 													study.title
 												}
 											</h3>
-											<ArrowUpRight className="w-10 h-10 transition-transform duration-300 ease-in-out group-hover:rotate-45" />
+											<div className="bg-[#0e0e59] rounded-full p-2 flex items-center justify-center">
+												<ArrowUpRight
+													className="w-6 h-6 text-white transition-transform duration-300 ease-in-out group-hover:rotate-45"
+													strokeWidth={
+														2.5
+													}
+												/>
+											</div>
 										</div>
 									</div>
 
 									{/* Hover Overlay with Metrics */}
-									<div className="absolute inset-0 bg-black/70 backdrop-blur-sm rounded-4xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
+									<div className="absolute inset-0 bg-[#5D50EB]/80 backdrop-blur-sm rounded-4xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out z-10">
 										<div className="text-center px-6">
 											<div className="grid grid-cols-1 gap-8">
 												{study.metrics.map(
@@ -217,19 +225,27 @@ export default function CaseStudyClient({
 				</div>
 
 				{/* Navigation */}
-				<div className="flex gap-4">
-					<button
-						onClick={prevSlide}
-						className="w-12 h-12 bg-black text-yellow rounded-full flex items-center justify-center hover:bg-black/80 transition-colors"
-					>
-						<ChevronLeft className="w-6 h-6" />
-					</button>
-					<button
-						onClick={nextSlide}
-						className="w-12 h-12 bg-black text-yellow rounded-full flex items-center justify-center hover:bg-black/80 transition-colors"
-					>
-						<ChevronRight className="w-6 h-6" />
-					</button>
+				<div className="flex gap-4 items-center justify-between">
+					<div className="flex gap-4">
+						<button
+							onClick={prevSlide}
+							className="w-12 h-12 bg-[#0e0e59] text-white rounded-full flex items-center justify-center hover:bg-[#0e0e59]/80 transition-colors"
+						>
+							<ChevronLeft className="w-6 h-6" />
+						</button>
+						<button
+							onClick={nextSlide}
+							className="w-12 h-12 bg-[#0e0e59] text-white rounded-full flex items-center justify-center hover:bg-[#0e0e59]/80 transition-colors"
+						>
+							<ChevronRight className="w-6 h-6" />
+						</button>
+					</div>
+					<CustomButton
+						text="More Insight"
+						href="/resources"
+						textColor="white"
+						borderColor="white"
+					/>
 				</div>
 			</div>
 		</section>

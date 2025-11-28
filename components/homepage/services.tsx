@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import CustomButton from "../core/button"
 
 type ServiceCard = {
 	video: string
@@ -24,6 +25,64 @@ export default function Services({ data }: ServicesProps) {
 	}
 
 	const cards = Array.isArray(data.rightCard) ? data.rightCard : []
+
+	const highlightHeading = () => {
+		if (!data.heading) {
+			return null
+		}
+
+		// Common important words to highlight
+		const highlightWords = [
+			"services",
+			"growth",
+			"business",
+			"digital",
+			"marketing",
+			"solutions",
+		]
+		const lowerHeading = data.heading.toLowerCase()
+
+		// Find the first important word to highlight
+		let highlightIndex = -1
+		let highlightLength = 0
+		let highlightWord = ""
+
+		for (const word of highlightWords) {
+			const index = lowerHeading.indexOf(word)
+			if (index !== -1) {
+				highlightIndex = index
+				highlightLength = word.length
+				highlightWord = word
+				break
+			}
+		}
+
+		if (highlightIndex === -1) {
+			return data.heading
+		}
+
+		const before = data.heading.slice(0, highlightIndex)
+		const highlighted = data.heading.slice(
+			highlightIndex,
+			highlightIndex + highlightLength
+		)
+		const after = data.heading.slice(
+			highlightIndex + highlightLength
+		)
+
+		return (
+			<>
+				{before}
+				<span className="relative inline-block">
+					<span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow" />
+					<span className="relative z-10 font-semibold">
+						{highlighted}
+					</span>
+				</span>
+				{after}
+			</>
+		)
+	}
 
 	return (
 		<section className="bg-gradient-to-b from-pink/20 to-white">
@@ -51,7 +110,7 @@ export default function Services({ data }: ServicesProps) {
 									ease: "easeOut",
 								}}
 							>
-								{data.heading}
+								{highlightHeading()}
 							</motion.h2>
 							<motion.p
 								className="md:text-xl text-lg text-blackbrown font-light leading-relaxed max-w-lg"
@@ -73,8 +132,37 @@ export default function Services({ data }: ServicesProps) {
 									ease: "easeOut",
 								}}
 							>
-								{data.subheading}
+								{
+									data.subheading
+								}
 							</motion.p>
+							<motion.div
+								className="mt-8"
+								initial={{
+									opacity: 0,
+									y: 30,
+								}}
+								whileInView={{
+									opacity: 1,
+									y: 0,
+								}}
+								viewport={{
+									once: true,
+									margin: "-100px",
+								}}
+								transition={{
+									duration: 0.8,
+									delay: 0.4,
+									ease: "easeOut",
+								}}
+							>
+								<CustomButton
+									text="Contact Us"
+									href="/contact"
+									textColor="black"
+									borderColor="black"
+								/>
+							</motion.div>
 						</div>
 					</div>
 				</div>
@@ -85,7 +173,7 @@ export default function Services({ data }: ServicesProps) {
 						{cards.map((card) => (
 							<div
 								key={card.title}
-								className="bg-pink rounded-3xl shadow-2xl md:h-180 h-100 overflow-hidden group relative"
+								className="bg-[#0e0e59] rounded-3xl shadow-2xl md:h-180 h-100 overflow-hidden group relative"
 							>
 								{/* Top part - Video */}
 								<div className="md:h-2/3 h-1/2">
@@ -97,25 +185,35 @@ export default function Services({ data }: ServicesProps) {
 										playsInline
 									>
 										<source
-											src={card.video}
+											src={
+												card.video
+											}
 											type="video/mp4"
 										/>
 									</video>
 								</div>
 								{/* Bottom part - Content */}
 								<div className="md:h-1/3 h-1/2 p-8 flex flex-col justify-end">
-									<h3 className="text-3xl md:text-5xl font-medium text-blackbrown md:mb-8 mb-4">
-										{card.title}
+									<h3 className="text-3xl md:text-5xl font-medium text-white md:mb-8 mb-4">
+										{
+											card.title
+										}
 									</h3>
 									<div className="space-y-2">
-										{card.subheading.map((item) => (
-											<h4
-												key={`${card.title}-${item}`}
-												className="text-md md:text-lg font-semibold text-gray-700"
-											>
-												{item}
-											</h4>
-										))}
+										{card.subheading.map(
+											(
+												item
+											) => (
+												<h4
+													key={`${card.title}-${item}`}
+													className="text-md md:text-lg font-semibold text-white/80"
+												>
+													{
+														item
+													}
+												</h4>
+											)
+										)}
 									</div>
 								</div>
 								{/* Arrow SVG */}
@@ -126,7 +224,7 @@ export default function Services({ data }: ServicesProps) {
 										viewBox="0 0 24 24"
 										strokeWidth="1.5"
 										stroke="currentColor"
-										className="md:size-14 size-10 text-blackbrown transition-transform duration-300 group-hover:rotate-45"
+										className="md:size-14 size-10 text-white transition-transform duration-300 group-hover:rotate-45"
 									>
 										<path
 											strokeLinecap="round"

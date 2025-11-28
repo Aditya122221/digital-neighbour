@@ -103,29 +103,29 @@ export default function ContentSection({ data }: ContentSectionProps) {
 							return (
 								<article
 									key={id}
-									className="flex h-full flex-col gap-6 rounded-[28px] bg-yellow/10 p-8"
+									className="flex h-full flex-col gap-6 rounded-[28px] bg-[#5D50EB] p-8"
 								>
 									<div className="flex items-center gap-4">
-										<span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-yellow text-black">
+										<span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0e0e59] text-white">
 											<IconComponent
-												className="h-6 w-6"
+												className="h-6 w-6 text-white"
 												aria-hidden="true"
 											/>
 										</span>
 										<div>
-											<h3 className="text-xl font-semibold text-black">
+											<h3 className="text-xl font-semibold text-white">
 												{
 													title
 												}
 											</h3>
-											<p className="mt-1 text-sm font-medium uppercase tracking-[0.2em] text-black/70">
+											<p className="mt-1 text-sm font-medium uppercase tracking-[0.2em] text-white/70">
 												{
 													stat
 												}
 											</p>
 										</div>
 									</div>
-									<p className="text-base leading-relaxed text-black">
+									<p className="text-base leading-relaxed text-white">
 										{
 											description
 										}

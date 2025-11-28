@@ -6,6 +6,8 @@ import { motion } from "framer-motion"
 type TechLogo = {
 	name: string
 	svg: string
+	bgColor?: string
+	textColor?: string
 }
 
 type KeepYourStackData = {
@@ -59,52 +61,71 @@ export default function KeepYourStack({ data }: KeepYourStackProps) {
 				<div className="py-4">
 					<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 md:gap-8">
 						{data.logos.map(
-							(tech, index) => (
-								<motion.div
-									key={
-										tech.name
-									}
-									className="flex items-center gap-3 bg-yellow/30 rounded-full px-6 py-3 shadow-sm border border-gray-200 justify-center"
-									initial={{
-										opacity: 0,
-										x: 100,
-									}}
-									whileInView={{
-										opacity: 1,
-										x: 0,
-									}}
-									viewport={{
-										once: true,
-										margin: "-50px",
-									}}
-									transition={{
-										duration: 0.6,
-										delay:
-											index *
-											0.1,
-										ease: "easeOut",
-									}}
-								>
-									<Image
-										src={
-											tech.svg
-										}
-										alt={`${tech.name} logo`}
-										width={
-											24
-										}
-										height={
-											24
-										}
-										className="w-10 h-10"
-									/>
-									<span className="text-blackbrown font-medium">
-										{
+							(tech, index) => {
+								const bgColor =
+									tech.bgColor ||
+									"#fef3c7"
+								const textColor =
+									tech.textColor ||
+									"#78350f"
+
+								return (
+									<motion.div
+										key={
 											tech.name
 										}
-									</span>
-								</motion.div>
-							)
+										className="flex items-center gap-3 rounded-lg px-6 py-3 shadow-sm border-2 border-black justify-center"
+										style={{
+											backgroundColor:
+												bgColor,
+											color: textColor,
+										}}
+										initial={{
+											opacity: 0,
+											x: 100,
+										}}
+										whileInView={{
+											opacity: 1,
+											x: 0,
+										}}
+										viewport={{
+											once: true,
+											margin: "-50px",
+										}}
+										transition={{
+											duration: 0.6,
+											delay:
+												index *
+												0.1,
+											ease: "easeOut",
+										}}
+									>
+										<Image
+											src={
+												tech.svg
+											}
+											alt={`${tech.name} logo`}
+											width={
+												24
+											}
+											height={
+												24
+											}
+											className="w-10 h-10"
+										/>
+										<span
+											className="font-medium"
+											style={{
+												color: textColor,
+											}}
+										>
+											{
+												tech.name
+											}
+										</span>
+									</motion.div>
+								)
+							}
 						)}
 					</div>
 				</div>

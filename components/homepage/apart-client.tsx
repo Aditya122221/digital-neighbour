@@ -134,11 +134,11 @@ export default function ApartClient({ oursList, othersList }: { oursList: string
 				{/* Cards row */}
 				<div className="flex flex-col items-center justify-center gap-8 w-full max-w-7xl px-4">
 					{/* First Card */}
-					<div className="w-full max-w-sm bg-black rounded-2xl shadow-xl p-8">
-						<h3 className="text-2xl font-semibold mb-6 text-yellow">
+					<div className="w-full max-w-sm bg-[#5D50EB] rounded-2xl shadow-xl p-8">
+						<h3 className="text-2xl font-semibold mb-6 text-white">
 							{oursTitle}
 						</h3>
-						<ul className="space-y-4 text-base text-bone">
+						<ul className="space-y-4 text-base text-white">
 							{ours.map(
 								(
 									item,
@@ -182,11 +182,11 @@ export default function ApartClient({ oursList, othersList }: { oursList: string
 					</div>
 
 					{/* Second Card */}
-					<div className="w-full max-w-sm bg-gray-50 rounded-2xl shadow-xl p-8">
-						<h3 className="text-2xl font-semibold mb-6 text-yellow">
+					<div className="w-full max-w-sm bg-[#e9e5ff] rounded-2xl shadow-xl p-8">
+						<h3 className="text-2xl font-semibold mb-6 text-black">
 							{othersTitle}
 						</h3>
-						<ul className="space-y-4 text-base text-gray-700">
+						<ul className="space-y-4 text-base text-black">
 							{others.map(
 								(
 									item,
@@ -202,7 +202,7 @@ export default function ApartClient({ oursList, othersList }: { oursList: string
 											className={`flex items-center gap-3 whitespace-nowrap ${
 												isLast
 													? "pb-2"
-													: "border-b border-gray-300 pb-2"
+													: "border-b border-black/30 pb-2"
 											}`}
 										>
 											<svg
@@ -242,19 +242,13 @@ export default function ApartClient({ oursList, othersList }: { oursList: string
 			<div className="sticky top-0 h-screen flex flex-col items-center justify-start pt-20 overflow-hidden">
 				{/* Title row */}
 				<div className="flex items-center justify-center gap-3 text-4xl md:text-5xl font-regular">
-					<motion.span
-						style={{ x: leftX }}
-						className="whitespace-nowrap"
-					>
+					<span className="whitespace-nowrap">
 						{renderHighlightedWord()}
-					</motion.span>
+					</span>
 					{headingParts.after && (
-						<motion.span
-							style={{ x: rightX }}
-							className="whitespace-nowrap"
-						>
+						<span className="whitespace-nowrap">
 							{headingParts.after}
-						</motion.span>
+						</span>
 					)}
 				</div>
 
@@ -274,9 +268,9 @@ export default function ApartClient({ oursList, othersList }: { oursList: string
 							y: cardY,
 							opacity: cardOpacity,
 						}}
-						className="w-96 bg-black rounded-2xl shadow-xl p-8 z-10"
+						className="w-96 bg-[#5D50EB] rounded-2xl shadow-xl p-8 z-10"
 					>
-						<h3 className="text-2xl font-semibold mb-6 text-yellow">
+						<h3 className="text-2xl font-semibold mb-6 text-white">
 							{oursTitle}
 						</h3>
 						<ul className="space-y-4 text-base text-white">
@@ -328,12 +322,12 @@ export default function ApartClient({ oursList, othersList }: { oursList: string
 							x: secondCardX,
 							opacity: secondCardOpacity,
 						}}
-						className="w-96 bg-gray-50 rounded-2xl shadow-xl p-8"
+						className="w-96 bg-[#e9e5ff] rounded-2xl shadow-xl p-8"
 					>
-						<h3 className="text-2xl font-semibold mb-6">
+						<h3 className="text-2xl font-semibold mb-6 text-black">
 							{othersTitle}
 						</h3>
-						<ul className="space-y-4 text-base text-gray-700">
+						<ul className="space-y-4 text-base text-black">
 							{others.map(
 								(
 									item,
@@ -349,7 +343,7 @@ export default function ApartClient({ oursList, othersList }: { oursList: string
 											className={`flex items-center gap-3 whitespace-nowrap ${
 												isLast
 													? "pb-2"
-													: "border-b border-gray-300 pb-2"
+													: "border-b border-black/30 pb-2"
 											}`}
 										>
 											<svg

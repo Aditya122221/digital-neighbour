@@ -1,6 +1,7 @@
 "use client"
 
 import { Sparkles, Target, TrendingUp, Users2 } from "lucide-react"
+import Image from "next/image"
 
 const iconMap = {
 	Target,
@@ -45,12 +46,75 @@ export default function BrandInfo({ data }: BrandInfoProps) {
 		return null
 	}
 
+	const highlightHeading = () => {
+		if (!data.main.heading) {
+			return null
+		}
+
+		const highlightTarget = "trust to grow"
+		const lowerHeading = data.main.heading.toLowerCase()
+		const highlightIndex = lowerHeading.indexOf(highlightTarget)
+
+		if (highlightIndex === -1) {
+			// Try alternative: "trust to go"
+			const altTarget = "trust to go"
+			const altIndex = lowerHeading.indexOf(altTarget)
+			if (altIndex === -1) {
+				return data.main.heading
+			}
+
+			const before = data.main.heading.slice(0, altIndex)
+			const highlighted = data.main.heading.slice(
+				altIndex,
+				altIndex + altTarget.length
+			)
+			const after = data.main.heading.slice(
+				altIndex + altTarget.length
+			)
+
+			return (
+				<>
+					{before}
+					<span className="relative inline-block">
+						<span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow" />
+						<span className="relative z-10 font-semibold">
+							{highlighted}
+						</span>
+					</span>
+					{after}
+				</>
+			)
+		}
+
+		const before = data.main.heading.slice(0, highlightIndex)
+		const highlighted = data.main.heading.slice(
+			highlightIndex,
+			highlightIndex + highlightTarget.length
+		)
+		const after = data.main.heading.slice(
+			highlightIndex + highlightTarget.length
+		)
+
+		return (
+			<>
+				{before}
+				<span className="relative inline-block">
+					<span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow" />
+					<span className="relative z-10 font-semibold">
+						{highlighted}
+					</span>
+				</span>
+				{after}
+			</>
+		)
+	}
+
 	return (
 		<section className="py-20">
 			<div className="mx-auto flex max-w-6xl flex-col gap-16 px-6 lg:px-12">
-				<header className="max-w-4xl space-y-6">
+				<header className="max-w-4xl mx-auto text-center space-y-6">
 					<h2 className="text-3xl font-semibold leading-tight md:text-4xl lg:text-5xl font-cal-sans">
-						{data.main.heading}
+						{highlightHeading()}
 					</h2>
 					<p className="text-base text-black/70 md:text-lg">
 						{data.main.subheading}
@@ -58,55 +122,85 @@ export default function BrandInfo({ data }: BrandInfoProps) {
 				</header>
 
 				<div className="grid lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
-					<div className="rounded-t-[32px] bg-yellow/10 p-10 lg:rounded-bl-[32px] lg:rounded-br-none lg:rounded-tl-[32px] lg:rounded-tr-none">
+					<div className="rounded-t-[32px] bg-[#5D50EB] p-10 lg:rounded-bl-[32px] lg:rounded-br-none lg:rounded-tl-[32px] lg:rounded-tr-none">
 						<div className="flex items-center gap-3 mb-5">
-							<span className="flex h-12 w-12 items-center justify-center text-black">
+							<span className="flex h-12 w-12 items-center justify-center text-white">
 								<Sparkles
-									className="h-5 w-6"
+									className="h-5 w-6 text-white"
 									aria-hidden="true"
 								/>
 							</span>
 							<div>
-								<h3 className="text-xl font-semibold text-black">
-									Why brands choose us
+								<h3 className="text-xl font-semibold text-white">
+									Why
+									brands
+									choose
+									us
 								</h3>
-								<p className="text-sm uppercase tracking-[0.25em] text-black/60">
-									We stay embedded
+								<p className="text-sm uppercase tracking-[0.25em] text-white/60">
+									We stay
+									embedded
 								</p>
 							</div>
 						</div>
 
 						<div className="grid gap-6 md:grid-cols-2">
 							{data.differentiators.map(
-								({
-									id,
-									title,
-									description,
-									icon,
-								}) => {
+								(
+									{
+										id,
+										title,
+										description,
+										icon,
+									},
+									index
+								) => {
 									const IconComponent =
 										iconMap[
 											(icon as IconName) ??
 												"Target"
-										] ?? Target
+										] ??
+										Target
+
+									// Add image at the fourth position (index 3)
+									if (
+										index ===
+										3
+									) {
+										return (
+											<div
+												key={`image-${id}`}
+												className="relative w-full h-full min-h-[200px] rounded-2xl overflow-hidden"
+											>
+												<Image
+													src="/placeholder.jpg"
+													alt="Brand info illustration"
+													fill
+													className="object-cover"
+												/>
+											</div>
+										)
+									}
 
 									return (
 										<article
-											key={id}
-											className="flex flex-col gap-4 rounded-2xl bg-white p-6 text-black"
+											key={
+												id
+											}
+											className="flex flex-col gap-4 rounded-2xl bg-white p-6"
 										>
-											<div className="flex items-center gap-3 text-black">
+											<div className="flex items-center gap-3 text-[#5D50EB]">
 												<IconComponent
-													className="h-5 w-5"
+													className="h-5 w-5 text-[#5D50EB]"
 													aria-hidden="true"
 												/>
-												<h4 className="text-lg font-semibold">
+												<h4 className="text-lg font-semibold text-[#5D50EB]">
 													{
 														title
 													}
 												</h4>
 											</div>
-											<p className="text-sm leading-relaxed text-black/70">
+											<p className="text-sm leading-relaxed text-black">
 												{
 													description
 												}
@@ -118,27 +212,45 @@ export default function BrandInfo({ data }: BrandInfoProps) {
 						</div>
 					</div>
 
-					<aside className="flex flex-col justify-between gap-6 rounded-b-[32px] bg-black p-8 text-white lg:rounded-bl-none lg:rounded-br-[32px] lg:rounded-tl-none lg:rounded-tr-[32px]">
+					<aside className="flex flex-col justify-between gap-6 rounded-b-[32px] bg-[#e9e5ff] p-8 text-black lg:rounded-bl-none lg:rounded-br-[32px] lg:rounded-tl-none lg:rounded-tr-[32px]">
 						<div>
-							<h3 className="text-2xl font-semibold">
-								{data.rightCard.heading}
+							<h3 className="text-2xl font-semibold text-black">
+								{
+									data
+										.rightCard
+										.heading
+								}
 							</h3>
-							<p className="mt-4 text-sm leading-relaxed text-white/70">
-								{data.rightCard.description}
+							<p className="mt-4 text-sm leading-relaxed text-black/70">
+								{
+									data
+										.rightCard
+										.description
+								}
 							</p>
 						</div>
 						<ul className="grid gap-6">
 							{data.rightCard.stats.map(
-								({ id, value, label }) => (
+								({
+									id,
+									value,
+									label,
+								}) => (
 									<li
-										key={id}
+										key={
+											id
+										}
 										className="rounded-2xl bg-white p-5 text-black"
 									>
 										<p className="text-3xl font-semibold">
-											{value}
+											{
+												value
+											}
 										</p>
 										<p className="mt-2 text-sm text-black/70">
-											{label}
+											{
+												label
+											}
 										</p>
 									</li>
 								)

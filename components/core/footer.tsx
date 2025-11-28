@@ -3,7 +3,7 @@ import CustomButton from './button';
 
 const Footer: React.FC = () => {
   return (
-    <div className="bg-black text-white relative overflow-hidden min-h-[700px]">
+    <div className="bg-[#5D50EB] text-white relative overflow-hidden min-h-[700px]">
       {/* Background Video */}
       <div className="absolute inset-0 z-0 flex items-center justify-center">
         <div className="relative">
@@ -18,10 +18,10 @@ const Footer: React.FC = () => {
             Your browser does not support the video tag.
           </video>
             {/* Gradient overlay from edges to center */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70  to-black opacity-100"></div>
-            <div className="absolute inset-0 bg-gradient-to-b from-black via-black/20  to-black opacity-100"></div>
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-black/80 opacity-60"></div>
-            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-black/80 opacity-60"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#5D50EB] via-[#5D50EB]/70  to-[#5D50EB] opacity-100"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-[#5D50EB] via-[#5D50EB]/20  to-[#5D50EB] opacity-100"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#5D50EB]/80 via-transparent to-[#5D50EB]/80 opacity-60"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-[#5D50EB]/80 via-transparent to-[#5D50EB]/80 opacity-60"></div>
         </div>
       </div>
       {/* Main Content Area */}

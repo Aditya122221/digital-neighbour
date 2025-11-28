@@ -50,8 +50,8 @@ export default async function HomePage() {
 				{/* <Hero5 /> */}
 			</div>
 			{/* <Banner /> */}
-			<BrandsMarquee />
 			<BrandInfo data={homeData.brandInfo} />
+			<BrandsMarquee />
 			{/* <RevealCursor /> */}
 			<Services data={homeData.services} />
 			<KeepYourStack data={homeData.keepYourStack} />
@@ -60,8 +60,8 @@ export default async function HomePage() {
 			<Apart />
 			<TestimonalTwo />
 			<Process2 processData={homeData.process} />
-			<Blogs />
 			<BookACall />
+			<Blogs />
 			<Footer />
 		</main>
 	)
