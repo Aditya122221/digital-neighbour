@@ -85,9 +85,9 @@ export default function Form({ data }: FormProps) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="bg-pink p-8 rounded-2xl shadow-xl"
+            className="bg-[#5D50EB] p-8 rounded-2xl shadow-xl"
           >
-            <h3 className="text-2xl md:text-3xl font-semibold text-center text-blackbrown mb-8 leading-tight">
+            <h3 className="text-2xl md:text-3xl font-semibold text-center text-white mb-8 leading-tight">
               {data?.formHeading || "Boost Your Website's Performance with a Comprehensive Site Audit"}
             </h3>
             <form className="space-y-6">
@@ -103,7 +103,7 @@ export default function Form({ data }: FormProps) {
                   onChange={handleChange}
                   placeholder="Website"
                   required
-                  className="w-full px-4 py-4 border-b-2 border-gray-300 focus:border-yellow outline-none transition-colors text-lg bg-transparent"
+                  className="w-full px-4 py-4 border-b-2 border-white/30 focus:border-white outline-none transition-colors text-lg bg-transparent text-white placeholder:text-white/60"
                 />
               </div>
               <div>
@@ -118,7 +118,7 @@ export default function Form({ data }: FormProps) {
                   onChange={handleChange}
                   placeholder="Email"
                   required
-                  className="w-full px-4 py-4 border-b-2 border-gray-300 focus:border-yellow outline-none transition-colors text-lg bg-transparent"
+                  className="w-full px-4 py-4 border-b-2 border-white/30 focus:border-white outline-none transition-colors text-lg bg-transparent text-white placeholder:text-white/60"
                 />
               </div>
               <div>
@@ -133,7 +133,7 @@ export default function Form({ data }: FormProps) {
                   onChange={handleChange}
                   placeholder="Phone"
                   required
-                  className="w-full px-4 py-4 border-b-2 border-gray-300 focus:border-yellow outline-none transition-colors text-lg bg-transparent"
+                  className="w-full px-4 py-4 border-b-2 border-white/30 focus:border-white outline-none transition-colors text-lg bg-transparent text-white placeholder:text-white/60"
                 />
               </div>
               <div className="flex justify-center">

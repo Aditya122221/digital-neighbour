@@ -29,7 +29,7 @@ function TeamMember({ name, role, image, social, index }: TeamMemberProps) {
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-junglegreen/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-[#0e0e59]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
       <div>
         <h3 className="text-2xl font-medium text-blackbrown mb-1 font-cal-sans">
@@ -40,7 +40,7 @@ function TeamMember({ name, role, image, social, index }: TeamMemberProps) {
           {social?.twitter && (
             <Link
               href={social.twitter}
-              className="w-10 h-10 rounded-full bg-blackbrown/10 flex items-center justify-center hover:bg-yellow transition-colors duration-300"
+              className="w-10 h-10 rounded-full bg-blackbrown/10 flex items-center justify-center hover:bg-[#5D50EB] transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -56,7 +56,7 @@ function TeamMember({ name, role, image, social, index }: TeamMemberProps) {
           {social?.linkedin && (
             <Link
               href={social.linkedin}
-              className="w-10 h-10 rounded-full bg-blackbrown/10 flex items-center justify-center hover:bg-yellow transition-colors duration-300"
+              className="w-10 h-10 rounded-full bg-blackbrown/10 flex items-center justify-center hover:bg-[#5D50EB] transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -72,7 +72,7 @@ function TeamMember({ name, role, image, social, index }: TeamMemberProps) {
           {social?.instagram && (
             <Link
               href={social.instagram}
-              className="w-10 h-10 rounded-full bg-blackbrown/10 flex items-center justify-center hover:bg-yellow transition-colors duration-300"
+              className="w-10 h-10 rounded-full bg-blackbrown/10 flex items-center justify-center hover:bg-[#5D50EB] transition-colors duration-300"
               target="_blank"
               rel="noopener noreferrer"
             >

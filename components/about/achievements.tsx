@@ -40,7 +40,7 @@ export default function Achievements({ content }: AchievementsProps) {
   const stats = content.stats ?? [];
 
   return (
-    <section className="py-32 px-6 bg-black">
+    <section className="py-32 px-6 bg-[#5D50EB]">
       <div className="container max-w-7xl mx-auto">
         <div className="space-y-16">
           <div className="grid md:grid-cols-2 gap-12 items-start">
