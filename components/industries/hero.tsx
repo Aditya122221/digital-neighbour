@@ -29,17 +29,21 @@ export default function IndustriesHero({
 				paddingRight: "12px",
 			}}
 		>
-			<video
-				className="absolute inset-0 h-full w-full object-cover"
-				autoPlay
-				loop
-				muted
-				playsInline
-			>
-				<source src={videoSrc} />
-				Your browser does not support the video tag.
-			</video>
-			<div className="absolute inset-0" />
+			{/* Video Background */}
+			<div className="absolute inset-0 z-0">
+				<video
+					className="w-full h-full object-cover"
+					autoPlay
+					loop
+					muted
+					playsInline
+				>
+					<source src={videoSrc} type="video/webm" />
+					Your browser does not support the video tag.
+				</video>
+				{/* Overlay for better text readability */}
+				<div className="absolute inset-0 bg-black/40" />
+			</div>
 			<div className="relative z-10 w-full px-0">
 				<motion.div
 					initial={{ opacity: 0, y: 20 }}
@@ -51,7 +55,7 @@ export default function IndustriesHero({
 					}}
 					className="pointer-events-none select-none flex flex-col items-center text-center"
 				>
-					<h1 className="text-white/95 text-4xl md:text-6xl lg:text-7xl font-cal-sans font-semibold tracking-tight">
+					<h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-cal-sans font-semibold tracking-tight">
 						{heading}
 					</h1>
 					<p className="mt-4 text-white/90 text-lg md:text-xl">
@@ -74,12 +78,14 @@ export default function IndustriesHero({
 						<CustomButton
 							text={buttonText}
 							href="/contact"
-							textColor="black"
-							borderColor="black"
+							textColor="white"
+							borderColor="white"
 						/>
 					</motion.div>
 				</motion.div>
 			</div>
+			{/* Bottom shadow divider */}
+			<div className="absolute bottom-0 left-0 right-0 h-px bg-gray-200"></div>
 		</section>
 	)
 }

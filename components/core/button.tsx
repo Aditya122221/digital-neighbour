@@ -39,9 +39,12 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
   const buttonContent = (
     <div
       className={cn(
-        "group relative overflow-hidden rounded-full border-2 bg-yellow px-4 py-2 transition-all duration-300 ease-out group-hover:border-[3px]",
-        borderColor === "white" ? "border-white" : "border-black"
+        "group relative overflow-hidden rounded-lg border-2 px-4 py-2 transition-all duration-300 ease-out group-hover:border-[3px]"
       )}
+      style={{
+        backgroundColor: "#0e0e59",
+        borderColor: "#0e0e59",
+      }}
     >
       {/* Default 3D gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/5 to-transparent" />
@@ -50,19 +53,14 @@ export const CustomButton: React.FC<CustomButtonProps> = ({
       <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100" />
 
       {/* Content */}
-      <div
-        className={cn(
-          "relative flex items-center gap-3",
-          textColor === "white" ? "text-white" : "text-black"
-        )}
-      >
+      <div className="relative flex items-center gap-3 text-white">
         <span className="text-md transition-all duration-300 font-medium">
           {text}
         </span>
 
         {/* Arrow circle */}
-        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black transition-all duration-300 group-hover:shadow-lg">
-          <ArrowIcon className="text-yellow transition-transform duration-300 -rotate-45 group-hover:rotate-0 ease-out" />
+        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white transition-all duration-300 group-hover:shadow-lg">
+          <ArrowIcon className="text-[#5D50EB] transition-transform duration-300 -rotate-45 group-hover:rotate-0 ease-out" />
         </div>
       </div>
     </div>

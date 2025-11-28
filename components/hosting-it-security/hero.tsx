@@ -11,13 +11,13 @@ interface HostingHeroProps {
 
 export default function HostingHero({ data }: HostingHeroProps) {
 	return (
-		<section className="relative overflow-x-hidden pt-25 bg-black">
-			<div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[600px] lg:min-h-[700px] bg-[#fff]">
+		<section className="relative overflow-x-hidden pt-25 bg-white">
+			<div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[600px] lg:min-h-[700px] bg-white">
 				<div className="flex flex-col items-start gap-6 p-6 pb-0 pt-12 lg:gap-8 lg:pb-6 lg:pt-6">
 					<h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight font-cal-sans text-black w-[80%] max-w-[600px]">
 						{data.heading}
 					</h1>
-					<p className="text-lg md:text-xl text-black/80 leading-relaxed w-full max-w-[600px] lg:w-[80%]">
+					<p className="text-lg md:text-xl text-black leading-relaxed w-full max-w-[600px] lg:w-[80%]">
 						{data.subheading}
 					</p>
 					<div className="flex w-full flex-col items-start gap-4 md:flex-row md:gap-6 lg:pt-8">
@@ -47,7 +47,7 @@ export default function HostingHero({ data }: HostingHeroProps) {
 					</video>
 				</div>
 			</div>
-			<div className="w-full border-t border-gray-200"></div>
+			<div className="absolute bottom-0 left-0 right-0 h-px bg-gray-200"></div>
 		</section>
 	)
 }

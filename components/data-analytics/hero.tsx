@@ -14,7 +14,7 @@ interface DataAnalyticsHeroProps {
 
 export default function DataAnalyticsHero({ data }: DataAnalyticsHeroProps) {
   return (
-    <section className="relative pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-24 lg:pb-32 overflow-x-hidden bg-gradient-to-br from-black via-black to-yellow">
+    <section className="relative pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-24 lg:pb-32 overflow-x-hidden bg-white">
       {/* Content */}
       <div className="relative z-20 container mx-auto py-6 md:py-0 px-6 lg:px-12">
         <div className="relative flex items-center justify-center min-h-[70vh]">
@@ -34,9 +34,9 @@ export default function DataAnalyticsHero({ data }: DataAnalyticsHeroProps) {
                 ease: "easeOut",
                 delay: 0.1,
               }}
-              className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight font-cal-sans text-white"
+              className="text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight font-cal-sans text-black"
             >
-              Data-Driven Intelligence: {data.heading}
+              <span style={{ color: '#5D50EB' }}>Data-Driven Intelligence:</span> {data.heading}
             </motion.h1>
 
             {/* Subtitle */}
@@ -54,7 +54,7 @@ export default function DataAnalyticsHero({ data }: DataAnalyticsHeroProps) {
                 ease: "easeOut",
                 delay: 0.2,
               }}
-              className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto"
+              className="text-lg md:text-xl text-black leading-relaxed max-w-3xl mx-auto"
             >
               {data.subheading}
             </motion.p>
@@ -216,6 +216,7 @@ export default function DataAnalyticsHero({ data }: DataAnalyticsHeroProps) {
           </motion.div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-200"></div>
     </section>
   );
 }

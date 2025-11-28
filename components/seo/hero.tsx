@@ -13,7 +13,7 @@ interface SeoHeroProps {
 
 export default function SeoHero({ data }: SeoHeroProps) {
   return (
-    <section className="bg-gradient-to-br from-black via-black to-yellow pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-24 lg:pb-32 overflow-x-hidden">
+    <section className="bg-white pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-24 lg:pb-32 overflow-x-hidden">
       <div className="container mx-auto py-6 md:py-0 px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Text content */}
@@ -23,10 +23,10 @@ export default function SeoHero({ data }: SeoHeroProps) {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="space-y-6 max-w-xl mx-auto"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-tight font-cal-sans">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black leading-tight font-cal-sans">
               {data.heading}
             </h1>
-            <p className="text-lg md:text-xl text-white/80 leading-relaxed">
+            <p className="text-lg md:text-xl text-black leading-relaxed">
               {data.subheading}
             </p>
             <CustomButton
@@ -63,6 +63,7 @@ export default function SeoHero({ data }: SeoHeroProps) {
           </motion.div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-200"></div>
     </section>
   );
 }

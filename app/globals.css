@@ -9,7 +9,7 @@
   --darkbeige: #d5dec4;
   --blackbrown: #1c2706;
   --bone: #e8dcc8;
-  --yellow: #ffe031;
+  --yellow: #ffbe11;
   --black: #1a1a1a;
   --green1: #02444e;
   --green2: #025864;
@@ -246,18 +246,18 @@ body {
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background: var(--yellow);
+  background: #5D50EB;
   border-radius: 3px;
 }
 
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: #facc15;
+  background: #5D50EB;
 }
 
 /* Global scrollbar colors */
 /* Firefox */
 html {
-  scrollbar-color: var(--yellow) transparent;
+  scrollbar-color: #5D50EB transparent;
 }
 
 /* WebKit-based browsers */
@@ -269,19 +269,19 @@ html {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--yellow);
+  background: #5D50EB;
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #facc15; /* slightly darker yellow on hover */
+  background: #5D50EB;
 }
 
 /* Text selection color */
 ::selection {
-  background: var(--yellow);
-  color: var(--black);
+  background: #5D50EB;
+  color: white;
 }
 ::-moz-selection {
-  background: var(--yellow);
-  color: var(--black);
+  background: #5D50EB;
+  color: white;
 }

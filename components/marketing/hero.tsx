@@ -23,7 +23,7 @@ export default function MarketingHero({ data }: MarketingHeroProps) {
 	const ctaHref = data?.ctaHref || "/contact"
 
 	return (
-		<section className="relative bg-gradient-to-br from-black via-black to-yellow text-white pt-28 md:pt-36 lg:pt-44 pb-20 md:pb-28">
+		<section className="relative bg-white text-white pt-28 md:pt-36 lg:pt-44 pb-20 md:pb-28">
 			<div className="container mx-auto px-6 md:px-10">
 				<motion.div
 					initial={{ opacity: 0, y: 30 }}
@@ -34,10 +34,10 @@ export default function MarketingHero({ data }: MarketingHeroProps) {
 					}}
 					className="max-w-4xl mx-auto text-center space-y-8"
 				>
-					<h1 className="text-4xl md:text-5xl lg:text-6xl font-cal-sans font-semibold leading-tight">
+					<h1 className="text-4xl md:text-5xl lg:text-6xl font-cal-sans font-semibold leading-tight text-black">
 						{heading}
 					</h1>
-					<p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
+					<p className="text-lg md:text-xl text-black leading-relaxed max-w-3xl mx-auto">
 						{subheading}
 					</p>
 					<div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -51,6 +51,7 @@ export default function MarketingHero({ data }: MarketingHeroProps) {
 					</div>
 				</motion.div>
 			</div>
+			<div className="absolute bottom-0 left-0 right-0 h-px bg-gray-200"></div>
 		</section>
 	)
 }

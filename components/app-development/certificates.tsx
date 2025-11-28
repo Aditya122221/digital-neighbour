@@ -210,7 +210,7 @@ export default function Certificates({ data }: CertificatesProps) {
 						className="p-6 md:p-8 space-y-0"
 						style={{
 							backgroundColor:
-								"#ffe031",
+								"#ffbe11",
 							borderTopLeftRadius:
 								"20px",
 							borderBottomLeftRadius:
@@ -289,7 +289,7 @@ export default function Certificates({ data }: CertificatesProps) {
 										className="w-12 h-12 rounded-lg flex items-center justify-center text-black"
 										style={{
 											backgroundColor:
-												"#ffe031",
+												"#ffbe11",
 										}}
 									>
 										{
@@ -325,7 +325,7 @@ export default function Certificates({ data }: CertificatesProps) {
 												className="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 text-black"
 												style={{
 													backgroundColor:
-														"#ffe031",
+														"#ffbe11",
 												}}
 											>
 												<ArrowRight className="w-3 h-3" />

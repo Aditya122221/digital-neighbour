@@ -15,11 +15,11 @@ function StrategicBlock({ icon, title, description }: StrategicBlockProps) {
         <div
           className="w-20 h-20 rounded-full border-2 flex items-center justify-center"
           style={{
-            borderColor: "#ffe031",
-            backgroundColor: "rgba(255, 224, 49, 0.1)",
+            borderColor: "#ffbe11",
+            backgroundColor: "rgba(255, 190, 17, 0.1)",
           }}
         >
-          <div className="text-2xl" style={{ color: "#ffe031" }}>
+          <div className="text-2xl" style={{ color: "#ffbe11" }}>
             {icon}
           </div>
         </div>
@@ -29,7 +29,7 @@ function StrategicBlock({ icon, title, description }: StrategicBlockProps) {
       <div className="space-y-4 max-w-sm">
         <h3
           className="font-semibold text-xl leading-tight"
-          style={{ color: "#ffe031" }}
+          style={{ color: "#ffbe11" }}
         >
           {title}
         </h3>

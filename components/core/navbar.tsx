@@ -620,7 +620,7 @@ const Navbar: React.FC = () => {
           ? "bg-black"
           : hasScrolledPast80vh
             ? "bg-black/70"
-            : "bg-black/10",
+            : "bg-white",
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -635,7 +635,6 @@ const Navbar: React.FC = () => {
                 height={40}
                 className={cn(
                   "h-12 w-auto lg:h-14 transition-all duration-300",
-                  "brightness-0 invert",
                 )}
                 priority
               />
@@ -655,7 +654,9 @@ const Navbar: React.FC = () => {
                   href={link.href}
                   className={cn(
                     "uppercase transition-all duration-200 font-medium text-sm lg:text-base flex items-center gap-1 relative group",
-                    "text-white/80 hover:text-white",
+                    hasScrolledPast80vh || isPortfolioSlug || isResourcesSlug
+                      ? "text-white/80 hover:text-white"
+                      : "text-[#5D50EB] hover:text-[#5D50EB]/80",
                     link.hasMegaMenu && isMegaMenuOpen && "text-yellow",
                   )}
                 >
@@ -701,7 +702,9 @@ const Navbar: React.FC = () => {
                 onClick={toggleMenu}
                 className={cn(
                   "transition-colors duration-200 p-2",
-                  "text-white hover:text-yellow",
+                  hasScrolledPast80vh || isPortfolioSlug || isResourcesSlug
+                    ? "text-white hover:text-yellow"
+                    : "text-[#5D50EB] hover:text-[#5D50EB]/80",
                 )}
                 aria-label="Toggle menu"
               >
@@ -746,8 +749,8 @@ const Navbar: React.FC = () => {
                         className={cn(
                           "flex items-center justify-between px-4 py-3 rounded-lg cursor-pointer transition-colors duration-200",
                           category.isActive
-                            ? "bg-yellow/80 text-black"
-                            : "hover:bg-gray-100 text-gray-700",
+                            ? "bg-[#5D50EB] text-white"
+                            : "hover:bg-[#5D50EB]/10 text-gray-700",
                         )}
                       >
                         <span className="font-medium">{category.name}</span>
@@ -799,7 +802,7 @@ const Navbar: React.FC = () => {
                         {columnTitleToRoute[column.title] ? (
                           <Link
                             href={columnTitleToRoute[column.title]}
-                            className="text-base font-semibold text-gray-900 mb-2 block hover:text-yellow-700 transition-colors duration-200"
+                            className="text-base font-semibold text-gray-900 mb-2 block hover:text-[#5D50EB] transition-colors duration-200"
                           >
                             {column.title}
                           </Link>
@@ -1019,7 +1022,7 @@ const Navbar: React.FC = () => {
                                 }
                                 return `/services/${name}`;
                               })()}
-                              className="flex items-center gap-2 p-1.5 rounded-lg transition-colors duration-200 group"
+                              className="flex items-center gap-2 p-1.5 rounded-lg transition-colors duration-200 group hover:bg-[#5D50EB]/10"
                             >
                               {iconMapping[service.name] ? (
                                 <Image
@@ -1032,9 +1035,9 @@ const Navbar: React.FC = () => {
                               ) : (
                                 <span className="text-sm">{service.icon}</span>
                               )}
-                              <span className="text-md text-gray-700 group-hover:text-yellow-700 transition-colors duration-200 relative">
+                              <span className="text-md text-gray-700 group-hover:text-[#5D50EB] transition-colors duration-200 relative">
                                 {service.name}
-                                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-yellow transition-all duration-200 group-hover:w-full"></span>
+                                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#5D50EB] transition-all duration-200 group-hover:w-full"></span>
                               </span>
                             </Link>
                           ))}
@@ -1067,9 +1070,9 @@ const Navbar: React.FC = () => {
                         onClick={() => handleMobileServicesToggle()}
                         className={cn(
                           "w-full flex items-center justify-between px-3 py-2 transition-colors duration-200 rounded-md font-medium",
-                          isSeoRoute && !hasScrolledPast80vh
-                            ? "text-black hover:text-yellow"
-                            : "text-white hover:text-yellow",
+                          hasScrolledPast80vh || isPortfolioSlug || isResourcesSlug
+                            ? "text-white hover:text-yellow"
+                            : "text-[#5D50EB] hover:text-[#5D50EB]/80",
                         )}
                       >
                         <span>{link.name}</span>
@@ -1487,7 +1490,9 @@ const Navbar: React.FC = () => {
                       href={link.href}
                       className={cn(
                         "block px-3 py-2 transition-colors duration-200 rounded-md font-medium",
-                        "text-white hover:text-yellow",
+                        hasScrolledPast80vh || isPortfolioSlug || isResourcesSlug
+                          ? "text-white hover:text-yellow"
+                          : "text-[#5D50EB] hover:text-[#5D50EB]/80",
                       )}
                       onClick={() => setIsMenuOpen(false)}
                     >

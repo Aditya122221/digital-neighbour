@@ -78,7 +78,7 @@ export default function SocialMediaHero({ data }: SocialMediaHeroProps) {
 						<CustomButton
 							text={ctaText}
 							href="/contact"
-							textColor="black"
+							textColor="white"
 							borderColor="white"
 							className="mt-4"
 						/>
@@ -117,6 +117,8 @@ export default function SocialMediaHero({ data }: SocialMediaHeroProps) {
 					</motion.div>
 				</div>
 			</div>
+			{/* Bottom shadow divider */}
+			<div className="absolute bottom-0 left-0 right-0 h-px bg-gray-200"></div>
 		</section>
 	)
 }

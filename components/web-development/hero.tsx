@@ -12,19 +12,7 @@ interface WebDevHeroProps {
 
 export default function WebDevHero({ data }: WebDevHeroProps) {
   return (
-    <section className="relative pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-24 lg:pb-32 overflow-x-hidden min-h-screen">
-      {/* Background Video */}
-      <video
-        src="/footer-vid.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      />
-      
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/50 z-10"></div>
+    <section className="relative pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-24 lg:pb-32 overflow-x-hidden min-h-screen bg-white">
       
       {/* Content */}
       <div className="relative z-20 container mx-auto py-6 md:py-0 px-6 lg:px-12">
@@ -37,10 +25,10 @@ export default function WebDevHero({ data }: WebDevHeroProps) {
           >
             <div className="max-w-6xl mx-auto flex flex-col items-center justify-center gap-6 text-center">
               <div className="space-y-6 max-w-3xl">
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight font-cal-sans">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-black leading-tight font-cal-sans">
                   {data.heading}
                 </h1>
-                <p className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed">
+                <p className="text-base md:text-lg lg:text-xl text-black leading-relaxed">
                   {data.subheading}
                 </p>
               </div>
@@ -57,6 +45,7 @@ export default function WebDevHero({ data }: WebDevHeroProps) {
           </motion.div>
         </div>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-200"></div>
     </section>
   );
 }

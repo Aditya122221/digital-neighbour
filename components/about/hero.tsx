@@ -33,7 +33,7 @@ export default function AboutHero({ content }: AboutHeroProps) {
   return (
     <section
       ref={sectionRef}
-      className="relative px-6 bg-gradient-to-b from-white to-pink/20 overflow-hidden pt-28 md:pt-32"
+      className="relative px-6 bg-white overflow-hidden pt-28 md:pt-32"
     >
       <div className="absolute top-0 left-0 right-0 h-16 md:h-20 bg-black z-0" />
 
@@ -61,7 +61,7 @@ export default function AboutHero({ content }: AboutHeroProps) {
             ease: "easeOut",
           }}
         >
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-regular text-blackbrown mb-8 text-balance font-cal-sans tracking-wide">
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-regular text-black mb-8 text-balance font-cal-sans tracking-wide">
             {content.title}{" "}
             <motion.span
               className="relative inline-block"
@@ -80,12 +80,12 @@ export default function AboutHero({ content }: AboutHeroProps) {
               }}
             >
               <span className="absolute bottom-2 left-0 right-0 h-3/5 bg-yellow" />
-              <span className="relative z-10 font-medium italic">
+              <span className="relative z-10 font-medium italic" style={{ color: '#5D50EB' }}>
                 {content.highlight}
               </span>
             </motion.span>
           </h1>
-          <p className="text-lg md:text-xl font-light text-blackbrown/80 max-w-3xl mx-auto text-pretty">
+          <p className="text-lg md:text-xl font-light text-black max-w-3xl mx-auto text-pretty">
             {content.description}
           </p>
         </motion.div>
@@ -121,7 +121,7 @@ export default function AboutHero({ content }: AboutHeroProps) {
             return (
               <motion.span
                 key={`${word}-${index}`}
-                className="text-2xl md:text-3xl lg:text-4xl font-medium text-blackbrown"
+                className="text-2xl md:text-3xl lg:text-4xl font-medium text-black"
                 style={{
                   opacity,
                   y,
@@ -133,6 +133,7 @@ export default function AboutHero({ content }: AboutHeroProps) {
           })}
         </motion.div>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-200"></div>
     </section>
   );
 }

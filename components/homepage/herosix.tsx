@@ -155,18 +155,8 @@ export default function HeroSix({ data }: HeroSixProps) {
 	return (
 		<section
 			ref={heroRef}
-			className="relative h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden"
+			className="relative h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden bg-white"
 		>
-			{/* Background image */}
-			<div
-				className="absolute inset-0 bg-cover bg-center"
-				style={{
-					backgroundImage: `url('/homepage/hero-bg3.jpg')`,
-				}}
-			/>
-
-			{/* Diagonal gradient overlay */}
-			<div className="absolute inset-0 bg-gradient-to-br from-black via-black to-yellow" />
 
 			{/* Hero content */}
 			<motion.div
@@ -177,15 +167,17 @@ export default function HeroSix({ data }: HeroSixProps) {
 					y: textY,
 				}}
 			>
-				<h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight text-balance text-white text-center font-cal-sans tracking-wide">
-					{renderAnimatedText({
-						text: `${headingPrimary} `,
-						baseDelay: 0.5,
-						keyPrefix: "heading-primary",
-					})}
+				<h1 className="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight text-balance text-black text-center font-cal-sans tracking-wide">
+					<span style={{ color: "#5D50EB" }}>
+						{renderAnimatedText({
+							text: `${headingPrimary} `,
+							baseDelay: 0.5,
+							keyPrefix: "heading-primary",
+						})}
+					</span>
 					{primaryImage && (
 						<motion.span
-							className="inline-block w-8 h-10 md:w-12 md:h-12 lg:w-32 lg:h-18 -mb-1 md:-mb-2 rounded-full overflow-hidden bg-white/20 backdrop-blur-sm border-2 border-white/30 mx-2"
+							className="inline-block w-8 h-10 md:w-12 md:h-12 lg:w-32 lg:h-18 -mb-1 md:-mb-2 rounded-full overflow-hidden bg-gray-100 backdrop-blur-sm border-2 border-gray-300 mx-2"
 							initial={{ opacity: 0, x: 50 }}
 							animate={{
 								opacity: 1,
@@ -234,7 +226,7 @@ export default function HeroSix({ data }: HeroSixProps) {
 						keyPrefix: "heading-secondary",
 					})}
 				</h1>
-				<p className="mt-8 text-lg md:text-xl lg:text-3xl font-semibold leading-tight text-pretty max-w-3xl mx-auto text-white/90 text-center">
+				<p className="mt-8 text-lg md:text-xl lg:text-3xl font-semibold leading-tight text-pretty max-w-3xl mx-auto text-black text-center">
 					{subheadingSegments.map(
 						(segment, index) => {
 							const textWithSpace =
@@ -266,7 +258,7 @@ export default function HeroSix({ data }: HeroSixProps) {
 										index
 									] && (
 										<motion.span
-											className="inline-block w-6 h-7 md:w-8 md:h-8 lg:w-24 lg:h-14 -mb-1 md:-mb-2 rounded-full overflow-hidden bg-white/20 backdrop-blur-sm border-2 border-white/30 mx-1"
+											className="inline-block w-6 h-7 md:w-8 md:h-8 lg:w-24 lg:h-14 -mb-1 md:-mb-2 rounded-full overflow-hidden bg-gray-100 backdrop-blur-sm border-2 border-gray-300 mx-1"
 											initial={{
 												opacity: 0,
 												x: 50,
@@ -358,11 +350,13 @@ export default function HeroSix({ data }: HeroSixProps) {
 					<CustomButton
 						text="Get Started Today"
 						href="/contact"
-						textColor="black"
-						borderColor="white"
+						textColor="#5D50EB"
+						borderColor="#5D50EB"
 					/>
 				</motion.div>
 			</motion.div>
+			{/* Bottom shadow divider */}
+			<div className="absolute bottom-0 left-0 right-0 h-px bg-gray-200"></div>
 		</section>
 	)
 }
