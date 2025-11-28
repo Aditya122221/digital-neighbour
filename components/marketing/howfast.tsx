@@ -71,10 +71,10 @@ export default function MarketingHowFast() {
 		"We help our SaaS clients grow quickly using a combination of principles, proprietary AI technology, and our own proven playbook of our top rated strategies and tactics that take a typically slow process and expedite it."
 
 	return (
-		<section className="relative bg-[#f6efe4] py-24">
+		<section className="relative bg-white py-24">
 			<div className="container mx-auto px-6 md:px-10 lg:px-16">
 				<div className="mx-auto max-w-3xl text-center">
-					<h2 className="text-4xl md:text-5xl lg:text-6xl font-cal-sans font-semibold text-neutral-900 mb-8">
+					<h2 className="text-4xl md:text-5xl lg:text-6xl font-cal-sans font-semibold text-black mb-8">
 						How are we so{" "}
 						<span className="relative inline-block">
 							<span className="absolute bottom-1 left-0 right-0 h-2/4 bg-yellow"></span>
@@ -83,7 +83,7 @@ export default function MarketingHowFast() {
 							</span>
 						</span>
 					</h2>
-					<p className="mt-8 text-base leading-relaxed text-neutral-700 md:text-lg">
+					<p className="mt-8 text-base leading-relaxed text-black md:text-lg">
 						{headlineCopy}
 					</p>
 				</div>
@@ -135,11 +135,11 @@ export default function MarketingHowFast() {
 									/>
 								</div>
 								<div className="flex flex-col gap-6">
-									<div className="flex h-12 w-12 items-center justify-center rounded-full bg-neutral-900 text-white">
+									<div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0e0e59] text-white">
 										<Icon className="h-6 w-6" />
 									</div>
 									<div className="space-y-3">
-										<h3 className="text-xl font-semibold text-neutral-900">
+										<h3 className="text-xl font-semibold text-black">
 											{
 												item.title
 											}
@@ -152,7 +152,7 @@ export default function MarketingHowFast() {
 											}`}
 										>
 											<div className="overflow-hidden">
-												<p className="pt-1 text-sm leading-relaxed text-neutral-600 md:text-base">
+												<p className="pt-1 text-sm leading-relaxed text-black/80 md:text-base">
 													{
 														item.description
 													}

@@ -1,8 +1,8 @@
 import { getPortfolioProjects } from "@/lib/portfolio-data"
 import PortfolioCard from "./portfolio-card"
 
-export default function PortfolioGrid() {
-	const portfolio = getPortfolioProjects()
+export default async function PortfolioGrid() {
+	const portfolio = await getPortfolioProjects()
 
 	return (
 		<section className="py-16 md:py-24 px-4">
@@ -10,7 +10,7 @@ export default function PortfolioGrid() {
 				<div className="grid grid-cols-1 gap-8 md:grid-cols-2">
 					{portfolio.map((item) => (
 						<PortfolioCard
-							key={item.id}
+							key={item.id || item.slug}
 							slug={
 								item.slug ||
 								`portfolio-${item.id}`
@@ -21,6 +21,7 @@ export default function PortfolioGrid() {
 							tags={item.tags}
 							image={item.image}
 							imageAlt={item.imageAlt}
+							logo={item.logo}
 						/>
 					))}
 				</div>

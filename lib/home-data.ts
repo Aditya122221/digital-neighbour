@@ -17,6 +17,7 @@ type HomePageData = {
       subheading?: string;
     };
     differentiators?: {
+      id?: string | number;
       title?: string;
       description?: string;
       icon?: string;
@@ -25,6 +26,7 @@ type HomePageData = {
       heading?: string;
       description?: string;
       stats?: {
+        id?: string;
         value?: string;
         label?: string;
       }[];
@@ -40,15 +42,21 @@ type HomePageData = {
     }[];
   };
   keepYourStack?: {
+    heading?: string;
+    highlight?: string;
+    description?: string;
     logos?: {
       name?: string;
       svg?: string;
+      bgColor?: string;
+      textColor?: string;
     }[];
   };
   contentSection?: {
     heading?: string;
     subheading?: string;
     benefits?: {
+      id?: number;
       title?: string;
       description?: string;
       icon?: string;
@@ -61,73 +69,103 @@ type HomePageData = {
   };
 };
 
+const getImageUrl = (image: any): string => {
+  if (!image) return "";
+  if (typeof image === "string") return image;
+  if (image.asset?.url) {
+    return image.asset.url;
+  }
+  if (image.asset?._ref) {
+    try {
+      return urlForImage(image).url();
+    } catch {
+      return "";
+    }
+  }
+  return "";
+};
+
+const getFileUrl = (file: any): string => {
+  if (!file) return "";
+  if (typeof file === "string") return file;
+  if (file.asset?.url) {
+    return file.asset.url;
+  }
+  return "";
+};
+
 function transformSanityData(sanityData: any): HomePageData | null {
   if (!sanityData) return null;
 
+  const settings = sanityData.settings ?? {};
+  const heroDoc = sanityData.hero ?? {};
+  const brandInfoDoc = sanityData.brandInfo ?? {};
+  const servicesDoc = sanityData.services ?? {};
+  const stackDoc = sanityData.keepYourStack ?? {};
+  const contentDoc = sanityData.contentSection ?? {};
+  const processDoc = sanityData.process ?? {};
+
   return {
-    metadata: sanityData.metadata || "",
-    description: sanityData.description || "",
+    metadata: settings.metadata || settings.title || "",
+    description: settings.description || "",
     hero: {
-      heading: sanityData.hero?.heading || "",
-      subheading: sanityData.hero?.subheading || "",
+      heading: heroDoc.heading || "",
+      subheading: heroDoc.subheading || "",
       images:
-        sanityData.hero?.images?.map((img: any) => {
-          if (img?.asset?.url) {
-            return img.asset.url;
-          }
-          if (img?.asset?._id) {
-            try {
-              return urlForImage(img).url();
-            } catch {
-              return "";
-            }
-          }
-          return "";
-        }) || [],
+        heroDoc.images?.map((img: any) => getImageUrl(img)).filter(Boolean) ||
+        [],
     },
     brandInfo: {
       main: {
-        heading: sanityData.brandInfo?.main?.heading || "",
-        subheading: sanityData.brandInfo?.main?.subheading || "",
+        heading: brandInfoDoc.main?.heading || "",
+        subheading: brandInfoDoc.main?.subheading || "",
       },
       differentiators:
-        sanityData.brandInfo?.differentiators?.map((diff: any) => ({
+        brandInfoDoc.differentiators?.map((diff: any) => ({
+          id: diff.id ?? "",
           title: diff.title || "",
           description: diff.description || "",
           icon: diff.icon || "",
         })) || [],
       rightCard: {
-        heading: sanityData.brandInfo?.rightCard?.heading || "",
-        description: sanityData.brandInfo?.rightCard?.description || "",
+        heading: brandInfoDoc.rightCard?.heading || "",
+        description: brandInfoDoc.rightCard?.description || "",
         stats:
-          sanityData.brandInfo?.rightCard?.stats?.map((stat: any) => ({
+          brandInfoDoc.rightCard?.stats?.map((stat: any) => ({
+            id: stat.id ?? "",
             value: stat.value || "",
             label: stat.label || "",
           })) || [],
       },
     },
     services: {
-      heading: sanityData.services?.heading || "",
-      subheading: sanityData.services?.subheading || "",
+      heading: servicesDoc.heading || "",
+      subheading: servicesDoc.subheading || "",
       rightCard:
-        sanityData.services?.rightCard?.map((card: any) => ({
-          video: card.video || "",
+        servicesDoc.rightCard?.map((card: any) => ({
+          video: getFileUrl(card.video),
           title: card.title || "",
           subheading: card.subheading || [],
         })) || [],
     },
     keepYourStack: {
+      heading: stackDoc.heading || "",
+      highlight: stackDoc.highlight || "",
+      description: stackDoc.description || "",
       logos:
-        sanityData.keepYourStack?.logos?.map((logo: any) => ({
+        stackDoc.logos?.map((logo: any) => ({
           name: logo.name || "",
-          svg: logo.svg || "",
+          svg: getImageUrl(logo.image),
+          bgColor: logo.bgColor || "",
+          textColor: logo.textColor || "",
         })) || [],
     },
     contentSection: {
-      heading: sanityData.contentSection?.heading || "",
-      subheading: sanityData.contentSection?.subheading || "",
+      heading: contentDoc.heading || "",
+      subheading: contentDoc.subheading || "",
       benefits:
-        sanityData.contentSection?.benefits?.map((benefit: any) => ({
+        contentDoc.benefits?.map((benefit: any) => ({
+          id: benefit.id,
           title: benefit.title || "",
           description: benefit.description || "",
           icon: benefit.icon || "",
@@ -135,12 +173,11 @@ function transformSanityData(sanityData: any): HomePageData | null {
         })) || [],
     },
     process: {
-      steps: sanityData.process?.steps || [],
-      content: sanityData.process?.content || [],
+      steps: processDoc.steps || [],
+      content: processDoc.content || [],
     },
   };
 }
-
 export async function getHomePageData(): Promise<HomePageData> {
   try {
     // Fetch fresh data from Sanity (no caching due to page-level dynamic config)

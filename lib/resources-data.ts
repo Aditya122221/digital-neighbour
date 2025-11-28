@@ -4,6 +4,7 @@ import {
 	resourceArticleBySlugQuery,
 	resourceArticlesQuery,
 	resourcesPageContentQuery,
+	resourcesPageQuery,
 } from "@/sanity/lib/queries"
 
 export type ResourceHeroContent = {
@@ -29,11 +30,11 @@ type ResourcesJsonEntry = Partial<
 
 type SanityResourceRecord = {
 	title?: string | null
-	slug?: string | null
+	slug?: { current?: string | null } | string | null
 	category?: string | null
 	date?: string | null
 	excerpt?: string | null
-	image?: string | null
+	image?: any | string | null
 	imageAlt?: string | null
 	content?: string | null
 }
@@ -105,12 +106,24 @@ function normalizeHeroContent(
 	}
 }
 
+function getImageUrl(image: any): string {
+	if (!image) return "";
+	if (typeof image === "string") return image;
+	if (image.asset?.url) {
+		return image.asset.url;
+	}
+	return "";
+}
+
 function normalizeArticle(
 	entry?: ResourcesJsonEntry | SanityResourceRecord | null
 ): ResourceArticle | null {
 	if (!entry) return null
 
-	const slug = typeof entry.slug === "string" ? entry.slug.trim() : ""
+	const slug =
+		typeof entry.slug === "string"
+			? entry.slug.trim()
+			: entry.slug?.current || ""
 	const title = typeof entry.title === "string" ? entry.title.trim() : ""
 	const category =
 		typeof entry.category === "string" ? entry.category.trim() : ""
@@ -118,10 +131,7 @@ function normalizeArticle(
 		typeof entry.date === "string" ? entry.date.trim() : undefined
 	const excerpt =
 		typeof entry.excerpt === "string" ? entry.excerpt.trim() : ""
-	const image =
-		typeof entry.image === "string" && entry.image.trim()
-			? entry.image.trim()
-			: undefined
+	const image = getImageUrl(entry.image)
 	const content =
 		typeof entry.content === "string" ? entry.content.trim() : undefined
 	const imageAlt =
@@ -137,7 +147,7 @@ function normalizeArticle(
 		category,
 		date: normalizeDate(dateValue),
 		excerpt,
-		image,
+		image: image || undefined,
 		imageAlt,
 		content,
 	}
@@ -179,7 +189,11 @@ export async function getAllResources(): Promise<ResourceArticle[]> {
 		const normalized =
 			entries
 				?.map((entry) => normalizeArticle(entry))
-				.filter((entry): entry is ResourceArticle => Boolean(entry)) ?? []
+				.filter((entry): entry is ResourceArticle => Boolean(entry))
+				.sort(
+					(a, b) =>
+						new Date(b.date).getTime() - new Date(a.date).getTime()
+				) ?? []
 
 		if (normalized.length > 0) {
 			return normalized
@@ -213,5 +227,58 @@ export async function getResourceBySlug(
 	}
 
 	return fallbackArticleMap.get(slug)
+}
+
+type ResourcesPageData = {
+	metadata?: string;
+	description?: string;
+	hero?: ResourceHeroContent;
+	articles?: ResourceArticle[];
+};
+
+function transformSanityData(sanityData: any): ResourcesPageData | null {
+	if (!sanityData) return null;
+
+	const settings = sanityData.settings ?? {};
+	const heroDoc = sanityData.hero ?? {};
+	const articlesData = sanityData.articles ?? {};
+	const articles = articlesData.articles || [];
+
+	return {
+		metadata: settings.metadata || settings.title || "",
+		description: settings.description || "",
+		hero: {
+			title: heroDoc.title || "",
+			description: heroDoc.description || "",
+			details: heroDoc.details || [],
+		},
+		articles: articles
+			.map((article: any) => normalizeArticle(article))
+			.filter((article): article is ResourceArticle => Boolean(article))
+			.sort(
+				(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+			),
+	};
+}
+
+export async function getResourcesPageData(): Promise<ResourcesPageData> {
+	try {
+		const sanityData = await sanityFetch(resourcesPageQuery);
+		const transformed = transformSanityData(sanityData);
+		if (transformed && transformed.metadata) {
+			return transformed;
+		}
+	} catch (error) {
+		// Silently fallback to JSON
+	}
+
+	// Fallback to JSON
+	return {
+		metadata: "Resources | Digital Neighbour",
+		description:
+			"Explore insights on marketing, branding, social media, and growth. Curated by Digital Neighbour.",
+		hero: fallbackHeroContent,
+		articles: fallbackArticles,
+	};
 }
 

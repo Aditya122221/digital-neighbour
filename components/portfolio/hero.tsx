@@ -1,8 +1,8 @@
 import { getPortfolioHero } from "@/lib/portfolio-data"
 
-const heroContent = getPortfolioHero()
+export default async function PortfolioHero() {
+	const heroContent = await getPortfolioHero()
 
-export default function PortfolioHero() {
 	return (
 		<section className="relative bg-white">
 			<div className="mx-auto w-full max-w-7xl px-4 py-16 md:py-24">

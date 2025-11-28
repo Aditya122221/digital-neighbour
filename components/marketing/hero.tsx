@@ -35,7 +35,19 @@ export default function MarketingHero({ data }: MarketingHeroProps) {
 					className="max-w-4xl mx-auto text-center space-y-8"
 				>
 					<h1 className="text-4xl md:text-5xl lg:text-6xl font-cal-sans font-semibold leading-tight text-black">
-						{heading}
+						{(() => {
+							const words = heading.split(/\s+/)
+							const firstWord = words[0] || ""
+							const restWords = words.slice(1).join(" ")
+							return (
+								<>
+									<span style={{ color: "#5D50EB" }}>
+										{firstWord}
+									</span>
+									{restWords && <span> {restWords}</span>}
+								</>
+							)
+						})()}
 					</h1>
 					<p className="text-lg md:text-xl text-black leading-relaxed max-w-3xl mx-auto">
 						{subheading}
