@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { CustomButton } from "@/components/core/button";
 
+const DEFAULT_SEO_HERO_IMAGE = "/seo/hero.webp";
+
 interface SeoHeroProps {
   data: {
     heading: string;
@@ -13,6 +15,8 @@ interface SeoHeroProps {
 }
 
 export default function SeoHero({ data }: SeoHeroProps) {
+  const heroImage = (data.image ?? "").trim() || DEFAULT_SEO_HERO_IMAGE;
+
   return (
     <section className="bg-white pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-24 lg:pb-32 overflow-x-hidden">
       <div className="container mx-auto py-6 md:py-0 px-6 lg:px-12">
@@ -51,30 +55,28 @@ export default function SeoHero({ data }: SeoHeroProps) {
           </motion.div>
 
           {/* Right side - Image */}
-          {data.image && (
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ 
-                opacity: 1, 
-                x: 0,
-                y: [0, -20, 0]
-              }}
-              transition={{ 
-                opacity: { duration: 0.8, ease: "easeOut", delay: 0.2 },
-                x: { duration: 0.8, ease: "easeOut", delay: 0.2 },
-                y: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }
-              }}
-              className="relative w-4/4 h-4/4 overflow-hidden mx-auto rounded-3xl"
-            >
-              <Image
-                src={data.image}
-                alt="SEO Marketing"
-                className="object-cover"
-                fill
-                priority
-              />
-            </motion.div>
-          )}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ 
+              opacity: 1, 
+              x: 0,
+              y: [0, -20, 0]
+            }}
+            transition={{ 
+              opacity: { duration: 0.8, ease: "easeOut", delay: 0.2 },
+              x: { duration: 0.8, ease: "easeOut", delay: 0.2 },
+              y: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }
+            }}
+            className="relative w-4/4 h-4/4 overflow-hidden mx-auto rounded-3xl"
+          >
+            <Image
+              src={heroImage}
+              alt="SEO Marketing"
+              className="object-cover"
+              fill
+              priority
+            />
+          </motion.div>
         </div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gray-200"></div>

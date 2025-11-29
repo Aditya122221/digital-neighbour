@@ -4,6 +4,8 @@ import { sanityFetch } from "@/sanity/lib/fetch"
 import { seoPageQuery } from "@/sanity/lib/queries"
 import { urlForImage } from "@/sanity/lib/image"
 
+const DEFAULT_SEO_HERO_IMAGE = "/seo/hero.webp"
+
 // Helper function to get image URL from Sanity image object
 const getImageUrl = (image: any): string | undefined => {
 	if (!image) return undefined
@@ -180,11 +182,13 @@ export function mergeSeoPageData(
 	const remote = remoteData ?? {}
 
 	// Merge hero with image priority: remote override > remote default > fallback
-	const mergedHero = mergeObjects(fallback.hero, remote.hero)
-	if (remote.hero?.image) {
-		mergedHero!.image = remote.hero.image
-	} else if (fallback.hero?.image && !mergedHero?.image) {
-		mergedHero!.image = fallback.hero.image
+	const mergedHeroSource = mergeObjects(fallback.hero, remote.hero)
+	const mergedHero = mergedHeroSource ? { ...mergedHeroSource } : undefined
+
+	if (mergedHero) {
+		const remoteImage = remote.hero?.image
+		const fallbackImage = fallback.hero?.image
+		mergedHero.image = remoteImage || fallbackImage || DEFAULT_SEO_HERO_IMAGE
 	}
 
 	return {

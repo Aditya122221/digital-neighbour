@@ -1,49 +1,5 @@
-"use client"
-
 import Image from "next/image"
-
-const fallbackTestimonials = [
-	{
-		id: 1,
-		quote: "Smart design, smooth delivery, Franklin is great to work with.",
-		author: "Lucas Bennett",
-		position: "Product Manager, Hexa Studio",
-		number: "01/05",
-		image: "/testimonalImage.avif",
-	},
-	{
-		id: 2,
-		quote: "Exceptional creativity and attention to detail. The team exceeded our expectations.",
-		author: "Sarah Chen",
-		position: "Marketing Director, TechFlow",
-		number: "02/05",
-		image: "https://images.pexels.com/photos/34013983/pexels-photo-34013983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-	},
-	{
-		id: 3,
-		quote: "Professional, reliable, and innovative. Our brand transformation was remarkable.",
-		author: "Michael Rodriguez",
-		position: "CEO, GrowthLab",
-		number: "03/05",
-		image: "https://images.pexels.com/photos/7432338/pexels-photo-7432338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-	},
-	{
-		id: 4,
-		quote: "Outstanding results delivered on time. Highly recommend their services.",
-		author: "Emma Thompson",
-		position: "Brand Manager, Innovate Co",
-		number: "04/05",
-		image: "https://images.pexels.com/photos/34006459/pexels-photo-34006459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-	},
-	{
-		id: 5,
-		quote: "Creative solutions that perfectly captured our vision. Amazing collaboration.",
-		author: "David Park",
-		position: "Founder, StartupHub",
-		number: "05/05",
-		image: "https://images.pexels.com/photos/34006447/pexels-photo-34006447.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-	},
-]
+import { getTestimonialsSectionData, type TestimonialsSectionData } from "@/lib/testimonials-data"
 
 function getCompany(position: string) {
 	const parts = position.split(",")
@@ -60,33 +16,31 @@ function getInitials(name: string) {
 }
 
 type TestimonalTwoProps = {
-	data?: {
-		eyebrow?: string;
-		heading?: string;
-		testimonials?: {
-			quote?: string;
-			author?: string;
-			position?: string;
-			number?: string;
-			image?: string;
-		}[];
-	};
+	data?: TestimonialsSectionData
 }
 
-export default function TestimonalTwo({ data }: TestimonalTwoProps) {
-	const testimonials = data?.testimonials && data.testimonials.length > 0
-		? data.testimonials.map((t, index) => ({
-				id: index + 1,
-				quote: t.quote || "",
-				author: t.author || "",
-				position: t.position || "",
-				number: t.number || `${String(index + 1).padStart(2, "0")}/${String(data.testimonials?.length || 5).padStart(2, "0")}`,
-				image: t.image || "/testimonalImage.avif",
-			}))
-		: fallbackTestimonials;
+export default async function TestimonalTwo({ data }: TestimonalTwoProps) {
+	const hasTestimonials = Boolean(data?.testimonials && data.testimonials.length > 0)
+	const testimonialsData = hasTestimonials ? data! : await getTestimonialsSectionData()
 
-	const eyebrow = data?.eyebrow || "Testimonials";
-	const heading = data?.heading || "Hear From Our Happy Clients";
+	const testimonials =
+		testimonialsData.testimonials?.map((testimonial, index) => ({
+			id: index + 1,
+			quote: testimonial?.quote || "",
+			author: testimonial?.author || "",
+			position: testimonial?.position || "",
+			number:
+				testimonial?.number ||
+				`${String(index + 1).padStart(2, "0")}/${String(testimonialsData.testimonials?.length || 1).padStart(2, "0")}`,
+			image: testimonial?.image || "/testimonalImage.avif",
+		})) || []
+
+	if (testimonials.length === 0) {
+		return null
+	}
+
+	const eyebrow = testimonialsData.eyebrow || "Testimonials"
+	const heading = testimonialsData.heading || "Hear From Our Happy Clients"
 
 	const [featured, ...supporting] = testimonials
 	const secondary = supporting.slice(0, 3)
@@ -98,26 +52,14 @@ export default function TestimonalTwo({ data }: TestimonalTwoProps) {
 					<span className="inline-flex items-center justify-center rounded-full border border-yellow/50 bg-white px-4 py-1 text-sm font-medium uppercase tracking-[0.3em]">
 						{eyebrow}
 					</span>
-					<h2 className="mt-6 text-3xl font-semibold leading-tight md:text-4xl lg:text-5xl font-cal-sans">
-						{heading}
-					</h2>
+					<h2 className="mt-6 text-3xl font-semibold leading-tight md:text-4xl lg:text-5xl font-cal-sans">{heading}</h2>
 				</header>
 
 				<div className="grid gap-6 lg:grid-cols-[minmax(0,320px)_1fr]">
 					<div className="group relative overflow-hidden rounded-[32px]">
 						<div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 transition-opacity duration-500" />
 						<div className="relative aspect-[4/5] w-full">
-							<Image
-								src={
-									featured.image
-								}
-								alt={
-									featured.author
-								}
-								className="object-cover"
-								fill
-								priority
-							/>
+							<Image src={featured.image} alt={featured.author} className="object-cover" fill priority />
 						</div>
 					</div>
 
@@ -129,20 +71,13 @@ export default function TestimonalTwo({ data }: TestimonalTwoProps) {
 					>
 						<div className="flex items-center gap-4">
 							<div className="flex h-12 w-12 items-center justify-center rounded-full bg-black/70 text-sm font-semibold uppercase tracking-[0.3em] text-white">
-								{getInitials(
-									featured.author
-								)}
+								{getInitials(featured.author)}
 							</div>
 							<div className="flex flex-col">
 								<span className="text-sm font-semibold uppercase tracking-[0.3em] text-black">
-									{getCompany(
-										featured.position
-									)}
+									{getCompany(featured.position)}
 								</span>
-								<span className="text-xs text-black">
-									Client
-									spotlight
-								</span>
+								<span className="text-xs text-black">Client spotlight</span>
 							</div>
 						</div>
 
@@ -151,16 +86,8 @@ export default function TestimonalTwo({ data }: TestimonalTwoProps) {
 						</blockquote>
 
 						<div className="mt-10 flex flex-col gap-1">
-							<span className="text-base font-semibold text-black">
-								{
-									featured.author
-								}
-							</span>
-							<span className="text-sm text-black">
-								{
-									featured.position
-								}
-							</span>
+							<span className="text-base font-semibold text-black">{featured.author}</span>
+							<span className="text-sm text-black">{featured.position}</span>
 						</div>
 					</div>
 				</div>
@@ -176,29 +103,13 @@ export default function TestimonalTwo({ data }: TestimonalTwoProps) {
 						>
 							<div className="flex items-center justify-between">
 								<span className="text-xs font-semibold uppercase tracking-[0.3em] text-white">
-									{getCompany(
-										testimonial.position
-									)}
+									{getCompany(testimonial.position)}
 								</span>
 							</div>
-							<blockquote className="mt-6 flex-1 text-base leading-relaxed font-cal-sans text-white">
-								"
-								{
-									testimonial.quote
-								}
-								"
-							</blockquote>
+							<blockquote className="mt-6 flex-1 text-base leading-relaxed font-cal-sans text-white">"{testimonial.quote}"</blockquote>
 							<div className="mt-6">
-								<p className="text-sm font-semibold text-white">
-									{
-										testimonial.author
-									}
-								</p>
-								<p className="text-xs text-white">
-									{
-										testimonial.position
-									}
-								</p>
+								<p className="text-sm font-semibold text-white">{testimonial.author}</p>
+								<p className="text-xs text-white">{testimonial.position}</p>
 							</div>
 						</article>
 					))}
@@ -207,3 +118,4 @@ export default function TestimonalTwo({ data }: TestimonalTwoProps) {
 		</section>
 	)
 }
+

@@ -20,6 +20,13 @@ export const aboutHero = defineType({
 			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
+			name: "highlightWord",
+			title: "Highlight Word",
+			type: "string",
+			description:
+				"Word to emphasize within the title (leave blank to highlight the last word automatically)",
+		}),
+		defineField({
 			name: "description",
 			title: "Description",
 			type: "text",

@@ -582,9 +582,10 @@ export const paidAdsPageQuery = `*[_type == "paidAdsPage" && slug.current == $sl
   }
 }`;
 
-export const aboutPageQuery = `*[_type == "aboutPage"][0]{
-  hero{
+export const aboutPageQuery = `{
+  "hero": *[_type == "aboutHero"] | order(_updatedAt desc)[0]{
     title,
+    highlightWord,
     description,
     image{
       ...,
@@ -596,7 +597,7 @@ export const aboutPageQuery = `*[_type == "aboutPage"][0]{
     },
     wordsText
   },
-  origins{
+  "origins": *[_type == "aboutOrigins"] | order(_updatedAt desc)[0]{
     title,
     description,
     images[]{
@@ -611,47 +612,101 @@ export const aboutPageQuery = `*[_type == "aboutPage"][0]{
       alt
     }
   },
-  values{
+  "values": *[_type == "aboutValues"] | order(_updatedAt desc)[0]{
     title,
     items[]{
       title,
       description
     }
   },
-  achievements{
+  "achievements": *[_type == "aboutAchievements"] | order(_updatedAt desc)[0]{
     title,
     description,
     stats[]{
       number,
       label
-    },
-    team{
-      title,
-      description,
-      members[]{
-        name,
-        role,
-        image{
-          ...,
-          asset->{
-            _id,
-            url,
-            metadata
-          }
-        },
-        social{
-          twitter,
-          linkedin,
-          instagram
+    }
+  },
+  "team": *[_type == "aboutTeam"] | order(_updatedAt desc)[0]{
+    title,
+    description,
+    members[]{
+      name,
+      role,
+      image{
+        ...,
+        asset->{
+          _id,
+          url,
+          metadata
         }
+      },
+      social{
+        twitter,
+        linkedin,
+        instagram
       }
     }
   }
 }`;
 
 export const apartPageQuery = `*[_type == "homeApart"][0]{
+  heading,
+  tagline,
+  oursTitle,
+  othersTitle,
   ours[],
   others[]
+}`;
+
+export const trustedBrandsQuery = `*[_type == "homeTrustedBrands"][0]{
+  heading,
+  logos[]{
+    name,
+    image{
+      ...,
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    }
+  }
+}`;
+
+export const testimonialsSectionQuery = `*[_type == "homeTestimonials"][0]{
+  eyebrow,
+  heading,
+  testimonials[]{
+    quote,
+    author,
+    position,
+    number,
+    image{
+      ...,
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    }
+  }
+}`;
+
+export const bookACallSectionQuery = `*[_type == "homeBookACall"][0]{
+  heading,
+  description,
+  subDescription,
+  buttonText,
+  buttonLink,
+  illustrationImage{
+    ...,
+    asset->{
+      _id,
+      url,
+      metadata
+    }
+  }
 }`;
 
 export const casePageQuery = `*[_type == "homeCaseStudy"][0]{
