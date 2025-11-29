@@ -25,6 +25,15 @@ import { aboutAchievements } from "./about-achievements"
 import { aboutTeam } from "./about-team"
 import { seoPage } from "./seo-page"
 import { paidAdsPage } from "./paid-ads-page"
+import { socialMediaPage } from "./social-media-page"
+import { contentMarketingPage } from "./content-marketing-page"
+import { webDevelopmentPage } from "./web-development-page"
+import { appDevelopmentPage } from "./app-development-page"
+import { hostingItSecurityPage } from "./hosting-it-security-page"
+import { aiAutomationPage } from "./ai-automation-page"
+import { dataAnalyticsPage } from "./data-analytics-page"
+import { industriesPage } from "./industries-page"
+import { professionalsMarketingPage } from "./professionals-marketing-page"
 
 export const schemaTypes = [
 	seoSettings,
@@ -54,4 +63,13 @@ export const schemaTypes = [
 	aboutTeam,
 	seoPage,
 	paidAdsPage,
+	socialMediaPage,
+	contentMarketingPage,
+	webDevelopmentPage,
+	appDevelopmentPage,
+	hostingItSecurityPage,
+	aiAutomationPage,
+	dataAnalyticsPage,
+	industriesPage,
+	professionalsMarketingPage,
 ]

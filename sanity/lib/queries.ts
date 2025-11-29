@@ -333,6 +333,14 @@ export const seoPageQuery = `*[_type == "seoPage" && slug.current == $slug][0]{
     current
   },
   serviceName,
+  heroImage{
+    ...,
+    asset->{
+      _id,
+      url,
+      metadata
+    }
+  },
   seoSettings{
     title,
     description,
@@ -351,7 +359,15 @@ export const seoPageQuery = `*[_type == "seoPage" && slug.current == $slug][0]{
   },
   hero{
     heading,
-    subheading
+    subheading,
+    image{
+      ...,
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    }
   },
   form{
     heading,
@@ -434,6 +450,17 @@ export const seoPageQuery = `*[_type == "seoPage" && slug.current == $slug][0]{
     faqs[]{
       q,
       a
+    }
+  }
+}`;
+
+export const seoDefaultHeroImageQuery = `*[_type == "seoPage" && slug.current == "seo"][0]{
+  heroImage{
+    ...,
+    asset->{
+      _id,
+      url,
+      metadata
     }
   }
 }`;

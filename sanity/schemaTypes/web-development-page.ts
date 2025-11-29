@@ -1,8 +1,8 @@
 import { defineField, defineType } from "sanity"
 
-export const seoPage = defineType({
-	name: "seoPage",
-	title: "SEO Service Page",
+export const webDevelopmentPage = defineType({
+	name: "webDevelopmentPage",
+	title: "Web Development Service Page",
 	type: "document",
 	groups: [
 		{
@@ -60,7 +60,7 @@ export const seoPage = defineType({
 			name: "serviceName",
 			title: "Service Name",
 			type: "string",
-			description: "Display name for this SEO service (e.g., 'Search Engine Optimisation', 'Local SEO')",
+			description: "Display name for this web development service (e.g., 'Web Development', 'Website Development', 'Web App Development')",
 			group: "basic",
 			validation: (Rule) => Rule.required(),
 		}),
@@ -68,7 +68,7 @@ export const seoPage = defineType({
 			name: "slug",
 			title: "Service Slug",
 			type: "slug",
-			description: "URL-friendly identifier for this SEO service page (e.g., 'seo', 'local-seo', 'wordpress-seo')",
+			description: "URL-friendly identifier (e.g., 'web-development', 'website-development', 'web-app-development')",
 			group: "basic",
 			options: {
 				source: "serviceName",
@@ -88,8 +88,7 @@ export const seoPage = defineType({
 					name: "title",
 					title: "SEO Title",
 					type: "string",
-					description:
-						"Title tag for SEO (typically 50-60 characters)",
+					description: "Title tag for SEO (typically 50-60 characters)",
 					validation: (Rule) =>
 						Rule.max(60).warning(
 							"SEO titles are usually no more than 60 characters."
@@ -99,8 +98,7 @@ export const seoPage = defineType({
 					name: "description",
 					title: "SEO Description",
 					type: "text",
-					description:
-						"Meta description for SEO (typically 150-160 characters)",
+					description: "Meta description for SEO (typically 150-160 characters)",
 					validation: (Rule) =>
 						Rule.max(160).warning(
 							"SEO descriptions are usually no more than 160 characters."
@@ -111,7 +109,7 @@ export const seoPage = defineType({
 					title: "SEO Keywords",
 					type: "array",
 					of: [{ type: "string" }],
-					description: "Keywords for SEO (comma-separated)",
+					description: "Keywords for SEO",
 					options: {
 						layout: "tags",
 					},
@@ -120,8 +118,7 @@ export const seoPage = defineType({
 					name: "ogImage",
 					title: "Open Graph Image",
 					type: "image",
-					description:
-						"Image for social media sharing (recommended: 1200x630px)",
+					description: "Image for social media sharing (recommended: 1200x630px)",
 					options: {
 						hotspot: true,
 					},
@@ -147,18 +144,6 @@ export const seoPage = defineType({
 			],
 		}),
 
-		// Default Hero Image (for main "seo" slug)
-		defineField({
-			name: "heroImage",
-			title: "Default Hero Image",
-			type: "image",
-			group: "hero",
-			description: "Default hero image used for all SEO service pages. Can be overridden in individual slug's hero section.",
-			options: {
-				hotspot: true,
-			},
-		}),
-
 		// Hero Section
 		defineField({
 			name: "hero",
@@ -180,12 +165,19 @@ export const seoPage = defineType({
 				}),
 				defineField({
 					name: "image",
-					title: "Hero Image Override",
+					title: "Hero Image",
 					type: "image",
-					description: "Optional: Override the default hero image for this specific SEO service page.",
+					options: { hotspot: true },
+					description: "Optional hero image",
+				}),
+				defineField({
+					name: "video",
+					title: "Hero Video",
+					type: "file",
 					options: {
-						hotspot: true,
+						accept: "video/*",
 					},
+					description: "Optional hero video file",
 				}),
 			],
 		}),
@@ -206,16 +198,19 @@ export const seoPage = defineType({
 					name: "content",
 					title: "Content",
 					type: "text",
+					rows: 5,
 				}),
 				defineField({
 					name: "subContent",
 					title: "Sub Content",
 					type: "text",
+					rows: 4,
 				}),
 				defineField({
 					name: "cta",
 					title: "CTA Text",
 					type: "text",
+					rows: 3,
 				}),
 				defineField({
 					name: "formHeading",
@@ -243,14 +238,11 @@ export const seoPage = defineType({
 					type: "string",
 				}),
 				defineField({
-					name: "problemStatement",
-					title: "Problem Statement",
-					type: "text",
-				}),
-				defineField({
-					name: "valueProposition",
-					title: "Value Proposition",
-					type: "text",
+					name: "paragraphs",
+					title: "Paragraphs",
+					type: "array",
+					of: [{ type: "text" }],
+					description: "Array of paragraph texts",
 				}),
 			],
 		}),
@@ -271,67 +263,16 @@ export const seoPage = defineType({
 					name: "subheading",
 					title: "Subheading",
 					type: "text",
+					rows: 3,
 				}),
 				defineField({
-					name: "painPoints",
-					title: "Pain Points",
+					name: "items",
+					title: "Pain Point Items",
 					type: "array",
 					of: [
 						{
 							type: "object",
 							fields: [
-								defineField({
-									name: "problem",
-									title: "Problem",
-									type: "text",
-									validation: (Rule) => Rule.required(),
-								}),
-								defineField({
-									name: "solution",
-									title: "Solution",
-									type: "text",
-									validation: (Rule) => Rule.required(),
-								}),
-							],
-						},
-					],
-				}),
-			],
-		}),
-
-		// Services
-		defineField({
-			name: "services",
-			title: "Services",
-			type: "object",
-			group: "services",
-			fields: [
-				defineField({
-					name: "serviceName",
-					title: "Service Name",
-					type: "string",
-					description: "Main service name (e.g., 'Search Engine Optimisation')",
-				}),
-				defineField({
-					name: "serviceCards",
-					title: "Service Cards",
-					type: "array",
-					of: [
-						{
-							type: "object",
-							fields: [
-								defineField({
-									name: "id",
-									title: "ID",
-									type: "string",
-									validation: (Rule) => Rule.required(),
-								}),
-								defineField({
-									name: "name",
-									title: "Name",
-									type: "string",
-									validation: (Rule) => Rule.required(),
-								}),
 								defineField({
 									name: "title",
 									title: "Title",
@@ -342,19 +283,115 @@ export const seoPage = defineType({
 									name: "description",
 									title: "Description",
 									type: "text",
+									rows: 4,
+									validation: (Rule) => Rule.required(),
 								}),
 								defineField({
 									name: "image",
 									title: "Image",
 									type: "image",
-									options: {
-										hotspot: true,
-									},
+									options: { hotspot: true },
+									description: "Optional icon or image for this pain point",
 								}),
 							],
+							preview: {
+								select: {
+									title: "title",
+									subtitle: "description",
+									media: "image",
+								},
+								prepare({ title, subtitle, media }) {
+									return {
+										title: title || "Pain Point",
+										subtitle: subtitle ? subtitle.slice(0, 60) : "",
+										media,
+									}
+								},
+							},
 						},
 					],
 				}),
+			],
+		}),
+
+		// Services
+		defineField({
+			name: "services",
+			title: "Service Name",
+			type: "string",
+			group: "services",
+			description: "Main service name (e.g., 'Web Development', 'Website Development', 'Web App Development')",
+		}),
+		defineField({
+			name: "serviceCards",
+			title: "Service Cards",
+			type: "array",
+			group: "services",
+			of: [
+				{
+					type: "object",
+					fields: [
+						defineField({
+							name: "id",
+							title: "ID",
+							type: "string",
+							validation: (Rule) => Rule.required(),
+						}),
+						defineField({
+							name: "name",
+							title: "Name",
+							type: "string",
+							validation: (Rule) => Rule.required(),
+						}),
+						defineField({
+							name: "title",
+							title: "Title",
+							type: "string",
+							validation: (Rule) => Rule.required(),
+						}),
+						defineField({
+							name: "description",
+							title: "Description",
+							type: "text",
+							rows: 3,
+						}),
+						defineField({
+							name: "image",
+							title: "Image",
+							type: "image",
+							options: { hotspot: true },
+						}),
+						defineField({
+							name: "video",
+							title: "Video",
+							type: "file",
+							options: {
+								accept: "video/*",
+							},
+							description: "Optional service card video",
+						}),
+						defineField({
+							name: "link",
+							title: "Link",
+							type: "string",
+							description: "URL path for this service card",
+						}),
+					],
+					preview: {
+						select: {
+							title: "title",
+							subtitle: "name",
+							media: "image",
+						},
+						prepare({ title, subtitle, media }) {
+							return {
+								title: title || "Service Card",
+								subtitle: subtitle || "",
+								media,
+							}
+						},
+					},
+				},
 			],
 		}),
 
@@ -374,29 +411,39 @@ export const seoPage = defineType({
 					name: "text1",
 					title: "Text 1",
 					type: "text",
+					rows: 4,
 				}),
 				defineField({
 					name: "text2",
 					title: "Text 2",
 					type: "text",
+					rows: 4,
 				}),
 				defineField({
 					name: "text3",
 					title: "Text 3",
 					type: "text",
+					rows: 4,
 				}),
 				defineField({
 					name: "image",
 					title: "Image",
 					type: "image",
-					options: {
-						hotspot: true,
-					},
+					options: { hotspot: true },
 				}),
 				defineField({
 					name: "alt",
 					title: "Image Alt Text",
 					type: "string",
+				}),
+				defineField({
+					name: "video",
+					title: "Video",
+					type: "file",
+					options: {
+						accept: "video/*",
+					},
+					description: "Optional content video",
 				}),
 			],
 		}),
@@ -441,9 +488,10 @@ export const seoPage = defineType({
 					name: "subheading",
 					title: "Subheading",
 					type: "text",
+					rows: 3,
 				}),
 				defineField({
-					name: "benefits",
+					name: "items",
 					title: "Benefits",
 					type: "array",
 					of: [
@@ -460,9 +508,37 @@ export const seoPage = defineType({
 									name: "description",
 									title: "Description",
 									type: "text",
+									rows: 4,
 									validation: (Rule) => Rule.required(),
 								}),
+								defineField({
+									name: "icon",
+									title: "Icon",
+									type: "string",
+									description: "Emoji or icon identifier",
+								}),
+								defineField({
+									name: "image",
+									title: "Image",
+									type: "image",
+									options: { hotspot: true },
+									description: "Optional benefit image",
+								}),
 							],
+							preview: {
+								select: {
+									title: "title",
+									subtitle: "description",
+									media: "image",
+								},
+								prepare({ title, subtitle, media }) {
+									return {
+										title: title || "Benefit",
+										subtitle: subtitle ? subtitle.slice(0, 60) : "",
+										media,
+									}
+								},
+							},
 						},
 					],
 				}),
@@ -485,6 +561,7 @@ export const seoPage = defineType({
 					name: "subheading",
 					title: "Subheading",
 					type: "text",
+					rows: 3,
 				}),
 				defineField({
 					name: "features",
@@ -504,6 +581,7 @@ export const seoPage = defineType({
 									name: "description",
 									title: "Description",
 									type: "text",
+									rows: 4,
 									validation: (Rule) => Rule.required(),
 								}),
 								defineField({
@@ -512,7 +590,37 @@ export const seoPage = defineType({
 									type: "string",
 									description: "Emoji or icon identifier",
 								}),
+								defineField({
+									name: "image",
+									title: "Image",
+									type: "image",
+									options: { hotspot: true },
+									description: "Optional feature image",
+								}),
+								defineField({
+									name: "video",
+									title: "Video",
+									type: "file",
+									options: {
+										accept: "video/*",
+									},
+									description: "Optional feature video",
+								}),
 							],
+							preview: {
+								select: {
+									title: "title",
+									subtitle: "description",
+									media: "image",
+								},
+								prepare({ title, subtitle, media }) {
+									return {
+										title: title || "Feature",
+										subtitle: subtitle ? subtitle.slice(0, 60) : "",
+										media,
+									}
+								},
+							},
 						},
 					],
 				}),
@@ -533,16 +641,6 @@ export const seoPage = defineType({
 					description: "Service name for FAQ context",
 				}),
 				defineField({
-					name: "heading",
-					title: "Heading",
-					type: "string",
-				}),
-				defineField({
-					name: "subheading",
-					title: "Subheading",
-					type: "text",
-				}),
-				defineField({
 					name: "faqs",
 					title: "FAQs",
 					type: "array",
@@ -560,9 +658,22 @@ export const seoPage = defineType({
 									name: "a",
 									title: "Answer",
 									type: "text",
+									rows: 5,
 									validation: (Rule) => Rule.required(),
 								}),
 							],
+							preview: {
+								select: {
+									title: "q",
+									subtitle: "a",
+								},
+								prepare({ title, subtitle }) {
+									return {
+										title: title || "FAQ",
+										subtitle: subtitle ? subtitle.slice(0, 60) : "",
+									}
+								},
+							},
 						},
 					],
 				}),
@@ -576,7 +687,7 @@ export const seoPage = defineType({
 		},
 		prepare({ title, subtitle }) {
 			return {
-				title: title || "Untitled SEO Service",
+				title: title || "Untitled Web Development Service",
 				subtitle: subtitle ? `/${subtitle}` : "No slug",
 			}
 		},

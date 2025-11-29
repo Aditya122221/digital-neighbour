@@ -249,6 +249,15 @@ export default defineConfig({
 					),
 					"seoPage",
 					"paidAdsPage",
+					"socialMediaPage",
+					"contentMarketingPage",
+					"webDevelopmentPage",
+					"appDevelopmentPage",
+					"hostingItSecurityPage",
+					"aiAutomationPage",
+					"dataAnalyticsPage",
+					"industriesPage",
+					"professionalsMarketingPage",
 				])
 
 				return S.list()
@@ -283,6 +292,69 @@ export default defineConfig({
 								S.documentTypeList("paidAdsPage")
 									.title("Paid Ads Service Pages")
 									.filter('_type == "paidAdsPage"')
+							),
+						S.listItem()
+							.title("Social Media Service Pages")
+							.child(
+								S.documentTypeList("socialMediaPage")
+									.title("Social Media Service Pages")
+									.filter('_type == "socialMediaPage"')
+							),
+						S.listItem()
+							.title("Content Marketing Service Pages")
+							.child(
+								S.documentTypeList("contentMarketingPage")
+									.title("Content Marketing Service Pages")
+									.filter('_type == "contentMarketingPage"')
+							),
+						S.listItem()
+							.title("Web Development Service Pages")
+							.child(
+								S.documentTypeList("webDevelopmentPage")
+									.title("Web Development Service Pages")
+									.filter('_type == "webDevelopmentPage"')
+							),
+						S.listItem()
+							.title("App Development Service Pages")
+							.child(
+								S.documentTypeList("appDevelopmentPage")
+									.title("App Development Service Pages")
+									.filter('_type == "appDevelopmentPage"')
+							),
+						S.listItem()
+							.title("Hosting & IT Security Service Pages")
+							.child(
+								S.documentTypeList("hostingItSecurityPage")
+									.title("Hosting & IT Security Service Pages")
+									.filter('_type == "hostingItSecurityPage"')
+							),
+						S.listItem()
+							.title("AI & Automation Service Pages")
+							.child(
+								S.documentTypeList("aiAutomationPage")
+									.title("AI & Automation Service Pages")
+									.filter('_type == "aiAutomationPage"')
+							),
+						S.listItem()
+							.title("Data & Analytics Service Pages")
+							.child(
+								S.documentTypeList("dataAnalyticsPage")
+									.title("Data & Analytics Service Pages")
+									.filter('_type == "dataAnalyticsPage"')
+							),
+						S.listItem()
+							.title("Industries Service Pages")
+							.child(
+								S.documentTypeList("industriesPage")
+									.title("Industries Service Pages")
+									.filter('_type == "industriesPage"')
+							),
+						S.listItem()
+							.title("Professionals Marketing Service Pages")
+							.child(
+								S.documentTypeList("professionalsMarketingPage")
+									.title("Professionals Marketing Service Pages")
+									.filter('_type == "professionalsMarketingPage"')
 							),
 						...S.documentTypeListItems().filter(
 							(listItem) =>
