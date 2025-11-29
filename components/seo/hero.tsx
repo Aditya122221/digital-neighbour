@@ -12,10 +12,14 @@ interface SeoHeroProps {
     subheading: string;
     image?: string;
   };
+  defaultImageSrc?: string | null;
 }
 
-export default function SeoHero({ data }: SeoHeroProps) {
-  const heroImage = (data.image ?? "").trim() || DEFAULT_SEO_HERO_IMAGE;
+export default function SeoHero({ data, defaultImageSrc }: SeoHeroProps) {
+  const heroImage =
+    (data.image ?? "").trim() ||
+    (defaultImageSrc ?? "").trim() ||
+    DEFAULT_SEO_HERO_IMAGE;
 
   return (
     <section className="bg-white pt-24 md:pt-32 lg:pt-40 pb-16 md:pb-24 lg:pb-32 overflow-x-hidden">
@@ -57,15 +61,15 @@ export default function SeoHero({ data }: SeoHeroProps) {
           {/* Right side - Image */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
-            animate={{ 
-              opacity: 1, 
+            animate={{
+              opacity: 1,
               x: 0,
-              y: [0, -20, 0]
+              y: [0, -20, 0],
             }}
-            transition={{ 
+            transition={{
               opacity: { duration: 0.8, ease: "easeOut", delay: 0.2 },
               x: { duration: 0.8, ease: "easeOut", delay: 0.2 },
-              y: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }
+              y: { duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 },
             }}
             className="relative w-4/4 h-4/4 overflow-hidden mx-auto rounded-3xl"
           >
@@ -83,4 +87,3 @@ export default function SeoHero({ data }: SeoHeroProps) {
     </section>
   );
 }
-

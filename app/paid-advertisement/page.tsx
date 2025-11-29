@@ -26,50 +26,73 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
-	const paidAdsOverview = await getPaidAdsServiceBySlug("paid-advertisement");
-	const paidAdsHeading =
-		paidAdsOverview?.hero?.heading ?? "Paid Advertising Services";
-	const paidAdsDescription =
-		paidAdsOverview?.hero?.subheading ??
-		"Launch and optimise high-ROI paid media programmes across Google, Meta, LinkedIn, and YouTube with Digital Neighbour.";
+  const paidAdsOverview = await getPaidAdsServiceBySlug("paid-advertisement");
+  const paidAdsHeading =
+    paidAdsOverview?.hero?.heading ?? "Paid Advertising Services";
+  const paidAdsDescription =
+    paidAdsOverview?.hero?.subheading ??
+    "Launch and optimise high-ROI paid media programmes across Google, Meta, LinkedIn, and YouTube with Digital Neighbour.";
 
-	return buildMetadata({
-		title: paidAdsHeading,
-		description: paidAdsDescription,
-		path: "/paid-advertisement",
-	});
+  return buildMetadata({
+    title: paidAdsHeading,
+    description: paidAdsDescription,
+    path: "/paid-advertisement",
+  });
 }
 
 export default async function PaidAdvertisementPage() {
   const currentData = await getPaidAdsServiceBySlug("paid-advertisement");
-  
+
   if (!currentData) {
     notFound();
   }
+
+  const defaultHeroVideo =
+    currentData?.hero?.defaultHeroVideo?.asset?.url ||
+    currentData?.hero?.defaultHeroVideo?.url ||
+    null;
 
   return (
     <main>
       <div className="relative">
         <Navbar />
-        <PaidAdsHero data={currentData?.hero || { heading: "Performance-Driven Paid Advertising", subheading: "We scale profitable paid media across Google, Meta, LinkedIn, and YouTube." }} />
+        <PaidAdsHero
+          data={
+            currentData?.hero || {
+              heading: "Performance-Driven Paid Advertising",
+              subheading:
+                "We scale profitable paid media across Google, Meta, LinkedIn, and YouTube.",
+            }
+          }
+          defaultVideoSrc={defaultHeroVideo}
+        />
       </div>
       <Form data={currentData?.form} />
-        <BrandsMarquee />
-        <IntroParagraph data={currentData?.introParagraph} />
+      <BrandsMarquee />
+      <IntroParagraph data={currentData?.introParagraph} />
       <PainPoints data={currentData?.painPoints} />
-      <Services data={currentData?.services} serviceCards={currentData?.serviceCards} basePath="/paid-advertisement" />
-  <Strategic data={ currentData?.strategic } serviceName = { currentData?.services } />
-  <Content data={ currentData?.content } imagePathPrefix = "/seo/content" />
-    <Apart />
-    < CaseStudy />
-    <Process2 data={currentData?.services} processData={currentData?.process} />
+      <Services
+        data={currentData?.services}
+        serviceCards={currentData?.serviceCards}
+        basePath="/paid-advertisement"
+      />
+      <Strategic
+        data={currentData?.strategic}
+        serviceName={currentData?.services}
+      />
+      <Content data={currentData?.content} imagePathPrefix="/seo/content" />
+      <Apart />
+      <CaseStudy />
+      <Process2
+        data={currentData?.services}
+        processData={currentData?.process}
+      />
       <KeyBenefits data={currentData?.keyBenefits} />
-  < Features data = { currentData?.features } />
-  <Faq data={currentData?.faq} />
+      <Features data={currentData?.features} />
+      <Faq data={currentData?.faq} />
       <OtherServices />
       <Cta data={currentData?.services} />
       <Footer />
     </main>
   );
 }
-

@@ -12,6 +12,7 @@ import {
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
 import { getSeoServiceBySlug } from "@/lib/sanity-service-data";
+import { loadSeoPageData } from "@/lib/seo-page-data";
 import SeoHero from "@/components/seo/hero";
 import Content from "@/components/commonSections/content";
 import Services from "@/components/commonSections/services";
@@ -42,6 +43,8 @@ const slugAliases: Record<string, SeoServiceSlug> = {
   orm: "online-reputation-management",
 };
 
+const DEFAULT_SEO_SLUG: SeoServiceSlug = "search-engine-optimisation";
+
 export const LOCATION_ENABLED_SEO_SLUGS: SeoServiceSlug[] = [
   "search-engine-optimisation",
   "seo-audits",
@@ -51,7 +54,7 @@ export const LOCATION_ENABLED_SEO_SLUGS: SeoServiceSlug[] = [
 function resolveSeoSlug(requestedSlug: string): SeoServiceSlug | null {
   // Check if it's a direct match or an alias
   const directMatch = slugAliases[requestedSlug] || requestedSlug;
-  
+
   // Validate it's a valid SEO service slug
   // We'll validate by trying to fetch from Sanity
   return directMatch as SeoServiceSlug;
@@ -123,6 +126,7 @@ export default async function SeoLocationPage({
   params: Promise<{ slug: string; location: string }>;
 }) {
   const { slug: requestedSlug, location: requestedLocation } = await params;
+  const defaultSeoDataPromise = loadSeoPageData("seo");
 
   const canonicalSlug = resolveSeoSlug(requestedSlug);
 
@@ -169,6 +173,9 @@ export default async function SeoLocationPage({
   const locationName =
     getLocationDisplayName(ensuredLocation) ?? ensuredLocation;
   const personalizedData = personalizeSeoData(localizedBase, locationName);
+  const defaultSeoData = await defaultSeoDataPromise;
+  const defaultHeroImage =
+    defaultSeoData?.hero?.defaultHeroImage || defaultSeoData?.hero?.image;
 
   return (
     <main>
@@ -182,6 +189,7 @@ export default async function SeoLocationPage({
                 "We've helped leading and emerging brands scale their traffic and revenue organically for over a decade with our experience in seo consulting.",
             }
           }
+          defaultImageSrc={defaultHeroImage}
         />
       </div>
       <Form data={personalizedData?.form} />
@@ -209,8 +217,8 @@ export default async function SeoLocationPage({
       <OtherServices />
       <Testimonials />
       <TestimonalTwo />
-        <BookACall />
-        <Blogs />
+      <BookACall />
+      <Blogs />
       <Footer />
     </main>
   );

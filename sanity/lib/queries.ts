@@ -374,6 +374,14 @@ export const seoPageQuery = `*[_type == "seoPage" && slug.current == $slug][0]{
   hero{
     heading,
     subheading,
+    defaultHeroImage{
+      ...,
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    },
     image{
       ...,
       asset->{
@@ -491,7 +499,22 @@ export const paidAdsPageQuery = `*[_type == "paidAdsPage" && slug.current == $sl
   },
   hero{
     heading,
-    subheading
+    subheading,
+    defaultHeroVideo{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    },
+    bgVideo{
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    }
   },
   form{
     heading,
@@ -948,7 +971,22 @@ export const paidAdsServiceByTitleQuery = `*[_type == "paidAdvertService" && ser
   },
   hero{
     heading,
-    subheading
+    subheading,
+    defaultHeroVideo{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    },
+    bgVideo{
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    }
   },
   form{
     heading,
@@ -1904,7 +1942,9 @@ export const industriesServiceByTitleQuery = `*[_type == "industriesService" && 
 }`;
 
 // Generic page query template - can be reused for all page types
-const createPageQuery = (type: string) => `*[_type == "${type}" && slug.current == $slug][0]{
+const createPageQuery = (
+  type: string,
+) => `*[_type == "${type}" && slug.current == $slug][0]{
   slug{
     current
   },
@@ -1928,6 +1968,14 @@ const createPageQuery = (type: string) => `*[_type == "${type}" && slug.current 
   hero{
     heading,
     subheading,
+    defaultHeroImage{
+      ...,
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    },
     image{
       ...,
       asset->{
@@ -2031,14 +2079,20 @@ const createPageQuery = (type: string) => `*[_type == "${type}" && slug.current 
 
 // New page queries for all service page types
 export const socialMediaPageQuery = createPageQuery("socialMediaPage");
-export const contentMarketingPageQuery = createPageQuery("contentMarketingPage");
+export const contentMarketingPageQuery = createPageQuery(
+  "contentMarketingPage",
+);
 export const webDevelopmentPageQuery = createPageQuery("webDevelopmentPage");
 export const appDevelopmentPageQuery = createPageQuery("appDevelopmentPage");
-export const hostingItSecurityPageQuery = createPageQuery("hostingItSecurityPage");
+export const hostingItSecurityPageQuery = createPageQuery(
+  "hostingItSecurityPage",
+);
 export const aiAutomationPageQuery = createPageQuery("aiAutomationPage");
 export const dataAnalyticsPageQuery = createPageQuery("dataAnalyticsPage");
 export const industriesPageQuery = createPageQuery("industriesPage");
-export const professionalsMarketingPageQuery = createPageQuery("professionalsMarketingPage");
+export const professionalsMarketingPageQuery = createPageQuery(
+  "professionalsMarketingPage",
+);
 
 export const professionalMarketingServiceByTitleQuery = `*[_type == "professionalMarketingService" && serviceName == $title][0]{
   _id,
@@ -2147,4 +2201,3 @@ export const professionalMarketingServiceByTitleQuery = `*[_type == "professiona
     }
   }
 }`;
-

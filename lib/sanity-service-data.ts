@@ -114,7 +114,7 @@ export function titleToSlug(title: string): string | null {
  */
 async function getServiceByTitle(
   serviceType: keyof typeof serviceTypeMap,
-  title: string
+  title: string,
 ) {
   const serviceConfig = serviceTypeMap[serviceType];
   if (!serviceConfig) {
@@ -122,12 +122,15 @@ async function getServiceByTitle(
   }
 
   try {
-    const data = await sanityFetch({ query: serviceConfig.query, params: { title } });
+    const data = await sanityFetch({
+      query: serviceConfig.query,
+      params: { title },
+    });
     return data;
   } catch (error) {
     console.error(
       `Error fetching ${serviceType} service data for title "${title}":`,
-      error
+      error,
     );
     return null;
   }
@@ -159,7 +162,7 @@ export async function getSocialMediaServiceBySlug(slug: string): Promise<any> {
  * Fetch Content Marketing service data from Sanity by slug
  */
 export async function getContentMarketingServiceBySlug(
-  slug: string
+  slug: string,
 ): Promise<any> {
   return getServiceBySlug("content-marketing", slug);
 }
@@ -168,7 +171,7 @@ export async function getContentMarketingServiceBySlug(
  * Fetch Web Development service data from Sanity by slug
  */
 export async function getWebDevelopmentServiceBySlug(
-  slug: string
+  slug: string,
 ): Promise<any> {
   return getServiceBySlug("web-development", slug);
 }
@@ -177,7 +180,7 @@ export async function getWebDevelopmentServiceBySlug(
  * Fetch App Development service data from Sanity by slug
  */
 export async function getAppDevelopmentServiceBySlug(
-  slug: string
+  slug: string,
 ): Promise<any> {
   return getServiceBySlug("app-development", slug);
 }
@@ -200,7 +203,7 @@ export async function getAiAutomationServiceBySlug(slug: string): Promise<any> {
  * Fetch Data Analytics service data from Sanity by slug
  */
 export async function getDataAnalyticsServiceBySlug(
-  slug: string
+  slug: string,
 ): Promise<any> {
   return getServiceBySlug("data-analytics", slug);
 }
@@ -216,7 +219,7 @@ export async function getIndustriesServiceBySlug(slug: string): Promise<any> {
  * Fetch Professional Marketing service data from Sanity by slug
  */
 export async function getProfessionalMarketingServiceBySlug(
-  slug: string
+  slug: string,
 ): Promise<any> {
   return getServiceBySlug("professionals", slug);
 }
@@ -242,7 +245,7 @@ const pageQueryMap: Record<string, string> = {
  */
 export async function getServiceBySlug(
   serviceType: keyof typeof serviceTypeMap,
-  slug: string
+  slug: string,
 ): Promise<any> {
   // First, try fetching from new page schema types (seoPage, paidAdsPage, etc.)
   const pageQuery = pageQueryMap[serviceType];
@@ -274,7 +277,7 @@ export async function getServiceBySlug(
  */
 export async function getServiceData(
   serviceType: keyof typeof serviceTypeMap,
-  slug: string
+  slug: string,
 ): Promise<any> {
   return getServiceBySlug(serviceType, slug);
 }
