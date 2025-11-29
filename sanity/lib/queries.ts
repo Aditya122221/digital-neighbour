@@ -1413,7 +1413,31 @@ export const webDevelopmentServiceByTitleQuery = `*[_type == "webDevelopmentServ
   },
   hero{
     heading,
-    subheading
+    subheading,
+    defaultHeroVideo{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    },
+    bgVideo{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    },
+    video{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    }
   },
   form{
     heading,

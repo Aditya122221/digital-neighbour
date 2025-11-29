@@ -217,6 +217,17 @@ export default async function WebDevelopmentLocationPage({
     getLocationDisplayName(ensuredLocation) ?? ensuredLocation;
   const personalizedData = personalizeSeoData(localizedBase, locationName);
 
+  // Fetch default hero video from the main web-development entry
+  const { getWebDevelopmentServiceBySlug } = await import(
+    "@/lib/sanity-service-data"
+  );
+  const rootWebDevData =
+    await getWebDevelopmentServiceBySlug("web-development");
+  const defaultHeroVideo =
+    rootWebDevData?.hero?.defaultHeroVideo?.asset?.url ||
+    rootWebDevData?.hero?.defaultHeroVideo?.url ||
+    null;
+
   const { introData, painData, benefitsData } =
     buildPageSections(personalizedData);
 
@@ -224,7 +235,10 @@ export default async function WebDevelopmentLocationPage({
     <main>
       <div className="relative">
         <Navbar />
-        <WebDevHero data={personalizedData?.hero} />
+        <WebDevHero
+          data={personalizedData?.hero}
+          defaultVideoSrc={defaultHeroVideo}
+        />
       </div>
       <Form data={personalizedData?.form} />
       <BrandsMarquee />

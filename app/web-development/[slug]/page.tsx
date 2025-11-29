@@ -42,8 +42,11 @@ function fromKebabToTitle(input: string) {
     .join(" ");
 }
 
-
-function renderWebDevPage(data: any, slug: string) {
+function renderWebDevPage(
+  data: any,
+  slug: string,
+  defaultHeroVideo?: string | null,
+) {
   const heroFallback = {
     heading: fromKebabToTitle(slug),
     subheading:
@@ -61,6 +64,7 @@ function renderWebDevPage(data: any, slug: string) {
               subheading: heroFallback.subheading,
             }
           }
+          defaultVideoSrc={defaultHeroVideo}
         />
       </div>
       <Form data={data?.form} />
@@ -97,9 +101,7 @@ export async function generateMetadata({
   // Get base data from Sanity
   const baseData = await getWebDevelopmentServiceBySlug(DEFAULT_WEBDEV_SLUG);
   const baseHeading =
-    baseData?.metadata ??
-    baseData?.hero?.heading ??
-    "Web Development Services";
+    baseData?.metadata ?? baseData?.hero?.heading ?? "Web Development Services";
   const baseDescription =
     baseData?.description ??
     baseData?.hero?.subheading ??
@@ -125,7 +127,7 @@ export async function generateMetadata({
       currentData?.hero?.subheading ??
       currentData?.introParagraph?.heading ??
       `Explore ${fromKebabToTitle(
-        slug
+        slug,
       )} solutions created by Digital Neighbour.`;
 
     return buildMetadata({
@@ -157,16 +159,11 @@ export async function generateMetadata({
       baseData,
     );
     const locationName =
-      getLocationDisplayName(ensuredLocation) ??
-      humanizeSlug(ensuredLocation);
-    const personalizedData = personalizeSeoData(
-      localizedBase,
-      locationName,
-    );
+      getLocationDisplayName(ensuredLocation) ?? humanizeSlug(ensuredLocation);
+    const personalizedData = personalizeSeoData(localizedBase, locationName);
 
     const heading =
-      personalizedData?.hero?.heading ??
-      `Web Development in ${locationName}`;
+      personalizedData?.hero?.heading ?? `Web Development in ${locationName}`;
     const description =
       personalizedData?.hero?.subheading ??
       `Build and launch digital experiences in ${locationName} with Digital Neighbour.`;
@@ -188,10 +185,22 @@ export default async function WebDevSlugPage({
 }: {
   params: { slug: string };
 }) {
+  const rootWebDevPromise = getWebDevelopmentServiceBySlug(DEFAULT_WEBDEV_SLUG);
+
+  const resolveDefaultHeroVideo = async () => {
+    const rootData = await rootWebDevPromise;
+    return (
+      rootData?.hero?.defaultHeroVideo?.asset?.url ||
+      rootData?.hero?.defaultHeroVideo?.url ||
+      null
+    );
+  };
+
   // Try to fetch from Sanity first
   const currentData = await getWebDevelopmentServiceBySlug(params.slug);
   if (currentData) {
-    return renderWebDevPage(currentData, params.slug);
+    const defaultHeroVideo = await resolveDefaultHeroVideo();
+    return renderWebDevPage(currentData, params.slug, defaultHeroVideo);
   }
 
   const locationSlug = normalizeLocationSlug(params.slug);
@@ -208,7 +217,7 @@ export default async function WebDevSlugPage({
     }
 
     // Get base data from Sanity
-    const baseData = await getWebDevelopmentServiceBySlug(DEFAULT_WEBDEV_SLUG);
+    const baseData = await rootWebDevPromise;
     if (!baseData) {
       notFound();
     }
@@ -223,7 +232,12 @@ export default async function WebDevSlugPage({
       getLocationDisplayName(ensuredLocation) ?? ensuredLocation;
     const personalizedData = personalizeSeoData(localizedBase, locationName);
 
-    return renderWebDevPage(personalizedData, DEFAULT_WEBDEV_SLUG);
+    const defaultHeroVideo = await resolveDefaultHeroVideo();
+    return renderWebDevPage(
+      personalizedData,
+      DEFAULT_WEBDEV_SLUG,
+      defaultHeroVideo,
+    );
   }
 
   notFound();
