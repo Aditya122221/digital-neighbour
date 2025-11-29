@@ -157,28 +157,48 @@ export const appDevelopmentPage = defineType({
 					type: "string",
 					validation: (Rule) => Rule.required(),
 				}),
-				defineField({
-					name: "subheading",
-					title: "Subheading",
-					type: "text",
-					validation: (Rule) => Rule.required(),
-				}),
-				defineField({
-					name: "image",
-					title: "Hero Image",
-					type: "image",
-					options: { hotspot: true },
-					description: "Optional hero image",
-				}),
-				defineField({
-					name: "video",
-					title: "Hero Video",
-					type: "file",
-					options: {
-						accept: "video/*",
-					},
-					description: "Optional hero video file",
-				}),
+			defineField({
+				name: "subheading",
+				title: "Subheading",
+				type: "text",
+				validation: (Rule) => Rule.required(),
+			}),
+			defineField({
+				name: "defaultHeroImages",
+				title: "Default Hero Images",
+				type: "array",
+				description:
+					"Fallback hero images (5 images) used by other app development pages when they don't upload their own images.",
+				of: [{ type: "image", options: { hotspot: true } }],
+				validation: (Rule) => Rule.max(5),
+				hidden: ({ document }) =>
+					document?.slug?.current !== "app-development",
+			}),
+			defineField({
+				name: "heroImages",
+				title: "Hero Images",
+				type: "array",
+				description:
+					"Page-specific hero images for the slider (up to 5 images). If not provided, default images will be used.",
+				of: [{ type: "image", options: { hotspot: true } }],
+				validation: (Rule) => Rule.max(5),
+			}),
+			defineField({
+				name: "image",
+				title: "Hero Image",
+				type: "image",
+				options: { hotspot: true },
+				description: "Optional hero image",
+			}),
+			defineField({
+				name: "video",
+				title: "Hero Video",
+				type: "file",
+				options: {
+					accept: "video/*",
+				},
+				description: "Optional hero video file",
+			}),
 			],
 		}),
 

@@ -189,11 +189,22 @@ export default async function HostingItSecurityLocationPage({
     getLocationDisplayName(ensuredLocation) ?? ensuredLocation;
   const personalizedData = personalizeSeoData(localizedBase, locationName);
 
+  // Fetch default hero video from the main hosting-it-security entry
+  const { getHostingServiceBySlug } = await import("@/lib/sanity-service-data");
+  const rootHostingData = await getHostingServiceBySlug("hosting-it-security");
+  const defaultHeroVideo =
+    rootHostingData?.hero?.defaultHeroVideo?.asset?.url ||
+    rootHostingData?.hero?.defaultHeroVideo?.url ||
+    null;
+
   return (
     <main>
       <div className="relative">
         <Navbar />
-        <HostingHero data={personalizedData?.hero} />
+        <HostingHero
+          data={personalizedData?.hero}
+          defaultVideoSrc={defaultHeroVideo}
+        />
       </div>
       <Form data={personalizedData?.form} />
       <BrandsMarquee />

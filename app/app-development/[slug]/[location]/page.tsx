@@ -1,251 +1,247 @@
-import type { Metadata } from "next"
-import { notFound, redirect } from "next/navigation"
+import type { Metadata } from "next";
+import { notFound, redirect } from "next/navigation";
 
 import {
-	ensureLocationForService,
-	getAllAppLocationParams,
-	getAppLocationMetadata,
-	getLocationDisplayName,
-	getLocationPageData,
-	normalizeLocationSlug,
-	isValidLocationSlug,
-} from "@/lib/location-data"
-import { personalizeSeoData } from "@/lib/seo-location-personalization"
-import appDevData from "@/data/app-development.json"
-import AppDevHero from "@/components/app-development/hero"
-import Certificates from "@/components/app-development/certificates"
-import Industries from "@/components/commonSections/industries"
-import Content from "@/components/commonSections/content"
-import Services from "@/components/commonSections/services"
-import Form from "@/components/commonSections/form"
-import Navbar from "@/components/core/navbar"
-import Footer from "@/components/core/footer"
-import BrandsMarquee from "@/components/homepage/brandsmarquee"
-import Process2 from "@/components/homepage/process2"
-import Cta from "@/components/commonSections/cta"
-import Apart from "@/components/homepage/apart"
-import OtherServices from "@/components/commonSections/otherservices"
-import Faq from "@/components/commonSections/faq"
-import CaseStudy from "@/components/homepage/casestudy"
-import IntroParagraph from "@/components/commonSections/introparagraph"
-import PainPoints from "@/components/commonSections/painpoints"
-import KeyBenefits from "@/components/commonSections/keybenefits"
-import Features from "@/components/commonSections/features"
-import type { AppServiceSlug } from "@/config/app-services"
+  ensureLocationForService,
+  getAllAppLocationParams,
+  getAppLocationMetadata,
+  getLocationDisplayName,
+  getLocationPageData,
+  normalizeLocationSlug,
+  isValidLocationSlug,
+} from "@/lib/location-data";
+import { personalizeSeoData } from "@/lib/seo-location-personalization";
+import appDevData from "@/data/app-development.json";
+import AppDevHero from "@/components/app-development/hero";
+import Certificates from "@/components/app-development/certificates";
+import Industries from "@/components/commonSections/industries";
+import Content from "@/components/commonSections/content";
+import Services from "@/components/commonSections/services";
+import Form from "@/components/commonSections/form";
+import Navbar from "@/components/core/navbar";
+import Footer from "@/components/core/footer";
+import BrandsMarquee from "@/components/homepage/brandsmarquee";
+import Process2 from "@/components/homepage/process2";
+import Cta from "@/components/commonSections/cta";
+import Apart from "@/components/homepage/apart";
+import OtherServices from "@/components/commonSections/otherservices";
+import Faq from "@/components/commonSections/faq";
+import CaseStudy from "@/components/homepage/casestudy";
+import IntroParagraph from "@/components/commonSections/introparagraph";
+import PainPoints from "@/components/commonSections/painpoints";
+import KeyBenefits from "@/components/commonSections/keybenefits";
+import Features from "@/components/commonSections/features";
+import type { AppServiceSlug } from "@/config/app-services";
 
 export const LOCATION_ENABLED_APP_SLUGS: AppServiceSlug[] = [
-	"app-development",
-	"ios-app-development",
-	"software-development",
-]
+  "app-development",
+  "ios-app-development",
+  "software-development",
+];
 
 const slugAliases: Record<string, AppServiceSlug> = {
-	"app-development-services": "app-development",
-	"mobile-app-development": "app-development",
-	"ios-development": "ios-app-development",
-	iosappdevelopment: "ios-app-development",
-	"software-development-services": "software-development",
-	softwaredevelopment: "software-development",
-}
+  "app-development-services": "app-development",
+  "mobile-app-development": "app-development",
+  "ios-development": "ios-app-development",
+  iosappdevelopment: "ios-app-development",
+  "software-development-services": "software-development",
+  softwaredevelopment: "software-development",
+};
 
 const canonicalToDataKey: Record<AppServiceSlug, keyof typeof appDevData> = {
-	"app-development": "app-development",
-	"ios-app-development": "ios-app-development",
-	"android-app-development": "android-app-development",
-	"react-native-development": "react-native-development",
-	"flutter-app-development": "flutter-app-development",
-	"software-development": "software-development",
-	"progressive-web-apps": "progressive-web-apps",
-}
+  "app-development": "app-development",
+  "ios-app-development": "ios-app-development",
+  "android-app-development": "android-app-development",
+  "react-native-development": "react-native-development",
+  "flutter-app-development": "flutter-app-development",
+  "software-development": "software-development",
+  "progressive-web-apps": "progressive-web-apps",
+};
 
 function resolveAppSlug(requestedSlug: string): AppServiceSlug | null {
-	if (requestedSlug in slugAliases) {
-		return slugAliases[requestedSlug]
-	}
+  if (requestedSlug in slugAliases) {
+    return slugAliases[requestedSlug];
+  }
 
-	if (
-		Object.prototype.hasOwnProperty.call(
-			appDevData,
-			requestedSlug as keyof typeof appDevData
-		)
-	) {
-		return requestedSlug as AppServiceSlug
-	}
+  if (
+    Object.prototype.hasOwnProperty.call(
+      appDevData,
+      requestedSlug as keyof typeof appDevData,
+    )
+  ) {
+    return requestedSlug as AppServiceSlug;
+  }
 
-	return null
+  return null;
 }
 
 function getDataKeyForSlug(slug: AppServiceSlug) {
-	return canonicalToDataKey[slug] ?? slug
+  return canonicalToDataKey[slug] ?? slug;
 }
 
 export async function generateMetadata({
-	params,
+  params,
 }: {
-	params: Promise<{ slug: string; location: string }>
+  params: Promise<{ slug: string; location: string }>;
 }): Promise<Metadata> {
-	const { slug, location } = await params
-	const canonicalSlug = resolveAppSlug(slug)
+  const { slug, location } = await params;
+  const canonicalSlug = resolveAppSlug(slug);
 
-	// Validate that the service slug exists
-	if (!canonicalSlug) {
-		return { title: "Page Not Found" }
-	}
+  // Validate that the service slug exists
+  if (!canonicalSlug) {
+    return { title: "Page Not Found" };
+  }
 
-	const dataKey = getDataKeyForSlug(canonicalSlug)
-	const baseData = appDevData[dataKey as keyof typeof appDevData]
-	if (!baseData) {
-		return { title: "Page Not Found" }
-	}
+  const dataKey = getDataKeyForSlug(canonicalSlug);
+  const baseData = appDevData[dataKey as keyof typeof appDevData];
+  if (!baseData) {
+    return { title: "Page Not Found" };
+  }
 
-	const normalizedLocation = normalizeLocationSlug(location) ?? location
+  const normalizedLocation = normalizeLocationSlug(location) ?? location;
 
-	// First try to ensure location is enabled for the service
-	let ensuredLocation =
-		ensureLocationForService(
-			"app",
-			canonicalSlug,
-			normalizedLocation
-		) ?? normalizeLocationSlug(normalizedLocation)
+  // First try to ensure location is enabled for the service
+  let ensuredLocation =
+    ensureLocationForService("app", canonicalSlug, normalizedLocation) ??
+    normalizeLocationSlug(normalizedLocation);
 
-	// If not enabled for service, but it's a valid location slug, use it anyway
-	if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
-		ensuredLocation = normalizedLocation
-	}
+  // If not enabled for service, but it's a valid location slug, use it anyway
+  if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
+    ensuredLocation = normalizedLocation;
+  }
 
-	if (!ensuredLocation) {
-		return { title: "Page Not Found" }
-	}
+  if (!ensuredLocation) {
+    return { title: "Page Not Found" };
+  }
 
-	const metadata = getAppLocationMetadata(canonicalSlug, ensuredLocation)
+  const metadata = getAppLocationMetadata(canonicalSlug, ensuredLocation);
 
-	const canonicalUrl = `https://digital-neighbour.com/app-development/${canonicalSlug}/${ensuredLocation}`
+  const canonicalUrl = `https://digital-neighbour.com/app-development/${canonicalSlug}/${ensuredLocation}`;
 
-	return {
-		title: metadata.title,
-		description: metadata.description,
-		alternates: {
-			canonical: canonicalUrl,
-		},
-		openGraph: {
-			title: metadata.title,
-			description: metadata.description,
-			type: "website",
-			url: canonicalUrl,
-		},
-	}
+  return {
+    title: metadata.title,
+    description: metadata.description,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: metadata.title,
+      description: metadata.description,
+      type: "website",
+      url: canonicalUrl,
+    },
+  };
 }
 
 export async function generateStaticParams() {
-	return getAllAppLocationParams(LOCATION_ENABLED_APP_SLUGS)
+  return getAllAppLocationParams(LOCATION_ENABLED_APP_SLUGS);
 }
 
 export default async function AppDevelopmentLocationPage({
-	params,
+  params,
 }: {
-	params: Promise<{ slug: string; location: string }>
+  params: Promise<{ slug: string; location: string }>;
 }) {
-	const { slug: requestedSlug, location: requestedLocation } =
-		await params
+  const { slug: requestedSlug, location: requestedLocation } = await params;
 
-	const canonicalSlug = resolveAppSlug(requestedSlug)
+  const canonicalSlug = resolveAppSlug(requestedSlug);
 
-	// Validate that the service slug exists
-	if (!canonicalSlug) {
-		notFound()
-	}
+  // Validate that the service slug exists
+  if (!canonicalSlug) {
+    notFound();
+  }
 
-	const dataKey = getDataKeyForSlug(canonicalSlug)
-	const baseData = appDevData[dataKey as keyof typeof appDevData]
-	if (!baseData) {
-		notFound()
-	}
+  const dataKey = getDataKeyForSlug(canonicalSlug);
+  const baseData = appDevData[dataKey as keyof typeof appDevData];
+  if (!baseData) {
+    notFound();
+  }
 
-	const normalizedLocation =
-		normalizeLocationSlug(requestedLocation) ?? requestedLocation
+  const normalizedLocation =
+    normalizeLocationSlug(requestedLocation) ?? requestedLocation;
 
-	// First try to ensure location is enabled for the service
-	let ensuredLocation =
-		ensureLocationForService(
-			"app",
-			canonicalSlug,
-			normalizedLocation
-		) ?? normalizeLocationSlug(normalizedLocation)
+  // First try to ensure location is enabled for the service
+  let ensuredLocation =
+    ensureLocationForService("app", canonicalSlug, normalizedLocation) ??
+    normalizeLocationSlug(normalizedLocation);
 
-	// If not enabled for service, but it's a valid location slug, use it anyway
-	if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
-		ensuredLocation = normalizedLocation
-	}
+  // If not enabled for service, but it's a valid location slug, use it anyway
+  if (!ensuredLocation && isValidLocationSlug(normalizedLocation)) {
+    ensuredLocation = normalizedLocation;
+  }
 
-	if (!ensuredLocation) {
-		notFound()
-	}
+  if (!ensuredLocation) {
+    notFound();
+  }
 
-	if (
-		requestedSlug !== canonicalSlug ||
-		normalizeLocationSlug(requestedLocation) !== ensuredLocation
-	) {
-		redirect(`/app-development/${canonicalSlug}/${ensuredLocation}`)
-	}
+  if (
+    requestedSlug !== canonicalSlug ||
+    normalizeLocationSlug(requestedLocation) !== ensuredLocation
+  ) {
+    redirect(`/app-development/${canonicalSlug}/${ensuredLocation}`);
+  }
 
-	const localizedBase = await getLocationPageData(
-		"app",
-		canonicalSlug,
-		ensuredLocation,
-		baseData
-	)
-	const locationName =
-		getLocationDisplayName(ensuredLocation) ?? ensuredLocation
-	const personalizedData = personalizeSeoData(localizedBase, locationName)
+  const localizedBase = await getLocationPageData(
+    "app",
+    canonicalSlug,
+    ensuredLocation,
+    baseData,
+  );
+  const locationName =
+    getLocationDisplayName(ensuredLocation) ?? ensuredLocation;
+  const personalizedData = personalizeSeoData(localizedBase, locationName);
 
-	return (
-		<main>
-			<div className="relative">
-				<Navbar />
-				<AppDevHero data={personalizedData?.hero} />
-			</div>
-			<Form data={personalizedData?.form} />
-			<BrandsMarquee />
-			<IntroParagraph
-				data={
-					personalizedData?.introParagraph ||
-					personalizedData?.introparagraph
-				}
-			/>
-			<PainPoints
-				data={
-					personalizedData?.painPoints ||
-					personalizedData?.painpoints
-				}
-			/>
-			<Services
-				data={personalizedData?.services}
-				serviceCards={personalizedData?.serviceCards}
-				basePath="/app-development"
-			/>
-			<Content
-				data={personalizedData?.content}
-				imagePathPrefix="/seo/content"
-			/>
-			<Industries />
-			<CaseStudy />
-			<Certificates data={personalizedData?.certificates} />
-			<Process2
-				data={personalizedData?.services}
-				processData={personalizedData?.process}
-			/>
-			<KeyBenefits
-				data={
-					personalizedData?.keyBenefits ||
-					personalizedData?.keybenefits
-				}
-			/>
-			<Features data={personalizedData?.features} />
-			<Faq data={personalizedData?.faq} />
-			<OtherServices />
-			<Cta data={personalizedData?.services} />
-			<Apart />
-			<Footer />
-		</main>
-	)
+  // Fetch default hero images from the main app-development entry
+  const { getAppDevelopmentServiceBySlug } = await import(
+    "@/lib/sanity-service-data"
+  );
+  const rootAppData = await getAppDevelopmentServiceBySlug("app-development");
+  const defaultHeroImages = rootAppData?.hero?.defaultHeroImages || null;
+
+  return (
+    <main>
+      <div className="relative">
+        <Navbar />
+        <AppDevHero
+          data={personalizedData?.hero}
+          defaultImages={defaultHeroImages}
+        />
+      </div>
+      <Form data={personalizedData?.form} />
+      <BrandsMarquee />
+      <IntroParagraph
+        data={
+          personalizedData?.introParagraph || personalizedData?.introparagraph
+        }
+      />
+      <PainPoints
+        data={personalizedData?.painPoints || personalizedData?.painpoints}
+      />
+      <Services
+        data={personalizedData?.services}
+        serviceCards={personalizedData?.serviceCards}
+        basePath="/app-development"
+      />
+      <Content
+        data={personalizedData?.content}
+        imagePathPrefix="/seo/content"
+      />
+      <Industries />
+      <CaseStudy />
+      <Certificates data={personalizedData?.certificates} />
+      <Process2
+        data={personalizedData?.services}
+        processData={personalizedData?.process}
+      />
+      <KeyBenefits
+        data={personalizedData?.keyBenefits || personalizedData?.keybenefits}
+      />
+      <Features data={personalizedData?.features} />
+      <Faq data={personalizedData?.faq} />
+      <OtherServices />
+      <Cta data={personalizedData?.services} />
+      <Apart />
+      <Footer />
+    </main>
+  );
 }

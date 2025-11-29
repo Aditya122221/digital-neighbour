@@ -1,48 +1,90 @@
-"use client"
+"use client";
 
-import { motion, AnimatePresence } from "framer-motion"
-import Image from "next/image"
-import { useCallback, useEffect, useMemo, useState } from "react"
-import { CustomButton } from "@/components/core/button"
+import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { CustomButton } from "@/components/core/button";
+
+type ImageSource =
+  | string
+  | {
+      asset?: {
+        url?: string;
+      };
+      url?: string;
+    };
 
 interface AppDevHeroProps {
-	data: {
-		heading: string
-		subheading: string
-	}
+  data?: {
+    heading?: string;
+    subheading?: string;
+    heroImages?: ImageSource[];
+  };
+  defaultImages?: ImageSource[] | null;
 }
 
-export default function AppDevHero({ data }: AppDevHeroProps) {
-	const slides = useMemo(
-		() => [
-			{
-				id: "slide-1",
-				image: "/app-development/HeroImageOne.webp",
-				alt: "Account information dashboard",
-			},
-			{
-				id: "slide-2",
-				image: "/app-development/HeroImageTwo.webp",
-				alt: "Loan details dashboard",
-			},
-			{
-				id: "slide-3",
-				image: "/app-development/HeroImageThree.webp",
-				alt: "Construction services dashboard",
-			},
-			{
-				id: "slide-4",
-				image: "/app-development/HeroImageFour.webp",
-				alt: "Local key metrics dashboard",
-			},
-			{
-				id: "slide-5",
-				image: "/app-development/HeroImageFive.webp",
-				alt: "Local link analysis dashboard",
-			},
-		],
-		[]
-	)
+const FALLBACK_IMAGES = [
+  {
+    id: "slide-1",
+    image: "/app-development/HeroImageOne.webp",
+    alt: "Account information dashboard",
+  },
+  {
+    id: "slide-2",
+    image: "/app-development/HeroImageTwo.webp",
+    alt: "Loan details dashboard",
+  },
+  {
+    id: "slide-3",
+    image: "/app-development/HeroImageThree.webp",
+    alt: "Construction services dashboard",
+  },
+  {
+    id: "slide-4",
+    image: "/app-development/HeroImageFour.webp",
+    alt: "Local key metrics dashboard",
+  },
+  {
+    id: "slide-5",
+    image: "/app-development/HeroImageFive.webp",
+    alt: "Local link analysis dashboard",
+  },
+];
+
+const resolveImageUrl = (source?: ImageSource): string | undefined => {
+  if (!source) return undefined;
+  if (typeof source === "string") return source;
+  return source.asset?.url || source.url;
+};
+
+export default function AppDevHero({
+  data,
+  defaultImages,
+}: AppDevHeroProps) {
+  const heading = data?.heading || "Mobile App Development Services";
+  const subheading =
+    data?.subheading ||
+    "Design, build, and scale high-performance mobile apps for iOS, Android, and cross-platform platforms.";
+
+  const slides = useMemo(() => {
+    // Priority: page-specific images > default images > fallback images
+    const pageImages = data?.heroImages || [];
+    const defaultImgs = defaultImages || [];
+    const imagesToUse = pageImages.length > 0 ? pageImages : defaultImgs;
+
+    if (imagesToUse.length > 0) {
+      return imagesToUse.map((img, index) => {
+        const url = resolveImageUrl(img);
+        return {
+          id: `slide-${index + 1}`,
+          image: url || FALLBACK_IMAGES[index]?.image || FALLBACK_IMAGES[0].image,
+          alt: `Hero image ${index + 1}`,
+        };
+      });
+    }
+
+    return FALLBACK_IMAGES;
+  }, [data?.heroImages, defaultImages]);
 
 	const [activeIndex, setActiveIndex] = useState(0)
 	const [direction, setDirection] = useState(1)
@@ -95,7 +137,6 @@ export default function AppDevHero({ data }: AppDevHeroProps) {
 					>
 						<h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-black leading-tight font-cal-sans">
 							{(() => {
-								const heading = data.heading;
 								const words = heading.split(/\s+/);
 								const firstWord = words[0] || "";
 								const restWords = words.slice(1).join(" ");
@@ -108,7 +149,7 @@ export default function AppDevHero({ data }: AppDevHeroProps) {
 							})()}
 						</h1>
 						<p className="text-lg md:text-xl text-black leading-relaxed">
-							{data.subheading}
+							{subheading}
 						</p>
 						<CustomButton
 							text="Talk to our App Development expert"

@@ -58,9 +58,7 @@ export async function generateMetadata({
   // Get base data from Sanity
   const baseData = await getAppDevelopmentServiceBySlug(DEFAULT_APP_SLUG);
   const baseHeading =
-    baseData?.metadata ??
-    baseData?.hero?.heading ??
-    "App Development Services";
+    baseData?.metadata ?? baseData?.hero?.heading ?? "App Development Services";
   const baseDescription =
     baseData?.description ??
     baseData?.hero?.subheading ??
@@ -104,14 +102,10 @@ export async function generateMetadata({
       const locationName =
         getLocationDisplayName(ensuredLocation) ??
         humanizeSlug(ensuredLocation);
-      const personalizedData = personalizeSeoData(
-        localizedBase,
-        locationName,
-      );
+      const personalizedData = personalizeSeoData(localizedBase, locationName);
 
       const heading =
-        personalizedData?.hero?.heading ??
-        `App Development in ${locationName}`;
+        personalizedData?.hero?.heading ?? `App Development in ${locationName}`;
       const description =
         personalizedData?.hero?.subheading ??
         `Build and scale digital products in ${locationName} with Digital Neighbour.`;
@@ -163,6 +157,13 @@ export default async function AppDevSlugPage({
     redirect("/app-development");
   }
 
+  const rootAppPromise = getAppDevelopmentServiceBySlug(DEFAULT_APP_SLUG);
+
+  const resolveDefaultHeroImages = async () => {
+    const rootData = await rootAppPromise;
+    return rootData?.hero?.defaultHeroImages || null;
+  };
+
   const locationSlug = normalizeLocationSlug(params.slug);
 
   if (!allowedSlugs.includes(params.slug)) {
@@ -177,7 +178,7 @@ export default async function AppDevSlugPage({
       }
 
       // Get base data from Sanity
-      const baseData = await getAppDevelopmentServiceBySlug(DEFAULT_APP_SLUG);
+      const baseData = await rootAppPromise;
       if (!baseData) {
         notFound();
       }
@@ -192,7 +193,8 @@ export default async function AppDevSlugPage({
         getLocationDisplayName(ensuredLocation) ?? ensuredLocation;
       const personalizedData = personalizeSeoData(localizedBase, locationName);
 
-      return renderAppPage(personalizedData);
+      const defaultHeroImages = await resolveDefaultHeroImages();
+      return renderAppPage(personalizedData, defaultHeroImages);
     }
 
     notFound();
@@ -204,10 +206,11 @@ export default async function AppDevSlugPage({
     notFound();
   }
 
-  return renderAppPage(currentData);
+  const defaultHeroImages = await resolveDefaultHeroImages();
+  return renderAppPage(currentData, defaultHeroImages);
 }
 
-function renderAppPage(currentData: any) {
+function renderAppPage(currentData: any, defaultHeroImages?: any[] | null) {
   return (
     <main>
       <div className="relative">
@@ -220,6 +223,7 @@ function renderAppPage(currentData: any) {
                 "Design, build, and scale high-performance mobile apps for iOS, Android, and cross-platform platforms.",
             }
           }
+          defaultImages={defaultHeroImages}
         />
       </div>
       <Form data={currentData?.form} />

@@ -98,7 +98,8 @@ export async function generateMetadata({
         };
       }
 
-      const baseHostingData = await getHostingServiceBySlug(DEFAULT_HOSTING_SLUG);
+      const baseHostingData =
+        await getHostingServiceBySlug(DEFAULT_HOSTING_SLUG);
       if (!baseHostingData) {
         return {
           title: "Page Not Found",
@@ -114,10 +115,7 @@ export async function generateMetadata({
       const locationName =
         getLocationDisplayName(ensuredLocation) ??
         humanizeSlug(ensuredLocation);
-      const personalizedData = personalizeSeoData(
-        localizedBase,
-        locationName,
-      );
+      const personalizedData = personalizeSeoData(localizedBase, locationName);
 
       const heading =
         personalizedData?.hero?.heading ??
@@ -172,6 +170,17 @@ export default async function HostingItSecuritySlugPage({
     redirect("/hosting-it-security");
   }
 
+  const rootHostingPromise = getHostingServiceBySlug("hosting-it-security");
+
+  const resolveDefaultHeroVideo = async () => {
+    const rootData = await rootHostingPromise;
+    return (
+      rootData?.hero?.defaultHeroVideo?.asset?.url ||
+      rootData?.hero?.defaultHeroVideo?.url ||
+      null
+    );
+  };
+
   const locationSlug = normalizeLocationSlug(params.slug);
 
   if (!allowedSlugs.includes(params.slug)) {
@@ -201,7 +210,8 @@ export default async function HostingItSecuritySlugPage({
         getLocationDisplayName(ensuredLocation) ?? ensuredLocation;
       const personalizedData = personalizeSeoData(localizedBase, locationName);
 
-      return renderHostingPage(personalizedData);
+      const defaultHeroVideo = await resolveDefaultHeroVideo();
+      return renderHostingPage(personalizedData, defaultHeroVideo);
     }
     notFound();
   }
@@ -212,10 +222,11 @@ export default async function HostingItSecuritySlugPage({
     notFound();
   }
 
-  return renderHostingPage(currentData);
+  const defaultHeroVideo = await resolveDefaultHeroVideo();
+  return renderHostingPage(currentData, defaultHeroVideo);
 }
 
-function renderHostingPage(currentData: any) {
+function renderHostingPage(currentData: any, defaultHeroVideo?: string | null) {
   return (
     <main>
       <div className="relative">
@@ -228,6 +239,7 @@ function renderHostingPage(currentData: any) {
                 "Reliable hosting solutions and comprehensive IT security services to keep your business online, secure, and running smoothly.",
             }
           }
+          defaultVideoSrc={defaultHeroVideo}
         />
       </div>
       <Form data={currentData?.form} />

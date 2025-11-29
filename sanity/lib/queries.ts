@@ -1545,7 +1545,31 @@ export const appDevelopmentServiceByTitleQuery = `*[_type == "appDevelopmentServ
   },
   hero{
     heading,
-    subheading
+    subheading,
+    defaultHeroImages[]{
+      ...,
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    },
+    heroImages[]{
+      ...,
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    },
+    image{
+      ...,
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    }
   },
   form{
     heading,
@@ -1653,7 +1677,31 @@ export const hostingServiceByTitleQuery = `*[_type == "hostingService" && servic
   },
   hero{
     heading,
-    subheading
+    subheading,
+    defaultHeroVideo{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    },
+    bgVideo{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    },
+    video{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    }
   },
   form{
     heading,
@@ -2089,6 +2137,22 @@ const createPageQuery = (
     heading,
     subheading,
     defaultHeroImage{
+      ...,
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    },
+    defaultHeroImages[]{
+      ...,
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    },
+    heroImages[]{
       ...,
       asset->{
         _id,
