@@ -53,12 +53,12 @@ export async function generateMetadata({
   const { slug } = await params;
   // Try to fetch from Sanity first
   const sanityData = await getProfessionalMarketingServiceBySlug(slug);
-  
+
   const serviceName =
     getServiceNameFromSlug(slug) ??
     humanizeSlug(slug) ??
     "Professionals Marketing";
-  
+
   // Fallback to JSON if not in Sanity
   const jsonData = (professionalsData as any)[slug] || {};
   const currentData = sanityData || jsonData;
@@ -87,10 +87,10 @@ export default async function ProfessionalsMarketingServicePage({
   }
 
   const serviceName = getServiceNameFromSlug(slug) || "Professionals Marketing";
-  
+
   // Try to fetch from Sanity first
   const sanityData = await getProfessionalMarketingServiceBySlug(slug);
-  
+
   // Fallback to JSON if not in Sanity
   const jsonData = (professionalsData as any)[slug] || {};
   const currentData = sanityData || jsonData;
@@ -141,11 +141,28 @@ export default async function ProfessionalsMarketingServicePage({
       }
     : undefined;
 
+  // Fetch default hero video from the main professionals entry
+  const rootProfessionalsPromise =
+    getProfessionalMarketingServiceBySlug("professionals");
+  const resolveDefaultHeroVideo = async () => {
+    const rootData = await rootProfessionalsPromise;
+    return (
+      rootData?.hero?.defaultHeroVideo?.asset?.url ||
+      rootData?.hero?.defaultHeroVideo?.url ||
+      null
+    );
+  };
+
+  const defaultHeroVideo = await resolveDefaultHeroVideo();
+
   return (
     <main>
       <div className="relative">
         <Navbar />
-        <IndustriesHero data={currentData?.hero} videoSrc={"/professional/heroVideo.webm" as const} />
+        <IndustriesHero
+          data={currentData?.hero}
+          defaultVideoSrc={defaultHeroVideo}
+        />
       </div>
       <Form data={currentData?.form} />
       <BrandsMarquee />

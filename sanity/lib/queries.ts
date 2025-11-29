@@ -2073,7 +2073,43 @@ export const industriesServiceByTitleQuery = `*[_type == "industriesService" && 
   },
   hero{
     heading,
-    subheading
+    subheading,
+    defaultHeroVideo{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    },
+    bgVideo{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    },
+    video{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    },
+    industries[]{
+      name,
+      slug,
+      image{
+        ...,
+        asset->{
+          _id,
+          url,
+          metadata
+        }
+      }
+    }
   },
   form{
     heading,
@@ -2374,7 +2410,43 @@ export const professionalMarketingServiceByTitleQuery = `*[_type == "professiona
   },
   hero{
     heading,
-    subheading
+    subheading,
+    defaultHeroVideo{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    },
+    bgVideo{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    },
+    video{
+      asset->{
+        _id,
+        url,
+        metadata
+      },
+      url
+    },
+    professionals[]{
+      name,
+      slug,
+      image{
+        ...,
+        asset->{
+          _id,
+          url,
+          metadata
+        }
+      }
+    }
   },
   form{
     heading,
