@@ -199,7 +199,7 @@ export const homePageQuery = `{
 }`;
 
 export const portfolioPageQuery = `{
-  "settings": *[_type == "portfolioPageSeo"][0]{
+  "settings": *[_type == "portfolioPageSeo" && _id == "portfolioPageSeoSettings"][0]{
     metadata,
     description,
     title,
@@ -217,12 +217,12 @@ export const portfolioPageQuery = `{
     canonicalUrl,
     structuredData
   },
-  "hero": *[_type == "portfolioHero"][0]{
+  "hero": *[_type == "portfolioHero" && _id == "portfolioHeroSection"][0]{
     label,
     title,
     description
   },
-  "projects": *[_type == "portfolioProject"][0]{
+  "projects": *[_type == "portfolioProject" && _id == "portfolioProjectsList"][0]{
     projects[]{
       slug{
         current
@@ -257,7 +257,9 @@ export const portfolioPageQuery = `{
 }`;
 
 export const resourcesPageQuery = `{
-  "settings": *[_type == "resourcesPageSeo"][0]{
+  "settings": *[
+    _type == "resourcesPageSeo" && _id == "resourcesPageSeoSettings"
+  ][0]{
     metadata,
     description,
     title,
@@ -275,12 +277,14 @@ export const resourcesPageQuery = `{
     canonicalUrl,
     structuredData
   },
-  "hero": *[_type == "resourcesHero"][0]{
+  "hero": *[_type == "resourcesHero" && _id == "resourcesHeroSection"][0]{
     title,
     description,
     details[]
   },
-  "articles": *[_type == "resourcesArticles"][0]{
+  "articles": *[
+    _type == "resourcesArticles" && _id == "resourcesArticlesList"
+  ][0]{
     articles[]{
       slug{
         current
@@ -302,7 +306,9 @@ export const resourcesPageQuery = `{
   }
 }`;
 
-export const resourceArticleBySlugQuery = `*[_type == "resourcesArticles"][0]{
+export const resourceArticleBySlugQuery = `*[
+  _type == "resourcesArticles" && _id == "resourcesArticlesList"
+][0]{
   "article": articles[slug.current == $slug][0]{
     slug{
       current
@@ -323,7 +329,9 @@ export const resourceArticleBySlugQuery = `*[_type == "resourcesArticles"][0]{
   }
 }.article`;
 
-export const resourceArticlesQuery = `*[_type == "resourcesArticles"][0]{
+export const resourceArticlesQuery = `*[
+  _type == "resourcesArticles" && _id == "resourcesArticlesList"
+][0]{
   articles[]{
     slug{
       current
@@ -344,7 +352,9 @@ export const resourceArticlesQuery = `*[_type == "resourcesArticles"][0]{
   }
 }.articles`;
 
-export const resourcesPageContentQuery = `*[_type == "resourcesHero"][0]{
+export const resourcesPageContentQuery = `*[
+  _type == "resourcesHero" && _id == "resourcesHeroSection"
+][0]{
   title,
   description,
   details[]
