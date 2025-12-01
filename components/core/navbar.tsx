@@ -47,6 +47,7 @@ const Navbar: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [hasScrolledPast80vh, setHasScrolledPast80vh] = useState(false);
+  const [isScrollingUp, setIsScrollingUp] = useState(false);
 
   // Check if we're on a SEO route
   const isSeoRoute = pathname?.startsWith("/seo/");
@@ -591,12 +592,15 @@ const Navbar: React.FC = () => {
       if (currentScrollY < 10) {
         // Always show navbar at the top
         setIsVisible(true);
+        setIsScrollingUp(false);
       } else if (currentScrollY > lastScrollY) {
         // Scrolling down
         setIsVisible(false);
+        setIsScrollingUp(false);
       } else if (currentScrollY < lastScrollY) {
         // Scrolling up
         setIsVisible(true);
+        setIsScrollingUp(true);
       }
 
       setLastScrollY(currentScrollY);
@@ -618,9 +622,11 @@ const Navbar: React.FC = () => {
         isVisible ? "translate-y-0" : "-translate-y-full",
         isPortfolioSlug || isResourcesSlug
           ? "bg-black"
-          : hasScrolledPast80vh
-            ? "bg-black/70"
-            : "bg-white",
+          : isScrollingUp && lastScrollY > 10
+            ? "bg-black"
+            : hasScrolledPast80vh
+              ? "bg-black/70"
+              : "bg-white",
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -635,6 +641,13 @@ const Navbar: React.FC = () => {
                 height={40}
                 className={cn(
                   "h-12 w-auto lg:h-14 transition-all duration-300",
+                  // Apply white filter when background is black (scrolling up, portfolio, resources, or past 80vh)
+                  (isScrollingUp && lastScrollY > 10) ||
+                    isPortfolioSlug ||
+                    isResourcesSlug ||
+                    hasScrolledPast80vh
+                    ? "brightness-0 invert"
+                    : "",
                 )}
                 priority
               />

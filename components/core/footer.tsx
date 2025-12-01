@@ -1,4 +1,6 @@
 import React from "react"
+import Image from "next/image"
+import Link from "next/link"
 import CustomButton from "./button"
 
 const Footer: React.FC = () => {
@@ -35,15 +37,16 @@ const Footer: React.FC = () => {
 						{/* Left Side - Logo and Main Content */}
 						<div className="space-y-8">
 							{/* Logo */}
-							<div className="flex items-center space-x-3">
-								<div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-									<div className="w-4 h-4 bg-black rounded-full"></div>
-								</div>
-								<span className="text-white text-2xl font-serif">
-									Digital
-									Neighbour
-								</span>
-							</div>
+							<Link href="/" className="flex items-center">
+								<Image
+									src="/main-logo.png"
+									alt="Digital Neighbour Logo"
+									width={40}
+									height={40}
+									className="h-12 w-auto lg:h-14 brightness-0 invert transition-all duration-300"
+									priority
+								/>
+							</Link>
 
 							{/* Main Heading */}
 							<div className="space-y-4">

@@ -67,7 +67,7 @@ export default function KeepYourStack({ data }: KeepYourStackProps) {
 	const description = data.description || "We work with your platforms, meaning we seamlessly slot into your team";
 
 	return (
-		<section className="bg-pink/20 py-20 px-6 overflow-hidden">
+		<section className="bg-[#e9e5ff] py-20 px-6 overflow-hidden">
 			<div className="container max-w-7xl mx-auto">
 				<motion.div
 					className="text-center mb-16"

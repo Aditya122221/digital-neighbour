@@ -73,7 +73,17 @@ export async function generateMetadata({
     return { title: "Page Not Found" };
   }
 
-  const baseData = await getSeoServiceBySlug(canonicalSlug);
+  let baseData;
+  try {
+    baseData = await getSeoServiceBySlug(canonicalSlug);
+  } catch (error) {
+    console.error(
+      `Error fetching SEO service data for slug "${canonicalSlug}":`,
+      error,
+    );
+    return { title: "Page Not Found" };
+  }
+
   if (!baseData) {
     return { title: "Page Not Found" };
   }
@@ -135,7 +145,17 @@ export default async function SeoLocationPage({
     notFound();
   }
 
-  const baseData = await getSeoServiceBySlug(canonicalSlug);
+  let baseData;
+  try {
+    baseData = await getSeoServiceBySlug(canonicalSlug);
+  } catch (error) {
+    console.error(
+      `Error fetching SEO service data for slug "${canonicalSlug}":`,
+      error,
+    );
+    notFound();
+  }
+
   if (!baseData) {
     notFound();
   }
@@ -164,16 +184,35 @@ export default async function SeoLocationPage({
     redirect(`/seo/${canonicalSlug}/${ensuredLocation}`);
   }
 
-  const localizedBase = await getLocationPageData(
-    "seo",
-    canonicalSlug,
-    ensuredLocation,
-    baseData,
-  );
+  let localizedBase;
+  try {
+    localizedBase = await getLocationPageData(
+      "seo",
+      canonicalSlug,
+      ensuredLocation,
+      baseData,
+    );
+  } catch (error) {
+    console.error(
+      `Error fetching location page data for "${canonicalSlug}" in "${ensuredLocation}":`,
+      error,
+    );
+    // Fallback to base data if location data fetch fails
+    localizedBase = baseData;
+  }
+
   const locationName =
     getLocationDisplayName(ensuredLocation) ?? ensuredLocation;
   const personalizedData = personalizeSeoData(localizedBase, locationName);
-  const defaultSeoData = await defaultSeoDataPromise;
+
+  let defaultSeoData;
+  try {
+    defaultSeoData = await defaultSeoDataPromise;
+  } catch (error) {
+    console.error("Error loading default SEO data:", error);
+    defaultSeoData = null;
+  }
+
   const defaultHeroImage =
     defaultSeoData?.hero?.defaultHeroImage || defaultSeoData?.hero?.image;
 
@@ -197,14 +236,28 @@ export default async function SeoLocationPage({
       <IntroParagraph data={personalizedData?.introParagraph} />
       <PainPoints data={personalizedData?.painPoints} />
       <Services
-        data={personalizedData?.services}
+        data={
+          typeof personalizedData?.services === "string"
+            ? personalizedData.services
+            : personalizedData?.services?.serviceName ||
+              personalizedData?.services?.heading ||
+              "SEO"
+        }
         serviceCards={personalizedData?.serviceCards}
       />
       <Content
         data={personalizedData?.content}
         imagePathPrefix="/seo/content"
       />
-      <Cta data={personalizedData?.services} />
+      <Cta
+        data={
+          typeof personalizedData?.services === "string"
+            ? personalizedData.services
+            : personalizedData?.services?.serviceName ||
+              personalizedData?.services?.heading ||
+              undefined
+        }
+      />
       <Apart />
       <Process2
         data={personalizedData?.services}
