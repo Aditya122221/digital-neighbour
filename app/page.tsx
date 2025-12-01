@@ -58,7 +58,7 @@ export default async function HomePage() {
 			<CaseStudy />
 			<FeatureSection data={homeData.contentSection} />
 			<Apart data={homeData.apart} />
-			<TestimonalTwo data={homeData.testimonials} />
+			<TestimonalTwo />
 			<Process2 processData={homeData.process} />
 			<BookACall data={homeData.bookACall} />
 			<Blogs />

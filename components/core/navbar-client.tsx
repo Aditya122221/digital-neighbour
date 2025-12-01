@@ -114,20 +114,20 @@ export const NavbarClient: React.FC<{ data?: NavbarData | null }> = ({
   // Use Sanity data if available, otherwise fallback to hardcoded
   const navigationLinks =
     data?.navigationLinks?.map((link) => ({
-      name: link.label,
-      href: link.href,
-      hasMegaMenu: link.hasMegaMenu,
-    })) || [
+    name: link.label,
+    href: link.href,
+    hasMegaMenu: link.hasMegaMenu,
+  })) || [
       { name: 'Home', href: '/' },
       { name: 'Services', href: '', hasMegaMenu: true },
       { name: 'Portfolio', href: '/portfolio' },
       { name: 'About Us', href: '/about' },
       { name: 'Resources', href: '/resources' },
-    ];
-
+  ];
+  
   const logoUrl = data?.logo?.asset?.url || '/main-logo.png';
   const logoHref = data?.logo?.href || '/';
-
+  
   const ctaButton =
     data?.ctaButton ||
     ({
@@ -137,29 +137,29 @@ export const NavbarClient: React.FC<{ data?: NavbarData | null }> = ({
     } as const);
 
   const megaMenuCategories = data?.megaMenuCategories || [];
-
+  
   const transformedMegaMenuData =
     megaMenuCategories.length > 0
-      ? megaMenuCategories.reduce((acc, category) => {
-          const categoryKey = category.key;
-          acc[categoryKey] = {
-            categories: megaMenuCategories.map((cat) => ({
-              name: cat.title,
-              isActive: cat.key === category.key,
-            })),
-            columns: category.columns.map((col) => ({
-              title: col.title,
-              services: col.services.map((service) => ({
-                name: service.label,
+    ? megaMenuCategories.reduce((acc, category) => {
+        const categoryKey = category.key;
+        acc[categoryKey] = {
+          categories: megaMenuCategories.map((cat) => ({
+            name: cat.title,
+            isActive: cat.key === category.key,
+          })),
+          columns: category.columns.map((col) => ({
+            title: col.title,
+            services: col.services.map((service) => ({
+              name: service.label,
                 icon: service.icon?.asset?.url || service.emoji || '*',
-                href: service.href,
-              })),
+              href: service.href,
             })),
-          };
-          return acc;
-        }, {} as Record<string, any>)
-      : null;
-
+          })),
+        };
+        return acc;
+      }, {} as Record<string, any>)
+    : null;
+  
   const megaMenuDataToUse = transformedMegaMenuData || fallbackMegaMenuData;
 
   const columnTitleToRoute: { [key: string]: string } = {
@@ -511,7 +511,7 @@ export const NavbarClient: React.FC<{ data?: NavbarData | null }> = ({
                                   ]?.columns?.map((column: any) => (
                                     <div key={column.title}>
                                       <div className="w-full flex items-center justify-between px-2 py-2 text-gray-300 hover:text-white transition-colors duration-200 rounded-md font-medium text-xs">
-                                        <span>{column.title}</span>
+                                          <span>{column.title}</span>
                                         <button
                                           onClick={() =>
                                             handleMobileColumnToggle(
@@ -531,33 +531,33 @@ export const NavbarClient: React.FC<{ data?: NavbarData | null }> = ({
                                         <div className="ml-4 space-y-1">
                                           {column.services.map(
                                             (service: any) => (
-                                              <Link
-                                                key={service.name}
+                                            <Link
+                                              key={service.name}
                                                 href={service.href || '#'}
-                                                className="flex items-center gap-2 px-2 py-1 text-gray-400 hover:text-white text-xs"
-                                                onClick={() =>
-                                                  setIsMenuOpen(false)
-                                                }
-                                              >
+                                              className="flex items-center gap-2 px-2 py-1 text-gray-400 hover:text-white text-xs"
+                                              onClick={() =>
+                                                setIsMenuOpen(false)
+                                              }
+                                            >
                                                 {typeof service.icon ===
                                                   'string' &&
                                                 service.icon.startsWith(
                                                   'http',
                                                 ) ? (
-                                                  <Image
+                                                <Image
                                                     src={service.icon}
-                                                    alt={service.name}
-                                                    width={16}
-                                                    height={16}
-                                                    className="w-4 h-4 object-contain"
-                                                  />
-                                                ) : (
+                                                  alt={service.name}
+                                                  width={16}
+                                                  height={16}
+                                                  className="w-4 h-4 object-contain"
+                                                />
+                                              ) : (
                                                   <span className="text-xs">
                                                     {service.icon || '*'}
-                                                  </span>
-                                                )}
-                                                {service.name}
-                                              </Link>
+                                                </span>
+                                              )}
+                                              {service.name}
+                                            </Link>
                                             ),
                                           )}
                                         </div>

@@ -742,19 +742,34 @@ export const trustedBrandsQuery = `*[_type == "homeTrustedBrands"][0]{
 export const testimonialsSectionQuery = `*[_type == "homeTestimonials"][0]{
   eyebrow,
   heading,
-  testimonials[]{
-    quote,
-    author,
-    position,
-    number,
-    image{
+  image{
+    ...,
+    asset->{
+      _id,
+      url,
+      metadata
+    }
+  },
+  imageAlt,
+  firstbox{
+    logo{
       ...,
       asset->{
         _id,
         url,
         metadata
       }
-    }
+    },
+    companyName,
+    quote,
+    author,
+    position
+  },
+  testimonials[]{
+    companyName,
+    quote,
+    author,
+    position
   }
 }`;
 

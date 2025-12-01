@@ -3,6 +3,7 @@ import { testimonialsSectionQuery } from "@/sanity/lib/queries"
 import { urlForImage } from "@/sanity/lib/image"
 
 export type Testimonial = {
+	companyName?: string
 	quote?: string
 	author?: string
 	position?: string
@@ -13,6 +14,15 @@ export type Testimonial = {
 export type TestimonialsSectionData = {
 	eyebrow?: string
 	heading?: string
+	image?: string
+	imageAlt?: string
+	main?: {
+		logo?: string
+		companyName?: string
+		quote?: string
+		author?: string
+		position?: string
+	}
 	testimonials?: Testimonial[]
 }
 
@@ -77,9 +87,22 @@ const getImageUrl = (image: any): string => {
 const transformSanityData = (sanityData: any): TestimonialsSectionData | null => {
 	if (!sanityData) return null
 
+	const mainBox = sanityData.firstbox
+	const main =
+		mainBox && (mainBox.quote || mainBox.author || mainBox.position || mainBox.companyName)
+			? {
+					logo: getImageUrl(mainBox.logo),
+					companyName: mainBox.companyName || "",
+					quote: mainBox.quote || "",
+					author: mainBox.author || "",
+					position: mainBox.position || "",
+			  }
+			: undefined
+
 	const normalizedTestimonials =
 		sanityData.testimonials
 			?.map((testimonial: any) => ({
+				companyName: testimonial?.companyName || "",
 				quote: testimonial?.quote || "",
 				author: testimonial?.author || "",
 				position: testimonial?.position || "",
@@ -95,6 +118,9 @@ const transformSanityData = (sanityData: any): TestimonialsSectionData | null =>
 	return {
 		eyebrow: sanityData.eyebrow || FALLBACK_DATA.eyebrow,
 		heading: sanityData.heading || FALLBACK_DATA.heading,
+		image: getImageUrl(sanityData.image) || FALLBACK_DATA.testimonials?.[0]?.image,
+		imageAlt: sanityData.imageAlt || main?.companyName || FALLBACK_DATA.testimonials?.[0]?.author || "Testimonial",
+		main,
 		testimonials: normalizedTestimonials.length ? normalizedTestimonials : FALLBACK_TESTIMONIALS,
 	}
 }
