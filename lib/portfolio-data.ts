@@ -50,6 +50,32 @@ const getImageUrl = (image: any): string => {
   return "";
 };
 
+const slugify = (input: string): string =>
+  input
+    .toLowerCase()
+    .trim()
+    .replace(/[\s_]+/g, "-")
+    .replace(/[^a-z0-9-]/g, "")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+
+const resolveProjectSlug = (project: any, index: number): string => {
+  if (typeof project.slug === "string" && project.slug.trim()) {
+    return project.slug.trim();
+  }
+  if (
+    project.slug &&
+    typeof project.slug.current === "string" &&
+    project.slug.current.trim()
+  ) {
+    return project.slug.current.trim();
+  }
+  if (typeof project.headline === "string" && project.headline.trim()) {
+    return slugify(project.headline);
+  }
+  return `project-${index}`;
+};
+
 function transformSanityData(sanityData: any): PortfolioPageData | null {
   if (!sanityData) {
     console.warn("⚠️ transformSanityData: sanityData is null or undefined");
@@ -93,7 +119,7 @@ function transformSanityData(sanityData: any): PortfolioPageData | null {
     },
     projects: projects.map((project: any, index: number) => ({
       id: `project-${index}`,
-      slug: project.slug?.current || project.slug || "",
+      slug: resolveProjectSlug(project, index),
       logoText: project.logoText || "",
       logo: getImageUrl(project.logo),
       headline: project.headline || "",
@@ -122,7 +148,13 @@ const projectsArray = Array.isArray(parsedData.projects)
   ? parsedData.projects
   : [];
 const projectMap = new Map(
-  projectsArray.map((project: any) => [project.slug, project]),
+  projectsArray.map((project: any, index: number) => [
+    resolveProjectSlug(project, index),
+    {
+      ...project,
+      slug: resolveProjectSlug(project, index),
+    },
+  ]),
 );
 
 export async function getPortfolioHero(): Promise<PortfolioHeroContent> {
@@ -173,7 +205,7 @@ export async function getPortfolioProjects(): Promise<PortfolioProject[]> {
   );
   return projectsArray.map((project: any, index: number) => ({
     id: project.id || `project-${index}`,
-    slug: project.slug || `portfolio-${project.id || index}`,
+    slug: resolveProjectSlug(project, index),
     logoText: project.logoText || "",
     headline: project.headline || "",
     image: project.image || "",
@@ -220,6 +252,9 @@ export async function getPortfolioPageData(): Promise<PortfolioPageData> {
     description:
       "Explore our portfolio of successful projects and case studies. See how Digital Neighbour has helped brands achieve remarkable growth and measurable results.",
     hero: await getPortfolioHero(),
-    projects: projectsArray,
+    projects: projectsArray.map((project: any, index: number) => ({
+      ...project,
+      slug: resolveProjectSlug(project, index),
+    })),
   };
 }

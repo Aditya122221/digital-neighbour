@@ -15,21 +15,31 @@ export const portfolioProject = defineType({
 					name: "project",
 					fields: [
 						defineField({
+							name: "headline",
+							title: "Headline",
+							type: "string",
+							description: "Main headline/title for the project",
+							validation: (Rule) => Rule.required(),
+						}),
+						defineField({
 							name: "slug",
 							title: "Slug",
 							type: "slug",
 							description: "URL-friendly identifier for the project",
 							options: {
-								source: "headline",
+								// Use the parent object's headline as source when generating slugs
+								source: (_doc, context) =>
+									(context.parent as { headline?: string })?.headline || "",
 								maxLength: 96,
+								slugify: (input: string) =>
+									input
+										.toLowerCase()
+										.trim()
+										.replace(/[\s_]+/g, "-")
+										.replace(/[^a-z0-9-]/g, "")
+										.replace(/-+/g, "-")
+										.replace(/^-|-$/g, ""),
 							},
-							validation: (Rule) => Rule.required(),
-						}),
-						defineField({
-							name: "logoText",
-							title: "Logo Text",
-							type: "string",
-							description: "Text displayed next to the logo",
 							validation: (Rule) => Rule.required(),
 						}),
 						defineField({
@@ -40,10 +50,10 @@ export const portfolioProject = defineType({
 							description: "Optional logo image for the project",
 						}),
 						defineField({
-							name: "headline",
-							title: "Headline",
+							name: "logoText",
+							title: "Logo Text",
 							type: "string",
-							description: "Main headline/title for the project",
+							description: "Text displayed next to the logo",
 							validation: (Rule) => Rule.required(),
 						}),
 						defineField({

@@ -15,21 +15,31 @@ export const resourcesArticles = defineType({
 					name: "article",
 					fields: [
 						defineField({
+							name: "title",
+							title: "Title",
+							type: "string",
+							description: "Article title",
+							validation: (Rule) => Rule.required(),
+						}),
+						defineField({
 							name: "slug",
 							title: "Slug",
 							type: "slug",
 							description: "URL-friendly identifier for the article",
 							options: {
-								source: "title",
+								// Use the parent object's title as source when generating slugs
+								source: (_doc, context) =>
+									(context.parent as { title?: string })?.title || "",
 								maxLength: 96,
+								slugify: (input: string) =>
+									input
+										.toLowerCase()
+										.trim()
+										.replace(/[\s_]+/g, "-")
+										.replace(/[^a-z0-9-]/g, "")
+										.replace(/-+/g, "-")
+										.replace(/^-|-$/g, ""),
 							},
-							validation: (Rule) => Rule.required(),
-						}),
-						defineField({
-							name: "title",
-							title: "Title",
-							type: "string",
-							description: "Article title",
 							validation: (Rule) => Rule.required(),
 						}),
 						defineField({

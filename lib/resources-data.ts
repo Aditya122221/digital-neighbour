@@ -56,21 +56,21 @@ const parsedJson = Array.isArray(resourcesJson)
 	? (resourcesJson as ResourcesJsonEntry[])
 	: []
 
+/**
+ * Generate a URL-friendly slug from a string.
+ * Used as a fallback when Sanity/JSON does not provide a slug.
+ */
+function slugify(input: string): string {
+	return input
+		.toLowerCase()
+		.trim()
+		.replace(/[\s_]+/g, "-")
+		.replace(/[^a-z0-9-]/g, "")
+		.replace(/-+/g, "-")
+		.replace(/^-|-$/g, "")
+}
+
 const heroEntry = parsedJson.find((entry) => typeof entry.slug !== "string")
-
-const fallbackHeroContent = normalizeHeroContent(heroEntry) ?? DEFAULT_HERO
-
-const fallbackArticles = parsedJson
-	.filter((entry) => typeof entry.slug === "string")
-	.map((entry) => normalizeArticle(entry))
-	.filter((entry): entry is ResourceArticle => Boolean(entry))
-	.sort(
-		(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-	)
-
-const fallbackArticleMap = new Map(
-	fallbackArticles.map((article) => [article.slug, article])
-)
 
 function normalizeDetails(details?: string | string[] | null): string[] {
 	if (!details) return []
@@ -107,12 +107,39 @@ function normalizeHeroContent(
 }
 
 function getImageUrl(image: any): string {
-	if (!image) return "";
-	if (typeof image === "string") return image;
+	if (!image) return ""
+	if (typeof image === "string") return image
 	if (image.asset?.url) {
-		return image.asset.url;
+		return image.asset.url
 	}
-	return "";
+	return ""
+}
+
+function resolveSlug(
+	entry?: ResourcesJsonEntry | SanityResourceRecord | null
+): string {
+	if (!entry) return ""
+
+	// 1) Explicit slug string from JSON
+	if (typeof entry.slug === "string" && entry.slug.trim()) {
+		return entry.slug.trim()
+	}
+
+	// 2) Sanity slug object
+	if (
+		entry.slug &&
+		typeof (entry.slug as any).current === "string" &&
+		(entry.slug as any).current.trim()
+	) {
+		return (entry.slug as any).current.trim()
+	}
+
+	// 3) Fallback from title
+	if (typeof entry.title === "string" && entry.title.trim()) {
+		return slugify(entry.title)
+	}
+
+	return ""
 }
 
 function normalizeArticle(
@@ -120,10 +147,7 @@ function normalizeArticle(
 ): ResourceArticle | null {
 	if (!entry) return null
 
-	const slug =
-		typeof entry.slug === "string"
-			? entry.slug.trim()
-			: entry.slug?.current || ""
+	const slug = resolveSlug(entry)
 	const title = typeof entry.title === "string" ? entry.title.trim() : ""
 	const category =
 		typeof entry.category === "string" ? entry.category.trim() : ""
@@ -161,6 +185,19 @@ function normalizeDate(value?: string): string {
 	}
 	return parsed.toISOString()
 }
+
+const fallbackHeroContent = normalizeHeroContent(heroEntry) ?? DEFAULT_HERO
+
+const fallbackArticles = parsedJson
+	.map((entry) => normalizeArticle(entry))
+	.filter((entry): entry is ResourceArticle => Boolean(entry))
+	.sort(
+		(a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+	)
+
+const fallbackArticleMap = new Map(
+	fallbackArticles.map((article) => [article.slug, article])
+)
 
 export async function getResourcesHeroContent(): Promise<ResourceHeroContent> {
 	try {
