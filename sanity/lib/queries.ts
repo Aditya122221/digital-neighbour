@@ -77,6 +77,7 @@ export const homePageQuery = `{
     "rightCard": cards[]{
       title,
       subheading[],
+      link,
       video{
         asset->{
           _id,

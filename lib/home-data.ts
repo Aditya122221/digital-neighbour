@@ -56,6 +56,7 @@ type HomePageData = {
       video?: string;
       title?: string;
       subheading?: string[];
+      link?: string;
     }[];
   };
   keepYourStack?: {
@@ -249,6 +250,7 @@ function transformSanityData(sanityData: any): HomePageData | null {
           video: getFileUrl(card.video),
           title: card.title || "",
           subheading: card.subheading || [],
+          link: card.link || "",
         })) || [],
     },
     keepYourStack: {

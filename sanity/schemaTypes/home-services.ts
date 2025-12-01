@@ -42,6 +42,12 @@ export const homeServices = defineType({
 							of: [{ type: "string" }],
 						}),
 						defineField({
+							name: "link",
+							title: "Link",
+							type: "string",
+							description: "URL or path for the link (e.g., /contact)",
+						}),
+						defineField({
 							name: "video",
 							title: "Video",
 							type: "file",

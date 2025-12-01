@@ -44,20 +44,6 @@ export const siteNavbar = defineType({
 					type: "string",
 					validation: (Rule) => Rule.required(),
 				}),
-				defineField({
-					name: "variant",
-					title: "Variant",
-					type: "string",
-					options: {
-						list: [
-							{ title: "Primary", value: "primary" },
-							{ title: "Secondary", value: "secondary" },
-							{ title: "Ghost", value: "ghost" },
-						],
-						layout: "radio",
-					},
-					initialValue: "primary",
-				}),
 			],
 		}),
 		defineField({

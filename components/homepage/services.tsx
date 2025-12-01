@@ -1,16 +1,19 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
 import CustomButton from "../core/button"
 
 type ServiceCard = {
 	video: string
 	title: string
 	subheading: string[]
+	link?: string
 }
 
 type ServicesSection = {
 	heading: string
+	highlightWord?: string
 	subheading: string
 	buttonText?: string
 	buttonLink?: string
@@ -178,71 +181,80 @@ export default function Services({ data }: ServicesProps) {
 				{/* Right side - Naturally scrolling cards */}
 				<div className="w-full lg:w-1/2">
 					<div className="md:py-16 py-8 px-8 space-y-8">
-						{cards.map((card) => (
-							<div
-								key={card.title}
-								className="bg-[#5D50EB] rounded-3xl shadow-2xl md:h-180 h-100 overflow-hidden group relative"
-							>
-								{/* Top part - Video */}
-								<div className="md:h-2/3 h-1/2">
-									<video
-										className="w-full h-full object-cover"
-										autoPlay
-										muted
-										loop
-										playsInline
-									>
-										<source
-											src={
-												card.video
-											}
-											type="video/mp4"
-										/>
-									</video>
-								</div>
-								{/* Bottom part - Content */}
-								<div className="md:h-1/3 h-1/2 p-8 flex flex-col justify-end">
-									<h3 className="text-3xl md:text-5xl font-medium text-white md:mb-8 mb-4">
-										{
-											card.title
-										}
-									</h3>
-									<div className="space-y-2">
-										{card.subheading.map(
-											(
-												item
-											) => (
+						{cards.map((card) => {
+							const href = card.link && card.link.trim() !== "" ? card.link : undefined
+							const CardInner = (
+								<>
+									{/* Top part - Video */}
+									<div className="md:h-2/3 h-1/2">
+										<video
+											className="w-full h-full object-cover"
+											autoPlay
+											muted
+											loop
+											playsInline
+										>
+											<source
+												src={card.video}
+												type="video/mp4"
+											/>
+										</video>
+									</div>
+									{/* Bottom part - Content */}
+									<div className="md:h-1/3 h-1/2 p-8 flex flex-col justify-end">
+										<h3 className="text-3xl md:text-5xl font-medium text-white md:mb-8 mb-4">
+											{card.title}
+										</h3>
+										<div className="space-y-2">
+											{card.subheading.map((item) => (
 												<h4
 													key={`${card.title}-${item}`}
 													className="text-md md:text-lg font-semibold text-white/80"
 												>
-													{
-														item
-													}
+													{item}
 												</h4>
-											)
-										)}
+											))}
+										</div>
 									</div>
+									{/* Arrow SVG */}
+									<div className="absolute bottom-6 right-6 -rotate-45">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											fill="none"
+											viewBox="0 0 24 24"
+											strokeWidth="1.5"
+											stroke="currentColor"
+											className="md:size-14 size-10 text-white transition-transform duration-300 group-hover:rotate-45"
+										>
+											<path
+												strokeLinecap="round"
+												strokeLinejoin="round"
+												d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+											/>
+										</svg>
+									</div>
+								</>
+							)
+
+							return href ? (
+								<Link
+									key={card.title}
+									href={href}
+									className="block"
+								>
+									<div className="bg-[#5D50EB] rounded-3xl shadow-2xl md:h-180 h-100 overflow-hidden group relative cursor-pointer">
+										{CardInner}
+									</div>
+								</Link>
+							) : (
+								<div
+									key={card.title}
+									className="bg-[#5D50EB] rounded-3xl shadow-2xl md:h-180 h-100 overflow-hidden group relative"
+								>
+									{CardInner}
 								</div>
-								{/* Arrow SVG */}
-								<div className="absolute bottom-6 right-6 -rotate-45">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										strokeWidth="1.5"
-										stroke="currentColor"
-										className="md:size-14 size-10 text-white transition-transform duration-300 group-hover:rotate-45"
-									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-										/>
-									</svg>
-								</div>
-							</div>
-						))}
+							)
+						})}
 					</div>
 				</div>
 			</div>
