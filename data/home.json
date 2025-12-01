@@ -102,18 +102,22 @@
   "keepYourStack": {
     "logos": [
       {
-        "name": "LinkedIn",
-        "svg": "/homepage/techstack/linkedin.svg",
-        "bgColor": "#0a66c2",
+        "name": "HTML",
+        "svg": "/homepage/techstack/html-5.png",
+        "bgColor": "#eb4034",
         "textColor": "#fff"
       },
       {
-        "name": "Salesforce",
-        "svg": "/homepage/techstack/salesforce.svg"
+        "name": "React",
+        "svg": "/homepage/techstack/physics.png",
+        "bgColor": "#5ba2d9",
+        "textColor": "#fff"
       },
       {
         "name": "HubSpot",
-        "svg": "/homepage/techstack/hubspot.svg"
+        "svg": "/homepage/techstack/hubspot.svg",
+        "bgColor": "#ff6640",
+        "textColor": "#fff"
       },
       {
         "name": "Google Analytics",

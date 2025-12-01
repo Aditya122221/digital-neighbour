@@ -1,15 +1,6 @@
 "use client"
 
-import { Lightbulb, Rocket, ShieldCheck, Users } from "lucide-react"
-
-const iconMap = {
-	Rocket,
-	ShieldCheck,
-	Lightbulb,
-	Users,
-}
-
-type IconName = keyof typeof iconMap
+import Image from "next/image"
 
 type ContentSectionBenefit = {
 	id: number
@@ -22,6 +13,7 @@ type ContentSectionBenefit = {
 type ContentSectionData = {
 	heading: string
 	subheading: string
+	highlightWord?: string
 	benefits: ContentSectionBenefit[]
 }
 
@@ -86,53 +78,37 @@ export default function ContentSection({ data }: ContentSectionProps) {
 
 				<div className="grid gap-6 md:grid-cols-2">
 					{benefits.map(
-						({
-							id,
-							icon,
-							title,
-							description,
-							stat,
-						}) => {
-							const iconKey = (icon ??
-								"Lightbulb") as IconName
-							const IconComponent =
-								iconMap[
-									iconKey
-								] ?? Lightbulb
-
-							return (
-								<article
-									key={id}
-									className="flex h-full flex-col gap-6 rounded-[28px] bg-[#5D50EB] p-8"
-								>
-									<div className="flex items-center gap-4">
-										<span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0e0e59] text-white">
-											<IconComponent
-												className="h-6 w-6 text-white"
-												aria-hidden="true"
+						({ id, icon, title, description, stat }) => (
+							<article
+								key={id}
+								className="flex h-full flex-col gap-6 rounded-[28px] bg-[#5D50EB] p-8"
+							>
+								<div className="flex items-center gap-4">
+									<span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#0e0e59] text-white overflow-hidden">
+										{icon ? (
+											<Image
+												src={icon}
+												alt={title}
+												width={32}
+												height={32}
+												className="h-8 w-8 object-contain"
 											/>
-										</span>
-										<div>
-											<h3 className="text-xl font-semibold text-white">
-												{
-													title
-												}
-											</h3>
-											<p className="mt-1 text-sm font-medium uppercase tracking-[0.2em] text-white/70">
-												{
-													stat
-												}
-											</p>
-										</div>
+										) : null}
+									</span>
+									<div>
+										<h3 className="text-xl font-semibold text-white">
+											{title}
+										</h3>
+										<p className="mt-1 text-sm font-medium uppercase tracking-[0.2em] text-white/70">
+											{stat}
+										</p>
 									</div>
-									<p className="text-base leading-relaxed text-white">
-										{
-											description
-										}
-									</p>
-								</article>
-							)
-						}
+								</div>
+								<p className="text-base leading-relaxed text-white">
+									{description}
+								</p>
+							</article>
+						)
 					)}
 				</div>
 			</div>

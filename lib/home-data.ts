@@ -75,7 +75,7 @@ type HomePageData = {
     heading?: string;
     highlightWord?: string;
     subheading?: string;
-    benefits?: {
+      benefits?: {
       id?: number;
       title?: string;
       description?: string;
@@ -275,7 +275,8 @@ function transformSanityData(sanityData: any): HomePageData | null {
           id: benefit.id,
           title: benefit.title || "",
           description: benefit.description || "",
-          icon: benefit.icon || "",
+          // Support both old string icons and new image-based icons
+          icon: getImageUrl(benefit.icon) || benefit.icon || "",
           stat: benefit.stat || "",
         })) || [],
     },

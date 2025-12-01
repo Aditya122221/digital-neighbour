@@ -114,7 +114,14 @@ export const homePageQuery = `{
       title,
       description,
       stat,
-      icon
+      icon{
+        ...,
+        asset->{
+          _id,
+          url,
+          metadata
+        }
+      }
     }
   },
   "process": *[_type == "homeProcess"][0]{

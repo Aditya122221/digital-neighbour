@@ -54,7 +54,7 @@ export const homeContent = defineType({
 						defineField({
 							name: "icon",
 							title: "Icon",
-							type: "string",
+							type: "image",
 							description: "Icon name",
 						}),
 					],
