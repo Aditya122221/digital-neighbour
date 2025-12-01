@@ -21,12 +21,6 @@ export const siteFooter = defineType({
 			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
-			name: "highlightedWord",
-			title: "Highlighted Word",
-			type: "string",
-			description: "Word or phrase to emphasize within the heading.",
-		}),
-		defineField({
 			name: "subheading",
 			title: "Supporting Copy",
 			type: "text",
@@ -49,20 +43,6 @@ export const siteFooter = defineType({
 					title: "Link",
 					type: "string",
 					validation: (Rule) => Rule.required(),
-				}),
-				defineField({
-					name: "variant",
-					title: "Variant",
-					type: "string",
-					options: {
-						list: [
-							{ title: "Primary", value: "primary" },
-							{ title: "Secondary", value: "secondary" },
-							{ title: "Outline", value: "outline" },
-						],
-						layout: "radio",
-					},
-					initialValue: "primary",
 				}),
 			],
 		}),
@@ -139,12 +119,6 @@ export const siteFooter = defineType({
 					title: "Email Address",
 					type: "string",
 				}),
-				defineField({
-					name: "address",
-					title: "Office Address",
-					type: "text",
-					rows: 2,
-				}),
 			],
 		}),
 		defineField({
@@ -171,12 +145,6 @@ export const siteFooter = defineType({
 					],
 				}),
 			],
-		}),
-		defineField({
-			name: "footerNote",
-			title: "Footer Note",
-			type: "string",
-			description: "Optional copyright or additional note.",
 		}),
 	],
 	preview: {

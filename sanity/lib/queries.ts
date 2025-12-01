@@ -2547,3 +2547,90 @@ export const professionalMarketingServiceByTitleQuery = `*[_type == "professiona
     }
   }
 }`;
+
+export const navbarQuery = `*[_type == "siteNavbar" && _id == "siteNavbar"][0]{
+  logo{
+    ...,
+    asset->{
+      _id,
+      url,
+      metadata
+    },
+    alt,
+    href
+  },
+  ctaButton{
+    label,
+    href,
+    variant
+  },
+  navigationLinks[]{
+    label,
+    href,
+    hasMegaMenu,
+    megaMenuCategoryKey
+  },
+  megaMenuCategories[]{
+    key,
+    title,
+    isDefault,
+    columns[]{
+      title,
+      href,
+      services[]{
+        label,
+        href,
+        icon{
+          ...,
+          asset->{
+            _id,
+            url,
+            metadata
+          }
+        },
+        emoji
+      }
+    }
+  },
+  mobileNavigationOverrides[]{
+    label,
+    href
+  }
+}`;
+
+export const footerQuery = `*[_type == "siteFooter" && _id == "siteFooter"][0]{
+  backgroundVideo{
+    asset->{
+      _id,
+      url,
+      metadata
+    },
+    url
+  },
+  heading,
+  highlightedWord,
+  subheading,
+  ctaButton{
+    label,
+    href,
+    variant
+  },
+  companyLinks[]{
+    label,
+    href
+  },
+  socialLinks[]{
+    label,
+    href,
+    platform
+  },
+  contactInfo{
+    phone,
+    email,
+    address
+  },
+  legalLinks[]{
+    label,
+    href
+  }
+}`;

@@ -8,7 +8,8 @@
     "lint": "next lint",
     "start": "next start",
     "seed:seo": "tsx scripts/seed-seo-pages.ts",
-    "seed:all": "tsx scripts/seed-all.ts"
+    "seed:all": "tsx scripts/seed-all.ts",
+    "seed:navbar-footer": "tsx scripts/seed-navbar-footer.ts"
   },
   "dependencies": {
     "@fontsource/cal-sans": "^5.2.3",

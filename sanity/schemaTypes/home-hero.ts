@@ -25,22 +25,6 @@ export const homeHero = defineType({
 			description: "Subheading text below the main heading",
 		}),
 		defineField({
-			name: "videoUrl",
-			title: "Background Video",
-			type: "file",
-			description: "Optional background video file",
-			options: {
-				accept: "video/*",
-			},
-		}),
-		defineField({
-			name: "trustedByText",
-			title: "Trusted By Text",
-			type: "string",
-			description: "Text displayed above the trusted by images",
-			initialValue: "Trusted by founders",
-		}),
-		defineField({
 			name: "topImages",
 			title: "Top Images (Trusted By Section)",
 			type: "array",

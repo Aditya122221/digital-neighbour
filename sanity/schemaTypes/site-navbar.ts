@@ -213,48 +213,6 @@ export const siteNavbar = defineType({
 				}),
 			],
 		}),
-		defineField({
-			name: "mobileOverrides",
-			title: "Mobile Navigation Overrides",
-			type: "object",
-			options: {
-				collapsible: true,
-				collapsed: true,
-			},
-			fields: [
-				defineField({
-					name: "menuLabel",
-					title: "Menu Label",
-					type: "string",
-					description: "Label displayed above the expandable mobile menu.",
-				}),
-				defineField({
-					name: "contactLinks",
-					title: "Quick Contact Links",
-					type: "array",
-					of: [
-						defineField({
-							type: "object",
-							name: "contactLink",
-							fields: [
-								defineField({
-									name: "label",
-									title: "Label",
-									type: "string",
-									validation: (Rule) => Rule.required(),
-								}),
-								defineField({
-									name: "href",
-									title: "Link",
-									type: "string",
-									validation: (Rule) => Rule.required(),
-								}),
-							],
-						}),
-					],
-				}),
-			],
-		}),
 	],
 	preview: {
 		select: {

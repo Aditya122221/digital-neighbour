@@ -2,8 +2,50 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import CustomButton from "./button"
+import { getFooterData } from "@/lib/footer-data"
+import type { FooterData } from "@/lib/footer-data"
 
-const Footer: React.FC = () => {
+export default async function Footer({ data }: { data?: FooterData | null }) {
+	const footerData = data || (await getFooterData())
+
+	// Fallback values
+	const heading = footerData?.heading || "Let's Scale Your Brand."
+	const highlightedWord = footerData?.highlightedWord || "Scale"
+	const subheading =
+		footerData?.subheading ||
+		"Feel free to reach out if you want to collaborate with us, or simply have a chat"
+	const ctaButton = footerData?.ctaButton || {
+		label: "Start a Project",
+		href: "/contact",
+		variant: "primary",
+	}
+	const companyLinks = footerData?.companyLinks || [
+		{ label: "Home", href: "/" },
+		{ label: "Projects", href: "/portfolio" },
+		{ label: "About Us", href: "/about" },
+		{ label: "Blog", href: "/resources" },
+		{ label: "Contact Us", href: "/contact" },
+		{ label: "404", href: "#" },
+	]
+	const socialLinks = footerData?.socialLinks || [
+		{ label: "Instagram", href: "#", platform: "instagram" },
+		{ label: "Facebook", href: "#", platform: "facebook" },
+		{ label: "LinkedIn", href: "#", platform: "linkedin" },
+		{ label: "Behance", href: "#", platform: "behance" },
+		{ label: "X/Twitter", href: "#", platform: "twitter" },
+	]
+	const contactInfo = footerData?.contactInfo || {
+		phone: "+1 234 456 789",
+		email: "hello@dn.com",
+	}
+	const legalLinks = footerData?.legalLinks || [
+		{ label: "Privacy Policy", href: "#" },
+		{ label: "Terms of Service", href: "#" },
+	]
+	const backgroundVideoUrl =
+		footerData?.backgroundVideo?.asset?.url ||
+		footerData?.backgroundVideo?.url ||
+		"/footer-vid.mp4"
 	return (
 		<div className="bg-[#5D50EB] text-white relative overflow-hidden min-h-[700px]">
 			{/* Background Video */}
@@ -17,7 +59,7 @@ const Footer: React.FC = () => {
 						className="max-w-xl max-h-100 object-contain"
 					>
 						<source
-							src="/footer-vid.mp4"
+							src={backgroundVideoUrl}
 							type="video/mp4"
 						/>
 						Your browser does not support
@@ -51,34 +93,29 @@ const Footer: React.FC = () => {
 							{/* Main Heading */}
 							<div className="space-y-4">
 								<h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-serif leading-tight">
-									<span className="italic">
-										Let's
-										Scale
-									</span>
-									<br />
-									Your
-									Brand.
+									{heading.includes(highlightedWord) ? (
+										<>
+											<span className="italic">
+												{heading.split(highlightedWord)[0]}
+											</span>
+											<span className="not-italic">{highlightedWord}</span>
+											<span className="italic">
+												{heading.split(highlightedWord)[1]}
+											</span>
+										</>
+									) : (
+										<span className="italic">{heading}</span>
+									)}
 								</h1>
 								<p className="text-lg text-gray-300 font-sans max-w-md">
-									Feel
-									free to
-									reach
-									out if
-									you want
-									to
-									collaborate
-									with us,
-									or
-									simply
-									have a
-									chat
+									{subheading}
 								</p>
 							</div>
 
 							{/* CTA Button */}
 							<CustomButton
-								text="Start a Project"
-								href="/contact"
+								text={ctaButton.label}
+								href={ctaButton.href}
 								textColor="black"
 								borderColor="black"
 								iconBG="#5D50EB"
@@ -94,44 +131,15 @@ const Footer: React.FC = () => {
 									Company
 								</h3>
 								<div className="space-y-3">
-									<a
-										href="#"
-										className="block text-gray-300 font-sans hover:text-white transition-colors"
-									>
-										Home
-									</a>
-									<a
-										href="#"
-										className="block text-gray-300 font-sans hover:text-white transition-colors"
-									>
-										Projects
-									</a>
-									<a
-										href="#"
-										className="block text-gray-300 font-sans hover:text-white transition-colors"
-									>
-										About
-										Us
-									</a>
-									<a
-										href="#"
-										className="block text-gray-300 font-sans hover:text-white transition-colors"
-									>
-										Blog
-									</a>
-									<a
-										href="#"
-										className="block text-gray-300 font-sans hover:text-white transition-colors"
-									>
-										Contact
-										Us
-									</a>
-									<a
-										href="#"
-										className="block text-gray-300 font-sans hover:text-white transition-colors"
-									>
-										404
-									</a>
+									{companyLinks.map((link) => (
+										<Link
+											key={link.label}
+											href={link.href}
+											className="block text-gray-300 font-sans hover:text-white transition-colors"
+										>
+											{link.label}
+										</Link>
+									))}
 								</div>
 							</div>
 
@@ -142,36 +150,15 @@ const Footer: React.FC = () => {
 									Us
 								</h3>
 								<div className="space-y-3">
-									<a
-										href="#"
-										className="block text-gray-300 font-sans hover:text-white transition-colors"
-									>
-										Instagram
-									</a>
-									<a
-										href="#"
-										className="block text-gray-300 font-sans hover:text-white transition-colors"
-									>
-										Facebook
-									</a>
-									<a
-										href="#"
-										className="block text-gray-300 font-sans hover:text-white transition-colors"
-									>
-										LinkedIn
-									</a>
-									<a
-										href="#"
-										className="block text-gray-300 font-sans hover:text-white transition-colors"
-									>
-										Behance
-									</a>
-									<a
-										href="#"
-										className="block text-gray-300 font-sans hover:text-white transition-colors"
-									>
-										X/Twitter
-									</a>
+									{socialLinks.map((link) => (
+										<Link
+											key={link.label}
+											href={link.href}
+											className="block text-gray-300 font-sans hover:text-white transition-colors"
+										>
+											{link.label}
+										</Link>
+									))}
 								</div>
 							</div>
 						</div>
@@ -184,26 +171,36 @@ const Footer: React.FC = () => {
 				<div className="max-w-7xl mx-auto flex justify-between items-center">
 					{/* Left side - Contact Information */}
 					<div className="flex flex-col sm:flex-row space-x-4">
-						<div className="flex items-center space-x-2">
-							<div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-							<span className="text-white font-sans">
-								+1 234 456 789
-							</span>
-						</div>
-						<div className="flex items-center space-x-2">
-							<div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-							<span className="text-white font-sans">
-								hello@dn.com
-							</span>
-						</div>
+						{contactInfo.phone && (
+							<div className="flex items-center space-x-2">
+								<div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+								<span className="text-white font-sans">
+									{contactInfo.phone}
+								</span>
+							</div>
+						)}
+						{contactInfo.email && (
+							<div className="flex items-center space-x-2">
+								<div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+								<span className="text-white font-sans">
+									{contactInfo.email}
+								</span>
+							</div>
+						)}
 					</div>
 
 					{/* Right side - Copyright and Legal Links */}
 					<div className="flex flex-col sm:flex-row items-center space-x-4 text-gray-400 font-sans">
-						<div className="hidden md:block w-1 h-1 bg-gray-400 rounded-full"></div>
-						<span>Privacy Policy</span>
-						<div className="hidden md:block w-1 h-1 bg-gray-400 rounded-full"></div>
-						<span>Terms of Service</span>
+						{legalLinks.map((link, index) => (
+							<React.Fragment key={link.label}>
+								{index > 0 && (
+									<div className="hidden md:block w-1 h-1 bg-gray-400 rounded-full"></div>
+								)}
+								<Link href={link.href} className="hover:text-white transition-colors">
+									{link.label}
+								</Link>
+							</React.Fragment>
+						))}
 					</div>
 				</div>
 			</footer>
@@ -211,4 +208,3 @@ const Footer: React.FC = () => {
 	)
 }
 
-export default Footer
