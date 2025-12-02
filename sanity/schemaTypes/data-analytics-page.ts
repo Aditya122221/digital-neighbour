@@ -1,65 +1,31 @@
 import { defineField, defineType } from "sanity"
+import {
+	featuresField,
+	keyBenefitsField,
+	faqField,
+	formField,
+	introParagraphField,
+	painPointsField,
+	servicesTypeOne,
+	contentSectionField,
+	processField,
+	seoSettingsField,
+	commonGroups,
+} from "./common"
 
 export const dataAnalyticsPage = defineType({
 	name: "dataAnalyticsPage",
 	title: "Data & Analytics Service Page",
 	type: "document",
 	groups: [
-		{
-			name: "basic",
-			title: "Basic Information",
-		},
-		{
-			name: "seo",
-			title: "SEO Settings",
-		},
-		{
-			name: "hero",
-			title: "Hero Section",
-		},
-		{
-			name: "form",
-			title: "Form Section",
-		},
-		{
-			name: "introParagraph",
-			title: "Intro Paragraph",
-		},
-		{
-			name: "painPoints",
-			title: "Pain Points",
-		},
+		...commonGroups,
 		{
 			name: "industries",
 			title: "Industries",
 		},
 		{
-			name: "services",
-			title: "Services",
-		},
-		{
-			name: "content",
-			title: "Content Section",
-		},
-		{
 			name: "premiumCloudServices",
 			title: "Premium Cloud Services",
-		},
-		{
-			name: "process",
-			title: "Process Section",
-		},
-		{
-			name: "keyBenefits",
-			title: "Key Benefits",
-		},
-		{
-			name: "features",
-			title: "Features",
-		},
-		{
-			name: "faq",
-			title: "FAQ Section",
 		},
 	],
 	fields: [
@@ -88,76 +54,7 @@ export const dataAnalyticsPage = defineType({
 		}),
 
 		// SEO Settings
-		defineField({
-			name: "seoSettings",
-			title: "SEO Settings",
-			type: "object",
-			group: "seo",
-			fields: [
-				defineField({
-					name: "title",
-					title: "SEO Title",
-					type: "string",
-					description:
-						"Title tag for SEO (typically 50-60 characters)",
-					validation: (Rule) =>
-						Rule.max(60).warning(
-							"SEO titles are typically 50-60 characters"
-						),
-				}),
-				defineField({
-					name: "description",
-					title: "Meta Description",
-					type: "text",
-					rows: 3,
-					description:
-						"Meta description for SEO (typically 150-160 characters)",
-					validation: (Rule) =>
-						Rule.max(160).warning(
-							"Meta descriptions are typically 150-160 characters"
-						),
-				}),
-				defineField({
-					name: "keywords",
-					title: "Keywords",
-					type: "array",
-					of: [{ type: "string" }],
-					options: { layout: "tags" },
-					description:
-						"SEO keywords for this page",
-				}),
-				defineField({
-					name: "ogTitle",
-					title: "Open Graph Title",
-					type: "string",
-					description:
-						"Title for social media sharing",
-				}),
-				defineField({
-					name: "ogDescription",
-					title: "Open Graph Description",
-					type: "text",
-					rows: 3,
-					description:
-						"Description for social media sharing",
-				}),
-				defineField({
-					name: "ogImage",
-					title: "Open Graph Image",
-					type: "image",
-					options: { hotspot: true },
-					description:
-						"Image for social media sharing (recommended: 1200x630px)",
-				}),
-				defineField({
-					name: "canonicalUrl",
-					title: "Canonical URL",
-					type: "url",
-					description:
-						"Canonical URL for this page",
-				}),
-			],
-		}),
+		seoSettingsField(),
 
 		// Hero Section
 		defineField({
@@ -225,110 +122,14 @@ export const dataAnalyticsPage = defineType({
 			],
 		}),
 
+		// Form Section
+		formField(),
+
 		// Intro Paragraph
-		defineField({
-			name: "introParagraph",
-			title: "Intro Paragraph Section",
-			type: "object",
-			group: "introParagraph",
-			fields: [
-				defineField({
-					name: "heading",
-					title: "Heading",
-					type: "string",
-				}),
-				defineField({
-					name: "problemStatement",
-					title: "Problem Statement",
-					type: "text",
-					rows: 4,
-				}),
-				defineField({
-					name: "valueProposition",
-					title: "Value Proposition",
-					type: "text",
-					rows: 5,
-				}),
-			],
-		}),
+		introParagraphField(),
 
 		// Pain Points
-		defineField({
-			name: "painPoints",
-			title: "Pain Points",
-			type: "object",
-			group: "painPoints",
-			fields: [
-				defineField({
-					name: "heading",
-					title: "Heading",
-					type: "string",
-				}),
-				defineField({
-					name: "subheading",
-					title: "Subheading",
-					type: "text",
-					rows: 3,
-				}),
-				defineField({
-					name: "painPoints",
-					title: "Pain Point Items",
-					type: "array",
-					of: [
-						{
-							type: "object",
-							fields: [
-								defineField({
-									name: "problem",
-									title: "Problem",
-									type: "text",
-									rows: 3,
-									validation: (
-										Rule
-									) =>
-										Rule.required(),
-								}),
-								defineField({
-									name: "solution",
-									title: "Solution",
-									type: "text",
-									rows: 4,
-									validation: (
-										Rule
-									) =>
-										Rule.required(),
-								}),
-							],
-							preview: {
-								select: {
-									title: "problem",
-									subtitle: "solution",
-								},
-								prepare({
-									title,
-									subtitle,
-								}) {
-									return {
-										title: title
-											? title.slice(
-													0,
-													60
-												)
-											: "Pain Point",
-										subtitle: subtitle
-											? subtitle.slice(
-													0,
-													60
-												)
-											: "",
-									}
-								},
-							},
-						},
-					],
-				}),
-			],
-		}),
+		painPointsField(),
 
 		// Industries Section
 		defineField({
@@ -423,156 +224,10 @@ export const dataAnalyticsPage = defineType({
 		}),
 
 		// Services
-		defineField({
-			name: "services",
-			title: "Service Name",
-			type: "string",
-			group: "services",
-			description:
-				"Main service name (e.g., 'Data & Analytics')",
-		}),
-
-		// Service Cards
-		defineField({
-			name: "serviceCards",
-			title: "Service Cards",
-			type: "array",
-			group: "services",
-			of: [
-				{
-					type: "object",
-					fields: [
-						defineField({
-							name: "id",
-							title: "ID",
-							type: "string",
-							validation: (Rule) =>
-								Rule.required(),
-						}),
-						defineField({
-							name: "name",
-							title: "Name",
-							type: "string",
-							validation: (Rule) =>
-								Rule.required(),
-						}),
-						defineField({
-							name: "title",
-							title: "Title",
-							type: "string",
-							validation: (Rule) =>
-								Rule.required(),
-						}),
-						defineField({
-							name: "description",
-							title: "Description",
-							type: "text",
-							rows: 3,
-						}),
-						defineField({
-							name: "image",
-							title: "Image",
-							type: "image",
-							options: {
-								hotspot: true,
-							},
-						}),
-						defineField({
-							name: "video",
-							title: "Video",
-							type: "file",
-							options: {
-								accept: "video/*",
-							},
-							description:
-								"Optional service card video",
-						}),
-						defineField({
-							name: "link",
-							title: "Link",
-							type: "string",
-							description:
-								"URL path for this service card",
-						}),
-					],
-					preview: {
-						select: {
-							title: "title",
-							subtitle: "name",
-							media: "image",
-						},
-						prepare({
-							title,
-							subtitle,
-							media,
-						}) {
-							return {
-								title:
-									title ||
-									"Service Card",
-								subtitle:
-									subtitle ||
-									"",
-								media,
-							}
-						},
-					},
-				},
-			],
-		}),
+		servicesTypeOne(),
 
 		// Content Section
-		defineField({
-			name: "content",
-			title: "Content Section",
-			type: "object",
-			group: "content",
-			fields: [
-				defineField({
-					name: "heading",
-					title: "Heading",
-					type: "string",
-				}),
-				defineField({
-					name: "text1",
-					title: "Text 1",
-					type: "text",
-					rows: 4,
-				}),
-				defineField({
-					name: "text2",
-					title: "Text 2",
-					type: "text",
-					rows: 4,
-				}),
-				defineField({
-					name: "text3",
-					title: "Text 3",
-					type: "text",
-					rows: 4,
-				}),
-				defineField({
-					name: "image",
-					title: "Image",
-					type: "image",
-					options: { hotspot: true },
-				}),
-				defineField({
-					name: "alt",
-					title: "Image Alt Text",
-					type: "string",
-				}),
-				defineField({
-					name: "video",
-					title: "Video",
-					type: "file",
-					options: {
-						accept: "video/*",
-					},
-					description: "Optional content video",
-				}),
-			],
-		}),
+		contentSectionField(),
 
 		// Premium Cloud Services
 		defineField({
@@ -765,306 +420,16 @@ export const dataAnalyticsPage = defineType({
 		}),
 
 		// Process Section
-		defineField({
-			name: "process",
-			title: "Process Section",
-			type: "object",
-			group: "process",
-			fields: [
-				defineField({
-					name: "steps",
-					title: "Process Steps",
-					type: "array",
-					of: [{ type: "string" }],
-					description:
-						"List of process step titles",
-				}),
-				defineField({
-					name: "content",
-					title: "Process Step Content",
-					type: "array",
-					of: [{ type: "text", rows: 3 }],
-					description:
-						"Detailed descriptions for each process step (should match the number of steps)",
-				}),
-			],
-		}),
+		processField(),
 
 		// Key Benefits
-		defineField({
-			name: "keyBenefits",
-			title: "Key Benefits",
-			type: "object",
-			group: "keyBenefits",
-			fields: [
-				defineField({
-					name: "heading",
-					title: "Heading",
-					type: "string",
-				}),
-				defineField({
-					name: "subheading",
-					title: "Subheading",
-					type: "text",
-					rows: 3,
-				}),
-				defineField({
-					name: "benefits",
-					title: "Benefits",
-					type: "array",
-					of: [
-						{
-							type: "object",
-							fields: [
-								defineField({
-									name: "title",
-									title: "Title",
-									type: "string",
-									validation: (
-										Rule
-									) =>
-										Rule.required(),
-								}),
-								defineField({
-									name: "description",
-									title: "Description",
-									type: "text",
-									rows: 3,
-									validation: (
-										Rule
-									) =>
-										Rule.required(),
-								}),
-							],
-							preview: {
-								select: {
-									title: "title",
-									subtitle: "description",
-								},
-								prepare({
-									title,
-									subtitle,
-								}) {
-									return {
-										title:
-											title ||
-											"Benefit",
-										subtitle: subtitle
-											? subtitle.slice(
-													0,
-													60
-												)
-											: "",
-									}
-								},
-							},
-						},
-					],
-				}),
-			],
-		}),
+		keyBenefitsField(),
 
 		// Features
-		defineField({
-			name: "features",
-			title: "Features",
-			type: "object",
-			group: "features",
-			fields: [
-				defineField({
-					name: "heading",
-					title: "Heading",
-					type: "string",
-				}),
-				defineField({
-					name: "subheading",
-					title: "Subheading",
-					type: "text",
-					rows: 3,
-				}),
-				defineField({
-					name: "features",
-					title: "Feature Items",
-					type: "array",
-					of: [
-						{
-							type: "object",
-							fields: [
-								defineField({
-									name: "title",
-									title: "Title",
-									type: "string",
-									validation: (
-										Rule
-									) =>
-										Rule.required(),
-								}),
-								defineField({
-									name: "description",
-									title: "Description",
-									type: "text",
-									rows: 3,
-									validation: (
-										Rule
-									) =>
-										Rule.required(),
-								}),
-								defineField({
-									name: "icon",
-									title: "Icon",
-									type: "image",
-									options: {
-										hotspot: true,
-									},
-									description: "Icon image",
-								}),
-							],
-							preview: {
-								select: {
-									title: "title",
-									subtitle: "description",
-								},
-								prepare({
-									title,
-									subtitle,
-								}) {
-									return {
-										title:
-											title ||
-											"Feature",
-										subtitle: subtitle
-											? subtitle.slice(
-													0,
-													60
-												)
-											: "",
-									}
-								},
-							},
-						},
-					],
-				}),
-			],
-		}),
-
-		// Form Section
-		defineField({
-			name: "form",
-			title: "Form Section",
-			type: "object",
-			group: "form",
-			fields: [
-				defineField({
-					name: "heading",
-					title: "Heading",
-					type: "string",
-				}),
-				defineField({
-					name: "content",
-					title: "Content",
-					type: "text",
-					rows: 4,
-				}),
-				defineField({
-					name: "subContent",
-					title: "Sub Content",
-					type: "text",
-					rows: 3,
-				}),
-				defineField({
-					name: "cta",
-					title: "Call to Action Text",
-					type: "string",
-				}),
-				defineField({
-					name: "formHeading",
-					title: "Form Heading",
-					type: "string",
-				}),
-				defineField({
-					name: "buttonText",
-					title: "Button Text",
-					type: "string",
-				}),
-			],
-		}),
+		featuresField(),
 
 		// FAQ Section
-		defineField({
-			name: "faq",
-			title: "FAQ Section",
-			type: "object",
-			group: "faq",
-			fields: [
-				defineField({
-					name: "serviceName",
-					title: "Service Name",
-					type: "string",
-					description:
-						"Service name used in FAQ context",
-				}),
-				defineField({
-					name: "tagline",
-					title: "Tagline",
-					type: "string",
-					description:
-						"Short line shown under the FAQ heading",
-				}),
-				defineField({
-					name: "faqs",
-					title: "FAQs",
-					type: "array",
-					of: [
-						{
-							type: "object",
-							fields: [
-								defineField({
-									name: "q",
-									title: "Question",
-									type: "string",
-									validation: (
-										Rule
-									) =>
-										Rule.required(),
-								}),
-								defineField({
-									name: "a",
-									title: "Answer",
-									type: "text",
-									rows: 4,
-									validation: (
-										Rule
-									) =>
-										Rule.required(),
-								}),
-							],
-							preview: {
-								select: {
-									title: "q",
-									subtitle: "a",
-								},
-								prepare({
-									title,
-									subtitle,
-								}) {
-									return {
-										title:
-											title ||
-											"FAQ Question",
-										subtitle: subtitle
-											? subtitle.slice(
-													0,
-													60
-												)
-											: "",
-									}
-								},
-							},
-						},
-					],
-				}),
-			],
-		}),
+		faqField(),
 	],
 	preview: {
 		select: {
