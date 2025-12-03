@@ -16,11 +16,22 @@ NEXT_PUBLIC_SANITY_PROJECT_ID=yourProjectId
 NEXT_PUBLIC_SANITY_DATASET=production
 NEXT_PUBLIC_SANITY_API_VERSION=2023-10-01
 SANITY_API_READ_TOKEN=skY0urReadOnlyToken (optional, only required for private data or preview)
+
+# Contact Form Email Configuration
+```
+RESEND_API_KEY=re_xxxxxxxxxxxxx
+CONTACT_EMAIL=your-email@example.com
+RESEND_FROM_EMAIL=Contact Form <onboarding@resend.dev> (optional)
+COMPANY_NAME=Digital Neighbour (optional - used for personalized emails)
 ```
 
 - `NEXT_PUBLIC_SANITY_PROJECT_ID` and `NEXT_PUBLIC_SANITY_DATASET` are required for both the Studio and client-side queries.
 - `NEXT_PUBLIC_SANITY_API_VERSION` can be any valid date string; update it when you rely on newly released fields.
 - `SANITY_API_READ_TOKEN` is optional. Add it if you need authenticated requests (draft previews, private datasets). Generate tokens in the Sanity project settings.
+- `RESEND_API_KEY` is required for the contact form to send emails. Get your API key from [Resend](https://resend.com/api-keys) (free tier available).
+- `CONTACT_EMAIL` is required. This is the email address where contact form submissions will be sent.
+- `RESEND_FROM_EMAIL` is optional. Customize the "from" email address (default: "Contact Form <onboarding@resend.dev>").
+- `COMPANY_NAME` is optional. Your company name used in personalized emails (default: "Digital Neighbour").
 
 ## Scripts
 

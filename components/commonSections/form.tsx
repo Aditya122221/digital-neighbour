@@ -21,10 +21,69 @@ export default function Form({ data }: FormProps) {
     email: "",
     phone: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
 
-  const handleSubmit = () => {
-    // Handle form submission
-    console.log("Form submitted:", formData);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSubmitError(null);
+    setSubmitSuccess(false);
+
+    // Validate required fields
+    if (!formData.email) {
+      setSubmitError("Email is required");
+      return;
+    }
+
+    if (!formData.website && !formData.phone) {
+      setSubmitError("Please provide either website or phone number");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Get current page path for source tracking
+      const sourcePage = typeof window !== "undefined" ? window.location.pathname : "Unknown";
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          sourcePage: sourcePage,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to submit form");
+      }
+
+      // Show success message
+      setSubmitSuccess(true);
+      
+      // Clear form
+      setFormData({
+        website: "",
+        email: "",
+        phone: "",
+      });
+
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setSubmitSuccess(false);
+      }, 5000);
+    } catch (error: any) {
+      console.error("Error submitting form:", error);
+      setSubmitError(error.message || "An error occurred. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,6 +91,16 @@ export default function Form({ data }: FormProps) {
       ...formData,
       [e.target.name]: e.target.value,
     });
+    
+    // Clear error when user starts typing
+    if (submitError) {
+      setSubmitError(null);
+    }
+    
+    // Clear success message when user starts typing
+    if (submitSuccess) {
+      setSubmitSuccess(false);
+    }
   };
 
   return (
@@ -90,7 +159,24 @@ export default function Form({ data }: FormProps) {
             <h3 className="text-2xl md:text-3xl font-semibold text-center text-white mb-8 leading-tight">
               {data?.formHeading || "Boost Your Website's Performance with a Comprehensive Site Audit"}
             </h3>
-            <form className="space-y-6">
+            
+            {/* Success Message */}
+            {submitSuccess && (
+              <div className="mb-6 rounded-lg bg-green-50 border border-green-200 p-4">
+                <p className="text-sm font-medium text-green-800 text-center">
+                  ✓ Thank you! Your form has been submitted successfully. We'll get back to you soon.
+                </p>
+              </div>
+            )}
+
+            {/* Error Message */}
+            {submitError && (
+              <div className="mb-6 rounded-lg bg-red-50 border border-red-200 p-4">
+                <p className="text-sm text-red-600 text-center">{submitError}</p>
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="website" className="sr-only">
                   Website
@@ -102,7 +188,6 @@ export default function Form({ data }: FormProps) {
                   value={formData.website}
                   onChange={handleChange}
                   placeholder="Website"
-                  required
                   className="w-full px-4 py-4 border-b-2 border-white/30 focus:border-white outline-none transition-colors text-lg bg-transparent text-white placeholder:text-white/60"
                 />
               </div>
@@ -132,18 +217,48 @@ export default function Form({ data }: FormProps) {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder="Phone"
-                  required
                   className="w-full px-4 py-4 border-b-2 border-white/30 focus:border-white outline-none transition-colors text-lg bg-transparent text-white placeholder:text-white/60"
                 />
               </div>
               <div className="flex justify-center">
-                <CustomButton
-                  text={data?.buttonText || "Get My Audit"}
-                  onClick={handleSubmit}
-                  textColor="#5D50EB"
-                  borderColor="#5D50EB"
-                  className="w-auto"
-                />
+                <button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="group relative overflow-hidden rounded-lg border-2 px-6 py-3 transition-all duration-300 ease-out hover:border-[3px] disabled:opacity-50 disabled:cursor-not-allowed"
+                  style={{
+                    backgroundColor: "#0e0e59",
+                    borderColor: "#0e0e59",
+                  }}
+                >
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-black/5 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100" />
+                  <div className="relative flex items-center gap-3 text-white">
+                    <span className="text-md transition-all duration-300 font-medium">
+                      {isSubmitting ? "Submitting..." : data?.buttonText || "Get My Audit"}
+                    </span>
+                    <div
+                      className="flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 group-hover:shadow-lg"
+                      style={{
+                        backgroundColor: "#5D50EB",
+                      }}
+                    >
+                      <svg
+                        className="transition-transform duration-300 -rotate-45 group-hover:rotate-0 ease-out"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                        style={{ color: "white" }}
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </button>
               </div>
             </form>
           </motion.div>
@@ -152,4 +267,3 @@ export default function Form({ data }: FormProps) {
     </section>
   );
 }
-

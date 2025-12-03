@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
+import { Suspense } from "react"
 import Navbar from "@/components/core/navbar"
 import Footer from "@/components/core/footer"
 import ContactForm from "@/components/commonSections/contact-form"
+import ContactSuccessBanner from "@/components/commonSections/contact-success-banner"
 import { getContactPageData } from "@/lib/contact-data"
 import Image from "next/image"
 
@@ -24,6 +26,11 @@ export default async function ContactPage() {
 			<div className="relative">
 				<Navbar />
 			</div>
+
+			{/* Success Banner */}
+			<Suspense fallback={null}>
+				<ContactSuccessBanner />
+			</Suspense>
 
 			{/* Main Content Section */}
 			<section

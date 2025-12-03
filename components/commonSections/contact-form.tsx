@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import { useRouter } from "next/navigation"
 import {
 	Select,
 	SelectContent,
@@ -46,8 +47,11 @@ interface ContactFormProps {
 }
 
 export default function ContactForm({ formData }: ContactFormProps) {
+	const router = useRouter()
 	const [formValues, setFormValues] = useState<Record<string, string>>({})
 	const [errors, setErrors] = useState<Record<string, string>>({})
+	const [isSubmitting, setIsSubmitting] = useState(false)
+	const [submitError, setSubmitError] = useState<string | null>(null)
 
 	const validateField = (field: FormField, value: string | undefined): string | null => {
 		// Handle required validation
@@ -59,6 +63,18 @@ export default function ContactForm({ formData }: ContactFormProps) {
 
 		// If no value and not required, skip further validation
 		if (!value || (typeof value === "string" && !value.trim())) {
+			return null
+		}
+
+		// Special handling for email fields - use a more permissive validation
+		if (field.type === "email" && value) {
+			const trimmedValue = value.trim()
+			// Use a simple, permissive email pattern that accepts all valid emails
+			const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+			if (!emailPattern.test(trimmedValue)) {
+				return field.validation?.errorMessage || "Please enter a valid email address"
+			}
+			// Email validation passed, return null (no errors)
 			return null
 		}
 
@@ -83,10 +99,18 @@ export default function ContactForm({ formData }: ContactFormProps) {
 			return errorMessage || `Maximum ${maxLength} characters allowed`
 		}
 
-		if (pattern) {
-			const regex = new RegExp(pattern)
-			if (!regex.test(value)) {
-				return errorMessage || "Invalid format"
+		// For non-email fields, apply pattern validation
+		if (pattern && field.type !== "email") {
+			try {
+				// Handle escaped patterns in JSON
+				const cleanPattern = pattern.replace(/\\\\(.)/g, "$1")
+				const regex = new RegExp(cleanPattern)
+				if (!regex.test(value)) {
+					return errorMessage || "Invalid format"
+				}
+			} catch (e) {
+				console.error("Invalid regex pattern:", pattern, e)
+				// If pattern is invalid, skip pattern validation
 			}
 		}
 
@@ -118,8 +142,11 @@ export default function ContactForm({ formData }: ContactFormProps) {
 		}
 	}
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
+
+		// Clear previous errors
+		setSubmitError(null)
 
 		const newErrors: Record<string, string> = {}
 		let isValid = true
@@ -135,10 +162,45 @@ export default function ContactForm({ formData }: ContactFormProps) {
 
 		setErrors(newErrors)
 
-		if (isValid) {
-			// Handle form submission here
-			console.log("Form submitted:", formValues)
-			// You can add API call here
+		if (!isValid) {
+			return
+		}
+
+		setIsSubmitting(true)
+
+		try {
+			// Get current page path for source tracking
+			const sourcePage = typeof window !== "undefined" ? window.location.pathname : "Contact Page"
+
+			const response = await fetch("/api/contact", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({
+					...formValues,
+					sourcePage: sourcePage,
+				}),
+			})
+
+			const data = await response.json()
+
+			if (!response.ok) {
+				throw new Error(data.error || "Failed to submit form")
+			}
+
+			// Clear form values
+			setFormValues({})
+
+			// Redirect to contact page with success parameter
+			router.push("/contact?success=true")
+			router.refresh()
+		} catch (error: any) {
+			console.error("Error submitting form:", error)
+			setSubmitError(
+				error.message || "An error occurred. Please try again later."
+			)
+			setIsSubmitting(false)
 		}
 	}
 
@@ -276,13 +338,23 @@ export default function ContactForm({ formData }: ContactFormProps) {
 					</p>
 				)}
 
+				{/* Submit Error Message */}
+				{submitError && (
+					<div className="rounded-lg bg-red-50 border border-red-200 p-4">
+						<p className="text-sm text-red-600">{submitError}</p>
+					</div>
+				)}
+
 				{/* Submit Button */}
 				<div className="flex justify-end pt-2">
 					<button
 						type="submit"
-						className="rounded-lg bg-[#5D50EB] px-8 py-3 font-semibold text-white transition-all hover:bg-[#564fa5]"
+						disabled={isSubmitting}
+						className="rounded-lg bg-[#5D50EB] px-8 py-3 font-semibold text-white transition-all hover:bg-[#564fa5] disabled:opacity-50 disabled:cursor-not-allowed"
 					>
-						{formData.submitButton?.text || "Submit"}
+						{isSubmitting
+							? "Submitting..."
+							: formData.submitButton?.text || "Submit"}
 					</button>
 				</div>
 			</form>
