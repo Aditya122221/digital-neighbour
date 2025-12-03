@@ -53,28 +53,26 @@ export default async function Footer({ data }: { data?: FooterData | null }) {
 	return (
 		<div className="bg-[#5D50EB] text-white relative overflow-hidden min-h-[700px]">
 			{/* Background Video */}
-			<div className="absolute inset-0 z-0 flex items-center justify-center">
-				<div className="relative">
-					<video
-						autoPlay
-						loop
-						muted
-						playsInline
-						className="max-w-xl max-h-100 object-contain"
-					>
-						<source
-							src={backgroundVideoUrl}
-							type="video/mp4"
-						/>
-						Your browser does not support
-						the video tag.
-					</video>
-					{/* Gradient overlay from edges to center */}
-					<div className="absolute inset-0 bg-gradient-to-r from-[#5D50EB] via-[#5D50EB]/70  to-[#5D50EB] opacity-100"></div>
-					<div className="absolute inset-0 bg-gradient-to-b from-[#5D50EB] via-[#5D50EB]/20  to-[#5D50EB] opacity-100"></div>
-					<div className="absolute inset-0 bg-gradient-to-r from-[#5D50EB]/80 via-transparent to-[#5D50EB]/80 opacity-60"></div>
-					<div className="absolute inset-0 bg-gradient-to-b from-[#5D50EB]/80 via-transparent to-[#5D50EB]/80 opacity-60"></div>
-				</div>
+			<div className="absolute inset-0 z-0">
+				<video
+					autoPlay
+					loop
+					muted
+					playsInline
+					className="w-full h-full object-cover"
+				>
+					<source
+						src={backgroundVideoUrl}
+						type="video/mp4"
+					/>
+					Your browser does not support
+					the video tag.
+				</video>
+				{/* Gradient overlay from edges to center */}
+				<div className="absolute inset-0 bg-gradient-to-r from-[#5D50EB] via-[#5D50EB]/70  to-[#5D50EB] opacity-100"></div>
+				<div className="absolute inset-0 bg-gradient-to-b from-[#5D50EB] via-[#5D50EB]/20  to-[#5D50EB] opacity-100"></div>
+				<div className="absolute inset-0 bg-gradient-to-r from-[#5D50EB]/80 via-transparent to-[#5D50EB]/80 opacity-60"></div>
+				<div className="absolute inset-0 bg-gradient-to-b from-[#5D50EB]/80 via-transparent to-[#5D50EB]/80 opacity-60"></div>
 			</div>
 			{/* Main Content Area */}
 			<div className="px-8 py-26 relative z-10">
