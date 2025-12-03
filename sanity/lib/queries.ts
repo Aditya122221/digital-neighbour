@@ -264,6 +264,92 @@ export const portfolioPageQuery = `{
   }
 }`;
 
+export const contactPageQuery = `{
+  "settings": *[_type == "contactPageSeo"][0]{
+    metadata,
+    description,
+    title,
+    keywords,
+    ogTitle,
+    ogDescription,
+    ogImage{
+      ...,
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    },
+    canonicalUrl,
+    structuredData
+  },
+  "hero": *[_type == "contactHero"][0]{
+    heading,
+    highlightWord,
+    headingSuffix,
+    presenter{
+      name,
+      title,
+      image{
+        ...,
+        asset->{
+          _id,
+          url,
+          metadata
+        },
+        alt
+      }
+    },
+    benefits{
+      title,
+      items[]{
+        id,
+        text,
+        icon{
+          ...,
+          asset->{
+            _id,
+            url,
+            metadata
+          },
+          alt
+        }
+      }
+    }
+  },
+  "form": *[_type == "contactForm"][0]{
+    fields[]{
+      id,
+      name,
+      type,
+      label,
+      placeholder,
+      required,
+      gridCols,
+      rows,
+      options[]{
+        value,
+        label
+      },
+      validation{
+        minLength,
+        maxLength,
+        pattern,
+        errorMessage
+      }
+    },
+    submitButton{
+      text,
+      type
+    },
+    disclaimer{
+      text,
+      termsLink,
+      privacyLink
+    }
+  }
+}`;
+
 export const resourcesPageQuery = `{
   "settings": *[
     _type == "resourcesPageSeo" && _id == "resourcesPageSeoSettings"

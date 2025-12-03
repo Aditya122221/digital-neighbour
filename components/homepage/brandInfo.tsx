@@ -172,7 +172,7 @@ export default function BrandInfo({ data }: BrandInfoProps) {
 								<CustomButton
 									text={data.buttonText || "Connect with Us"}
 									href={data.buttonLink || "/contact"}
-									className="w-full max-w-md"
+									className="w-fit"
 								/>
 							</div>
 							{/* Render 4th differentiator if it exists */}

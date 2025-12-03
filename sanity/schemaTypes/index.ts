@@ -25,6 +25,9 @@ import { aboutOrigins } from "./about-origins"
 import { aboutValues } from "./about-values"
 import { aboutAchievements } from "./about-achievements"
 import { aboutTeam } from "./about-team"
+import { contactPageSeo } from "./contact-page-seo"
+import { contactHero } from "./contact-hero"
+import { contactForm } from "./contact-form"
 import { seoPage } from "./seo-page"
 import { paidAdsPage } from "./paid-ads-page"
 import { socialMediaPage } from "./social-media-page"
@@ -75,6 +78,9 @@ export const schemaTypes = [
 	aboutValues,
 	aboutAchievements,
 	aboutTeam,
+	contactPageSeo,
+	contactHero,
+	contactForm,
 	seoPage,
 	paidAdsPage,
 	socialMediaPage,

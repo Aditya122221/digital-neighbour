@@ -50,6 +50,9 @@ export default defineConfig({
 				const ABOUT_ACHIEVEMENTS_DOC_ID =
 					"aboutAchievements"
 				const ABOUT_TEAM_DOC_ID = "aboutTeam"
+				const CONTACT_PAGE_SEO_DOC_ID = "contactPageSeoSettings"
+				const CONTACT_HERO_DOC_ID = "contactHero"
+				const CONTACT_FORM_DOC_ID = "contactForm"
 				const SEO_SETTINGS_DOC_ID = "seoSettings"
 				const SITE_NAVBAR_DOC_ID = "siteNavbar"
 				const SITE_FOOTER_DOC_ID = "siteFooter"
@@ -270,6 +273,24 @@ export default defineConfig({
 					},
 				]
 
+				const CONTACT_PAGE_SECTIONS = [
+					{
+						title: "SEO Settings",
+						schemaType: "contactPageSeo",
+						documentId: CONTACT_PAGE_SEO_DOC_ID,
+					},
+					{
+						title: "Hero Section",
+						schemaType: "contactHero",
+						documentId: CONTACT_HERO_DOC_ID,
+					},
+					{
+						title: "Form",
+						schemaType: "contactForm",
+						documentId: CONTACT_FORM_DOC_ID,
+					},
+				]
+
 				const MARKETING_PAGE_SECTIONS = [
 					{
 						title: "SEO Setting",
@@ -339,6 +360,9 @@ export default defineConfig({
 					...ABOUT_PAGE_SECTIONS.map(
 						({ schemaType }) => schemaType
 					),
+					...CONTACT_PAGE_SECTIONS.map(
+						({ schemaType }) => schemaType
+					),
 					...MARKETING_PAGE_SECTIONS.map(
 						({ schemaType }) => schemaType
 					),
@@ -383,6 +407,10 @@ export default defineConfig({
 						buildSectionsList(
 							"About Page",
 							ABOUT_PAGE_SECTIONS
+						),
+						buildSectionsList(
+							"Contact Page",
+							CONTACT_PAGE_SECTIONS
 						),
 						buildSectionsList(
 							"Marketing Agency Page",

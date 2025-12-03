@@ -1,226 +1,177 @@
 import type { Metadata } from "next"
 import Navbar from "@/components/core/navbar"
 import Footer from "@/components/core/footer"
+import ContactForm from "@/components/commonSections/contact-form"
+import { getContactPageData } from "@/lib/contact-data"
+import Image from "next/image"
 
-export const metadata: Metadata = {
-	title: "Contact Us - Let's Collaborate And Grow | Digital Neighbour",
-	description:
-		"Get in touch with Digital Neighbour. Let's collaborate and grow your brand together. Reach out for inquiries, partnerships, or to discuss your digital marketing needs.",
+export async function generateMetadata(): Promise<Metadata> {
+	const contactData = await getContactPageData()
+	return {
+		title:
+			contactData.metadata?.title ||
+			"Contact Us - Digital Neighbour",
+		description: contactData.metadata?.description || "",
+	}
 }
 
-export default function ContactPage() {
+export default async function ContactPage() {
+	const contactData = await getContactPageData()
+	const { hero, form } = contactData
+
 	return (
-		<main className="flex min-h-screen w-full flex-col bg-gray-50">
+		<main className="flex min-h-screen w-full flex-col bg-[#0e0e59]">
 			<div className="relative">
 				<Navbar />
 			</div>
 
 			{/* Main Content Section */}
-			<section className="relative mx-auto w-full max-w-7xl px-4 py-16 md:py-24">
-				{/* Decorative background elements */}
-				<div className="pointer-events-none absolute top-0 right-0 -z-0 hidden md:block">
-					<div className="relative h-64 w-64 opacity-30">
-						<svg
-							viewBox="0 0 200 200"
-							className="h-full w-full"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M50 50 Q100 30 150 50 T250 50"
-								stroke="currentColor"
-								strokeWidth="2"
-								className="text-gray-300"
-								fill="none"
-							/>
-							<path
-								d="M30 100 Q80 80 130 100 T230 100"
-								stroke="currentColor"
-								strokeWidth="2"
-								className="text-gray-300"
-								fill="none"
-							/>
-							<path
-								d="M50 150 Q100 130 150 150 T250 150"
-								stroke="currentColor"
-								strokeWidth="2"
-								className="text-gray-300"
-								fill="none"
-							/>
-						</svg>
-					</div>
-				</div>
-
+			<section
+				className="relative mx-auto w-full max-w-7xl px-4 py-16 md:py-24"
+				style={{ overflow: "hidden" }}
+			>
 				<div className="relative z-10 grid grid-cols-1 gap-12 lg:grid-cols-2">
 					{/* Left Column - Information Section */}
-					<div className="flex flex-col space-y-8">
-						{/* Heading with highlighted word */}
-						<h1 className="text-4xl font-serif font-semibold leading-tight text-foreground md:text-5xl lg:text-6xl">
-							Let's{" "}
-							<span className="relative inline-block">
-								<span className="relative z-10">Collaborate</span>
-								<span className="absolute bottom-2 left-0 right-0 h-3/5 bg-yellow -skew-x-12" />
-							</span>{" "}
-							And Grow
-						</h1>
+					{hero && (
+						<div className="flex flex-col space-y-8">
+							{/* Heading with highlighted word */}
+							<h1 className="text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
+								{hero.heading ||
+									""}{" "}
+								{hero.highlightWord && (
+									<span className="text-[#ffbe11]">
+										{
+											hero.highlightWord
+										}
+									</span>
+								)}{" "}
+								{hero.headingSuffix ||
+									""}
+							</h1>
 
-						{/* Description */}
-						<p className="text-base leading-relaxed text-muted-foreground md:text-lg">
-							Explore insights on marketing, branding, and social media to help
-							your brand grow and stand out.
-						</p>
+							{/* Presenter Information */}
+							{hero.presenter && (
+								<div className="flex items-center gap-4">
+									{hero
+										.presenter
+										.image && (
+										<div className="relative h-16 w-20 overflow-hidden rounded-2xl">
+											<Image
+												src={
+													hero
+														.presenter
+														.image
+												}
+												alt={
+													hero
+														.presenter
+														.name ||
+													"Presenter"
+												}
+												fill
+												className="object-cover"
+											/>
+										</div>
+									)}
+									<div>
+										<p className="text-base text-white">
+											with{" "}
+											{hero
+												.presenter
+												.name && (
+												<span className="font-semibold">
+													{
+														hero
+															.presenter
+															.name
+													}
+												</span>
+											)}
+										</p>
+										{hero
+											.presenter
+											.title && (
+											<p className="text-sm text-[#ffbe11]">
+												{
+													hero
+														.presenter
+														.title
+												}
+											</p>
+										)}
+									</div>
+								</div>
+							)}
 
-						{/* Contact Details */}
-						<div className="mt-8 space-y-6">
-							{/* Address */}
-							<div>
-								<h3 className="text-sm font-semibold uppercase tracking-wide text-foreground">
-									Address
-								</h3>
-								<p className="mt-1 text-base text-muted-foreground">
-									123 Market Street, Suite 400<br />
-									Los Angeles, CA 90001
-								</p>
-							</div>
-
-							{/* Phone */}
-							<div>
-								<h3 className="text-sm font-semibold uppercase tracking-wide text-foreground">
-									Phone
-								</h3>
-								<p className="mt-1 text-base text-muted-foreground">
-									+1 234 456 789
-								</p>
-							</div>
-
-							{/* Office Hours */}
-							<div>
-								<h3 className="text-sm font-semibold uppercase tracking-wide text-foreground">
-									Office Hours
-								</h3>
-								<p className="mt-1 text-base text-muted-foreground">
-									Monday - Friday • 9:00 AM – 6:00 PM
-								</p>
-							</div>
+							{/* Benefits List */}
+							{hero.benefits && (
+								<div className="mt-8">
+									{hero
+										.benefits
+										.title && (
+										<h2 className="mb-6 text-lg font-semibold text-white">
+											{
+												hero
+													.benefits
+													.title
+											}
+										</h2>
+									)}
+									{hero
+										.benefits
+										.items &&
+										hero
+											.benefits
+											.items
+											.length >
+											0 && (
+											<ul className="space-y-4">
+												{hero.benefits.items.map(
+													(
+														benefit
+													) => (
+														<li
+															key={
+																benefit.id
+															}
+															className="flex items-start gap-3"
+														>
+															{benefit.icon && (
+																<div className="relative mt-1 h-6 w-6 flex-shrink-0">
+																	<Image
+																		src={
+																			benefit.icon
+																		}
+																		alt=""
+																		fill
+																		className="object-contain"
+																	/>
+																</div>
+															)}
+															{benefit.text && (
+																<span className="text-base text-white">
+																	{
+																		benefit.text
+																	}
+																</span>
+															)}
+														</li>
+													)
+												)}
+											</ul>
+										)}
+								</div>
+							)}
 						</div>
-					</div>
+					)}
 
 					{/* Right Column - Contact Form */}
 					<div className="lg:pl-8">
-						<div className="rounded-xl bg-white p-8 shadow-lg">
-							<form className="space-y-6">
-								{/* Name and Company - Side by side */}
-								<div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-									<div>
-										<label
-											htmlFor="name"
-											className="block text-sm font-semibold text-foreground"
-										>
-											Your name
-										</label>
-										<input
-											type="text"
-											id="name"
-											name="name"
-											placeholder="Enter full name"
-											className="mt-2 w-full rounded-lg border border-input bg-white px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none"
-										/>
-									</div>
-									<div>
-										<label
-											htmlFor="company"
-											className="block text-sm font-semibold text-foreground"
-										>
-											Company name
-										</label>
-										<input
-											type="text"
-											id="company"
-											name="company"
-											placeholder="Enter company name"
-											className="mt-2 w-full rounded-lg border border-input bg-white px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none"
-										/>
-									</div>
-								</div>
-
-								{/* Email */}
-								<div>
-									<label
-										htmlFor="email"
-										className="block text-sm font-semibold text-foreground"
-									>
-										Email
-									</label>
-									<input
-										type="email"
-										id="email"
-										name="email"
-										placeholder="Enter email address"
-										className="mt-2 w-full rounded-lg border border-input bg-white px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none"
-									/>
-								</div>
-
-								{/* Message */}
-								<div>
-									<label
-										htmlFor="message"
-										className="block text-sm font-semibold text-foreground"
-									>
-										Message
-									</label>
-									<textarea
-										id="message"
-										name="message"
-										rows={6}
-										placeholder="Tell us about your vision"
-										className="mt-2 w-full resize-none rounded-lg border border-input bg-white px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-foreground focus:outline-none"
-									/>
-								</div>
-
-								{/* Terms and Privacy */}
-								<p className="text-xs leading-relaxed text-muted-foreground">
-									By submitting this form you agree to our{" "}
-									<a
-										href="/terms"
-										className="font-semibold text-foreground underline hover:opacity-70 transition-opacity"
-									>
-										Terms of Use
-									</a>{" "}
-									and{" "}
-									<a
-										href="/privacy"
-										className="font-semibold text-foreground underline hover:opacity-70 transition-opacity"
-									>
-										Privacy Policy
-									</a>
-									.
-								</p>
-
-								{/* Submit Button */}
-								<div className="flex justify-end pt-2">
-									<button
-										type="submit"
-										className="group relative flex items-center gap-3 rounded-lg border border-foreground bg-white px-6 py-3 font-semibold text-foreground transition-all hover:bg-foreground hover:text-white"
-									>
-										<span>Submit</span>
-										<div className="flex h-8 w-8 items-center justify-center rounded-full bg-yellow">
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												viewBox="0 0 24 24"
-												fill="none"
-												stroke="currentColor"
-												strokeWidth="2"
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												className="h-4 w-4 text-black"
-											>
-												<path d="M5 12h14M12 5l7 7-7 7" />
-											</svg>
-										</div>
-									</button>
-								</div>
-							</form>
-						</div>
+						{form && (
+							<ContactForm
+								formData={form}
+							/>
+						)}
 					</div>
 				</div>
 			</section>
@@ -229,4 +180,3 @@ export default function ContactPage() {
 		</main>
 	)
 }
-

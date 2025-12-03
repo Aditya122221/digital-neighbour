@@ -1,0 +1,190 @@
+{
+	"metadata": {
+		"title": "Contact Us - Let's Collaborate And Grow | Digital Neighbour",
+		"description": "Get in touch with Digital Neighbour. Let's collaborate and grow your brand together. Reach out for inquiries, partnerships, or to discuss your digital marketing needs."
+	},
+	"hero": {
+		"heading": "Apply for your free SaaS marketing",
+		"highlightWord": "strategy",
+		"headingSuffix": "call.",
+		"presenter": {
+			"name": "Ryan James",
+			"title": "Founder of Rocket SaaS",
+			"image": "/placeholder-user.jpg"
+		},
+		"benefits": {
+			"title": "Receive tailored advice on how to:",
+			"items": [
+				{
+					"id": 1,
+					"text": "Develop a full funnel strategy.",
+					"icon": "/homepage/rocket-icon.svg"
+				},
+				{
+					"id": 2,
+					"text": "Get clear on your value proposition & messaging.",
+					"icon": "/homepage/speech-bubble-icon.svg"
+				},
+				{
+					"id": 3,
+					"text": "Create lead magnet campaigns.",
+					"icon": "/homepage/magnet-icon.svg"
+				}
+			]
+		}
+	},
+	"form": {
+		"fields": [
+			{
+				"id": "firstName",
+				"name": "firstName",
+				"type": "text",
+				"label": "First name",
+				"placeholder": "First name*",
+				"required": true,
+				"validation": {
+					"minLength": 2,
+					"maxLength": 50,
+					"pattern": "^[a-zA-Z\\s]+$",
+					"errorMessage": "First name must be at least 2 characters and contain only letters"
+				},
+				"gridCols": "sm:grid-cols-2"
+			},
+			{
+				"id": "lastName",
+				"name": "lastName",
+				"type": "text",
+				"label": "Last name",
+				"placeholder": "Last name*",
+				"required": true,
+				"validation": {
+					"minLength": 2,
+					"maxLength": 50,
+					"pattern": "^[a-zA-Z\\s]+$",
+					"errorMessage": "Last name must be at least 2 characters and contain only letters"
+				},
+				"gridCols": "sm:grid-cols-2"
+			},
+			{
+				"id": "email",
+				"name": "email",
+				"type": "email",
+				"label": "Email",
+				"placeholder": "Email*",
+				"required": true,
+				"validation": {
+					"pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+					"errorMessage": "Please enter a valid email address"
+				}
+			},
+			{
+				"id": "phone",
+				"name": "phone",
+				"type": "tel",
+				"label": "Phone number",
+				"placeholder": "Phone number*",
+				"required": true,
+				"validation": {
+					"pattern": "^[\\+]?[(]?[0-9]{3}[)]?[-\\s\\.]?[0-9]{3}[-\\s\\.]?[0-9]{4,6}$",
+					"errorMessage": "Please enter a valid phone number"
+				}
+			},
+			{
+				"id": "budget",
+				"name": "budget",
+				"type": "select",
+				"label": "What's your monthly marketing budget?",
+				"placeholder": "What's your monthly marketing budget?*",
+				"required": true,
+				"options": [
+					{
+						"value": "",
+						"label": "Select budget range"
+					},
+					{
+						"value": "under-5k",
+						"label": "Under $5,000"
+					},
+					{
+						"value": "5k-10k",
+						"label": "$5,000 - $10,000"
+					},
+					{
+						"value": "10k-25k",
+						"label": "$10,000 - $25,000"
+					},
+					{
+						"value": "25k-50k",
+						"label": "$25,000 - $50,000"
+					},
+					{
+						"value": "50k-plus",
+						"label": "$50,000+"
+					}
+				],
+				"validation": {
+					"required": true,
+					"errorMessage": "Please select a budget range"
+				}
+			},
+			{
+				"id": "hearAbout",
+				"name": "hearAbout",
+				"type": "select",
+				"label": "How did you hear about us?",
+				"placeholder": "How did you hear about us?*",
+				"required": true,
+				"options": [
+					{
+						"value": "",
+						"label": "Select an option"
+					},
+					{
+						"value": "google",
+						"label": "Google Search"
+					},
+					{
+						"value": "social-media",
+						"label": "Social Media"
+					},
+					{
+						"value": "referral",
+						"label": "Referral"
+					},
+					{
+						"value": "other",
+						"label": "Other"
+					}
+				],
+				"validation": {
+					"required": true,
+					"errorMessage": "Please select how you heard about us"
+				}
+			},
+			{
+				"id": "message",
+				"name": "message",
+				"type": "textarea",
+				"label": "What are your current marketing activity, pain points and goals?",
+				"placeholder": "What are your current marketing activity, pain points and goals?*",
+				"required": true,
+				"rows": 6,
+				"validation": {
+					"minLength": 10,
+					"maxLength": 1000,
+					"errorMessage": "Please provide at least 10 characters"
+				}
+			}
+		],
+		"submitButton": {
+			"text": "Submit",
+			"type": "submit"
+		},
+		"disclaimer": {
+			"text": "By submitting this form I agree to my details being used in sole connection.",
+			"termsLink": "/terms",
+			"privacyLink": "/privacy"
+		}
+	}
+}
+
