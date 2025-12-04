@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
-import { buildMetadata, humanizeSlug } from "@/lib/site-metadata";
+import {
+  buildLocationMetadataFromSeoSettings,
+  buildMetadata,
+  humanizeSlug,
+} from "@/lib/site-metadata";
 import {
   ensureLocationForService,
   getLocationDisplayName,
@@ -122,27 +126,16 @@ export async function generateMetadata({
         };
       }
 
-      const localizedBase = await getLocationPageData(
-        "seo",
-        DEFAULT_SEO_SLUG,
-        ensuredLocation,
-        (defaultSeoData ?? {}) as SeoPageData,
-      );
       const locationName =
         getLocationDisplayName(ensuredLocation) ??
         humanizeSlug(ensuredLocation);
-      const personalizedData = personalizeSeoData(localizedBase, locationName);
 
-      const heading =
-        personalizedData?.hero?.heading ?? `SEO Services in ${locationName}`;
-      const description =
-        personalizedData?.hero?.subheading ??
-        `Partner with Digital Neighbour for SEO programmes tailored to ${locationName}.`;
-
-      return buildMetadata({
-        title: heading,
-        description,
+      return buildLocationMetadataFromSeoSettings({
+        seoSettings: defaultSeoData?.seoSettings,
+        fallbackTitle: baseHeading,
+        fallbackDescription: baseDescription,
         path: `/seo/${requestedSlug}`,
+        locationName,
       });
     }
 

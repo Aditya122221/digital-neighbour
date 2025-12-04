@@ -141,3 +141,172 @@ export function buildMetadata({
 }
 
 
+type SeoSettingsImage =
+	| string
+	| {
+			url?: string | null
+			asset?: {
+				url?: string | null
+				[key: string]: unknown
+			} | null
+			[key: string]: unknown
+	  }
+	| null
+	| undefined
+
+export type SeoSettingsLike = {
+	title?: string | null
+	description?: string | null
+	keywords?: (string | null | undefined)[] | null
+	ogTitle?: string | null
+	ogDescription?: string | null
+	ogImage?: SeoSettingsImage
+	canonicalUrl?: string | null
+}
+
+type BuildMetadataFromSeoSettingsOptions = {
+	seoSettings?: SeoSettingsLike | null
+	fallbackTitle: string
+	fallbackDescription: string
+	path: string
+	type?: "website" | "article"
+	includeBrand?: boolean
+}
+
+function normalizeString(value?: string | null): string | undefined {
+	if (typeof value !== "string") {
+		return undefined
+	}
+	const trimmed = value.trim()
+	return trimmed.length > 0 ? trimmed : undefined
+}
+
+function resolveOgImageUrl(image?: SeoSettingsImage): string | undefined {
+	if (!image) {
+		return undefined
+	}
+
+	if (typeof image === "string") {
+		return normalizeString(image)
+	}
+
+	const directUrl = normalizeString(image.url as string | undefined)
+	if (directUrl) {
+		return directUrl
+	}
+
+	const assetUrl = normalizeString(image.asset?.url as string | undefined)
+	if (assetUrl) {
+		return assetUrl
+	}
+
+	return undefined
+}
+
+export function buildMetadataFromSeoSettings({
+	seoSettings,
+	fallbackTitle,
+	fallbackDescription,
+	path,
+	type,
+	includeBrand,
+}: BuildMetadataFromSeoSettingsOptions): Metadata {
+	const title =
+		normalizeString(seoSettings?.title) ?? normalizeString(fallbackTitle) ?? fallbackTitle
+	const description =
+		normalizeString(seoSettings?.description) ??
+		normalizeString(fallbackDescription) ??
+		fallbackDescription
+
+	const keywords =
+		Array.isArray(seoSettings?.keywords) && seoSettings?.keywords.length
+			? seoSettings.keywords
+					.map((keyword) => normalizeString(keyword))
+					.filter((keyword): keyword is string => Boolean(keyword))
+			: undefined
+
+	const openGraphImage = resolveOgImageUrl(seoSettings?.ogImage)
+
+	return buildMetadata({
+		title,
+		description,
+		path,
+		type,
+		includeBrand,
+		openGraphTitle: normalizeString(seoSettings?.ogTitle),
+		openGraphDescription: normalizeString(seoSettings?.ogDescription),
+		openGraphImage,
+		keywords,
+		canonicalUrl: normalizeString(seoSettings?.canonicalUrl),
+	})
+}
+
+type BuildLocationMetadataOptions = BuildMetadataFromSeoSettingsOptions & {
+	locationName: string
+}
+
+function titleIncludesLocation(title: string, locationName: string) {
+	return title.toLowerCase().includes(locationName.toLowerCase())
+}
+
+function appendLocationToTitle(title: string, locationName: string) {
+	if (!locationName.trim() || titleIncludesLocation(title, locationName)) {
+		return title
+	}
+
+	const brandSuffix = ` | ${BRAND_NAME}`
+	if (title.endsWith(brandSuffix)) {
+		const baseTitle = title.slice(0, -brandSuffix.length).trimEnd()
+		return `${baseTitle} in ${locationName}${brandSuffix}`
+	}
+
+	return `${title} in ${locationName}`
+}
+
+function appendLocationToDescription(description: string, locationName: string) {
+	if (!locationName.trim() || titleIncludesLocation(description, locationName)) {
+		return description
+	}
+
+	const trimmed = description.trimEnd()
+	const endingPunctuation = trimmed.match(/[.!?]$/)
+
+	if (endingPunctuation) {
+		const withoutPunctuation = trimmed.slice(0, -1)
+		return `${withoutPunctuation} in ${locationName}${endingPunctuation[0]}`
+	}
+
+	return `${trimmed} in ${locationName}`
+}
+
+export function buildLocationMetadataFromSeoSettings({
+	locationName,
+	...options
+}: BuildLocationMetadataOptions): Metadata {
+	const metadata = buildMetadataFromSeoSettings(options)
+
+	if (typeof metadata.title === "string") {
+		metadata.title = appendLocationToTitle(metadata.title, locationName)
+	}
+
+	if (typeof metadata.description === "string") {
+		metadata.description = appendLocationToDescription(metadata.description, locationName)
+	}
+
+	if (metadata.openGraph?.title && typeof metadata.openGraph.title === "string") {
+		metadata.openGraph.title = appendLocationToTitle(
+			metadata.openGraph.title,
+			locationName,
+		)
+	}
+
+	if (metadata.openGraph?.description && typeof metadata.openGraph.description === "string") {
+		metadata.openGraph.description = appendLocationToDescription(
+			metadata.openGraph.description,
+			locationName,
+		)
+	}
+
+	return metadata
+}
+

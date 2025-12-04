@@ -11,6 +11,11 @@ import {
   isValidLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
+import {
+  buildLocationMetadataFromSeoSettings,
+  humanizeSlug,
+} from "@/lib/site-metadata";
+import { getHostingServiceBySlug } from "@/lib/sanity-service-data";
 import hostingData from "@/data/hosting-it-security.json";
 import HostingHero from "@/components/hosting-it-security/hero";
 import HostingProcess from "@/components/hosting-it-security/hostingProcess";
@@ -112,9 +117,47 @@ export async function generateMetadata({
     return { title: "Page Not Found" };
   }
 
+  let serviceData: any = null;
+  try {
+    serviceData = await getHostingServiceBySlug(canonicalSlug);
+  } catch (error) {
+    console.error(
+      `Error fetching hosting service data for "${canonicalSlug}":`,
+      error,
+    );
+  }
+
+  const locationName =
+    getLocationDisplayName(ensuredLocation) ?? humanizeSlug(ensuredLocation);
+  const canonicalPath = `/hosting-it-security/${canonicalSlug}/${ensuredLocation}`;
+
+  if (serviceData) {
+    const serviceLabel = humanizeSlug(canonicalSlug);
+    const fallbackTitle =
+      serviceData.seoSettings?.title?.trim() ||
+      serviceData.hero?.heading ||
+      baseData?.hero?.heading ||
+      serviceLabel;
+    const fallbackDescription =
+      serviceData.seoSettings?.description?.trim() ||
+      serviceData.hero?.subheading ||
+      baseData?.hero?.subheading ||
+      serviceData.description ||
+      baseData?.description ||
+      `Partner with Digital Neighbour for ${serviceLabel}.`;
+
+    return buildLocationMetadataFromSeoSettings({
+      seoSettings: serviceData.seoSettings,
+      fallbackTitle,
+      fallbackDescription,
+      path: canonicalPath,
+      locationName,
+    });
+  }
+
   const metadata = getHostingLocationMetadata(canonicalSlug, ensuredLocation);
 
-  const canonicalUrl = `https://digital-neighbour.com/hosting-it-security/${canonicalSlug}/${ensuredLocation}`;
+  const canonicalUrl = `https://digital-neighbour.com${canonicalPath}`;
 
   return {
     title: metadata.title,

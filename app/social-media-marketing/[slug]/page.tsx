@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import { normalizeLocationSlug } from "@/lib/location-data";
-import { buildMetadata, humanizeSlug } from "@/lib/site-metadata";
+import {
+  buildLocationMetadataFromSeoSettings,
+  buildMetadata,
+  humanizeSlug,
+} from "@/lib/site-metadata";
 import { getSocialMediaServiceBySlug } from "@/lib/sanity-service-data";
 import SocialMediaHero from "@/components/social-media/hero";
 import IntroParagraph from "@/components/commonSections/introparagraph";
@@ -82,18 +86,13 @@ export async function generateMetadata({
     const locationSlug = normalizeLocationSlug(slug);
 
     if (locationSlug) {
-      const ogImageUrl =
-        socialBaseSeoSettings?.ogImage?.asset?.url ||
-        socialBaseSeoSettings?.ogImage?.url;
-      return buildMetadata({
-        title: socialBaseHeading,
-        description: socialBaseDescription,
+      const locationName = humanizeSlug(locationSlug);
+      return buildLocationMetadataFromSeoSettings({
+        seoSettings: socialBaseSeoSettings,
+        fallbackTitle: socialBaseHeading,
+        fallbackDescription: socialBaseDescription,
         path: `/social-media-marketing/${slug}`,
-        openGraphTitle: socialBaseSeoSettings?.ogTitle,
-        openGraphDescription: socialBaseSeoSettings?.ogDescription,
-        openGraphImage: ogImageUrl,
-        keywords: socialBaseSeoSettings?.keywords,
-        canonicalUrl: socialBaseSeoSettings?.canonicalUrl,
+        locationName,
       });
     }
 

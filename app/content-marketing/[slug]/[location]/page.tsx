@@ -11,6 +11,11 @@ import {
   isValidLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
+import {
+  buildLocationMetadataFromSeoSettings,
+  humanizeSlug,
+} from "@/lib/site-metadata";
+import { getContentMarketingServiceBySlug } from "@/lib/sanity-service-data";
 import contentMarketingData from "@/data/content-marketing.json";
 import ContentMarketingHero from "@/components/content-marketing/hero";
 import IntroParagraph from "@/components/commonSections/introparagraph";
@@ -121,9 +126,47 @@ export async function generateMetadata({
     return { title: "Page Not Found" };
   }
 
+  let serviceData: any = null;
+  try {
+    serviceData = await getContentMarketingServiceBySlug(canonicalSlug);
+  } catch (error) {
+    console.error(
+      `Error fetching content marketing service data for "${canonicalSlug}":`,
+      error,
+    );
+  }
+
+  const locationName =
+    getLocationDisplayName(ensuredLocation) ?? humanizeSlug(ensuredLocation);
+  const canonicalPath = `/content-marketing/${canonicalSlug}/${ensuredLocation}`;
+
+  if (serviceData) {
+    const serviceLabel = humanizeSlug(canonicalSlug);
+    const fallbackTitle =
+      serviceData.seoSettings?.title?.trim() ||
+      serviceData.hero?.heading ||
+      baseData?.hero?.heading ||
+      serviceLabel;
+    const fallbackDescription =
+      serviceData.seoSettings?.description?.trim() ||
+      serviceData.hero?.subheading ||
+      baseData?.hero?.subheading ||
+      serviceData.description ||
+      baseData?.description ||
+      `Partner with Digital Neighbour for ${serviceLabel}.`;
+
+    return buildLocationMetadataFromSeoSettings({
+      seoSettings: serviceData.seoSettings,
+      fallbackTitle,
+      fallbackDescription,
+      path: canonicalPath,
+      locationName,
+    });
+  }
+
   const metadata = getContentLocationMetadata(canonicalSlug, ensuredLocation);
 
-  const canonicalUrl = `https://digital-neighbour.com/content-marketing/${canonicalSlug}/${ensuredLocation}`;
+  const canonicalUrl = `https://digital-neighbour.com${canonicalPath}`;
 
   return {
     title: metadata.title,

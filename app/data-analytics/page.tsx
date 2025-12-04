@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { buildMetadata } from "@/lib/site-metadata";
+import { buildMetadataFromSeoSettings } from "@/lib/site-metadata";
 import { getDataAnalyticsServiceBySlug } from "@/lib/sanity-service-data";
 import DataAnalyticsHero from "@/components/data-analytics/hero";
 import Content from "@/components/commonSections/content";
@@ -29,14 +29,16 @@ export async function generateMetadata(): Promise<Metadata> {
   const dataAnalyticsOverview =
     await getDataAnalyticsServiceBySlug("data-analytics");
   const dataAnalyticsHeading =
-    dataAnalyticsOverview?.hero?.heading ?? "Data & Analytics Services";
+    dataAnalyticsOverview?.hero?.heading?.trim() ||
+    "Data & Analytics Services";
   const dataAnalyticsDescription =
-    dataAnalyticsOverview?.hero?.subheading ??
+    dataAnalyticsOverview?.hero?.subheading?.trim() ||
     "Operationalise data, analytics, and business intelligence to deliver insights, automation, and growth with Digital Neighbour.";
 
-  return buildMetadata({
-    title: dataAnalyticsHeading,
-    description: dataAnalyticsDescription,
+  return buildMetadataFromSeoSettings({
+    seoSettings: dataAnalyticsOverview?.seoSettings,
+    fallbackTitle: dataAnalyticsHeading,
+    fallbackDescription: dataAnalyticsDescription,
     path: "/data-analytics",
   });
 }

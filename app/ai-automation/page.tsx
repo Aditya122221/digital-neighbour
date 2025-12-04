@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { buildMetadata } from "@/lib/site-metadata";
+import { buildMetadataFromSeoSettings } from "@/lib/site-metadata";
 import { getAiAutomationServiceBySlug } from "@/lib/sanity-service-data";
 import AiAutomationHero from "@/components/ai-automation/hero";
 import Content from "@/components/commonSections/content";
@@ -30,14 +30,15 @@ export async function generateMetadata(): Promise<Metadata> {
   const aiAutomationOverview =
     await getAiAutomationServiceBySlug("ai-automation");
   const aiAutomationHeading =
-    aiAutomationOverview?.hero?.heading ?? "AI & Automation Services";
+    aiAutomationOverview?.hero?.heading?.trim() || "AI & Automation Services";
   const aiAutomationDescription =
-    aiAutomationOverview?.hero?.subheading ??
+    aiAutomationOverview?.hero?.subheading?.trim() ||
     "Deploy intelligent automation, machine learning, and AI assistants that streamline operations, unlock insights, and drive innovation.";
 
-  return buildMetadata({
-    title: aiAutomationHeading,
-    description: aiAutomationDescription,
+  return buildMetadataFromSeoSettings({
+    seoSettings: aiAutomationOverview?.seoSettings,
+    fallbackTitle: aiAutomationHeading,
+    fallbackDescription: aiAutomationDescription,
     path: "/ai-automation",
   });
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { buildMetadata } from "@/lib/site-metadata";
+import { buildMetadataFromSeoSettings } from "@/lib/site-metadata";
 import { getContentMarketingServiceBySlug } from "@/lib/sanity-service-data";
 import ContentMarketingHero from "@/components/content-marketing/hero";
 import IntroParagraph from "@/components/commonSections/introparagraph";
@@ -28,14 +28,15 @@ export async function generateMetadata(): Promise<Metadata> {
   const contentOverview =
     await getContentMarketingServiceBySlug("content-marketing");
   const contentHeading =
-    contentOverview?.hero?.heading ?? "Content Marketing Services";
+    contentOverview?.hero?.heading?.trim() || "Content Marketing Services";
   const contentDescription =
-    contentOverview?.hero?.subheading ??
+    contentOverview?.hero?.subheading?.trim() ||
     "Plan, create, and distribute high-performing content that builds authority and converts with Digital Neighbour's content marketing team.";
 
-  return buildMetadata({
-    title: contentHeading,
-    description: contentDescription,
+  return buildMetadataFromSeoSettings({
+    seoSettings: contentOverview?.seoSettings,
+    fallbackTitle: contentHeading,
+    fallbackDescription: contentDescription,
     path: "/content-marketing",
   });
 }

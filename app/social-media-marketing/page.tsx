@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { buildMetadata } from "@/lib/site-metadata";
+import { buildMetadataFromSeoSettings } from "@/lib/site-metadata";
 import { getSocialMediaServiceBySlug } from "@/lib/sanity-service-data";
 import SocialMediaHero from "@/components/social-media/hero";
 import IntroParagraph from "@/components/commonSections/introparagraph";
@@ -31,15 +31,16 @@ export async function generateMetadata(): Promise<Metadata> {
     "social-media-marketing",
   );
   const socialHeading =
-    socialOverview?.hero?.heading ??
+    socialOverview?.hero?.heading?.trim() ||
     "Social Media Marketing that Drives Growth";
   const socialDescription =
-    socialOverview?.hero?.subheading ??
+    socialOverview?.hero?.subheading?.trim() ||
     "Plan, create, and optimise social media programmes that grow community, engagement, and demand across Meta, LinkedIn, TikTok, and more.";
 
-  return buildMetadata({
-    title: socialHeading,
-    description: socialDescription,
+  return buildMetadataFromSeoSettings({
+    seoSettings: socialOverview?.seoSettings,
+    fallbackTitle: socialHeading,
+    fallbackDescription: socialDescription,
     path: "/social-media-marketing",
   });
 }

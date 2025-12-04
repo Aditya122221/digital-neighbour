@@ -11,6 +11,10 @@ import {
   isValidLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
+import {
+  buildLocationMetadataFromSeoSettings,
+  humanizeSlug,
+} from "@/lib/site-metadata";
 import socialData from "@/data/social-media.json";
 import SocialMediaHero from "@/components/social-media/hero";
 import IntroParagraph from "@/components/commonSections/introparagraph";
@@ -119,27 +123,74 @@ export async function generateMetadata({
     return { title: "Page Not Found" };
   }
 
-  const metadata = getSocialLocationMetadata(
+  let serviceData: any = null;
+  try {
+    serviceData = await getSocialMediaServiceBySlug(canonicalSlug);
+    if (!serviceData && canonicalSlug === "social-media-management") {
+      serviceData = await getSocialMediaServiceBySlug(
+        "social-media-marketing",
+      );
+    }
+  } catch (error) {
+    console.error(
+      `Error fetching social media service data for "${canonicalSlug}":`,
+      error,
+    );
+  }
+
+  const locationName =
+    getLocationDisplayName(ensuredLocation) ?? humanizeSlug(ensuredLocation);
+  const canonicalPath =
+    canonicalSlug === "social-media-management"
+      ? `/social-media-marketing/${ensuredLocation}`
+      : `/social-media-marketing/${canonicalSlug}/${ensuredLocation}`;
+
+  if (serviceData) {
+    const serviceLabel = humanizeSlug(
+      canonicalSlug === "social-media-management"
+        ? "social-media-marketing"
+        : canonicalSlug,
+    );
+    const fallbackTitle =
+      serviceData.seoSettings?.title?.trim() ||
+      serviceData.hero?.heading ||
+      baseData?.hero?.heading ||
+      serviceLabel;
+    const fallbackDescription =
+      serviceData.seoSettings?.description?.trim() ||
+      serviceData.hero?.subheading ||
+      baseData?.hero?.subheading ||
+      serviceData.description ||
+      baseData?.description ||
+      `Partner with Digital Neighbour for ${serviceLabel}.`;
+
+    return buildLocationMetadataFromSeoSettings({
+      seoSettings: serviceData.seoSettings,
+      fallbackTitle,
+      fallbackDescription,
+      path: canonicalPath,
+      locationName,
+    });
+  }
+
+  const fallbackMetadata = getSocialLocationMetadata(
     canonicalSlug === "social-media-management"
       ? "social-media-marketing"
       : canonicalSlug,
     ensuredLocation,
   );
 
-  const canonicalUrl =
-    canonicalSlug === "social-media-management"
-      ? `https://digital-neighbour.com/social-media-marketing/${ensuredLocation}`
-      : `https://digital-neighbour.com/social-media-marketing/${canonicalSlug}/${ensuredLocation}`;
+  const canonicalUrl = `https://digital-neighbour.com${canonicalPath}`;
 
   return {
-    title: metadata.title,
-    description: metadata.description,
+    title: fallbackMetadata.title,
+    description: fallbackMetadata.description,
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: metadata.title,
-      description: metadata.description,
+      title: fallbackMetadata.title,
+      description: fallbackMetadata.description,
       type: "website",
       url: canonicalUrl,
     },

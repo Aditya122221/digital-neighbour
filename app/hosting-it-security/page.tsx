@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { buildMetadata } from "@/lib/site-metadata";
+import { buildMetadataFromSeoSettings } from "@/lib/site-metadata";
 import { getHostingServiceBySlug } from "@/lib/sanity-service-data";
 import HostingHero from "@/components/hosting-it-security/hero";
 import Content from "@/components/commonSections/content";
@@ -28,14 +28,16 @@ export const revalidate = 0;
 export async function generateMetadata(): Promise<Metadata> {
   const hostingOverview = await getHostingServiceBySlug("hosting-it-security");
   const hostingHeading =
-    hostingOverview?.hero?.heading ?? "Hosting, IT & Security Services";
+    hostingOverview?.hero?.heading?.trim() ||
+    "Hosting, IT & Security Services";
   const hostingDescription =
-    hostingOverview?.hero?.subheading ??
+    hostingOverview?.hero?.subheading?.trim() ||
     "Protect, optimise, and manage your digital infrastructure with secure hosting, managed IT, and cyber security services from Digital Neighbour.";
 
-  return buildMetadata({
-    title: hostingHeading,
-    description: hostingDescription,
+  return buildMetadataFromSeoSettings({
+    seoSettings: hostingOverview?.seoSettings,
+    fallbackTitle: hostingHeading,
+    fallbackDescription: hostingDescription,
     path: "/hosting-it-security",
   });
 }

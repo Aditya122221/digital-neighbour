@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { buildMetadata } from "@/lib/site-metadata";
+import { buildMetadataFromSeoSettings } from "@/lib/site-metadata";
 import { getPaidAdsServiceBySlug } from "@/lib/sanity-service-data";
 import PaidAdsHero from "@/components/paid-ads/hero";
 import Strategic from "@/components/paid-ads/strategic";
@@ -28,14 +28,15 @@ export const revalidate = 0;
 export async function generateMetadata(): Promise<Metadata> {
   const paidAdsOverview = await getPaidAdsServiceBySlug("paid-advertisement");
   const paidAdsHeading =
-    paidAdsOverview?.hero?.heading ?? "Paid Advertising Services";
+    paidAdsOverview?.hero?.heading?.trim() || "Paid Advertising Services";
   const paidAdsDescription =
-    paidAdsOverview?.hero?.subheading ??
+    paidAdsOverview?.hero?.subheading?.trim() ||
     "Launch and optimise high-ROI paid media programmes across Google, Meta, LinkedIn, and YouTube with Digital Neighbour.";
 
-  return buildMetadata({
-    title: paidAdsHeading,
-    description: paidAdsDescription,
+  return buildMetadataFromSeoSettings({
+    seoSettings: paidAdsOverview?.seoSettings,
+    fallbackTitle: paidAdsHeading,
+    fallbackDescription: paidAdsDescription,
     path: "/paid-advertisement",
   });
 }

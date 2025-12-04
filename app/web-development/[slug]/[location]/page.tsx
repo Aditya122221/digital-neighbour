@@ -11,6 +11,11 @@ import {
   isValidLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
+import {
+  buildLocationMetadataFromSeoSettings,
+  humanizeSlug,
+} from "@/lib/site-metadata";
+import { getWebDevelopmentServiceBySlug } from "@/lib/sanity-service-data";
 import webDevData from "@/data/web-development.json";
 import WebDevHero from "@/components/web-development/hero";
 import Functionalities from "@/components/web-development/functionalities";
@@ -141,8 +146,45 @@ export async function generateMetadata({
     return { title: "Page Not Found" };
   }
 
+  let serviceData: any = null;
+  try {
+    serviceData = await getWebDevelopmentServiceBySlug(canonicalSlug);
+  } catch (error) {
+    console.error(
+      `Error fetching web development service data for "${canonicalSlug}":`,
+      error,
+    );
+  }
+
+  const locationName =
+    getLocationDisplayName(ensuredLocation) ?? humanizeSlug(ensuredLocation);
+  const canonicalPath = `/web-development/${canonicalSlug}/${ensuredLocation}`;
+
+  if (serviceData) {
+    const serviceLabel = humanizeSlug(canonicalSlug);
+    const fallbackTitle =
+      serviceData.seoSettings?.title?.trim() ||
+      serviceData.hero?.heading ||
+      serviceData.metadata ||
+      serviceData.title ||
+      serviceLabel;
+    const fallbackDescription =
+      serviceData.seoSettings?.description?.trim() ||
+      serviceData.hero?.subheading ||
+      serviceData.description ||
+      `Partner with Digital Neighbour for ${serviceLabel}.`;
+
+    return buildLocationMetadataFromSeoSettings({
+      seoSettings: serviceData.seoSettings,
+      fallbackTitle,
+      fallbackDescription,
+      path: canonicalPath,
+      locationName,
+    });
+  }
+
   const metadata = getWebDevLocationMetadata(canonicalSlug, ensuredLocation);
-  const canonicalUrl = `https://digital-neighbour.com/web-development/${canonicalSlug}/${ensuredLocation}`;
+  const canonicalUrl = `https://digital-neighbour.com${canonicalPath}`;
 
   return {
     title: metadata.title,

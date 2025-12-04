@@ -7,7 +7,11 @@ import {
   normalizeLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
-import { buildMetadata, humanizeSlug } from "@/lib/site-metadata";
+import {
+  buildLocationMetadataFromSeoSettings,
+  buildMetadata,
+  humanizeSlug,
+} from "@/lib/site-metadata";
 import { getAppDevelopmentServiceBySlug } from "@/lib/sanity-service-data";
 import AppDevHero from "@/components/app-development/hero";
 import Certificates from "@/components/app-development/certificates";
@@ -108,27 +112,16 @@ export async function generateMetadata({
         };
       }
 
-      const localizedBase = await getLocationPageData(
-        "app",
-        DEFAULT_APP_SLUG,
-        ensuredLocation,
-        baseData,
-      );
       const locationName =
         getLocationDisplayName(ensuredLocation) ??
         humanizeSlug(ensuredLocation);
-      const personalizedData = personalizeSeoData(localizedBase, locationName);
 
-      const heading =
-        personalizedData?.hero?.heading ?? `App Development in ${locationName}`;
-      const description =
-        personalizedData?.hero?.subheading ??
-        `Build and scale digital products in ${locationName} with Digital Neighbour.`;
-
-      return buildMetadata({
-        title: heading,
-        description,
+      return buildLocationMetadataFromSeoSettings({
+        seoSettings: baseSeoSettings,
+        fallbackTitle: baseHeading,
+        fallbackDescription: baseDescription,
         path: `/app-development/${slug}`,
+        locationName,
       });
     }
 

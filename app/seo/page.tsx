@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { buildMetadata } from "@/lib/site-metadata";
+import { buildMetadataFromSeoSettings } from "@/lib/site-metadata";
 import { loadSeoPageData } from "@/lib/seo-page-data";
 import SeoHero from "@/components/seo/hero";
 import Form from "@/components/commonSections/form";
@@ -30,14 +30,16 @@ export const revalidate = 0;
 export async function generateMetadata(): Promise<Metadata> {
   const seoOverview = await loadSeoPageData("seo");
 
-  const overviewHeading = seoOverview?.hero?.heading ?? "SEO Services";
+  const overviewHeading =
+    seoOverview?.hero?.heading?.trim() || "SEO Services";
   const overviewDescription =
-    seoOverview?.hero?.subheading ??
+    seoOverview?.hero?.subheading?.trim() ||
     "Grow organic visibility, traffic, and revenue with full-funnel SEO programmes built for ambitious brands.";
 
-  return buildMetadata({
-    title: overviewHeading,
-    description: overviewDescription,
+  return buildMetadataFromSeoSettings({
+    seoSettings: seoOverview?.seoSettings,
+    fallbackTitle: overviewHeading,
+    fallbackDescription: overviewDescription,
     path: "/seo",
   });
 }

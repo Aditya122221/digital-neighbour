@@ -17,6 +17,17 @@ const getImageUrl = (image: any): string | undefined => {
   }
 };
 
+type SeoSettings = {
+  title?: string;
+  description?: string;
+  keywords?: string[];
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: Record<string, any>;
+  canonicalUrl?: string;
+  [key: string]: any;
+};
+
 export interface SeoPageData {
   hero?: Record<string, any>;
   form?: Record<string, any>;
@@ -57,6 +68,7 @@ export interface SeoPageData {
     items?: any[];
     [key: string]: any;
   };
+  seoSettings?: SeoSettings;
   [key: string]: any;
 }
 
@@ -236,6 +248,7 @@ export function mergeSeoPageData(
     ...fallback,
     ...remote,
     hero: mergedHero,
+    seoSettings: remote.seoSettings ?? fallback.seoSettings,
     form: mergeObjects(fallback.form, remote.form),
     introParagraph: mergeObjects(
       fallback.introParagraph,
@@ -285,6 +298,7 @@ function transformSeoPageData(sanityData: any): SeoPageData | null {
     : undefined;
 
   return {
+    seoSettings: sanityData.seoSettings,
     hero: sanityData.hero
       ? {
           heading: sanityData.hero.heading,

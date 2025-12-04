@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { buildMetadata } from "@/lib/site-metadata";
+import { buildMetadataFromSeoSettings } from "@/lib/site-metadata";
 import { getAppDevelopmentServiceBySlug } from "@/lib/sanity-service-data";
 import AppDevHero from "@/components/app-development/hero";
 import Certificates from "@/components/app-development/certificates";
@@ -29,14 +29,15 @@ export async function generateMetadata(): Promise<Metadata> {
   const appDevOverview =
     await getAppDevelopmentServiceBySlug("app-development");
   const appDevHeading =
-    appDevOverview?.hero?.heading ?? "App Development Services";
+    appDevOverview?.hero?.heading?.trim() || "App Development Services";
   const appDevDescription =
-    appDevOverview?.hero?.subheading ??
+    appDevOverview?.hero?.subheading?.trim() ||
     "Design, build, and scale customer-ready web and mobile applications with Digital Neighbour's end-to-end product teams.";
 
-  return buildMetadata({
-    title: appDevHeading,
-    description: appDevDescription,
+  return buildMetadataFromSeoSettings({
+    seoSettings: appDevOverview?.seoSettings,
+    fallbackTitle: appDevHeading,
+    fallbackDescription: appDevDescription,
     path: "/app-development",
   });
 }

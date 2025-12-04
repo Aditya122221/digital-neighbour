@@ -7,7 +7,11 @@ import {
   normalizeLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
-import { buildMetadata, humanizeSlug } from "@/lib/site-metadata";
+import {
+  buildLocationMetadataFromSeoSettings,
+  buildMetadata,
+  humanizeSlug,
+} from "@/lib/site-metadata";
 import { getContentMarketingServiceBySlug } from "@/lib/sanity-service-data";
 import ContentMarketingHero from "@/components/content-marketing/hero";
 import IntroParagraph from "@/components/commonSections/introparagraph";
@@ -118,28 +122,16 @@ export async function generateMetadata({
         };
       }
 
-      const localizedBase = await getLocationPageData(
-        "content",
-        DEFAULT_CONTENT_SLUG,
-        ensuredLocation,
-        baseData,
-      );
       const locationName =
         getLocationDisplayName(ensuredLocation) ??
         humanizeSlug(ensuredLocation);
-      const personalizedData = personalizeSeoData(localizedBase, locationName);
 
-      const heading =
-        personalizedData?.hero?.heading ??
-        `Content Marketing in ${locationName}`;
-      const description =
-        personalizedData?.hero?.subheading ??
-        `Plan and produce content marketing campaigns tailored for ${locationName} with Digital Neighbour.`;
-
-      return buildMetadata({
-        title: heading,
-        description,
+      return buildLocationMetadataFromSeoSettings({
+        seoSettings: baseSeoSettings,
+        fallbackTitle: baseHeading,
+        fallbackDescription: baseDescription,
         path: `/content-marketing/${slug}`,
+        locationName,
       });
     }
 

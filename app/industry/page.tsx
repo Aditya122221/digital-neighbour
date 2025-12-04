@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { buildMetadata } from "@/lib/site-metadata"
+import { buildMetadataFromSeoSettings } from "@/lib/site-metadata"
 import { getIndustriesServiceBySlug } from "@/lib/sanity-service-data"
 import IndustriesHero from "@/components/industries/mainHero"
 
@@ -30,14 +30,15 @@ export async function generateMetadata(): Promise<Metadata> {
 	const industriesOverview = await getIndustriesServiceBySlug("industries")
 	
 	const industriesHeading =
-		industriesOverview?.hero?.heading ?? "Industry Marketing Solutions"
+		industriesOverview?.hero?.heading?.trim() || "Industry Marketing Solutions"
 	const industriesDescription =
-		industriesOverview?.hero?.subheading ??
+		industriesOverview?.hero?.subheading?.trim() ||
 		"Tailored marketing, product, and growth programmes engineered for the sectors shaping the digital economy."
 
-	return buildMetadata({
-		title: industriesHeading,
-		description: industriesDescription,
+	return buildMetadataFromSeoSettings({
+		seoSettings: industriesOverview?.seoSettings,
+		fallbackTitle: industriesHeading,
+		fallbackDescription: industriesDescription,
 		path: "/industry",
 	})
 }

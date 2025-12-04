@@ -11,6 +11,10 @@ import {
   isValidLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
+import {
+  buildLocationMetadataFromSeoSettings,
+  humanizeSlug,
+} from "@/lib/site-metadata";
 import { getSeoServiceBySlug } from "@/lib/sanity-service-data";
 import { loadSeoPageData } from "@/lib/seo-page-data";
 import SeoHero from "@/components/seo/hero";
@@ -104,12 +108,39 @@ export async function generateMetadata({
     return { title: "Page Not Found" };
   }
 
+  const locationName =
+    getLocationDisplayName(ensuredLocation) ?? humanizeSlug(ensuredLocation);
+  const canonicalPath =
+    canonicalSlug === "search-engine-optimisation"
+      ? `/seo/${ensuredLocation}`
+      : `/seo/${canonicalSlug}/${ensuredLocation}`;
+
+  if (baseData) {
+    const serviceLabel =
+      baseData.services?.serviceName || humanizeSlug(canonicalSlug);
+    const fallbackTitle =
+      baseData.seoSettings?.title?.trim() ||
+      baseData.hero?.heading ||
+      baseData.metadata ||
+      serviceLabel;
+    const fallbackDescription =
+      baseData.seoSettings?.description?.trim() ||
+      baseData.hero?.subheading ||
+      baseData.description ||
+      `Partner with Digital Neighbour for ${serviceLabel}.`;
+
+    return buildLocationMetadataFromSeoSettings({
+      seoSettings: baseData.seoSettings,
+      fallbackTitle,
+      fallbackDescription,
+      path: canonicalPath,
+      locationName,
+    });
+  }
+
   const metadata = getSeoLocationMetadata(canonicalSlug, ensuredLocation);
 
-  const canonicalUrl =
-    canonicalSlug === "search-engine-optimisation"
-      ? `https://digital-neighbour.com/seo/${ensuredLocation}`
-      : `https://digital-neighbour.com/seo/${canonicalSlug}/${ensuredLocation}`;
+  const canonicalUrl = `https://digital-neighbour.com${canonicalPath}`;
 
   return {
     title: metadata.title,

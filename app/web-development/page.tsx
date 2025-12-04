@@ -1,7 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { buildMetadata } from "@/lib/site-metadata";
+import { buildMetadataFromSeoSettings } from "@/lib/site-metadata";
 import { getWebDevelopmentServiceBySlug } from "@/lib/sanity-service-data";
 import WebDevHero from "@/components/web-development/hero";
 import IntroParagraph from "@/components/commonSections/introparagraph";
@@ -30,14 +30,15 @@ export async function generateMetadata(): Promise<Metadata> {
   const webDevOverview =
     await getWebDevelopmentServiceBySlug("web-development");
   const webDevHeading =
-    webDevOverview?.hero?.heading ?? "Web Development Services";
+    webDevOverview?.hero?.heading?.trim() || "Web Development Services";
   const webDevDescription =
-    webDevOverview?.hero?.subheading ??
+    webDevOverview?.hero?.subheading?.trim() ||
     "Design and ship high-performing websites, web apps, and digital platforms with Digital Neighbour's full-stack web development team.";
 
-  return buildMetadata({
-    title: webDevHeading,
-    description: webDevDescription,
+  return buildMetadataFromSeoSettings({
+    seoSettings: webDevOverview?.seoSettings,
+    fallbackTitle: webDevHeading,
+    fallbackDescription: webDevDescription,
     path: "/web-development",
   });
 }

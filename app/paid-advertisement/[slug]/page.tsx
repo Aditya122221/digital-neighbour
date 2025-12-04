@@ -8,7 +8,11 @@ import {
   isValidLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
-import { buildMetadata, humanizeSlug } from "@/lib/site-metadata";
+import {
+  buildLocationMetadataFromSeoSettings,
+  buildMetadata,
+  humanizeSlug,
+} from "@/lib/site-metadata";
 import { getPaidAdsServiceBySlug } from "@/lib/sanity-service-data";
 import PaidAdsHero from "@/components/paid-ads/hero";
 import Strategic from "@/components/paid-ads/strategic";
@@ -117,36 +121,16 @@ export async function generateMetadata({
         };
       }
 
-      // Get base data from Sanity
-      const basePaidData = await getPaidAdsServiceBySlug(DEFAULT_PAID_SLUG);
-      if (!basePaidData) {
-        return {
-          title: "Page Not Found",
-        };
-      }
-
-      const localizedBase = await getLocationPageData(
-        "paidAds",
-        DEFAULT_PAID_SLUG,
-        ensuredLocation,
-        basePaidData,
-      );
       const locationName =
         getLocationDisplayName(ensuredLocation) ??
         humanizeSlug(ensuredLocation);
-      const personalizedData = personalizeSeoData(localizedBase, locationName);
 
-      const heading =
-        personalizedData?.hero?.heading ??
-        `Paid Advertising in ${locationName}`;
-      const description =
-        personalizedData?.hero?.subheading ??
-        `Run profitable paid media campaigns in ${locationName} with Digital Neighbour.`;
-
-      return buildMetadata({
-        title: heading,
-        description,
+      return buildLocationMetadataFromSeoSettings({
+        seoSettings: baseSeoSettings,
+        fallbackTitle: baseHeading,
+        fallbackDescription: baseDescription,
         path: `/paid-advertisement/${slug}`,
+        locationName,
       });
     }
 

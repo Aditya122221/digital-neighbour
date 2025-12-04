@@ -6,7 +6,11 @@ import {
   normalizeLocationSlug,
 } from "@/lib/location-data";
 import { personalizeSeoData } from "@/lib/seo-location-personalization";
-import { buildMetadata, humanizeSlug } from "@/lib/site-metadata";
+import {
+  buildLocationMetadataFromSeoSettings,
+  buildMetadata,
+  humanizeSlug,
+} from "@/lib/site-metadata";
 import { getHostingServiceBySlug } from "@/lib/sanity-service-data";
 import HostingHero from "@/components/hosting-it-security/hero";
 import Content from "@/components/commonSections/content";
@@ -111,36 +115,16 @@ export async function generateMetadata({
         };
       }
 
-      const baseHostingData =
-        await getHostingServiceBySlug(DEFAULT_HOSTING_SLUG);
-      if (!baseHostingData) {
-        return {
-          title: "Page Not Found",
-        };
-      }
-
-      const localizedBase = await getLocationPageData(
-        "hosting",
-        DEFAULT_HOSTING_SLUG,
-        ensuredLocation,
-        baseHostingData,
-      );
       const locationName =
         getLocationDisplayName(ensuredLocation) ??
         humanizeSlug(ensuredLocation);
-      const personalizedData = personalizeSeoData(localizedBase, locationName);
 
-      const heading =
-        personalizedData?.hero?.heading ??
-        `Hosting & IT Security in ${locationName}`;
-      const description =
-        personalizedData?.hero?.subheading ??
-        `Secure hosting and IT solutions in ${locationName} with Digital Neighbour.`;
-
-      return buildMetadata({
-        title: heading,
-        description,
+      return buildLocationMetadataFromSeoSettings({
+        seoSettings: baseSeoSettings,
+        fallbackTitle: baseHeading,
+        fallbackDescription: baseDescription,
         path: `/hosting-it-security/${slug}`,
+        locationName,
       });
     }
 

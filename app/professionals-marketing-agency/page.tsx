@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import { notFound } from "next/navigation"
-import { buildMetadata } from "@/lib/site-metadata"
+import { buildMetadataFromSeoSettings } from "@/lib/site-metadata"
 import { getProfessionalMarketingServiceBySlug } from "@/lib/sanity-service-data"
 import IndustriesHero from "@/components/professionals-marketing/mainHero"
 import Content from "@/components/commonSections/content"
@@ -29,15 +29,16 @@ export async function generateMetadata(): Promise<Metadata> {
 	const professionalsOverview = await getProfessionalMarketingServiceBySlug("professionals")
 	
 	const professionalsHeading =
-		professionalsOverview?.hero?.heading ??
+		professionalsOverview?.hero?.heading?.trim() ||
 		"Marketing Agency for Professionals"
 	const professionalsDescription =
-		professionalsOverview?.hero?.subheading ??
+		professionalsOverview?.hero?.subheading?.trim() ||
 		"Drive demand, retention, and reputation for professional services brands with Digital Neighbour's specialised marketing squads."
 
-	return buildMetadata({
-		title: professionalsHeading,
-		description: professionalsDescription,
+	return buildMetadataFromSeoSettings({
+		seoSettings: professionalsOverview?.seoSettings,
+		fallbackTitle: professionalsHeading,
+		fallbackDescription: professionalsDescription,
 		path: "/professionals-marketing-agency",
 	})
 }
