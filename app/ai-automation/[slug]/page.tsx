@@ -81,23 +81,39 @@ export async function generateMetadata({
     };
   }
 
+  // Use seoSettings from Sanity if available, otherwise fallback to other fields
+  const seoSettings = currentData?.seoSettings;
+  // Prioritize seoSettings.title/description if they exist and have values
+  const seoTitle = seoSettings?.title?.trim();
+  const seoDescription = seoSettings?.description?.trim();
   const heading =
-    currentData?.metadata ??
-    currentData?.hero?.heading ??
+    seoTitle ||
+    currentData?.metadata ||
+    currentData?.hero?.heading ||
     `${humanizeSlug(slug)} Services`;
   const description =
-    currentData?.description ??
-    currentData?.hero?.subheading ??
-    currentData?.introParagraph?.heading ??
+    seoDescription ||
+    currentData?.description ||
+    currentData?.hero?.subheading ||
+    currentData?.introParagraph?.heading ||
     `Explore ${humanizeSlug(slug)} programmes designed by Digital Neighbour.`;
 
   const path =
     slug === "ai-automation" ? "/ai-automation" : `/ai-automation/${slug}`;
 
+  // Get OG image URL from seoSettings
+  const ogImageUrl =
+    seoSettings?.ogImage?.asset?.url || seoSettings?.ogImage?.url;
+
   return buildMetadata({
     title: heading,
     description,
     path,
+    openGraphTitle: seoSettings?.ogTitle,
+    openGraphDescription: seoSettings?.ogDescription,
+    openGraphImage: ogImageUrl,
+    keywords: seoSettings?.keywords,
+    canonicalUrl: seoSettings?.canonicalUrl,
   });
 }
 

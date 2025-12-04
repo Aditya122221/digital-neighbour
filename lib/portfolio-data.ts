@@ -2,6 +2,7 @@ import { sanityFetch } from "@/sanity/lib/fetch";
 import { portfolioPageQuery } from "@/sanity/lib/queries";
 import { urlForImage } from "@/sanity/lib/image";
 import portfolioData from "@/data/portfolio.json";
+import type { PageSeoSettings } from "@/lib/types/page-seo";
 
 export type PortfolioMetric = {
   value: string;
@@ -30,6 +31,7 @@ export type PortfolioHeroContent = {
 type PortfolioPageData = {
   metadata?: string;
   description?: string;
+  seo?: PageSeoSettings;
   hero?: PortfolioHeroContent;
   projects?: PortfolioProject[];
 };
@@ -76,6 +78,44 @@ const resolveProjectSlug = (project: any, index: number): string => {
   return `project-${index}`;
 };
 
+const normalizeSeoSettings = (settings: any): PageSeoSettings | undefined => {
+  if (!settings) return undefined;
+
+  const keywords = Array.isArray(settings.keywords)
+    ? settings.keywords
+        .map((keyword: unknown) =>
+          typeof keyword === "string" ? keyword.trim() : "",
+        )
+        .filter(Boolean)
+    : undefined;
+  const ogImage = getImageUrl(settings.ogImage) || undefined;
+
+  const hasValue =
+    settings.title ||
+    settings.description ||
+    (keywords && keywords.length > 0) ||
+    settings.ogTitle ||
+    settings.ogDescription ||
+    ogImage ||
+    settings.canonicalUrl ||
+    settings.structuredData;
+
+  if (!hasValue) {
+    return undefined;
+  }
+
+  return {
+    title: settings.title || undefined,
+    description: settings.description || undefined,
+    keywords,
+    ogTitle: settings.ogTitle || undefined,
+    ogDescription: settings.ogDescription || undefined,
+    ogImage,
+    canonicalUrl: settings.canonicalUrl || undefined,
+    structuredData: settings.structuredData || undefined,
+  };
+};
+
 function transformSanityData(sanityData: any): PortfolioPageData | null {
   if (!sanityData) {
     console.warn("⚠️ transformSanityData: sanityData is null or undefined");
@@ -109,9 +149,12 @@ function transformSanityData(sanityData: any): PortfolioPageData | null {
     firstProject: projects[0] ? Object.keys(projects[0]) : [],
   });
 
+  const seo = normalizeSeoSettings(settings);
+
   return {
     metadata: settings.metadata || settings.title || "",
     description: settings.description || "",
+    seo,
     hero: {
       label: heroDoc.label || "Portfolio",
       title: heroDoc.title || "",

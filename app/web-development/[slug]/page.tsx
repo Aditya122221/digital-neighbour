@@ -100,40 +100,71 @@ export async function generateMetadata({
 
   // Get base data from Sanity
   const baseData = await getWebDevelopmentServiceBySlug(DEFAULT_WEBDEV_SLUG);
+  const baseSeoSettings = baseData?.seoSettings;
+  // Prioritize seoSettings.title/description if they exist and have values
+  const baseSeoTitle = baseSeoSettings?.title?.trim();
+  const baseSeoDescription = baseSeoSettings?.description?.trim();
   const baseHeading =
-    baseData?.metadata ?? baseData?.hero?.heading ?? "Web Development Services";
+    baseSeoTitle ||
+    baseData?.metadata ||
+    baseData?.hero?.heading ||
+    "Web Development Services";
   const baseDescription =
-    baseData?.description ??
-    baseData?.hero?.subheading ??
+    baseSeoDescription ||
+    baseData?.description ||
+    baseData?.hero?.subheading ||
     "Design and ship high-performing websites, web apps, and digital platforms with Digital Neighbour.";
 
   if (slug === DEFAULT_WEBDEV_SLUG) {
+    const ogImageUrl =
+      baseSeoSettings?.ogImage?.asset?.url || baseSeoSettings?.ogImage?.url;
     return buildMetadata({
       title: baseHeading,
       description: baseDescription,
       path: "/web-development",
+      openGraphTitle: baseSeoSettings?.ogTitle,
+      openGraphDescription: baseSeoSettings?.ogDescription,
+      openGraphImage: ogImageUrl,
+      keywords: baseSeoSettings?.keywords,
+      canonicalUrl: baseSeoSettings?.canonicalUrl,
     });
   }
 
   // Try to fetch from Sanity
   const currentData = await getWebDevelopmentServiceBySlug(slug);
   if (currentData) {
+    // Use seoSettings from Sanity if available, otherwise fallback to other fields
+    const seoSettings = currentData?.seoSettings;
+    // Prioritize seoSettings.title/description if they exist and have values
+    const seoTitle = seoSettings?.title?.trim();
+    const seoDescription = seoSettings?.description?.trim();
     const heading =
-      currentData?.metadata ??
-      currentData?.hero?.heading ??
+      seoTitle ||
+      currentData?.metadata ||
+      currentData?.hero?.heading ||
       fromKebabToTitle(slug);
     const description =
-      currentData?.description ??
-      currentData?.hero?.subheading ??
-      currentData?.introParagraph?.heading ??
+      seoDescription ||
+      currentData?.description ||
+      currentData?.hero?.subheading ||
+      currentData?.introParagraph?.heading ||
       `Explore ${fromKebabToTitle(
         slug,
       )} solutions created by Digital Neighbour.`;
+
+    // Get OG image URL from seoSettings
+    const ogImageUrl =
+      seoSettings?.ogImage?.asset?.url || seoSettings?.ogImage?.url;
 
     return buildMetadata({
       title: heading,
       description,
       path: `/web-development/${slug}`,
+      openGraphTitle: seoSettings?.ogTitle,
+      openGraphDescription: seoSettings?.ogDescription,
+      openGraphImage: ogImageUrl,
+      keywords: seoSettings?.keywords,
+      canonicalUrl: seoSettings?.canonicalUrl,
     });
   }
 

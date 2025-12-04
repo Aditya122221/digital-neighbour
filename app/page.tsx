@@ -32,10 +32,18 @@ export const revalidate = 0
 
 export async function generateMetadata(): Promise<Metadata> {
 	const homeData = await getHomePageData()
+	const seoTitle = homeData.seo?.title?.trim()
+	const seoDescription = homeData.seo?.description?.trim()
+
 	return buildMetadata({
-		title: homeData.metadata || FALLBACK_TITLE,
-		description: homeData.description || FALLBACK_DESCRIPTION,
+		title: seoTitle || homeData.metadata || FALLBACK_TITLE,
+		description: seoDescription || homeData.description || FALLBACK_DESCRIPTION,
 		path: "/",
+		openGraphTitle: homeData.seo?.ogTitle,
+		openGraphDescription: homeData.seo?.ogDescription,
+		openGraphImage: homeData.seo?.ogImage,
+		keywords: homeData.seo?.keywords,
+		canonicalUrl: homeData.seo?.canonicalUrl,
 	})
 }
 

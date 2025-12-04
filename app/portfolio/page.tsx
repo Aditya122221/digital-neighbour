@@ -16,10 +16,18 @@ export const revalidate = 0
 
 export async function generateMetadata(): Promise<Metadata> {
 	const portfolioData = await getPortfolioPageData()
+	const seoTitle = portfolioData.seo?.title?.trim()
+	const seoDescription = portfolioData.seo?.description?.trim()
+
 	return buildMetadata({
-		title: portfolioData.metadata || FALLBACK_TITLE,
-		description: portfolioData.description || FALLBACK_DESCRIPTION,
+		title: seoTitle || portfolioData.metadata || FALLBACK_TITLE,
+		description: seoDescription || portfolioData.description || FALLBACK_DESCRIPTION,
 		path: "/portfolio",
+		openGraphTitle: portfolioData.seo?.ogTitle,
+		openGraphDescription: portfolioData.seo?.ogDescription,
+		openGraphImage: portfolioData.seo?.ogImage,
+		keywords: portfolioData.seo?.keywords,
+		canonicalUrl: portfolioData.seo?.canonicalUrl,
 	})
 }
 

@@ -63,23 +63,37 @@ export async function generateMetadata({
   const socialBaseData = await getSocialMediaServiceBySlug(
     "social-media-marketing",
   );
+  const socialBaseSeoSettings = socialBaseData?.seoSettings;
+  // Prioritize seoSettings.title/description if they exist and have values
+  const socialBaseSeoTitle = socialBaseSeoSettings?.title?.trim();
+  const socialBaseSeoDescription = socialBaseSeoSettings?.description?.trim();
   const socialBaseHeading =
-    socialBaseData?.metadata ??
-    socialBaseData?.hero?.heading ??
+    socialBaseSeoTitle ||
+    socialBaseData?.metadata ||
+    socialBaseData?.hero?.heading ||
     "Social Media Marketing that Drives Growth";
   const socialBaseDescription =
-    socialBaseData?.description ??
-    socialBaseData?.hero?.subheading ??
+    socialBaseSeoDescription ||
+    socialBaseData?.description ||
+    socialBaseData?.hero?.subheading ||
     "Build community, grow engagement, and convert attention into demand with Digital Neighbour's social media specialists.";
 
   if (!allowedSlugs.includes(slug)) {
     const locationSlug = normalizeLocationSlug(slug);
 
     if (locationSlug) {
+      const ogImageUrl =
+        socialBaseSeoSettings?.ogImage?.asset?.url ||
+        socialBaseSeoSettings?.ogImage?.url;
       return buildMetadata({
         title: socialBaseHeading,
         description: socialBaseDescription,
         path: `/social-media-marketing/${slug}`,
+        openGraphTitle: socialBaseSeoSettings?.ogTitle,
+        openGraphDescription: socialBaseSeoSettings?.ogDescription,
+        openGraphImage: ogImageUrl,
+        keywords: socialBaseSeoSettings?.keywords,
+        canonicalUrl: socialBaseSeoSettings?.canonicalUrl,
       });
     }
 
@@ -96,24 +110,40 @@ export async function generateMetadata({
     };
   }
 
+  // Use seoSettings from Sanity if available, otherwise fallback to other fields
+  const seoSettings = currentData?.seoSettings;
+  // Prioritize seoSettings.title/description if they exist and have values
+  const seoTitle = seoSettings?.title?.trim();
+  const seoDescription = seoSettings?.description?.trim();
   const heading =
-    currentData?.metadata ??
-    currentData?.hero?.heading ??
+    seoTitle ||
+    currentData?.metadata ||
+    currentData?.hero?.heading ||
     `${humanizeSlug(slug)} Services`;
   const description =
-    currentData?.description ??
-    currentData?.hero?.subheading ??
-    currentData?.introParagraph?.heading ??
+    seoDescription ||
+    currentData?.description ||
+    currentData?.hero?.subheading ||
+    currentData?.introParagraph?.heading ||
     `Discover ${humanizeSlug(slug)} programmes crafted by Digital Neighbour.`;
   const path =
     slug === "social-media-marketing"
       ? "/social-media-marketing"
       : `/social-media-marketing/${slug}`;
 
+  // Get OG image URL from seoSettings
+  const ogImageUrl =
+    seoSettings?.ogImage?.asset?.url || seoSettings?.ogImage?.url;
+
   return buildMetadata({
     title: heading,
     description,
     path,
+    openGraphTitle: seoSettings?.ogTitle,
+    openGraphDescription: seoSettings?.ogDescription,
+    openGraphImage: ogImageUrl,
+    keywords: seoSettings?.keywords,
+    canonicalUrl: seoSettings?.canonicalUrl,
   });
 }
 

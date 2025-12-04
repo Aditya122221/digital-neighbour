@@ -808,6 +808,24 @@ export const paidAdsPageQuery = `*[_type == "paidAdsPage" && slug.current == $sl
 }`;
 
 export const aboutPageQuery = `{
+  "settings": *[_type == "aboutPageSeo" && _id == "aboutPageSeoSettings"][0]{
+    metadata,
+    description,
+    title,
+    keywords,
+    ogTitle,
+    ogDescription,
+    ogImage{
+      ...,
+      asset->{
+        _id,
+        url,
+        metadata
+      }
+    },
+    canonicalUrl,
+    structuredData
+  },
   "hero": *[_type == "aboutHero"] | order(_updatedAt desc)[0]{
     title,
     highlightWord,

@@ -4,6 +4,7 @@ import aboutData from "@/data/about.json"
 import { sanityFetch } from "@/sanity/lib/fetch"
 import { urlForImage } from "@/sanity/lib/image"
 import { aboutPageQuery } from "@/sanity/lib/queries"
+import type { PageSeoSettings } from "@/lib/types/page-seo"
 
 export type AboutHeroContent = {
 	title: string
@@ -62,12 +63,18 @@ export type AboutTeamContent = {
 	members: TeamMember[]
 }
 
+export const ABOUT_PAGE_FALLBACK_TITLE =
+	"About Us - Team Behind Your Brand's Growth | Digital Neighbour"
+export const ABOUT_PAGE_FALLBACK_DESCRIPTION =
+	"Meet the team of storytellers, strategists, and problem-solvers dedicated to helping brands grow and connect with their audiences. Learn about our values, achievements, and the people behind Digital Neighbour."
+
 export type AboutPageData = {
 	hero: AboutHeroContent
 	origins: AboutOriginsContent
 	values: AboutValuesContent
 	achievements: AboutAchievementsContent
 	team: AboutTeamContent
+	seo?: PageSeoSettings
 }
 
 type AboutJson = {
@@ -109,6 +116,17 @@ type SanityTeamMember = {
 }
 
 type SanityAboutPageData = {
+	settings?: {
+		metadata?: string
+		description?: string
+		title?: string
+		keywords?: string[]
+		ogTitle?: string
+		ogDescription?: string
+		ogImage?: Image
+		canonicalUrl?: string
+		structuredData?: string
+	}
 	hero?: {
 		title?: string
 		highlightWord?: string
@@ -269,6 +287,10 @@ const BASE_PAGE_DATA: AboutPageData = {
 	values: DEFAULT_VALUES,
 	achievements: DEFAULT_ACHIEVEMENTS,
 	team: DEFAULT_TEAM,
+	seo: {
+		title: ABOUT_PAGE_FALLBACK_TITLE,
+		description: ABOUT_PAGE_FALLBACK_DESCRIPTION,
+	},
 }
 
 const parsedData = aboutData as AboutJson
@@ -335,6 +357,54 @@ const getImageUrl = (image?: string | Image | null): string | undefined => {
 			error
 		)
 		return undefined
+	}
+}
+
+const normalizeSeoSettings = (settings?: {
+	title?: string
+	description?: string
+	keywords?: string[]
+	ogTitle?: string
+	ogDescription?: string
+	ogImage?: string | Image | null
+	canonicalUrl?: string
+	structuredData?: string
+}): PageSeoSettings | undefined => {
+	if (!settings) {
+		return undefined
+	}
+
+	const keywords = Array.isArray(settings.keywords)
+		? settings.keywords
+				.map((keyword) =>
+					typeof keyword === "string" ? keyword.trim() : ""
+				)
+				.filter(Boolean)
+		: undefined
+	const ogImage = getImageUrl(settings.ogImage) ?? undefined
+	const hasValue =
+		settings.title ||
+		settings.description ||
+		(keywords && keywords.length > 0) ||
+		settings.ogTitle ||
+		settings.ogDescription ||
+		ogImage ||
+		settings.canonicalUrl ||
+		settings.structuredData
+
+	if (!hasValue) {
+		return undefined
+	}
+
+	return {
+		title: settings.title || undefined,
+		description: settings.description || undefined,
+		keywords,
+		ogTitle: settings.ogTitle || undefined,
+		ogDescription: settings.ogDescription || undefined,
+		ogImage,
+		canonicalUrl: settings.canonicalUrl || undefined,
+		structuredData: settings.structuredData || undefined,
 	}
 }
 
@@ -449,6 +519,11 @@ const normalizeSanityData = (
 	}
 
 	const normalized: Partial<AboutPageData> = {}
+
+	const seo = normalizeSeoSettings(data.settings)
+	if (seo) {
+		normalized.seo = seo
+	}
 
 	if (data.hero) {
 		const highlightOverride = data.hero.highlightWord?.trim()
@@ -578,6 +653,7 @@ const mergeAboutData = (
 				base.team.description,
 			members: teamMembers,
 		},
+		seo: overrides?.seo ?? base.seo,
 	}
 }
 

@@ -6,13 +6,32 @@ import Origins from "@/components/about/origins";
 import Values from "@/components/about/values";
 import Achievements from "@/components/about/achievements";
 import Team from "@/components/about/team";
-import { getAboutPageData } from "@/lib/about-data";
+import {
+  getAboutPageData,
+  ABOUT_PAGE_FALLBACK_DESCRIPTION,
+  ABOUT_PAGE_FALLBACK_TITLE,
+} from "@/lib/about-data";
+import { buildMetadata } from "@/lib/site-metadata";
 
-export const metadata: Metadata = {
-  title: "About Us - Team Behind Your Brand's Growth | Digital Neighbour",
-  description:
-    "Meet the team of storytellers, strategists, and problem-solvers dedicated to helping brands grow and connect with their audiences. Learn about our values, achievements, and the people behind Digital Neighbour.",
-};
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const aboutPageData = await getAboutPageData();
+  const seoTitle = aboutPageData.seo?.title?.trim();
+  const seoDescription = aboutPageData.seo?.description?.trim();
+
+  return buildMetadata({
+    title: seoTitle || ABOUT_PAGE_FALLBACK_TITLE,
+    description: seoDescription || ABOUT_PAGE_FALLBACK_DESCRIPTION,
+    path: "/about",
+    openGraphTitle: aboutPageData.seo?.ogTitle,
+    openGraphDescription: aboutPageData.seo?.ogDescription,
+    openGraphImage: aboutPageData.seo?.ogImage,
+    keywords: aboutPageData.seo?.keywords,
+    canonicalUrl: aboutPageData.seo?.canonicalUrl,
+  });
+}
 
 export default async function AboutPage() {
   const aboutPageData = await getAboutPageData();

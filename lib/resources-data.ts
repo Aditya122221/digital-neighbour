@@ -6,6 +6,7 @@ import {
 	resourcesPageContentQuery,
 	resourcesPageQuery,
 } from "@/sanity/lib/queries"
+import type { PageSeoSettings } from "@/lib/types/page-seo"
 
 export type ResourceHeroContent = {
 	title: string
@@ -269,8 +270,47 @@ export async function getResourceBySlug(
 type ResourcesPageData = {
 	metadata?: string;
 	description?: string;
+	seo?: PageSeoSettings;
 	hero?: ResourceHeroContent;
 	articles?: ResourceArticle[];
+};
+
+const normalizeSeoSettings = (settings: any): PageSeoSettings | undefined => {
+	if (!settings) return undefined;
+
+	const keywords = Array.isArray(settings.keywords)
+		? settings.keywords
+				.map((keyword: unknown) =>
+					typeof keyword === "string" ? keyword.trim() : ""
+				)
+				.filter(Boolean)
+		: undefined;
+	const ogImage = getImageUrl(settings.ogImage) || undefined;
+
+	const hasValue =
+		settings.title ||
+		settings.description ||
+		(keywords && keywords.length > 0) ||
+		settings.ogTitle ||
+		settings.ogDescription ||
+		ogImage ||
+		settings.canonicalUrl ||
+		settings.structuredData;
+
+	if (!hasValue) {
+		return undefined;
+	}
+
+	return {
+		title: settings.title || undefined,
+		description: settings.description || undefined,
+		keywords,
+		ogTitle: settings.ogTitle || undefined,
+		ogDescription: settings.ogDescription || undefined,
+		ogImage,
+		canonicalUrl: settings.canonicalUrl || undefined,
+		structuredData: settings.structuredData || undefined,
+	};
 };
 
 function transformSanityData(sanityData: any): ResourcesPageData | null {
@@ -281,9 +321,12 @@ function transformSanityData(sanityData: any): ResourcesPageData | null {
 	const articlesData = sanityData.articles ?? {};
 	const articles = articlesData.articles || [];
 
+	const seo = normalizeSeoSettings(settings);
+
 	return {
 		metadata: settings.metadata || settings.title || "",
 		description: settings.description || "",
+		seo,
 		hero: {
 			title: heroDoc.title || "",
 			description: heroDoc.description || "",
@@ -314,6 +357,11 @@ export async function getResourcesPageData(): Promise<ResourcesPageData> {
 		metadata: "Resources | Digital Neighbour",
 		description:
 			"Explore insights on marketing, branding, social media, and growth. Curated by Digital Neighbour.",
+		seo: {
+			title: "Resources | Digital Neighbour",
+			description:
+				"Explore insights on marketing, branding, social media, and growth. Curated by Digital Neighbour.",
+		},
 		hero: fallbackHeroContent,
 		articles: fallbackArticles,
 	};

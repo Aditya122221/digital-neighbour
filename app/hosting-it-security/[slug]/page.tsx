@@ -66,20 +66,33 @@ export async function generateMetadata({
 
   // Get base data from Sanity
   const baseData = await getHostingServiceBySlug("hosting-it-security");
+  const baseSeoSettings = baseData?.seoSettings;
+  // Prioritize seoSettings.title/description if they exist and have values
+  const baseSeoTitle = baseSeoSettings?.title?.trim();
+  const baseSeoDescription = baseSeoSettings?.description?.trim();
   const baseHeading =
-    baseData?.metadata ??
-    baseData?.hero?.heading ??
+    baseSeoTitle ||
+    baseData?.metadata ||
+    baseData?.hero?.heading ||
     "Hosting, IT & Security Services";
   const baseDescription =
-    baseData?.description ??
-    baseData?.hero?.subheading ??
+    baseSeoDescription ||
+    baseData?.description ||
+    baseData?.hero?.subheading ||
     "Protect, optimise, and manage your digital infrastructure with secure hosting, managed IT, and cyber security services from Digital Neighbour.";
 
   if (slug === "hosting-it-security") {
+    const ogImageUrl =
+      baseSeoSettings?.ogImage?.asset?.url || baseSeoSettings?.ogImage?.url;
     return buildMetadata({
       title: baseHeading,
       description: baseDescription,
       path: "/hosting-it-security",
+      openGraphTitle: baseSeoSettings?.ogTitle,
+      openGraphDescription: baseSeoSettings?.ogDescription,
+      openGraphImage: ogImageUrl,
+      keywords: baseSeoSettings?.keywords,
+      canonicalUrl: baseSeoSettings?.canonicalUrl,
     });
   }
 
@@ -144,20 +157,36 @@ export async function generateMetadata({
     };
   }
 
+  // Use seoSettings from Sanity if available, otherwise fallback to other fields
+  const seoSettings = currentData?.seoSettings;
+  // Prioritize seoSettings.title/description if they exist and have values
+  const seoTitle = seoSettings?.title?.trim();
+  const seoDescription = seoSettings?.description?.trim();
   const heading =
-    currentData?.metadata ??
-    currentData?.hero?.heading ??
+    seoTitle ||
+    currentData?.metadata ||
+    currentData?.hero?.heading ||
     `${humanizeSlug(slug)} Services`;
   const description =
-    currentData?.description ??
-    currentData?.hero?.subheading ??
-    currentData?.introParagraph?.heading ??
+    seoDescription ||
+    currentData?.description ||
+    currentData?.hero?.subheading ||
+    currentData?.introParagraph?.heading ||
     `Discover ${humanizeSlug(slug)} solutions from Digital Neighbour.`;
+
+  // Get OG image URL from seoSettings
+  const ogImageUrl =
+    seoSettings?.ogImage?.asset?.url || seoSettings?.ogImage?.url;
 
   return buildMetadata({
     title: heading,
     description,
     path: `/hosting-it-security/${slug}`,
+    openGraphTitle: seoSettings?.ogTitle,
+    openGraphDescription: seoSettings?.ogDescription,
+    openGraphImage: ogImageUrl,
+    keywords: seoSettings?.keywords,
+    canonicalUrl: seoSettings?.canonicalUrl,
   });
 }
 

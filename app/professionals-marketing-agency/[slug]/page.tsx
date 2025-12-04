@@ -63,16 +63,33 @@ export async function generateMetadata({
   const jsonData = (professionalsData as any)[slug] || {};
   const currentData = sanityData || jsonData;
 
+  // Use seoSettings from Sanity if available, otherwise fallback to other fields
+  const seoSettings = currentData?.seoSettings;
+  // Prioritize seoSettings.title/description if they exist and have values
+  const seoTitle = seoSettings?.title?.trim();
+  const seoDescription = seoSettings?.description?.trim();
   const heading =
-    currentData?.hero?.heading ?? `${serviceName} Marketing Agency`;
+    seoTitle ||
+    currentData?.hero?.heading ||
+    `${serviceName} Marketing Agency`;
   const description =
-    currentData?.hero?.subheading ??
+    seoDescription ||
+    currentData?.hero?.subheading ||
     `Accelerate growth for ${serviceName} practices with tailored campaigns from Digital Neighbour.`;
+
+  // Get OG image URL from seoSettings
+  const ogImageUrl =
+    seoSettings?.ogImage?.asset?.url || seoSettings?.ogImage?.url;
 
   return buildMetadata({
     title: heading,
     description,
     path: `/professionals-marketing-agency/${slug}`,
+    openGraphTitle: seoSettings?.ogTitle,
+    openGraphDescription: seoSettings?.ogDescription,
+    openGraphImage: ogImageUrl,
+    keywords: seoSettings?.keywords,
+    canonicalUrl: seoSettings?.canonicalUrl,
   });
 }
 

@@ -55,14 +55,21 @@ export async function generateMetadata({
     };
   }
 
+  // Use seoSettings from Sanity if available, otherwise fallback to other fields
+  const seoSettings = currentData?.seoSettings;
+  // Prioritize seoSettings.title/description if they exist and have values
+  const seoTitle = seoSettings?.title?.trim();
+  const seoDescription = seoSettings?.description?.trim();
   const heading =
-    currentData?.metadata ??
-    currentData?.hero?.heading ??
+    seoTitle ||
+    currentData?.metadata ||
+    currentData?.hero?.heading ||
     `${humanizeSlug(slug)} Services`;
   const description =
-    currentData?.description ??
-    currentData?.hero?.subheading ??
-    currentData?.introParagraph?.heading ??
+    seoDescription ||
+    currentData?.description ||
+    currentData?.hero?.subheading ||
+    currentData?.introParagraph?.heading ||
     `Unlock insights with Digital Neighbour's ${humanizeSlug(
       slug,
     ).toLowerCase()} expertise.`;
@@ -70,10 +77,19 @@ export async function generateMetadata({
   const path =
     slug === "data-analytics" ? "/data-analytics" : `/data-analytics/${slug}`;
 
+  // Get OG image URL from seoSettings
+  const ogImageUrl =
+    seoSettings?.ogImage?.asset?.url || seoSettings?.ogImage?.url;
+
   return buildMetadata({
     title: heading,
     description,
     path,
+    openGraphTitle: seoSettings?.ogTitle,
+    openGraphDescription: seoSettings?.ogDescription,
+    openGraphImage: ogImageUrl,
+    keywords: seoSettings?.keywords,
+    canonicalUrl: seoSettings?.canonicalUrl,
   });
 }
 

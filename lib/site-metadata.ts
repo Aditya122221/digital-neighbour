@@ -10,6 +10,9 @@ type BuildMetadataOptions = {
 	includeBrand?: boolean
 	openGraphTitle?: string
 	openGraphDescription?: string
+	openGraphImage?: string | { url: string; width?: number; height?: number }
+	keywords?: string[]
+	canonicalUrl?: string
 }
 
 const ACRONYM_OVERRIDES: Record<string, string> = {
@@ -87,15 +90,23 @@ export function buildMetadata({
 	includeBrand = true,
 	openGraphTitle,
 	openGraphDescription,
+	openGraphImage,
+	keywords,
+	canonicalUrl: canonicalUrlOverride,
 }: BuildMetadataOptions): Metadata {
 	const normalizedTitle =
 		includeBrand && !title.includes(BRAND_NAME)
 			? `${title} | ${BRAND_NAME}`
 			: title
 
-	const canonicalUrl = `${SITE_URL}${path}`
+	const canonicalUrl = canonicalUrlOverride || `${SITE_URL}${path}`
 
-	return {
+	const ogImageUrl =
+		typeof openGraphImage === "string"
+			? openGraphImage
+			: openGraphImage?.url
+
+	const metadata: Metadata = {
 		title: normalizedTitle,
 		description,
 		alternates: {
@@ -108,6 +119,25 @@ export function buildMetadata({
 			url: canonicalUrl,
 		},
 	}
+
+	if (keywords && keywords.length > 0) {
+		metadata.keywords = keywords
+	}
+
+	if (ogImageUrl) {
+		metadata.openGraph = {
+			...metadata.openGraph,
+			images: [
+				{
+					url: ogImageUrl,
+					width: typeof openGraphImage === "object" ? openGraphImage.width : undefined,
+					height: typeof openGraphImage === "object" ? openGraphImage.height : undefined,
+				},
+			],
+		}
+	}
+
+	return metadata
 }
 
 

@@ -65,20 +65,33 @@ export async function generateMetadata({
 
   // Get base data from Sanity
   const baseData = await getPaidAdsServiceBySlug("paid-advertisement");
+  const baseSeoSettings = baseData?.seoSettings;
+  // Prioritize seoSettings.title/description if they exist and have values
+  const baseSeoTitle = baseSeoSettings?.title?.trim();
+  const baseSeoDescription = baseSeoSettings?.description?.trim();
   const baseHeading =
-    baseData?.metadata ??
-    baseData?.hero?.heading ??
+    baseSeoTitle ||
+    baseData?.metadata ||
+    baseData?.hero?.heading ||
     "Paid Advertising Services";
   const baseDescription =
-    baseData?.description ??
-    baseData?.hero?.subheading ??
+    baseSeoDescription ||
+    baseData?.description ||
+    baseData?.hero?.subheading ||
     "Plan, launch, and optimise high-performing paid media across Google, Meta, LinkedIn, and YouTube with Digital Neighbour.";
 
   if (slug === "paid-advertisement") {
+    const ogImageUrl =
+      baseSeoSettings?.ogImage?.asset?.url || baseSeoSettings?.ogImage?.url;
     return buildMetadata({
       title: baseHeading,
       description: baseDescription,
       path: "/paid-advertisement",
+      openGraphTitle: baseSeoSettings?.ogTitle,
+      openGraphDescription: baseSeoSettings?.ogDescription,
+      openGraphImage: ogImageUrl,
+      keywords: baseSeoSettings?.keywords,
+      canonicalUrl: baseSeoSettings?.canonicalUrl,
     });
   }
 
@@ -150,20 +163,36 @@ export async function generateMetadata({
     };
   }
 
+  // Use seoSettings from Sanity if available, otherwise fallback to other fields
+  const seoSettings = currentData?.seoSettings;
+  // Prioritize seoSettings.title/description if they exist and have values
+  const seoTitle = seoSettings?.title?.trim();
+  const seoDescription = seoSettings?.description?.trim();
   const heading =
-    currentData?.metadata ??
-    currentData?.hero?.heading ??
+    seoTitle ||
+    currentData?.metadata ||
+    currentData?.hero?.heading ||
     `${humanizeSlug(slug)} Services`;
   const description =
-    currentData?.description ??
-    currentData?.hero?.subheading ??
-    currentData?.introParagraph?.heading ??
+    seoDescription ||
+    currentData?.description ||
+    currentData?.hero?.subheading ||
+    currentData?.introParagraph?.heading ||
     `Discover ${humanizeSlug(slug)} programmes crafted by Digital Neighbour.`;
+
+  // Get OG image URL from seoSettings
+  const ogImageUrl =
+    seoSettings?.ogImage?.asset?.url || seoSettings?.ogImage?.url;
 
   return buildMetadata({
     title: heading,
     description,
     path: `/paid-advertisement/${slug}`,
+    openGraphTitle: seoSettings?.ogTitle,
+    openGraphDescription: seoSettings?.ogDescription,
+    openGraphImage: ogImageUrl,
+    keywords: seoSettings?.keywords,
+    canonicalUrl: seoSettings?.canonicalUrl,
   });
 }
 
